@@ -6,28 +6,28 @@ entity tile is
   port (
     buttons : in std_logic_vector(11 downto 0) := (others => 'L');
 
-    T_W : in std_logic := 'H';
-    T_endcol : in std_logic := 'H';
+    T_W : in std_logic := '1';
+    T_endcol : in std_logic := '1';
     T_first : out std_logic := '0';
     T_latch : out std_logic;
-    T_clk : out std_logic := 'L';
-    T_data : in std_logic := 'L';
+    T_clk : out std_logic := '0';
+    T_data : in std_logic := '0';
 
     B_W : out std_logic;
     B_endcol : out std_logic := '0';
-    B_first : in std_logic := 'H';
-    B_latch : in std_logic;
-    B_clk : in std_logic;
+    B_first : in std_logic := '1';
+    B_latch : in std_logic := '0';
+    B_clk : in std_logic := '0';
     B_data : out std_logic;
 
-    L_endrow : in std_logic := 'H';
-    L_latch : out std_logic := 'L';
-    L_clk : out std_logic := 'L';
-    L_data : in std_logic := 'L';
+    L_endrow : in std_logic := '1';
+    L_latch : out std_logic := '0';
+    L_clk : out std_logic := '0';
+    L_data : in std_logic := '0';
 
     R_endrow : out std_logic := '0';
-    R_latch : in std_logic;
-    R_clk : in std_logic;
+    R_latch : in std_logic := '0';
+    R_clk : in std_logic := '0';
     R_data : out std_logic
   );
 end tile;
@@ -50,6 +50,7 @@ signal ffinput : std_logic;
 
 begin
 
+  clock <= 'H';
   nlatch <= not latch;
 
   -- sr LSB
@@ -91,10 +92,13 @@ begin
   --clock <= B_clk;
   B_data <= data;
 
-  L_latch <= latch when w_state = '1' else 'Z';
+  L_latch <= latch;
   L_clk <= clock when w_state = '1' else 'Z';
 
   ds_input <= T_data when w_state = '0' else L_data;
+
+  latch <= R_latch or B_latch;  -- il latch è come un reset quindi lo mettiamo in or
+
 
 
   -- controllo di w_state
@@ -111,7 +115,7 @@ begin
   end process;
 
   count <= std_logic_vector(count_reg);
-  ffinput <= count(3) and count(2) and count(1) and data; -- non mettiamo count(0) perchè col ff-sr sincrono perdiamo un ciclo
+  ffinput <= count(3) and count(2) and count(1) and count(0) and data;
 
   process(clock, latch)
   begin
@@ -126,7 +130,6 @@ begin
 
 
   -- il pezzo sotto serve solo a non far incazzare GHDL
-  latch <= R_latch when to_x01(B_first) = '1' else B_latch;
   clock <= R_clk when to_x01(B_first) = '1' else B_clk;
 
 

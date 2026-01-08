@@ -21,7 +21,7 @@ HCT165 : process(nPL, CP, D)
 begin
     if(nPL = '0') then
         Qs <= D;
-    elsif(CP'event and CP = '1') then
+    elsif rising_edge(CP) then
         if(nCE = '0') then
             Qs <= Qs(6 downto 0) & DS;    -- or  Qs <= shl(Qs, '1') & DS;
         end if;
