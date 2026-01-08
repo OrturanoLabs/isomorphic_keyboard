@@ -6,28 +6,28 @@ entity tile is
   port (
     buttons : in std_logic_vector(11 downto 0) := (others => 'L');
 
-    T_W : in std_logic := '1';
-    T_endcol : in std_logic := '1';
+    T_W : in std_logic := 'Z';
+    T_endcol : in std_logic := 'Z';
     T_first : out std_logic := '0';
     T_latch : out std_logic;
-    T_clk : out std_logic := '0';
-    T_data : in std_logic := '0';
+    T_clk : out std_logic;
+    T_data : in std_logic := 'Z';
 
     B_W : out std_logic;
     B_endcol : out std_logic := '0';
-    B_first : in std_logic := '1';
-    B_latch : in std_logic := '0';
-    B_clk : in std_logic := '0';
+    B_first : in std_logic := 'Z';
+    B_latch : in std_logic := 'Z';
+    B_clk : in std_logic := 'Z';
     B_data : out std_logic;
 
-    L_endrow : in std_logic := '1';
-    L_latch : out std_logic := '0';
-    L_clk : out std_logic := '0';
-    L_data : in std_logic := '0';
+    L_endrow : in std_logic := 'Z';
+    L_latch : out std_logic;
+    L_clk : out std_logic;
+    L_data : in std_logic := 'Z';
 
     R_endrow : out std_logic := '0';
-    R_latch : in std_logic := '0';
-    R_clk : in std_logic := '0';
+    R_latch : in std_logic := 'Z';
+    R_clk : in std_logic := 'Z';
     R_data : out std_logic
   );
 end tile;
@@ -48,10 +48,59 @@ signal count : std_logic_vector(5 downto 0);
 signal sr2_inputs : std_logic_vector(7 downto 0); -- Segnale di supporto
 signal ffinput : std_logic;
 
+signal T_W_p, T_endcol_p, T_data_p, B_first_p, B_latch_p, B_clk_p, L_endrow_p, L_data_p, R_latch_p, R_clk_p : std_logic;
+
 begin
 
-  clock <= 'H';
+  -- input pullups / pulldowns
+  T_W_p       <= 'H';
+  T_endcol_p  <= 'H';
+  T_data_p    <= 'L';
+  B_first_p   <= 'H';
+  B_latch_p   <= 'L';
+  B_clk_p     <= 'H';
+  L_endrow_p  <= 'H';
+  L_data_p    <= 'L';
+  R_latch_p   <= 'L';
+  R_clk_p     <= 'H';
+
+  T_W_p       <=   T_W;
+  T_endcol_p  <=   T_endcol;
+  T_data_p    <=   T_data;
+  B_first_p   <=   B_first;
+  B_latch_p   <=   B_latch;
+  B_clk_p     <=   B_clk;
+  L_endrow_p  <=   L_endrow;
+  L_data_p    <=   L_data;
+  R_latch_p   <=   R_latch;
+  R_clk_p     <=   R_clk;
+
+
+  -- inputs wiring
+  clock <= R_clk_p;
+  clock <= B_clk_p;
+
+  w_state <= T_W_p and B_first_p;
+
+  latch <= R_latch_p or B_latch_p;  -- il latch è come un reset quindi lo mettiamo in or
+  ds_input <= T_data_p when to_x01(w_state) = '0' else L_data_p;
+
+
+  -- outputs wiring
+  R_data <= data;
+  B_data <= data;
+
+  T_latch <= latch;
+  L_latch <= latch;
+
+  T_clk <= clock when to_x01(w_state) = '0' else 'Z';
+  L_clk <= clock when to_x01(w_state) = '1' else 'Z';
+
+
+
   nlatch <= not latch;
+
+
 
   -- sr LSB
   sr1 : entity work.T74HCT165
@@ -65,7 +114,7 @@ begin
       nQ7 => open
     );
 
-  sr2_inputs <= buttons(3 downto 0) & "11" & L_endrow & T_endcol;
+  sr2_inputs <= buttons(3 downto 0) & "11" & to_x01(L_endrow_p) & to_x01(T_endcol_p);
 
   -- sr MSB
   sr2 : entity work.T74HCT165
@@ -79,30 +128,6 @@ begin
       nQ7 => open
     );
 
-
-  -- I/O latch clock e data
-  --latch <= R_latch;
-  --clock <= R_clk;
-  R_data <= data;
-
-  T_latch <= latch;
-  T_clk <= clock when w_state = '0' else 'Z';
-
-  --latch <= B_latch;
-  --clock <= B_clk;
-  B_data <= data;
-
-  L_latch <= latch;
-  L_clk <= clock when w_state = '1' else 'Z';
-
-  ds_input <= T_data when w_state = '0' else L_data;
-
-  latch <= R_latch or B_latch;  -- il latch è come un reset quindi lo mettiamo in or
-
-
-
-  -- controllo di w_state
-  w_state <= T_W and B_first;
 
 
   process(clock, latch)
@@ -127,10 +152,6 @@ begin
       end if;
     end if;
   end process;
-
-
-  -- il pezzo sotto serve solo a non far incazzare GHDL
-  clock <= R_clk when to_x01(B_first) = '1' else B_clk;
 
 
 end rtl;
