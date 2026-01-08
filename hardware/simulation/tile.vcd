@@ -1,0 +1,576 @@
+$date
+  Thu Jan  8 01:39:06 2026
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module tile_tb $end
+$var reg 12 ! buttons[11:0] $end
+$var reg 1 " latch $end
+$var reg 1 # clk $end
+$var reg 1 $ data $end
+$var reg 1 % clk_en $end
+$scope module uut $end
+$var reg 12 & buttons[11:0] $end
+$var reg 1 ' t_w $end
+$var reg 1 ( t_endcol $end
+$var reg 1 ) t_first $end
+$var reg 1 * t_latch $end
+$var reg 1 + t_clk $end
+$var reg 1 , t_data $end
+$var reg 1 - b_w $end
+$var reg 1 . b_endcol $end
+$var reg 1 / b_first $end
+$var reg 1 0 b_latch $end
+$var reg 1 1 b_clk $end
+$var reg 1 2 b_data $end
+$var reg 1 3 l_endrow $end
+$var reg 1 4 l_latch $end
+$var reg 1 5 l_clk $end
+$var reg 1 6 l_data $end
+$var reg 1 7 r_endrow $end
+$var reg 1 8 r_latch $end
+$var reg 1 9 r_clk $end
+$var reg 1 : r_data $end
+$var reg 1 ; latch $end
+$var reg 1 < clock $end
+$var reg 1 = data $end
+$var reg 1 > nlatch $end
+$var reg 1 ? ds_bridge $end
+$var reg 1 @ ds_input $end
+$var reg 1 A w_state $end
+$var reg 6 B count_reg[5:0] $end
+$var reg 6 C count[5:0] $end
+$var reg 8 D sr2_inputs[7:0] $end
+$var reg 1 E ffinput $end
+$scope module sr1 $end
+$var reg 1 F npl $end
+$var reg 1 G nce $end
+$var reg 1 H cp $end
+$var reg 1 I ds $end
+$var reg 8 J d[7:0] $end
+$var reg 1 K q7 $end
+$var reg 1 L nq7 $end
+$var reg 8 M qs[7:0] $end
+$upscope $end
+$scope module sr2 $end
+$var reg 1 N npl $end
+$var reg 1 O nce $end
+$var reg 1 P cp $end
+$var reg 1 Q ds $end
+$var reg 8 R d[7:0] $end
+$var reg 1 S q7 $end
+$var reg 1 T nq7 $end
+$var reg 8 U qs[7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b101001010011 !
+1"
+0#
+1$
+0%
+b101001010011 &
+H'
+H(
+0)
+1*
+Z+
+L,
+0-
+0.
+H/
+L0
+L1
+12
+H3
+14
+05
+L6
+07
+18
+09
+1:
+1;
+0<
+1=
+0>
+0?
+L@
+1A
+b000000 B
+b000000 C
+b001111HH D
+0E
+0F
+0G
+0H
+0I
+b10100101 J
+1K
+0L
+b10100101 M
+0N
+0O
+0P
+LQ
+b001111HH R
+0S
+1T
+b001111HH U
+#5000000
+0"
+1%
+0*
+04
+08
+0;
+1>
+1F
+1N
+#10000000
+1#
+0$
+02
+15
+19
+0:
+1<
+0=
+b000001 B
+b000001 C
+1H
+0K
+1L
+b01001010 M
+1P
+b01111HHL U
+#15000000
+0#
+05
+09
+0<
+0H
+0P
+#20000000
+1#
+1$
+12
+15
+19
+1:
+1<
+1=
+1?
+b000010 B
+b000010 C
+1H
+1I
+1K
+0L
+b10010100 M
+1P
+1S
+0T
+b1111HHLL U
+#25000000
+0#
+05
+09
+0<
+0H
+0P
+#30000000
+1#
+0$
+02
+15
+19
+0:
+1<
+0=
+b000011 B
+b000011 C
+1H
+0K
+1L
+b00101001 M
+1P
+b111HHLLL U
+#35000000
+0#
+05
+09
+0<
+0H
+0P
+#40000000
+1#
+15
+19
+1<
+b000100 B
+b000100 C
+1H
+b01010011 M
+1P
+b11HHLLLL U
+#45000000
+0#
+05
+09
+0<
+0H
+0P
+#50000000
+1#
+1$
+12
+15
+19
+1:
+1<
+1=
+b000101 B
+b000101 C
+1H
+1K
+0L
+b10100111 M
+1P
+b1HHLLLLL U
+#55000000
+0#
+05
+09
+0<
+0H
+0P
+#60000000
+1#
+0$
+02
+15
+19
+0:
+1<
+0=
+H?
+b000110 B
+b000110 C
+1H
+HI
+0K
+1L
+b01001111 M
+1P
+HS
+bHHLLLLLL U
+#65000000
+0#
+05
+09
+0<
+0H
+0P
+#70000000
+1#
+1$
+12
+15
+19
+1:
+1<
+1=
+b000111 B
+b000111 C
+1H
+1K
+0L
+b1001111H M
+1P
+bHLLLLLLL U
+#75000000
+0#
+05
+09
+0<
+0H
+0P
+#80000000
+1#
+0$
+02
+15
+19
+0:
+1<
+0=
+L?
+b001000 B
+b001000 C
+1H
+LI
+0K
+1L
+b001111HH M
+1P
+LS
+1T
+bLLLLLLLL U
+#85000000
+0#
+05
+09
+0<
+0H
+0P
+#90000000
+1#
+15
+19
+1<
+b001001 B
+b001001 C
+1H
+b01111HHL M
+1P
+#95000000
+0#
+05
+09
+0<
+0H
+0P
+#100000000
+1#
+1$
+12
+15
+19
+1:
+1<
+1=
+b001010 B
+b001010 C
+1H
+1K
+0L
+b1111HHLL M
+1P
+#105000000
+0#
+05
+09
+0<
+0H
+0P
+#110000000
+1#
+15
+19
+1<
+b001011 B
+b001011 C
+1H
+b111HHLLL M
+1P
+#115000000
+0#
+05
+09
+0<
+0H
+0P
+#120000000
+1#
+15
+19
+1<
+b001100 B
+b001100 C
+1H
+b11HHLLLL M
+1P
+#125000000
+0#
+05
+09
+0<
+0H
+0P
+#130000000
+1#
+15
+19
+1<
+b001101 B
+b001101 C
+1H
+b1HHLLLLL M
+1P
+#135000000
+0#
+05
+09
+0<
+0H
+0P
+#140000000
+1#
+H$
+H2
+15
+19
+H:
+1<
+H=
+b001110 B
+b001110 C
+1E
+1H
+HK
+bHHLLLLLL M
+1P
+#145000000
+0#
+05
+09
+0<
+0H
+0P
+#150000000
+1#
+1-
+15
+19
+1<
+b001111 B
+b001111 C
+1H
+bHLLLLLLL M
+1P
+#155000000
+0#
+05
+09
+0<
+0H
+0P
+#160000000
+1#
+L$
+L2
+15
+19
+L:
+1<
+L=
+b010000 B
+b010000 C
+0E
+1H
+LK
+1L
+bLLLLLLLL M
+1P
+#165000000
+0#
+05
+09
+0<
+0H
+0P
+#170000000
+1#
+15
+19
+1<
+b010001 B
+b010001 C
+1H
+1P
+#175000000
+0#
+05
+09
+0<
+0H
+0P
+#180000000
+1#
+15
+19
+1<
+b010010 B
+b010010 C
+1H
+1P
+#185000000
+0#
+05
+09
+0<
+0H
+0P
+#190000000
+1#
+15
+19
+1<
+b010011 B
+b010011 C
+1H
+1P
+#195000000
+0#
+05
+09
+0<
+0H
+0P
+#200000000
+1#
+15
+19
+1<
+b010100 B
+b010100 C
+1H
+1P
+#205000000
+0#
+0%
+05
+09
+0<
+0H
+0P
+#210000000
+1#
+15
+19
+1<
+b010101 B
+b010101 C
+1H
+1P
+#215000000
+0#
+05
+09
+0<
+0H
+0P
+#225000000

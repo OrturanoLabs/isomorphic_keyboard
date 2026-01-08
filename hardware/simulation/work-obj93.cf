@@ -1,0 +1,10 @@
+v 4
+file . "74hc165.vhdl" "40eaa48bcc312ed1f234916885730e57ea60db13" "20260108003904.872":
+  entity t74hct165 at 1( 0) + 0 on 79;
+  architecture behave_t74hct165 of t74hct165 at 16( 394) + 0 on 80;
+file . "tile.vhdl" "afcc0a22e2a75a345768daa0f11983aea2f274ea" "20260108003904.873":
+  entity tile at 1( 0) + 0 on 81;
+  architecture rtl of tile at 35( 818) + 0 on 82;
+file . "tile_tb.vhdl" "37dd2abc4ef05ee53621ab4e5f404a340fe21348" "20260108003904.874":
+  entity tile_tb at 1( 0) + 0 on 83;
+  architecture sim of tile_tb at 8( 102) + 0 on 84;
