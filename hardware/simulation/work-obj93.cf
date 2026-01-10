@@ -1,10 +1,13 @@
 v 4
-file . "tile_tb.vhdl" "83aed7aa8e2859a701c4e37c3f52d6cc50745555" "20260108195008.018":
-  entity tile_tb at 1( 0) + 0 on 377;
-  architecture sim of tile_tb at 8( 102) + 0 on 378;
-file . "tile.vhdl" "7f7663470a84c08870858711a3e47c3d1140b9a1" "20260108195008.018":
-  entity tile at 1( 0) + 0 on 375;
-  architecture rtl of tile at 35( 825) + 0 on 376;
-file . "74hc165.vhdl" "d61baee2d6d5acf27233b8521a2d9d4e924b033b" "20260108195008.016":
-  entity t74hct165 at 1( 0) + 0 on 373;
-  architecture behave_t74hct165 of t74hct165 at 16( 394) + 0 on 374;
+file . "74hc165.vhdl" "d61baee2d6d5acf27233b8521a2d9d4e924b033b" "20260109152537.334":
+  entity t74hct165 at 1( 0) + 0 on 19;
+  architecture behave_t74hct165 of t74hct165 at 16( 394) + 0 on 20;
+file . "tile.vhdl" "7f7663470a84c08870858711a3e47c3d1140b9a1" "20260109152537.336":
+  entity tile at 1( 0) + 0 on 21;
+  architecture rtl of tile at 35( 825) + 0 on 22;
+file . "tile_tb.vhdl" "83aed7aa8e2859a701c4e37c3f52d6cc50745555" "20260109152537.337":
+  entity tile_tb at 1( 0) + 0 on 23;
+  architecture sim of tile_tb at 8( 102) + 0 on 24;
+file . "tile_tb_2.vhdl" "c23105b2ae52a1ee4daaae914cf801e775f80093" "20260109152537.337":
+  entity tile_tb_2 at 1( 0) + 0 on 25;
+  architecture sim of tile_tb_2 at 8( 106) + 0 on 26;
