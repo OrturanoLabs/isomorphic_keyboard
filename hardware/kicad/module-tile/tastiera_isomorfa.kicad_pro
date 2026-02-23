@@ -415,6 +415,10 @@
     [
       "b65ca746-d3b9-4c60-a057-fc0649925cfd",
       "keyboard"
+    ],
+    [
+      "b0937e1a-84b9-4c23-9b14-d9868eedff6e",
+      "counter"
     ]
   ],
   "text_variables": {}
