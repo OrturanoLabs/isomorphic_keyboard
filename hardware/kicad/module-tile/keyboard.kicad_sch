@@ -1258,6 +1258,16 @@
 		)
 		(uuid "45e4734b-4552-43dc-9826-afce20d7a1a7")
 	)
+	(bus
+		(pts
+			(xy 161.29 39.37) (xy 161.29 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46c945b5-7460-490b-a69a-ee7312ad7866")
+	)
 	(wire
 		(pts
 			(xy 182.88 45.72) (xy 182.88 55.88)
@@ -1297,16 +1307,6 @@
 			(type default)
 		)
 		(uuid "4aabe033-09de-4f16-af0c-9637bc02ea0a")
-	)
-	(bus
-		(pts
-			(xy 161.29 33.02) (xy 161.29 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cae4bb4-79b5-4c70-b67f-1bc715211436")
 	)
 	(wire
 		(pts
@@ -1420,7 +1420,7 @@
 	)
 	(bus
 		(pts
-			(xy 161.29 39.37) (xy 161.29 49.53)
+			(xy 161.29 33.02) (xy 161.29 39.37)
 		)
 		(stroke
 			(width 0)
@@ -2198,7 +2198,7 @@
 		)
 		(uuid "e5229ee3-149a-45be-9966-09f772d65995")
 	)
-	(hierarchical_label "BTNs"
+	(hierarchical_label "BTNs[0..11]"
 		(shape output)
 		(at 213.36 33.02 0)
 		(effects
