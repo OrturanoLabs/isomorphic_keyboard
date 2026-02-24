@@ -1155,7 +1155,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0ca6a410-3256-41b0-b156-bc6fc9fe8f39")
-		(property "Reference" "J2"
+		(property "Reference" "J102"
 			(at 152.4 40.64 90)
 			(effects
 				(font
@@ -1163,7 +1163,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x08"
+		(property "Value" "Conn_TOP"
 			(at 152.4 38.1 90)
 			(effects
 				(font
@@ -1171,7 +1171,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 151.13 44.45 0)
 			(effects
 				(font
@@ -1191,6 +1191,24 @@
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 151.13 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Codice" ""
+			(at 151.13 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" ""
+			(at 151.13 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1225,7 +1243,7 @@
 		(instances
 			(project "tastiera_isomorfa"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "J2")
+					(reference "J102")
 					(unit 1)
 				)
 			)
@@ -1241,7 +1259,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2055b886-457f-4f30-b1b4-57d8a9d52233")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR0103"
 			(at 137.16 53.34 0)
 			(effects
 				(font
@@ -1291,7 +1309,7 @@
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR029")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -1308,7 +1326,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "30a70587-da55-4e72-9f54-34b2e7ffa2eb")
-		(property "Reference" "J3"
+		(property "Reference" "J101"
 			(at 100.33 83.82 0)
 			(effects
 				(font
@@ -1316,7 +1334,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x06"
+		(property "Value" "Conn_LEFT"
 			(at 100.33 86.36 0)
 			(effects
 				(font
@@ -1324,7 +1342,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
 			(at 100.33 95.25 0)
 			(effects
 				(font
@@ -1343,6 +1361,24 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Codice" ""
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" ""
 			(at 100.33 95.25 0)
 			(effects
 				(font
@@ -1372,7 +1408,7 @@
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "J3")
+					(reference "J101")
 					(unit 1)
 				)
 			)
@@ -1388,7 +1424,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4489e0d9-7eb6-476d-9bd0-84117f9e5a2f")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR0102"
 			(at 109.22 113.03 0)
 			(effects
 				(font
@@ -1438,7 +1474,7 @@
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR036")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -1454,7 +1490,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b81942f-913f-4854-a9e3-dee8e5a212ac")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR0108"
 			(at 195.58 113.03 0)
 			(effects
 				(font
@@ -1499,12 +1535,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "82d9a893-0703-41b3-95c6-99c8e389ef10")
+			(uuid "82d9a893-0703-41b3-95c6-99c8e389ef11")
 		)
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR035")
+					(reference "#PWR0108")
 					(unit 1)
 				)
 			)
@@ -1520,7 +1556,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6aac1922-42ad-440e-a0e0-2a3868102c5e")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR0106"
 			(at 167.64 149.86 0)
 			(effects
 				(font
@@ -1565,12 +1601,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "82d9a893-0703-41b3-95c6-99c8e389ef10")
+			(uuid "82d9a893-0703-41b3-95c6-99c8e389ef12")
 		)
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR034")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -1586,7 +1622,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7042b72c-101e-4153-8ba4-c24a07fe4100")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR0104"
 			(at 143.51 147.32 0)
 			(effects
 				(font
@@ -1631,12 +1667,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "31dfcccd-b2e0-47ac-be32-9976d7153776")
+			(uuid "31dfcccd-b2e0-47ac-be32-9976d7153777")
 		)
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR030")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -1652,7 +1688,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b23ffb1-2a41-4a02-ba97-d8ce0786ad30")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR0107"
 			(at 195.58 91.44 0)
 			(effects
 				(font
@@ -1697,12 +1733,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "31dfcccd-b2e0-47ac-be32-9976d7153776")
+			(uuid "31dfcccd-b2e0-47ac-be32-9976d7153778")
 		)
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR031")
+					(reference "#PWR0107")
 					(unit 1)
 				)
 			)
@@ -1718,7 +1754,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b354b07-33b8-44e1-9c05-cb076d4b69c5")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR0105"
 			(at 161.29 55.88 0)
 			(effects
 				(font
@@ -1763,12 +1799,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "82d9a893-0703-41b3-95c6-99c8e389ef10")
+			(uuid "82d9a893-0703-41b3-95c6-99c8e389ef13")
 		)
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR033")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -1784,7 +1820,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a65fa7c0-c516-4650-85d9-ecb007d67483")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR0101"
 			(at 109.22 91.44 0)
 			(effects
 				(font
@@ -1829,12 +1865,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "31dfcccd-b2e0-47ac-be32-9976d7153776")
+			(uuid "31dfcccd-b2e0-47ac-be32-9976d7153779")
 		)
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "#PWR032")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -1850,23 +1886,25 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aec82640-ddea-49b7-8364-caf3a8b2a6e9")
-		(property "Reference" "J4"
-			(at 204.47 83.82 0)
+		(property "Reference" "J104"
+			(at 207.01 95.2499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x06"
-			(at 204.47 86.36 0)
+		(property "Value" "Conn_RIGHT"
+			(at 207.01 97.7899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
 			(at 204.47 95.25 0)
 			(effects
 				(font
@@ -1885,6 +1923,24 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 204.47 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Codice" ""
+			(at 204.47 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" ""
 			(at 204.47 95.25 0)
 			(effects
 				(font
@@ -1914,7 +1970,7 @@
 		(instances
 			(project "tastiera_isomorfa"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "J4")
+					(reference "J104")
 					(unit 1)
 				)
 			)
@@ -1930,7 +1986,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fdf231d3-cd82-40f9-b5fe-c4c175730643")
-		(property "Reference" "J1"
+		(property "Reference" "J103"
 			(at 152.4 152.4 90)
 			(effects
 				(font
@@ -1938,7 +1994,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x08"
+		(property "Value" "Conn_BOTTOM"
 			(at 152.4 154.94 90)
 			(effects
 				(font
@@ -1946,7 +2002,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 151.13 148.59 0)
 			(effects
 				(font
@@ -1966,6 +2022,24 @@
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 151.13 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Codice" ""
+			(at 151.13 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" ""
+			(at 151.13 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2000,7 +2074,7 @@
 		(instances
 			(project ""
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc"
-					(reference "J1")
+					(reference "J103")
 					(unit 1)
 				)
 			)
