@@ -413,12 +413,20 @@
       "Root"
     ],
     [
-      "b65ca746-d3b9-4c60-a057-fc0649925cfd",
+      "07e251ec-a89a-41e0-b307-1d6ec78f24c5",
+      "tile"
+    ],
+    [
+      "41fc8254-caa5-4a09-ad79-5b9ed9e5d35c",
+      "counter"
+    ],
+    [
+      "e2f73968-45e5-4cc2-b6f2-273af56935aa",
       "keyboard"
     ],
     [
-      "b0937e1a-84b9-4c23-9b14-d9868eedff6e",
-      "counter"
+      "9a558694-86a7-4e5b-949e-b5a09151abcf",
+      "power"
     ]
   ],
   "text_variables": {}

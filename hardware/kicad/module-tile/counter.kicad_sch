@@ -1783,7 +1783,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0650a067-0b71-4bbc-89fb-0c29864c8223")
-		(property "Reference" "U3"
+		(property "Reference" "U1"
 			(at 83.82 107.95 0)
 			(effects
 				(font
@@ -1836,13 +1836,13 @@
 			(uuid "36580706-0c04-471b-9cb8-6aee64ad7090")
 		)
 		(pin "7"
-			(uuid "ca28877a-a101-409e-acc9-2275bc5b14b7")
+			(uuid "c03b438a-9fa4-4068-9679-a8ccb89934b2")
 		)
 		(pin "4"
 			(uuid "7fcfd97a-36bf-44b7-8cb5-c2008870d36e")
 		)
 		(pin "5"
-			(uuid "36925614-f004-45b0-8108-876650560ee2")
+			(uuid "b3020a2a-0592-4c46-9ee9-2f1c853d7c98")
 		)
 		(pin "12"
 			(uuid "ee6407c8-56a6-490d-865e-211e91bf0e0d")
@@ -1851,27 +1851,27 @@
 			(uuid "906ef026-935f-4d0c-b87b-cf7e0ad27fe7")
 		)
 		(pin "8"
-			(uuid "7fad436d-4379-4b79-be2d-63627eb1f2e4")
+			(uuid "b1fd23c6-0048-47c9-a3fd-fabca30dcc8e")
 		)
 		(pin "1"
 			(uuid "6eb50ea8-6f18-46ce-93c6-35c941acc038")
 		)
 		(pin "9"
-			(uuid "95659901-1193-42a8-9887-751652be822e")
+			(uuid "dc09e60e-6293-42dc-85f8-6d1db86d636d")
 		)
 		(pin "6"
-			(uuid "d37f1255-0eab-4beb-bf09-b70799569db9")
+			(uuid "655ce76f-939d-4bd9-a157-a31d8178b44b")
 		)
 		(pin "10"
-			(uuid "db973b5d-8335-431c-a0a0-259948fc1dc9")
+			(uuid "cabe7ec1-5db3-494f-b08a-a54b509ff3cd")
 		)
 		(pin "14"
 			(uuid "2acad315-083a-462f-bba7-745e796b4c4f")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
-					(reference "U3")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -1888,7 +1888,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "301bb1e2-2a2f-4915-8ea0-b48b211c1c53")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR01"
 			(at 95.25 125.73 0)
 			(effects
 				(font
@@ -1933,12 +1933,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "edc00697-0f86-4c5e-80f4-d383b7ae8ce1")
+			(uuid "442481b0-1fbf-44f3-a69f-f4b33c7d7430")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
-					(reference "#PWR07")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -1955,7 +1955,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "681054d8-a89c-4cde-8318-02cbbc4c8b2a")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR04"
 			(at 187.96 154.94 0)
 			(effects
 				(font
@@ -2000,12 +2000,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6a862a5f-6684-4f22-b3c7-38151273c98b")
+			(uuid "b06cbb25-bf11-46b4-a82c-372287a289fa")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
-					(reference "#PWR05")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -2022,7 +2022,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2822802-68f8-4f81-a00d-4b6e8eb8ec27")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 124.4711 90.17 0)
 			(effects
 				(font
@@ -2075,24 +2075,24 @@
 			(uuid "a98f7863-0672-4e69-be81-7a043a325b35")
 		)
 		(pin "7"
-			(uuid "b62265f9-146a-4554-b2a5-1efb8aeef1a6")
+			(uuid "092e1dfe-57ba-4a62-a9dd-efd0166139e4")
 		)
 		(pin "2"
-			(uuid "8302c0e9-ca6c-4377-bd0b-72890e941359")
+			(uuid "b674f7f2-4f0c-4962-83e8-158b51b841ea")
 		)
 		(pin "3"
 			(uuid "8a845e6e-6da1-47a8-809f-941b8f2ab021")
 		)
 		(pin "1"
-			(uuid "f5be12f0-ed57-4ecb-b767-6f2cc963071e")
+			(uuid "932fefc0-67ee-47a3-bab5-006cc04eb875")
 		)
 		(pin "6"
 			(uuid "d5f8e183-275e-437e-8860-080274d60871")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
-					(reference "U4")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -2109,7 +2109,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a64712af-c061-4a68-a090-8c27272e5778")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR05"
 			(at 193.04 82.55 0)
 			(effects
 				(font
@@ -2154,12 +2154,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "accc825a-34cd-4426-8f68-0784ccb5f855")
+			(uuid "96ebeacd-6811-4e2f-bdac-ff44e1bf4735")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
-					(reference "#PWR03")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2222,56 +2222,56 @@
 			)
 		)
 		(pin "13"
-			(uuid "0009f55c-f77b-4494-8dce-64504835ea0a")
+			(uuid "9f10c375-52c7-4ef9-a1c7-c25e123648e4")
 		)
 		(pin "15"
-			(uuid "42f41e6f-d874-4337-95b2-a4394b630801")
+			(uuid "4b76f735-2d13-42dd-b093-45620985bdc8")
 		)
 		(pin "14"
-			(uuid "2ee61534-8c0b-493b-807d-ab62aed2c5f1")
+			(uuid "9003c2d6-4597-4ab0-a438-3623309d62a9")
 		)
 		(pin "11"
-			(uuid "5ca7dbd7-0733-4ffa-930f-aa2745b4cc35")
+			(uuid "89042242-2910-4904-89dd-078b0cf7c22d")
 		)
 		(pin "8"
-			(uuid "5a7588d9-aa79-4bd0-96d7-556262ed73e7")
+			(uuid "1640baec-84d4-4265-a39a-351725ad7faf")
 		)
 		(pin "1"
-			(uuid "c1287681-4c08-4614-bc6a-ba4af5455783")
+			(uuid "12d9213d-d74b-444d-81a0-ca03c878a8a9")
 		)
 		(pin "10"
-			(uuid "9fc04d2a-6ab5-44ab-92f6-29312f8abeb4")
+			(uuid "93cb36c5-767f-49f8-85af-12095ddbfab9")
 		)
 		(pin "7"
-			(uuid "3f903783-2f3c-4b0c-913a-cf578c0a354f")
+			(uuid "bd4bd779-ea2a-44e5-8f05-899a0fcc4a53")
 		)
 		(pin "3"
-			(uuid "9e382da4-cff2-4630-ba78-315eda8b67a0")
+			(uuid "a069cc3b-1157-4838-acb4-c3d87c9c51f1")
 		)
 		(pin "5"
-			(uuid "7f01c309-7614-46fd-822a-72c269631c14")
+			(uuid "3b315ba0-1409-4b02-aaec-3c093e965bd8")
 		)
 		(pin "16"
-			(uuid "847ac8e8-e0cd-4919-970e-391cc7ea2048")
+			(uuid "63a6b52a-686d-4fa7-bb6a-b5be3dab137c")
 		)
 		(pin "2"
-			(uuid "466a55e2-bf1a-43bf-ae11-2e6c09ddcfde")
+			(uuid "68414338-8f66-4374-945b-55d8a98d7001")
 		)
 		(pin "9"
-			(uuid "f21880be-82ca-4ed9-b1d3-514b1aaf2a4e")
+			(uuid "d97aaf07-8641-42f3-9d7a-cf30a300ec2a")
 		)
 		(pin "6"
-			(uuid "5213692b-12e7-439c-81c7-5cb7c2f2612e")
+			(uuid "b2a46231-e865-4cff-b329-d5265fa9edcb")
 		)
 		(pin "12"
-			(uuid "20f4f13a-5432-4b98-bd69-ade1b690846f")
+			(uuid "c827f8a4-7b72-4b48-8e09-224763fbd29d")
 		)
 		(pin "4"
-			(uuid "3cb677ff-7c35-4382-820b-d9b6ee21102c")
+			(uuid "6bddfa15-270a-4083-ba6a-cb523b3fb181")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
 					(reference "U3")
 					(unit 1)
 				)
@@ -2289,7 +2289,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cdd9a33e-47d4-4111-a447-27a3497a52a8")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR03"
 			(at 162.56 154.94 0)
 			(effects
 				(font
@@ -2334,12 +2334,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6a862a5f-6684-4f22-b3c7-38151273c98a")
+			(uuid "f31c6684-05d7-4eb1-9154-506f4b7a7050")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
-					(reference "#PWR06")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2356,7 +2356,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ef5d3d68-c1e5-4b8b-aafd-ae595a292901")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR02"
 			(at 162.56 82.55 0)
 			(effects
 				(font
@@ -2401,12 +2401,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "accc825a-34cd-4426-8f68-0784ccb5f854")
+			(uuid "61620bba-8135-4d9c-824a-d8bc1c444023")
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/b0937e1a-84b9-4c23-9b14-d9868eedff6e"
-					(reference "#PWR04")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
