@@ -2178,7 +2178,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0731a0ee-d2fd-41a3-a9ce-0d5889b7a78e")
-		(property "Reference" "#PWR0139"
+		(property "Reference" "#PWR0145"
 			(at 149.86 97.79 0)
 			(effects
 				(font
@@ -2228,7 +2228,7 @@
 		(instances
 			(project "tastiera_isomorfa"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
-					(reference "#PWR0139")
+					(reference "#PWR0145")
 					(unit 1)
 				)
 			)
@@ -2244,7 +2244,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a4bf04f-f728-443a-9b16-f48e76d1f10e")
-		(property "Reference" "#PWR0136"
+		(property "Reference" "#PWR0142"
 			(at 144.78 116.84 0)
 			(effects
 				(font
@@ -2294,7 +2294,7 @@
 		(instances
 			(project "tastiera_isomorfa"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
-					(reference "#PWR0136")
+					(reference "#PWR0142")
 					(unit 1)
 				)
 			)
@@ -2716,7 +2716,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "343ba4bc-d662-49d2-9658-15cf13a48dbe")
-		(property "Reference" "#PWR0138"
+		(property "Reference" "#PWR0144"
 			(at 149.86 57.15 0)
 			(effects
 				(font
@@ -2766,7 +2766,7 @@
 		(instances
 			(project "tastiera_isomorfa"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
-					(reference "#PWR0138")
+					(reference "#PWR0144")
 					(unit 1)
 				)
 			)
@@ -2958,7 +2958,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8306f4d-4575-4118-840e-65bca6c1f256")
-		(property "Reference" "#PWR0137"
+		(property "Reference" "#PWR0143"
 			(at 144.78 146.05 0)
 			(effects
 				(font
@@ -3008,7 +3008,7 @@
 		(instances
 			(project "tastiera_isomorfa"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
-					(reference "#PWR0137")
+					(reference "#PWR0143")
 					(unit 1)
 				)
 			)

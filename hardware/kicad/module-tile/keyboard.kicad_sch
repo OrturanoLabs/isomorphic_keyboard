@@ -2287,7 +2287,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R110")
 					(unit 1)
 				)
@@ -2372,7 +2372,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R121")
 					(unit 1)
 				)
@@ -2458,7 +2458,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW104")
 					(unit 1)
 				)
@@ -2544,7 +2544,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW103")
 					(unit 1)
 				)
@@ -2629,7 +2629,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R113")
 					(unit 1)
 				)
@@ -2714,7 +2714,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R118")
 					(unit 1)
 				)
@@ -2731,7 +2731,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4273712e-ec28-4cf4-a4c0-2ae9e4f3cace")
-		(property "Reference" "#PWR0135"
+		(property "Reference" "#PWR0147"
 			(at 195.58 102.87 0)
 			(effects
 				(font
@@ -2740,12 +2740,13 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 195.58 101.6 0)
+		(property "Value" "GND_T"
+			(at 198.12 97.7899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -2780,8 +2781,8 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
-					(reference "#PWR0135")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
+					(reference "#PWR0147")
 					(unit 1)
 				)
 			)
@@ -2865,7 +2866,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R120")
 					(unit 1)
 				)
@@ -2950,7 +2951,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R131")
 					(unit 1)
 				)
@@ -3036,7 +3037,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW108")
 					(unit 1)
 				)
@@ -3121,7 +3122,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R127")
 					(unit 1)
 				)
@@ -3206,7 +3207,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R112")
 					(unit 1)
 				)
@@ -3291,7 +3292,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R117")
 					(unit 1)
 				)
@@ -3376,7 +3377,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R114")
 					(unit 1)
 				)
@@ -3462,7 +3463,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW110")
 					(unit 1)
 				)
@@ -3548,7 +3549,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW102")
 					(unit 1)
 				)
@@ -3634,7 +3635,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW107")
 					(unit 1)
 				)
@@ -3719,7 +3720,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R128")
 					(unit 1)
 				)
@@ -3804,7 +3805,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R124")
 					(unit 1)
 				)
@@ -3889,7 +3890,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R115")
 					(unit 1)
 				)
@@ -3975,7 +3976,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW112")
 					(unit 1)
 				)
@@ -4061,7 +4062,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW101")
 					(unit 1)
 				)
@@ -4147,7 +4148,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW106")
 					(unit 1)
 				)
@@ -4232,7 +4233,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R130")
 					(unit 1)
 				)
@@ -4317,7 +4318,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R123")
 					(unit 1)
 				)
@@ -4402,7 +4403,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R125")
 					(unit 1)
 				)
@@ -4488,7 +4489,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW109")
 					(unit 1)
 				)
@@ -4573,7 +4574,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R119")
 					(unit 1)
 				)
@@ -4659,7 +4660,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW111")
 					(unit 1)
 				)
@@ -4744,7 +4745,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R122")
 					(unit 1)
 				)
@@ -4829,7 +4830,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R132")
 					(unit 1)
 				)
@@ -4914,7 +4915,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R111")
 					(unit 1)
 				)
@@ -4931,7 +4932,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d4081c89-9b7a-46a1-9480-a92676c1024a")
-		(property "Reference" "#PWR0134"
+		(property "Reference" "#PWR0146"
 			(at 97.79 96.52 0)
 			(effects
 				(font
@@ -4940,12 +4941,13 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 97.79 87.63 0)
+		(property "Value" "VCC_T"
+			(at 100.33 91.4399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -4980,8 +4982,8 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
-					(reference "#PWR0134")
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
+					(reference "#PWR0146")
 					(unit 1)
 				)
 			)
@@ -5065,7 +5067,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R129")
 					(unit 1)
 				)
@@ -5151,7 +5153,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "SW105")
 					(unit 1)
 				)
@@ -5236,7 +5238,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R126")
 					(unit 1)
 				)
@@ -5321,7 +5323,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R116")
 					(unit 1)
 				)
@@ -5406,7 +5408,7 @@
 		)
 		(instances
 			(project "tastiera_isomorfa"
-				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/e2f73968-45e5-4cc2-b6f2-273af56935aa"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc"
 					(reference "R133")
 					(unit 1)
 				)

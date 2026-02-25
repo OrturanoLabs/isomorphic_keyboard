@@ -666,12 +666,12 @@
       "counter"
     ],
     [
-      "e2f73968-45e5-4cc2-b6f2-273af56935aa",
-      "keyboard"
-    ],
-    [
       "9a558694-86a7-4e5b-949e-b5a09151abcf",
       "power"
+    ],
+    [
+      "bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc",
+      "keyboard"
     ]
   ],
   "text_variables": {}
