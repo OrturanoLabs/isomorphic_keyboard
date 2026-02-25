@@ -189,6 +189,7 @@
       "track_widths": [
         0.0,
         0.2,
+        0.3,
         0.4,
         1.0
       ],
@@ -499,7 +500,12 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": ""
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -508,7 +514,7 @@
       "netlist": "tastiera_isomorfa.net",
       "plot": "",
       "pos_files": "",
-      "specctra_dsn": "",
+      "specctra_dsn": "tastiera_isomorfa.dsn",
       "step": "",
       "svg": "",
       "vrml": ""
