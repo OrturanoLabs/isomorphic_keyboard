@@ -512,7 +512,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "tastiera_isomorfa.net",
-      "plot": "",
+      "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "tastiera_isomorfa.dsn",
       "step": "",
