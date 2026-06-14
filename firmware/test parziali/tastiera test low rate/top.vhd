@@ -22,29 +22,48 @@ architecture behavioral of top is
     signal clk_low : std_logic;
     signal reset : std_logic;
 
+    signal toggle : std_logic := '0';
+
 begin
     reset <= not reset_n;
     led_blue <= reset_n;
-    clk_low <= clk_counter(22);
-    led_red <= not clk_low;
 
-    clocking : process(clk_in, reset)
+    led_red <= '0';
+
+    led : process(clk_in)
     begin
-
-        latch <= '0';
-
-        if reset = '1' then
-            latch <= '1';
-            clk_counter <= (others => '0');
-        elsif rising_edge(clk_in) then
-            clk_counter <= clk_counter + 1;
+        if rising_edge(clk_in) then
+            if reset = '1' then
+                toggle <= '0';
+                latch <= '1';
+            else
+                toggle <= not toggle;
+                latch <= '0';
+            end if;
         end if;
-
     end process;
 
-    clk_out <= clk_low;
+    gen_enable : process(clk_in)
+    begin
+        if rising_edge(clk_in) then
+            if reset = '1' then
+                clk_counter <= (others => '0');
+                clk_low  <= '0';
+            else
+                if clk_counter(2) = '1' then  -- Conta: 0, 1, 2, 3 (quattro cicli)
+                    clk_counter <= (others => '0');
+                    clk_low  <= '1'; -- Impulso alto per un solo ciclo di clk_in
+                else
+                    clk_counter <= clk_counter + 1;
+                    clk_low  <= '0'; -- Torna subito a zero al ciclo successivo
+                end if;
+            end if;
+        end if;
+    end process;
 
-    led_green <= not data;
+    clk_out <= clk_in;
+
+    led_green <= '0';
 
 
 end behavioral;
