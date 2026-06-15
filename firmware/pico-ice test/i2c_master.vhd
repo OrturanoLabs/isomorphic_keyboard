@@ -26,7 +26,7 @@
 --     Adjusted timing of SCL during start and stop conditions
 --   Version 2.2 02/05/2015 Scott Larson
 --     Corrected small SDA glitch introduced in version 2.1
--- 
+--
 --------------------------------------------------------------------------------
 
 LIBRARY ieee;
@@ -47,8 +47,10 @@ ENTITY i2c_master IS
     busy      : OUT    STD_LOGIC;                    --indicates transaction in progress
     data_rd   : OUT    STD_LOGIC_VECTOR(7 DOWNTO 0); --data read from slave
     ack_error : BUFFER STD_LOGIC;                    --flag if improper acknowledge from slave
-    sda       : INOUT  STD_LOGIC;                    --serial data output of i2c bus
-    scl       : INOUT  STD_LOGIC);                   --serial clock output of i2c bus
+    sda_in    : IN     STD_LOGIC;                    --serial data output of i2c bus
+    sda_en    : OUT    STD_LOGIC;
+    scl_in    : IN     STD_LOGIC;
+    scl_en    : OUT    STD_LOGIC);                   --serial clock output of i2c bus
 END i2c_master;
 
 ARCHITECTURE logic OF i2c_master IS
@@ -75,31 +77,33 @@ BEGIN
     IF(reset_n = '0') THEN                --reset asserted
       stretch <= '0';
       count := 0;
-    ELSIF(clk'EVENT AND clk = '1') THEN
+    ELSIF rising_edge(clk) THEN
       data_clk_prev <= data_clk;          --store previous value of data clock
       IF(count = divider*4-1) THEN        --end of timing cycle
         count := 0;                       --reset timer
       ELSIF(stretch = '0') THEN           --clock stretching from slave not detected
         count := count + 1;               --continue clock generation timing
       END IF;
-      IF (count >= 0 AND count <= divider-1) THEN
+
+      if count >= 0 and count <= divider-1 then
         scl_clk <= '0';
         data_clk <= '0';
-      ELSIF (count >= divider AND count <= divider*2-1) THEN
+      elsif count >= divider and count <= divider*2-1 then
         scl_clk <= '0';
         data_clk <= '1';
-      ELSIF (count >= divider*2 AND count <= divider*3-1) THEN
-        scl_clk <= '1';
-        IF(scl = '0') THEN
+      elsif count >= divider*2 and count <= divider*3-1 then
+        scl_clk <= '1';                 --release scl
+        IF(scl_in = '0') THEN              --detect if slave is stretching clock
           stretch <= '1';
         ELSE
           stretch <= '0';
         END IF;
         data_clk <= '1';
-      ELSE
+      else
         scl_clk <= '1';
         data_clk <= '0';
-      END IF;
+      end if;
+
     END IF;
   END PROCESS;
 
@@ -199,29 +203,29 @@ BEGIN
                 state <= rd;                 --go to read byte
               ELSE                           --continue transaction with a write or new slave
                 state <= start;              --repeated start
-              END IF;    
+              END IF;
             ELSE                             --complete transaction
               state <= stop;                 --go to stop bit
             END IF;
           WHEN stop =>                       --stop bit of transaction
             busy <= '0';                     --unflag busy
             state <= ready;                  --go to idle state
-        END CASE;    
+        END CASE;
       ELSIF(data_clk = '0' AND data_clk_prev = '1') THEN  --data clock falling edge
         CASE state IS
-          WHEN start =>                  
+          WHEN start =>
             IF(scl_ena = '0') THEN                  --starting new transaction
               scl_ena <= '1';                       --enable scl output
               ack_error <= '0';                     --reset acknowledge error output
             END IF;
           WHEN slv_ack1 =>                          --receiving slave acknowledge (command)
-            IF(sda /= '0' OR ack_error = '1') THEN  --no-acknowledge or previous no-acknowledge
+            IF(sda_in /= '0' OR ack_error = '1') THEN  --no-acknowledge or previous no-acknowledge
               ack_error <= '1';                     --set error output if no-acknowledge
             END IF;
           WHEN rd =>                                --receiving slave data
-            data_rx(bit_cnt) <= sda;                --receive current slave data bit
+            data_rx(bit_cnt) <= sda_in;                --receive current slave data bit
           WHEN slv_ack2 =>                          --receiving slave acknowledge (write)
-            IF(sda /= '0' OR ack_error = '1') THEN  --no-acknowledge or previous no-acknowledge
+            IF(sda_in /= '0' OR ack_error = '1') THEN  --no-acknowledge or previous no-acknowledge
               ack_error <= '1';                     --set error output if no-acknowledge
             END IF;
           WHEN stop =>
@@ -231,16 +235,16 @@ BEGIN
         END CASE;
       END IF;
     END IF;
-  END PROCESS;  
+  END PROCESS;
 
   --set sda output
   WITH state SELECT
     sda_ena_n <= data_clk_prev WHEN start,     --generate start condition
                  NOT data_clk_prev WHEN stop,  --generate stop condition
-                 sda_int WHEN OTHERS;          --set to internal sda signal    
-      
+                 sda_int WHEN OTHERS;          --set to internal sda signal
+
   --set scl and sda outputs
-  scl <= '0' WHEN (scl_ena = '1' AND scl_clk = '0') ELSE 'Z';
-  sda <= '0' WHEN sda_ena_n = '0' ELSE 'Z';
-  
+  scl_en <= '1' WHEN (scl_ena = '1' AND scl_clk = '0') ELSE '0';
+  sda_en <= '1' WHEN sda_ena_n = '0' ELSE '0';
+
 END logic;
