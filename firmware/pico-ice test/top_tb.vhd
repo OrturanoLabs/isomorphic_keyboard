@@ -62,7 +62,7 @@ BEGIN
 
     -- 4. Modello delle resistenze di Pull-Up sul bus I2C (Fondamentale!)
     -- In I2C i segnali sono open-drain. Se nessuno li guida, vanno a 'H' (High Weak)
-    sda_tb <= 'L';
+    sda_tb <= 'H';
     scl_tb <= 'H';
 
     -- 5. Generatore del Clock (Oscilla all'infinito)

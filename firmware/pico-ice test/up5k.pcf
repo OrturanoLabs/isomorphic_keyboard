@@ -1,13 +1,13 @@
-set_io --warn-no-port reset_n 10
-set_io --warn-no-port clk_in 35
+set_io --warn-no-port RESET_N 10
+set_io --warn-no-port CLK_IN 35
 
-set_io --warn-no-port board_clk 31
-set_io --warn-no-port board_data 34
-set_io --warn-no-port board_latch 38
+set_io --warn-no-port BOARD_CLK 31
+set_io --warn-no-port BOARD_DATA 34
+set_io --warn-no-port BOARD_LATCH 38
 
-set_io --warn-no-port package_sda 20
-set_io --warn-no-port package_scl 21
+set_io --warn-no-port PACKAGE_SDA 21
+set_io --warn-no-port PACKAGE_SCL 27
 
-set_io --warn-no-port led_blue 40
-set_io --warn-no-port led_green 39
-set_io --warn-no-port led_red 41
+set_io --warn-no-port LED_BLUE 40
+set_io --warn-no-port LED_GREEN 39
+set_io --warn-no-port LED_RED 41

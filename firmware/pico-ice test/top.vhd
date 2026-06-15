@@ -107,6 +107,9 @@ architecture behavioral of top is
         start_tx,
         wait_busy,
         wait_finish,
+        start_tx_2,
+        wait_busy_2,
+        wait_finish_2,
         f1,     -- alza ack_send e aspetta che si abbassi en_send
         err     -- stato di errore / fallback
     );
@@ -120,6 +123,9 @@ architecture behavioral of top is
     signal tile_stream : std_logic_vector(15 downto 0);    -- 2 byte per lo stato di una tile
     signal pb_counter : unsigned(4 downto 0);       -- contatore per i bit della tile
     signal tile_counter : unsigned(5 downto 0);     -- contatore delle tile
+
+    type keyboard_state_t is array (0 to 9) of std_logic_vector(15 downto 0); -- contiene lo stato di 10 tile
+    signal keyboard_state : keyboard_state_t := (others => (others => '0'));
 
 begin
     reset <= not RESET_N;
@@ -227,13 +233,13 @@ begin
             when c1 =>  -- controlliamo se abbiamo raccolto tutti i 16 bit
                 if pb_counter = 16 then
                     -- controlliamo che i bit di controllo siano giusti
-                    --if tile_stream(13) = '1' and tile_stream(12) = '1' then
+                    if tile_stream(2) = '1' and tile_stream(3) = '1' then
                         if sender_fsm_busy = '0' then -- controlliamo se il sender è pronto
                             next_state_pull <= s1; -- allora possiamo inviare
                         end if;
-                    --else
-                    --    next_state_pull <= err; -- altrimenti c'è un errore
-                    --end if;
+                    else
+                        next_state_pull <= err; -- altrimenti c'è un errore
+                    end if;
                 else
                     next_state_pull <= get_bit;
                 end if;
@@ -243,14 +249,14 @@ begin
                 end if;
             when s2 =>
                 if sender_fsm_busy = '0' then
-                    next_state_pull <= done;
+                    --next_state_pull <= done;
                     -- controlliamo se abbiamo finito la griglia
-                    --if tile_stream(15) = '1' and tile_stream(14) = '1' then
+                    if tile_stream(0) = '1' and tile_stream(1) = '1' then
                         -- se siamo all'ultima tile
-                    --    next_state_pull <= idle;
-                    --else
-                    --    next_state_pull <= r2;
-                    --end if;
+                        next_state_pull <= done;
+                    else
+                        next_state_pull <= r2;
+                    end if;
                 end if;
             when done => next_state_pull <= done;
             when others => next_state_pull <= err;
@@ -340,8 +346,17 @@ begin
                     --if i2c_ack_err = '1' then
                     --    next_state_sender <= err;
                     --else
-                        next_state_sender <= f1;
+                        next_state_sender <= start_tx_2;
                     --end if;
+                end if;
+            when start_tx_2 => next_state_sender <= wait_busy_2;
+            when wait_busy_2 =>
+                if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
+                    next_state_sender <= wait_finish_2;
+                end if;
+            when wait_finish_2 =>
+                if i2c_busy = '0' then
+                    next_state_sender <= f1;
                 end if;
             when f1 =>  -- aspettiamo che si spenga en_send
                 if sender_fsm_enable = '0' then
@@ -366,7 +381,6 @@ begin
                     sender_fsm_busy <= '0'; -- solo quando siamo in idle, la fsm segnala di essere pronta
 
                 when start_tx =>
-                    i2c_addr <= "1010101"; -- indirizzo slave RP2040
                     i2c_data_wr <= tile_stream(15 downto 8);
                     i2c_rw <= '0';
 
@@ -374,6 +388,16 @@ begin
                     i2c_ena <= '1';        -- diciamo all'IP di partire
 
                 when wait_finish =>
+                    null;
+
+                when start_tx_2 =>
+                    i2c_data_wr <= tile_stream(7 downto 0);
+                    i2c_rw <= '0';
+
+                when wait_busy_2 =>
+                    i2c_ena <= '1';        -- diciamo all'IP di partire
+
+                when wait_finish_2 =>
                     null;
 
                 when f1 =>
