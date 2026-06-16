@@ -92,6 +92,7 @@ architecture behavioral of top is
 
     type state_pull_t is (
         idle,   -- attende che la prima FSM sia in scanning
+        newcol, -- nuova colonna: azzera anotherCol
         r1,     -- alza il reset
         r2,     -- abbassa il reset e prepara a prendere il primo bit
         c1,     -- clock alto
@@ -123,6 +124,9 @@ architecture behavioral of top is
     signal tile_stream : std_logic_vector(15 downto 0);    -- 2 byte per lo stato di una tile
     signal pb_counter : unsigned(4 downto 0);       -- contatore per i bit della tile
     signal tile_counter : unsigned(5 downto 0);     -- contatore delle tile
+
+    -- ci serve un segnale che sia 1 se appare esserci una nuova colonna e che si resetta la tile dopo che la colonna sia finita
+    signal anotherCol : std_logic := '0';
 
     type keyboard_state_t is array (0 to 9) of std_logic_vector(15 downto 0); -- contiene lo stato di 10 tile
     signal keyboard_state : keyboard_state_t := (others => (others => '0'));
@@ -228,6 +232,7 @@ begin
                     next_state_pull <= r1;
                 end if;
             when r1 => next_state_pull <= r2;
+            when newcol => next_state_pull <= r2;
             when r2 => next_state_pull <= get_bit;
             when get_bit => next_state_pull <= c1;
             when c1 =>  -- controlliamo se abbiamo raccolto tutti i 16 bit
@@ -248,14 +253,16 @@ begin
                     next_state_pull <= s2;
                 end if;
             when s2 =>
-                if sender_fsm_busy = '0' then
-                    --next_state_pull <= done;
+                if sender_fsm_busy = '0' then   -- dopo aver inviato
                     -- controlliamo se abbiamo finito la griglia
-                    if tile_stream(0) = '1' and tile_stream(1) = '1' then
-                        -- se siamo all'ultima tile
-                        next_state_pull <= done;
+                    if tile_stream(0) = '1' then -- vuol dire che siamo in cima alla colonna
+                        if anotherCol = '1' then
+                            next_state_pull <= newcol; -- se c'è un'altra colonna
+                        else
+                            next_state_pull <= done;  -- se abbiamo finito la griglia
+                        end if;
                     else
-                        next_state_pull <= r2;
+                        next_state_pull <= r2;  -- se non abbiamo finito la colonna
                     end if;
                 end if;
             when done => next_state_pull <= done;
@@ -273,6 +280,7 @@ begin
                 tile_stream <= (others => '0');
                 pb_counter <= (others => '0');
                 tile_counter <= (others => '0');
+                anotherCol <= '0';
             elsif en_clk_scan = '1' then
                 -- valori di default
                 BOARD_CLK <= '0';
@@ -287,6 +295,9 @@ begin
                     when r1 =>
                         BOARD_LATCH <= '1';
                         tile_counter <= (others => '0');
+
+                    when newcol =>
+                        anotherCol <= '0';
 
                     when r2 =>
                         pb_counter <= (others => '0');
@@ -303,7 +314,8 @@ begin
                         sender_fsm_enable <= '1';
 
                     when s2 =>
-                        null;
+                        -- se c'è un'altra colonna a sinistra allora aggiorna anotherCol
+                        anotherCol <= anotherCol or (not tile_stream(1));
 
                     when others =>
                         null;
@@ -343,11 +355,11 @@ begin
                 end if;
             when wait_finish =>
                 if i2c_busy = '0' then
-                    --if i2c_ack_err = '1' then
-                    --    next_state_sender <= err;
-                    --else
+                    if i2c_ack_err = '1' then
+                        next_state_sender <= err;
+                    else
                         next_state_sender <= start_tx_2;
-                    --end if;
+                    end if;
                 end if;
             when start_tx_2 => next_state_sender <= wait_busy_2;
             when wait_busy_2 =>
@@ -410,6 +422,9 @@ begin
     end process;
 
 
+    LED_BLUE <= '0' WHEN state_main = err ELSE '1';
+    LED_RED <= '0' WHEN state_pull = err ELSE '1';
+    LED_GREEN <= '0' WHEN state_sender = err ELSE '1';
 
 
 end behavioral;
