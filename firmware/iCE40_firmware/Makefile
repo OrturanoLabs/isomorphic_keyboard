@@ -1,47 +1,62 @@
-# Configurazione dei percorsi e dei file
+# ==============================================================================
+# CONFIGURAZIONE DEI PERCORSI E DEI STRUMENTI
+# ==============================================================================
 OSS_CAD_BIN = $(HOME)/Pacchetti/oss-cad-suite/bin
 DFU_UTIL    = $(OSS_CAD_BIN)/dfu-util
 
-# File del progetto
+# Cartelle del progetto
+SRC_DIR        = src
+SIM_DIR        = sim
+CONSTR_DIR     = constraints
+BUILD_DIR      = build
+SIM_BUILD_DIR  = $(SIM_DIR)/build
+
+# File di sintesi
 TOP_ENTITY  = top
-PCF_FILE    = up5k.pcf
+PCF_FILE    = $(CONSTR_DIR)/up5k.pcf
 
-# File del Testbench
-TB_ENTITY   = top_tb
-TB_FILE     = top_tb.vhd
+# --- GESTIONE DINAMICA TESTBENCH ---
+TB          ?= top_tb
+TB_ENTITY   = $(TB)
 
-# questi file devono essere aggiunti solo in simulazione
-SIM_FILES   = $(wildcard *sim.vhd)
+# File generati per l'implementazione (in build/)
+JSON_FILE   = $(BUILD_DIR)/hardware.json
+ASC_FILE    = $(BUILD_DIR)/hardware.asc
+BIN_FILE    = $(BUILD_DIR)/hardware.bin
 
-# Prende AUTOMATICAMENTE tutti i file .vhd nella cartella...
-ALL_VHDL    = $(wildcard *.vhd)
+# File generati per la simulazione (in sim/build/)
+GHW_FILE    = $(SIM_BUILD_DIR)/$(TB_ENTITY).ghw
 
-# ...e scarta sia il testbench che i file di simulazione per la sintesi!
-VHDL_FILES  = $(filter-out $(TB_FILE) $(SIM_FILES), $(ALL_VHDL))
+# Sorgenti
+VHDL_FILES  = $(wildcard $(SRC_DIR)/*.vhd)
+SIM_FILES   = $(wildcard $(SIM_DIR)/*.vhd)
 
 # ID e Seriale della pico-ice
 USB_ID      = 1209:b1c0
 SERIAL_NUM  = DE64481247531337
 
-# File generati
-JSON_FILE   = hardware.json
-ASC_FILE    = hardware.asc
-BIN_FILE    = hardware.bin
-VCD_FILE    = wave.vcd
-GHW_FILE    = wave.ghw
-
+# Flag base di GHDL (senza workdir, che gestiamo dinamicamente)
 GHDL_FLAGS  = -fsynopsys -fexplicit
 
-# Target principale
-all: $(BIN_FILE)
+# ==============================================================================
+# TARGET PRINCIPALI
+# ==============================================================================
+all: $(BUILD_DIR) $(BIN_FILE)
 
-# --- FLUSSO DI SINTESI HARWARE ---
+# Creazione delle cartelle di output
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
 
-$(JSON_FILE): $(VHDL_FILES)
-	# Rimuove la libreria GHDL per evitare conflitti con la simulazione
-	ghdl --remove
-	# Sintesi con Yosys
-	$(OSS_CAD_BIN)/yosys -m ghdl -p "ghdl $(GHDL_FLAGS) $(VHDL_FILES) -e $(TOP_ENTITY); synth_ice40 -json $(JSON_FILE)"
+$(SIM_BUILD_DIR):
+	mkdir -p $(SIM_BUILD_DIR)
+
+# --- FLUSSO DI SINTESI HARDWARE ---
+
+$(JSON_FILE): $(VHDL_FILES) | $(BUILD_DIR)
+	# Pulisce la libreria specifica dell'implementazione
+	ghdl --remove --workdir=$(BUILD_DIR)
+	# Sintesi con Yosys usando la cartella build/ come ambiente isolato
+	$(OSS_CAD_BIN)/yosys -m ghdl -p "ghdl $(GHDL_FLAGS) --workdir=$(BUILD_DIR) $(VHDL_FILES) -e $(TOP_ENTITY); synth_ice40 -json $(JSON_FILE)"
 
 $(ASC_FILE): $(JSON_FILE) $(PCF_FILE)
 	$(OSS_CAD_BIN)/nextpnr-ice40 --up5k --package sg48 --json $(JSON_FILE) --pcf $(PCF_FILE) --asc $(ASC_FILE)
@@ -56,26 +71,27 @@ upload-ram: $(BIN_FILE)
 	sudo $(DFU_UTIL) -d $(USB_ID) -S $(SERIAL_NUM) -a 1 -D $(BIN_FILE)
 
 
-# --- FLUSSO DI SIMULAZIONE ---
+# --- FLUSSO DI SIMULAZIONE MULTI-TESTBENCH ---
 
-# Comando per lanciare la simulazione, generare le onde e aprire GTKWave
-sim: $(VHDL_FILES) $(TB_FILE)
-	# 1. Pulisce la vecchia libreria per non andare in conflitto con Yosys
-	ghdl --remove
-	# 2. Importa tutti i file (incluso il testbench)
-	ghdl -i $(GHDL_FLAGS) $(VHDL_FILES) $(TB_FILE) $(SIM_FILES)
-	# 3. Elabora il testbench
-	ghdl -m $(GHDL_FLAGS) $(TB_ENTITY)
-	# 4. Esegue con un limite di tempo sicuro (es. 5ms) e genera il VCD
-	#ghdl -r $(TB_ENTITY) --vcd=$(VCD_FILE) --stop-time=5ms
-	ghdl -r $(TB_ENTITY) --wave=$(GHW_FILE) --stop-time=5ms
-	# 5. Apre automaticamente GTKWave
+sim: $(VHDL_FILES) $(SIM_FILES) | $(SIM_BUILD_DIR)
+	# 1. Pulisce la libreria specifica della simulazione in sim/build/
+	ghdl --remove --workdir=$(SIM_BUILD_DIR)
+	# 2. Importa tutti i file dentro sim/build/
+	ghdl -i $(GHDL_FLAGS) --workdir=$(SIM_BUILD_DIR) $(VHDL_FILES) $(SIM_FILES)
+	# 3. Elabora il testbench forzando l'eseguibile finale dentro sim/build/
+	ghdl -m $(GHDL_FLAGS) --workdir=$(SIM_BUILD_DIR) -o $(SIM_BUILD_DIR)/$(TB_ENTITY) $(TB_ENTITY)
+	# 4. Sposta il file temporaneo e~*.o dentro sim/build/
+	@mv -f e~$(TB_ENTITY).o $(SIM_BUILD_DIR)/ 2>/dev/null || true
+	# 5. Esegue il binario da sim/build/ salvando il file d'onda lì dentro
+	$(SIM_BUILD_DIR)/$(TB_ENTITY) --wave=$(GHW_FILE) --stop-time=5ms
+	# 6. Apre GTKWave
 	gtkwave $(GHW_FILE)
 
 
 # Pulizia totale
 clean:
-	ghdl --remove
-	rm -f $(JSON_FILE) $(ASC_FILE) $(BIN_FILE) $(VCD_FILE) $(GHW_FILE) e~*.o work-obj*.cf
+	ghdl --remove --workdir=$(BUILD_DIR) 2>/dev/null || true
+	ghdl --remove --workdir=$(SIM_BUILD_DIR) 2>/dev/null || true
+	rm -rf $(BUILD_DIR) $(SIM_BUILD_DIR)
 
 .PHONY: all upload-flash upload-ram sim clean
