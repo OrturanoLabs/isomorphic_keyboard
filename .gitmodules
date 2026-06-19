@@ -1,0 +1,6 @@
+[submodule "firmware/pico-sdk"]
+	path = firmware/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk
+[submodule "firmware/pico-ice-sdk"]
+	path = firmware/pico-ice-sdk
+	url = https://github.com/tinyvision-ai-inc/pico-ice-sdk
