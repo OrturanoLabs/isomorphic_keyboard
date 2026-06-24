@@ -38,7 +38,7 @@ ARCHITECTURE sim OF top_tb IS
     signal clk_out_tb : std_logic;
     signal latch_tb : std_logic;
 
-    signal state : std_logic_vector(11 downto 0) := "110101100101";
+    signal state : std_logic_vector(47 downto 0) := (others => '0');
 
     -- Costanti di temporizzazione (12 MHz basato sul tuo codice i2c_master)
     CONSTANT clk_period : TIME := 1 sec / 12_000_000; -- Circa 83.33 ns
@@ -87,14 +87,14 @@ BEGIN
 
 
     -- per ogni clock out dobbiamo comunicare un preciso bit
-    data_tb <= state(11);
+    data_tb <= state(47);
 
-    sdv : PROCESS(clk_out_tb)
+    sdv : PROCESS(clk_out_tb, latch_tb)
     begin
         if latch_tb = '1' then
-            state <= "110101100101";
+            state <= "000000000000110000000000000011110000000000001111";
         elsif rising_edge(clk_out_tb) then
-            state(11 downto 0) <= state(10 downto 0) & state(11);
+            state(47 downto 0) <= state(46 downto 0) & '0';
         end if;
     end process;
 

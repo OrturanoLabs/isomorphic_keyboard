@@ -84,8 +84,11 @@ sim: $(VHDL_FILES) $(SIM_FILES) | $(SIM_BUILD_DIR)
 	@mv -f e~$(TB_ENTITY).o $(SIM_BUILD_DIR)/ 2>/dev/null || true
 	# 5. Esegue il binario da sim/build/ salvando il file d'onda lì dentro
 	$(SIM_BUILD_DIR)/$(TB_ENTITY) --wave=$(GHW_FILE) --stop-time=5ms
+
+wave:
 	# 6. Apre GTKWave
-	gtkwave $(GHW_FILE)
+	# gtkwave $(GHW_FILE)
+	nohup gtkwave $(GHW_FILE) >/dev/null 2>&1 &
 
 
 # Pulizia totale

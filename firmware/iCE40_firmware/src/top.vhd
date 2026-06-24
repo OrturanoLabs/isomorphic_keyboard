@@ -87,6 +87,7 @@ architecture behavioral of top is
     type state_main_t is (
         idle,   -- stato iniziale
         scanning,   -- operazione di scansione. Quanto è in questo stato è attiva anche la seconda FSM
+        done,
         err     -- stato di errore / fallback
     );
 
@@ -100,6 +101,7 @@ architecture behavioral of top is
         s1,     -- abilita il sender e attende per il segnale ack_send
         s2,     -- aspettiamo che ack_send torni a zero, indicando che il sender è di nuovo in idle
         done,
+        load,   -- carica i dati della tile nel primo registro
         err
     );
 
@@ -127,9 +129,41 @@ architecture behavioral of top is
 
     -- ci serve un segnale che sia 1 se appare esserci una nuova colonna e che si resetta la tile dopo che la colonna sia finita
     signal anotherCol : std_logic := '0';
+    type coord_t is record
+        r : unsigned(2 downto 0);
+        c : unsigned(2 downto 0);
+    end record;
+    constant COORD_ZERO : coord_t := (r => (others => '0'), c => (others => '0') );
+    signal coord : coord_t := ( r => (others => '0'), c => (others => '0') );
 
-    type keyboard_state_t is array (0 to 9) of std_logic_vector(15 downto 0); -- contiene lo stato di 10 tile
-    signal keyboard_state : keyboard_state_t := (others => (others => '0'));
+    type pbs_t is array (1 to 3, 1 to 4) of std_logic; -- tipo per la matrice di tasti in una tile
+    type tile_t is record
+        pbs : pbs_t; -- matrice dei pulsanti della tile
+        coord : coord_t; -- coordinata della tile all'interno della griglia
+    end record;
+    constant TILE_ZERO : tile_t := (pbs => (others => (others => '0')), coord => COORD_ZERO );
+    type keyboard_t is array (1 to 10) of tile_t;
+    constant KEYBOARD_ZERO : keyboard_t := (others => TILE_ZERO);
+    signal keyboard_state : keyboard_t := KEYBOARD_ZERO;
+
+
+    function map_pbs(stream : std_logic_vector(15 downto 0)) return pbs_t is
+        variable p : pbs_t;
+    begin
+        p(1,1) := stream(5);
+        p(1,2) := stream(4);
+        p(1,3) := stream(11);
+        p(1,4) := stream(10);
+        p(2,1) := stream(7);
+        p(2,2) := stream(6);
+        p(2,3) := stream(13);
+        p(2,4) := stream(12);
+        p(3,1) := stream(9);
+        p(3,2) := stream(8);
+        p(3,3) := stream(15);
+        p(3,4) := stream(14);
+        return p;
+    end function;
 
 begin
     reset <= not RESET_N;
@@ -202,12 +236,20 @@ begin
             elsif en_clk_scan = '1' then
                 case state_main is
                     when idle => state_main <= scanning;
-                    when scanning => state_main <= scanning;
+                    when scanning => state_main <= done;
+                    when done => state_main <= done;
                     when others => state_main <= err;
                 end case;
             end if;
         end if;
     end process;
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+-- DISPATCHER ----------------------------------------------------------------------------------------------------------------------------------
+
+-- la funzione principale è estrarre i dati dalle tile e popolare keyboard_state
 
 
     pull_fsm_clocking : process(CLK_IN)
@@ -239,33 +281,24 @@ begin
                 if pb_counter = 16 then
                     -- controlliamo che i bit di controllo siano giusti
                     if tile_stream(2) = '1' and tile_stream(3) = '1' then
-                        if sender_fsm_busy = '0' then -- controlliamo se il sender è pronto
-                            next_state_pull <= s1; -- allora possiamo inviare
-                        end if;
+                        next_state_pull <= load; -- allora possiamo caricare nel primo registro
                     else
                         next_state_pull <= err; -- altrimenti c'è un errore
                     end if;
                 else
                     next_state_pull <= get_bit;
                 end if;
-            when s1 =>
-                if sender_fsm_busy = '1' then
-                    next_state_pull <= s2;
-                end if;
-            when s2 =>
-                if sender_fsm_busy = '0' then   -- dopo aver inviato
-                    -- controlliamo se abbiamo finito la griglia
-                    if tile_stream(0) = '1' then -- vuol dire che siamo in cima alla colonna
-                        if anotherCol = '1' then
-                            next_state_pull <= newcol; -- se c'è un'altra colonna
-                        else
-                            next_state_pull <= done;  -- se abbiamo finito la griglia
-                        end if;
+            when load =>
+                if tile_stream(0) = '1' then -- vuol dire che siamo in cima alla colonna
+                    if anotherCol = '1' then
+                        next_state_pull <= newcol; -- se c'è un'altra colonna
                     else
-                        next_state_pull <= r2;  -- se non abbiamo finito la colonna
+                        next_state_pull <= done;  -- se abbiamo finito la griglia
                     end if;
+                else
+                    next_state_pull <= r2;  -- se non abbiamo finito la colonna
                 end if;
-            when done => next_state_pull <= done;
+            when done => next_state_pull <= idle;
             when others => next_state_pull <= err;
         end case;
     end process;
@@ -281,6 +314,9 @@ begin
                 pb_counter <= (others => '0');
                 tile_counter <= (others => '0');
                 anotherCol <= '0';
+                keyboard_state <= KEYBOARD_ZERO;
+                coord <= COORD_ZERO;
+
             elsif en_clk_scan = '1' then
                 -- valori di default
                 BOARD_CLK <= '0';
@@ -295,13 +331,18 @@ begin
                     when r1 =>
                         BOARD_LATCH <= '1';
                         tile_counter <= (others => '0');
+                        coord.c <= to_unsigned(1, 3); -- resettiamo tutto perché iniziamo la griglia
+                        coord.r <= (others => '0');
 
                     when newcol =>
                         anotherCol <= '0';
+                        coord.c <= coord.c + 1;  -- incrementa il contatore di colonna
+                        coord.r <= (others => '0'); -- resetta il contatore di riga
 
                     when r2 =>
                         pb_counter <= (others => '0');
                         tile_counter <= tile_counter + 1;
+                        coord.r <= coord.r + 1;
 
                     when get_bit =>
                         pb_counter <= pb_counter + 1;
@@ -310,12 +351,11 @@ begin
                     when c1 =>
                         BOARD_CLK <= '1';
 
-                    when s1 =>
-                        sender_fsm_enable <= '1';
-
-                    when s2 =>
-                        -- se c'è un'altra colonna a sinistra allora aggiorna anotherCol
+                    when load =>
                         anotherCol <= anotherCol or (not tile_stream(1));
+                        -- codice per caricare il tile_stream all'interno del registro giusto
+                        keyboard_state(to_integer(tile_counter)).coord <= coord;
+                        keyboard_state(to_integer(tile_counter)).pbs <= map_pbs(tile_stream);
 
                     when others =>
                         null;
@@ -326,100 +366,113 @@ begin
     end process;
 
 
-    sender_fsm_clocking : process(CLK_IN)
-    begin
-        if rising_edge(CLK_IN) then
-            if RESET_N = '0' then
-                state_sender <= idle;
-            else
-                state_sender <= next_state_sender;
-            end if;
-        end if;
-    end process;
 
-    sender_fsm_next : process(state_sender, sender_fsm_enable, i2c_busy)
-    begin
-        next_state_sender <= state_sender;
+------------------------------------------------------------------------------------------------------------------------------------------------
+-- DEBOUNCING ----------------------------------------------------------------------------------------------------------------------------------
 
-        case state_sender is
-            when idle =>
-                if sender_fsm_enable = '1' then -- attende che venga dato il segnale per inviare i file
-                    if i2c_busy = '0' then  -- attende che il modulo i2c sia pronto
-                        next_state_sender <= start_tx;
-                    end if;
-                end if;
-            when start_tx => next_state_sender <= wait_busy;
-            when wait_busy =>
-                if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
-                    next_state_sender <= wait_finish;
-                end if;
-            when wait_finish =>
-                if i2c_busy = '0' then
-                    if i2c_ack_err = '1' then
-                        next_state_sender <= err;
-                    else
-                        next_state_sender <= start_tx_2;
-                    end if;
-                end if;
-            when start_tx_2 => next_state_sender <= wait_busy_2;
-            when wait_busy_2 =>
-                if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
-                    next_state_sender <= wait_finish_2;
-                end if;
-            when wait_finish_2 =>
-                if i2c_busy = '0' then
-                    next_state_sender <= f1;
-                end if;
-            when f1 =>  -- aspettiamo che si spenga en_send
-                if sender_fsm_enable = '0' then
-                    next_state_sender <= idle;
-                end if;
-            when others => next_state_sender <= err;
-        end case;
-    end process;
+-- ogni volta che c'è la transizione done=>idle di state_pull, i dati in keyboard_state sono pronti
+-- e in generale è sicuro usarli a ogni clock se next_state_pull /= load (possiamo usare i fronti di discesa?)
+-- priviamo ad inserire queste uscite nei debouncer
 
-    sender_fsm_output : process(clk_in, reset)
-    begin
-        if reset = '1' then
-            i2c_ena <= '0';
-            sender_fsm_busy <= '1';
-        elsif rising_edge(clk_in) then
-            -- defaults:
-            i2c_ena <= '0';
-            sender_fsm_busy <= '1';
 
-            case next_state_sender is
-                when idle =>
-                    sender_fsm_busy <= '0'; -- solo quando siamo in idle, la fsm segnala di essere pronta
 
-                when start_tx =>
-                    i2c_data_wr <= tile_stream(15 downto 8);
-                    i2c_rw <= '0';
+------------------------------------------------------------------------------------------------------------------------------------------------
+-- SENDER --------------------------------------------------------------------------------------------------------------------------------------
 
-                when wait_busy =>
-                    i2c_ena <= '1';        -- diciamo all'IP di partire
-
-                when wait_finish =>
-                    null;
-
-                when start_tx_2 =>
-                    i2c_data_wr <= tile_stream(7 downto 0);
-                    i2c_rw <= '0';
-
-                when wait_busy_2 =>
-                    i2c_ena <= '1';        -- diciamo all'IP di partire
-
-                when wait_finish_2 =>
-                    null;
-
-                when f1 =>
-                    null;
-
-                when others => null;
-
-            end case;
-        end if;
-    end process;
+    -- sender_fsm_clocking : process(CLK_IN)
+    -- begin
+    --     if rising_edge(CLK_IN) then
+    --         if RESET_N = '0' then
+    --             state_sender <= idle;
+    --         else
+    --             state_sender <= next_state_sender;
+    --         end if;
+    --     end if;
+    -- end process;
+    --
+    -- sender_fsm_next : process(state_sender, sender_fsm_enable, i2c_busy)
+    -- begin
+    --     next_state_sender <= state_sender;
+    --
+    --     case state_sender is
+    --         when idle =>
+    --             if sender_fsm_enable = '1' then -- attende che venga dato il segnale per inviare i file
+    --                 if i2c_busy = '0' then  -- attende che il modulo i2c sia pronto
+    --                     next_state_sender <= start_tx;
+    --                 end if;
+    --             end if;
+    --         when start_tx => next_state_sender <= wait_busy;
+    --         when wait_busy =>
+    --             if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
+    --                 next_state_sender <= wait_finish;
+    --             end if;
+    --         when wait_finish =>
+    --             if i2c_busy = '0' then
+    --                 if i2c_ack_err = '1' then
+    --                     next_state_sender <= err;
+    --                 else
+    --                     next_state_sender <= start_tx_2;
+    --                 end if;
+    --             end if;
+    --         when start_tx_2 => next_state_sender <= wait_busy_2;
+    --         when wait_busy_2 =>
+    --             if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
+    --                 next_state_sender <= wait_finish_2;
+    --             end if;
+    --         when wait_finish_2 =>
+    --             if i2c_busy = '0' then
+    --                 next_state_sender <= f1;
+    --             end if;
+    --         when f1 =>  -- aspettiamo che si spenga en_send
+    --             if sender_fsm_enable = '0' then
+    --                 next_state_sender <= idle;
+    --             end if;
+    --         when others => next_state_sender <= err;
+    --     end case;
+    -- end process;
+    --
+    -- sender_fsm_output : process(clk_in, reset)
+    -- begin
+    --     if reset = '1' then
+    --         i2c_ena <= '0';
+    --         sender_fsm_busy <= '1';
+    --     elsif rising_edge(clk_in) then
+    --         -- defaults:
+    --         i2c_ena <= '0';
+    --         sender_fsm_busy <= '1';
+    --
+    --         case next_state_sender is
+    --             when idle =>
+    --                 sender_fsm_busy <= '0'; -- solo quando siamo in idle, la fsm segnala di essere pronta
+    --
+    --             when start_tx =>
+    --                 i2c_data_wr <= tile_stream(15 downto 8);
+    --                 i2c_rw <= '0';
+    --
+    --             when wait_busy =>
+    --                 i2c_ena <= '1';        -- diciamo all'IP di partire
+    --
+    --             when wait_finish =>
+    --                 null;
+    --
+    --             when start_tx_2 =>
+    --                 i2c_data_wr <= tile_stream(7 downto 0);
+    --                 i2c_rw <= '0';
+    --
+    --             when wait_busy_2 =>
+    --                 i2c_ena <= '1';        -- diciamo all'IP di partire
+    --
+    --             when wait_finish_2 =>
+    --                 null;
+    --
+    --             when f1 =>
+    --                 null;
+    --
+    --             when others => null;
+    --
+    --         end case;
+    --     end if;
+    -- end process;
 
 
     LED_BLUE <= '0' WHEN state_main = err ELSE '1';
