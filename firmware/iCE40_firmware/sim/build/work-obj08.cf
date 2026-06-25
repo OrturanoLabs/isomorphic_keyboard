@@ -1,0 +1,268 @@
+v 4
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/i2c_master.vhd" "923adc6e1ed85bb50ef0579838eaa8b86f883b9f" "20260625134840.395":
+  entity i2c_master at 32( 1602) + 0 on 17;
+  architecture logic of i2c_master at 56( 2873) + 0 on 18;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/top.vhd" "2f491da697ef94cac5e82369ef37fbbd68599293" "20260625134839.773":
+  entity top at 1( 0) + 0 on 13;
+  architecture behavioral of top at 23( 485) + 0 on 14;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_tdm_mux.vhd" "a50623951cd3cf857f3ea84271a308884cbd9f73" "20260625134839.315":
+  entity olo_base_tdm_mux at 21( 1084) + 0 on 4;
+  architecture rtl of olo_base_tdm_mux at 52( 2261) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_fifo_packet.vhd" "0b833589a12c9fee09403025738d6c1c1e795aea" "20260625134839.315":
+  entity olo_base_fifo_packet at 25( 1346) + 0 on 4;
+  architecture rtl of olo_base_fifo_packet at 78( 3748) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_decode_firstbit.vhd" "201a29c7c2e55b4221a1afbe8426d97b9fe15b40" "20260625134839.316":
+  entity olo_base_decode_firstbit at 21( 1100) + 0 on 4;
+  architecture rtl of olo_base_decode_firstbit at 59( 2431) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_pkg_math.vhd" "31ac7e8d20aa57c3ac67404fd37945e28f1e3878" "20260625134841.061":
+  package olo_base_pkg_math at 21( 1080) + 0 on 21 body;
+  package body olo_base_pkg_math at 158( 4760) + 0 on 22;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_prbs.vhd" "3d03c9c1a90aef9f94aff606e4263dfa1843ec82" "20260625134839.317":
+  entity olo_base_prbs at 22( 1124) + 0 on 4;
+  architecture rtl of olo_base_prbs at 59( 2601) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_pkg_attribute.vhd" "cdc3bfe7062181d0ece50e953815c7fcd4d6e7d1" "20260625134841.559":
+  package olo_base_pkg_attribute at 21( 1145) + 0 on 25;
+  package body olo_base_pkg_attribute at 123( 4457) + 0 on 26;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_pl_stage.vhd" "e0049a8cd9f42d907b1114f8478fcd7976edb5d6" "20260625134839.318":
+  entity olo_base_pl_stage at 25( 1334) + 0 on 4;
+  architecture rtl of olo_base_pl_stage at 57( 2491) + 0 on 4;
+  entity olo_private_pl_stage_single at 132( 4919) + 0 on 4;
+  architecture rtl of olo_private_pl_stage_single at 166( 6112) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_arb_prio.vhd" "c8db421b5fbc5b4dfa4c7da84294121bb5312d6c" "20260625134839.318":
+  entity olo_base_arb_prio at 22( 1127) + 0 on 4;
+  architecture rtl of olo_base_arb_prio at 50( 2121) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_status.vhd" "3bafa5bbc0956699dc64ec3ea94b37c2256bb042" "20260625134839.318":
+  entity olo_base_cc_status at 26( 1426) + 0 on 4;
+  architecture rtl of olo_base_cc_status at 53( 2477) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_fifo_async.vhd" "4e3ec2a2f9deff2fcc2c220ffa0dcef4d7686294" "20260625134839.319":
+  entity olo_base_fifo_async at 22( 1173) + 0 on 4;
+  architecture rtl of olo_base_fifo_async at 81( 3706) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_reset.vhd" "564c03a68e39568f504aa0af6908b1c7fc0572a5" "20260625134839.319":
+  entity olo_base_cc_reset at 24( 1282) + 0 on 4;
+  architecture struct of olo_base_cc_reset at 51( 2219) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_crc.vhd" "a16d5c6a255fe7384d9436c51b21359f990a35df" "20260625134839.319":
+  entity olo_base_crc at 21( 1143) + 0 on 4;
+  architecture rtl of olo_base_crc at 66( 3210) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_delay.vhd" "b697173ff2516731c374ec5e81a1e2ba18754916" "20260625134839.320":
+  entity olo_base_delay at 22( 1156) + 0 on 4;
+  architecture rtl of olo_base_delay at 58( 2591) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_reset_gen.vhd" "954f4a63fd5b55ec64eac9e1350c576ed6eb9b6e" "20260625134839.320":
+  entity olo_base_reset_gen at 23( 1245) + 0 on 4;
+  architecture struct of olo_base_reset_gen at 51( 2346) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_ram_tdp.vhd" "9edbd332a53b630c64f836686b67b1e2a2406d49" "20260625134839.320":
+  entity olo_base_ram_tdp at 22( 1121) + 0 on 4;
+  architecture rtl of olo_base_ram_tdp at 65( 3219) + 0 on 4;
+  entity olo_private_ram_tdp_nobe at 177( 7522) + 0 on 4;
+  architecture rtl of olo_private_ram_tdp_nobe at 219( 9357) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_dyn_sft.vhd" "474e9a227c465457340182abd800c6da93ffeb43" "20260625134839.321":
+  entity olo_base_dyn_sft at 21( 1073) + 0 on 4;
+  architecture rtl of olo_base_dyn_sft at 56( 2425) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_simple.vhd" "0df22e0a20d87cf8f3c53f43c7176703ea95c0b7" "20260625134839.321":
+  entity olo_base_cc_simple at 23( 1242) + 0 on 4;
+  architecture struct of olo_base_cc_simple at 55( 2445) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_handshake.vhd" "758c9f267b028fd7457b68910dfc42fec8662233" "20260625134839.321":
+  entity olo_base_cc_handshake at 23( 1173) + 0 on 4;
+  architecture rtl of olo_base_cc_handshake at 55( 2459) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_rate_limit.vhd" "c72029d62bf051d9087c0f46d4edee92a17b4925" "20260625134839.322":
+  entity olo_base_rate_limit at 27( 1529) + 0 on 4;
+  architecture rtl of olo_base_rate_limit at 69( 3368) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_latency_comp.vhd" "db4a111bf885dd3bb76813e0fe311ab56506abe0" "20260625134839.322":
+  entity olo_base_latency_comp at 20( 1060) + 0 on 4;
+  architecture rtl of olo_base_latency_comp at 63( 2870) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_strobe_div.vhd" "0ed5f6249c826da467dec8c5ac2feda7e73c9a2c" "20260625134839.322":
+  entity olo_base_strobe_div at 21( 1079) + 0 on 4;
+  architecture rtl of olo_base_strobe_div at 49( 2186) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_pkg_array.vhd" "71a339a86a125b69227a152a3f1520bb13364bd7" "20260625134840.636":
+  package olo_base_pkg_array at 20( 1087) + 0 on 19 body;
+  package body olo_base_pkg_array at 82( 5354) + 0 on 20;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_pkg_string.vhd" "6503cd5bc453ceb0761a99660ac99fcc91ee49f3" "20260625134841.368":
+  package olo_base_pkg_string at 19( 1032) + 0 on 23 body;
+  package body olo_base_pkg_string at 58( 2273) + 0 on 24;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_arb_rr.vhd" "3354ca1f2b0837556e9f08d9c7b25bbbc3388b25" "20260625134839.323":
+  entity olo_base_arb_rr at 21( 1080) + 0 on 4;
+  architecture rtl of olo_base_arb_rr at 47( 1891) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cam.vhd" "346c8acd98704d96efad332233c39cfd26996e25" "20260625134839.324":
+  entity olo_base_cam at 20( 1021) + 0 on 4;
+  architecture rtl of olo_base_cam at 84( 3628) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_pkg_logic.vhd" "73bda4444e173640c3bb6b123cc20351db730092" "20260625134839.324":
+  package olo_base_pkg_logic at 21( 1062) + 0 on 4;
+  package body olo_base_pkg_logic at 116( 6031) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_xn2n.vhd" "82bf6c0c2a9dc46383f10a844480d81902dad5ee" "20260625134839.325":
+  entity olo_base_cc_xn2n at 23( 1258) + 0 on 4;
+  architecture rtl of olo_base_cc_xn2n at 51( 2225) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_flowctrl_handler.vhd" "b5d4da7f2a359474509b6e1a5a74ed54492535fe" "20260625134839.325":
+  entity olo_base_flowctrl_handler at 21( 1110) + 0 on 4;
+  architecture rtl of olo_base_flowctrl_handler at 60( 2691) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_delay_cfg.vhd" "43e601cfcb3c136e9d95da0054723cfa3a61d20f" "20260625134839.325":
+  entity olo_base_delay_cfg at 24( 1321) + 0 on 4;
+  architecture rtl of olo_base_delay_cfg at 57( 2560) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_fifo_sync.vhd" "f316efda0c97ca5dc7020850e9e7cdac5c64c40b" "20260625134839.325":
+  entity olo_base_fifo_sync at 22( 1121) + 0 on 4;
+  architecture rtl of olo_base_fifo_sync at 69( 2960) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_strobe_gen.vhd" "67fa0c00579e5e281a3d5766e11627ea0d4a0cea" "20260625134841.826":
+  entity olo_base_strobe_gen at 22( 1158) + 0 on 29;
+  architecture rtl of olo_base_strobe_gen at 51( 2165) + 0 on 30;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_wconv_n2xn.vhd" "badd76e63240ad068d6f797d80787ec5bb059a6b" "20260625134839.326":
+  entity olo_base_wconv_n2xn at 22( 1162) + 0 on 4;
+  architecture rtl of olo_base_wconv_n2xn at 57( 2492) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_bits.vhd" "729f3191381a2c7c565f3f5cef37cb00659b6f3c" "20260625134839.326":
+  entity olo_base_cc_bits at 24( 1284) + 0 on 4;
+  architecture struct of olo_base_cc_bits at 56( 2374) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_arb_wrr.vhd" "2faea8b442b562bc49206492f956730cf52c4b63" "20260625134839.327":
+  entity olo_base_arb_wrr at 22( 1132) + 0 on 4;
+  architecture rtl of olo_base_arb_wrr at 58( 2239) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_sample_hold.vhd" "2bc0a92ae8daf0604d059f2c5855094d59660f7d" "20260625134839.327":
+  entity olo_base_sample_hold at 22( 1104) + 0 on 4;
+  architecture rtl of olo_base_sample_hold at 55( 2234) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_wconv_n2m.vhd" "2978ad3469f0280c43bf9d014669432e5ba7a558" "20260625134839.327":
+  entity olo_base_wconv_n2m at 21( 1064) + 0 on 4;
+  architecture rtl of olo_base_wconv_n2m at 59( 2669) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_crc_check.vhd" "1783350c887b1565228fb5b1b1e5f4188f6b0283" "20260625134839.327":
+  entity olo_base_crc_check at 20( 1041) + 0 on 4;
+  architecture rtl of olo_base_crc_check at 69( 3173) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_ram_sp.vhd" "0576b767ba65df0d702f826f91b06f19ae6f3082" "20260625134839.328":
+  entity olo_base_ram_sp at 22( 1122) + 0 on 4;
+  architecture rtl of olo_base_ram_sp at 58( 2614) + 0 on 4;
+  entity olo_private_ram_sp_nobe at 153( 5987) + 0 on 4;
+  architecture rtl of olo_private_ram_sp_nobe at 189( 7391) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_ram_sdp.vhd" "30cf3d35adc355000d73ea5586c62ad9f6aa9a56" "20260625134839.328":
+  entity olo_base_ram_sdp at 22( 1123) + 0 on 4;
+  architecture rtl of olo_base_ram_sdp at 62( 2875) + 0 on 4;
+  entity olo_private_ram_sdp_nobe at 169( 6887) + 0 on 4;
+  architecture rtl of olo_private_ram_sdp_nobe at 209( 8489) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_wconv_xn2n.vhd" "04d10c10758a82fa2e9d67001a20a34862490238" "20260625134839.329":
+  entity olo_base_wconv_xn2n at 22( 1161) + 0 on 4;
+  architecture rtl of olo_base_wconv_xn2n at 54( 2364) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_crc_append.vhd" "0663b8dd0b61fe71bcccfdd72f3c348c26f468fd" "20260625134839.329":
+  entity olo_base_crc_append at 20( 1003) + 0 on 4;
+  architecture rtl of olo_base_crc_append at 63( 2829) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_pulse.vhd" "4e9953757513e1a4cab7a3ab35256b3472d44270" "20260625134839.329":
+  entity olo_base_cc_pulse at 26( 1376) + 0 on 4;
+  architecture rtl of olo_base_cc_pulse at 53( 2490) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/base/vhdl/olo_base_cc_n2xn.vhd" "edd1afe99c1d3e9f4e7ac43b222b47506d3f2d68" "20260625134839.329":
+  entity olo_base_cc_n2xn at 23( 1258) + 0 on 4;
+  architecture rtl of olo_base_cc_n2xn at 51( 2244) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/axi/vhdl/olo_axi_pkg_protocol.vhd" "efc5221f292ad87f6fbd3ad57a9b3675734b4d8b" "20260625134839.329":
+  package olo_axi_pkg_protocol at 18( 829) + 0 on 4;
+  package body olo_axi_pkg_protocol at 53( 2255) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/axi/vhdl/olo_axi_pl_stage.vhd" "af0214235dce1a54d4ebd4c894a54ebb5e5ee1a0" "20260625134839.330":
+  entity olo_axi_pl_stage at 21( 1107) + 0 on 4;
+  architecture rtl of olo_axi_pl_stage at 148( 7980) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/axi/vhdl/olo_axi_lite_slave.vhd" "5721089a72bc9bd71d2b7fc578aab67ab09c7a7d" "20260625134839.331":
+  entity olo_axi_lite_slave at 22( 1146) + 0 on 4;
+  architecture rtl of olo_axi_lite_slave at 81( 3729) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/axi/vhdl/olo_axi_master_simple.vhd" "eb73c56eed019ac419461d755223879c4210cae0" "20260625134839.332":
+  entity olo_axi_master_simple at 25( 1358) + 0 on 4;
+  architecture rtl of olo_axi_master_simple at 124( 7086) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/axi/vhdl/olo_axi_master_full.vhd" "86e2c592420284dd88f4c4f9852840720dfb6261" "20260625134839.334":
+  entity olo_axi_master_full at 26( 1473) + 0 on 4;
+  architecture rtl of olo_axi_master_full at 125( 7135) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/intf/vhdl/olo_intf_clk_meas.vhd" "5b10b384c224f90d25bebb8e43fa7e15bb3fe793" "20260625134839.334":
+  entity olo_intf_clk_meas at 22( 1158) + 0 on 4;
+  architecture rtl of olo_intf_clk_meas at 51( 2156) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/intf/vhdl/olo_intf_spi_slave.vhd" "94bca4ae80f40045e14dad4c0deab65317091aa4" "20260625134839.334":
+  entity olo_intf_spi_slave at 20( 1024) + 0 on 4;
+  architecture rtl of olo_intf_spi_slave at 71( 3209) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/intf/vhdl/olo_intf_debounce.vhd" "8b6c935d55933afa8967d014319bb33415e60134" "20260625134841.967":
+  entity olo_intf_debounce at 21( 1098) + 0 on 31;
+  architecture struct of olo_intf_debounce at 56( 2326) + 0 on 32;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/intf/vhdl/olo_intf_sync.vhd" "f9855d10b219b2ffa97d7305723c1edfac42204f" "20260625134841.658":
+  entity olo_intf_sync at 22( 1137) + 0 on 27;
+  architecture struct of olo_intf_sync at 53( 2206) + 0 on 28;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/intf/vhdl/olo_intf_uart.vhd" "c7f9fcbbc1edd0c41ea0b1336325841045ac35ae" "20260625134839.335":
+  entity olo_intf_uart at 20( 1026) + 0 on 4;
+  architecture rtl of olo_intf_uart at 62( 2725) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/intf/vhdl/olo_intf_i2c_master.vhd" "0eb3625fc805fd05ddfb81b789a661e210ce62ab" "20260625134839.336":
+  package olo_intf_i2c_master_pkg at 22( 1183) + 0 on 4;
+  entity olo_intf_i2c_master at 44( 2001) + 0 on 4;
+  architecture rtl of olo_intf_i2c_master at 105( 4562) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/intf/vhdl/olo_intf_spi_master.vhd" "b8b4b422531c7a4c2c868284b28117594c75346e" "20260625134839.337":
+  entity olo_intf_spi_master at 21( 1102) + 0 on 4;
+  architecture rtl of olo_intf_spi_master at 70( 3358) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_sim_stimuli.vhd" "84915959fa043332120e8de102da416e779277f3" "20260625134839.337":
+  entity olo_fix_sim_stimuli at 22( 1140) + 0 on 4;
+  architecture sim of olo_fix_sim_stimuli at 54( 2212) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_round.vhd" "516dce4480b94b3882664de1b33650d46bf43dc8" "20260625134839.337":
+  entity olo_fix_round at 22( 1101) + 0 on 4;
+  architecture rtl of olo_fix_round at 58( 2291) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_compare.vhd" "a7d46963bd5bdc034b8490bd432bbe598d4c501c" "20260625134839.337":
+  entity olo_fix_compare at 22( 1105) + 0 on 4;
+  architecture rtl of olo_fix_compare at 59( 2268) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_madd.vhd" "0b18a5ef9294ec7bf2e9d355e9f99f2edf756091" "20260625134839.338":
+  entity olo_fix_madd at 21( 1071) + 0 on 4;
+  architecture rtl of olo_fix_madd at 67( 2930) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_neg.vhd" "ee4d05ac7d4d624559b10147a9a08fcc89eb3d17" "20260625134839.338":
+  entity olo_fix_neg at 22( 1097) + 0 on 4;
+  architecture rtl of olo_fix_neg at 60( 2371) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_from_real.vhd" "239bc5374d3db66c261824f0d37fbecec97dfa09" "20260625134839.338":
+  entity olo_fix_from_real at 23( 1187) + 0 on 4;
+  architecture rtl of olo_fix_from_real at 50( 2021) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_pkg.vhd" "5f21b34ca0890ec8f3d7abee8fb7d593c5b03eae" "20260625134839.338":
+  package olo_fix_pkg at 21( 1062) + 0 on 4;
+  package body olo_fix_pkg at 85( 3630) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_sample_hold.vhd" "c9ceccea998171785c91dd70d3299fec4c3f92d1" "20260625134839.339":
+  entity olo_fix_sample_hold at 22( 1126) + 0 on 4;
+  architecture rtl of olo_fix_sample_hold at 57( 2355) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_sub.vhd" "7dbc05cbe8feb7ffe6e7c99e6083b85ce36c1d0e" "20260625134839.339":
+  entity olo_fix_sub at 22( 1097) + 0 on 4;
+  architecture rtl of olo_fix_sub at 63( 2492) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_limit.vhd" "37641b5bd1ef50a4fed1f0a3d3cd8f41da887c74" "20260625134839.339":
+  entity olo_fix_limit at 22( 1101) + 0 on 4;
+  architecture rtl of olo_fix_limit at 67( 2893) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_cplx_addsub.vhd" "f3a9313181a11b37ee03a2656cd8de4f96d84348" "20260625134839.339":
+  entity olo_fix_cplx_addsub at 21( 1040) + 0 on 4;
+  architecture rtl of olo_fix_cplx_addsub at 73( 3197) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_resize.vhd" "2a6853ea5efc4d0508b9a4f37e6b854203761f5b" "20260625134839.340":
+  entity olo_fix_resize at 22( 1103) + 0 on 4;
+  architecture rtl of olo_fix_resize at 59( 2340) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_cic_dec_par_tdm.vhd" "274345a327f3839a25d79fd0312a0b519c0b30e2" "20260625134839.341":
+  entity olo_fix_cic_dec_par_tdm at 24( 1371) + 0 on 4;
+  architecture rtl of olo_fix_cic_dec_par_tdm at 81( 3796) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_addsub.vhd" "57bc75665296be5e0bc451747940c6914c240288" "20260625134839.341":
+  entity olo_fix_addsub at 22( 1103) + 0 on 4;
+  architecture rtl of olo_fix_addsub at 64( 2547) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_cordic_vect.vhd" "8c3e2e90d78252545be76fa1fc2bd84c33ff07d5" "20260625134839.342":
+  entity olo_fix_cordic_vect at 21( 1119) + 0 on 4;
+  architecture rtl of olo_fix_cordic_vect at 68( 3122) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_to_real.vhd" "7127bb1663c8de80344ab28b240f2457694ac219" "20260625134839.342":
+  entity olo_fix_to_real at 23( 1183) + 0 on 4;
+  architecture rtl of olo_fix_to_real at 49( 1943) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_abs.vhd" "befb9d0a8ca2a52549cd67b98ae9bf13e1b1c7e5" "20260625134839.342":
+  entity olo_fix_abs at 22( 1097) + 0 on 4;
+  architecture rtl of olo_fix_abs at 60( 2371) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_add.vhd" "4adc9afbf88c353fc1c93aaf8bc84050998204bc" "20260625134839.342":
+  entity olo_fix_add at 22( 1097) + 0 on 4;
+  architecture rtl of olo_fix_add at 63( 2492) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_private_optional_reg.vhd" "cf4b56ebed0956e6924092094ff7f21dda3fbf84" "20260625134839.342":
+  entity olo_fix_private_optional_reg at 24( 1159) + 0 on 4;
+  architecture rtl of olo_fix_private_optional_reg at 56( 2126) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_mult.vhd" "f24aa9e1d2a995fa0ecd6b6154e11ba6f5b6bc72" "20260625134839.342":
+  entity olo_fix_mult at 22( 1099) + 0 on 4;
+  architecture rtl of olo_fix_mult at 63( 2495) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_cplx_mult.vhd" "e185c521da31bd1b99d8546cdb80198b21c643ed" "20260625134839.344":
+  entity olo_fix_cplx_mult at 21( 1062) + 0 on 4;
+  architecture rtl of olo_fix_cplx_mult at 73( 3240) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_cic_dec_tdm.vhd" "fcc112e85c0d45ea04027e87bfcb9bbc4f103702" "20260625134839.345":
+  entity olo_fix_cic_dec_tdm at 22( 1193) + 0 on 4;
+  architecture rtl of olo_fix_cic_dec_tdm at 79( 3447) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_sim_checker.vhd" "a0d516bd43f906e38f5f00f3958658f5610302a7" "20260625134839.345":
+  entity olo_fix_sim_checker at 22( 1151) + 0 on 4;
+  architecture sim of olo_fix_sim_checker at 53( 2180) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_bin_div.vhd" "21d8984911908aec3814a2a6d0bd60b4b6716fd7" "20260625134839.345":
+  entity olo_fix_bin_div at 22( 1093) + 0 on 4;
+  architecture rtl of olo_fix_bin_div at 62( 2598) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_saturate.vhd" "edcf4a19ccf8feceb4aa577f08374838a1b64a78" "20260625134839.346":
+  entity olo_fix_saturate at 22( 1107) + 0 on 4;
+  architecture rtl of olo_fix_saturate at 57( 2256) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_sim_from_real.vhd" "7e03f2d22bb52335f3838717010724b7496005b6" "20260625134839.346":
+  entity olo_fix_sim_from_real at 23( 1191) + 0 on 4;
+  architecture rtl of olo_fix_sim_from_real at 52( 2124) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "src/open-logic/fix/vhdl/olo_fix_cordic_rot.vhd" "785aa6bf4d2cb586915d18b046933c3747404ef0" "20260625134839.347":
+  entity olo_fix_cordic_rot at 21( 1117) + 0 on 4;
+  architecture rtl of olo_fix_cordic_rot at 68( 3119) + 0 on 4;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "sim/sb_io_sim.vhd" "995b76d506377684f98123ae6ec3cae83d56a7c3" "20260625134840.290":
+  entity sb_io at 1( 0) + 0 on 15;
+  architecture sim of sb_io at 23( 650) + 0 on 16;
+file "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/" "sim/top_tb.vhd" "6103bbc199f097f21efd223021a2e6bb149fa04b" "20260625134839.639":
+  entity top_tb at 1( 0) + 0 on 11;
+  architecture sim of top_tb at 8( 112) + 0 on 12;

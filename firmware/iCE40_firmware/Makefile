@@ -28,7 +28,9 @@ BIN_FILE    = $(BUILD_DIR)/hardware.bin
 GHW_FILE    = $(SIM_BUILD_DIR)/$(TB_ENTITY).ghw
 
 # Sorgenti
-VHDL_FILES  = $(wildcard $(SRC_DIR)/*.vhd)
+# VHDL_FILES  = $(wildcard $(SRC_DIR)/*.vhd)
+# Prendiamo i file vhdl sorgenti da qualsiasi profondità
+VHDL_FILES := $(shell find $(SRC_DIR) -name "*.vhd")
 SIM_FILES   = $(wildcard $(SIM_DIR)/*.vhd)
 
 # ID e Seriale della pico-ice
@@ -36,7 +38,7 @@ USB_ID      = 1209:b1c0
 SERIAL_NUM  = DE64481247531337
 
 # Flag base di GHDL (senza workdir, che gestiamo dinamicamente)
-GHDL_FLAGS  = -fsynopsys -fexplicit
+GHDL_FLAGS  = -fsynopsys -fexplicit --std=08
 
 # ==============================================================================
 # TARGET PRINCIPALI

@@ -63,6 +63,24 @@ architecture behavioral of top is
         );
     end component;
 
+    component olo_intf_debounce
+        generic (
+            CLKFREQUENCY_G      : real      := 12.0e6;
+            DEBOUNCETIME_G      : real      := 2.0e-2;
+            WIDTH_G             : positive  := 12;
+            IDLELEVEL_G         : std_logic := '0';
+            MODE_G              : string    := "LOW_LATENCY"
+        );
+        port (
+            -- control signals
+            CLK                 : in    std_logic;
+            RST                 : in    std_logic;
+            -- Input clock domain
+            DATAASYNC           : in    std_logic_vector(Width_g - 1 downto 0);
+            DATAOUT             : out   std_logic_vector(Width_g - 1 downto 0)
+        );
+    end component;
+
     -- segnali interni per collegare la nostra logica all'IP I2C
     signal i2c_ena     : std_logic := '0';
     signal i2c_addr    : std_logic_vector(6 downto 0) := "1010101"; -- indirizzo del RP2040
@@ -144,9 +162,12 @@ architecture behavioral of top is
     constant TILE_ZERO : tile_t := (pbs => (others => (others => '0')), coord => COORD_ZERO );
     type keyboard_t is array (1 to 10) of tile_t;
     constant KEYBOARD_ZERO : keyboard_t := (others => TILE_ZERO);
-    signal keyboard_state : keyboard_t := KEYBOARD_ZERO;
+    signal keyboard_state : keyboard_t := KEYBOARD_ZERO;    -- contiene lo stato in tempo reale
+    signal keyboard_debounced : keyboard_t := KEYBOARD_ZERO;    -- contiene lo stato dopo il debounce
+    signal keyboard_debounced_old : keyboard_t := KEYBOARD_ZERO;    -- stato dopo il debounce con un ciclo di ritardo
+    signal keyboard_pending : keyboard_t := KEYBOARD_ZERO;  -- contiene 1 quando va aggiornato lo stato del tasto
 
-
+    -- mappa dei tasti
     function map_pbs(stream : std_logic_vector(15 downto 0)) return pbs_t is
         variable p : pbs_t;
     begin
@@ -163,6 +184,50 @@ architecture behavioral of top is
         p(3,3) := stream(15);
         p(3,4) := stream(14);
         return p;
+    end function;
+
+    -- funzioni per isomorfismi delle metrici di tasti
+    function flatten(m : pbs_t) return std_logic_vector is
+        variable v : std_logic_vector(11 downto 0);
+    begin
+        for i in 0 to 2 loop
+            for j in 0 to 3 loop
+                v(i*4 + j) := m(i+1,j+1);
+            end loop;
+        end loop;
+        return v;
+    end;
+    function unflatten(v : std_logic_vector(11 downto 0)) return pbs_t is
+        variable m : pbs_t;
+    begin
+        for i in 0 to 2 loop
+            for j in 0 to 3 loop
+                m(i+1,j+1) := v(i*4 + j);
+            end loop;
+        end loop;
+        return m;
+    end;
+
+    -- overload delle funzioni logiche
+    function "xor" (a, b : pbs_t) return pbs_t is
+        variable result : pbs_t;
+    begin
+        for i in 1 to 3 loop
+            for j in 1 to 4 loop
+                result(i, j) := a(i, j) xor b(i, j);
+            end loop;
+        end loop;
+        return result;
+    end function;
+    function "or" (a, b : pbs_t) return pbs_t is
+        variable result : pbs_t;
+    begin
+        for i in 1 to 3 loop
+            for j in 1 to 4 loop
+                result(i, j) := a(i, j) or b(i, j);
+            end loop;
+        end loop;
+        return result;
     end function;
 
 begin
@@ -236,7 +301,7 @@ begin
             elsif en_clk_scan = '1' then
                 case state_main is
                     when idle => state_main <= scanning;
-                    when scanning => state_main <= done;
+                    when scanning => state_main <= scanning;
                     when done => state_main <= done;
                     when others => state_main <= err;
                 end case;
@@ -368,11 +433,103 @@ begin
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
--- DEBOUNCING ----------------------------------------------------------------------------------------------------------------------------------
+-- DEBOUNCING e CHANGE DETECTION ---------------------------------------------------------------------------------------------------------------
 
 -- ogni volta che c'è la transizione done=>idle di state_pull, i dati in keyboard_state sono pronti
 -- e in generale è sicuro usarli a ogni clock se next_state_pull /= load (possiamo usare i fronti di discesa?)
 -- priviamo ad inserire queste uscite nei debouncer
+
+    -- generiamo un debouncer da 12 canali per ogni tile allocata
+    gen_debouncer : for i in 1 to 10 generate -- dimensionalità delle tile in keyboard_t
+        signal pbs_flat : std_logic_vector(11 downto 0);
+    begin
+        debouncer : olo_intf_debounce
+            port map(
+                CLK => not CLK_IN,
+                RST => not RESET_N,
+                DATAASYNC => flatten(keyboard_state(i).pbs),
+                DATAOUT => pbs_flat
+            );
+
+        keyboard_debounced(i).pbs <= unflatten(pbs_flat);
+        keyboard_debounced(i).coord <= keyboard_state(i).coord;
+    end generate;
+
+    -- i dati in keyboard_debounced sono stabili su ogni fronte di salita
+    save_old_debounced_state : process(CLK_IN)
+        variable pos_b : integer := 1;
+        variable pos_i : integer := 1;
+        variable pos_j : integer := 1;
+    begin
+        if rising_edge(CLK_IN) then
+            if RESET_N = '0' then
+                keyboard_debounced_old <= KEYBOARD_ZERO;
+                keyboard_pending <= KEYBOARD_ZERO;
+            else
+                keyboard_debounced_old <= keyboard_debounced;
+
+                for i in 1 to 10 loop
+                    keyboard_pending(i).coord <= keyboard_debounced(i).coord;   -- le coordinate non dovrebbero cambiare fra i vari scan
+                    keyboard_pending(i).pbs <= keyboard_pending(i).pbs or ( keyboard_debounced(i).pbs xor keyboard_debounced_old(i).pbs );
+                end loop;
+
+                -- logica per trovare tutte le occorrenze dentro a pending
+                if keyboard_pending(pos_b).pbs(pos_i, pos_j) = '1' then
+                    keyboard_pending(pos_b).pbs(pos_i, pos_j) <= '0';
+
+                    -- calcolo della coordinata assoluta del tasto premuto
+                end if;
+
+                -- incremento degli indici
+                if pos_j < 4 then
+                    pos_j := pos_j + 1;
+                else
+                    pos_j := 1;
+                    if pos_i < 3 then
+                        pos_i := pos_i + 1;
+                    else
+                        pos_i := 1;
+                        if pos_b < 10 then
+                            pos_b := pos_b + 1;
+                        else
+                            pos_b := 1;
+                        end if;
+                    end if;
+                end if;
+
+            end if;
+        end if;
+    end process;
+
+    -- logica per rilevare i cambiamenti
+    -- gen_pending : for i in 1 to 10 generate
+    --     keyboard_pending(i).coord <= keyboard_debounced(i).coord;   -- le coordinate non dovrebbero cambiare fra i vari scan
+    --     keyboard_pending(i).pbs <= keyboard_
+    -- end generate;
+
+    -- ora dobbiamo scorrere
+--     process(clk)
+-- begin
+--   if rising_edge(clk) then
+--
+--     if i < N-1 then
+--       i <= i + 1;
+--     else
+--       i <= 0;
+--     end if;
+--
+--     if changed(i) = '1' and fifo_full = '0' then
+--       fifo_push <= '1';
+--       fifo_data <= std_logic_vector(to_unsigned(i, fifo_data'length));
+--     else
+--       fifo_push <= '0';
+--     end if;
+--
+--   end if;
+-- end process;
+
+
+
 
 
 

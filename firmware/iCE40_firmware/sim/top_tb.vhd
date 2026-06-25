@@ -90,9 +90,15 @@ BEGIN
     data_tb <= state(47);
 
     sdv : PROCESS(clk_out_tb, latch_tb)
+        variable count : integer := 0;
     begin
         if latch_tb = '1' then
-            state <= "000000000000110000000000000011110000000000001111";
+            if count = 0 then
+                state <= "000110000000110000000100000011110100000000001111";
+            else
+                state <= "000000000000110000000000000011110000000000001111";
+            end if;
+            count := count + 1;
         elsif rising_edge(clk_out_tb) then
             state(47 downto 0) <= state(46 downto 0) & '0';
         end if;
