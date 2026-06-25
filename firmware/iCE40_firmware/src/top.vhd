@@ -66,7 +66,7 @@ architecture behavioral of top is
     component olo_intf_debounce
         generic (
             CLKFREQUENCY_G      : real      := 12.0e6;
-            DEBOUNCETIME_G      : real      := 2.0e-2;
+            DEBOUNCETIME_G      : real      := 1.0e-3; -- 2.0e-2
             WIDTH_G             : positive  := 12;
             IDLELEVEL_G         : std_logic := '0';
             MODE_G              : string    := "LOW_LATENCY"
@@ -135,11 +135,19 @@ architecture behavioral of top is
         err     -- stato di errore / fallback
     );
 
+    type state_serializer_t is (
+        polling,
+        s0,
+        s1,
+        s2
+    );
+
     signal state_main : state_main_t := idle;
     signal state_pull : state_pull_t := idle;
     signal state_sender : state_sender_t := idle;
     signal next_state_pull : state_pull_t := idle;
     signal next_state_sender : state_sender_t := idle;
+    signal state_serializer : state_serializer_t := polling;
 
     signal tile_stream : std_logic_vector(15 downto 0);    -- 2 byte per lo stato di una tile
     signal pb_counter : unsigned(4 downto 0);       -- contatore per i bit della tile
@@ -166,6 +174,15 @@ architecture behavioral of top is
     signal keyboard_debounced : keyboard_t := KEYBOARD_ZERO;    -- contiene lo stato dopo il debounce
     signal keyboard_debounced_old : keyboard_t := KEYBOARD_ZERO;    -- stato dopo il debounce con un ciclo di ritardo
     signal keyboard_pending : keyboard_t := KEYBOARD_ZERO;  -- contiene 1 quando va aggiornato lo stato del tasto
+
+    -- variabili per contenere i dati serializzati
+    signal x : unsigned(7 downto 0) := (others => '0');
+    signal y : unsigned(7 downto 0) := (others => '0');
+    signal change_dir : std_logic := '0';
+
+    -- segnali per la fsm del MIDI
+    signal midi_start : std_logic := '0';
+    signal midi_busy : std_logic := '0';
 
     -- mappa dei tasti
     function map_pbs(stream : std_logic_vector(15 downto 0)) return pbs_t is
@@ -456,16 +473,19 @@ begin
     end generate;
 
     -- i dati in keyboard_debounced sono stabili su ogni fronte di salita
-    save_old_debounced_state : process(CLK_IN)
-        variable pos_b : integer := 1;
-        variable pos_i : integer := 1;
-        variable pos_j : integer := 1;
+    state_serializer_fsm : process(CLK_IN)
+        variable pos_b : integer range 0 to 15 := 1;
+        variable pos_i : integer range 0 to 7  := 1;
+        variable pos_j : integer range 0 to 7  := 1;
     begin
         if rising_edge(CLK_IN) then
             if RESET_N = '0' then
                 keyboard_debounced_old <= KEYBOARD_ZERO;
                 keyboard_pending <= KEYBOARD_ZERO;
+                state_serializer <= polling;
+                midi_start <= '0';
             else
+                midi_start <= '0';
                 keyboard_debounced_old <= keyboard_debounced;
 
                 for i in 1 to 10 loop
@@ -473,60 +493,64 @@ begin
                     keyboard_pending(i).pbs <= keyboard_pending(i).pbs or ( keyboard_debounced(i).pbs xor keyboard_debounced_old(i).pbs );
                 end loop;
 
-                -- logica per trovare tutte le occorrenze dentro a pending
-                if keyboard_pending(pos_b).pbs(pos_i, pos_j) = '1' then
-                    keyboard_pending(pos_b).pbs(pos_i, pos_j) <= '0';
+                case state_serializer is
+                    when polling =>
+                        -- logica per trovare tutte le occorrenze dentro a pending
+                        if keyboard_pending(pos_b).pbs(pos_i, pos_j) = '1' then
+                            keyboard_pending(pos_b).pbs(pos_i, pos_j) <= '0';
 
-                    -- calcolo della coordinata assoluta del tasto premuto
-                end if;
-
-                -- incremento degli indici
-                if pos_j < 4 then
-                    pos_j := pos_j + 1;
-                else
-                    pos_j := 1;
-                    if pos_i < 3 then
-                        pos_i := pos_i + 1;
-                    else
-                        pos_i := 1;
-                        if pos_b < 10 then
-                            pos_b := pos_b + 1;
-                        else
-                            pos_b := 1;
+                            -- calcolo della coordinata assoluta del tasto premuto
+                            y <= resize( (keyboard_pending(pos_b).coord.r -1)*3 + to_unsigned(pos_i, 3), 8);
+                            x <= resize( (keyboard_pending(pos_b).coord.c -1)*4 + to_unsigned(pos_j, 3) + keyboard_pending(pos_b).coord.r, 8);
+                            change_dir <= keyboard_debounced(pos_b).pbs(pos_i, pos_j);
+                            state_serializer <= s0; -- inviamo i dati in MIDI
                         end if;
-                    end if;
-                end if;
+
+                        -- incremento degli indici
+                        if pos_j < 4 then
+                            pos_j := pos_j + 1;
+                        else
+                            pos_j := 1;
+                            if pos_i < 3 then
+                                pos_i := pos_i + 1;
+                            else
+                                pos_i := 1;
+                                if pos_b < 10 then
+                                    pos_b := pos_b + 1;
+                                else
+                                    pos_b := 1;
+                                end if;
+                            end if;
+                        end if;
+
+                    when s0 =>
+                        if midi_busy = '0' then
+                            state_serializer <= s1;
+                        end if;
+
+                    when s1 =>
+                        midi_start <= '1';
+                        if midi_busy = '1' then
+                            state_serializer <= s2;
+                        end if;
+
+                    when s2 =>
+                        if midi_busy = '0' then
+                            state_serializer <= polling;
+                        end if;
+
+                end case;
 
             end if;
         end if;
     end process;
 
-    -- logica per rilevare i cambiamenti
-    -- gen_pending : for i in 1 to 10 generate
-    --     keyboard_pending(i).coord <= keyboard_debounced(i).coord;   -- le coordinate non dovrebbero cambiare fra i vari scan
-    --     keyboard_pending(i).pbs <= keyboard_
-    -- end generate;
 
-    -- ora dobbiamo scorrere
---     process(clk)
--- begin
---   if rising_edge(clk) then
---
---     if i < N-1 then
---       i <= i + 1;
---     else
---       i <= 0;
---     end if;
---
---     if changed(i) = '1' and fifo_full = '0' then
---       fifo_push <= '1';
---       fifo_data <= std_logic_vector(to_unsigned(i, fifo_data'length));
---     else
---       fifo_push <= '0';
---     end if;
---
---   end if;
--- end process;
+
+----- PER VEDERE SE VA
+midi_busy <= midi_start;
+
+
 
 
 
@@ -536,100 +560,100 @@ begin
 ------------------------------------------------------------------------------------------------------------------------------------------------
 -- SENDER --------------------------------------------------------------------------------------------------------------------------------------
 
-    -- sender_fsm_clocking : process(CLK_IN)
-    -- begin
-    --     if rising_edge(CLK_IN) then
-    --         if RESET_N = '0' then
-    --             state_sender <= idle;
-    --         else
-    --             state_sender <= next_state_sender;
-    --         end if;
-    --     end if;
-    -- end process;
-    --
-    -- sender_fsm_next : process(state_sender, sender_fsm_enable, i2c_busy)
-    -- begin
-    --     next_state_sender <= state_sender;
-    --
-    --     case state_sender is
-    --         when idle =>
-    --             if sender_fsm_enable = '1' then -- attende che venga dato il segnale per inviare i file
-    --                 if i2c_busy = '0' then  -- attende che il modulo i2c sia pronto
-    --                     next_state_sender <= start_tx;
-    --                 end if;
-    --             end if;
-    --         when start_tx => next_state_sender <= wait_busy;
-    --         when wait_busy =>
-    --             if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
-    --                 next_state_sender <= wait_finish;
-    --             end if;
-    --         when wait_finish =>
-    --             if i2c_busy = '0' then
-    --                 if i2c_ack_err = '1' then
-    --                     next_state_sender <= err;
-    --                 else
-    --                     next_state_sender <= start_tx_2;
-    --                 end if;
-    --             end if;
-    --         when start_tx_2 => next_state_sender <= wait_busy_2;
-    --         when wait_busy_2 =>
-    --             if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
-    --                 next_state_sender <= wait_finish_2;
-    --             end if;
-    --         when wait_finish_2 =>
-    --             if i2c_busy = '0' then
-    --                 next_state_sender <= f1;
-    --             end if;
-    --         when f1 =>  -- aspettiamo che si spenga en_send
-    --             if sender_fsm_enable = '0' then
-    --                 next_state_sender <= idle;
-    --             end if;
-    --         when others => next_state_sender <= err;
-    --     end case;
-    -- end process;
-    --
-    -- sender_fsm_output : process(clk_in, reset)
-    -- begin
-    --     if reset = '1' then
-    --         i2c_ena <= '0';
-    --         sender_fsm_busy <= '1';
-    --     elsif rising_edge(clk_in) then
-    --         -- defaults:
-    --         i2c_ena <= '0';
-    --         sender_fsm_busy <= '1';
-    --
-    --         case next_state_sender is
-    --             when idle =>
-    --                 sender_fsm_busy <= '0'; -- solo quando siamo in idle, la fsm segnala di essere pronta
-    --
-    --             when start_tx =>
-    --                 i2c_data_wr <= tile_stream(15 downto 8);
-    --                 i2c_rw <= '0';
-    --
-    --             when wait_busy =>
-    --                 i2c_ena <= '1';        -- diciamo all'IP di partire
-    --
-    --             when wait_finish =>
-    --                 null;
-    --
-    --             when start_tx_2 =>
-    --                 i2c_data_wr <= tile_stream(7 downto 0);
-    --                 i2c_rw <= '0';
-    --
-    --             when wait_busy_2 =>
-    --                 i2c_ena <= '1';        -- diciamo all'IP di partire
-    --
-    --             when wait_finish_2 =>
-    --                 null;
-    --
-    --             when f1 =>
-    --                 null;
-    --
-    --             when others => null;
-    --
-    --         end case;
-    --     end if;
-    -- end process;
+    sender_fsm_clocking : process(CLK_IN)
+    begin
+        if rising_edge(CLK_IN) then
+            if RESET_N = '0' then
+                state_sender <= idle;
+            else
+                state_sender <= next_state_sender;
+            end if;
+        end if;
+    end process;
+
+    sender_fsm_next : process(state_sender, sender_fsm_enable, i2c_busy)
+    begin
+        next_state_sender <= state_sender;
+
+        case state_sender is
+            when idle =>
+                if sender_fsm_enable = '1' then -- attende che venga dato il segnale per inviare i file
+                    if i2c_busy = '0' then  -- attende che il modulo i2c sia pronto
+                        next_state_sender <= start_tx;
+                    end if;
+                end if;
+            when start_tx => next_state_sender <= wait_busy;
+            when wait_busy =>
+                if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
+                    next_state_sender <= wait_finish;
+                end if;
+            when wait_finish =>
+                if i2c_busy = '0' then
+                    if i2c_ack_err = '1' then
+                        next_state_sender <= err;
+                    else
+                        next_state_sender <= start_tx_2;
+                    end if;
+                end if;
+            when start_tx_2 => next_state_sender <= wait_busy_2;
+            when wait_busy_2 =>
+                if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
+                    next_state_sender <= wait_finish_2;
+                end if;
+            when wait_finish_2 =>
+                if i2c_busy = '0' then
+                    next_state_sender <= f1;
+                end if;
+            when f1 =>  -- aspettiamo che si spenga en_send
+                if sender_fsm_enable = '0' then
+                    next_state_sender <= idle;
+                end if;
+            when others => next_state_sender <= err;
+        end case;
+    end process;
+
+    sender_fsm_output : process(clk_in, reset)
+    begin
+        if reset = '1' then
+            i2c_ena <= '0';
+            sender_fsm_busy <= '1';
+        elsif rising_edge(clk_in) then
+            -- defaults:
+            i2c_ena <= '0';
+            sender_fsm_busy <= '1';
+
+            case next_state_sender is
+                when idle =>
+                    sender_fsm_busy <= '0'; -- solo quando siamo in idle, la fsm segnala di essere pronta
+
+                when start_tx =>
+                    i2c_data_wr <= tile_stream(15 downto 8);
+                    i2c_rw <= '0';
+
+                when wait_busy =>
+                    i2c_ena <= '1';        -- diciamo all'IP di partire
+
+                when wait_finish =>
+                    null;
+
+                when start_tx_2 =>
+                    i2c_data_wr <= tile_stream(7 downto 0);
+                    i2c_rw <= '0';
+
+                when wait_busy_2 =>
+                    i2c_ena <= '1';        -- diciamo all'IP di partire
+
+                when wait_finish_2 =>
+                    null;
+
+                when f1 =>
+                    null;
+
+                when others => null;
+
+            end case;
+        end if;
+    end process;
 
 
     LED_BLUE <= '0' WHEN state_main = err ELSE '1';
