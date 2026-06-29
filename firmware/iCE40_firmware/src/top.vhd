@@ -15,60 +15,16 @@ entity top is
         LED_GREEN   : out std_logic;
         LED_RED     : out std_logic;
 
-        PACKAGE_SDA : inout std_logic;
-        PACKAGE_SCL : inout std_logic;
-
         PACKAGE_MIDI: out std_logic
     );
 end top;
 
 architecture behavioral of top is
 
-    component SB_IO is
-        generic (
-            PIN_TYPE : std_logic_vector(5 downto 0) := "000000" );
-        port (
-            PACKAGE_PIN         : inout std_logic;
-            OUTPUT_ENABLE       : in std_logic := '0';
-            D_OUT_0             : in std_logic := '0';
-            D_IN_0              : out std_logic;
-
-            LATCH_INPUT_VALUE   : in std_logic := '0';
-            CLOCK_ENABLE        : in std_logic := '0';
-            INPUT_CLK           : in std_logic := '0';
-            OUTPUT_CLK          : in std_logic := '0';
-            D_OUT_1             : in std_logic := '0';
-            D_IN_1              : out std_logic
-        );
-    end component;
-
-    -- dichiarazione del componente per l'i2c
-    component i2c_master
-        generic(
-            INPUT_CLK           : integer := 12_000_000;
-            BUS_CLK             : integer := 100_000
-        );
-        port (
-            CLK                 : in std_logic;
-            RESET_N             : in std_logic;
-            ENA                 : in std_logic;
-            ADDR                : in std_logic_vector(6 downto 0);
-            RW                  : in std_logic;
-            DATA_WR             : in std_logic_vector(7 downto 0);
-            BUSY                : out std_logic;
-            DATA_RD             : out std_logic_vector(7 downto 0);
-            ACK_ERROR           : buffer std_logic;
-            SDA_IN              : in std_logic;
-            SDA_EN              : out std_logic;
-            SCL_IN              : in std_logic;
-            SCL_EN              : out std_logic
-        );
-    end component;
-
     component olo_intf_debounce
         generic (
             CLKFREQUENCY_G      : real      := 12.0e6;
-            DEBOUNCETIME_G      : real      := 1.0e-3; -- 2.0e-2
+            DEBOUNCETIME_G      : real      := 2.0e-2; -- 2.0e-2
             WIDTH_G             : positive  := 12;
             IDLELEVEL_G         : std_logic := '0';
             MODE_G              : string    := "LOW_LATENCY"
@@ -86,7 +42,7 @@ architecture behavioral of top is
     component olo_intf_uart
         generic (
             CLKFREQ_G       : real                  := 1.2e7;
-            BAUDRATE_G      : real                  := 115.2e3;
+            BAUDRATE_G      : real                  := 31.25e3;
             DATABITS_G      : positive range 7 to 9 := 8;
             STOPBITS_G      : string                := "1";
             PARITY_G        : string                := "none"
@@ -108,20 +64,6 @@ architecture behavioral of top is
             UART_RX         : in    std_logic                                 := '1'
         );
     end component;
-
-    -- segnali interni per collegare la nostra logica all'IP I2C
-    signal i2c_ena     : std_logic := '0';
-    signal i2c_addr    : std_logic_vector(6 downto 0) := "1010101"; -- indirizzo del RP2040
-    signal i2c_rw      : std_logic := '0'; -- 0 = scrittura
-    signal i2c_data_wr : std_logic_vector(7 downto 0);
-    signal i2c_busy    : std_logic;
-    signal i2c_ack_err : std_logic;
-
-    signal i2c_scl_in  : std_logic;
-    signal i2c_scl_en  : std_logic;
-    signal i2c_sda_in  : std_logic;
-    signal i2c_sda_en  : std_logic;
-
 
     signal clk_counter : unsigned(11 downto 0) := (others => '0');  -- contatore per il clock principale
     signal en_clk_scan : std_logic := '0';  -- divisore per il clock di scansione della griglia
@@ -151,31 +93,30 @@ architecture behavioral of top is
         err
     );
 
-    type state_sender_t is (
-        idle,   -- attende che la seconda FSM abbia raccolto una tile
-        start_tx,
-        wait_busy,
-        wait_finish,
-        start_tx_2,
-        wait_busy_2,
-        wait_finish_2,
-        f1,     -- alza ack_send e aspetta che si abbassi en_send
-        err     -- stato di errore / fallback
-    );
-
     type state_serializer_t is (
         polling,
         s0,
         s1,
-        s2
+        s2,
+        err
+    );
+
+    type state_midi_sender_t is (
+        idle,
+        a1,
+        a2,
+        b1,
+        b2,
+        c1,
+        c2,
+        err
     );
 
     signal state_main : state_main_t := idle;
     signal state_pull : state_pull_t := idle;
-    signal state_sender : state_sender_t := idle;
     signal next_state_pull : state_pull_t := idle;
-    signal next_state_sender : state_sender_t := idle;
     signal state_serializer : state_serializer_t := polling;
+    signal state_midi : state_midi_sender_t := idle;
 
     signal tile_stream : std_logic_vector(15 downto 0);    -- 2 byte per lo stato di una tile
     signal pb_counter : unsigned(4 downto 0);       -- contatore per i bit della tile
@@ -211,7 +152,9 @@ architecture behavioral of top is
     -- segnali per la fsm del MIDI
     signal midi_start : std_logic := '0';
     signal midi_busy : std_logic := '0';
-    signal midi_ready : std_logic := '0';
+    signal midi_uart_ready : std_logic := '0';
+    signal midi_uart_start : std_logic := '0';
+    signal midi_uart_data : std_logic_vector(7 downto 0) := (others => '0');
 
     -- mappa dei tasti
     function map_pbs(stream : std_logic_vector(15 downto 0)) return pbs_t is
@@ -282,48 +225,12 @@ architecture behavioral of top is
     signal pitch : unsigned (7 downto 0);
     constant ref_pitch : unsigned (6 downto 0) := "1100000"; -- 96 = C7
 
+    constant note_on : std_logic_vector (7 downto 0) := x"90";
+    constant note_off : std_logic_vector (7 downto 0) := x"80";
+    constant velocity : std_logic_vector (7 downto 0) := x"64";
+
 begin
     reset <= not RESET_N;
-
-    -- buffer hardware fisico per SDA
-    sda_hardware_io : SB_IO
-        generic map ( PIN_TYPE => "101001" ) -- tristate out + simple in
-        port map (
-            PACKAGE_PIN   => PACKAGE_SDA,
-            OUTPUT_ENABLE => i2c_sda_en,
-            D_OUT_0       => '0',
-            D_IN_0        => i2c_sda_in,
-            D_IN_1        => open
-        );
-
-    -- buffer hardware fisico per SCL
-    scl_hardware_io : SB_IO
-        generic map ( PIN_TYPE => "101001" )
-        port map (
-            PACKAGE_PIN   => PACKAGE_SCL,
-            OUTPUT_ENABLE => i2c_scl_en,
-            D_OUT_0       => '0',
-            D_IN_0        => i2c_scl_in,
-            D_IN_1        => open
-        );
-
-    i2c_inst : i2c_master
-        port map(
-            CLK           => CLK_IN,
-            RESET_N       => RESET_N,
-            ENA           => i2c_ena,
-            ADDR          => i2c_addr,
-            RW            => i2c_rw,
-            DATA_WR       => i2c_data_wr,
-            BUSY          => i2c_busy,
-            DATA_RD       => open,
-            ACK_ERROR     => i2c_ack_err,
-            SDA_IN        => i2c_sda_in,
-            SDA_EN        => i2c_sda_en,
-            SCL_IN        => i2c_scl_in,
-            SCL_EN        => i2c_scl_en
-        );
-
 
     -- genera il clock enable per la prima FSM
     main_clocking : process(CLK_IN)
@@ -355,6 +262,7 @@ begin
                     when idle => state_main <= scanning;
                     when scanning => state_main <= scanning;
                     when done => state_main <= done;
+                    when err => state_main <= err;
                     when others => state_main <= err;
                 end case;
             end if;
@@ -416,6 +324,7 @@ begin
                     next_state_pull <= r2;  -- se non abbiamo finito la colonna
                 end if;
             when done => next_state_pull <= idle;
+            when err => next_state_pull <= err;
             when others => next_state_pull <= err;
         end case;
     end process;
@@ -574,15 +483,14 @@ begin
                             state_serializer <= polling;
                         end if;
 
+                    when err => state_serializer <= err;
+                    when others => state_serializer <= err;
+
                 end case;
 
             end if;
         end if;
     end process;
-
------ PER VEDERE SE VA
---midi_busy <= midi_start;
-midi_busy <= not midi_ready;
 
 
 
@@ -594,7 +502,7 @@ midi_busy <= not midi_ready;
 --          spostamento in alto di una riga = +7 semitoni       pitch_y
 -- possiamo quindi calcolare la differenza in semitoni dalla nota alle coordinate (1, 1)
 
-    pitch <= to_unsigned( to_integer(ref_pitch) + pitch_x * to_integer(x) + pitch_y * to_integer(y) , 8);
+    pitch <= '0' & to_unsigned( to_integer(ref_pitch) + pitch_x * to_integer(x) + pitch_y * to_integer(y) , 7);
 
 
 
@@ -606,9 +514,9 @@ midi_busy <= not midi_ready;
         port map(
             CLK             => CLK_IN,
             RST             => not RESET_N,
-            TX_VALID        => midi_start,
-            TX_READY        => midi_ready,
-            TX_DATA         => std_logic_vector(pitch),
+            TX_VALID        => midi_uart_start,
+            TX_READY        => midi_uart_ready,
+            TX_DATA         => midi_uart_data,
             RX_VALID        => open,
             RX_DATA         => open,
             RX_PARITYERROR  => open,
@@ -616,112 +524,84 @@ midi_busy <= not midi_ready;
             UART_RX         => '1'
         );
 
-
-
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------
--- I2C SENDER ----------------------------------------------------------------------------------------------------------------------------------
-
-    sender_fsm_clocking : process(CLK_IN)
+    midi_sender_fsm : process(CLK_IN)
     begin
         if rising_edge(CLK_IN) then
             if RESET_N = '0' then
-                state_sender <= idle;
+                state_midi <= idle;
+                midi_uart_start <= '0';
+                midi_busy <= '0';
             else
-                state_sender <= next_state_sender;
+                midi_uart_start <= '0';
+                midi_busy <= '1';
+
+                case state_midi is
+                    when idle =>
+                        midi_busy <= '0';   -- unico stato in cui busy è basso
+                        if midi_start = '1' and midi_uart_ready = '1' then
+                            state_midi <= a1;
+                            -- controlliamo la direzione del cambiamento e prepariamo data
+                            if change_dir = '1' then
+                                midi_uart_data <= note_on;
+                            else
+                                midi_uart_data <= note_off;
+                            end if;
+                        end if;
+
+                    when a1 =>
+                        midi_uart_start <= '1';
+                        if midi_uart_ready = '0' then
+                            state_midi <= a2;
+                        end if;
+
+                    when a2 =>
+                        if midi_uart_ready = '1' then
+                            state_midi <= b1;
+                            midi_uart_data <= std_logic_vector(pitch);
+                        end if;
+
+                    when b1 =>
+                        midi_uart_start <= '1';
+                        if midi_uart_ready = '0' then
+                            state_midi <= b2;
+                        end if;
+
+                    when b2 =>
+                        if midi_uart_ready = '1' then
+                            state_midi <= c1;
+                            if change_dir = '1' then
+                                midi_uart_data <= velocity;
+                            else
+                                midi_uart_data <= x"00"; -- se la nota si deve spegnere mettiamo velocity 0
+                            end if;
+                        end if;
+
+                    when c1 =>
+                        midi_uart_start <= '1';
+                        if midi_uart_ready = '0' then
+                            state_midi <= c2;
+                        end if;
+
+                    when c2 =>
+                        if midi_uart_ready = '1' then
+                            state_midi <= idle;
+                        end if;
+
+                    when err => state_midi <= err;
+                    when others => state_midi <= err;
+
+                end case;
             end if;
         end if;
     end process;
 
-    sender_fsm_next : process(state_sender, sender_fsm_enable, i2c_busy)
-    begin
-        next_state_sender <= state_sender;
 
-        case state_sender is
-            when idle =>
-                if sender_fsm_enable = '1' then -- attende che venga dato il segnale per inviare i file
-                    if i2c_busy = '0' then  -- attende che il modulo i2c sia pronto
-                        next_state_sender <= start_tx;
-                    end if;
-                end if;
-            when start_tx => next_state_sender <= wait_busy;
-            when wait_busy =>
-                if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
-                    next_state_sender <= wait_finish;
-                end if;
-            when wait_finish =>
-                if i2c_busy = '0' then
-                    if i2c_ack_err = '1' then
-                        next_state_sender <= err;
-                    else
-                        next_state_sender <= start_tx_2;
-                    end if;
-                end if;
-            when start_tx_2 => next_state_sender <= wait_busy_2;
-            when wait_busy_2 =>
-                if i2c_busy = '1' then  -- aspettiamo che il modulo prenda il dato
-                    next_state_sender <= wait_finish_2;
-                end if;
-            when wait_finish_2 =>
-                if i2c_busy = '0' then
-                    next_state_sender <= f1;
-                end if;
-            when f1 =>  -- aspettiamo che si spenga en_send
-                if sender_fsm_enable = '0' then
-                    next_state_sender <= idle;
-                end if;
-            when others => next_state_sender <= err;
-        end case;
-    end process;
 
-    sender_fsm_output : process(clk_in, reset)
-    begin
-        if reset = '1' then
-            i2c_ena <= '0';
-            sender_fsm_busy <= '1';
-        elsif rising_edge(clk_in) then
-            -- defaults:
-            i2c_ena <= '0';
-            sender_fsm_busy <= '1';
-
-            case next_state_sender is
-                when idle =>
-                    sender_fsm_busy <= '0'; -- solo quando siamo in idle, la fsm segnala di essere pronta
-
-                when start_tx =>
-                    i2c_data_wr <= tile_stream(15 downto 8);
-                    i2c_rw <= '0';
-
-                when wait_busy =>
-                    i2c_ena <= '1';        -- diciamo all'IP di partire
-
-                when wait_finish =>
-                    null;
-
-                when start_tx_2 =>
-                    i2c_data_wr <= tile_stream(7 downto 0);
-                    i2c_rw <= '0';
-
-                when wait_busy_2 =>
-                    i2c_ena <= '1';        -- diciamo all'IP di partire
-
-                when wait_finish_2 =>
-                    null;
-
-                when f1 =>
-                    null;
-
-                when others => null;
-
-            end case;
-        end if;
-    end process;
 
 
     LED_BLUE <= '0' WHEN state_main = err ELSE '1';
     LED_RED <= '0' WHEN state_pull = err ELSE '1';
-    LED_GREEN <= '0' WHEN state_sender = err ELSE '1';
+    LED_GREEN <= '0' WHEN state_serializer = err ELSE '1';
 
 
 end behavioral;

@@ -1,0 +1,53 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Mon Jun 29 22:42:23 2026
+[*]
+[dumpfile] "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/sim/build/top_tb.ghw"
+[dumpfile_mtime] "Mon Jun 29 22:42:15 2026"
+[dumpfile_size] 21246297
+[savefile] "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/sim/gtkwave_dashboards/dashboard_2.gtkw"
+[timestart] 0
+[size] 1920 1121
+[pos] -1 -1
+*-40.933094 5670000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.top_tb.
+[treeopen] top.top_tb.uut.
+[sst_width] 297
+[signals_width] 166
+[sst_expanded] 1
+[sst_vpaned_height] 340
+@420
+top.top_tb.uut.state_main
+top.top_tb.uut.state_pull
+@22
+#{top.top_tb.uut.tile_counter[5:0]} top.top_tb.uut.tile_counter[5] top.top_tb.uut.tile_counter[4] top.top_tb.uut.tile_counter[3] top.top_tb.uut.tile_counter[2] top.top_tb.uut.tile_counter[1] top.top_tb.uut.tile_counter[0]
+#{top.top_tb.uut.tile_stream[15:0]} top.top_tb.uut.tile_stream[15] top.top_tb.uut.tile_stream[14] top.top_tb.uut.tile_stream[13] top.top_tb.uut.tile_stream[12] top.top_tb.uut.tile_stream[11] top.top_tb.uut.tile_stream[10] top.top_tb.uut.tile_stream[9] top.top_tb.uut.tile_stream[8] top.top_tb.uut.tile_stream[7] top.top_tb.uut.tile_stream[6] top.top_tb.uut.tile_stream[5] top.top_tb.uut.tile_stream[4] top.top_tb.uut.tile_stream[3] top.top_tb.uut.tile_stream[2] top.top_tb.uut.tile_stream[1] top.top_tb.uut.tile_stream[0]
+@28
+#{top.top_tb.uut.coord.c[2:0]} top.top_tb.uut.coord.c[2] top.top_tb.uut.coord.c[1] top.top_tb.uut.coord.c[0]
+#{top.top_tb.uut.coord.r[2:0]} top.top_tb.uut.coord.r[2] top.top_tb.uut.coord.r[1] top.top_tb.uut.coord.r[0]
+@200
+-
+@22
+#{top.top_tb.uut.x[7:0]} top.top_tb.uut.x[7] top.top_tb.uut.x[6] top.top_tb.uut.x[5] top.top_tb.uut.x[4] top.top_tb.uut.x[3] top.top_tb.uut.x[2] top.top_tb.uut.x[1] top.top_tb.uut.x[0]
+#{top.top_tb.uut.y[7:0]} top.top_tb.uut.y[7] top.top_tb.uut.y[6] top.top_tb.uut.y[5] top.top_tb.uut.y[4] top.top_tb.uut.y[3] top.top_tb.uut.y[2] top.top_tb.uut.y[1] top.top_tb.uut.y[0]
+@28
+top.top_tb.uut.change_dir
+@420
+top.top_tb.uut.state_serializer
+@200
+-
+@28
+top.top_tb.uut.midi_busy
+top.top_tb.uut.package_midi
+@22
+#{top.top_tb.uut.midi_uart.tx_data[7:0]} top.top_tb.uut.midi_uart.tx_data[7] top.top_tb.uut.midi_uart.tx_data[6] top.top_tb.uut.midi_uart.tx_data[5] top.top_tb.uut.midi_uart.tx_data[4] top.top_tb.uut.midi_uart.tx_data[3] top.top_tb.uut.midi_uart.tx_data[2] top.top_tb.uut.midi_uart.tx_data[1] top.top_tb.uut.midi_uart.tx_data[0]
+@28
+top.top_tb.uut.midi_uart.tx_valid
+top.top_tb.uut.midi_uart.tx_ready
+@200
+-
+@420
+top.top_tb.uut.state_midi
+[pattern_trace] 1
+[pattern_trace] 0
