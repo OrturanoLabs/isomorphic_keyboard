@@ -1,19 +1,20 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Thu Jun 25 16:56:53 2026
+[*] Mon Jun 29 18:59:40 2026
 [*]
 [dumpfile] "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/sim/build/top_tb.ghw"
-[dumpfile_mtime] "Thu Jun 25 16:48:25 2026"
-[dumpfile_size] 6516975
+[dumpfile_mtime] "Mon Jun 29 18:54:37 2026"
+[dumpfile_size] 6951193
 [savefile] "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/sim/gtkwave_dashboards/dashboard_1.gtkw"
 [timestart] 0
 [size] 1920 1121
 [pos] -1 -1
-*-36.348133 61458332350 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-38.348133 972000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.top_tb.
 [treeopen] top.top_tb.uut.
 [treeopen] top.top_tb.uut.keyboard_pending.
+[treeopen] top.top_tb.uut.midi_uart.
 [sst_width] 297
 [signals_width] 166
 [sst_expanded] 1
@@ -84,5 +85,15 @@ top.top_tb.uut.keyboard_pending[1].pbs[3,4]
 top.top_tb.uut.change_dir
 @421
 top.top_tb.uut.state_serializer
+@200
+-
+@28
+top.top_tb.uut.midi_busy
+top.top_tb.uut.package_midi
+@22
+#{top.top_tb.uut.midi_uart.tx_data[7:0]} top.top_tb.uut.midi_uart.tx_data[7] top.top_tb.uut.midi_uart.tx_data[6] top.top_tb.uut.midi_uart.tx_data[5] top.top_tb.uut.midi_uart.tx_data[4] top.top_tb.uut.midi_uart.tx_data[3] top.top_tb.uut.midi_uart.tx_data[2] top.top_tb.uut.midi_uart.tx_data[1] top.top_tb.uut.midi_uart.tx_data[0]
+@28
+top.top_tb.uut.midi_uart.tx_valid
+top.top_tb.uut.midi_uart.tx_ready
 [pattern_trace] 1
 [pattern_trace] 0

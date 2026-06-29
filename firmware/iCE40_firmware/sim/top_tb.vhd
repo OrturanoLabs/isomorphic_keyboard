@@ -22,7 +22,9 @@ ARCHITECTURE sim OF top_tb IS
             LED_RED     : out std_logic;
 
             PACKAGE_SDA : inout std_logic;
-            PACKAGE_SCL : inout std_logic
+            PACKAGE_SCL : inout std_logic;
+
+            PACKAGE_MIDI: out std_logic
         );
     END COMPONENT;
 

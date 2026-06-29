@@ -16,7 +16,9 @@ entity top is
         LED_RED     : out std_logic;
 
         PACKAGE_SDA : inout std_logic;
-        PACKAGE_SCL : inout std_logic
+        PACKAGE_SCL : inout std_logic;
+
+        PACKAGE_MIDI: out std_logic
     );
 end top;
 
@@ -78,6 +80,32 @@ architecture behavioral of top is
             -- Input clock domain
             DATAASYNC           : in    std_logic_vector(Width_g - 1 downto 0);
             DATAOUT             : out   std_logic_vector(Width_g - 1 downto 0)
+        );
+    end component;
+
+    component olo_intf_uart
+        generic (
+            CLKFREQ_G       : real                  := 1.2e7;
+            BAUDRATE_G      : real                  := 115.2e3;
+            DATABITS_G      : positive range 7 to 9 := 8;
+            STOPBITS_G      : string                := "1";
+            PARITY_G        : string                := "none"
+        );
+        port (
+            -- Control Signals
+            CLK             : in    std_logic;
+            RST             : in    std_logic;
+            -- Tx Data
+            TX_VALID        : in    std_logic                                 := '0';
+            TX_READY        : out   std_logic;
+            TX_DATA         : in    std_logic_vector(DataBits_g - 1 downto 0) := (others => '0');
+            -- Rx Data
+            RX_VALID        : out   std_logic;
+            RX_DATA         : out   std_logic_vector(DataBits_g - 1 downto 0);
+            RX_PARITYERROR  : out   std_logic;
+            -- UART Interface
+            UART_TX         : out   std_logic;
+            UART_RX         : in    std_logic                                 := '1'
         );
     end component;
 
@@ -183,6 +211,7 @@ architecture behavioral of top is
     -- segnali per la fsm del MIDI
     signal midi_start : std_logic := '0';
     signal midi_busy : std_logic := '0';
+    signal midi_ready : std_logic := '0';
 
     -- mappa dei tasti
     function map_pbs(stream : std_logic_vector(15 downto 0)) return pbs_t is
@@ -246,6 +275,12 @@ architecture behavioral of top is
         end loop;
         return result;
     end function;
+
+    -- segnali per la gestione del MIDI
+    constant pitch_x : integer := -2;
+    constant pitch_y : integer := 7;
+    signal pitch : unsigned (7 downto 0);
+    constant ref_pitch : unsigned (6 downto 0) := "1100000"; -- 96 = C7
 
 begin
     reset <= not RESET_N;
@@ -545,20 +580,48 @@ begin
         end if;
     end process;
 
-
-
 ----- PER VEDERE SE VA
-midi_busy <= midi_start;
+--midi_busy <= midi_start;
+midi_busy <= not midi_ready;
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+-- COORD to PITCH ------------------------------------------------------------------------------------------------------------------------------
+
+-- dobbiamo prendere le coordinate dentro a x e y e calcolare il pitch corrispondente.
+-- regole:  spostamento a sinistra di un tasto = -2 semitoni    pitch_x
+--          spostamento in alto di una riga = +7 semitoni       pitch_y
+-- possiamo quindi calcolare la differenza in semitoni dalla nota alle coordinate (1, 1)
+
+    pitch <= to_unsigned( to_integer(ref_pitch) + pitch_x * to_integer(x) + pitch_y * to_integer(y) , 8);
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+-- MIDI SENDER ---------------------------------------------------------------------------------------------------------------------------------
+
+    midi_uart : olo_intf_uart
+        port map(
+            CLK             => CLK_IN,
+            RST             => not RESET_N,
+            TX_VALID        => midi_start,
+            TX_READY        => midi_ready,
+            TX_DATA         => std_logic_vector(pitch),
+            RX_VALID        => open,
+            RX_DATA         => open,
+            RX_PARITYERROR  => open,
+            UART_TX         => PACKAGE_MIDI,
+            UART_RX         => '1'
+        );
 
 
 
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
--- SENDER --------------------------------------------------------------------------------------------------------------------------------------
+-- I2C SENDER ----------------------------------------------------------------------------------------------------------------------------------
 
     sender_fsm_clocking : process(CLK_IN)
     begin
