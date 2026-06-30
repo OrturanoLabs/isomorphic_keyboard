@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Mon Jun 29 22:42:23 2026
+[*] Tue Jun 30 13:38:39 2026
 [*]
 [dumpfile] "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/sim/build/top_tb.ghw"
-[dumpfile_mtime] "Mon Jun 29 22:42:15 2026"
-[dumpfile_size] 21246297
+[dumpfile_mtime] "Tue Jun 30 13:27:59 2026"
+[dumpfile_size] 21108558
 [savefile] "/home/diego/Documenti/git/isomorphic_keyboard/firmware/iCE40_firmware/sim/gtkwave_dashboards/dashboard_2.gtkw"
 [timestart] 0
 [size] 1920 1121
 [pos] -1 -1
-*-40.933094 5670000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-40.933094 8180000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.top_tb.
 [treeopen] top.top_tb.uut.
@@ -23,9 +23,6 @@ top.top_tb.uut.state_pull
 @22
 #{top.top_tb.uut.tile_counter[5:0]} top.top_tb.uut.tile_counter[5] top.top_tb.uut.tile_counter[4] top.top_tb.uut.tile_counter[3] top.top_tb.uut.tile_counter[2] top.top_tb.uut.tile_counter[1] top.top_tb.uut.tile_counter[0]
 #{top.top_tb.uut.tile_stream[15:0]} top.top_tb.uut.tile_stream[15] top.top_tb.uut.tile_stream[14] top.top_tb.uut.tile_stream[13] top.top_tb.uut.tile_stream[12] top.top_tb.uut.tile_stream[11] top.top_tb.uut.tile_stream[10] top.top_tb.uut.tile_stream[9] top.top_tb.uut.tile_stream[8] top.top_tb.uut.tile_stream[7] top.top_tb.uut.tile_stream[6] top.top_tb.uut.tile_stream[5] top.top_tb.uut.tile_stream[4] top.top_tb.uut.tile_stream[3] top.top_tb.uut.tile_stream[2] top.top_tb.uut.tile_stream[1] top.top_tb.uut.tile_stream[0]
-@28
-#{top.top_tb.uut.coord.c[2:0]} top.top_tb.uut.coord.c[2] top.top_tb.uut.coord.c[1] top.top_tb.uut.coord.c[0]
-#{top.top_tb.uut.coord.r[2:0]} top.top_tb.uut.coord.r[2] top.top_tb.uut.coord.r[1] top.top_tb.uut.coord.r[0]
 @200
 -
 @22

@@ -21,10 +21,36 @@ end top;
 
 architecture behavioral of top is
 
+    -- CUSTOM TYPES
+
+    -- coord_t(5 downto 3): r
+    -- coord_t(2 downto 0): c
+    subtype coord_t is std_logic_vector(5 downto 0);
+    constant COORD_ZERO : coord_t := (others => '0');
+
+    -- pbs_t(0): tasto r1,c1
+    -- pbs_t(1): tasto r1,c2
+    -- [...]
+    -- pbs_t(4): tasto r2,c1
+    -- [...]
+    -- pbs_t(11): tasto r3,c4
+    subtype pbs_t is std_logic_vector(11 downto 0);
+
+    -- tile_t(17 downto 6): pbs_t
+    -- tile_t(5 downto 0): coord_t
+    subtype tile_t is std_logic_vector(17 downto 0);
+    constant TILE_ZERO : tile_t := (others => '0');
+    -- per ottenere lo stato del tasto (i,j):
+    -- tile_t(6 + i*4 + j)
+
+    type keyboard_t is array (0 to 9) of tile_t;
+    constant KEYBOARD_ZERO : keyboard_t := (others => TILE_ZERO);
+
+
     component olo_intf_debounce
         generic (
             CLKFREQUENCY_G      : real      := 12.0e6;
-            DEBOUNCETIME_G      : real      := 2.0e-2; -- 2.0e-2
+            DEBOUNCETIME_G      : real      := 2.0e-3; -- 2.0e-2
             WIDTH_G             : positive  := 12;
             IDLELEVEL_G         : std_logic := '0';
             MODE_G              : string    := "LOW_LATENCY"
@@ -124,21 +150,8 @@ architecture behavioral of top is
 
     -- ci serve un segnale che sia 1 se appare esserci una nuova colonna e che si resetta la tile dopo che la colonna sia finita
     signal anotherCol : std_logic := '0';
-    type coord_t is record
-        r : unsigned(2 downto 0);
-        c : unsigned(2 downto 0);
-    end record;
-    constant COORD_ZERO : coord_t := (r => (others => '0'), c => (others => '0') );
-    signal coord : coord_t := ( r => (others => '0'), c => (others => '0') );
+    signal coord : coord_t := COORD_ZERO;
 
-    type pbs_t is array (1 to 3, 1 to 4) of std_logic; -- tipo per la matrice di tasti in una tile
-    type tile_t is record
-        pbs : pbs_t; -- matrice dei pulsanti della tile
-        coord : coord_t; -- coordinata della tile all'interno della griglia
-    end record;
-    constant TILE_ZERO : tile_t := (pbs => (others => (others => '0')), coord => COORD_ZERO );
-    type keyboard_t is array (1 to 10) of tile_t;
-    constant KEYBOARD_ZERO : keyboard_t := (others => TILE_ZERO);
     signal keyboard_state : keyboard_t := KEYBOARD_ZERO;    -- contiene lo stato in tempo reale
     signal keyboard_debounced : keyboard_t := KEYBOARD_ZERO;    -- contiene lo stato dopo il debounce
     signal keyboard_debounced_old : keyboard_t := KEYBOARD_ZERO;    -- stato dopo il debounce con un ciclo di ritardo
@@ -160,74 +173,67 @@ architecture behavioral of top is
     function map_pbs(stream : std_logic_vector(15 downto 0)) return pbs_t is
         variable p : pbs_t;
     begin
-        p(1,1) := stream(5);
-        p(1,2) := stream(4);
-        p(1,3) := stream(11);
-        p(1,4) := stream(10);
-        p(2,1) := stream(7);
-        p(2,2) := stream(6);
-        p(2,3) := stream(13);
-        p(2,4) := stream(12);
-        p(3,1) := stream(9);
-        p(3,2) := stream(8);
-        p(3,3) := stream(15);
-        p(3,4) := stream(14);
+        p(0) := stream(5);
+        p(1) := stream(4);
+        p(2) := stream(11);
+        p(3) := stream(10);
+        p(4) := stream(7);
+        p(5) := stream(6);
+        p(6) := stream(13);
+        p(7) := stream(12);
+        p(8) := stream(9);
+        p(9) := stream(8);
+        p(10) := stream(15);
+        p(11) := stream(14);
         return p;
     end function;
 
-    -- funzioni per isomorfismi delle metrici di tasti
-    function flatten(m : pbs_t) return std_logic_vector is
-        variable v : std_logic_vector(11 downto 0);
-    begin
-        for i in 0 to 2 loop
-            for j in 0 to 3 loop
-                v(i*4 + j) := m(i+1,j+1);
-            end loop;
-        end loop;
-        return v;
-    end;
-    function unflatten(v : std_logic_vector(11 downto 0)) return pbs_t is
-        variable m : pbs_t;
-    begin
-        for i in 0 to 2 loop
-            for j in 0 to 3 loop
-                m(i+1,j+1) := v(i*4 + j);
-            end loop;
-        end loop;
-        return m;
-    end;
-
-    -- overload delle funzioni logiche
-    function "xor" (a, b : pbs_t) return pbs_t is
-        variable result : pbs_t;
-    begin
-        for i in 1 to 3 loop
-            for j in 1 to 4 loop
-                result(i, j) := a(i, j) xor b(i, j);
-            end loop;
-        end loop;
-        return result;
-    end function;
-    function "or" (a, b : pbs_t) return pbs_t is
-        variable result : pbs_t;
-    begin
-        for i in 1 to 3 loop
-            for j in 1 to 4 loop
-                result(i, j) := a(i, j) or b(i, j);
-            end loop;
-        end loop;
-        return result;
-    end function;
-
     -- segnali per la gestione del MIDI
-    constant pitch_x : integer := -2;
-    constant pitch_y : integer := 7;
     signal pitch : unsigned (7 downto 0);
     constant ref_pitch : unsigned (6 downto 0) := "1100000"; -- 96 = C7
 
     constant note_on : std_logic_vector (7 downto 0) := x"90";
     constant note_off : std_logic_vector (7 downto 0) := x"80";
     constant velocity : std_logic_vector (7 downto 0) := x"64";
+
+    type lut_t is array (0 to 15) of unsigned(2 downto 0);
+    constant DIV4_LUT : lut_t := (
+        0 => "000",  -- 0/4
+        1 => "000",
+        2 => "000",
+        3 => "000",
+        4 => "001",
+        5 => "001",
+        6 => "001",
+        7 => "001",
+        8 => "010",
+        9 => "010",
+        10 => "010",
+        11 => "010",
+        12 => "011",
+        13 => "011",
+        14 => "011",
+        15 => "011"
+    );
+
+    constant MOD4_LUT : lut_t := (
+        0 => "000",
+        1 => "001",
+        2 => "010",
+        3 => "011",
+        4 => "000",
+        5 => "001",
+        6 => "010",
+        7 => "011",
+        8 => "000",
+        9 => "001",
+        10 => "010",
+        11 => "011",
+        12 => "000",
+        13 => "001",
+        14 => "010",
+        15 => "011"
+    );
 
 begin
     reset <= not RESET_N;
@@ -357,18 +363,18 @@ begin
                     when r1 =>
                         BOARD_LATCH <= '1';
                         tile_counter <= (others => '0');
-                        coord.c <= to_unsigned(1, 3); -- resettiamo tutto perché iniziamo la griglia
-                        coord.r <= (others => '0');
+                        coord(2 downto 0) <= std_logic_vector(to_unsigned(1, 3)); -- resettiamo tutto perché iniziamo la griglia
+                        coord(5 downto 3) <= (others => '0');
 
                     when newcol =>
                         anotherCol <= '0';
-                        coord.c <= coord.c + 1;  -- incrementa il contatore di colonna
-                        coord.r <= (others => '0'); -- resetta il contatore di riga
+                        coord(2 downto 0) <= std_logic_vector( unsigned(coord(2 downto 0)) + 1 ); -- incrementa il contatore di colonna
+                        coord(5 downto 3) <= (others => '0'); -- resetta il contatore di riga
 
                     when r2 =>
                         pb_counter <= (others => '0');
                         tile_counter <= tile_counter + 1;
-                        coord.r <= coord.r + 1;
+                        coord(5 downto 3) <= std_logic_vector( unsigned(coord(5 downto 3)) + 1 );
 
                     when get_bit =>
                         pb_counter <= pb_counter + 1;
@@ -380,8 +386,8 @@ begin
                     when load =>
                         anotherCol <= anotherCol or (not tile_stream(1));
                         -- codice per caricare il tile_stream all'interno del registro giusto
-                        keyboard_state(to_integer(tile_counter)).coord <= coord;
-                        keyboard_state(to_integer(tile_counter)).pbs <= map_pbs(tile_stream);
+                        keyboard_state(to_integer(tile_counter))(5 downto 0) <= coord;
+                        keyboard_state(to_integer(tile_counter))(17 downto 6) <= map_pbs(tile_stream);
 
                     when others =>
                         null;
@@ -401,26 +407,24 @@ begin
 -- priviamo ad inserire queste uscite nei debouncer
 
     -- generiamo un debouncer da 12 canali per ogni tile allocata
-    gen_debouncer : for i in 1 to 10 generate -- dimensionalità delle tile in keyboard_t
-        signal pbs_flat : std_logic_vector(11 downto 0);
+    gen_debouncer : for i in 0 to 9 generate -- dimensionalità delle tile in keyboard_t
     begin
         debouncer : olo_intf_debounce
             port map(
                 CLK => not CLK_IN,
                 RST => not RESET_N,
-                DATAASYNC => flatten(keyboard_state(i).pbs),
-                DATAOUT => pbs_flat
+                DATAASYNC => keyboard_state(i)(17 downto 6),
+                DATAOUT => keyboard_debounced(i)(17 downto 6)
             );
 
-        keyboard_debounced(i).pbs <= unflatten(pbs_flat);
-        keyboard_debounced(i).coord <= keyboard_state(i).coord;
+        keyboard_debounced(i)(5 downto 0) <= keyboard_state(i)(5 downto 0);
     end generate;
 
     -- i dati in keyboard_debounced sono stabili su ogni fronte di salita
     state_serializer_fsm : process(CLK_IN)
-        variable pos_b : integer range 0 to 15 := 1;
-        variable pos_i : integer range 0 to 7  := 1;
-        variable pos_j : integer range 0 to 7  := 1;
+        variable pos_tile : integer range 0 to 9 := 0;
+        variable pos_bit : integer range 0 to 11  := 0;
+        variable active_tile : tile_t;
     begin
         if rising_edge(CLK_IN) then
             if RESET_N = '0' then
@@ -431,43 +435,47 @@ begin
             else
                 midi_start <= '0';
                 keyboard_debounced_old <= keyboard_debounced;
+                active_tile := keyboard_pending(pos_tile);
 
-                for i in 1 to 10 loop
-                    keyboard_pending(i).coord <= keyboard_debounced(i).coord;   -- le coordinate non dovrebbero cambiare fra i vari scan
-                    keyboard_pending(i).pbs <= keyboard_pending(i).pbs or ( keyboard_debounced(i).pbs xor keyboard_debounced_old(i).pbs );
+                for i in 0 to 9 loop
+                    keyboard_pending(i)(5 downto 0) <= keyboard_debounced(i)(5 downto 0);   -- le coordinate non dovrebbero cambiare fra i vari scan
+                    keyboard_pending(i)(17 downto 6) <=
+                                    keyboard_pending(i)(17 downto 6) or
+                                    ( keyboard_debounced(i)(17 downto 6) xor keyboard_debounced_old(i)(17 downto 6) );
                 end loop;
 
                 case state_serializer is
                     when polling =>
                         -- logica per trovare tutte le occorrenze dentro a pending
-                        if keyboard_pending(pos_b).pbs(pos_i, pos_j) = '1' then
-                            keyboard_pending(pos_b).pbs(pos_i, pos_j) <= '0';
+                        if active_tile(6 + pos_bit) = '1' then
+                            keyboard_pending(pos_tile)(6 + pos_bit) <= '0';
 
                             -- calcolo della coordinata assoluta del tasto premuto
-                            y <= resize( (keyboard_pending(pos_b).coord.r -1)*3 + to_unsigned(pos_i, 3), 8);
-                            x <= resize( (keyboard_pending(pos_b).coord.c -1)*4 + to_unsigned(pos_j, 3) + keyboard_pending(pos_b).coord.r, 8);
-                            change_dir <= keyboard_debounced(pos_b).pbs(pos_i, pos_j);
+                            y <= resize( ( unsigned(active_tile(5 downto 3)) -1)*3 + DIV4_LUT(pos_bit), 8);
+                            x <= resize( ( unsigned(active_tile(2 downto 0)) -1)*4 + MOD4_LUT(pos_bit) + unsigned(active_tile(5 downto 3)) -1, 8);
+                            change_dir <= keyboard_debounced(pos_tile)(6 + pos_bit);
                             state_serializer <= s0; -- inviamo i dati in MIDI
                         end if;
 
                         -- incremento degli indici
-                        if pos_j < 4 then
-                            pos_j := pos_j + 1;
+                        if pos_bit < 11 then
+                            pos_bit := pos_bit + 1;
                         else
-                            pos_j := 1;
-                            if pos_i < 3 then
-                                pos_i := pos_i + 1;
+                            pos_bit := 0;
+                            if pos_tile < 9 then
+                                pos_tile := pos_tile + 1;
                             else
-                                pos_i := 1;
-                                if pos_b < 10 then
-                                    pos_b := pos_b + 1;
-                                else
-                                    pos_b := 1;
-                                end if;
+                                pos_tile := 0;
                             end if;
                         end if;
 
                     when s0 =>
+                        -- dobbiamo prendere le coordinate dentro a x e y e calcolare il pitch corrispondente.
+                        -- regole:  spostamento a sinistra di un tasto = -2 semitoni
+                        --          spostamento in alto di una riga = +7 semitoni
+                        -- possiamo quindi calcolare la differenza in semitoni dalla nota alle coordinate (0, 0)
+                        pitch <= resize( ref_pitch - 2*x + 7*y , 8);
+
                         if midi_busy = '0' then
                             state_serializer <= s1;
                         end if;
@@ -491,18 +499,6 @@ begin
             end if;
         end if;
     end process;
-
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------
--- COORD to PITCH ------------------------------------------------------------------------------------------------------------------------------
-
--- dobbiamo prendere le coordinate dentro a x e y e calcolare il pitch corrispondente.
--- regole:  spostamento a sinistra di un tasto = -2 semitoni    pitch_x
---          spostamento in alto di una riga = +7 semitoni       pitch_y
--- possiamo quindi calcolare la differenza in semitoni dalla nota alle coordinate (1, 1)
-
-    pitch <= '0' & to_unsigned( to_integer(ref_pitch) + pitch_x * to_integer(x) + pitch_y * to_integer(y) , 7);
 
 
 
