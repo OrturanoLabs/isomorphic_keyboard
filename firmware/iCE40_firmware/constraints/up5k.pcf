@@ -5,9 +5,7 @@ set_io --warn-no-port BOARD_CLK 31
 set_io --warn-no-port BOARD_DATA 34
 set_io --warn-no-port BOARD_LATCH 38
 
-set_io --warn-no-port PACKAGE_SDA 21
-set_io --warn-no-port PACKAGE_SCL 27
-set_io --warn-no-port PACKAGE_MIDI 19
+set_io --warn-no-port PACKAGE_MIDI 21
 
 set_io --warn-no-port LED_BLUE 40
 set_io --warn-no-port LED_GREEN 39

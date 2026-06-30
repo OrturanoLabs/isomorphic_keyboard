@@ -94,6 +94,7 @@ architecture behavioral of top is
     signal clk_counter : unsigned(11 downto 0) := (others => '0');  -- contatore per il clock principale
     signal en_clk_scan : std_logic := '0';  -- divisore per il clock di scansione della griglia
     signal reset : std_logic;
+    signal midi_out : std_logic;
 
     signal sender_fsm_enable : std_logic := '0'; -- handshake per inviare i dati di una tile
     signal sender_fsm_busy : std_logic := '0'; -- handshake dati della tile inviati
@@ -190,7 +191,7 @@ architecture behavioral of top is
 
     -- segnali per la gestione del MIDI
     signal pitch : unsigned (7 downto 0);
-    constant ref_pitch : unsigned (6 downto 0) := "1100000"; -- 96 = C7
+    constant ref_pitch : unsigned (6 downto 0) := "0111100"; -- 96 = C7 (1100000)
 
     constant note_on : std_logic_vector (7 downto 0) := x"90";
     constant note_off : std_logic_vector (7 downto 0) := x"80";
@@ -516,9 +517,10 @@ begin
             RX_VALID        => open,
             RX_DATA         => open,
             RX_PARITYERROR  => open,
-            UART_TX         => PACKAGE_MIDI,
+            UART_TX         => midi_out,
             UART_RX         => '1'
         );
+    PACKAGE_MIDI <= not midi_out;
 
     midi_sender_fsm : process(CLK_IN)
     begin
