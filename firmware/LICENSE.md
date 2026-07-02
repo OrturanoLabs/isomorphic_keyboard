@@ -1,2 +1,2 @@
-This firmware is licensed under the MIT License.
-See the LICENSES/MIT.txt file for details.
+This firmware is licensed under the GNU General Public License 3.0.
+See the LICENSES/GPL-3.0.txt file for details.
