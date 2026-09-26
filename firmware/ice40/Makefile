@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: GPL-3.0-only
 #
 # iCE40UP5K (pico-ice) firmware: synthesis, place & route, upload and simulation.
 #

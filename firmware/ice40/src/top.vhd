@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: GPL-3.0-or-later
+-- SPDX-License-Identifier: GPL-3.0-only
 --
 -- Isomorphic keyboard - iCE40UP5K (pico-ice) top level.
 --

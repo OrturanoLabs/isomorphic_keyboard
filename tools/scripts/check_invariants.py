@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: CERN-OHL-S-2.0
+# SPDX-License-Identifier: GPL-3.0-only
 """Regression guard for the tile PCB.
 
 Compares a candidate design against a reference (normally the rev-A prototype) and fails

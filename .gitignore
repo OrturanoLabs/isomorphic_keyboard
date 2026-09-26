@@ -1,6 +1,7 @@
 # --- FPGA / HDL build and simulation outputs ---
-build/
-sim/build/
+firmware/**/build/
+hardware/**/build/
+
 *.o
 *.cf
 *.ghw

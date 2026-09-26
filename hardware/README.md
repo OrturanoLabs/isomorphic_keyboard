@@ -1,8 +1,13 @@
-This folder cointains the projects and the simulations for the hardware 
-of all the modules.
+# Hardware
 
-Boards and PCBs are made with KiCad.
-module-tile contains the main board with 12 push buttons.
+| Folder | Content |
+|---|---|
+| `kicad/tile/` | KiCad project `isomorphic_tile`: key board (12 Cherry MX keys) and logic board (shift registers, chaining logic, edge connectors), fabricated as one panel |
+| `simulation/` | behavioural VHDL model of a tile (`tile.vhdl`, `74hc165.vhdl`) and grid testbenches (`tile_tb*.vhdl`); run with `make` (GHDL), view with GTKWave |
+| `fabrication/rev-a/` | gerbers and BOM of the rev-A boards as manufactured |
 
-Simulations are written in VHDL and run with GHDL. Files .vcd are wiewed 
-with GTKWave.
+Start with [docs/architecture/overview.md](../docs/architecture/overview.md) and
+[docs/build/hardware.md](../docs/build/hardware.md). The latter covers the mandatory
+ERC/DRC/invariant checks.
+
+License: CERN-OHL-S v2 (see `LICENSE.md`).

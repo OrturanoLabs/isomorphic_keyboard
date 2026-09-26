@@ -115,3 +115,46 @@ edge (ground bounce/crosstalk).
     `duplicate_footprints` (the mouse bites reuse `REF**n`) and 67
     `footprint_symbol_field_mismatch`.
 - Git tag `rev-a-prototype` → commit `96515e9` (the last commit before any cleanup).
+
+## 2026-09-26 — Phase 1: cleanup, English translation, documentation
+
+**What was done**
+
+- Untracked the generated files and added `.gitignore`. Git history was **not** rewritten.
+- Moved folders with `git mv`:
+  - `firmware/iCE40_firmware` → `firmware/ice40`
+  - `firmware/test_parziali/*` → `firmware/experiments/*`
+  - `hardware/kicad/module-tile` → `hardware/kicad/tile`
+- Renamed the KiCad project `tastiera_isomorfa` → `isomorphic_tile`. This is a plain `sed`
+  over `*.kicad_sch`, `*.kicad_pcb` and `*.kicad_pro`. It also rewrites the
+  `(project "…")` instance blocks and the `(sheetfile "…")` references in the PCB. The
+  netlist stayed identical.
+- Renamed the KiCad field `Codice` → `MPN` and the footprint `Senza-titolo` →
+  `MouseBite_NPTH_0.5mm` with text edits. Netlist, invariants and DRC counts are unchanged.
+- Translated all comments to English. The firmware Makefile no longer hardcodes
+  `~/Pacchetti/...` and no longer calls `sudo`.
+- Pruned the vendored open-logic 4.5.0 to the 9 files used and added the upstream
+  `License.txt` (PSI HDL Library License 1.0 = LGPL with an FPGA/static-link exception).
+- Added `tools/scripts/check_invariants.py`, `tools/scripts/export_reference.sh`,
+  `tools/oss.sh` and `tools/kicad-cli.sh`, plus the whole `docs/` tree.
+
+**Result:** after every step the firmware bitstream hash stays at `e3a7eaf9…`, and the
+tile netlist is identical to rev A.
+
+**Lesson**
+
+- **Comments and line shifts do not change the bitstream** with this toolchain (checked
+  by adding lines at the top of `top.vhd`). The bitstream hash is therefore a valid
+  regression check for text-only firmware changes.
+- The OSS CAD Suite GHDL (2026-09-26) needs **glibc ≥ 2.38 and a C compiler** to
+  elaborate simulations. The `bookworm` base failed with `cc not found`, then with
+  `undefined reference to __isoc23_strtol`. Use `debian:trixie-slim` + `gcc libc6-dev
+  zlib1g-dev`.
+- With `podman --userns=keep-id`, `HOME` points at the work directory. yosys then drops
+  `.config/` and `.local/` into the repo. `tools/oss.sh` sets `-e HOME=/tmp`.
+- A bare `build/` line in `.gitignore` also ignores `docs/build/`. Anchor such patterns
+  (`firmware/**/build/`).
+- kicad-cli 10 writes the netlist as multi-line s-expressions. Parsers must be
+  whitespace-agnostic (`check_invariants.py` initially found 0 nets).
+- Always run a negative test of a checker (move one switch by 0.04 mm, swap one pin) to
+  prove that it can fail.
