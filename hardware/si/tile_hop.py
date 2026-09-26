@@ -54,7 +54,8 @@ cases = [("rev A: 2L ~110 ohm, 141 mm tree, Rs=0", 0, 110, 14, 141),
          ("rev B: 4L ~55 ohm, 100 mm tree, Rs=0", 0, 55, 14, 100),
          ("rev B: Rs=22", 22, 55, 14, 100),
          ("rev B: Rs=33", 33, 55, 14, 100),
-         ("rev B: Rs=47", 47, 55, 14, 100)]
+         ("rev B: Rs=47", 47, 55, 14, 100),
+         ("rev B as routed: 20 mm + 141 mm, Rs=33", 33, 55, 20, 141)]
 fig, ax = plt.subplots(1, 2, figsize=(12, 4.5))
 print(f"{'case':42s} {'node':5s} {'over%':>6} {'under V':>8} {'VIL crossings':>14} {'VIH crossings':>14}")
 for name, rs, z, own, tree in cases:

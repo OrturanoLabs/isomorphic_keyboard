@@ -61,8 +61,31 @@ Contributing factors found in the rev-A design:
   had a long ground lead, and the controller link used 20 cm dupont wires without a
   ground alongside. All of these add ringing of their own.
 
-The rev-B work plan (branch `rev-b`) addresses these points without changing the logic,
+### Rev B (branch `rev-b`)
+
+The rev-B work addresses these points without changing the logic,
 the connector pinout or the connector positions. It adds series resistors at the drivers,
 per-IC decoupling, a 4-layer stack-up with a solid ground plane, and controlled-impedance
 routing of the inter-board nets. Results will be recorded here and in
 [the ledger](../LEDGER.md).
+
+Rev-B design, function unchanged:
+
+- 33 Ω series resistors R201–R207 at every driver that leaves the tile: `L_clk`, `T_clk`,
+  `L_latch`, `T_latch`, `B_data`, `R_data` and `B_W`. The driver side is named `*_drv`.
+- One 100 nF (0603) capacitor next to each logic IC (C201–C209).
+- A 4-layer, 1.6 mm stack-up: L1 signal, L2 GND (`GND_T` on the key board), L3 VCC
+  (`VCC_T`), L4 signal. The prepreg is 0.21 mm, so the 0.3 mm `Interboard` tracks are about
+  55 Ω. There is a 4 mm grid of ground stitching vias.
+
+SPICE results (`hardware/si/`, generic models with input clamp diodes; to be calibrated
+against a clean measurement):
+
+| Tile-to-tile clock hop | Overshoot | Undershoot |
+|---|---|---|
+| rev A (2 layers, ~110 Ω, 141 mm tree, no series R) | 22 % | −0.73 V |
+| rev B as routed (4 layers, ~55 Ω, 20 mm + 141 mm, 33 Ω) | 1 % | −0.03 V |
+
+For the controller link (pico-ice → first tile over dupont wires), about 150 Ω in series
+at the pico-ice removes the overshoot in the model. An adapter with series resistors and
+a ground wire next to each signal is recommended.

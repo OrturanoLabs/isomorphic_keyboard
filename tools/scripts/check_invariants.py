@@ -10,8 +10,8 @@ if anything covered by the function freeze changed:
                collapsed (their two nets merged) so that inserted series-termination
                resistors are tolerated; parts listed with --ignore (e.g. added decoupling
                capacitors) are dropped.
-  * pcb      - position and rotation of every switch (SW*) and connector (J*), and the
-               Edge.Cuts outline.
+  * pcb      - position and rotation of every switch (SW*, by its 4 mm centre hole) and
+               connector (J*), and the Edge.Cuts outline.
 
 Usage:
   check_invariants.py netlist REF.net NEW.net [--series R201,R202] [--ignore C201,C202]
@@ -86,8 +86,18 @@ def parse_pcb(path):
         side = re.search(r'\n\t\t\(layer "([^"]+)"\)', body)
         if not (at and ref):
             continue
-        parts[ref.group(1)] = (float(at.group(1)), float(at.group(2)),
-                               float(at.group(3) or 0) % 360, side.group(1) if side else "?",
+        x, y, rot = float(at.group(1)), float(at.group(2)), float(at.group(3) or 0) % 360
+        if ref.group(1).startswith("SW"):
+            # a key switch is located by its 4 mm centre hole, not by the footprint origin
+            # (KiCad's Cherry MX footprint has its origin on pin 1, the Kailh hot-swap one on
+            # the centre)
+            hole = re.search(r'\(pad "" np_thru_hole circle\s+\(at ([\d.\-]+) ([\d.\-]+)[^)]*\)'
+                             r'\s+\(size 4 4\)', body)
+            if hole:
+                rx, ry = float(hole.group(1)), float(hole.group(2))
+                c, s_ = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+                x, y = x + rx * c + ry * s_, y - rx * s_ + ry * c
+        parts[ref.group(1)] = (round(x, 4), round(y, 4), rot, side.group(1) if side else "?",
                                m.group(1))
     edges = []
     for m in re.finditer(r'\(gr_(line|arc|rect|circle|poly)(.*?)\(layer "Edge\.Cuts"\)', text, re.S):

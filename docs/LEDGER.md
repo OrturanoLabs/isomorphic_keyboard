@@ -258,3 +258,112 @@ It sweeps the series resistor Rs at the driver.
     next to each signal.
 - **Metric pitfall:** "value one ns after the crossing" gives false alarms on slow edges.
   Count threshold crossings instead (a clean edge crosses once).
+
+## 2026-09-27 — Rev-B schematic and scripted PCB transformation
+
+**Schematic** (`hardware/kicad/tile/scripts/revb_schematic.py`, applied once)
+
+- The inter-board hierarchical labels on the driver side became local `*_drv` labels. New
+  33 Ω resistors R201–R207 run from those labels to new hierarchical labels with the
+  original names, so the root sheet and the connectors are untouched.
+- Added C201–C209 (100 nF per IC) and PWR_FLAGs on VCC, GND, VCC_T and GND_T.
+- Result: netlist identical to rev A after `--series R201..R207 --ignore C201..C209`.
+  ERC: 0 errors (4 in rev A).
+- The ERC errors on `VCC_T`/`GND_T` came from **power symbols in the root sheet whose value
+  names the net** (`power:VCC` with value `VCC_T`). The PWR_FLAG has to sit on those same
+  symbols.
+
+**Key-switch footprint:** `SW_Cherry_MX_1.00u_PCB` (KiCad stock library) has its origin on
+**pin 1**, i.e. the centre plus (+2.54, −5.08). The Kailh hot-swap footprint (vendored from
+keyswitch-kicad-library v2.3) has its origin on the **centre**.
+`check_invariants.py` therefore locates switches by their 4 mm centre hole. The hot-swap
+pads 1 and 2 sit where the Cherry pins 2 and 1 were. This is harmless for a switch.
+
+**pcbnew Python API (KiCad 10.0.6) pitfalls, all hit today**
+
+- `board.Remove(item)` → segfault on the next board access. Use `board.Delete(item)`.
+- `fp.SetLayerAndFlip()` on a footprint not yet added to the board → segfault.
+  `board.Add(fp)` first.
+- `zone.SetOutline(SHAPE_POLY_SET(...))` takes ownership of a Python temporary →
+  segfault in `SaveBoard`. Append to `zone.Outline()` in place instead.
+- `ZONE_FILLER.Fill()` segfaulted right after creating the zones. Call
+  `board.BuildConnectivity()` first, and only fill after routing.
+- Other API differences:
+  - `LIB_ID.Format()` is not callable from Python; use `GetLibNickname()` / `GetLibItemName()`.
+  - `FOOTPRINT.GetFieldByName` does not exist; use `HasField` / `GetField` / `SetField`.
+    There is no `RemoveField`.
+  - `GetBoardPolygonOutlines(outline, infer)` needs 2 arguments.
+  - `BOARD_STACKUP` is not exposed, so the stack-up block is written as text into `(setup)`.
+- Wrap scripts with `faulthandler.enable()` to get a Python stack when pcbnew segfaults.
+- Net-class patterns are wildcards (`*`, `?`) only; `[LTBR]_*` silently matched nothing.
+
+**Tools**
+
+- Freerouting 2.4.1 needs **Java 25** (class file 69). The `eclipse-temurin:21` image fails
+  with `UnsupportedClassVersionError`.
+- Headless flags: `-de in.dsn -do out.ses -mp N --gui.enabled=false`.
+- Layer SVG export for review: `kicad-cli pcb export svg --mode-single --layers ... --fit-page-to-board`,
+  then `rsvg-convert` (on the host) to get a PNG.
+
+## 2026-09-27 — Rev-B PCB produced by script + Freerouting
+
+**Result:** 4-layer board. KiCad DRC: **0 errors, 0 unconnected items, 0 schematic-parity
+issues**. Remaining warnings: 41 silk over copper, 23 silk overlap, 8 silk-to-edge (these
+three are cosmetic), 11 connection width, and 11 library-footprint mismatches (the rev-A
+connector footprints come from the v9 library). Switch/connector/outline invariants OK.
+
+**Iterations and lessons**
+
+1. First routing run: 34 unrouted. They were almost all power pads.
+   **Freerouting does not connect SMD pads to plane layers.** Fix: a scripted fan-out (stub
+   + via) for every SMD power pad, done **before** routing so the router works around the
+   vias. Done after routing, U106/U107 pads could not find room.
+2. Copper text "TORTIRE v0.1" on B.Cu (rev A) collided with the hot-swap sockets. Moved to
+   silkscreen.
+3. The placer checked courtyards only. The hot-swap socket **pads stick out of the socket
+   courtyard**, so a fiducial landed on a pad. SMD pads are now obstacles too.
+4. The left socket pad came 0.06 mm from the stepped outline (SW102/104/106). Local
+   footprint variant `SW_Hotswap_Kailh_MX_1.00u_EdgeTrim` with pad 1 trimmed by 0.3 mm on
+   the outer side.
+5. `R_latch` stayed unrouted twice: U106 pin 2 was boxed in. Placing **U106 at 180°** (its
+   inputs facing R106/J104) fixed it. A second Freerouting pass on the routed board did not.
+6. J107 (frozen) vs SW111 socket: the courtyards overlapped by 0.1 mm, while the bodies are
+   0.49 mm apart. A DRC exclusion in `.kicad_pro` did not match: the key format
+   (`type|x|y|uuid|uuid`, marker position in nm) needs the exact marker position, which
+   kicad-cli does not print. `pcbnew.WriteDRCReport` from Python asserts outside the GUI
+   (`Pgm()`). Instead, the J107 courtyard edge towards the socket was pulled in to a
+   0.3 mm margin.
+7. `SetField()` creates **visible** silkscreen fields (MPN/Manufacturer showed up on the
+   silk). Hide every field except Reference/Value.
+8. Board-only items (mouse bites, fiducials): `SetBoardOnly`, `SetAllowMissingCourtyard`,
+   excluded from BOM/CPL, unique references MB1..MB68. This cleared 124 parity warnings.
+9. Freerouting's own "violations" count (181) did not correspond to KiCad DRC errors.
+   **Always judge with KiCad DRC.**
+
+**Rev-B routed lengths:**
+
+| Net | Length |
+|---|---|
+| B_clk | 141 mm (the two input connectors are far apart) |
+| L_clk_drv / L_clk | 2.5 / 17.9 mm |
+| T_clk_drv / T_clk | 3.8 / 23.1 mm |
+| data_drv | 34 mm (4 vias) |
+| latch_drv | 33 mm |
+
+SPICE for the hop as routed, with 33 Ω: 1 % overshoot, −0.03 V undershoot. Rev A: 22 %,
+−0.73 V.
+
+**Follow-up (same day):** the placer now places the series resistors **before** the
+decoupling caps.
+
+- Every series resistor is now 1.9–2.6 mm (straight line) from its driver pin.
+- `data_drv` (53 mm) and `latch_drv` (30 mm) are still long, but only because those nets
+  also feed internal inputs (U102.1 column-end detector, U105 latch inverter). The
+  inter-board side starts at the resistor.
+- The whole PCB is rebuilt in about 3 minutes by
+  `hardware/kicad/tile/scripts/revb_pipeline.sh`.
+  - Result: DRC 0 errors / 0 unconnected / 0 parity; invariants OK.
+  - Remaining warnings: silkscreen cosmetics, 11 library mismatches, 3 connection widths.
+
+**Open for human review:** silkscreen cleanup, 3D stack-height check (C105 is 7.7 mm tall),
+C105 MPN, and the clock routing in the GUI.

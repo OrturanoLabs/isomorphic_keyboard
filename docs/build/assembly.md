@@ -10,7 +10,7 @@
 - The edge connectors must sit flush and square to the board edge. Tiles that are not
   aligned stress the neighbouring connectors.
 
-## Rev B (automated assembly, in progress on branch `rev-b`)
+## Rev B (automated assembly, branch `rev-b`)
 
 Goals, with switch/connector positions, outlines, pinouts and logic parts unchanged:
 
@@ -24,4 +24,20 @@ Goals, with switch/connector positions, outlines, pinouts and logic parts unchan
   IPC-2581/ODB++, a BOM with MPNs, a pick-and-place file, assembly drawings, and fab notes
   (stack-up, impedance, finish).
 
+Status on `rev-b`:
+
+- [x] Key board: every SMD part on **B.Cu** (12 Kailh sockets `CPG151101S11`, R110–R133).
+- [x] Logic board: every SMD part on **F.Cu**.
+- [x] 0603 passives, TI DCT land pattern (`SSOP-8_2.95x2.8mm_P0.65mm`), SOT-23-5,
+  SMD 100 µF (6.3 × 7.7 mm).
+- [x] 3 fiducials per board (FID1–3 on the key board, B side; FID4–6 on the logic board,
+  F side).
+- [x] MPN and Manufacturer fields on every part. **C105 still needs an MPN**
+  (100 µF, ≥ 10 V, SMD aluminium, 6.3 × 7.7 mm).
+- [ ] Panel (KiKit) and the full output set (`production.kicad_jobset`).
+
 The THT edge and stacking connectors remain a manual or selective-solder step.
+
+Mechanical check still to do on the 3D model: stacked height with C105 (7.7 mm) on the
+logic board top under the key board sockets, and the J107/SW111 clearance. The bodies are
+about 0.5 mm apart; the J107 courtyard was pulled in to a 0.3 mm margin.

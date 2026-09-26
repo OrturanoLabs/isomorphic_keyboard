@@ -1,0 +1,10 @@
+# Freerouting (Specctra DSN -> SES autorouter), headless
+# Build:  podman build -t localhost/freerouting:2.4.1 tools/containers/freerouting
+FROM docker.io/library/eclipse-temurin:25-jre
+ARG FR_VERSION=2.4.1
+RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates \
+ && curl -fsSL -o /opt/freerouting.jar \
+    "https://github.com/freerouting/freerouting/releases/download/v${FR_VERSION}/freerouting-${FR_VERSION}.jar" \
+ && rm -rf /var/lib/apt/lists/*
+WORKDIR /work
+ENTRYPOINT ["java", "-Djava.awt.headless=true", "-jar", "/opt/freerouting.jar"]

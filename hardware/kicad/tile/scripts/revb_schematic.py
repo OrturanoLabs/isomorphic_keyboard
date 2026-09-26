@@ -67,7 +67,7 @@ for n in list(range(101, 110)) + list(range(122, 134)):
 for n in range(110, 122):
     PARTS[f"R{n}"] = ("100", R0603, "Yageo", "RC0603FR-07100RL")
 for n in range(101, 113):
-    PARTS[f"SW{n}"] = ("SW_Push", "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+    PARTS[f"SW{n}"] = ("SW_Push", "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
                        "Kailh", "CPG151101S11")
 
 
