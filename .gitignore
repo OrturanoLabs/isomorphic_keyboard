@@ -1,0 +1,31 @@
+# --- FPGA / HDL build and simulation outputs ---
+build/
+sim/build/
+*.o
+*.cf
+*.ghw
+*.vcd
+*.fst
+e~*.o
+
+# --- KiCad ---
+*-backups/
+fp-info-cache
+*.kicad_prl
+*.lck
+~*.lck
+_autosave-*
+*.bak
+# FreeRouting exchange files (regenerate when needed)
+*.dsn
+*.ses
+# Generated fabrication/assembly outputs (published as release assets)
+production/
+
+# --- Tools / local ---
+tools/containers/*/cache/
+__pycache__/
+*.pyc
+
+# --- Raw media dropped from phones (curate into docs/media/ instead) ---
+WhatsApp*

@@ -1,0 +1,117 @@
+# Engineering ledger
+
+Chronological log of attempts, tool setups, measurements and lessons learned.
+Its purpose is to stop future sessions from repeating the same mistakes.
+Newest entries at the bottom. Each entry has: **Goal**, **What was done**, **Result**,
+**Lesson** (when there is one).
+
+Conventions (apply to every session):
+
+- Everything in the repository is written in English (docs, comments, commit messages).
+- Software is installed only as a user-level flatpak (`flatpak --user`) or as a rootless
+  podman container. Container recipes live in `tools/containers/`.
+- Function freeze for rev B: switch positions, connector positions, connector pinouts and
+  logic ICs must not change. The rev-A prototype behaviour is the regression baseline
+  (hot-plug of tiles, any arrangement, automatic above/below/beside detection, MIDI out).
+
+---
+
+## 2026-09-26 — Kick-off: review of the prototype material
+
+**Goal:** understand the state of the double-stack prototype before planning the doc/reorg,
+signal-integrity and PCBA work.
+
+**What was done**
+
+- Reviewed the WhatsApp media dropped in the repo root (not committed):
+  - `WhatsApp Image 2026-09-26 at 15.04.20.jpeg`: an Analog Discovery 2 capture from
+    2026-06-15 (100 MS/s, 8192 samples). Channel 2 (blue) is a board clock and channel 1
+    (yellow) a neighbouring line.
+  - ZIP with 3 photos and 2 videos. Two of the photos (2026-06-25) show an HP monitor and
+    are **unrelated to the project**. The 2026-06-13 photo shows a 3-board stack wired to the
+    pico-ice with ~20 cm dupont wires.
+  - Videos (2026-06-30): ~8 tiles played live. Tiles are unplugged and replugged while the
+    system runs, rearranged, and still located correctly. The audio contains synth output
+    (scales and chords) and ~11 s of speech.
+- Audio was extracted with ffmpeg and inspected as a spectrogram
+  (`ffmpeg -i x.mp4 -ac 1 -ar 16000 x.wav`, then
+  `-lavfi showspectrumpic=s=1600x500:scale=log:stop=4000`).
+  No speech-to-text tool was installed, so the author summarised the speech: the videos
+  demonstrate hot-plug and auto-arrangement, and **this must not regress**.
+
+**Result (scope capture):** ~40 % overshoot, ~1 V undershoot below GND and ~20–30 MHz
+ringing after every clock edge. The adjacent channel shows ~0.4 V spikes coupled at every
+edge (ground bounce/crosstalk).
+
+**Lesson**
+
+- The AD2 analog bandwidth is only ~30 MHz. A long probe ground lead plus dupont wiring
+  adds its own LC ringing. Re-measure with a spring ground tip at the receiver pins before
+  drawing conclusions about the PCB alone.
+- Media dropped in the root can contain unrelated files; check before committing anything.
+
+## 2026-09-26 — Hardware facts extracted from the KiCad project
+
+- `hardware/kicad/module-tile/tastiera_isomorfa.*` is KiCad 9 format (pcb `20241229`,
+  sch `20250114`). A single PCB file contains **two boards**:
+  - the key board: 12 Cherry MX switches, R110–R133, stacking headers J107/J108;
+  - the logic board: U101–U109, inter-tile connectors J101–J104, stacking sockets
+    J105/J106.
+
+  They are separated by 68 custom 0.5 mm NPTH footprints called `Senza-titolo` (mouse bites).
+- 2 layers, no stackup defined. GND pour on F.Cu and VCC pour on B.Cu, both cut up by
+  FreeRouting-autorouted 0.2 mm tracks. A single netclass. Only 2×100 nF + 2×4.7 µF + 100 µF
+  of decoupling for 9 ICs.
+- Signal directions: clock and latch enter from the bottom/right connectors (J103/J104) and
+  are re-buffered outward (U101 → L_clk, U107 → T_clk, U106 → L_latch). Data returns inward
+  (U104 Q7 → B_data, which drives **both** J103 and J104). `B_clk` is a 141 mm multi-drop net.
+  No driver has a series termination.
+- BOM inconsistency: the symbol values (74AUC2G126/125/08, 74HC165, 74LS161) do not match
+  the ordered parts (74LVC2G…, SN74LVC165A, SN74HC161). 74AUC is **not rated for 3.3 V**.
+  Check the chip markings on a built tile before trusting either list.
+
+## 2026-09-26 — Tooling setup
+
+- **OSS CAD Suite** as a rootless podman image built from
+  `tools/containers/oss-cad-suite/Containerfile` (release 2026-09-26):
+
+  ```
+  podman build -t localhost/oss-cad-suite:2026-09-26 tools/containers/oss-cad-suite
+  podman run --rm --userns=keep-id -v "$PWD":/work:Z -w /work localhost/oss-cad-suite:2026-09-26 make
+  ```
+
+  It works. The build of the unmodified rev-A firmware is **deterministic**:
+  `hardware.bin` sha256 `e3a7eaf9facde7d328df700aebb1f1d297bbbdcd1ccf5ca79be39f0315fec8d5`.
+  3608/5280 LCs (68 %), Fmax 18 MHz at 12 MHz.
+  The bitstream committed in git (`c11659f2…`) was built with an older toolchain, so its
+  hash differs. **Always compare against the container build, not the committed binary.**
+- The `ghdl` calls in the original Makefile have no path prefix, so they rely on `PATH`.
+  Inside the container this works because `/opt/oss-cad-suite/bin` is on `PATH`.
+- **KiCad**: `flatpak install --user flathub org.kicad.KiCad` installs **KiCad 10.0.6**.
+  Flathub only offers the `stable` branch, and there is no easy way to pin 9.x. Decision
+  (project owner): **migrate the project to KiCad 10** in one dedicated commit, after rev A
+  has been merged into `main`. Until then, use kicad-cli 10 only for read-only checks.
+  Never save the v9 files with v10 by accident.
+- `kicad-cli` wrapper: `tools/kicad-cli.sh`.
+  - Flatpak's `/tmp` is private, so pass host paths with
+    `KICAD_EXTRA_FS=/path/a:/path/b`.
+  - In zsh, `K="flatpak run …"; $K` fails because zsh does not word-split variables. Use
+    the wrapper script instead.
+- kicad-cli **rewrites `*.kicad_prl`** even for read-only commands such as ERC/DRC/export.
+  Revert it with `git checkout`; it will be ignored by `.gitignore` anyway.
+- Alternative kept in reserve: the KiKit container `docker.io/yaqwsx/kikit:v1.8.1-v10`
+  (use `-v9` for KiCad 9).
+
+## 2026-09-26 — Baseline checks of rev A (kicad-cli 10.0.6, read-only)
+
+- Netlist export: OK. Kept as the reference for the connectivity-invariant checks.
+- ERC: 4 errors `power_pin_not_driven` (no PWR_FLAG). The remaining 201 are warnings:
+  122 `lib_symbol_issues` and 75 `footprint_link_issues`, both caused by v9/v10 library
+  differences, plus 4 `multiple_net_names`.
+- DRC: 0 errors and 0 unconnected items.
+  - Warnings: 68 `missing_courtyard` (the mouse-bite footprints) and 67
+    `lib_footprint_issues`.
+  - Schematic parity: 68 `extra_footprint` (mouse bites have no symbol), 50
+    `duplicate_footprints` (the mouse bites reuse `REF**n`) and 67
+    `footprint_symbol_field_mismatch`.
+- Git tag `rev-a-prototype` → commit `96515e9` (the last commit before any cleanup).

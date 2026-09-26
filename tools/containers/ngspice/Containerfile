@@ -1,0 +1,6 @@
+# ngspice for the signal-integrity decks in hardware/si/
+# Build:  podman build -t localhost/ngspice tools/containers/ngspice
+FROM docker.io/library/debian:bookworm-slim
+RUN apt-get update && apt-get install -y --no-install-recommends ngspice python3 python3-numpy python3-matplotlib make \
+ && rm -rf /var/lib/apt/lists/*
+WORKDIR /work
