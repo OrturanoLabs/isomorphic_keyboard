@@ -22,10 +22,10 @@ end SB_IO;
 
 architecture sim of SB_IO is
 begin
-  -- Se l'output enable è alto, tira a '0' (visto che D_OUT_0 è fisso a '0' nel top)
-  -- Altrimenti lascia la linea libera ('Z') per simulare l'open-drain
+  -- When output enable is high, pull the line to '0' (D_OUT_0 is tied to '0' in the top level)
+  -- Otherwise release the line ('Z') to model an open-drain output
   PACKAGE_PIN <= D_OUT_0 when OUTPUT_ENABLE = '1' else 'Z';
 
-  -- Riporta il valore del pin fisico verso l'interno della logica
+  -- Feed the physical pin value back into the logic
   D_IN_0 <= PACKAGE_PIN;
 end sim;

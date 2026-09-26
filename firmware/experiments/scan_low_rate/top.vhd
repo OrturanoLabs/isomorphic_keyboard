@@ -18,7 +18,7 @@ end top;
 
 architecture behavioral of top is
 
-    signal clk_counter : unsigned(25 downto 0) := (others => '0');  -- contatore per il clock principale
+    signal clk_counter : unsigned(25 downto 0) := (others => '0');  -- main clock divider counter
     signal clk_low : std_logic;
     signal reset : std_logic;
 
@@ -50,12 +50,12 @@ begin
                 clk_counter <= (others => '0');
                 clk_low  <= '0';
             else
-                if clk_counter(2) = '1' then  -- Conta: 0, 1, 2, 3 (quattro cicli)
+                if clk_counter(2) = '1' then  -- Count: 0, 1, 2, 3 (four cycles)
                     clk_counter <= (others => '0');
-                    clk_low  <= '1'; -- Impulso alto per un solo ciclo di clk_in
+                    clk_low  <= '1'; -- High pulse for a single clk_in cycle
                 else
                     clk_counter <= clk_counter + 1;
-                    clk_low  <= '0'; -- Torna subito a zero al ciclo successivo
+                    clk_low  <= '0'; -- Back to zero on the next cycle
                 end if;
             end if;
         end if;

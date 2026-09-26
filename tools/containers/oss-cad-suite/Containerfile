@@ -1,10 +1,13 @@
 # OSS CAD Suite (GHDL, yosys + ghdl plugin, nextpnr-ice40, icepack, dfu-util, gtkwave)
 # Build:  podman build -t localhost/oss-cad-suite:2026-09-26 tools/containers/oss-cad-suite
-FROM docker.io/library/debian:bookworm-slim
+FROM docker.io/library/debian:trixie-slim
 ARG OSS_CAD_DATE=2026-09-26
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl make findutils \
  && rm -rf /var/lib/apt/lists/*
 RUN curl -fsSL "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/${OSS_CAD_DATE}/oss-cad-suite-linux-x64-$(echo ${OSS_CAD_DATE} | tr -d -).tgz" \
     | tar -xz -C /opt
+# GHDL's LLVM/GCC backend links simulation executables with the system C compiler
+RUN apt-get update && apt-get install -y --no-install-recommends gcc libc6-dev zlib1g-dev \
+ && rm -rf /var/lib/apt/lists/*
 ENV PATH=/opt/oss-cad-suite/bin:$PATH
 WORKDIR /work

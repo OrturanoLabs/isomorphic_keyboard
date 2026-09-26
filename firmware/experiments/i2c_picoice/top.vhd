@@ -3,23 +3,23 @@ USE ieee.std_logic_1164.all;
 
 ENTITY top IS
   PORT(
-    clk_in      : IN    STD_LOGIC; -- Clock di sistema (es. 50 MHz)
-    reset_n     : IN    STD_LOGIC; -- Tasto di reset (attivo basso)
+    clk_in      : IN    STD_LOGIC; -- System clock (e.g. 50 MHz)
+    reset_n     : IN    STD_LOGIC; -- Reset button (active low)
 
-    -- Pin fisici della FPGA da collegare al bus I2C esterno
+    -- FPGA pins connected to the external I2C bus
     package_sda     : INOUT STD_LOGIC;
     package_scl     : INOUT STD_LOGIC;
 
-    -- LED di stato sulla FPGA
-    led_blue    : OUT   STD_LOGIC; -- Si accende quando l'invio è terminato
-    led_red     : OUT   STD_LOGIC;  -- Si accende se c'è stato un NACK dallo slave
+    -- Status LEDs on the FPGA board
+    led_blue    : OUT   STD_LOGIC; -- On when the transfer has finished
+    led_red     : OUT   STD_LOGIC;  -- On when the slave answered NACK
     led_green   : out STD_LOGIC
   );
 END top;
 
 ARCHITECTURE behavioral OF top IS
 
-  -- 1. Dichiarazione del tuo IP i2c_master
+  -- 1. i2c_master IP declaration
   COMPONENT i2c_master
     GENERIC(
       input_clk : INTEGER := 12_000_000;
@@ -42,7 +42,7 @@ ARCHITECTURE behavioral OF top IS
     );
   END COMPONENT;
 
-  -- Primitiva iCE40 SB_IO
+  -- iCE40 SB_IO primitive
   component SB_IO is
       generic ( PIN_TYPE : std_logic_vector(5 downto 0) := "000000" );
       port (
@@ -50,7 +50,7 @@ ARCHITECTURE behavioral OF top IS
           OUTPUT_ENABLE : in    std_logic := '0';
           D_OUT_0       : in    std_logic := '0';
           D_IN_0        : out   std_logic;
-          -- Campi opzionali superflui omessi per brevità
+          -- Optional fields omitted for brevity
           LATCH_INPUT_VALUE : in std_logic := '0';
           CLOCK_ENABLE      : in std_logic := '0';
           INPUT_CLK         : in std_logic := '0';
@@ -60,11 +60,11 @@ ARCHITECTURE behavioral OF top IS
       );
   end component;
 
-  -- 2. Segnali di interconnessione con l'IP
+  -- 2. Signals connecting the IP
   SIGNAL i2c_ena       : STD_LOGIC := '0';
-  SIGNAL i2c_addr      : STD_LOGIC_VECTOR(6 DOWNTO 0) := "0111100"; -- Es. Indirizzo 0x3C (display OLED)
-  SIGNAL i2c_rw        : STD_LOGIC := '0';                          -- '0' = Scrittura
-  SIGNAL i2c_data_wr   : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"A5";     -- Dato da inviare: 0xA5
+  SIGNAL i2c_addr      : STD_LOGIC_VECTOR(6 DOWNTO 0) := "0111100"; -- e.g. address 0x3C (OLED display)
+  SIGNAL i2c_rw        : STD_LOGIC := '0';                          -- '0' = write
+  SIGNAL i2c_data_wr   : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"A5";     -- Data to send: 0xA5
   SIGNAL i2c_busy      : STD_LOGIC;
   SIGNAL i2c_ack_error : STD_LOGIC;
 
@@ -73,7 +73,7 @@ ARCHITECTURE behavioral OF top IS
   SIGNAL i2c_sda_in    : STD_LOGIC;
   SIGNAL i2c_sda_en    : STD_LOGIC;
 
-  -- 3. Stati della Macchina a Stati (FSM)
+  -- 3. FSM states
   TYPE state_type IS (IDLE, START_TX, WAIT_BUSY_HIGH, WAIT_BUSY_LOW, DONE);
   SIGNAL state : state_type := IDLE;
 
@@ -82,29 +82,29 @@ ARCHITECTURE behavioral OF top IS
 
 BEGIN
 
-  -- Buffer hardware fisico per SDA inserito nel TOP
+  -- Physical I/O buffer for SDA instantiated in the top level
   sda_hardware_io : SB_IO
-      generic map ( PIN_TYPE => "101001" ) -- Tristate Out + Simple In
+      generic map ( PIN_TYPE => "101001" ) -- Tristate out + simple in
       port map (
-          PACKAGE_PIN   => package_sda,       -- Connesso DIRETTAMENTE al pin fisico del chip
-          OUTPUT_ENABLE => i2c_sda_en,    -- Guidato dalla logica interna dell'I2C
-          D_OUT_0       => '0',       -- Forza a massa '0' quando OE è alto
-          D_IN_0        => i2c_sda_in,    -- Riporta il valore letto alla logica interna
+          PACKAGE_PIN   => package_sda,       -- Connected DIRECTLY to the physical pin
+          OUTPUT_ENABLE => i2c_sda_en,    -- Driven by the internal I2C logic
+          D_OUT_0       => '0',       -- Drive '0' when OE is high
+          D_IN_0        => i2c_sda_in,    -- Feed the pin value back to the logic
           D_IN_1        => open
       );
 
-  -- Buffer hardware fisico per SCL inserito nel TOP
+  -- Physical I/O buffer for SCL instantiated in the top level
   scl_hardware_io : SB_IO
       generic map ( PIN_TYPE => "101001" )
       port map (
-          PACKAGE_PIN   => package_scl,       -- Connesso DIRETTAMENTE al pin fisico del chip
-          OUTPUT_ENABLE => i2c_scl_en,    -- Guidato dalla logica interna dell'I2C
-          D_OUT_0       => '0',       -- Forza a massa '0' quando OE è alto
-          D_IN_0        => i2c_scl_in,    -- Riporta il valore letto alla logica interna (indispensabile per clock stretching)
+          PACKAGE_PIN   => package_scl,       -- Connected DIRECTLY to the physical pin
+          OUTPUT_ENABLE => i2c_scl_en,    -- Driven by the internal I2C logic
+          D_OUT_0       => '0',       -- Drive '0' when OE is high
+          D_IN_0        => i2c_scl_in,    -- Feed the pin value back to the logic (needed for clock stretching)
           D_IN_1        => open
       );
 
-  -- Mappatura dell'IP I2C Master
+  -- I2C master IP port map
   i2c_inst : i2c_master
     PORT MAP(
       clk       => clk_in,
@@ -114,15 +114,15 @@ BEGIN
       rw        => i2c_rw,
       data_wr   => i2c_data_wr,
       busy      => i2c_busy,
-      data_rd   => OPEN,          -- Non ci interessa leggere dati in questo esempio
+      data_rd   => OPEN,          -- No reads in this example
       ack_error => i2c_ack_error,
-      sda_in    => i2c_sda_in,       -- Collegato direttamente al pin di uscita
+      sda_in    => i2c_sda_in,       -- Connected directly to the output pin
       sda_en    => i2c_sda_en,
-      scl_in    => i2c_scl_in,        -- Collegato direttamente al pin di uscita
+      scl_in    => i2c_scl_in,        -- Connected directly to the output pin
       scl_en    => i2c_scl_en
     );
 
-  -- Processo principale: Macchina a Stati per controllare l'IP
+  -- Main process: FSM driving the IP
   PROCESS(clk_in, reset_n)
   BEGIN
     IF reset_n = '0' THEN
@@ -134,7 +134,7 @@ BEGIN
     ELSIF rising_edge(clk_in) THEN
       CASE state IS
 
-        -- STATO 0: Attesa della pressione del tasto Start
+        -- STATE 0: wait for the start button
         WHEN IDLE =>
           lr  <= '1';
           lb <= '1';
@@ -142,33 +142,33 @@ BEGIN
             state <= START_TX;
           end if;
 
-        -- STATO 1: Lancia il comando all'IP
+        -- STATE 1: issue the command to the IP
         WHEN START_TX =>
-          i2c_ena <= '1'; -- Alza l'enable per dire all'IP di partire
+          i2c_ena <= '1'; -- Raise the enable to start the IP
           state   <= WAIT_BUSY_HIGH;
 
-        -- STATO 2: Attendi che l'IP registri il comando e inizi
+        -- STATE 2: wait for the IP to accept the command and start
         WHEN WAIT_BUSY_HIGH =>
           IF i2c_busy = '1' THEN
-            i2c_ena <= '0'; -- Abbassa l'enable! (Altrimenti l'IP continua a mandare dati all'infinito)
+            i2c_ena <= '0'; -- Drop the enable! (otherwise the IP keeps sending forever)
             state   <= WAIT_BUSY_LOW;
           END IF;
 
-        -- STATO 3: Attendi che l'IP finisca di inviare tutto e mandi lo STOP
+        -- STATE 3: wait for the IP to finish and send STOP
         WHEN WAIT_BUSY_LOW =>
           IF i2c_busy = '0' THEN
             state <= DONE;
           END IF;
 
-        -- STATO 4: Transazione completata. Legge l'errore e si blocca qui
+        -- STATE 4: transaction done; latch the error flag and stay here
         WHEN DONE =>
-          lr <= '0'; -- Segnala la fine
+          lr <= '0'; -- Signal completion
           IF i2c_ack_error = '1' THEN
-            lb <= '0'; -- Se lo slave non ha risposto (NACK), accende il LED di errore
+            lb <= '0'; -- If the slave did not answer (NACK), light the error LED
           END IF;
           state <= DONE;
-          -- Rimane in questo stato finché non si preme il tasto di reset_n
-          -- (Se vuoi che riparta, potresti rimetterlo in IDLE dopo un delay)
+          -- Stays here until reset_n is pressed
+          -- (to restart, go back to IDLE after a delay)
 
       END CASE;
     END IF;

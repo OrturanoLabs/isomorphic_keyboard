@@ -2,12 +2,12 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY top_tb IS
--- Un testbench non ha porte esterne!
+-- A testbench has no external ports.
 END top_tb;
 
 ARCHITECTURE sim OF top_tb IS
 
-    -- 1. Dichiarazione del componente da testare (UUT)
+    -- 1. Unit under test (UUT) declaration
     COMPONENT top
         PORT(
             clk_in    : IN    STD_LOGIC;
@@ -20,7 +20,7 @@ ARCHITECTURE sim OF top_tb IS
         );
     END COMPONENT;
 
-    -- 2. Segnali interni del testbench per pilotare la UUT
+    -- 2. Testbench signals driving the UUT
     SIGNAL clk_tb    : STD_LOGIC := '0';
     SIGNAL reset_n_tb: STD_LOGIC := '0';
     SIGNAL sda_tb    : STD_LOGIC;
@@ -29,12 +29,12 @@ ARCHITECTURE sim OF top_tb IS
     SIGNAL led_r_tb  : STD_LOGIC;
     signal led_g_tb : STD_LOGIC;
 
-    -- Costanti di temporizzazione (12 MHz basato sul tuo codice i2c_master)
-    CONSTANT clk_period : TIME := 1 sec / 12_000_000; -- Circa 83.33 ns
+    -- Timing constants (12 MHz, the pico-ice clock)
+    CONSTANT clk_period : TIME := 1 sec / 12_000_000; -- about 83.33 ns
 
 BEGIN
 
-    -- 3. Istanziamo la Unit Under Test (UUT)
+    -- 3. Instantiate the unit under test (UUT)
     uut: top
         PORT MAP (
             clk_in    => clk_tb,
@@ -46,12 +46,12 @@ BEGIN
             led_green => led_g_tb
         );
 
-    -- 4. Modello delle resistenze di Pull-Up sul bus I2C (Fondamentale!)
-    -- In I2C i segnali sono open-drain. Se nessuno li guida, vanno a 'H' (High Weak)
+    -- 4. Model of the I2C bus pull-up resistors (essential!)
+    -- I2C lines are open-drain: when nobody drives them they go to 'H' (weak high)
     sda_tb <= 'H';
     scl_tb <= 'H';
 
-    -- 5. Generatore del Clock (Oscilla all'infinito)
+    -- 5. Clock generator (runs forever)
     clk_process : PROCESS
     BEGIN
         clk_tb <= '0';
@@ -60,46 +60,46 @@ BEGIN
         WAIT FOR clk_period / 2;
     END PROCESS;
 
-    -- 6. Stimoli di test (Reset e simulazione risposta dello Slave)
+    -- 6. Stimuli (reset, then emulated slave responses)
     stimulus_process : PROCESS
     BEGIN
-        -- Applichiamo il reset iniziale
+        -- Apply the initial reset
         reset_n_tb <= '0';
         WAIT FOR 5 * clk_period;
-        reset_n_tb <= '1'; -- Rilasciamo il reset, la FSM del top passa in START_TX
+        reset_n_tb <= '1'; -- Release the reset; the top-level FSM moves to START_TX
 
-        -- Il master inizierà a far oscillare SCL e trasmettere dati su SDA.
-        -- Per evitare che dia l'errore ACK (led_red si accende), dobbiamo simulare
-        -- uno slave che risponde con un ACK (cioè porta SDA a '0' al 9° impulso di clock).
+        -- The master starts toggling SCL and sending data on SDA.
+        -- To avoid an ACK error (led_red on) we must emulate
+        -- a slave answering ACK (SDA low on the 9th clock pulse).
 
-        -- Attendiamo che la transazione parta e arrivi al nono bit dell'indirizzo
-        -- WAIT UNTIL falling_edge(scl_tb); -- Start condition...
+        -- Wait for the transaction to start and reach the ninth address bit
+        -- WAIT UNTIL falling_edge(scl_tb); -- start condition...
         --
-        -- -- Contiamo 8 bit (Indirizzo + R/W)... al 9° bit facciamo finta di essere lo slave
+        -- -- Count 8 bits (address + R/W)... on the 9th bit pretend to be the slave
         -- FOR i IN 0 TO 8 LOOP
         --     WAIT UNTIL falling_edge(scl_tb);
         -- END LOOP;
         --
-        -- -- Lo Slave risponde tirando giù SDA per l'ACK dell'indirizzo
+        -- -- The slave pulls SDA low to ACK the address
         -- sda_tb <= '0';
-        -- WAIT UNTIL falling_edge(scl_tb); -- Fine del bit di ACK
-        -- sda_tb <= 'Z'; -- Rilasciamo la linea
+        -- WAIT UNTIL falling_edge(scl_tb); -- end of the ACK bit
+        -- sda_tb <= 'Z'; -- Release the line
         --
-        -- -- Contiamo altri 8 bit (il dato vero e proprio, es: 0xA5)
+        -- -- Count 8 more bits (the payload, e.g. 0xA5)
         -- FOR i IN 0 TO 8 LOOP
         --     WAIT UNTIL falling_edge(scl_tb);
         -- END LOOP;
         --
-        -- -- Lo Slave risponde tirando giù SDA per l'ACK del dato
+        -- -- The slave pulls SDA low to ACK the data
         -- sda_tb <= '0';
         -- WAIT UNTIL falling_edge(scl_tb);
         -- sda_tb <= 'Z';
         --
-        -- -- Lasciamo finire la STOP condition del master
+        -- -- Let the master finish the STOP condition
         -- WAIT FOR 200 us;
         --
-        -- -- Ferma la simulazione in modo pulito
-        -- ASSERT FALSE REPORT "Simulazione completata con successo!" SEVERITY FAILURE;
+        -- -- Stop the simulation cleanly
+        -- ASSERT FALSE REPORT "Simulation completed successfully!" SEVERITY FAILURE;
         WAIT;
     END PROCESS;
 

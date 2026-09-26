@@ -44,9 +44,9 @@ architecture behavioral of top is
     END COMPONENT;
 
     SIGNAL i2c_ena       : STD_LOGIC := '0';
-    SIGNAL i2c_addr      : STD_LOGIC_VECTOR(6 DOWNTO 0) := "0111100"; -- Es. Indirizzo 0x3C (display OLED)
-    SIGNAL i2c_rw        : STD_LOGIC := '0';                          -- '0' = Scrittura
-    SIGNAL i2c_data_wr   : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"A5";     -- Dato da inviare: 0xA5
+    SIGNAL i2c_addr      : STD_LOGIC_VECTOR(6 DOWNTO 0) := "0111100"; -- e.g. address 0x3C (OLED display)
+    SIGNAL i2c_rw        : STD_LOGIC := '0';                          -- '0' = write
+    SIGNAL i2c_data_wr   : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"A5";     -- Data to send: 0xA5
     SIGNAL i2c_busy      : STD_LOGIC;
     SIGNAL i2c_ack_error : STD_LOGIC;
 
@@ -62,7 +62,7 @@ architecture behavioral of top is
             OUTPUT_ENABLE : in    std_logic := '0';
             D_OUT_0       : in    std_logic := '0';
             D_IN_0        : out   std_logic;
-            -- Campi opzionali superflui omessi per brevità
+            -- Optional fields omitted for brevity
             LATCH_INPUT_VALUE : in std_logic := '0';
             CLOCK_ENABLE      : in std_logic := '0';
             INPUT_CLK         : in std_logic := '0';
@@ -72,22 +72,22 @@ architecture behavioral of top is
         );
     end component;
 
-    signal clk_counter : unsigned(25 downto 0) := (others => '0');  -- contatore per il clock principale
+    signal clk_counter : unsigned(25 downto 0) := (others => '0');  -- main clock divider counter
     signal clk_low : std_logic;
     signal reset : std_logic;
 
-    signal tile_stream : std_logic_vector(15 downto 0);    -- 2 byte per lo stato di una tile
-    signal pb_counter : unsigned(4 downto 0);       -- contatore per i bit della tile
-    signal byteHL : unsigned(1 downto 0); -- conta i byte inviati
+    signal tile_stream : std_logic_vector(15 downto 0);    -- 2 bytes: raw frame of one tile
+    signal pb_counter : unsigned(4 downto 0);       -- bit counter within a tile frame
+    signal byteHL : unsigned(1 downto 0); -- counts the bytes sent
 
     type state_pull_t is (
-        idle,   -- attende che la prima FSM sia in scanning
-        r1,     -- alza il reset
-        r2,     -- abbassa il reset e prepara a prendere il primo bit
-        c1,     -- clock alto
-        get_bit,    -- carica bit e incrementa il contatore
-        s1,     -- abilita il sender e attende per il segnale ack_send
-        s2,     -- aspettiamo che ack_send torni a zero, indicando che il sender è di nuovo in idle
+        idle,   -- wait for the main FSM to be in scanning
+        r1,     -- raise the latch (parallel load of the tiles)
+        r2,     -- release the latch and prepare to read the first bit
+        c1,     -- board clock high
+        get_bit,    -- sample one bit and increment the bit counter
+        s1,     -- enable the sender and wait for ack_send
+        s2,     -- wait for ack_send to return low, i.e. the sender is idle again
         done,
         err
     );
@@ -96,29 +96,29 @@ architecture behavioral of top is
 
 begin
 
-    -- Buffer hardware fisico per SDA inserito nel TOP
+    -- Physical I/O buffer for SDA instantiated in the top level
     sda_hardware_io : SB_IO
-        generic map ( PIN_TYPE => "101001" ) -- Tristate Out + Simple In
+        generic map ( PIN_TYPE => "101001" ) -- Tristate out + simple in
         port map (
-            PACKAGE_PIN   => package_sda,       -- Connesso DIRETTAMENTE al pin fisico del chip
-            OUTPUT_ENABLE => i2c_sda_en,    -- Guidato dalla logica interna dell'I2C
-            D_OUT_0       => '0',       -- Forza a massa '0' quando OE è alto
-            D_IN_0        => i2c_sda_in,    -- Riporta il valore letto alla logica interna
+            PACKAGE_PIN   => package_sda,       -- Connected DIRECTLY to the physical pin
+            OUTPUT_ENABLE => i2c_sda_en,    -- Driven by the internal I2C logic
+            D_OUT_0       => '0',       -- Drive '0' when OE is high
+            D_IN_0        => i2c_sda_in,    -- Feed the pin value back to the logic
             D_IN_1        => open
         );
 
-    -- Buffer hardware fisico per SCL inserito nel TOP
+    -- Physical I/O buffer for SCL instantiated in the top level
     scl_hardware_io : SB_IO
         generic map ( PIN_TYPE => "101001" )
         port map (
-            PACKAGE_PIN   => package_scl,       -- Connesso DIRETTAMENTE al pin fisico del chip
-            OUTPUT_ENABLE => i2c_scl_en,    -- Guidato dalla logica interna dell'I2C
-            D_OUT_0       => '0',       -- Forza a massa '0' quando OE è alto
-            D_IN_0        => i2c_scl_in,    -- Riporta il valore letto alla logica interna (indispensabile per clock stretching)
+            PACKAGE_PIN   => package_scl,       -- Connected DIRECTLY to the physical pin
+            OUTPUT_ENABLE => i2c_scl_en,    -- Driven by the internal I2C logic
+            D_OUT_0       => '0',       -- Drive '0' when OE is high
+            D_IN_0        => i2c_scl_in,    -- Feed the pin value back to the logic (needed for clock stretching)
             D_IN_1        => open
         );
 
-    -- Mappatura dell'IP I2C Master
+    -- I2C master IP port map
     i2c_inst : i2c_master
         PORT MAP(
         clk       => clk_in,
@@ -128,11 +128,11 @@ begin
         rw        => i2c_rw,
         data_wr   => i2c_data_wr,
         busy      => i2c_busy,
-        data_rd   => OPEN,          -- Non ci interessa leggere dati in questo esempio
+        data_rd   => OPEN,          -- No reads in this example
         ack_error => i2c_ack_error,
-        sda_in    => i2c_sda_in,       -- Collegato direttamente al pin di uscita
+        sda_in    => i2c_sda_in,       -- Connected directly to the output pin
         sda_en    => i2c_sda_en,
-        scl_in    => i2c_scl_in,        -- Collegato direttamente al pin di uscita
+        scl_in    => i2c_scl_in,        -- Connected directly to the output pin
         scl_en    => i2c_scl_en
         );
 
@@ -147,9 +147,9 @@ begin
     led_green <= '0' when state = r1 else '1';
 
     ----------------------------------------------------------------
-    -- 1. GENERATORE DI CLOCK ENABLE (STROBE)
-    -- Questo processo gira alla massima velocità del clock globale.
-    -- Alza il segnale clk_en a '1' per UN SOLO ciclo di clk_in ogni 4.
+    -- 1. CLOCK ENABLE (STROBE) GENERATOR
+    -- This process runs at the full global clock rate.
+    -- Raise clk_en to '1' for ONE clk_in cycle out of every 4.
     ----------------------------------------------------------------
     -- gen_enable : process(clk_in)
     -- begin
@@ -158,12 +158,12 @@ begin
     --             clk_counter <= (others => '0');
     --             clk_low  <= '0';
     --         else
-    --             if clk_counter = 1 then  -- Conta: 0, 1, 2, 3 (quattro cicli)
+    --             if clk_counter = 1 then  -- Count: 0, 1, 2, 3 (four cycles)
     --                 clk_counter <= (others => '0');
-    --                 clk_low  <= '1'; -- Impulso alto per un solo ciclo di clk_in
+    --                 clk_low  <= '1'; -- High pulse for a single clk_in cycle
     --             else
     --                 clk_counter <= clk_counter + 1;
-    --                 clk_low  <= '0'; -- Torna subito a zero al ciclo successivo
+    --                 clk_low  <= '0'; -- Back to zero on the next cycle
     --             end if;
     --         end if;
     --     end if;
@@ -185,7 +185,7 @@ begin
 
     fsm_next : process(clk_low, state, pb_counter, tile_stream, i2c_busy, byteHL)
     begin
-        -- di default così non dobbiamo scrivere sempre l'ELSE
+        -- default assignment, so no ELSE branch is needed everywhere
         next_state <= state;
 
         case state is
@@ -193,21 +193,21 @@ begin
             when r1 => next_state <= r2;
             when r2 => next_state <= get_bit;
             when get_bit => next_state <= c1;
-            when c1 =>  -- controlliamo se abbiamo raccolto tutti i 16 bit
+            when c1 =>  -- have all 16 bits of the frame been collected?
                 if pb_counter = 16 then
                     if i2c_busy = '0' then
-                        next_state <= s1; -- allora possiamo inviare
+                        next_state <= s1; -- then we can send
                     else
-                        next_state <= c1; -- dobbiamo attendere ancora
+                        next_state <= c1; -- keep waiting
                     end if;
                 else
                     next_state <= get_bit;
                 end if;
-            when s1 => -- stiamo qui fino a che busy non è 1
+            when s1 => -- stay here until busy is 1
                 if i2c_busy = '1' then
                     next_state <= s2;
                 end if;
-            when s2 => -- attendiamo che abbia completato la tramissione
+            when s2 => -- wait for the transmission to complete
                 if i2c_busy = '0' then
                     if byteHL >= 2 then
                         next_state <= done;
@@ -230,12 +230,12 @@ begin
                 pb_counter <= (others => '0');
                 byteHL <= (others => '0');
             elsif clk_low = '1' then
-                -- valori di default
+                -- default values
                 clk_out <= '0';
                 latch <= '0';
 
-                -- quando entriamo nello stato, le cose scritte qua vengono subito eseguite
-                case next_state is     -- controlliamo lo stato successivo per non perdere un ciclo
+                -- outputs are decoded from the NEXT state so they take effect on entering it
+                case next_state is     -- look at the next state to avoid losing one cycle
                     when idle =>
                         null;
 
@@ -254,7 +254,7 @@ begin
                         i2c_data_wr <= tile_stream(15 downto 8);
 
                     when s1 =>
-                        i2c_ena <= '1';  -- facciamo partire la tramissione
+                        i2c_ena <= '1';  -- start the transmission
                         if state /= s1 then
                             byteHL <= byteHL + 1;
                         end if;

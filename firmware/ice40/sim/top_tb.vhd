@@ -2,12 +2,12 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY top_tb IS
--- Un testbench non ha porte esterne!
+-- A testbench has no external ports.
 END top_tb;
 
 ARCHITECTURE sim OF top_tb IS
 
-    -- 1. Dichiarazione del componente da testare (UUT)
+    -- 1. Unit under test (UUT) declaration
     COMPONENT top
         PORT(
             CLK_IN      : in std_logic;
@@ -25,7 +25,7 @@ ARCHITECTURE sim OF top_tb IS
         );
     END COMPONENT;
 
-    -- 2. Segnali interni del testbench per pilotare la UUT
+    -- 2. Testbench signals driving the UUT
     SIGNAL clk_tb    : STD_LOGIC := '0';
     SIGNAL reset_n_tb: STD_LOGIC := '0';
     SIGNAL led_b_tb  : STD_LOGIC;
@@ -37,12 +37,12 @@ ARCHITECTURE sim OF top_tb IS
 
     signal state : std_logic_vector(47 downto 0) := (others => '0');
 
-    -- Costanti di temporizzazione (12 MHz basato sul tuo codice i2c_master)
-    CONSTANT clk_period : TIME := 1 sec / 12_000_000; -- Circa 83.33 ns
+    -- Timing constants (12 MHz, the pico-ice clock)
+    CONSTANT clk_period : TIME := 1 sec / 12_000_000; -- about 83.33 ns
 
 BEGIN
 
-    -- 3. Istanziamo la Unit Under Test (UUT)
+    -- 3. Instantiate the unit under test (UUT)
     uut: top
         PORT MAP (
             clk_in    => clk_tb,
@@ -55,7 +55,7 @@ BEGIN
             board_clk => clk_out_tb
         );
 
-    -- 5. Generatore del Clock (Oscilla all'infinito)
+    -- 5. Clock generator (runs forever)
     clk_process : PROCESS
     BEGIN
         clk_tb <= '0';
@@ -64,19 +64,19 @@ BEGIN
         WAIT FOR clk_period / 2;
     END PROCESS;
 
-    -- 6. Stimoli di test (Reset e simulazione risposta dello Slave)
+    -- 6. Stimuli (reset, then emulated tile chain answering on BOARD_DATA)
     stimulus_process : PROCESS
     BEGIN
-        -- Applichiamo il reset iniziale
+        -- Apply the initial reset
         reset_n_tb <= '0';
         WAIT FOR 5 * clk_period;
-        reset_n_tb <= '1'; -- Rilasciamo il reset, la FSM del top passa in START_TX
+        reset_n_tb <= '1'; -- Release the reset; the top-level FSMs start scanning
 
         WAIT;
     END PROCESS;
 
 
-    -- per ogni clock out dobbiamo comunicare un preciso bit
+    -- on every BOARD_CLK pulse present the next bit of the emulated frame
     data_tb <= state(47);
 
     sdv : PROCESS(clk_out_tb, latch_tb)

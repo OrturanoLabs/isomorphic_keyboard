@@ -1,3 +1,13 @@
+-- SPDX-License-Identifier: GPL-3.0-or-later
+--
+-- Isomorphic keyboard - iCE40UP5K (pico-ice) top level.
+--
+-- Scans a chain of tiles (two '165 shift registers per tile) through BOARD_LATCH /
+-- BOARD_CLK / BOARD_DATA, rebuilds the position of every tile in the grid from the
+-- marker bits of each 16-bit frame, debounces the 12 keys of every tile, and sends
+-- note-on / note-off messages on a 31250 baud MIDI UART (PACKAGE_MIDI).
+-- The frame format and the grid walk are documented in docs/architecture/protocol.md.
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -28,19 +38,19 @@ architecture behavioral of top is
     subtype coord_t is std_logic_vector(5 downto 0);
     constant COORD_ZERO : coord_t := (others => '0');
 
-    -- pbs_t(0): tasto r1,c1
-    -- pbs_t(1): tasto r1,c2
+    -- pbs_t(0): key r1,c1
+    -- pbs_t(1): key r1,c2
     -- [...]
-    -- pbs_t(4): tasto r2,c1
+    -- pbs_t(4): key r2,c1
     -- [...]
-    -- pbs_t(11): tasto r3,c4
+    -- pbs_t(11): key r3,c4
     subtype pbs_t is std_logic_vector(11 downto 0);
 
     -- tile_t(17 downto 6): pbs_t
     -- tile_t(5 downto 0): coord_t
     subtype tile_t is std_logic_vector(17 downto 0);
     constant TILE_ZERO : tile_t := (others => '0');
-    -- per ottenere lo stato del tasto (i,j):
+    -- state of key (i,j):
     -- tile_t(6 + i*4 + j)
 
     type keyboard_t is array (0 to 9) of tile_t;
@@ -91,32 +101,32 @@ architecture behavioral of top is
         );
     end component;
 
-    signal clk_counter : unsigned(11 downto 0) := (others => '0');  -- contatore per il clock principale
-    signal en_clk_scan : std_logic := '0';  -- divisore per il clock di scansione della griglia
+    signal clk_counter : unsigned(11 downto 0) := (others => '0');  -- main clock divider counter
+    signal en_clk_scan : std_logic := '0';  -- clock enable for the grid scan (CLK_IN / 17)
     signal reset : std_logic;
     signal midi_out : std_logic;
 
-    signal sender_fsm_enable : std_logic := '0'; -- handshake per inviare i dati di una tile
-    signal sender_fsm_busy : std_logic := '0'; -- handshake dati della tile inviati
+    signal sender_fsm_enable : std_logic := '0'; -- handshake: send the data of one tile
+    signal sender_fsm_busy : std_logic := '0'; -- handshake: tile data sent
 
     type state_main_t is (
-        idle,   -- stato iniziale
-        scanning,   -- operazione di scansione. Quanto è in questo stato è attiva anche la seconda FSM
+        idle,   -- initial state
+        scanning,   -- scanning. While in this state the pull FSM is active too
         done,
-        err     -- stato di errore / fallback
+        err     -- error / fallback state
     );
 
     type state_pull_t is (
-        idle,   -- attende che la prima FSM sia in scanning
-        newcol, -- nuova colonna: azzera anotherCol
-        r1,     -- alza il reset
-        r2,     -- abbassa il reset e prepara a prendere il primo bit
-        c1,     -- clock alto
-        get_bit,    -- carica bit e incrementa il contatore
-        s1,     -- abilita il sender e attende per il segnale ack_send
-        s2,     -- aspettiamo che ack_send torni a zero, indicando che il sender è di nuovo in idle
+        idle,   -- wait for the main FSM to be in scanning
+        newcol, -- new column: clear anotherCol
+        r1,     -- raise the latch (parallel load of the tiles)
+        r2,     -- release the latch and prepare to read the first bit
+        c1,     -- board clock high
+        get_bit,    -- sample one bit and increment the bit counter
+        s1,     -- enable the sender and wait for ack_send (unused)
+        s2,     -- wait for ack_send to return low, i.e. the sender is idle again (unused)
         done,
-        load,   -- carica i dati della tile nel primo registro
+        load,   -- store the tile data in keyboard_state
         err
     );
 
@@ -145,32 +155,32 @@ architecture behavioral of top is
     signal state_serializer : state_serializer_t := polling;
     signal state_midi : state_midi_sender_t := idle;
 
-    signal tile_stream : std_logic_vector(15 downto 0);    -- 2 byte per lo stato di una tile
-    signal pb_counter : unsigned(4 downto 0);       -- contatore per i bit della tile
-    signal tile_counter : unsigned(5 downto 0);     -- contatore delle tile
+    signal tile_stream : std_logic_vector(15 downto 0);    -- 2 bytes: raw frame of one tile
+    signal pb_counter : unsigned(4 downto 0);       -- bit counter within a tile frame
+    signal tile_counter : unsigned(5 downto 0);     -- tile counter
 
-    -- ci serve un segnale che sia 1 se appare esserci una nuova colonna e che si resetta la tile dopo che la colonna sia finita
+    -- '1' when another column follows the current one; cleared when the next column starts
     signal anotherCol : std_logic := '0';
     signal coord : coord_t := COORD_ZERO;
 
-    signal keyboard_state : keyboard_t := KEYBOARD_ZERO;    -- contiene lo stato in tempo reale
-    signal keyboard_debounced : keyboard_t := KEYBOARD_ZERO;    -- contiene lo stato dopo il debounce
-    signal keyboard_debounced_old : keyboard_t := KEYBOARD_ZERO;    -- stato dopo il debounce con un ciclo di ritardo
-    signal keyboard_pending : keyboard_t := KEYBOARD_ZERO;  -- contiene 1 quando va aggiornato lo stato del tasto
+    signal keyboard_state : keyboard_t := KEYBOARD_ZERO;    -- raw (real-time) state
+    signal keyboard_debounced : keyboard_t := KEYBOARD_ZERO;    -- debounced state
+    signal keyboard_debounced_old : keyboard_t := KEYBOARD_ZERO;    -- debounced state delayed by one clock
+    signal keyboard_pending : keyboard_t := KEYBOARD_ZERO;  -- '1' where a key changed and a MIDI message is still due
 
-    -- variabili per contenere i dati serializzati
+    -- absolute coordinates of the key being serialised
     signal x : unsigned(7 downto 0) := (others => '0');
     signal y : unsigned(7 downto 0) := (others => '0');
     signal change_dir : std_logic := '0';
 
-    -- segnali per la fsm del MIDI
+    -- MIDI FSM signals
     signal midi_start : std_logic := '0';
     signal midi_busy : std_logic := '0';
     signal midi_uart_ready : std_logic := '0';
     signal midi_uart_start : std_logic := '0';
     signal midi_uart_data : std_logic_vector(7 downto 0) := (others => '0');
 
-    -- mappa dei tasti
+    -- maps the 16-bit tile frame to the 12 keys
     function map_pbs(stream : std_logic_vector(15 downto 0)) return pbs_t is
         variable p : pbs_t;
     begin
@@ -189,9 +199,9 @@ architecture behavioral of top is
         return p;
     end function;
 
-    -- segnali per la gestione del MIDI
+    -- MIDI note computation
     signal pitch : unsigned (7 downto 0);
-    constant ref_pitch : unsigned (6 downto 0) := "0111100"; -- 96 = C7 (1100000)
+    constant ref_pitch : unsigned (6 downto 0) := "0111100"; -- 60 = C4 (middle C)
 
     constant note_on : std_logic_vector (7 downto 0) := x"90";
     constant note_off : std_logic_vector (7 downto 0) := x"80";
@@ -239,7 +249,7 @@ architecture behavioral of top is
 begin
     reset <= not RESET_N;
 
-    -- genera il clock enable per la prima FSM
+    -- generate the scan clock enable (one pulse every 17 CLK_IN cycles)
     main_clocking : process(CLK_IN)
     begin
         if rising_edge(CLK_IN) then
@@ -281,7 +291,7 @@ begin
 ------------------------------------------------------------------------------------------------------------------------------------------------
 -- DISPATCHER ----------------------------------------------------------------------------------------------------------------------------------
 
--- la funzione principale è estrarre i dati dalle tile e popolare keyboard_state
+-- shifts the frames out of the tile chain and fills keyboard_state
 
 
     pull_fsm_clocking : process(CLK_IN)
@@ -297,7 +307,7 @@ begin
 
     pull_fsm_next : process(state_pull, state_main, pb_counter, tile_stream, sender_fsm_busy)
     begin
-        -- di default così non dobbiamo scrivere sempre l'ELSE
+        -- default assignment, so no ELSE branch is needed everywhere
         next_state_pull <= state_pull;
 
         case state_pull is
@@ -309,26 +319,26 @@ begin
             when newcol => next_state_pull <= r2;
             when r2 => next_state_pull <= get_bit;
             when get_bit => next_state_pull <= c1;
-            when c1 =>  -- controlliamo se abbiamo raccolto tutti i 16 bit
+            when c1 =>  -- have all 16 bits of the frame been collected?
                 if pb_counter = 16 then
-                    -- controlliamo che i bit di controllo siano giusti
+                    -- check the two fixed marker bits (always '1')
                     if tile_stream(2) = '1' and tile_stream(3) = '1' then
-                        next_state_pull <= load; -- allora possiamo caricare nel primo registro
+                        next_state_pull <= load; -- frame valid: store it
                     else
-                        next_state_pull <= err; -- altrimenti c'è un errore
+                        next_state_pull <= err; -- otherwise: framing error (red LED)
                     end if;
                 else
                     next_state_pull <= get_bit;
                 end if;
             when load =>
-                if tile_stream(0) = '1' then -- vuol dire che siamo in cima alla colonna
+                if tile_stream(0) = '1' then -- this tile is the top of its column
                     if anotherCol = '1' then
-                        next_state_pull <= newcol; -- se c'è un'altra colonna
+                        next_state_pull <= newcol; -- another column follows
                     else
-                        next_state_pull <= done;  -- se abbiamo finito la griglia
+                        next_state_pull <= done;  -- whole grid read
                     end if;
                 else
-                    next_state_pull <= r2;  -- se non abbiamo finito la colonna
+                    next_state_pull <= r2;  -- column not finished yet
                 end if;
             when done => next_state_pull <= idle;
             when err => next_state_pull <= err;
@@ -351,26 +361,26 @@ begin
                 coord <= COORD_ZERO;
 
             elsif en_clk_scan = '1' then
-                -- valori di default
+                -- default values
                 BOARD_CLK <= '0';
                 BOARD_LATCH <= '0';
                 sender_fsm_enable <= '0';
 
-                -- quando entriamo nello stato, le cose scritte qua vengono subito eseguite
-                case next_state_pull is     -- controlliamo lo stato successivo per non perdere un ciclo
+                -- outputs are decoded from the NEXT state so they take effect on entering it
+                case next_state_pull is     -- look at the next state to avoid losing one cycle
                     when idle =>
                         null;
 
                     when r1 =>
                         BOARD_LATCH <= '1';
                         tile_counter <= (others => '0');
-                        coord(2 downto 0) <= std_logic_vector(to_unsigned(1, 3)); -- resettiamo tutto perché iniziamo la griglia
+                        coord(2 downto 0) <= std_logic_vector(to_unsigned(1, 3)); -- start of the grid: reset the coordinates
                         coord(5 downto 3) <= (others => '0');
 
                     when newcol =>
                         anotherCol <= '0';
-                        coord(2 downto 0) <= std_logic_vector( unsigned(coord(2 downto 0)) + 1 ); -- incrementa il contatore di colonna
-                        coord(5 downto 3) <= (others => '0'); -- resetta il contatore di riga
+                        coord(2 downto 0) <= std_logic_vector( unsigned(coord(2 downto 0)) + 1 ); -- next column
+                        coord(5 downto 3) <= (others => '0'); -- restart from the bottom row
 
                     when r2 =>
                         pb_counter <= (others => '0');
@@ -386,7 +396,7 @@ begin
 
                     when load =>
                         anotherCol <= anotherCol or (not tile_stream(1));
-                        -- codice per caricare il tile_stream all'interno del registro giusto
+                        -- store the frame in the slot of this tile
                         keyboard_state(to_integer(tile_counter))(5 downto 0) <= coord;
                         keyboard_state(to_integer(tile_counter))(17 downto 6) <= map_pbs(tile_stream);
 
@@ -401,14 +411,14 @@ begin
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
--- DEBOUNCING e CHANGE DETECTION ---------------------------------------------------------------------------------------------------------------
+-- DEBOUNCING AND CHANGE DETECTION ---------------------------------------------------------------------------------------------------------------
 
--- ogni volta che c'è la transizione done=>idle di state_pull, i dati in keyboard_state sono pronti
--- e in generale è sicuro usarli a ogni clock se next_state_pull /= load (possiamo usare i fronti di discesa?)
--- priviamo ad inserire queste uscite nei debouncer
+-- keyboard_state is complete at every done=>idle transition of state_pull, and it is
+-- safe to use on any clock where next_state_pull /= load.
+-- It is fed to the debouncers, clocked on the falling edge of CLK_IN.
 
-    -- generiamo un debouncer da 12 canali per ogni tile allocata
-    gen_debouncer : for i in 0 to 9 generate -- dimensionalità delle tile in keyboard_t
+    -- one 12-channel debouncer per tile slot
+    gen_debouncer : for i in 0 to 9 generate -- number of tile slots in keyboard_t
     begin
         debouncer : olo_intf_debounce
             port map(
@@ -421,7 +431,7 @@ begin
         keyboard_debounced(i)(5 downto 0) <= keyboard_state(i)(5 downto 0);
     end generate;
 
-    -- i dati in keyboard_debounced sono stabili su ogni fronte di salita
+    -- keyboard_debounced is stable on every rising edge
     state_serializer_fsm : process(CLK_IN)
         variable pos_tile : integer range 0 to 9 := 0;
         variable pos_bit : integer range 0 to 11  := 0;
@@ -439,7 +449,7 @@ begin
                 active_tile := keyboard_pending(pos_tile);
 
                 for i in 0 to 9 loop
-                    keyboard_pending(i)(5 downto 0) <= keyboard_debounced(i)(5 downto 0);   -- le coordinate non dovrebbero cambiare fra i vari scan
+                    keyboard_pending(i)(5 downto 0) <= keyboard_debounced(i)(5 downto 0);   -- coordinates are not expected to change between scans
                     keyboard_pending(i)(17 downto 6) <=
                                     keyboard_pending(i)(17 downto 6) or
                                     ( keyboard_debounced(i)(17 downto 6) xor keyboard_debounced_old(i)(17 downto 6) );
@@ -447,18 +457,18 @@ begin
 
                 case state_serializer is
                     when polling =>
-                        -- logica per trovare tutte le occorrenze dentro a pending
+                        -- walk through all pending bits, one per clock
                         if active_tile(6 + pos_bit) = '1' then
                             keyboard_pending(pos_tile)(6 + pos_bit) <= '0';
 
-                            -- calcolo della coordinata assoluta del tasto premuto
+                            -- absolute coordinates of the key that changed
                             y <= resize( ( unsigned(active_tile(5 downto 3)) -1)*3 + DIV4_LUT(pos_bit), 8);
                             x <= resize( ( unsigned(active_tile(2 downto 0)) -1)*4 + MOD4_LUT(pos_bit) + unsigned(active_tile(5 downto 3)) -1, 8);
                             change_dir <= keyboard_debounced(pos_tile)(6 + pos_bit);
-                            state_serializer <= s0; -- inviamo i dati in MIDI
+                            state_serializer <= s0; -- send it over MIDI
                         end if;
 
-                        -- incremento degli indici
+                        -- advance the indices
                         if pos_bit < 11 then
                             pos_bit := pos_bit + 1;
                         else
@@ -471,10 +481,10 @@ begin
                         end if;
 
                     when s0 =>
-                        -- dobbiamo prendere le coordinate dentro a x e y e calcolare il pitch corrispondente.
-                        -- regole:  spostamento a sinistra di un tasto = -2 semitoni
-                        --          spostamento in alto di una riga = +7 semitoni
-                        -- possiamo quindi calcolare la differenza in semitoni dalla nota alle coordinate (0, 0)
+                        -- convert the (x, y) coordinates into a MIDI pitch.
+                        -- rules:  one key to the left  = -2 semitones
+                        --         one row up            = +7 semitones
+                        -- i.e. the offset in semitones from the note at (0, 0)
                         pitch <= resize( ref_pitch - 2*x + 7*y , 8);
 
                         if midi_busy = '0' then
@@ -535,10 +545,10 @@ begin
 
                 case state_midi is
                     when idle =>
-                        midi_busy <= '0';   -- unico stato in cui busy è basso
+                        midi_busy <= '0';   -- the only state where busy is low
                         if midi_start = '1' and midi_uart_ready = '1' then
                             state_midi <= a1;
-                            -- controlliamo la direzione del cambiamento e prepariamo data
+                            -- key pressed -> note on, released -> note off
                             if change_dir = '1' then
                                 midi_uart_data <= note_on;
                             else
@@ -570,7 +580,7 @@ begin
                             if change_dir = '1' then
                                 midi_uart_data <= velocity;
                             else
-                                midi_uart_data <= x"00"; -- se la nota si deve spegnere mettiamo velocity 0
+                                midi_uart_data <= x"00"; -- velocity 0 for note off
                             end if;
                         end if;
 
@@ -603,14 +613,3 @@ begin
 
 
 end behavioral;
-
-
-
-
-
-
-
-
-
-
-

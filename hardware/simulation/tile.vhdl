@@ -34,18 +34,18 @@ end tile;
 
 architecture rtl of tile is
 
-signal latch, clock, data : std_logic; -- sengnali principali
+signal latch, clock, data : std_logic; -- main signals
 signal nlatch : std_logic;
 
-signal ds_bridge : std_logic; -- sengale per connettere l'uscita seriale di SR2 a SR1
-signal ds_input : std_logic; -- ds in input dai moduli adiacenti
+signal ds_bridge : std_logic; -- serial output of SR2 into SR1
+signal ds_input : std_logic; -- serial input from the neighbouring tiles
 
-signal w_state : std_logic; -- stato dei buffer 3state
+signal w_state : std_logic; -- state of the 3-state buffers (W: chain from top or left)
 
-signal count_reg : unsigned(5 downto 0) := (others => '0'); -- contatore
+signal count_reg : unsigned(5 downto 0) := (others => '0'); -- counter
 signal count : std_logic_vector(5 downto 0);
 
-signal sr2_inputs : std_logic_vector(7 downto 0); -- Segnale di supporto
+signal sr2_inputs : std_logic_vector(7 downto 0); -- helper signal
 signal ffinput : std_logic;
 
 signal T_W_p, T_endcol_p, T_data_p, B_first_p, B_latch_p, B_clk_p, L_endrow_p, L_data_p, R_latch_p, R_clk_p : std_logic;
@@ -82,7 +82,7 @@ begin
 
   w_state <= T_W_p and B_first_p;
 
-  latch <= R_latch_p or B_latch_p;  -- il latch è come un reset quindi lo mettiamo in or
+  latch <= R_latch_p or B_latch_p;  -- the latch behaves like a reset, so the two sources are ORed
   ds_input <= T_data_p when to_x01(w_state) = '0' else L_data_p;
 
 

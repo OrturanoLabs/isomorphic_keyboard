@@ -1,29 +1,30 @@
-# Configurazione dei percorsi e dei file
-OSS_CAD_BIN = $(HOME)/Pacchetti/oss-cad-suite/bin
+# Paths and files
+OSS_CAD_SUITE ?=
+OSS_CAD_BIN = $(if $(OSS_CAD_SUITE),$(OSS_CAD_SUITE)/bin,$(patsubst %/yosys,%,$(shell command -v yosys)))
 DFU_UTIL    = $(OSS_CAD_BIN)/dfu-util
 
-# File del progetto
+# Project files
 TOP_ENTITY  = top
 PCF_FILE    = up5k.pcf
 
-# File del Testbench
+# Testbench files
 TB_ENTITY   = top_tb
 TB_FILE     = top_tb.vhd
 
-# questi file devono essere aggiunti solo in simulazione
+# these files are added only for simulation
 SIM_FILES   = $(wildcard *sim.vhd)
 
-# Prende AUTOMATICAMENTE tutti i file .vhd nella cartella...
+# Pick up ALL .vhd files in this folder...
 ALL_VHDL    = $(wildcard *.vhd)
 
-# ...e scarta sia il testbench che i file di simulazione per la sintesi!
+# ...but exclude the testbench and simulation-only files from synthesis!
 VHDL_FILES  = $(filter-out $(TB_FILE) $(SIM_FILES), $(ALL_VHDL))
 
-# ID e Seriale della pico-ice
+# pico-ice USB id and serial number
 USB_ID      = 1209:b1c0
 SERIAL_NUM  = DE64481247531337
 
-# File generati
+# Generated files
 JSON_FILE   = hardware.json
 ASC_FILE    = hardware.asc
 BIN_FILE    = hardware.bin
@@ -31,15 +32,15 @@ VCD_FILE    = wave.vcd
 
 GHDL_FLAGS  = -fsynopsys -fexplicit
 
-# Target principale
+# Default target
 all: $(BIN_FILE)
 
-# --- FLUSSO DI SINTESI HARWARE ---
+# --- SYNTHESIS FLOW ---
 
 $(JSON_FILE): $(VHDL_FILES)
-	# Rimuove la libreria GHDL per evitare conflitti con la simulazione
+	# Remove the GHDL library to avoid clashes with the simulation
 	ghdl --remove
-	# Sintesi con Yosys
+	# Synthesis with yosys
 	$(OSS_CAD_BIN)/yosys -m ghdl -p "ghdl $(GHDL_FLAGS) $(VHDL_FILES) -e $(TOP_ENTITY); synth_ice40 -json $(JSON_FILE)"
 
 $(ASC_FILE): $(JSON_FILE) $(PCF_FILE)
@@ -49,29 +50,29 @@ $(BIN_FILE): $(ASC_FILE)
 	$(OSS_CAD_BIN)/icepack $(ASC_FILE) $(BIN_FILE)
 
 upload-flash: $(BIN_FILE)
-	sudo $(DFU_UTIL) -d $(USB_ID) -S $(SERIAL_NUM) -a 0 -R -D $(BIN_FILE)
+	$(DFU_UTIL) -d $(USB_ID) -S $(SERIAL_NUM) -a 0 -R -D $(BIN_FILE)
 
 upload-ram: $(BIN_FILE)
-	sudo $(DFU_UTIL) -d $(USB_ID) -S $(SERIAL_NUM) -a 1 -D $(BIN_FILE)
+	$(DFU_UTIL) -d $(USB_ID) -S $(SERIAL_NUM) -a 1 -D $(BIN_FILE)
 
 
-# --- FLUSSO DI SIMULAZIONE ---
+# --- SIMULATION FLOW ---
 
-# Comando per lanciare la simulazione, generare le onde e aprire GTKWave
+# Run the simulation, write the waveform and open GTKWave
 sim: $(VHDL_FILES) $(TB_FILE)
-	# 1. Pulisce la vecchia libreria per non andare in conflitto con Yosys
+	# 1. Remove the old library so it does not clash with yosys
 	ghdl --remove
-	# 2. Importa tutti i file (incluso il testbench)
+	# 2. Import all files (testbench included)
 	ghdl -i $(GHDL_FLAGS) $(VHDL_FILES) $(TB_FILE) $(SIM_FILES)
-	# 3. Elabora il testbench
+	# 3. Elaborate the testbench
 	ghdl -m $(GHDL_FLAGS) $(TB_ENTITY)
-	# 4. Esegue con un limite di tempo sicuro (es. 5ms) e genera il VCD
+	# 4. Run with a safe time limit (e.g. 5 ms) and write the VCD
 	ghdl -r $(TB_ENTITY) --vcd=$(VCD_FILE) --stop-time=5ms
-	# 5. Apre automaticamente GTKWave
+	# 5. Open GTKWave
 	gtkwave $(VCD_FILE)
 
 
-# Pulizia totale
+# Full clean
 clean:
 	ghdl --remove
 	rm -f $(JSON_FILE) $(ASC_FILE) $(BIN_FILE) $(VCD_FILE) e~*.o work-obj*.cf

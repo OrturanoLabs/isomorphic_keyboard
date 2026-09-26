@@ -19,15 +19,15 @@ architecture sim of tile_tb_2 is
 
   signal clk_en : std_logic := '0';
 
-  -- sengali di collegamento fra 11 e 21
+  -- signals between tile 11 and tile 21
   signal W_11_21, endcol_11_21, first_11_21, latch_11_21, clock_11_21, data_11_21 : std_logic;
-  -- sengali di collegamento fra 11 e 12
+  -- signals between tile 11 and tile 12
   signal endrow_11_12, latch_11_12, clock_11_12, data_11_12 : std_logic;
-  -- sengali di collegamento fra 12 e 22
+  -- signals between tile 12 and tile 22
   signal W_12_22, endcol_12_22, first_12_22, latch_12_22, clock_12_22, data_12_22 : std_logic;
-  -- sengali di collegamento fra 22 e 32
+  -- signals between tile 22 and tile 32
   signal W_22_32, endcol_22_32, first_22_32, latch_22_32, clock_22_32, data_22_32 : std_logic;
-  -- sengali di collegamento fra 21 e 22
+  -- signals between tile 21 and tile 22
   signal endrow_21_22, latch_21_22, clock_21_22, data_21_22 : std_logic;
 
 
@@ -36,7 +36,7 @@ architecture sim of tile_tb_2 is
 
 begin
 
-    -- Istanza del tuo modulo
+    -- Tile instances
     uut11: entity work.tile
         port map (
             buttons => buttons11,
@@ -142,8 +142,8 @@ begin
 
 
 
-    -- Generatore di Clock (sulla linea R_clk)
-    clk_process : process  -- RIMOSSO (clk_en)
+    -- Clock generator (on the R_clk line)
+    clk_process : process  -- gated by clk_en
     begin
         while true loop
             if clk_en = '1' then
@@ -153,13 +153,13 @@ begin
                 wait for CLK_PERIOD/2;
             else
                 clk <= '0';
-                -- Fondamentale: se il clock è disabilitato, dobbiamo
-                -- aspettare che clk_en cambi, altrimenti il loop gira
-                -- all'infinito nello stesso istante di tempo (hang).
+                -- Important: when the clock is disabled we must
+                -- wait for clk_en to change, otherwise the loop spins
+                -- forever at the same simulation time (hang).
                 wait until clk_en = '1';
             end if;
         end loop;
-        wait; -- Ferma tutto dopo 500 ns
+        wait; -- stop everything
     end process;
 
 
@@ -168,7 +168,7 @@ begin
     begin
         if rising_edge(clk) then
             if latch = '0' then
-                -- shift a sinistra: il nuovo bit entra dalla posizione 0
+                -- shift left: the new bit enters at position 0
                 sr_controllo <= sr_controllo(94 downto 0) & data;
             end if;
         end if;
@@ -176,7 +176,7 @@ begin
 
 
 
-    -- Stimolo principale
+    -- Main stimulus
     stim_proc: process
     begin
 
@@ -186,7 +186,7 @@ begin
         buttons22 <= x"E11";
         buttons32 <= x"F55";
 
-        latch <= '1';  -- stato di reset
+        latch <= '1';  -- parallel load (latch)
         wait for 20 ns;
         latch <= '0'; -- shifting
         wait for 20 ns;
@@ -206,7 +206,7 @@ begin
         buttons22 <= x"FFF";
         buttons32 <= x"A34";
 
-        latch <= '1';  -- stato di reset
+        latch <= '1';  -- parallel load (latch)
         wait for 20 ns;
         latch <= '0'; -- shifting
         wait for 20 ns;
