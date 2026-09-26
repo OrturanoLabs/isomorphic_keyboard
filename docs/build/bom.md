@@ -30,3 +30,26 @@ symbol value disagreed with the ordered part (see [electrical](../architecture/e
 The rev-A PCB uses the KiCad `MSOP-8_3x3mm_P0.65mm` footprint for the DCT-package parts.
 Rev B will define fields for MPN, manufacturer and alternates on every symbol, and export
 the BOM with `kicad-cli` (see [assembly](assembly.md)).
+
+## Identifying the mounted logic parts
+
+Small packages carry a short marking code instead of the part name. The codes below come
+from the TI datasheets (package option addendum, fetched 2026-09-27). The marking may
+carry an extra date/lot character. Read it with a magnifier or a phone macro photo:
+
+- U101, U104, U107 and U109 are on the **bottom** of the logic board;
+- the other ICs are on the top, under the key board.
+
+| Ref | Ordered part (rev A) | Marking if ordered part | Marking if the symbol value was fitted instead |
+|---|---|---|---|
+| U101 | 74LVC2G126DCTRG4 | `C26` | 74AUC2G126: `U26` |
+| U102 | SN74LVC2G08IDCTRQ1 | automotive part, check its own datasheet | 74AUC2G08: `U08` |
+| U103, U104 | SN74LVC165ADR | `LVC165A` | 74HC165: `HC165` |
+| U105 | SN74LVC1G04DBVR | `C04` + one character | 74AHC1G04: `A04` + one character |
+| U106 | SN74LVC2G32DCTR | `C32` | – |
+| U107 | SN74LVC2G125DCTR | `C25` | 74AUC2G125: `U25` |
+| U108 | SN74LVC2G74DCTR | `C74` | – |
+| U109 | SN74HC161DR | `HC161` | 74LS161: `LS161` |
+
+A `U..` code (74AUC) on a 3.3 V tile is out of specification and must be replaced by the
+LVC equivalent, which has the same pinout.

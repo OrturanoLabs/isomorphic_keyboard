@@ -200,3 +200,15 @@ It sweeps the series resistor Rs at the driver.
   LVC datasheets (Δt/ΔV).
 - Only the controller → first-tile link was modelled. The tile → tile hops
   (U101/U107 → connector → neighbour) still need their own model.
+
+## 2026-09-27 — Which logic parts are mounted? (open)
+
+- The project owner does not know the chip markings, and they cannot be read from the
+  media: the videos are 474×850 and the ICs are hidden under the key board.
+- **Working assumption for rev B: the ordered parts** (74LVC family, SN74HC161; see
+  `hardware/fabrication/rev-a/bom.csv`). The rev-B schematic values will state these parts.
+  SI models use LVC/HC IBIS data.
+- A marking-code table was added to `docs/build/bom.md` so that anyone can check a built
+  tile in one minute. Update this entry once a tile has been checked.
+- Source: TI datasheets downloaded from `https://www.ti.com/lit/ds/symlink/<part>.pdf`.
+  `pdftotext -layout` is available on the host and extracts the "Device Marking" column.
