@@ -471,7 +471,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "tastiera_isomorfa.kicad_pro",
+    "filename": "isomorphic_tile.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -511,10 +511,10 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "tastiera_isomorfa.net",
+      "netlist": "isomorphic_tile.net",
       "plot": "gerbers/",
       "pos_files": "",
-      "specctra_dsn": "tastiera_isomorfa.dsn",
+      "specctra_dsn": "isomorphic_tile.dsn",
       "step": "",
       "svg": "",
       "vrml": ""

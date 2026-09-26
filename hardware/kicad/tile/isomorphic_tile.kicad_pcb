@@ -2855,7 +2855,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/30a70587-da55-4e72-9f54-34b2e7ffa2eb")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.46 -0.36)
@@ -10428,7 +10428,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/aec82640-ddea-49b7-8364-caf3a8b2a6e9")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.27 -1.27)
@@ -12377,7 +12377,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/cde7fd2a-498d-42e1-a430-1595b9786a13")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 1.27)
@@ -13227,7 +13227,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/2724d650-7035-40f8-8a76-8c0023d626fe")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 1.27)
@@ -16129,7 +16129,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/0ca6a410-3256-41b0-b156-bc6fc9fe8f39")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.46 18.14)
@@ -17390,7 +17390,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/fdf231d3-cd82-40f9-b5fe-c4c175730643")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.077358 18.21)
@@ -20453,7 +20453,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/3d94b823-c235-4bf6-9808-07e8e3c5a8ed")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.38 -1.27)
@@ -21975,7 +21975,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/9b60b667-8a8f-43b0-b745-c49e04a94fdf")
 		(sheetname "/")
-		(sheetfile "tastiera_isomorfa.kicad_sch")
+		(sheetfile "isomorphic_tile.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.38 -1.27)

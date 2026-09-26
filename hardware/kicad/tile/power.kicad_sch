@@ -2226,7 +2226,7 @@
 			(uuid "aa3913c6-d4a0-44bc-a460-dcd7fbac71cd")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "#PWR0145")
 					(unit 1)
@@ -2292,7 +2292,7 @@
 			(uuid "b78c1222-85ab-4163-8c34-d5dbfd4cc709")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "#PWR0142")
 					(unit 1)
@@ -2398,7 +2398,7 @@
 			(uuid "01a43c9e-f09c-4c7f-b30d-f229079e4777")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "U101")
 					(unit 3)
@@ -2592,7 +2592,7 @@
 			(uuid "d5f8e183-275e-437e-8860-080274d60871")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "U102")
 					(unit 3)
@@ -2698,7 +2698,7 @@
 			(uuid "89e6ef1e-314f-427e-bb06-3f6ef8f121d8")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "U107")
 					(unit 3)
@@ -2764,7 +2764,7 @@
 			(uuid "419d075c-4ec6-4c25-833b-0c5e4955c24d")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "#PWR0144")
 					(unit 1)
@@ -2852,7 +2852,7 @@
 			(uuid "e0e5795a-a6d0-4aad-a0cb-32fd5f0b9457")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "C102")
 					(unit 1)
@@ -3006,7 +3006,7 @@
 			(uuid "4f9774b8-e24e-4fa7-b9b8-dfaa5b648b9a")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "#PWR0143")
 					(unit 1)
@@ -3094,7 +3094,7 @@
 			(uuid "4bd0bcaa-6604-4462-b426-b7a5068e2aa6")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "C101")
 					(unit 1)
@@ -3288,7 +3288,7 @@
 			(uuid "f2a1310f-dd09-4f29-af60-8a819ed77e69")
 		)
 		(instances
-			(project "tastiera_isomorfa"
+			(project "isomorphic_tile"
 				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf"
 					(reference "U106")
 					(unit 3)

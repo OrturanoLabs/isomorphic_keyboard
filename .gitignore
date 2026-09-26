@@ -29,3 +29,7 @@ __pycache__/
 
 # --- Raw media dropped from phones (curate into docs/media/ instead) ---
 WhatsApp*
+
+# Experiment builds write next to their sources
+firmware/experiments/*/hardware.*
+firmware/experiments/*/wave.*
