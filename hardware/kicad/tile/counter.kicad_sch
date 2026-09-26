@@ -2466,7 +2466,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 110.49 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2499,7 +2499,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC2G32DCTR"
+		(property "Manufacturer" "Texas Instruments"
 			(at 110.49 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2510,7 +2510,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC2G32DCTR/484828"
+		(property "MPN" "SN74LVC2G32DCTR"
 			(at 110.49 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2666,7 +2666,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 66.04 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2699,7 +2699,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC2G74DCTR"
+		(property "Manufacturer" "Texas Instruments"
 			(at 66.04 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2710,7 +2710,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC2G74DCTR/484721"
+		(property "MPN" "SN74LVC2G74DCTR"
 			(at 66.04 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2777,7 +2777,7 @@
 				)
 			)
 		)
-		(property "Value" "74AUC2G08"
+		(property "Value" "74LVC2G08"
 			(at 157.4911 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2787,7 +2787,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 156.21 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2820,7 +2820,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC2G08IDCTRQ1"
+		(property "Manufacturer" "Texas Instruments"
 			(at 156.21 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2831,7 +2831,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC2G08IDCTRQ1/1592267"
+		(property "MPN" "SN74LVC2G08DCTR"
 			(at 156.21 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2978,7 +2978,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LS161"
+		(property "Value" "74HC161"
 			(at 193.4367 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3022,7 +3022,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74HC161DR"
+		(property "Manufacturer" "Texas Instruments"
 			(at 195.58 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -3033,7 +3033,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74HC161DR/562878"
+		(property "MPN" "SN74HC161DR"
 			(at 195.58 109.22 0)
 			(hide yes)
 			(show_name no)

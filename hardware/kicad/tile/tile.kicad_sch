@@ -4198,27 +4198,27 @@
 		)
 		(uuid "01f57ccb-03c1-4cda-b007-17e8b276c43d")
 	)
-	(hierarchical_label "L_latch"
-		(shape output)
+	(label "latch_drv"
 		(at 40.64 187.96 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "07c15cfc-f107-4ba9-a8b0-773cc3c0368e")
+		(uuid "5ef098a3-f9b2-4abd-829a-84c9712f24b5")
 	)
-	(hierarchical_label "B_data"
-		(shape output)
+	(label "data_drv"
 		(at 309.88 238.76 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "34d17611-d605-46c5-a016-6817c4cf5208")
+		(uuid "06759e9c-c117-4f62-9814-4dcd81d0b71f")
 	)
 	(hierarchical_label "T_data"
 		(shape input)
@@ -4242,16 +4242,16 @@
 		)
 		(uuid "5827ab3d-fbbd-49ed-9163-b09ea9ed947f")
 	)
-	(hierarchical_label "T_clk"
-		(shape output)
+	(label "T_clk_drv"
 		(at 295.91 34.29 90)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
-		(uuid "5b019a3d-b9f7-4808-80ff-224d6a3f1647")
+		(uuid "b15a0549-b9dc-49be-8192-338a27e4c64c")
 	)
 	(hierarchical_label "L_endrow"
 		(shape input)
@@ -4330,27 +4330,27 @@
 		)
 		(uuid "cb3ce95f-fefa-4cdf-9ac9-ec43d217fe75")
 	)
-	(hierarchical_label "L_clk"
-		(shape output)
+	(label "L_clk_drv"
 		(at 40.64 151.13 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "cceab7f8-7b39-4d98-a658-17bef7e1e154")
+		(uuid "5dd2e835-3b29-452b-be6e-1e15e3bc9e3f")
 	)
-	(hierarchical_label "B_W"
-		(shape output)
+	(label "B_W_drv"
 		(at 111.76 238.76 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "d04658fc-e3b6-463d-9e1c-37326026a4d5")
+		(uuid "9986fd61-3367-4719-ab3d-58dd264b39d2")
 	)
 	(hierarchical_label "T_first"
 		(shape output)
@@ -4363,16 +4363,16 @@
 		)
 		(uuid "d998b0cd-2e09-48b5-a864-5afbd448c23f")
 	)
-	(hierarchical_label "T_latch"
-		(shape output)
+	(label "latch_drv"
 		(at 285.75 34.29 90)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
-		(uuid "e70577a7-aec8-4f79-b3be-ab70082768d5")
+		(uuid "4be18857-3972-46bc-99e7-de7cde56e7cc")
 	)
 	(hierarchical_label "T_endcol"
 		(shape input)
@@ -4396,16 +4396,16 @@
 		)
 		(uuid "ee1f0f20-23b0-4584-9f22-03365409017c")
 	)
-	(hierarchical_label "R_data"
-		(shape output)
+	(label "data_drv"
 		(at 346.71 162.56 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
-		(uuid "f02c7e2a-9ceb-4c0f-9d4a-a70e949d6713")
+		(uuid "498991a2-197a-4cd7-9867-76a89ac5a5ef")
 	)
 	(hierarchical_label "R_clk"
 		(shape input)
@@ -4530,7 +4530,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 260.35 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -4563,8 +4563,8 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC2G32DCTR"
-			(at 260.35 200.66 90)
+		(property "Manufacturer" "Texas Instruments"
+			(at 260.35 200.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4574,7 +4574,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC2G32DCTR/484828"
+		(property "MPN" "SN74LVC2G32DCTR"
 			(at 260.35 200.66 90)
 			(hide yes)
 			(show_name no)
@@ -4796,7 +4796,7 @@
 				)
 			)
 		)
-		(property "Value" "74HC165"
+		(property "Value" "74LVC165A"
 			(at 243.84 106.172 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4839,8 +4839,8 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC165ADR"
-			(at 243.84 104.14 90)
+		(property "Manufacturer" "Texas Instruments"
+			(at 243.84 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4850,7 +4850,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC165ADR/26490310"
+		(property "MPN" "SN74LVC165ADR"
 			(at 243.84 104.14 90)
 			(hide yes)
 			(show_name no)
@@ -5030,7 +5030,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 139.192 50.8 90)
 			(hide yes)
 			(show_name no)
@@ -5063,7 +5063,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 140.97 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -5074,7 +5074,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 140.97 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -5278,7 +5278,7 @@
 				)
 			)
 		)
-		(property "Value" "74AHC1G04"
+		(property "Value" "74LVC1G04"
 			(at 274.32 171.0846 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5288,7 +5288,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5_HandSoldering"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 			(at 260.35 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -5321,8 +5321,8 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC1G04DBVR"
-			(at 260.35 168.91 90)
+		(property "Manufacturer" "Texas Instruments"
+			(at 260.35 168.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5332,7 +5332,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC1G04DBVR/385716"
+		(property "MPN" "SN74LVC1G04DBVR"
 			(at 260.35 168.91 90)
 			(hide yes)
 			(show_name no)
@@ -5398,7 +5398,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 235.712 228.6 90)
 			(hide yes)
 			(show_name no)
@@ -5431,7 +5431,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 237.49 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -5442,7 +5442,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 237.49 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -5502,7 +5502,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 325.882 143.51 90)
 			(hide yes)
 			(show_name no)
@@ -5535,7 +5535,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 327.66 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -5546,7 +5546,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 327.66 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -5750,7 +5750,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74AUC2G08"
+		(property "Value" "74LVC2G08"
 			(at 116.586 102.108 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5761,7 +5761,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 109.22 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -5794,7 +5794,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC2G08IDCTRQ1"
+		(property "Manufacturer" "Texas Instruments"
 			(at 109.22 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -5805,7 +5805,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC2G08IDCTRQ1/1592267"
+		(property "MPN" "SN74LVC2G08DCTR"
 			(at 109.22 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -5883,7 +5883,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 247.142 228.6 90)
 			(hide yes)
 			(show_name no)
@@ -5916,7 +5916,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 248.92 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -5927,7 +5927,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 248.92 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -5987,7 +5987,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 42.672 200.66 90)
 			(hide yes)
 			(show_name no)
@@ -6020,7 +6020,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 44.45 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -6031,7 +6031,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 44.45 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -6559,7 +6559,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 324.612 46.99 90)
 			(hide yes)
 			(show_name no)
@@ -6592,7 +6592,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 326.39 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -6603,7 +6603,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 326.39 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -6663,7 +6663,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 115.062 50.8 90)
 			(hide yes)
 			(show_name no)
@@ -6696,7 +6696,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 116.84 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6707,7 +6707,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 116.84 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6845,7 +6845,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 61.722 67.31 90)
 			(hide yes)
 			(show_name no)
@@ -6878,7 +6878,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 63.5 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -6889,7 +6889,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 63.5 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -6937,7 +6937,7 @@
 				)
 			)
 		)
-		(property "Value" "74HC165"
+		(property "Value" "74LVC165A"
 			(at 170.18 106.172 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6980,8 +6980,8 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC165ADR"
-			(at 170.18 104.14 90)
+		(property "Manufacturer" "Texas Instruments"
+			(at 170.18 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6991,7 +6991,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC165ADR/26490310"
+		(property "MPN" "SN74LVC165ADR"
 			(at 170.18 104.14 90)
 			(hide yes)
 			(show_name no)
@@ -7093,7 +7093,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 87.122 222.25 90)
 			(hide yes)
 			(show_name no)
@@ -7126,7 +7126,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0805FT10K0"
+		(property "Manufacturer" "Yageo"
 			(at 88.9 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -7137,7 +7137,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/stackpole-electronics-inc/RMCF0805FT10K0/1760676"
+		(property "MPN" "RC0603FR-0710KL"
 			(at 88.9 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -7186,7 +7186,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "74AUC2G125"
+		(property "Value" "74LVC2G125"
 			(at 290.576 64.262 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7197,7 +7197,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 295.91 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -7230,7 +7230,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC2G125DCTR"
+		(property "Manufacturer" "Texas Instruments"
 			(at 295.91 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -7241,7 +7241,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC2G125DCTR/412008"
+		(property "MPN" "SN74LVC2G125DCTR"
 			(at 295.91 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -7462,7 +7462,7 @@
 				)
 			)
 		)
-		(property "Value" "74AUC2G126"
+		(property "Value" "74LVC2G126"
 			(at 63.5 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7472,7 +7472,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 62.23 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -7505,7 +7505,7 @@
 				)
 			)
 		)
-		(property "MPN" "74LVC2G126DCTRG4"
+		(property "Manufacturer" "Texas Instruments"
 			(at 62.23 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -7516,7 +7516,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/74LVC2G126DCTRG4/2047054"
+		(property "MPN" "SN74LVC2G126DCTR"
 			(at 62.23 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -7659,7 +7659,7 @@
 				)
 			)
 		)
-		(property "Value" "74AUC2G126"
+		(property "Value" "74LVC2G126"
 			(at 78.994 145.542 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7669,7 +7669,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 81.28 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -7702,7 +7702,7 @@
 				)
 			)
 		)
-		(property "MPN" "74LVC2G126DCTRG4"
+		(property "Manufacturer" "Texas Instruments"
 			(at 81.28 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -7713,7 +7713,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/74LVC2G126DCTRG4/2047054"
+		(property "MPN" "SN74LVC2G126DCTR"
 			(at 81.28 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -7858,7 +7858,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "74AUC2G125"
+		(property "Value" "74LVC2G125"
 			(at 315.722 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7869,7 +7869,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
 			(at 309.88 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -7902,7 +7902,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC2G125DCTR"
+		(property "Manufacturer" "Texas Instruments"
 			(at 309.88 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -7913,7 +7913,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.digikey.it/it/products/detail/texas-instruments/SN74LVC2G125DCTR/412008"
+		(property "MPN" "SN74LVC2G125DCTR"
 			(at 309.88 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -8088,5 +8088,898 @@
 				)
 			)
 		)
+	)
+	(text "Rev B: series source termination (33 ohm) on every driver leaving the tile.\nSI analysis: hardware/si/, docs/architecture/electrical.md"
+		(exclude_from_sim no)
+		(at 38.1 259.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b74bf8d8-51d1-4738-b0c8-7827474f6d57")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 40.64 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "505454fc-b5b2-4ebc-b2d6-3863afa6f70f")
+		(property "Reference" "R201"
+			(at 43.18 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33"
+			(at 43.18 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 40.64 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 40.64 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 40.64 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0733RL"
+			(at 40.64 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc3aa1d0-efd4-456b-bc38-521af6dfa971")
+		)
+		(pin "2"
+			(uuid "bc855ff1-4778-4a1c-b524-56341d067b28")
+		)
+		(instances
+			(project "isomorphic_tile"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5"
+					(reference "R201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "L_clk_drv"
+		(at 40.64 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "581ac6f6-e5eb-47e5-a631-86e7bd97e231")
+	)
+	(hierarchical_label "L_clk"
+		(shape output)
+		(at 40.64 275.59 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2cc9299f-2550-48f3-b81e-a67741cf86fd")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 71.12 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4fed5a55-537e-4e26-bf05-dd17432090b4")
+		(property "Reference" "R202"
+			(at 73.66 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33"
+			(at 73.66 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 71.12 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 71.12 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 71.12 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0733RL"
+			(at 71.12 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ce332d69-4def-4425-a278-0917c5aa53a0")
+		)
+		(pin "2"
+			(uuid "0d6014ab-bb16-4c6d-a62c-7f1a8922a963")
+		)
+		(instances
+			(project "isomorphic_tile"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5"
+					(reference "R202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "T_clk_drv"
+		(at 71.12 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8149b13-c843-46ef-8f94-a863d81a39a8")
+	)
+	(hierarchical_label "T_clk"
+		(shape output)
+		(at 71.12 275.59 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "66b4e21f-3875-4a47-835c-f9f108dfb614")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 101.6 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5104449c-9e4e-4732-9d06-a4f1741bbd34")
+		(property "Reference" "R203"
+			(at 104.14 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33"
+			(at 104.14 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 101.6 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 101.6 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 101.6 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0733RL"
+			(at 101.6 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "13c465d8-2a3a-40c4-b7c5-91c93ad0e451")
+		)
+		(pin "2"
+			(uuid "16aecae7-6845-425a-b1db-0955aad9fd57")
+		)
+		(instances
+			(project "isomorphic_tile"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5"
+					(reference "R203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "latch_drv"
+		(at 101.6 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8683b698-00a2-4a32-8505-bc28798ad1a7")
+	)
+	(hierarchical_label "L_latch"
+		(shape output)
+		(at 101.6 275.59 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "52d178de-bdf9-4ac3-8126-840f8c689d47")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 132.08 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f8d5eaa6-74c5-42f8-9db4-08bdd86523e6")
+		(property "Reference" "R204"
+			(at 134.62 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33"
+			(at 134.62 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 132.08 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 132.08 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 132.08 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0733RL"
+			(at 132.08 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "329151e3-4ec8-4fd5-8620-428e9dcb7912")
+		)
+		(pin "2"
+			(uuid "ddf42e49-5cda-4e75-922b-d75a57d7d13f")
+		)
+		(instances
+			(project "isomorphic_tile"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5"
+					(reference "R204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "latch_drv"
+		(at 132.08 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e6b3bd7e-c564-4f1b-8b89-7a84a7d2af86")
+	)
+	(hierarchical_label "T_latch"
+		(shape output)
+		(at 132.08 275.59 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "297d6bb4-e7b6-4894-9e1a-8f15b3917482")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 162.56 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6deeb912-b84e-426f-b251-bff7e4a6d8a3")
+		(property "Reference" "R205"
+			(at 165.1 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33"
+			(at 165.1 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 162.56 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 162.56 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 162.56 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0733RL"
+			(at 162.56 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d9962a52-5b8a-40d5-b984-100d2a459bdc")
+		)
+		(pin "2"
+			(uuid "7d2b90cc-359c-4b25-9a1d-f94c926d3e6e")
+		)
+		(instances
+			(project "isomorphic_tile"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5"
+					(reference "R205")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "data_drv"
+		(at 162.56 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "77810966-b2fa-4fac-b718-3cc5da85f228")
+	)
+	(hierarchical_label "B_data"
+		(shape output)
+		(at 162.56 275.59 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "caf356d7-6578-4ae6-ac1e-cb722bdf1b49")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 193.04 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd03d969-c64f-4a84-81f3-bde43ffe2a8e")
+		(property "Reference" "R206"
+			(at 195.58 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33"
+			(at 195.58 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 193.04 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 193.04 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 193.04 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0733RL"
+			(at 193.04 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "33a7deb8-4708-4542-9da0-c3b1e0cbbb97")
+		)
+		(pin "2"
+			(uuid "54f9df8a-682a-43ef-bec6-e8065ac018c9")
+		)
+		(instances
+			(project "isomorphic_tile"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5"
+					(reference "R206")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "data_drv"
+		(at 193.04 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "330d5869-fdf5-4ff9-a414-309bdc41526a")
+	)
+	(hierarchical_label "R_data"
+		(shape output)
+		(at 193.04 275.59 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e39716c1-1ce9-4057-81eb-6352476b7f85")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 223.52 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21187ea5-d013-44d7-b23d-0c5cdb17765c")
+		(property "Reference" "R207"
+			(at 226.06 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33"
+			(at 226.06 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 223.52 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 223.52 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 223.52 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0733RL"
+			(at 223.52 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "daf4e9dc-2d92-4065-b5b6-b6d911040bf8")
+		)
+		(pin "2"
+			(uuid "8756de97-d592-4eb2-b9e6-948029a6b3c9")
+		)
+		(instances
+			(project "isomorphic_tile"
+				(path "/2a6329ec-b0e8-4012-8f5a-476608b8b2cc/07e251ec-a89a-41e0-b307-1d6ec78f24c5"
+					(reference "R207")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "B_W_drv"
+		(at 223.52 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "65e5317a-1c01-44c7-910d-cd39beda9818")
+	)
+	(hierarchical_label "B_W"
+		(shape output)
+		(at 223.52 275.59 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "beb30645-4fa5-4781-b775-c7b51dcd78cd")
 	)
 )
