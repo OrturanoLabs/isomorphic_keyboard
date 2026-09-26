@@ -158,3 +158,45 @@ tile netlist is identical to rev A.
   whitespace-agnostic (`check_invariants.py` initially found 0 nets).
 - Always run a negative test of a checker (move one switch by 0.04 mm, swap one pin) to
   prove that it can fail.
+
+## 2026-09-26 — First SPICE model of the board clock (preliminary)
+
+**Goal:** check whether simulation can show, before fabrication, that rev B is better.
+
+**What was done:** built the ngspice container (`tools/containers/ngspice`, ngspice 44.2)
+and wrote `hardware/si/clock_link.py`. The model uses generic parameters:
+
+- pico-ice driver: 20 Ω, 1.5 ns edges;
+- 20 cm dupont wire: 200 Ω T-line plus 150 nH of return inductance;
+- 70 mm tile track: 100 Ω;
+- 30 pF of lumped load.
+
+It sweeps the series resistor Rs at the driver.
+
+**Result (at the tile inputs)**
+
+| Rs | Overshoot | Undershoot | Rise 10–90 % | Falling edge rings back above VIL (0.8 V)? |
+|---|---|---|---|---|
+| 0 Ω (rev A) | 72 % | −2.4 V | 3.7 ns | **yes, twice (up to 1.7 V) → risk of double clocking** |
+| 33 Ω | 40 % | −1.3 V | 4.4 ns | no |
+| 68 Ω | 19 % | −0.6 V | 5.3 ns | no |
+| 150 Ω | 0 % | +0.05 V | 9.9 ns | no |
+
+- The model rings at about 22 MHz, like the scope (20–30 MHz). The amplitude, however,
+  is larger than measured: 72 % vs about 40 %.
+- Missing from the model: the input ESD clamp diodes, which limit the undershoot to about
+  −0.5 V; conductor and dielectric losses; and the AD2 bandwidth (about 30 MHz, which
+  attenuates the peaks).
+
+**Lesson**
+
+- Plain T-lines plus ideal loads over-predict the ringing. Use **IBIS models** of the
+  actual parts: TI publishes them for the LVC parts, and the iCE40UP5K model is published
+  by Lattice. ngspice/KiCad can use them through KiCad's KIBIS converter.
+- Calibrate the model against a clean measurement first (spring ground tip); only then
+  compare the rev-B options.
+- The scan clock is slow (≈350 kHz), so slowing the edges (Rs ≈ 68–150 Ω into the load
+  capacitance) costs nothing in timing. Check the input transition-rate limit in the
+  LVC datasheets (Δt/ΔV).
+- Only the controller → first-tile link was modelled. The tile → tile hops
+  (U101/U107 → connector → neighbour) still need their own model.
