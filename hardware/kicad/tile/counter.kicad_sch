@@ -2375,7 +2375,7 @@
 				(hide yes)
 			)
 		)
-		(property "Codice" "SN74LVC2G32DCTR"
+		(property "MPN" "SN74LVC2G32DCTR"
 			(at 110.49 96.52 0)
 			(effects
 				(font
@@ -2547,7 +2547,7 @@
 				(hide yes)
 			)
 		)
-		(property "Codice" "SN74LVC2G74DCTR"
+		(property "MPN" "SN74LVC2G74DCTR"
 			(at 66.04 93.98 0)
 			(effects
 				(font
@@ -2652,7 +2652,7 @@
 				(hide yes)
 			)
 		)
-		(property "Codice" "SN74LVC2G08IDCTRQ1"
+		(property "MPN" "SN74LVC2G08IDCTRQ1"
 			(at 156.21 93.98 0)
 			(effects
 				(font
@@ -2826,7 +2826,7 @@
 				(hide yes)
 			)
 		)
-		(property "Codice" "SN74HC161DR"
+		(property "MPN" "SN74HC161DR"
 			(at 195.58 109.22 0)
 			(effects
 				(font

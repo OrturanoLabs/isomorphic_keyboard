@@ -147,7 +147,7 @@
 	(net 66 "/tile/T_clk")
 	(net 67 "GND_T")
 	(net 68 "VCC_T")
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "031075b2-c1b1-4c17-bd68-d3ad2a9fc913")
 		(at 167.9 95.75)
@@ -215,7 +215,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "07fe5e8f-b848-46d6-9095-40d957323993")
 		(at 169.5 95.75)
@@ -283,7 +283,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "0a8eb820-c7ff-484f-a708-57c26637fe0f")
 		(at 121.3 95.75)
@@ -351,7 +351,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "0ad97243-f017-4634-bbec-2acfb69f3e63")
 		(at 172.9 109)
@@ -419,7 +419,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "0fa276b7-9c58-4385-9b0c-3364eac2450a")
 		(at 170.3 95.75)
@@ -487,7 +487,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "1064b5e7-2379-4e6e-8c0b-1b2c7e82e936")
 		(at 172.1 109)
@@ -555,7 +555,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "11262cf1-a5f6-4e2f-ab7c-52469f1dc89e")
 		(at 123.7 95.75)
@@ -822,7 +822,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "14a0270b-bc65-4cd2-97dc-1a9b8f4a39f3")
 		(at 126.1 95.75)
@@ -890,7 +890,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "17db5f8f-0afd-49bd-8e2e-a5862983ba18")
 		(at 124.5 95.75)
@@ -958,7 +958,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "1b244ce7-dc67-4c0c-8332-7b82a5add31a")
 		(at 131 109)
@@ -1026,7 +1026,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "1d29d8a3-e316-42e1-a333-feab5975eb00")
 		(at 159.9 95.75)
@@ -1727,7 +1727,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "2d4a511b-ad43-4269-bf77-80b92eb6bdcf")
 		(at 128.5 95.75)
@@ -1795,7 +1795,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "2f2e0978-1260-4405-b447-73dd5660a408")
 		(at 164.7 95.75)
@@ -2062,7 +2062,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "32ec8786-e322-46bf-b9b8-b4c68c942cf8")
 		(at 163.9 95.75)
@@ -2130,7 +2130,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "34312996-4061-4bb0-ad36-99c0eb33f3b4")
 		(at 127.7 95.75)
@@ -2198,7 +2198,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "394b2a92-29e0-43c2-aa33-535c5b4a1563")
 		(at 125.3 95.75)
@@ -2266,7 +2266,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "395a9d69-22d1-42d9-bea7-9c63f4b1fe0c")
 		(at 122.1 95.75)
@@ -2533,7 +2533,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "3b9002bc-857f-45ab-9081-22e6f0254333")
 		(at 162.5 109)
@@ -3296,7 +3296,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "4567b16a-474b-4aae-86c5-1b71e9dd5ba7")
 		(at 168.9 109)
@@ -3747,7 +3747,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "49d046b2-50f2-4760-80e5-41f270a0c543")
 		(at 165.7 109)
@@ -3815,7 +3815,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "4a961bdd-9223-434d-b0ce-f843745cb394")
 		(at 118.9 95.75)
@@ -4082,7 +4082,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "4c7f2e11-3e8e-4f67-95d7-db80a894df41")
 		(at 126.2 109)
@@ -4925,7 +4925,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "517bd2d4-a8f3-454a-8e19-cc73ecf062c2")
 		(at 160.1 109)
@@ -4993,7 +4993,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "52eb8df8-1bc7-489b-997c-47dc7d16a73e")
 		(at 127 109)
@@ -5061,7 +5061,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "5473e0db-cc93-4d2f-863d-3f61c61543f2")
 		(at 129.3 95.75)
@@ -5364,7 +5364,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "58594d69-cdc0-4298-9313-157034242e75")
 		(at 166.3 95.75)
@@ -5432,7 +5432,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "5a10d45a-fdf0-4e5d-8289-3443cc7c9ee9")
 		(at 123.8 109)
@@ -5500,7 +5500,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "5a20d220-a3cf-419f-867c-fb17dd943c6a")
 		(at 121.4 109)
@@ -5568,7 +5568,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "5a256f45-e900-414e-af2d-477fe60544d3")
 		(at 171.3 109)
@@ -5636,7 +5636,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "5adcc67d-1716-4af3-a92d-f4904f812188")
 		(at 168.1 109)
@@ -5704,7 +5704,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "5f4adaf8-907d-4965-9dc9-fb552b6eb7a5")
 		(at 119.7 95.75)
@@ -6007,7 +6007,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "661b2c62-b523-47d2-a3fb-403179c6d286")
 		(at 131.8 109)
@@ -6274,7 +6274,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "72e9dc0c-24b1-436e-bf9f-897de47b5c8e")
 		(at 171.1 95.75)
@@ -6541,7 +6541,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "7782cbbb-41e7-4063-907b-be9c5e828bef")
 		(at 167.3 109)
@@ -6609,7 +6609,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "780c8507-975b-4adf-ba49-e92424a4555b")
 		(at 122.2 109)
@@ -6876,7 +6876,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "7bf5c4e6-686c-4b03-965a-b3555c97e959")
 		(at 119.8 109)
@@ -6944,7 +6944,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "7e7ac01b-3749-46bb-9c8d-2096b3f6198d")
 		(at 166.5 109)
@@ -7012,7 +7012,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "80e20684-f847-4d62-9beb-97cef2936409")
 		(at 129.4 109)
@@ -7279,7 +7279,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "8a6581b6-b005-4fd8-8037-4b2c7e17755d")
 		(at 123 109)
@@ -7817,7 +7817,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "92505d76-d397-4467-af67-d196a2397b27")
 		(at 124.6 109)
@@ -8120,7 +8120,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "9aa5f9ef-48ce-4e04-b10e-17ea88517335")
 		(at 164.1 109)
@@ -8188,7 +8188,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "9aec9231-0035-4722-a556-2dc1ebe6f746")
 		(at 162.3 95.75)
@@ -8455,7 +8455,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "9f23f076-6e74-45e6-8807-026ea9029357")
 		(at 165.5 95.75)
@@ -8523,7 +8523,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "a0059bfa-b97d-4a8a-91fb-2967ddfd7617")
 		(at 126.9 95.75)
@@ -8591,7 +8591,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "a02bf744-53f7-4beb-83e1-a41cf6d49ed4")
 		(at 120.6 109)
@@ -8858,7 +8858,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "a95e9072-b0a0-430b-8dad-80c778a57a0e")
 		(at 160.7 95.75)
@@ -9421,7 +9421,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "aaff7a91-1d7c-4e91-a106-475f63cd2e3a")
 		(at 161.7 109)
@@ -9866,7 +9866,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "b4fe323f-0f7e-4996-a988-6cf03d30e384")
 		(at 172.7 95.75)
@@ -9934,7 +9934,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "b521b622-f793-40cc-a84a-5dbed7954845")
 		(at 125.4 109)
@@ -10002,7 +10002,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "b58407c4-7f50-4561-adaf-980326d44ce7")
 		(at 167.1 95.75)
@@ -10070,7 +10070,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "b791c2ee-81dd-492f-8aea-37b1366a7503")
 		(at 171.9 95.75)
@@ -10879,7 +10879,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "bfb4696c-7ee9-4e1f-825d-d2fb816c2eeb")
 		(at 170.5 109)
@@ -11182,7 +11182,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "c0fae90f-43dd-4d93-bb0e-285ad67a57af")
 		(at 131.7 95.75)
@@ -11250,7 +11250,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "c16b0290-101e-42d2-a810-1b98de5c6c66")
 		(at 120.5 95.75)
@@ -11987,7 +11987,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "caec40fb-bcf7-4270-b6fc-e87bc33ea10e")
 		(at 164.9 109)
@@ -12055,7 +12055,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "cc3c452e-97ae-4e6c-a7fe-b5de6d4e3d86")
 		(at 169.7 109)
@@ -13104,7 +13104,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "d40abed0-7c2b-49b1-b0fb-e5d8bba4cb28")
 		(at 127.8 109)
@@ -15006,7 +15006,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "da118e32-b2d4-40ec-90f7-7355d6582c70")
 		(at 122.9 95.75)
@@ -15273,7 +15273,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "dec626b9-08cb-40c4-aecb-fa74ef323a98")
 		(at 119 109)
@@ -15341,7 +15341,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "e1f925d0-ce67-4c6b-a0ad-b861b5eef02a")
 		(at 130.2 109)
@@ -15608,7 +15608,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "e58a607c-940e-43eb-9528-4f24a4f2d942")
 		(at 130.1 95.75)
@@ -16692,7 +16692,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "ecf4f9b8-31c6-4df2-a1c6-8ea63ca61944")
 		(at 130.9 95.75)
@@ -16760,7 +16760,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "edff43a8-c010-443b-8b85-aab85e24bc22")
 		(at 163.1 95.75)
@@ -16828,7 +16828,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "eed243e1-ce52-4c0d-9024-63a883da8fdf")
 		(at 128.6 109)
@@ -16896,7 +16896,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "ef7c50d2-01a7-4a70-adfd-ed2a35af7fd8")
 		(at 168.7 95.75)
@@ -16964,7 +16964,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "f030c300-4d34-428d-acc2-8083597d198f")
 		(at 163.3 109)
@@ -17032,7 +17032,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "f3faa393-762f-4eb7-a492-47222ff579a9")
 		(at 160.9 109)
@@ -17963,7 +17963,7 @@
 			)
 		)
 	)
-	(footprint "Senza-titolo"
+	(footprint "MouseBite_NPTH_0.5mm"
 		(layer "F.Cu")
 		(uuid "ff2f740d-63b5-42b8-8cbc-6369791d5961")
 		(at 161.5 95.75)

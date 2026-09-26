@@ -600,8 +600,8 @@
         },
         {
           "group_by": false,
-          "label": "Codice",
-          "name": "Codice",
+          "label": "MPN",
+          "name": "MPN",
           "show": true
         },
         {
