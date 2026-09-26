@@ -212,3 +212,49 @@ It sweeps the series resistor Rs at the driver.
   tile in one minute. Update this entry once a tile has been checked.
 - Source: TI datasheets downloaded from `https://www.ti.com/lit/ds/symlink/<part>.pdf`.
   `pdftotext -layout` is available on the host and extracts the "Device Marking" column.
+
+## 2026-09-27 — KiCad 10 migration and SI models with input clamps
+
+- **Migration:** `kicad-cli sch upgrade` on every sheet, plus `pcb upgrade`.
+  - Netlist identical, invariants OK, same ERC/DRC counts.
+  - Committed on its own on `rev-b`.
+- **Library warnings after the migration:** the flatpak starts without global library
+  tables, which caused the ERC warnings `lib_symbol_issues` and `footprint_link_issues`.
+  Fix, once per machine:
+  `cp /app/extensions/Library/template/{sym,fp}-lib-table ~/.var/app/org.kicad.KiCad/config/kicad/10.0/`
+  (run inside the flatpak).
+  - The library files live on the host in
+    `~/.local/share/flatpak/runtime/org.kicad.KiCad.Library.Footprints/x86_64/stable/active/files/footprints`.
+- **pcbnew Python API:** available in the flatpak.
+  `flatpak run --filesystem=<dir> --command=python3 org.kicad.KiCad script.py` gives
+  KiCad 10.0.6 on Python 3.13.
+- **Inter-board net lengths (rev A)**, measured with pcbnew:
+
+  | Net | Length | Vias |
+  |---|---|---|
+  | B_clk | 141 mm | 6 |
+  | L_clk | 14 mm | 0 |
+  | T_clk | 8 mm | 0 |
+  | L_latch | 83 mm | 3 |
+  | B_data | 87 mm | 2 |
+  | B_W | 34 mm | 0 |
+- **SI models now include input clamp diodes.** This changes the picture a lot compared
+  with the plain T-line model.
+  - `clock_link.py` (pico-ice → first tile over dupont wires):
+    - Rs 0 Ω: 26 % overshoot, −0.86 V undershoot;
+    - Rs 68 Ω: 19 %, −0.59 V;
+    - Rs 150 Ω: 0 %, no undershoot, rise time 9.9 ns;
+    - no double threshold crossings in any case.
+  - `tile_hop.py` (U101/U107 → connector → neighbour's B_clk tree):
+    - rev A (2 layers, about 110 Ω, 141 mm tree): 22 % overshoot, −0.73 V, single
+      crossings;
+    - rev B (4 layers, about 55 Ω, 100 mm tree) with Rs = 33 Ω: 0 % overshoot, −0.01 V.
+- **Conclusion (preliminary, generic models):** rev A is noisy but within the thresholds
+  in the model. The ringing on the scope is dominated by the controller link (dupont wires
+  + probe).
+- **Decisions:**
+  - rev B: 33 Ω series resistors at every driver that leaves the tile;
+  - controller link: an adapter with about 100–150 Ω series resistance and a GND wire
+    next to each signal.
+- **Metric pitfall:** "value one ns after the crossing" gives false alarms on slow edges.
+  Count threshold crossings instead (a clean edge crosses once).

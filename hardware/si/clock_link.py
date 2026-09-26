@@ -10,7 +10,7 @@ Topology:
   driver (ideal edge + Rout) -> Rs (series termination under test)
   -> dupont wire (lossless T-line, Z_wire, 20 cm) + wire/return inductance
   -> tile track (T-line, Z_trace, ~70 mm to the load cluster)
-  -> lumped load C_load (6 CMOS inputs + connector + pull-up)
+  -> lumped load C_load (6 CMOS inputs + connector + pull-up) with input clamp diodes
 Run inside the ngspice container (from hardware/si/):
   podman run --rm --userns=keep-id -e HOME=/tmp -e MPLCONFIGDIR=/tmp -v "$PWD":/work:Z -w /work localhost/ngspice python3 clock_link.py
 """
@@ -31,6 +31,9 @@ Twire n2 0 n3 0 Z0={p['z_wire']} TD={p['td_wire']}
 Lret n3 n4 {p['l_ret']}
 Ttrk n4 0 rx 0 Z0={p['z_trace']} TD={p['td_trace']}
 Cld rx 0 {p['c_load']}
+.model DCL D(IS=1e-14 N=1 RS=5)
+Dh rx vcc DCL
+Dl 0 rx DCL
 Rpu rx vcc 10k
 Vcc vcc 0 {p['vdd']}
 .control
@@ -53,7 +56,7 @@ plt.figure(figsize=(9, 5))
 for rs in (0, 33, 68, 150):
     t, v = run(rs)
     rise = (t > 5e-9) & (t < 405e-9)
-    fall = t > 405e-9
+    fall = (t > 405e-9) & (t < 800e-9)
     over = (v[rise].max() - P['vdd']) / P['vdd'] * 100
     under = v[fall].min()
     # 10-90 % rise time
