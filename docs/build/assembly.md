@@ -34,7 +34,12 @@ Status on `rev-b`:
   F side).
 - [x] MPN and Manufacturer fields on every part. **C105 still needs an MPN**
   (100 µF, ≥ 10 V, SMD aluminium, 6.3 × 7.7 mm).
-- [ ] Panel (KiKit) and the full output set (`production.kicad_jobset`).
+- [x] Assembly panel: `hardware/kicad/tile/scripts/panel.sh` (KiKit, rootless). Two
+  tiles, 5 mm rails, 3 tooling holes, 3 panel fiducials, mouse-bite tabs; panel DRC
+  0 errors.
+- [x] Output set: `hardware/kicad/tile/scripts/production.sh`, which covers Gerber X2,
+  drill, IPC-2581, BOM, pick-and-place, assembly PDFs, STEP and fab notes
+  (`docs/build/fab-notes.md`).
 
 The THT edge and stacking connectors remain a manual or selective-solder step.
 

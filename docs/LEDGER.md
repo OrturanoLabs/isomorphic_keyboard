@@ -367,3 +367,20 @@ decoupling caps.
 
 **Open for human review:** silkscreen cleanup, 3D stack-height check (C105 is 7.7 mm tall),
 C105 MPN, and the clock routing in the GUI.
+
+## 2026-09-27 — Production outputs and panel
+
+- `production.sh` (kicad-cli only) first runs ERC/DRC with `--exit-code-violations
+  --severity-error` and stops on errors. It then exports:
+  - Gerber X2 for 4 layers, Excellon drill files and drill maps;
+  - IPC-2581, BOM, pick-and-place, assembly PDFs, schematic PDF, STEP.
+- `zip` is not installed on the host; use `python3 -m zipfile -c`.
+- **Pick-and-place pitfall:** the Kailh hot-swap footprint sits on F.Cu, with the socket
+  pads on B.Cu. KiCad therefore reports the sockets as `top`. The script rewrites SW*
+  rows as `bottom` and `FAB-NOTES.md` asks the assembler to verify their orientation.
+  Also use `--smd-only`, so the hand-soldered THT connectors are left out.
+- **KiKit** `docker.io/yaqwsx/kikit:v1.8.1-v10` works rootless (it prints a harmless
+  wx assert at start-up).
+  - Without `--post 'refillzones: true'` the panel has 199 `hole_clearance` errors: the
+    old zone fills overlap the new mouse-bite holes.
+  - With the refill: panel DRC 0 errors.
