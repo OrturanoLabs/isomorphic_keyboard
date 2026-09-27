@@ -492,3 +492,30 @@ C105 MPN, and the clock routing in the GUI.
 - Pitfall: the first run reported 48–237 "feasible" positions because only the pad
   centre was tested against the outline (pins exactly on the edge). Test the whole pad
   plus edge clearance.
+
+## 2026-09-27 — Rev C rework: minimum equilateral lattice for Cherry MX (work in progress)
+
+- The switch body sets the pitch, not the keycap (keycaps will be custom, 3D printed).
+  Cherry MX body is 15.6 × 15.6 mm (0.61", Cherry datasheet); Choc v1 is 15.0 × 15.0 mm
+  (Kailh drawing).
+- On a triangular lattice the rows are only 0.866 × pitch apart, so the diagonal
+  neighbours touch first: pitch ≥ (body + margin) / 0.866. With a 0.3 mm margin:
+  **p = 18.36 mm, rows 15.9 mm**. A "squeezed" lattice would allow 15.9 × 15.9 mm, but the
+  owner chose the equilateral one (figure: `docs/media/revc-pitch-comparison.png`).
+- Hot-swap sockets and switch holes on the bottom are not the limit (clear down to about
+  15.5 mm).
+- `hardware/kicad/tile/scripts/revc_build.py` builds the concept board:
+  - switches re-placed on the new lattice (same topology);
+  - stepped outline with 1 mm gaps on every side;
+  - lattice right (+73.44, 0), up (+9.18, −47.70);
+  - logic folded on the bottom (U103/U104/U109 in TSSOP-16, C105 1210);
+  - contact rows replace J101–J104 with the same pin order and nets.
+- **Stage 1: all 42 logic parts, 24 resistors, 3 fiducials and 4 contact rows placed.**
+- First routing, with 2 signal layers: 11 unconnected. DRC: 30 edge-clearance errors on
+  the passive edge pads (fixed by marking them castellated), 3 errors on FID1 (fiducial
+  now has a 1 mm clearance), 4 clearance errors, 1 hole-clearance error.
+- Second attempt (In2 as a signal layer with a VCC pour): **stopped by the system for low
+  memory** during Freerouting. Not re-run yet.
+- Lesson: Freerouting in a container plus KiCad in parallel can exhaust RAM on this
+  machine. Run one heavy job at a time and don't leave several flatpak/podman jobs in the
+  background.
