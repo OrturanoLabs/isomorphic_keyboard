@@ -70,6 +70,27 @@ Consequences:
 - Hot-plug: make the GND contact first-mate (longer spring or wider pad), as rev A/B
   implicitly do.
 
+## Could the edge connectors stay through-hole (everything else SMD)?
+
+No. `revc_tht_search.py` tries **every** position (0.25 mm grid) for a right-angle THT edge
+connector:
+
+- 1x6 columns for left/right, 1x8 rows for top/bottom;
+- 2.54 mm pitch (1.7 mm pads) and 1.27 mm pitch (1.0 mm pads).
+
+A position is valid only if:
+
+- the pads are fully on the board, with 0.3 mm to the edge;
+- on the switch side, no pad lands in a switch body or hole;
+- on the bottom, the connector body has a clear corridor from the pin row to the edge (no
+  socket, no switch post).
+
+**Result: 0 feasible positions on every edge, for both pitches.** On the top side the switch
+bodies come within 1.1–1.5 mm of every edge, so a THT pad near the edge is impossible.
+Further inside, the body would have to run under a row of switches (posts, sockets) to
+reach the edge. So a single-board tile is necessarily **all-SMD, connectors included**
+(SMD right-angle 1.27 mm pairs, or spring contacts + pads).
+
 ## Pros and cons
 
 | | Double stack (rev A/B) | Single board (rev C concept) |

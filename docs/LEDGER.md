@@ -412,3 +412,13 @@ C105 MPN, and the clock routing in the GUI.
     runs.
   - When merging nets, map both names to one canonical name (the key-board name, with
     `*_T` rails → main rails). A one-directional map renamed VCC to VCC_T.
+
+## 2026-09-27 — Rev C: through-hole edge connectors ruled out
+
+- Asked: single board, all SMD **except the connectors** (keep THT).
+- `revc_tht_search.py` runs an exhaustive search (0.25 mm grid; 1x6 left/right, 1x8
+  top/bottom; 2.54 and 1.27 mm pitch). Pads must be on free top-side copper with 0.3 mm
+  to the edge, and the bottom needs a clear corridor to the edge. **0 positions everywhere.**
+- Pitfall: the first run reported 48–237 "feasible" positions because only the pad
+  centre was tested against the outline (pins exactly on the edge). Test the whole pad
+  plus edge clearance.
