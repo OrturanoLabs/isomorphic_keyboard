@@ -7,7 +7,7 @@
     (Freerouting, memory-capped) -> production/revc_mcu/revc_mcu.ses
     ... revc_mcu_build.py --route-in production/revc_mcu/revc_mcu.ses  # stage 2
 
-Starts from the 18.36 mm rev-C board of revc_build.py (switches on the lattice, stepped
+Two copper layers. Starts from the 18.36 mm rev-C board of revc_build.py (switches on the lattice, stepped
 outline). Replaces the logic with: ATtiny1616 (SOIC-20W) at 5 V, 12 keys on internal
 pull-ups (switch to GND), 4 edge data lines through 100 ohm, 12 SK6812MINI-E reverse-mount
 LEDs south of each switch chained from one pin (+ 100 nF every 3 LEDs), a UPDI test pad,
@@ -47,7 +47,8 @@ PIN = {"PA2": 1, "PA3": 2, "GND": 3, "VDD": 4, "PA4": 5, "PA5": 6, "PA6": 7, "PA
        "PC2": 17, "PC3": 18, "PA0": 19, "PA1": 20, "EP": 21}
 KEY_PINS = ["PA2", "PA3", "PA4", "PA5", "PA6", "PA7", "PB0", "PB1", "PB3", "PB4", "PB5", "PC3"]
 EDGE_PIN = {"B": "PB2", "R": "PA1", "T": "PC0", "L": "PC1"}
-ORDER = ["VCC", "GND", "DATA", "GND", "VCC"]           # symmetric: orientation-proof
+# tiles never rotate, so the order need not be symmetric: 3 contacts per edge
+ORDER = ["VCC", "DATA", "GND"]
 
 
 def add_fp(board, fpid, ref, value, pos=None, side="B", rot=0):
@@ -67,16 +68,19 @@ def set_net(board, fp, pad, name):
 
 
 def contacts(board):
-    """Edge contacts (5 per edge). Right/bottom: springs; left/top: castellated edge pads.
-    Top pads sit in the gaps between the row-0 sockets (2 per gap), the bottom springs
-    exactly P/2 to the left (the up-lattice shift)."""
+    """Edge contacts, 3 per edge (VCC, DATA, GND). Right/bottom: springs; left/top:
+    castellated edge pads. Bottom springs are exactly P/2 left of the top pads (the
+    up-lattice shift)."""
     pts = revc.outline()
     xr1, xl1, top, bot = pts[3][0], pts[10][0], pts[0][1], pts[6][1]
     c1 = Y0 + R
-    ys = [c1 + 0.5 + j * 1.27 for j in range(5)]
-    row0 = [revc.key_xy(0, i)[0] for i in range(4)]
-    gaps = [c + 8.56 for c in row0[:3]]
-    xt = sorted([g - 0.635 for g in gaps] + [g + 0.635 for g in gaps], reverse=True)[:5]
+    ys = [c1 + 0.5 + j * 1.27 for j in range(3)]
+    # top: castellated pads at the edge, centred on row-0 key 1. Copper may run under the
+    # plastic body of the hot-swap socket (only its pads and the switch holes are keep-out).
+    # The bottom springs sit P/2 to the left = halfway between row-2 keys 1 and 2, where
+    # there is no LED cut-out.
+    xk = revc.key_xy(0, 1)[0]
+    xt = [xk + 1.27, xk, xk - 1.27]
     xb = [x - P / 2 for x in xt]
     rows = [("C1", "R", [(xr1 - 1.35, y) for y in ys], (2.0, 0.8), "right"),
             ("C2", "L", [(xl1 + 0.45, y) for y in ys], (0.7, 0.8), "left"),
@@ -198,13 +202,13 @@ def stage1():
             failed.append(fp.GetReference())
     print("placement failed for:", failed or "none")
 
-    board.SetCopperLayerCount(4)
-    board.SetLayerType(pcbnew.In1_Cu, pcbnew.LT_POWER); board.SetLayerType(pcbnew.In2_Cu, pcbnew.LT_POWER)
-    revb.add_zone(board, outline, pcbnew.In1_Cu, "GND"); revb.add_zone(board, outline, pcbnew.In2_Cu, "VCC")
-    revb.POWER = ("VCC", "GND")
-    revb.fanout_power(board)
+    # 2 layers (no fast inter-tile clock any more, low density): VCC and GND are routed like
+    # signals, then stage 2 pours GND on both sides; the top (switch side) has no parts, so
+    # its pour stays almost continuous and acts as the reference plane
+    board.SetCopperLayerCount(2)
+    for n in ("VCC", "GND"):
+        revb.net(board, n)
     pcbnew.SaveBoard(BRD, board)
-    revb.write_stackup(BRD)
     shutil.copy(os.path.join(ROOT, "hardware", "kicad", "tile", "isomorphic_tile.kicad_pro"),
                 os.path.join(OUT, "revc_mcu.kicad_pro"))
     pcbnew.ExportSpecctraDSN(pcbnew.LoadBoard(BRD), os.path.join(OUT, "revc_mcu.dsn"))
