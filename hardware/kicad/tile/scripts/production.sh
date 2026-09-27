@@ -11,6 +11,8 @@ rm -rf "$OUT"; mkdir -p "$OUT"/{gerber,assembly,docs}
 
 "$K" pcb drc --schematic-parity --exit-code-violations --severity-error --format json \
     -o "$OUT/docs/drc.json" "$PCB" >/dev/null           # refuse to export a board with errors
+flatpak run --filesystem="$ROOT" --command=python3 org.kicad.KiCad "$ROOT/tools/scripts/check_via_in_pad.py" \
+    "$PCB" 0.2 2>&1 | grep -v -E 'memory leak|Warning|Debug'        # no via touching an SMD pad
 "$K" sch erc --exit-code-violations --severity-error --format json -o "$OUT/docs/erc.json" "$SCH" >/dev/null
 
 "$K" pcb export gerbers --layers F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,B.Paste,F.SilkS,B.SilkS,Edge.Cuts \

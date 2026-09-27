@@ -19,7 +19,8 @@ Stage 1 (default): starting from the rev-A board already on disk,
   * fan out every SMD power pad (stub + via into the inner planes) before routing;
   * export a Specctra DSN for Freerouting.
   The inner GND/VCC planes are created before the DSN export.
-Stage 2 (--route-in): import the routed session, add a 4 mm grid of ground stitching vias, add ground pours on the outer
+Stage 2 (--route-in SES, or --finish when the board was routed in place by
+  KiCadRoutingTools): import the routed session if any, add a 4 mm grid of ground stitching vias, add ground pours on the outer
   layers, fill all zones and save.
 Frozen items (switch centres, connectors J101-J108, outline) are never moved; this is
 checked by tools/scripts/check_invariants.py afterwards.
@@ -463,11 +464,14 @@ def fanout_power(board, clearance=0.2):
             c = pad.GetPosition()
             half = max(pad.GetSizeX(), pad.GetSizeY()) / 2
             done = False
-            for dist in (0.9, 1.2, 1.5, 1.9, 2.4, 2.9, 3.5):
+            # via centre at least half-pad + 0.65 mm away: the 0.6 mm via then keeps 0.35 mm
+            # of solder mask between its annulus and the pad (no solder wicking into the
+            # barrel; flagged by KiCadRoutingTools' fab check on the first rev-B layout)
+            for dist in (0.65, 0.9, 1.2, 1.5, 1.9, 2.4, 2.9, 3.5):
                 for k in range(24):
                     a = 2 * math.pi * k / 24
-                    pos = pcbnew.VECTOR2I(int(c.x + math.cos(a) * (half + MM(dist) - MM(0.6))),
-                                          int(c.y + math.sin(a) * (half + MM(dist) - MM(0.6))))
+                    pos = pcbnew.VECTOR2I(int(c.x + math.cos(a) * (half + MM(dist))),
+                                          int(c.y + math.sin(a) * (half + MM(dist))))
                     trk = pcbnew.PCB_TRACK(board)
                     trk.SetStart(c)
                     trk.SetEnd(pos)
@@ -497,7 +501,16 @@ def via_fits(board, items, pos, netcode, extra=None, clearance=0.2):
     via.SetDrill(MM(0.3))
     cands = [(via, pcbnew.F_Cu), (via, pcbnew.B_Cu)] + (extra or [])
     for it in items:
-        if it.GetNetCode() == netcode:
+        # same-net tracks/vias may touch; same-net SMD pads may not (a via on a pad or in
+        # its paste opening wicks solder), so only the stub itself may reach its pad
+        same_pad = isinstance(it, pcbnew.PAD) and it.GetNetCode() == netcode
+        if it.GetNetCode() == netcode and not same_pad:
+            continue
+        if same_pad:
+            if it.IsOnLayer(pcbnew.F_Cu) or it.IsOnLayer(pcbnew.B_Cu):
+                lay = pcbnew.F_Cu if it.IsOnLayer(pcbnew.F_Cu) else pcbnew.B_Cu
+                if via.GetEffectiveShape(lay).Collide(it.GetEffectiveShape(lay), MM(0.3)):
+                    return None
             continue
         for cand, lay in cands:
             if it.IsOnLayer(lay) and cand.GetEffectiveShape(lay).Collide(it.GetEffectiveShape(lay), MM(clearance)):
@@ -566,9 +579,11 @@ def trim_stacking_courtyard(board, ref="J107", y_from=80.93, y_to=80.73):
 
 
 # ------------------------------------------------------------------ stage 2 -------------
-def stage2(ses):
+def stage2(ses=None):
+    """ses: Freerouting session to import; None when the board was routed in place
+    (KiCadRoutingTools writes the routed board directly)."""
     board = pcbnew.LoadBoard(BOARD)
-    if not pcbnew.ImportSpecctraSES(board, ses):
+    if ses and not pcbnew.ImportSpecctraSES(board, ses):
         sys.exit("SES import failed")
     stitch_ground(board)
     trim_stacking_courtyard(board)
@@ -589,5 +604,10 @@ def stage2(ses):
 if __name__ == "__main__":
     if "--route-in" in sys.argv:
         stage2(sys.argv[sys.argv.index("--route-in") + 1])
+    elif "--finish" in sys.argv:
+        stage2(None)
+    elif "--export-dsn" in sys.argv:          # routed-in-place board -> DSN for a completion pass
+        b = pcbnew.LoadBoard(BOARD)
+        pcbnew.ExportSpecctraDSN(b, sys.argv[sys.argv.index("--export-dsn") + 1])
     else:
         stage1(sys.argv[1])

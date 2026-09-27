@@ -423,3 +423,35 @@ C105 MPN, and the clock routing in the GUI.
 - **Shell pitfall:** `pkill -f <pattern>` / `pgrep -f` also match the invoking shell when
   the pattern appears in the same command line, and exit 144 kills the tool call. Kill by
   PID or with `pgrep -x ngspice`.
+
+## 2026-09-27 — Autorouter comparison: KiCadRoutingTools vs Freerouting (rev B)
+
+- KiCadRoutingTools (KRT, MIT, <https://github.com/drandyhaas/KiCadRoutingTools>) runs
+  rootless in `tools/containers/kicad-routing-tools` (prebuilt Rust core downloaded by
+  `build_router.py`). Freerouting 2.4.1 runs in `tools/containers/freerouting`.
+- Same input for both: the rev-B stage-1 board (placement, planes, power fan-out). Same
+  finishing and the same DRC rules afterwards (`production/bench/finish.py`).
+
+  | | KRT (default options) | Freerouting (no optimiser) |
+  |---|---|---|
+  | Time | ~24 s (routing core 1.8 s) | 100 s |
+  | Unconnected | 0 | 1 |
+  | Track length | 1843 mm | 1889 mm |
+
+- **KRT's fab check found a real defect in the committed rev B:** 83 vias within 0.2 mm
+  of an SMD pad. My fan-out put the via right at the pad edge, and the same-net pads of
+  U109 pins 3–6 sat next to each other. Fixed: via centre ≥ half-pad + 0.65 mm, same-net
+  pads are obstacles too. New check `tools/scripts/check_via_in_pad.py`, run by the
+  pipeline and by `production.sh`. The new rev B has 0.
+- KRT caveats:
+  - By default it **escalates** (smaller vias, 0.175 mm clearance) and puts **vias in
+    pads** to finish. Use `--escalation board`, `--same-net-pad-clearance 0.3` and
+    `--hole-to-hole-clearance 0.25`.
+  - **Copy the `.kicad_pro` next to the board it reads.** Otherwise it ignores the
+    project rules (hole clearance 0.25 → 5 DRC errors) and writes its own `.kicad_pro`.
+  - With strict options it leaves 1–2 connections open around U101/U107/U103 on this
+    placement, whatever the ordering, grid (0.05 mm), rip-up or pass order. A Freerouting
+    "completion pass" on the KRT board did not keep the KRT wiring (it restarted from 128
+    unrouted nets). **Decision:** pipeline default `ROUTER=freerouting` (DRC clean);
+    `ROUTER=krt` available. Loosen the placement around U101/U107/U103 before switching.
+- zsh pitfall: `$BASE:hardware/...` is parsed as the zsh `:h` modifier. Write `${BASE}:...`.
