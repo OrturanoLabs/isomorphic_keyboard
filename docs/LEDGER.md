@@ -384,3 +384,42 @@ C105 MPN, and the clock routing in the GUI.
   - Without `--post 'refillzones: true'` the panel has 199 `hole_clearance` errors: the
     old zone fills overlap the new mouse-bite holes.
   - With the refill: panel DRC 0 errors.
+
+## 2026-09-27 — SPICE refinement without new hardware (branch `rev-b`)
+
+- **Digitised the scope photo** (`hardware/si/digitize_scope.py`).
+  - Grid lines are detected by colour, and there is a keystone correction (the photo is
+    oblique: 215 px/div at the top vs 210 px/div at the bottom).
+  - Channel 2 has a +3.6 V display offset.
+  - Pitfalls: `np.interp` clamps outside the calibration range (use a linear fit), and the
+    WaveForms toolbar has blue/yellow pixels (ignore y < 250 px).
+  - Result: levels 3.05 / −0.1 V, overshoot to 3.9 V, undershoot to −1.0 V, ringing
+    ~16–20 MHz, and only 10 ns per sample (100 MS/s).
+- **Vendor models:** TI IBIS files come from `https://www.ti.com/lit/zip/<id>`. The IDs
+  are listed on the product pages: SCEM288 (LVC2G125), SCEM283 (LVC2G126), SCEM216
+  (LVC1G04); the `.cir` SPICE models (SCEM6xx) are TINA behavioural models from datasheet
+  values, less useful. No IBIS was found for SN74LVC165A or the iCE40UP5K. LVC inputs have
+  a GND clamp only.
+- `ibis_lite.py`: IBIS → ngspice with B-sources + `pwl()` tables, and linear switching
+  coefficients from `[Ramp]`.
+- **Bug found and fixed:** my AD2 Butterworth had Q = 1.41 instead of 0.707, so it rang
+  by itself (30 % overshoot). Always check a filter's step response
+  (now 4.3 % overshoot and 11.4 ns rise, as expected). The first calibration run, done
+  with the bad filter, was thrown away.
+- **Calibration** (Nelder–Mead on 9 parameters, about 10 minutes): RMS 0.20 V. Several
+  parameters hit their bounds, so the model is plausible but not unique.
+  - The AD2 views, the node view and the controller-R sweep are in
+    `docs/architecture/electrical.md`.
+  - Main answers: the spring tip barely matters with a 30 MHz instrument; the real node at
+    the first tile rings more than the capture shows; a series resistor at the pico-ice
+    (about 100 Ω) fixes the controller link.
+- **IBIS tile hop:** rev A far load 76 % overshoot with 7 VIH crossings (pessimistic
+  lossless model); rev B with 33 Ω: 14 %, clean. 47 Ω dwells on VIL, so 33 Ω stays.
+- **ngspice pitfalls:**
+  - Some parameter corners make ngspice crawl. Every run now has a subprocess timeout,
+    and the fit treats a timeout as a high cost.
+  - A 200 MHz front-end view stalled the solver, so it was dropped (the node view is the
+    ideal-instrument reference).
+- **Shell pitfall:** `pkill -f <pattern>` / `pgrep -f` also match the invoking shell when
+  the pattern appears in the same command line, and exit 144 kills the tool call. Kill by
+  PID or with `pgrep -x ngspice`.
