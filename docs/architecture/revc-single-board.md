@@ -22,6 +22,47 @@ rev-B board. Outputs are written to `production/revc/`.
 - The right-angle 2.54 mm edge connectors live **under** the neighbour's key-board
   overhang, about 11 mm below the keys. That free space is what makes the stack work.
 
+## The skew: oblique tiles, orthogonal links
+
+![Tiling of rev A/B and rev C](../media/revc-lattice.png)
+
+The key lattice is hexagonal: every row is shifted by 10 mm. The tiles therefore repeat
+on an **oblique** lattice (right +80/0 mm, up +10/−51.96 mm), and the key board has a
+stepped outline so that neighbours interlock.
+
+**How rev A/B solve it.** The logic board is an ordinary rectangle, and so are its edge
+links:
+
+- left/right links are pure x;
+- top/bottom links are pure y.
+
+The skew is absorbed by the connector **positions**: the top connector J102 is 10 mm to
+the right of the bottom connector J103, which is exactly the lattice shift of the tile
+above. The rectangles do not interlock. The 13.9 mm of mated header+socket sit in the
+free space under the neighbour's overhanging key board, about 11 mm below the keys.
+
+**How rev C solves it.** The stepped outline is made only of horizontal and vertical
+segments, so the links can stay orthogonal on the key board itself:
+
+- **left/right**: the vertical edge segments of the same row face each other with a 3 mm
+  gap (row 1: x 204.5 ↔ 207.5, row 2: 194.5 ↔ 197.5, row 3: 184.5 ↔ 187.5), so a contact
+  row on the row-2 segment mates along x;
+- **top/bottom**: the top edge (y 45, x 127.5–204.5) faces the bottom edge of the tile above
+  (y 44.04, x 117.5–194.5) over 67 mm with a 0.96 mm gap, so contacts mate along y. As in
+  rev A/B, the top contacts sit 10 mm to the right of the bottom contacts.
+
+The skew is still absorbed by positions, only now at the edges instead of on a hidden
+rectangle. The oblique tiling also gives each tile up to 6 neighbours (up-right and
+down-left touch too, along short step segments). They are not needed electrically,
+because the scan chain uses the same 4 directions as today.
+
+**Putting a tile in place (compare the 2026-06-30 videos).** With 2.54 mm headers a tile
+is re-attached by **sliding it sideways** into its neighbour. A tile that has neighbours
+on two orthogonal sides has to enter along two directions at once, and this only works
+thanks to the play of the pins. Spring contacts with a lead-in (or pogo pins with rounded
+tips) plus magnets would let a rev-C tile be **dropped in from above** and pulled into
+place, whatever neighbours it has. This is a usability gain, not only a manufacturing one.
+
 ## Folding the logic board onto the key-board bottom
 
 `revc_feasibility.py` moves every logic footprint by the stack transform, flips it to the
