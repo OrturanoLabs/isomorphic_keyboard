@@ -534,3 +534,23 @@ C105 MPN, and the clock routing in the GUI.
     are not enough.
 - **Open decisions (owner):** 7 top/bottom contacts (drop the duplicate GND) or 8 at 1.0 mm
   pitch; 6-layer PCB vs 4 layers.
+
+## 2026-09-27 — Rev C microcontroller tile: first placement
+
+- `revc_mcu_build.py` builds the concept tile:
+  - ATtiny1616 at 5 V, 12 keys on internal pull-ups, 4 × 100 Ω edge data lines;
+  - 12 SK6812MINI-E reverse-mount LEDs south of each switch, chained;
+  - UPDI pad and 5 contacts per edge (VCC GND DATA GND VCC).
+- The SOIC-20 wide package (≈13 × 10 mm with pads) does not fit between sockets and
+  LEDs; the VQFN-20 3 × 3 mm (0.40 mm pitch, 1.7 mm EP; DS40002204A §39.4) does.
+- The Cherry MX drawing puts the LED window **south** of the centre hole and the pins
+  (socket) **north**. SK6812MINI-E pins (KiCad symbol): 1 VSS, 2 DIN, 3 VDD, 4 DOUT.
+- **Geometric conflict found:** the top contacts can only sit in the gaps between the row-0
+  sockets. The up-lattice shift (P/2 = 9.18 mm) maps those x positions exactly onto the
+  row-2 key centres, where the reverse-mount LED cut-outs reach within 1 mm of the bottom
+  edge. Image: `docs/media/revc-mcu-bottom-conflict.png`.
+- Options for the owner: (1) top-side 2 × 2 mm addressable LEDs under the switch window,
+  no cut-out, at the cost of two-sided assembly; (2) data-only vertical link (the
+  contact still collides, and power distribution breaks for isolated columns);
+  (3) no LEDs on the bottom row. Leaning to (1), after checking the MX RGB housing
+  clearance.
