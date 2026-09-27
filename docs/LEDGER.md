@@ -606,3 +606,36 @@ C105 MPN, and the clock routing in the GUI.
   pad. Warnings only: silkscreen overlaps, library footprint notes.
 - The routed board is kept in `hardware/kicad/revc-mcu-tile/` (`production/` is ignored).
   It still needs a human review in KiCad.
+
+## 2026-09-27 — Rev C MCU tile: KiCad schematic in the flow
+
+- Before this, the tile had no schematic: the build script set the nets on the board
+  directly. Now:
+  - `revc_mcu_circuit.py` defines the circuit;
+  - `revc_mcu_schematic.py` writes a KiCad schematic with the stock symbols embedded
+    (`extends` symbols flattened), one stub + global label, power symbol or no-connect
+    flag per pin, and stable UUIDs;
+  - the board build takes every net, value and field from the netlist `kicad-cli`
+    exports, and links each footprint to its symbol;
+  - the flow runs ERC and DRC with `--schematic-parity`.
+- Parity findings, all fixed:
+  - the footprints lacked the symbols' Manufacturer/MPN fields;
+  - Description differed;
+  - an unused pin must carry KiCad's `unconnected-(...)` net rather than no net.
+- Pitfalls:
+  - `pcbnew.FootprintLibCreate`/`FootprintSave` find no plugin for a new path, so the
+    flow uses `PCB_IO_KICAD_SEXPR()` directly;
+  - reference designators changed: C1–C4 (contacts) became J1–J4, C10–C15 became C1–C6,
+    and SW101–SW112 became SW1–SW12 in key order.
+- Routing after the change was harder, with 1–3 open nets around the MCU in every run and
+  every MCU orientation. Fixes:
+  - the LED chain now starts at D6, next to the MCU (it used to start at D1, in a corner);
+  - **pin swapping**: the 15 interchangeable signals get the MCU pins in the same angular
+    order as their destinations. It is stored in `pinmap.json`, drawn in the schematic and
+    meant for the firmware;
+  - the flow tries the MCU orientations (stored, VDD towards C1, then all four) and keeps
+    the first fully clean board.
+- The router's results vary from run to run with small changes, hence the search.
+- **Result** (MCU at 90°): ERC clean; DRC 0 errors, 0 unconnected, 0 schematic-parity
+  issues; no via within 0.2 mm of a same-net SMD pad. The folder
+  `hardware/kicad/revc-mcu-tile/` opens as a normal KiCad project.

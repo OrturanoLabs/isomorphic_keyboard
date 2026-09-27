@@ -505,7 +505,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "isomorphic_tile.kicad_pro",
+    "filename": "revc_mcu.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -757,8 +757,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "isomorphic_tile.kicad_sch",
-        "name": "isomorphic_tile",
+        "filename": "revc_mcu.kicad_sch",
+        "name": "revc_mcu",
         "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ]

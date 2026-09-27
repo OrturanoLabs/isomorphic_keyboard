@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-only
-"""Rev C concept, microcontroller tile (docs/architecture/revc-mcu-tile.md).
+"""Rev C concept, microcontroller tile (docs/architecture/revc-mcu-tile.md): board build.
 
-    flatpak run --filesystem="$PWD" --command=python3 org.kicad.KiCad \
-        hardware/kicad/tile/scripts/revc_mcu_build.py            # stage 1 -> DSN
-    (Freerouting, memory-capped) -> production/revc_mcu/revc_mcu.ses
-    ... revc_mcu_build.py --route-in production/revc_mcu/revc_mcu.ses  # stage 2
+Run by revc_mcu_route.sh (see there for the whole flow):
+    revc_mcu_build.py --netlist production/revc_mcu/revc_mcu.net   # stage 1: place -> DSN
+    (router)                                                        # KiCadRoutingTools
+    revc_mcu_build.py --finish                                      # stage 2: pours, fill
 
-Two copper layers. Starts from the 18.36 mm rev-C board of revc_build.py (switches on the lattice, stepped
-outline). Replaces the logic with: ATtiny1616 (SOIC-20W) at 5 V, 12 keys on internal
-pull-ups (switch to GND), 4 edge data lines through 100 ohm, 12 SK6812MINI-E reverse-mount
-LEDs south of each switch chained from one pin (+ 100 nF every 3 LEDs), a UPDI test pad,
-and 5 contacts per edge in the symmetric order VCC GND DATA GND VCC.
-Pins: PB2 = DATA_B (USART TX default), PA1 = DATA_R (USART TX alternate), PC0 = DATA_T,
-PC1 = DATA_L, PC2 = LED, PA0 = UPDI; keys on PA2-PA7, PB0, PB1, PB3-PB5, PC3.
+The circuit is defined in revc_mcu_circuit.py and drawn by revc_mcu_schematic.py; this
+script takes EVERY net from the netlist KiCad exports from that schematic, checks that the
+board has exactly the schematic's components with the same footprints, and links each
+footprint to its symbol (so KiCad's DRC schematic-parity check applies). What is decided
+here is only geometry: starting from the 18.36 mm rev-C board of revc_build.py (switches on
+the lattice, stepped outline), it adds the LEDs, the edge contacts, the MCU and the
+passives, places them and writes the routing rules. Two copper layers.
 """
 import importlib.util
 import os
@@ -38,18 +38,8 @@ def _load(name, path):
 
 revb = _load("revb", os.path.join(HERE, "revb_pcb.py"))
 revc = _load("revc", os.path.join(HERE, "revc_build.py"))
+circ = _load("revc_mcu_circuit", os.path.join(HERE, "revc_mcu_circuit.py"))
 P, R, X0, Y0 = revc.P, revc.R, revc.X0, revc.Y0
-
-# ATtiny1616-MNR VQFN-20 3x3 mm, 0.40 mm pitch, 1.7 mm exposed pad (DS40002204A 4.3, 39.4);
-# the SOIC-20 wide version (about 13 x 10 mm) does not fit between the sockets and LEDs
-PIN = {"PA2": 1, "PA3": 2, "GND": 3, "VDD": 4, "PA4": 5, "PA5": 6, "PA6": 7, "PA7": 8,
-       "PB5": 9, "PB4": 10, "PB3": 11, "PB2": 12, "PB1": 13, "PB0": 14, "PC0": 15, "PC1": 16,
-       "PC2": 17, "PC3": 18, "PA0": 19, "PA1": 20, "EP": 21}
-KEY_PINS = ["PA2", "PA3", "PA4", "PA5", "PA6", "PA7", "PB0", "PB1", "PB3", "PB4", "PB5", "PC3"]
-EDGE_PIN = {"B": "PB2", "R": "PA1", "T": "PC0", "L": "PC1"}
-# tiles never rotate, so the order need not be symmetric: 3 contacts per edge
-ORDER = ["VCC", "DATA", "GND"]
-
 
 def add_fp(board, fpid, ref, value, pos=None, side="B", rot=0):
     fp = revb.load_fp(fpid)
@@ -87,8 +77,42 @@ def keepout_rect(board, bb, margin, tracks=True):
     board.Add(z)
 
 
-def set_net(board, fp, pad, name):
-    fp.FindPadByNumber(str(pad)).SetNet(revb.net(board, name))
+def apply_netlist(board, path):
+    """nets, values and symbol links from the schematic's netlist; the board must hold
+    exactly the schematic's components, with the same footprints"""
+    comps, nets = circ.read_netlist(path)
+    fps = {fp.GetReference(): fp for fp in board.GetFootprints()}
+    errors = [f"{r}: on the board, not in the schematic" for r in fps if r not in comps]
+    errors += [f"{r}: in the schematic, not on the board" for r in comps if r not in fps]
+    for ref, c in comps.items():
+        fp = fps.get(ref)
+        if fp is None:
+            continue
+        fpid = f"{fp.GetFPID().GetLibNickname()}:{fp.GetFPID().GetLibItemName()}"
+        if fpid != c["footprint"]:
+            errors.append(f"{ref}: footprint {fpid} on the board, {c['footprint']} in the schematic")
+        fp.SetValue(c["value"])
+        fp.SetPath(pcbnew.KIID_PATH(c["path"]))
+        for name, val in c["fields"].items():      # MPN, Manufacturer, Datasheet, ... (hidden)
+            if name == "Footprint":
+                continue
+            fp.SetField(name, val)
+            fp.GetField(name).SetVisible(False)
+        for pad in fp.Pads():
+            net = nets.get((ref, pad.GetNumber()))   # "unconnected-(...)": KiCad's single-pad net
+            if net is None:
+                pad.SetNetCode(0)
+            else:
+                pad.SetNet(revb.net(board, net))
+    if errors:
+        sys.exit("board does not match the schematic:\n  " + "\n  ".join(errors))
+    # the short copper stubs of the edge pads take the net of their pad
+    for t, pad in STUBS:
+        t.SetNet(pad.GetNet())
+    print("netlist applied:", len(comps), "components,", len(set(nets.values())), "nets")
+
+
+STUBS = []      # (track, pad): edge-pad stubs, their net is set with the netlist
 
 
 def contacts(board):
@@ -106,11 +130,12 @@ def contacts(board):
     xk = revc.key_xy(0, 1)[0] - 0.8        # 0.8 mm left: clear of the switch pin hole
     xt = [xk + 1.27, xk, xk - 1.27]
     xb = [x - P / 2 for x in xt]
-    rows = [("C1", "R", [(xr1 - 1.35, y) for y in ys], (2.0, 0.8), "right"),
-            ("C2", "L", [(xl1 + 0.45, y) for y in ys], (0.7, 0.8), "left"),
-            ("C3", "B", [(x, bot - 1.35) for x in xb], (0.8, 2.0), "bottom"),
-            ("C4", "T", [(x, top + 0.3) for x in xt], (0.8, 0.4), "top")]
-    for ref, edge, p, (w, h), side in rows:
+    J = {e: ref for e, (ref, _) in circ.EDGE_CONTACT.items()}
+    rows = [(J["R"], [(xr1 - 1.35, y) for y in ys], (2.0, 0.8), "right"),
+            (J["L"], [(xl1 + 0.45, y) for y in ys], (0.7, 0.8), "left"),
+            (J["B"], [(x, bot - 1.35) for x in xb], (0.8, 2.0), "bottom"),
+            (J["T"], [(x, top + 0.3) for x in xt], (0.8, 0.4), "top")]
+    for ref, p, (w, h), side in rows:
         fp = pcbnew.FOOTPRINT(board)
         fp.SetReference(ref); fp.SetValue(f"contacts {side}")
         fp.SetFPID(pcbnew.LIB_ID("revc", f"EdgeContacts_{side}"))
@@ -127,8 +152,6 @@ def contacts(board):
                 pad.SetProperty(pcbnew.PAD_PROP_CASTELLATED)
             pad.SetLayerSet(ls); fp.Add(pad)
             pad.SetPosition(pcbnew.VECTOR2I(MM(x), MM(y)))
-            name = {"DATA": f"DATA_{edge}"}.get(ORDER[n - 1], ORDER[n - 1])
-            pad.SetNet(revb.net(board, name))
             if side in ("left", "top"):
                 c = pad.GetPosition()
                 if side == "left":
@@ -136,7 +159,7 @@ def contacts(board):
                 else:
                     a, b = pcbnew.VECTOR2I(c.x, c.y + MM(h / 2 - .05)), pcbnew.VECTOR2I(c.x, c.y + MM(h / 2 + .9))
                 t = pcbnew.PCB_TRACK(board); t.SetStart(a); t.SetEnd(b); t.SetWidth(MM(0.25))
-                t.SetLayer(pcbnew.B_Cu); t.SetNet(pad.GetNet()); board.Add(t)
+                t.SetLayer(pcbnew.B_Cu); board.Add(t); STUBS.append((t, pad))
         xs = [q[0] for q in p]; ys_ = [q[1] for q in p]
         depth = {"right": 3.0, "bottom": 3.0, "left": 1.0, "top": 0.55}[side]
         if side == "right":
@@ -151,7 +174,9 @@ def contacts(board):
                 _court(fp, (x - w / 2 - .2, y - h / 2 - .2, x + w / 2 + .2, y - h / 2 + depth))
         if box:
             _court(fp, box)
-        fp.SetBoardOnly(True); fp.SetExcludedFromBOM(True); fp.SetExcludedFromPosFiles(True)
+        # in the schematic (J1..J4) but not in the BOM yet: the spring part is still to be
+        # chosen, and the edge pads are only copper
+        fp.SetExcludedFromBOM(True); fp.SetExcludedFromPosFiles(True)
 
 
 def _court(fp, box):
@@ -162,7 +187,7 @@ def _court(fp, box):
         s.SetLayer(pcbnew.B_CrtYd); s.SetWidth(MM(0.05)); fp.Add(s)
 
 
-def stage1():
+def stage1(netlist):
     os.makedirs(OUT, exist_ok=True)
     src = os.path.join(ROOT, "production", "revc18", "revc18.kicad_pcb")
     board = pcbnew.LoadBoard(src)
@@ -173,27 +198,20 @@ def stage1():
     for fp in list(board.GetFootprints()):
         if not fp.GetReference().startswith("SW"):
             board.Delete(fp)
-    # keys: pad 1 -> GND, pad 2 -> K<n> (SW101..SW112 in row-major order)
+    # keys: SW<n> = key K<n>, numbered in row-major order (row 0 = top row, left to right)
     sws = sorted((fp for fp in board.GetFootprints() if fp.GetReference().startswith("SW")),
                  key=lambda f: (round(TOMM(revb.switch_centre(f).y)), TOMM(revb.switch_centre(f).x)))
     for n, sw in enumerate(sws):
-        set_net(board, sw, 1, "GND")
-        set_net(board, sw, 2, f"K{n + 1}")
-    # LEDs: D<n> south of SW<n>'s centre, chained as a serpentine (row 0 and row 2 left to
-    # right, row 1 right to left) so that every link goes to a neighbour; the LEDs of the
-    # left-to-right rows are turned 180 deg so that DOUT faces the next LED. The firmware
-    # maps chain position -> key with CHAIN below. Net LED_D<n> is the output of D<n>.
-    CHAIN = [0, 1, 2, 3, 7, 6, 5, 4, 8, 9, 10, 11]
-    chain_in = "LED_DIN"
-    for k, n in enumerate(CHAIN):
+        sw.SetReference(f"SW{n + 1}")
+    # LEDs: D<n> south of SW<n>'s centre, chained in circ.CHAIN order (every link goes to a
+    # neighbour). An LED whose chain runs left to right is turned 180 deg, so that DOUT faces
+    # the next LED (and DIN the previous one).
+    xs_ = [TOMM(revb.switch_centre(sws[n]).x) for n in circ.CHAIN]
+    for k, n in enumerate(circ.CHAIN):
         c = revb.switch_centre(sws[n])
-        led = add_fp(board, "LED_SMD:LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount", f"D{n + 1}",
-                     "SK6812MINI-E", (TOMM(c.x), TOMM(c.y) + 5.08), side="B",
-                     rot=180 if (n // 4) % 2 == 0 else 0)
-        set_net(board, led, 1, "GND"); set_net(board, led, 3, "VCC")
-        set_net(board, led, 2, chain_in)
-        chain_in = f"LED_D{n + 1}" if k < 11 else "LED_END"
-        set_net(board, led, 4, chain_in)
+        step = xs_[k + 1] - xs_[k] if k + 1 < len(xs_) else xs_[k] - xs_[k - 1]
+        led = add_fp(board, circ.FP["led"], f"D{n + 1}", "SK6812MINI-E", (TOMM(c.x), TOMM(c.y) + 5.08),
+                     side="B", rot=180 if step > 0 else 0)
         # the reverse-mount LED has a board cut-out inside its footprint; routers that only
         # know the outer outline route through it, so fence it with a rule area
         xs, ys = [], []
@@ -204,35 +222,23 @@ def stage1():
         if xs:
             keepout_rect(board, (min(xs), min(ys), max(xs), max(ys)), 0.35)
     # MCU and passives
-    mcu = add_fp(board, "Package_DFN_QFN:VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm", "U1", "ATtiny1616-MNR", side="B")
-    set_net(board, mcu, PIN["VDD"], "VCC"); set_net(board, mcu, PIN["GND"], "GND")
-    for pad in mcu.Pads():   # exposed pad to GND; its paste-only sub-pads have no copper, no net
-        if pad.GetNumber() == "21":
-            pad.SetNet(revb.net(board, "GND"))
-    for n, p in enumerate(KEY_PINS):
-        set_net(board, mcu, PIN[p], f"K{n + 1}")
-    for e, p in EDGE_PIN.items():
-        set_net(board, mcu, PIN[p], f"DATA_{e}_MCU")
-    set_net(board, mcu, PIN["PC2"], "LED_DIN"); set_net(board, mcu, PIN["PA0"], "UPDI")
+    mcu = add_fp(board, circ.FP["mcu"], "U1", "ATtiny1616-MNR", side="B")
     parts, targets = [mcu], {}
     contacts(board)
-    edge_ref = {"R": "C1", "L": "C2", "B": "C3", "T": "C4"}
-    for e in "BRTL":
-        r = add_fp(board, "Resistor_SMD:R_0603_1608Metric", f"R{len(parts)}", "100", side="B")
-        set_net(board, r, 1, f"DATA_{e}_MCU"); set_net(board, r, 2, f"DATA_{e}"); parts.append(r)
+    for e, rref in circ.EDGE_RES.items():
+        r = add_fp(board, circ.FP["r"], rref, "100", side="B"); parts.append(r)
         # series resistor next to its edge contacts: it protects the hot-plug contact
-        c = board.FindFootprintByReference(edge_ref[e]).GetPosition()
-        targets[r.GetReference()] = (TOMM(c.x), TOMM(c.y))
-    for i, v in enumerate(["100n", "4u7", "100n", "100n", "100n", "100n"]):
-        c = add_fp(board, "Capacitor_SMD:C_0603_1608Metric" if v == "100n" else "Capacitor_SMD:C_0805_2012Metric",
-                   f"C{10 + i}", v, side="B")
-        set_net(board, c, 1, "VCC"); set_net(board, c, 2, "GND"); parts.append(c)
-        if i >= 2:      # LED decoupling next to the corner LEDs (D1, D4, D9, D12), away from the MCU
-            led = board.FindFootprintByReference(f"D{(1, 4, 9, 12)[i - 2]}").GetPosition()
-            targets[c.GetReference()] = (TOMM(led.x), TOMM(led.y) + 3.0)
-    tp = add_fp(board, "TestPoint:TestPoint_Pad_D1.5mm", "TP1", "UPDI", side="B")
-    set_net(board, tp, 1, "UPDI"); parts.append(tp)
+        c = board.FindFootprintByReference(circ.EDGE_CONTACT[e][0]).GetPosition()
+        targets[rref] = (TOMM(c.x), TOMM(c.y))
+    for ref, v, near in circ.DECOUPLING:
+        c = add_fp(board, circ.FP["c100n"] if v == "100n" else circ.FP["c4u7"], ref, v, side="B")
+        parts.append(c)
+        if near:        # LED decoupling next to the corner LEDs, away from the MCU
+            led = board.FindFootprintByReference(near).GetPosition()
+            targets[ref] = (TOMM(led.x), TOMM(led.y) + 3.0)
+    tp = add_fp(board, circ.FP["tp"], "TP1", "UPDI", side="B"); parts.append(tp)
     targets["TP1"] = (revc.key_xy(2, 0)[0] + P / 2, Y0 + 2 * R + 5.5)
+    apply_netlist(board, netlist)
 
     outline = pcbnew.SHAPE_POLY_SET(); board.GetBoardPolygonOutlines(outline, False)
     placer = revb.Placer(board, outline)
@@ -258,6 +264,22 @@ def stage1():
     if ring is not None:
         board.Delete(ring)
     print("placement failed for:", failed or "none")
+    # turn the (square) MCU so that its VDD pin faces the 100 nF at C1: the shortest supply
+    # loop, and the VDD pin (boxed in between GND and a key pin) escapes straight to it
+    vdd = next(p for p in mcu.Pads() if p.GetNetname() == "VCC")
+    c1 = board.FindFootprintByReference(circ.DECOUPLING[0][0])
+    c1_vcc = next(p for p in c1.Pads() if p.GetNetname() == "VCC").GetPosition()
+    best = min((0, 90, 180, 270), key=lambda a: (mcu.SetOrientationDegrees(a),
+                                                 (vdd.GetPosition() - c1_vcc).EuclideanNorm())[1])
+    rot = os.environ.get("MCU_ROT", "auto")      # the flow may try the other orientations
+    if rot == "stored" and circ.stored_orientation() is not None:
+        best = circ.stored_orientation()           # the one of the last clean board
+    elif rot not in ("auto", "stored"):
+        best = int(rot)
+    mcu.SetOrientationDegrees(best)
+    print("MCU orientation:", best)
+    if assign_pins(board, mcu):
+        sys.exit(3)         # the flow redraws the schematic with the new pin map and re-runs
 
     # no vias in or next to any SMD land (LEDs, sockets, MCU, passives, edge contacts): a
     # boxed-in pad otherwise gets a via-in-pad, which needs filled and capped vias
@@ -274,9 +296,8 @@ def stage1():
     # parts) becomes an almost continuous GND plane, the bottom carries the parts, the
     # signals, VCC and a stitched GND pour (see revc_mcu_route.sh)
     board.SetCopperLayerCount(2)
-    for n in ("VCC", "GND"):
-        revb.net(board, n)
     pcbnew.SaveBoard(BRD, board)
+    write_libs(board)
     shutil.copy(os.path.join(ROOT, "hardware", "kicad", "tile", "isomorphic_tile.kicad_pro"),
                 os.path.join(OUT, "revc_mcu.kicad_pro"))
     # the VQFN-20 has 0.40 mm pitch and 0.15 mm between pads: 0.2 mm clearance would make
@@ -297,6 +318,62 @@ def stage1():
         '  (constraint edge_clearance (min 0.05mm)))\n')
     pcbnew.ExportSpecctraDSN(pcbnew.LoadBoard(BRD), os.path.join(OUT, "revc_mcu.dsn"))
     print("stage 1 done")
+
+
+def assign_pins(board, mcu):
+    """Pin swapping: give the 15 interchangeable signals the pins whose angle around the MCU
+    matches, in order, the angle of where each signal goes, so that the fan-out has no
+    crossings. Returns True if the stored pin map changed."""
+    import math
+    c = mcu.GetPosition()
+    ang = lambda p: math.atan2(TOMM(p.y - c.y), TOMM(p.x - c.x))     # noqa: E731
+    pad_of_port = {port: mcu.FindPadByNumber(str(circ.PIN[port])) for port in circ.FLEX_PORTS}
+    ports = sorted(circ.FLEX_PORTS, key=lambda p: ang(pad_of_port[p].GetPosition()))
+    target = {}
+    for net in circ.FLEX_NETS:
+        pts = [p.GetPosition() for fp in board.GetFootprints() if fp.GetReference() != "U1"
+               for p in fp.Pads() if p.GetNetname() == net]
+        target[net] = math.atan2(sum(TOMM(p.y - c.y) for p in pts) / len(pts),
+                                 sum(TOMM(p.x - c.x) for p in pts) / len(pts))
+    nets = sorted(circ.FLEX_NETS, key=lambda n: target[n])
+    wrap = lambda a: abs((a + math.pi) % (2 * math.pi) - math.pi)   # noqa: E731
+    k = len(ports)
+    shift = min(range(k), key=lambda s: sum(wrap(ang(pad_of_port[ports[(i + s) % k]].GetPosition())
+                                                 - target[nets[i]]) for i in range(k)))
+    new = {nets[i]: ports[(i + shift) % k] for i in range(k)}
+    orientation = int(round(mcu.GetOrientationDegrees())) % 360
+    if new == circ.pinmap():
+        if circ.stored_orientation() != orientation:
+            circ.save_pinmap(new, orientation)
+        print("pin map: unchanged")
+        return False
+    circ.save_pinmap(new, orientation)
+    print("pin map: updated", circ.PINMAP_FILE)
+    return True
+
+
+def write_libs(board):
+    """project footprint libraries next to the board: the generated edge-contact footprints
+    (library 'revc') and the local Kailh socket library, so that the schematic's footprint
+    links resolve (ERC) and 'Update PCB from Schematic' works in the GUI"""
+    lib = os.path.join(OUT, "revc.pretty")
+    shutil.rmtree(lib, ignore_errors=True)
+    io = pcbnew.PCB_IO_KICAD_SEXPR()     # the path-guessing helpers find no plugin here
+    io.CreateLibrary(lib)
+    for ref, _ in circ.EDGE_CONTACT.values():
+        io.FootprintSave(lib, board.FindFootprintByReference(ref))
+    kailh = os.path.relpath(os.path.join(ROOT, "hardware", "kicad", "lib"), OUT)
+    write_fp_lib_table(OUT, "${KIPRJMOD}/" + kailh)
+
+
+def write_fp_lib_table(folder, kailh_dir):
+    open(os.path.join(folder, "fp-lib-table"), "w").write(
+        '(fp_lib_table\n\t(version 7)\n'
+        f'\t(lib (name "revc")(type "KiCad")(uri "${{KIPRJMOD}}/revc.pretty")(options "")'
+        '(descr "rev C edge contacts, generated by revc_mcu_build.py"))\n'
+        f'\t(lib (name "Switch_Keyboard_Hotswap_Kailh")(type "KiCad")'
+        f'(uri "{kailh_dir}/Switch_Keyboard_Hotswap_Kailh.pretty")(options "")'
+        '(descr "Kailh MX hot-swap socket (keyswitch-kicad-library v2.3)"))\n)\n')
 
 
 def stage2(ses=None):
@@ -342,4 +419,4 @@ if __name__ == "__main__":
     elif "--finish" in sys.argv:
         stage2(None)
     else:
-        stage1()
+        stage1(sys.argv[sys.argv.index("--netlist") + 1])

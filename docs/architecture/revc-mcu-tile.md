@@ -79,6 +79,8 @@ resistors: the switch goes to GND and the pin uses its internal pull-up.
   one-wire half-duplex (loop-back + open-drain). So 2 edges use the hardware USART and
   the other 2 use timer/pin-change based software serial. At the planned 100–250 kbit/s
   and 20 MHz this is comfortable.
+- Which port carries which key, edge line or LED data is decided by the board layout (pin
+  swapping, see below) and stored in `hardware/kicad/revc-mcu-tile/pinmap.json`.
 
 ## Power (5 V)
 
@@ -120,13 +122,40 @@ resistors: the switch goes to GND and the pin uses its internal pull-up.
 4. Programming in production: UPDI pad per tile, or UPDI through an edge contact to
    flash tiles in place.
 
+## Design flow: circuit -> schematic -> board
+
+`hardware/kicad/tile/scripts/revc_mcu_route.sh` runs the whole flow, open source end to end
+(KiCad 10 + KiCadRoutingTools in a rootless container):
+
+1. `revc_mcu_circuit.py` defines the circuit once: parts, fixed pin roles, nets, chain
+   order. The assignment of the 15 interchangeable MCU pins comes from
+   `hardware/kicad/revc-mcu-tile/pinmap.json` (step 3).
+2. `revc_mcu_schematic.py` draws it as a KiCad schematic (`revc_mcu.kicad_sch`, stock KiCad
+   symbols embedded, stable UUIDs so the file diffs cleanly).
+3. `kicad-cli` exports the netlist; `revc_mcu_build.py` builds the board and takes **every
+   net** from that netlist. It stops if the board and the schematic do not have the same
+   components and footprints, and it links each footprint to its symbol. After placement it
+   does the **pin swapping**: it gives the 15 interchangeable signals (12 keys, top and
+   left edge lines, LED data) the MCU pins whose angle around the package matches, in
+   order, the direction each signal goes, so that the fan-out of the 0.4 mm-pitch VQFN has
+   no crossings. If that changes `pinmap.json`, the flow redraws the schematic and builds
+   the board again. `pinmap.json` is also what the firmware reads (port of each key, edge
+   line and LED data). Fixed by design: PA0 = UPDI, PB2 and PA1 = bottom and right edges
+   (USART TX, default and alternate location).
+4. ERC on the schematic (errors stop the flow).
+5. Routing (below), then DRC **with the schematic parity check**: the board must match the
+   schematic net by net, footprint by footprint, field by field.
+
+The result is kept in `hardware/kicad/revc-mcu-tile/` (schematic, board, project, DRC rules,
+footprint libraries) and opens as a normal KiCad project: "Update PCB from Schematic" works.
+To change the circuit, edit `revc_mcu_circuit.py` and re-run the flow; edits made by hand
+in the schematic are overwritten by the next run.
+
 ## Routed layout (2 layers)
 
-`hardware/kicad/tile/scripts/revc_mcu_route.sh` builds and routes the tile, open source end
-to end (KiCad 10 Python + KiCadRoutingTools in a rootless container). The routed board is
-kept in `hardware/kicad/revc-mcu-tile/` and passes KiCad DRC with 0 errors and 0
-unconnected items. `tools/scripts/check_via_in_pad.py` finds no via within 0.2 mm of a
-same-net SMD pad.
+The routed board passes ERC (clean), DRC with 0 errors, 0 unconnected items and 0 schematic
+parity issues. `tools/scripts/check_via_in_pad.py` finds no via within 0.2 mm of a same-net
+SMD pad.
 
 - **Stack-up:** 2 layers. The top (switch side, no parts) is an almost continuous GND
   plane, the reference for every signal. The bottom carries all parts, the signals, VCC as
@@ -135,12 +164,22 @@ same-net SMD pad.
   vias, 0.25 mm hole clearance, 0.3 mm from the board edge.
 - **No via-in-pad:** a via-only rule area surrounds every SMD land (0.3 mm, 0.2 mm on the
   MCU), so no pad needs filled and capped vias.
-- **LED chain:** a serpentine. Rows 0 and 2 run left to right and row 1 right to left, so
-  every link goes to a neighbour; the LEDs of the left-to-right rows are turned 180°. The
-  chain order by key index is `0 1 2 3 7 6 5 4 8 9 10 11`, and the firmware must map
-  chain positions with it.
+- **LED chain:** it starts at D6, next to the MCU (which sits between D6 and D7), and every
+  link goes to a neighbouring key: D6 D5, D1 D2 D3 D4, D8 D7, D12 D11 D10 D9. LEDs whose
+  chain runs left to right are turned 180° so that DOUT faces the next LED. The chain
+  order by key index is `5 4 0 1 2 3 7 6 11 10 9 8` (`CHAIN` in `revc_mcu_circuit.py`);
+  the firmware maps chain positions with it.
+- **Reference designators:** SW1–SW12 and D1–D12 follow the keys in row-major order (row 0
+  = top row, left to right), with D<n> under SW<n>. J1–J4 are the edge contacts (right,
+  left, bottom, top), R1–R4 the series resistors (bottom, right, top, left edge), C1–C6
+  the capacitors, TP1 the UPDI pad.
+- **MCU orientation:** the flow tries the orientation of the last clean board (stored in
+  `pinmap.json`), then the one that faces the VDD pin to C1, then all four, and keeps the
+  first board that is fully clean. The routing result depends on small placement details,
+  so a search is more reliable than a single fixed choice. The stored board has the MCU at
+  90°.
 - **LED cut-outs:** a track-and-via rule area fences each reverse-mount LED cut-out (routers
   see only the outer outline). A custom DRC rule (`revc_mcu.kicad_dru`) accepts the
   library land pattern's pads next to their own cut-out.
-- **Decoupling:** 100 nF + 4.7 µF at the MCU and 100 nF next to the corner LEDs (D1, D4,
-  D9, D12).
+- **Decoupling:** 100 nF + 4.7 µF at the MCU (C1, C2) and 100 nF next to the corner LEDs
+  (C3–C6 at D1, D4, D9, D12).

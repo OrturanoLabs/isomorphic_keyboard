@@ -1,0 +1,46 @@
+{
+  "comment": "ATtiny1616 port for each signal of the rev C tile; written by revc_mcu_build.py from the board geometry (flexible), fixed by design (fixed)",
+  "mcu_orientation": 90,
+  "fixed": {
+    "UPDI": "PA0",
+    "DATA_B_MCU": "PB2",
+    "DATA_R_MCU": "PA1"
+  },
+  "flexible": {
+    "K1": "PB4",
+    "K2": "PB1",
+    "K3": "PC0",
+    "K4": "PC1",
+    "K5": "PB5",
+    "K6": "PB3",
+    "K7": "PC2",
+    "K8": "PC3",
+    "K9": "PA6",
+    "K10": "PA4",
+    "K11": "PA3",
+    "K12": "PA2",
+    "DATA_T_MCU": "PB0",
+    "DATA_L_MCU": "PA7",
+    "LED_DIN": "PA5"
+  },
+  "port_of": {
+    "DATA_B_MCU": "PB2",
+    "DATA_L_MCU": "PA7",
+    "DATA_R_MCU": "PA1",
+    "DATA_T_MCU": "PB0",
+    "K1": "PB4",
+    "K10": "PA4",
+    "K11": "PA3",
+    "K12": "PA2",
+    "K2": "PB1",
+    "K3": "PC0",
+    "K4": "PC1",
+    "K5": "PB5",
+    "K6": "PB3",
+    "K7": "PC2",
+    "K8": "PC3",
+    "K9": "PA6",
+    "LED_DIN": "PA5",
+    "UPDI": "PA0"
+  }
+}
