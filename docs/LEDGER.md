@@ -519,3 +519,18 @@ C105 MPN, and the clock routing in the GUI.
 - Lesson: Freerouting in a container plus KiCad in parallel can exhaust RAM on this
   machine. Run one heavy job at a time and don't leave several flatpak/podman jobs in the
   background.
+- Re-run with Freerouting capped (`--memory 2500m`, `JAVA_TOOL_OPTIONS=-Xmx1500m`): runs
+  fine. The memory pressure came from other programs (opencode about 8.7 GB,
+  rust-analyzer, 3 Julia language servers), not from the routing.
+- Trial 2 (In2 as a signal layer, VCC pour): 17 unconnected (VCC pour broken into islands);
+  the stitching vias shorted In2 tracks because `via_fits` only checked F/B. It now checks
+  all four copper layers.
+- Trial 3 (solid VCC plane on In2, stubs from the edge pads, fiducial rule areas):
+  **13 unconnected, 7 DRC errors.**
+  - 5 unconnected + errors: the top passive contacts sit in the 0.67 mm band between the
+    top edge and the row-0 sockets. The only ways out are the 3 inter-socket gaps
+    (~2.3 mm) + ~1.3 mm at the right end, i.e. 2 contacts per gap at 1.27 mm, 7 in total.
+  - 8 unconnected: internal nets. The tile area is fixed by the pitch, so two signal layers
+    are not enough.
+- **Open decisions (owner):** 7 top/bottom contacts (drop the duplicate GND) or 8 at 1.0 mm
+  pitch; 6-layer PCB vs 4 layers.

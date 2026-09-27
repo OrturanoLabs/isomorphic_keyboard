@@ -499,7 +499,9 @@ def via_fits(board, items, pos, netcode, extra=None, clearance=0.2):
     via.SetPosition(pos)
     via.SetWidth(MM(0.6))
     via.SetDrill(MM(0.3))
-    cands = [(via, pcbnew.F_Cu), (via, pcbnew.B_Cu)] + (extra or [])
+    # a through via exists on every copper layer: check the inner ones too (signals may be
+    # routed on In2, e.g. in the rev-C concept)
+    cands = [(via, pcbnew.F_Cu), (via, pcbnew.In1_Cu), (via, pcbnew.In2_Cu), (via, pcbnew.B_Cu)] + (extra or [])
     for it in items:
         # same-net tracks/vias may touch; same-net SMD pads may not (a via on a pad or in
         # its paste opening wicks solder), so only the stub itself may reach its pad

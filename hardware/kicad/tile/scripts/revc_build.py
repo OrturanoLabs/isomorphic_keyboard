@@ -126,6 +126,36 @@ def make_contacts(board, nets_by_conn):
         fp.SetBoardOnly(True)
         fp.SetExcludedFromBOM(True)
         fp.SetExcludedFromPosFiles(True)
+        if side in ("left", "top"):
+            # edge pads sit inside the router's board-edge keep-out: give each one a short
+            # stub towards the inside, so the router can reach it
+            for pad in fp.Pads():
+                c = pad.GetPosition()
+                if side == "left":
+                    a = pcbnew.VECTOR2I(c.x + MM(w / 2 - 0.05), c.y)
+                    b = pcbnew.VECTOR2I(c.x + MM(w / 2 + 0.9), c.y)
+                else:
+                    a = pcbnew.VECTOR2I(c.x, c.y + MM(h / 2 - 0.05))
+                    b = pcbnew.VECTOR2I(c.x, c.y + MM(h / 2 + 0.9))
+                t = pcbnew.PCB_TRACK(board)
+                t.SetStart(a); t.SetEnd(b); t.SetWidth(MM(0.25)); t.SetLayer(pcbnew.B_Cu)
+                t.SetNet(pad.GetNet())
+                board.Add(t)
+
+
+def keepout_circle(board, centre, radius):
+    """Rule area (no tracks, no vias) around a fiducial; exported to the router as keep-out."""
+    z = pcbnew.ZONE(board)
+    z.SetIsRuleArea(True)
+    z.SetDoNotAllowTracks(True); z.SetDoNotAllowVias(True); z.SetDoNotAllowPads(False)
+    z.SetDoNotAllowZoneFills(False); z.SetDoNotAllowFootprints(False)
+    ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu); ls.AddLayer(pcbnew.B_Cu)
+    z.SetLayerSet(ls)
+    o = z.Outline(); o.NewOutline()
+    for k in range(16):
+        a = 2 * math.pi * k / 16
+        o.Append(int(centre.x + MM(radius) * math.cos(a)), int(centre.y + MM(radius) * math.sin(a)))
+    board.Add(z)
 
 
 def stage1():
@@ -238,6 +268,7 @@ def stage1():
             fpad.SetLocalClearance(MM(1.0))
         try:
             placer.place(f, "B", tgt, "key", rotations=(0,), rmax=15)
+            keepout_circle(board, f.GetPosition(), 1.6)
         except RuntimeError:
             failed.append(ref)
     revb.mark_board_only(board)
@@ -245,10 +276,11 @@ def stage1():
 
     board.SetCopperLayerCount(4)
     board.SetLayerType(pcbnew.In1_Cu, pcbnew.LT_POWER)
-    # the 18.4 mm tile is too dense for two signal layers: In2 carries signals and VCC is a
-    # pour around them (filled in stage 2); In1 stays a solid GND reference plane
-    board.SetLayerType(pcbnew.In2_Cu, pcbnew.LT_SIGNAL)
+    # In1 = solid GND plane, In2 = solid VCC plane (a VCC pour around In2 signals broke into
+    # islands in the first trial)
+    board.SetLayerType(pcbnew.In2_Cu, pcbnew.LT_POWER)
     revb.add_zone(board, outline_poly, pcbnew.In1_Cu, "GND")
+    revb.add_zone(board, outline_poly, pcbnew.In2_Cu, "VCC")
     revb.POWER = ("VCC", "GND")
     revb.fanout_power(board)
     pcbnew.SaveBoard(BRD, board)
@@ -286,7 +318,6 @@ def stage2(ses):
     print("stitching vias:", n)
     revb.add_zone(board, outline_poly, pcbnew.F_Cu, "GND")
     revb.add_zone(board, outline_poly, pcbnew.B_Cu, "GND")
-    revb.add_zone(board, outline_poly, pcbnew.In2_Cu, "VCC")
     revb.fix_text_mirroring(board)
     board.BuildConnectivity()
     pcbnew.ZONE_FILLER(board).Fill(board.Zones())
