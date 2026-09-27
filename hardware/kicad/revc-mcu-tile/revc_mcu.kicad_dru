@@ -1,0 +1,4 @@
+(version 1)
+(rule "reverse-mount LED pads next to their cut-out"
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('D*')")
+  (constraint edge_clearance (min 0.05mm)))

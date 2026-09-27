@@ -571,3 +571,38 @@ C105 MPN, and the clock routing in the GUI.
 - Owner's friend: with a microcontroller tile the PCB can be **2 layers** (no fast
   inter-tile clock any more, low density, the top side is free for a GND pour).
   To confirm when routing the MCU tile.
+
+## 2026-09-27 — Rev C microcontroller tile: 3 contacts, routed on 2 layers
+
+- 3 contacts per edge (VCC, DATA, GND) instead of 5: the top pads fit in the row-0 socket
+  gaps, and the bottom springs fall between the row-2 LEDs.
+- Routing with KiCadRoutingTools (`revc_mcu_route.sh`). The attempts, in order:
+  - Parts packed around the MCU: 13 nets open. Spreading them by function, a 2.5 mm
+    placement ring around the VQFN and 0.15 mm clearance brought it to 2.
+  - Routers route through the reverse-mount LED cut-outs, so a rule area now fences each
+    one. KiCad flagged the library land pattern's pads against their own cut-out;
+    a custom rule allows it. `A.Parent.Reference == 'D*'` did not match; the rule
+    works with `A.memberOfFootprint('D*')`.
+  - GND pours on both sides plus stitching, with VCC routed: GND islands and 3 open VCC
+    links.
+  - VCC plane on top (KRT `route_planes.py`), GND routed: GND never closed. KRT's default
+    layer costs (F.Cu 1, B.Cu 3) also put signals on the plane side and cut it. A sweep of
+    layer costs (1/1, 1.5/1, 2/1, 1/2, 3/1, 4/1) gave no clean run.
+  - KRT dropped **vias inside boxed-in pads** (LED DOUT, MCU, edge contacts) even with
+    `--same-net-pad-clearance 0.3`, and marked them "filled + capped" (IPC-4761 type VII,
+    an expensive process). A via-only rule area around every SMD land prevents it. It is
+    0.3 mm around every land except the MCU, which needs 0.2 mm or its pins cannot escape.
+  - The MCU paste-only sub-pads had been given the GND net; KRT then tried to route pads
+    that have no copper. They now have no net.
+  - The LED chain in row-major order made a 60 mm link (D4 → D5) across the board. It is
+    now a serpentine: every link goes to a neighbour.
+  - The repair passes read only the "open" nets. Nets they ripped up and could not restore
+    ("ripped_open") stayed broken; the loop now re-queues them, up to 10 passes with
+    rotating search settings.
+  - **Final scheme:** GND plane on top (the net with the most pads, about 37, reaches it
+    with one via each), VCC as tracks on the bottom, GND pour on the bottom stitched to the
+    top.
+- **Result:** KiCad DRC 0 errors, 0 unconnected; no via within 0.2 mm of a same-net SMD
+  pad. Warnings only: silkscreen overlaps, library footprint notes.
+- The routed board is kept in `hardware/kicad/revc-mcu-tile/` (`production/` is ignored).
+  It still needs a human review in KiCad.
