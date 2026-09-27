@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SUPERSEDED by fit_measurement.py (calibrated model with the AD2 front end); kept for history.
 # SPDX-License-Identifier: GPL-3.0-only
 """First-order signal-integrity model of the board clock (pico-ice -> first tile).
 

@@ -78,14 +78,49 @@ Rev-B design, function unchanged:
   (`VCC_T`), L4 signal. The prepreg is 0.21 mm, so the 0.3 mm `Interboard` tracks are about
   55 Ω. There is a 4 mm grid of ground stitching vias.
 
-SPICE results (`hardware/si/`, generic models with input clamp diodes; to be calibrated
-against a clean measurement):
+### Simulation results (`hardware/si/`, updated 2026-09-27)
 
-| Tile-to-tile clock hop | Overshoot | Undershoot |
-|---|---|---|
-| rev A (2 layers, ~110 Ω, 141 mm tree, no series R) | 22 % | −0.73 V |
-| rev B as routed (4 layers, ~55 Ω, 20 mm + 141 mm, 33 Ω) | 1 % | −0.03 V |
+Models:
 
-For the controller link (pico-ice → first tile over dupont wires), about 150 Ω in series
-at the pico-ice removes the overshoot in the model. An adapter with series resistors and
-a ground wire next to each signal is recommended.
+- The TI parts use their **vendor IBIS data** (`models/*.ibs`, converted by
+  `ibis_lite.py`). LVC outputs switch in about 0.5–0.75 ns, and LVC inputs have **no clamp
+  to VCC** (they are 5 V tolerant), so overshoot is not limited by the receivers.
+- The pico-ice driver and the dupont link are **calibrated on the rev-A capture**, which
+  was digitised from the phone photo (`digitize_scope.py`, `fit_measurement.py`). The AD2
+  front end is modelled as 24 pF || 1 MΩ with a 30 MHz Butterworth.
+
+![Tile hop with IBIS models](../media/si-tile-hop-ibis.png)
+
+| Tile-to-tile clock hop (IBIS, far load) | Overshoot | Undershoot | Crossings of VIH on a rising edge |
+|---|---|---|---|
+| rev A (2 layers, ~110 Ω, no series R) | 76 % | −0.96 V | **7: the edge rings back below 2.0 V** |
+| rev B as routed (4 layers, ~55 Ω, 33 Ω) | 14 % | −0.60 V | 1 |
+| rev B with 22 Ω | 27 % | −0.86 V | 1 |
+| rev B with 47 Ω | 2 % | −0.11 V | 1 (but the falling edge dwells on VIL) |
+
+These are lossless, typical-corner models, so they are pessimistic: rev A does work on
+the bench. The conclusion is relative: **rev A has little or no margin against double
+clocking, rev B with 33 Ω has a large one.** 33 Ω is the right value; 47 Ω makes the far
+end step at the threshold.
+
+![Calibrated model vs the rev-A capture](../media/si-fit-rev-a-capture.png)
+
+Controller link (pico-ice → first tile over dupont wires), calibrated model (RMS error
+0.20 V against the digitised capture):
+
+- The AD2 view reproduces the capture. The node the logic sees has about **38 %
+  overshoot, −0.8 V undershoot and a stepped rising edge**, most of which the 30 MHz AD2
+  cannot show.
+- A spring ground tip on the AD2 would barely change the picture (RMS 0.207 V vs 0.203 V).
+  The instrument bandwidth, not the ground lead, hides the problem. See
+  [measuring](../build/measuring.md).
+- A series resistor at the pico-ice outputs (on an adapter board), from `controller_fix.py`:
+
+| Series R | Overshoot | Undershoot | Clean single crossings |
+|---|---|---|---|
+| 0 Ω (today) | 38 % | −0.78 V | no (3 on VIH) |
+| 100 Ω | 13 % | −0.35 V | **yes** |
+| 150–220 Ω | 1–5 % | ≈0 V | no (slow step on VIH) |
+
+  **Recommendation: 100 Ω.** Confirm it on the bench: the fitted driver resistance ended
+  at its bound, so the model is not unique.

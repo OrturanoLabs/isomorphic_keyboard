@@ -1,0 +1,10 @@
+# KiCadRoutingTools (https://github.com/drandyhaas/KiCadRoutingTools, MIT), headless CLI.
+# Build:  podman build -t localhost/krt tools/containers/kicad-routing-tools
+FROM docker.io/library/python:3.12-slim
+ARG KRT_REF=main
+RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates curl \
+ && rm -rf /var/lib/apt/lists/*
+RUN git clone --depth 1 --branch ${KRT_REF} https://github.com/drandyhaas/KiCadRoutingTools /opt/krt \
+ && pip install --no-cache-dir -r /opt/krt/requirements.txt \
+ && cd /opt/krt && python build_router.py
+WORKDIR /work

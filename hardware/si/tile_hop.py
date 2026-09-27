@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SUPERSEDED by tile_hop_ibis.py (vendor IBIS models); kept for the ledger history.
 # SPDX-License-Identifier: GPL-3.0-only
 """Tile-to-tile clock hop: U101/U107 ('126/'125 LVC buffer) -> own track -> edge connector
 -> the neighbour's B_clk tree (6 CMOS inputs spread along the track).

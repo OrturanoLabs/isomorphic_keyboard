@@ -385,6 +385,76 @@ C105 MPN, and the clock routing in the GUI.
     old zone fills overlap the new mouse-bite holes.
   - With the refill: panel DRC 0 errors.
 
+## 2026-09-27 — SPICE refinement without new hardware (branch `rev-b`)
+
+- **Digitised the scope photo** (`hardware/si/digitize_scope.py`).
+  - Grid lines are detected by colour, and there is a keystone correction (the photo is
+    oblique: 215 px/div at the top vs 210 px/div at the bottom).
+  - Channel 2 has a +3.6 V display offset.
+  - Pitfalls: `np.interp` clamps outside the calibration range (use a linear fit), and the
+    WaveForms toolbar has blue/yellow pixels (ignore y < 250 px).
+  - Result: levels 3.05 / −0.1 V, overshoot to 3.9 V, undershoot to −1.0 V, ringing
+    ~16–20 MHz, and only 10 ns per sample (100 MS/s).
+- **Vendor models:** TI IBIS files come from `https://www.ti.com/lit/zip/<id>`. The IDs
+  are listed on the product pages: SCEM288 (LVC2G125), SCEM283 (LVC2G126), SCEM216
+  (LVC1G04); the `.cir` SPICE models (SCEM6xx) are TINA behavioural models from datasheet
+  values, less useful. No IBIS was found for SN74LVC165A or the iCE40UP5K. LVC inputs have
+  a GND clamp only.
+- `ibis_lite.py`: IBIS → ngspice with B-sources + `pwl()` tables, and linear switching
+  coefficients from `[Ramp]`.
+- **Bug found and fixed:** my AD2 Butterworth had Q = 1.41 instead of 0.707, so it rang
+  by itself (30 % overshoot). Always check a filter's step response
+  (now 4.3 % overshoot and 11.4 ns rise, as expected). The first calibration run, done
+  with the bad filter, was thrown away.
+- **Calibration** (Nelder–Mead on 9 parameters, about 10 minutes): RMS 0.20 V. Several
+  parameters hit their bounds, so the model is plausible but not unique.
+  - The AD2 views, the node view and the controller-R sweep are in
+    `docs/architecture/electrical.md`.
+  - Main answers: the spring tip barely matters with a 30 MHz instrument; the real node at
+    the first tile rings more than the capture shows; a series resistor at the pico-ice
+    (about 100 Ω) fixes the controller link.
+- **IBIS tile hop:** rev A far load 76 % overshoot with 7 VIH crossings (pessimistic
+  lossless model); rev B with 33 Ω: 14 %, clean. 47 Ω dwells on VIL, so 33 Ω stays.
+- **ngspice pitfalls:**
+  - Some parameter corners make ngspice crawl. Every run now has a subprocess timeout,
+    and the fit treats a timeout as a high cost.
+  - A 200 MHz front-end view stalled the solver, so it was dropped (the node view is the
+    ideal-instrument reference).
+- **Shell pitfall:** `pkill -f <pattern>` / `pgrep -f` also match the invoking shell when
+  the pattern appears in the same command line, and exit 144 kills the tool call. Kill by
+  PID or with `pgrep -x ngspice`.
+
+## 2026-09-27 — Autorouter comparison: KiCadRoutingTools vs Freerouting (rev B)
+
+- KiCadRoutingTools (KRT, MIT, <https://github.com/drandyhaas/KiCadRoutingTools>) runs
+  rootless in `tools/containers/kicad-routing-tools` (prebuilt Rust core downloaded by
+  `build_router.py`). Freerouting 2.4.1 runs in `tools/containers/freerouting`.
+- Same input for both: the rev-B stage-1 board (placement, planes, power fan-out). Same
+  finishing and the same DRC rules afterwards (`production/bench/finish.py`).
+
+  | | KRT (default options) | Freerouting (no optimiser) |
+  |---|---|---|
+  | Time | ~24 s (routing core 1.8 s) | 100 s |
+  | Unconnected | 0 | 1 |
+  | Track length | 1843 mm | 1889 mm |
+
+- **KRT's fab check found a real defect in the committed rev B:** 83 vias within 0.2 mm
+  of an SMD pad. My fan-out put the via right at the pad edge, and the same-net pads of
+  U109 pins 3–6 sat next to each other. Fixed: via centre ≥ half-pad + 0.65 mm, same-net
+  pads are obstacles too. New check `tools/scripts/check_via_in_pad.py`, run by the
+  pipeline and by `production.sh`. The new rev B has 0.
+- KRT caveats:
+  - By default it **escalates** (smaller vias, 0.175 mm clearance) and puts **vias in
+    pads** to finish. Use `--escalation board`, `--same-net-pad-clearance 0.3` and
+    `--hole-to-hole-clearance 0.25`.
+  - **Copy the `.kicad_pro` next to the board it reads.** Otherwise it ignores the
+    project rules (hole clearance 0.25 → 5 DRC errors) and writes its own `.kicad_pro`.
+  - With strict options it leaves 1–2 connections open around U101/U107/U103 on this
+    placement, whatever the ordering, grid (0.05 mm), rip-up or pass order. A Freerouting
+    "completion pass" on the KRT board did not keep the KRT wiring (it restarted from 128
+    unrouted nets). **Decision:** pipeline default `ROUTER=freerouting` (DRC clean);
+    `ROUTER=krt` available. Loosen the placement around U101/U107/U103 before switching.
+- zsh pitfall: `$BASE:hardware/...` is parsed as the zsh `:h` modifier. Write `${BASE}:...`.
 ## 2026-09-27 — Rev C study: single-board tile (branch `rev-c`)
 
 - Worked in a separate git worktree (`../isomorphic_keyboard-revc`), so rev-B SI work
