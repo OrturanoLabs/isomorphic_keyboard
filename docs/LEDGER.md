@@ -384,3 +384,31 @@ C105 MPN, and the clock routing in the GUI.
   - Without `--post 'refillzones: true'` the panel has 199 `hole_clearance` errors: the
     old zone fills overlap the new mouse-bite holes.
   - With the refill: panel DRC 0 errors.
+
+## 2026-09-27 — Rev C study: single-board tile (branch `rev-c`)
+
+- Worked in a separate git worktree (`../isomorphic_keyboard-revc`), so rev-B SI work
+  could run in parallel.
+- Stack transform logic → key board: (+10.96, −60.90) mm, from the J105/J106 ↔ J107/J108
+  pads. Rev A has a 0.04 mm mismatch between the two stacking pairs. Tile lattice:
+  right (+80, 0), up (+10, −51.96); mated edge header/socket pads are 13.9 mm apart.
+- Folding the logic onto the key-board bottom: the edge connectors at their rev-A/B
+  positions produce 61 conflicts (pins under switch bodies, in the 4/3/1.75 mm switch
+  holes, on socket pads). **Infeasible with 2.54 mm right-angle headers.**
+- The logic parts fit: 40/42 as they are, **42/42** with U109 in TSSOP-16 and C105 as a
+  1210 ceramic.
+- Free windows along the edges (bottom side), measured by `revc_edges.py`:
+  - top edge: 76 mm free at 0.5 mm depth, only 6.2 mm windows at 2 mm depth;
+  - bottom edge: 10–27 mm windows;
+  - left edges: 8–10 mm windows;
+  - right edges: 11–12 mm windows.
+
+  This leads to the concept of passive castellations on top/left and spring contacts on
+  bottom/right, at 1.27 mm pitch.
+- The route test routes completely: DRC 0 errors / 0 unconnected.
+- **Pitfalls:**
+  - Freerouting's optimiser can run for a long time after routing is done. Killing it with
+    `timeout` leaves no SES at all. Use `--router.optimizer.enabled=false` for feasibility
+    runs.
+  - When merging nets, map both names to one canonical name (the key-board name, with
+    `*_T` rails → main rails). A one-directional map renamed VCC to VCC_T.
