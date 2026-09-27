@@ -554,3 +554,20 @@ C105 MPN, and the clock routing in the GUI.
   contact still collides, and power distribution breaks for isolated columns);
   (3) no LEDs on the bottom row. Leaning to (1), after checking the MX RGB housing
   clearance.
+
+## 2026-09-27 — GAL experiment (for comparison)
+
+- An EPROM alone is combinational memory: no state, so it cannot replace a counter, a flag
+  and shift registers without extra register chips. Its 1980s sibling with registers,
+  the GAL/PLD, can.
+- `hardware/gal/tile_glue.pld`: the 7 rev-A/B glue ICs in one **ATF22V10C**. galette 0.3.0
+  (Rust, open source, container `tools/containers/galette`) assembles it: **10/10
+  macrocells used**, JEDEC produced.
+- galasm/galette syntax lessons:
+  - tri-state outputs need `.T` plus `.E`;
+  - in the 22V10 **OE and AR are single product terms**, so there is no OR. T_clk became
+    "driven low when unselected", and AR uses the LATCH output feedback.
+- Not simulated. Kept as a documented alternative: it gives no LED return path.
+- Owner's friend: with a microcontroller tile the PCB can be **2 layers** (no fast
+  inter-tile clock any more, low density, the top side is free for a GND pour).
+  To confirm when routing the MCU tile.

@@ -1,0 +1,29 @@
+
+
+                                GAL22V10
+
+                          -------\___/-------
+                     BCLK |  1           24 | VCC
+                          |                 |
+                   BLATCH |  2           23 | DS
+                          |                 |
+                   RLATCH |  3           22 | NPL
+                          |                 |
+                       TW |  4           21 | LATCH
+                          |                 |
+                   BFIRST |  5           20 | LCLK
+                          |                 |
+                    TDATA |  6           19 | TCLK
+                          |                 |
+                    LDATA |  7           18 | BW
+                          |                 |
+                    BDATA |  8           17 | Q3
+                          |                 |
+                       NC |  9           16 | Q2
+                          |                 |
+                       NC | 10           15 | Q1
+                          |                 |
+                       NC | 11           14 | Q0
+                          |                 |
+                      GND | 12           13 | NC
+                          -------------------

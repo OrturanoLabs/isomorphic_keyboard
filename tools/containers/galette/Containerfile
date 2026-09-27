@@ -1,0 +1,8 @@
+# galette: open-source GAL assembler (galasm-compatible), https://github.com/simon-frankau/galette
+# Build:  podman build -t localhost/galette tools/containers/galette
+FROM docker.io/library/rust:1-slim AS build
+RUN cargo install galette --root /opt/galette
+FROM docker.io/library/debian:trixie-slim
+COPY --from=build /opt/galette/bin/galette /usr/local/bin/galette
+WORKDIR /work
+ENTRYPOINT ["galette"]
