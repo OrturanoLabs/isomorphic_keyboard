@@ -1,0 +1,5373 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-12T10:55:33",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "coupon_spring.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 33.22
+                    },
+                    "uuid": "c87bb52e-231f-4bfd-aa40-187321bb1588"
+                },
+                {
+                    "description": "PCB text 'COUPON A: chassis spring pad row (pitch 3.25 mm) + demo detect straps; keys for fit only. DRAFT - no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "10402b49-9928-416d-ba11-8f8a704172d7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 33.22
+                    },
+                    "uuid": "c87bb52e-231f-4bfd-aa40-187321bb1588"
+                },
+                {
+                    "description": "PCB text 'study: connectors/out/placement.json' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 31.82
+                    },
+                    "uuid": "759f5134-0cfc-47d8-b990-73ad5552c8a7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "10dcca4a-3de7-4286-a167-fe38a272e89d"
+                },
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of PJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d18df136-23fe-4e73-9db7-c940493b14ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4c745133-f4b3-42a7-8718-236fbd714aee"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a619e43c-0e22-4e3e-b6d3-0ee51ab882d8"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                },
+                {
+                    "description": "Reference field of PJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "c5f2e25d-0aa8-4392-9bfb-70a1f024281b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of TPJ103_1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "a2b88518-a2ec-4f93-afd2-3b62793119a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "74fe23cd-75ab-4696-a5ed-b50f1f6a6c5f"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "60343859-65e3-424e-83d4-72bc478ffe9e"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_8",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "197a46e1-27f8-41f0-8aa1-6f7cd523d99d"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "39d96e94-8ef4-49be-a539-5517425f9296"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "8d594ad0-7247-4d90-9d5b-c8ce194d9b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_5",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3385bc6b-0b94-4475-8bac-0ef511bd22fb"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of ST2a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "86312e48-318d-4131-93ec-6660cd37a818"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST2b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a630735-1649-456a-8c63-9cd0381d03b1"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST0a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2fb53e96-ea05-4f01-98ed-4773e85cb1a9"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "43e57eb2-f98a-4aca-a028-2eb51a679828"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of PJ103_6",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "98f2f982-e5df-4703-94d0-caf2a48ecf29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of ST1a",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "de38b570-51d3-4d8a-b2a5-7abcd8fc02c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of PJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "30adfc9d-6ff4-4a07-b1fb-fc420967bf96"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_3",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "456c4f78-334c-4235-bb90-2fe8855cfaa7"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of TPJ103_7",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "bff891b3-bbbb-4f0b-ab03-b78e8180f884"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TPJ103_2",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "447d662b-8fa6-4ec9-8d86-d33b1bc11597"
+                },
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of ST0b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d27b1d27-0c22-439c-8fe7-51e02ee079bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ST1b",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5e8f56a3-2a93-46d5-b660-1e829f0bde8a"
+                },
+                {
+                    "description": "Reference field of TPJ103_4",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "6af5d10b-38f5-4a6c-a0b2-983f30269229"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON A: chassis spring pad row (pitch 3.25 mm) + demo detect straps; keys for fit only. DRAFT - no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "10402b49-9928-416d-ba11-8f8a704172d7"
+                },
+                {
+                    "description": "Pad 2 [K10_C] of SW10 on B.Cu",
+                    "pos": {
+                        "x": 42.041607,
+                        "y": 3.58
+                    },
+                    "uuid": "a7bbf9eb-75fa-403d-bd10-e35fc0fce86a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON A: chassis spring pad row (pitch 3.25 mm) + demo detect straps; keys for fit only. DRAFT - no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "10402b49-9928-416d-ba11-8f8a704172d7"
+                },
+                {
+                    "description": "NPTH pad of SW10",
+                    "pos": {
+                        "x": 38.739607,
+                        "y": 3.58
+                    },
+                    "uuid": "87ee5100-a20a-4d58-8939-722e64ce1a25"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON A: chassis spring pad row (pitch 3.25 mm) + demo detect straps; keys for fit only. DRAFT - no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "10402b49-9928-416d-ba11-8f8a704172d7"
+                },
+                {
+                    "description": "Pad 2 [K00_C] of SW00 on B.Cu",
+                    "pos": {
+                        "x": 23.681869,
+                        "y": 3.58
+                    },
+                    "uuid": "c48e1957-1a38-4190-a823-8a6c162d0cd3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON A: chassis spring pad row (pitch 3.25 mm) + demo detect straps; keys for fit only. DRAFT - no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "10402b49-9928-416d-ba11-8f8a704172d7"
+                },
+                {
+                    "description": "NPTH pad of SW00",
+                    "pos": {
+                        "x": 20.379869,
+                        "y": 3.58
+                    },
+                    "uuid": "1c2ced19-f0ef-4ea2-a615-b816981e9839"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'study: connectors/out/placement.json' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 31.82
+                    },
+                    "uuid": "759f5134-0cfc-47d8-b990-73ad5552c8a7"
+                },
+                {
+                    "description": "Pad 1 [J103.3] of PJ103_3 on B.Cu",
+                    "pos": {
+                        "x": 17.554803,
+                        "y": 30.97
+                    },
+                    "uuid": "a39001f5-0f92-4ab6-82dd-12a4e77a8f18"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'study: connectors/out/placement.json' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 31.82
+                    },
+                    "uuid": "759f5134-0cfc-47d8-b990-73ad5552c8a7"
+                },
+                {
+                    "description": "Pad 1 [J103.2] of PJ103_2 on B.Cu",
+                    "pos": {
+                        "x": 14.304803,
+                        "y": 30.97
+                    },
+                    "uuid": "b851f69a-1f6e-4cea-a73c-a47edc736a60"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'study: connectors/out/placement.json' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 31.82
+                    },
+                    "uuid": "759f5134-0cfc-47d8-b990-73ad5552c8a7"
+                },
+                {
+                    "description": "Pad 1 [J103.1] of PJ103_1 on B.Cu",
+                    "pos": {
+                        "x": 11.054803,
+                        "y": 30.97
+                    },
+                    "uuid": "47bf7a94-c36e-4c95-b4ad-930e8f5cdd66"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+GAL22V10
+TILEGLUE
+
+BCLK  BLATCH RLATCH TW  BFIRST TDATA LDATA BDATA NC   NC    NC   GND
+NC    Q0     Q1     Q2  Q3     BW    TCLK  LCLK  LATCH NPL  DS   VCC
+
+; --- bit counter ('161 in rev A/B), clocked by the board clock, cleared by the latch ---
+Q0.R  = /Q0
+Q1.R  = Q1 * /Q0 + /Q1 * Q0
+Q2.R  = Q2 * /Q1 + Q2 * /Q0 + /Q2 * Q1 * Q0
+Q3.R  = Q3 * /Q2 + Q3 * /Q1 + Q3 * /Q0 + /Q3 * Q2 * Q1 * Q0
+Q0.E  = GND
+Q1.E  = GND
+Q2.E  = GND
+Q3.E  = GND
+
+; --- column-end flag ('74 + 2G08 + 2G32): sticky, set when the passing frame's last bit
+;     (T_endcol of that tile) is 1 at the 16-bit boundary; drives B_W towards the tile below
+BW.R  = BW + BDATA * Q0 * Q1 * Q2 * Q3
+
+; --- clock towards the top (W = 0) or the left (W = 1), W = T_W * B_first ('125/'126) ---
+; T_clk: the 22V10 output enable is a single product term and W = 0 needs an OR, so T_clk
+; is driven low when not selected instead of floating (a falling edge at most: the
+; registers count rising edges, so no spurious clock)
+TCLK  = BCLK * /TW + BCLK * /BFIRST
+LCLK.T = BCLK
+LCLK.E = TW * BFIRST
+
+; --- latch merge ('32 + '04): to the neighbours and, inverted, to the '165 /PL ---
+LATCH = BLATCH + RLATCH
+NPL   = /BLATCH * /RLATCH
+
+; --- serial input of the '165 chain: from the left when W = 1, from the top otherwise ---
+DS    = TW * BFIRST * LDATA + /TW * TDATA + /BFIRST * TDATA
+
+; asynchronous reset of every register while the latch is high (AR is a single product
+; term in the 22V10, so it uses the feedback of the LATCH output = B_latch + R_latch)
+AR    = LATCH
+SP    = GND
+
+DESCRIPTION
+
+Isomorphic keyboard tile, rev-A/B glue logic in one ATF22V10C.
+Replaces U101 (2G126), U102 (2G08), U105 (1G04), U106 (2G32), U107 (2G125),
+U108 (2G74) and U109 ('161). The two '165 shift registers stay.
+Derived 1:1 from the rev-A netlist (hardware/kicad/tile). One deliberate difference:
+T_clk is driven low instead of tri-stated when the chain turns left (W = 1).

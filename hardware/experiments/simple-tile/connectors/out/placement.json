@@ -1,0 +1,3203 @@
+{
+ "params": {
+  "body": 15.6,
+  "body_margin": 0.3,
+  "rows": 3,
+  "cols": 4,
+  "edge_clear": 0.3,
+  "rib_gap": 1.0,
+  "board_thickness": 1.6,
+  "board_edge_tol": 0.1,
+  "clr_hole": 0.5,
+  "clr_pad": 0.3,
+  "grid": 0.25,
+  "cap_gap": 0.5,
+  "pogo_pad_d": 2.5,
+  "pogo_gap": 0.75,
+  "tol_chassis_xy": 0.35,
+  "strap_pad_w": 2.0,
+  "strap_pad_h": 1.2,
+  "spr_s1941_w": 9.59,
+  "spr_s1941_d": 5.7,
+  "spr_s1971_w": 4.63,
+  "spr_s1971_d": 3.7,
+  "spr_bank_gap": 0.3,
+  "spr_body_clr": 0.5,
+  "mezz_clear": 0.5,
+  "mezz_escape": 2.5,
+  "z_guard": 0.5,
+  "bottom_ext": 0.0
+ },
+ "sources": {
+  "kailh_footprint": "https://github.com/perigoso/keyswitch-kicad-library",
+  "mx_body": "https://www.cherrymx.de/en/mx-original/mx-red.html",
+  "df12_series": "https://www.hirose.com/en/product/series/DF12",
+  "df12_footprint": "https://www.hirose.com/product/document?clcode=CL0537-0834-6-81",
+  "gecko_footprint": "https://content.harwin.com/m/62fd8add13144f50/original/DRG-00182-Technical-Drawing-Datasheet-G125-MVXXX05LXP-pdf.pdf",
+  "spring_s1941": "https://www.harwin.com/products/S1941-42R",
+  "spring_s1971": "https://www.harwin.com/products/S1971-46R",
+  "spring_range": "https://content.harwin.com/asset/b78b8265-eabd-4ec9-b6e1-cca806faa177/PD013-Product-Datasheet-SPRING-CONTACTS-SMT-Spring-Contacts-EZi.pdf"
+ },
+ "lattice": {
+  "P": 18.359738560230102,
+  "R": 15.9
+ },
+ "interface": {
+  "contacts": {
+   "top": [
+    [
+     "VCC",
+     "J102.1"
+    ],
+    [
+     "T_clk",
+     "J102.2"
+    ],
+    [
+     "T_data",
+     "J102.3"
+    ],
+    [
+     "T_endcol",
+     "J102.4"
+    ],
+    [
+     "GND",
+     "J102.5"
+    ],
+    [
+     "L_latch",
+     "J102.6"
+    ],
+    [
+     "T_W",
+     "J102.7"
+    ],
+    [
+     "GND",
+     "J102.8"
+    ]
+   ],
+   "bottom": [
+    [
+     "VCC",
+     "J103.1"
+    ],
+    [
+     "B_clk",
+     "J103.2"
+    ],
+    [
+     "B_data",
+     "J103.3"
+    ],
+    [
+     "GND",
+     "J103.4"
+    ],
+    [
+     "B_first",
+     "J103.5"
+    ],
+    [
+     "B_latch",
+     "J103.6"
+    ],
+    [
+     "B_W",
+     "J103.7"
+    ],
+    [
+     "GND",
+     "J103.8"
+    ]
+   ],
+   "left": [
+    [
+     "VCC",
+     "J101.1"
+    ],
+    [
+     "L_clk",
+     "J101.2"
+    ],
+    [
+     "L_data",
+     "J101.3"
+    ],
+    [
+     "L_endrow",
+     "J101.4"
+    ],
+    [
+     "L_latch",
+     "J101.5"
+    ],
+    [
+     "GND",
+     "J101.6"
+    ]
+   ],
+   "right": [
+    [
+     "VCC",
+     "J104.1"
+    ],
+    [
+     "B_clk",
+     "J104.2"
+    ],
+    [
+     "B_data",
+     "J104.3"
+    ],
+    [
+     "GND",
+     "J104.4"
+    ],
+    [
+     "R_latch",
+     "J104.5"
+    ],
+    [
+     "GND",
+     "J104.6"
+    ]
+   ]
+  },
+  "strap_lines": [
+   "DET_T",
+   "DET_L",
+   "DET_B"
+  ],
+  "inventory": {
+   "groups": {
+    "top": 8,
+    "bottom": 8,
+    "left": 6,
+    "right": 6
+   },
+   "pads_total": 28,
+   "nets_unique": [
+    "B_W",
+    "B_clk",
+    "B_data",
+    "B_first",
+    "B_latch",
+    "GND",
+    "L_clk",
+    "L_data",
+    "L_endrow",
+    "L_latch",
+    "R_latch",
+    "T_W",
+    "T_clk",
+    "T_data",
+    "T_endcol",
+    "VCC"
+   ],
+   "nets_count": 16
+  }
+ },
+ "keycaps": {
+  "hex": {
+   "name": "custom hexagonal cap (Voronoi cell of the lattice)",
+   "across_flats": 17.859738560230102,
+   "area": 276.2,
+   "min_gap_incl_cross_tile": 0.5
+  },
+  "square_at_P_minus_gap": {
+   "side": 17.859738560230102,
+   "area": 319.0,
+   "min_gap_incl_cross_tile": 0.0,
+   "verdict": "OVERLAPS - rejected"
+  },
+  "square_max_no_overlap": {
+   "side": 15.4,
+   "area": 237.2,
+   "min_gap_incl_cross_tile": 0.5
+  }
+ },
+ "footprint_reach_mm": 8.36,
+ "step_bbox_mm": {
+  "x": [
+   -7.8599998808,
+   6.6599998808
+  ],
+  "y": [
+   -0.25,
+   6.75
+  ],
+  "z": [
+   -4.44260833079,
+   0.0
+  ],
+  "n": 16027
+ },
+ "wrl_present": true,
+ "tiles": {
+  "stepped": {
+   "outline": [
+    [
+     -8.6799,
+     -8.6799
+    ],
+    [
+     63.7591,
+     -8.6799
+    ],
+    [
+     63.7591,
+     7.45
+    ],
+    [
+     54.5792,
+     7.45
+    ],
+    [
+     54.5792,
+     23.35
+    ],
+    [
+     45.3993,
+     23.35
+    ],
+    [
+     45.3993,
+     40.4799
+    ],
+    [
+     -27.0396,
+     40.4799
+    ],
+    [
+     -27.0396,
+     24.35
+    ],
+    [
+     -17.8597,
+     24.35
+    ],
+    [
+     -17.8597,
+     8.45
+    ],
+    [
+     -8.6799,
+     8.45
+    ]
+   ],
+   "margin": 9.1799,
+   "area_mm2": 3542.72,
+   "edgetrim_keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ]
+   ],
+   "keys": [
+    [
+     0,
+     0,
+     0.0,
+     0.0
+    ],
+    [
+     0,
+     1,
+     -9.1799,
+     15.9
+    ],
+    [
+     0,
+     2,
+     -18.3597,
+     31.8
+    ],
+    [
+     1,
+     0,
+     18.3597,
+     0.0
+    ],
+    [
+     1,
+     1,
+     9.1799,
+     15.9
+    ],
+    [
+     1,
+     2,
+     0.0,
+     31.8
+    ],
+    [
+     2,
+     0,
+     36.7195,
+     0.0
+    ],
+    [
+     2,
+     1,
+     27.5396,
+     15.9
+    ],
+    [
+     2,
+     2,
+     18.3597,
+     31.8
+    ],
+    [
+     3,
+     0,
+     55.0792,
+     0.0
+    ],
+    [
+     3,
+     1,
+     45.8993,
+     15.9
+    ],
+    [
+     3,
+     2,
+     36.7195,
+     31.8
+    ]
+   ]
+  },
+  "rect": {
+   "outline": [
+    [
+     -27.0197,
+     -8.66
+    ],
+    [
+     63.7392,
+     -8.66
+    ],
+    [
+     63.7392,
+     40.46
+    ],
+    [
+     -27.0197,
+     40.46
+    ]
+   ],
+   "margin": 8.66,
+   "area_mm2": 4458.08,
+   "edgetrim_keys": [
+    [
+     0,
+     2
+    ]
+   ],
+   "keys": [
+    [
+     0,
+     0,
+     0.0,
+     0.0
+    ],
+    [
+     0,
+     1,
+     -9.1799,
+     15.9
+    ],
+    [
+     0,
+     2,
+     -18.3597,
+     31.8
+    ],
+    [
+     1,
+     0,
+     18.3597,
+     0.0
+    ],
+    [
+     1,
+     1,
+     9.1799,
+     15.9
+    ],
+    [
+     1,
+     2,
+     0.0,
+     31.8
+    ],
+    [
+     2,
+     0,
+     36.7195,
+     0.0
+    ],
+    [
+     2,
+     1,
+     27.5396,
+     15.9
+    ],
+    [
+     2,
+     2,
+     18.3597,
+     31.8
+    ],
+    [
+     3,
+     0,
+     55.0792,
+     0.0
+    ],
+    [
+     3,
+     1,
+     45.8993,
+     15.9
+    ],
+    [
+     3,
+     2,
+     36.7195,
+     31.8
+    ]
+   ]
+  }
+ },
+ "islands": {
+  "stepped": [
+   {
+    "rect": [
+     -26.3896,
+     34.7201,
+     44.6104,
+     39.9701
+    ],
+    "w": 71.0,
+    "h": 5.25,
+    "area": 372.8,
+    "obstacle_slack": 0.42,
+    "nearest": "SW[0,2] hole d4.0",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     -7.8896,
+     2.9701,
+     53.8604,
+     8.4701
+    ],
+    "w": 61.75,
+    "h": 5.5,
+    "area": 339.6,
+    "obstacle_slack": 0.325,
+    "nearest": "SW[0,1] hole d3.05",
+    "edge_slack": 0.319
+   },
+   {
+    "rect": [
+     -17.1396,
+     18.9701,
+     44.6104,
+     24.4701
+    ],
+    "w": 61.75,
+    "h": 5.5,
+    "area": 339.6,
+    "obstacle_slack": 0.225,
+    "nearest": "SW[0,2] hole d3.05",
+    "edge_slack": 0.32
+   },
+   {
+    "rect": [
+     -7.8896,
+     2.9701,
+     63.1104,
+     6.9701
+    ],
+    "w": 71.0,
+    "h": 4.0,
+    "area": 284.0,
+    "obstacle_slack": 0.47,
+    "nearest": "SW[0,0] hole d4.0",
+    "edge_slack": 0.08
+   },
+   {
+    "rect": [
+     -17.1396,
+     18.9701,
+     53.8604,
+     22.7201
+    ],
+    "w": 71.0,
+    "h": 3.75,
+    "area": 266.2,
+    "obstacle_slack": 0.57,
+    "nearest": "SW[0,1] hole d4.0",
+    "edge_slack": 0.23
+   },
+   {
+    "rect": [
+     12.1104,
+     17.7201,
+     24.8604,
+     24.4701
+    ],
+    "w": 12.75,
+    "h": 6.75,
+    "area": 86.1,
+    "obstacle_slack": 0.225,
+    "nearest": "SW[2,2] hole d3.05",
+    "edge_slack": 15.61
+   },
+   {
+    "rect": [
+     -6.1396,
+     17.7201,
+     6.3604,
+     24.4701
+    ],
+    "w": 12.5,
+    "h": 6.75,
+    "area": 84.4,
+    "obstacle_slack": 0.225,
+    "nearest": "SW[1,2] hole d3.05",
+    "edge_slack": 9.212
+   },
+   {
+    "rect": [
+     30.6104,
+     17.7201,
+     43.1104,
+     24.4701
+    ],
+    "w": 12.5,
+    "h": 6.75,
+    "area": 84.4,
+    "obstacle_slack": 0.225,
+    "nearest": "SW[3,2] hole d3.05",
+    "edge_slack": 1.889
+   },
+   {
+    "rect": [
+     39.6104,
+     1.9701,
+     52.3604,
+     8.4701
+    ],
+    "w": 12.75,
+    "h": 6.5,
+    "area": 82.9,
+    "obstacle_slack": 0.325,
+    "nearest": "SW[3,1] hole d3.05",
+    "edge_slack": 1.819
+   },
+   {
+    "rect": [
+     3.1104,
+     1.9701,
+     15.6104,
+     8.4701
+    ],
+    "w": 12.5,
+    "h": 6.5,
+    "area": 81.2,
+    "obstacle_slack": 0.325,
+    "nearest": "SW[1,1] hole d3.05",
+    "edge_slack": 10.25
+   },
+   {
+    "rect": [
+     21.3604,
+     1.9701,
+     33.8604,
+     8.4701
+    ],
+    "w": 12.5,
+    "h": 6.5,
+    "area": 81.2,
+    "obstacle_slack": 0.325,
+    "nearest": "SW[2,1] hole d3.05",
+    "edge_slack": 10.25
+   },
+   {
+    "rect": [
+     -15.3896,
+     33.7201,
+     -2.6396,
+     39.9701
+    ],
+    "w": 12.75,
+    "h": 6.25,
+    "area": 79.7,
+    "obstacle_slack": 0.545,
+    "nearest": "SW[0,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     3.1104,
+     33.7201,
+     15.6104,
+     39.9701
+    ],
+    "w": 12.5,
+    "h": 6.25,
+    "area": 78.1,
+    "obstacle_slack": 0.545,
+    "nearest": "SW[1,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     21.3604,
+     33.7201,
+     33.8604,
+     39.9701
+    ],
+    "w": 12.5,
+    "h": 6.25,
+    "area": 78.1,
+    "obstacle_slack": 0.545,
+    "nearest": "SW[2,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     6.8604,
+     -0.5299,
+     11.6104,
+     8.4701
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.294,
+    "nearest": "SW[1,0] hole d1.75",
+    "edge_slack": 7.75
+   },
+   {
+    "rect": [
+     25.3604,
+     -0.5299,
+     30.1104,
+     8.4701
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.154,
+    "nearest": "SW[2,0] hole d1.75",
+    "edge_slack": 7.75
+   },
+   {
+    "rect": [
+     43.6104,
+     -0.5299,
+     48.3604,
+     8.4701
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.264,
+    "nearest": "SW[3,0] hole d1.75",
+    "edge_slack": 5.819
+   },
+   {
+    "rect": [
+     16.1104,
+     15.4701,
+     20.8604,
+     24.4701
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.224,
+    "nearest": "SW[2,1] hole d1.75",
+    "edge_slack": 15.61
+   },
+   {
+    "rect": [
+     -11.3896,
+     31.2201,
+     -6.6396,
+     39.9701
+    ],
+    "w": 4.75,
+    "h": 8.75,
+    "area": 41.6,
+    "obstacle_slack": 0.185,
+    "nearest": "SW[1,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     6.8604,
+     31.2201,
+     11.6104,
+     39.9701
+    ],
+    "w": 4.75,
+    "h": 8.75,
+    "area": 41.6,
+    "obstacle_slack": 0.294,
+    "nearest": "SW[2,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     25.3604,
+     31.2201,
+     30.1104,
+     39.9701
+    ],
+    "w": 4.75,
+    "h": 8.75,
+    "area": 41.6,
+    "obstacle_slack": 0.154,
+    "nearest": "SW[3,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     -2.1396,
+     15.4701,
+     2.3604,
+     24.4701
+    ],
+    "w": 4.5,
+    "h": 9.0,
+    "area": 40.5,
+    "obstacle_slack": 0.23,
+    "nearest": "SW[1,2] socket courtyard",
+    "edge_slack": 9.195
+   },
+   {
+    "rect": [
+     34.6104,
+     15.4701,
+     39.1104,
+     24.4701
+    ],
+    "w": 4.5,
+    "h": 9.0,
+    "area": 40.5,
+    "obstacle_slack": 0.23,
+    "nearest": "SW[3,2] hole d3.05",
+    "edge_slack": 5.889
+   },
+   {
+    "rect": [
+     -3.6396,
+     2.9701,
+     2.6104,
+     8.9701
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.3,
+    "nearest": "SW[0,1] pad2",
+    "edge_slack": 4.64
+   },
+   {
+    "rect": [
+     14.8604,
+     2.9701,
+     21.1104,
+     8.9701
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.3,
+    "nearest": "SW[1,1] pad2",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     33.1104,
+     2.9701,
+     39.3604,
+     8.9701
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.3,
+    "nearest": "SW[2,1] pad2",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     5.6104,
+     18.9701,
+     11.8604,
+     24.9701
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.2,
+    "nearest": "SW[1,2] pad2",
+    "edge_slack": 15.11
+   },
+   {
+    "rect": [
+     23.8604,
+     18.9701,
+     30.1104,
+     24.9701
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.2,
+    "nearest": "SW[2,2] pad2",
+    "edge_slack": 14.889
+   },
+   {
+    "rect": [
+     -12.6396,
+     18.9701,
+     -6.6396,
+     24.9701
+    ],
+    "w": 6.0,
+    "h": 6.0,
+    "area": 36.0,
+    "obstacle_slack": 0.2,
+    "nearest": "SW[0,2] pad2",
+    "edge_slack": 4.82
+   },
+   {
+    "rect": [
+     -17.1396,
+     17.7201,
+     -11.8896,
+     24.4701
+    ],
+    "w": 5.25,
+    "h": 6.75,
+    "area": 35.4,
+    "obstacle_slack": 0.225,
+    "nearest": "SW[0,2] hole d3.05",
+    "edge_slack": 0.32
+   },
+   {
+    "rect": [
+     -7.8896,
+     1.9701,
+     -2.6396,
+     8.4701
+    ],
+    "w": 5.25,
+    "h": 6.5,
+    "area": 34.1,
+    "obstacle_slack": 0.325,
+    "nearest": "SW[0,1] hole d3.05",
+    "edge_slack": 0.39
+   },
+   {
+    "rect": [
+     17.1104,
+     2.9701,
+     21.1104,
+     11.4701
+    ],
+    "w": 4.0,
+    "h": 8.5,
+    "area": 34.0,
+    "obstacle_slack": 0.129,
+    "nearest": "SW[2,1] socket courtyard",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     35.3604,
+     2.9701,
+     39.3604,
+     11.4701
+    ],
+    "w": 4.0,
+    "h": 8.5,
+    "area": 34.0,
+    "obstacle_slack": 0.239,
+    "nearest": "SW[3,1] socket courtyard",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     7.8604,
+     18.9701,
+     11.8604,
+     27.4701
+    ],
+    "w": 4.0,
+    "h": 8.5,
+    "area": 34.0,
+    "obstacle_slack": 0.199,
+    "nearest": "SW[2,2] socket courtyard",
+    "edge_slack": 12.61
+   },
+   {
+    "rect": [
+     -26.3896,
+     33.7201,
+     -21.1396,
+     39.9701
+    ],
+    "w": 5.25,
+    "h": 6.25,
+    "area": 32.8,
+    "obstacle_slack": 0.545,
+    "nearest": "SW[0,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     -1.1396,
+     2.9701,
+     2.6104,
+     11.4701
+    ],
+    "w": 3.75,
+    "h": 8.5,
+    "area": 31.9,
+    "obstacle_slack": 0.269,
+    "nearest": "SW[1,1] socket courtyard",
+    "edge_slack": 7.14
+   },
+   {
+    "rect": [
+     -10.3896,
+     18.9701,
+     -6.6396,
+     27.4701
+    ],
+    "w": 3.75,
+    "h": 8.5,
+    "area": 31.9,
+    "obstacle_slack": 0.24,
+    "nearest": "SW[1,2] pad1",
+    "edge_slack": 7.07
+   },
+   {
+    "rect": [
+     26.3604,
+     18.9701,
+     30.1104,
+     27.4701
+    ],
+    "w": 3.75,
+    "h": 8.5,
+    "area": 31.9,
+    "obstacle_slack": 0.24,
+    "nearest": "SW[3,2] pad1",
+    "edge_slack": 12.61
+   },
+   {
+    "rect": [
+     39.6104,
+     33.7201,
+     44.6104,
+     39.9701
+    ],
+    "w": 5.0,
+    "h": 6.25,
+    "area": 31.2,
+    "obstacle_slack": 0.545,
+    "nearest": "SW[3,2] hole d1.75",
+    "edge_slack": 0.11
+   },
+   {
+    "rect": [
+     58.1104,
+     1.9701,
+     63.1104,
+     6.9701
+    ],
+    "w": 5.0,
+    "h": 5.0,
+    "area": 25.0,
+    "obstacle_slack": 0.595,
+    "nearest": "SW[3,0] hole d1.75",
+    "edge_slack": 0.08
+   },
+   {
+    "rect": [
+     48.8604,
+     17.7201,
+     53.8604,
+     22.7201
+    ],
+    "w": 5.0,
+    "h": 5.0,
+    "area": 25.0,
+    "obstacle_slack": 0.445,
+    "nearest": "SW[3,1] hole d1.75",
+    "edge_slack": 0.23
+   },
+   {
+    "rect": [
+     7.8604,
+     -8.0299,
+     11.8604,
+     -4.2799
+    ],
+    "w": 4.0,
+    "h": 3.75,
+    "area": 15.0,
+    "obstacle_slack": 0.19,
+    "nearest": "SW[1,0] pad1",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     44.6104,
+     -8.0299,
+     48.6104,
+     -4.2799
+    ],
+    "w": 4.0,
+    "h": 3.75,
+    "area": 15.0,
+    "obstacle_slack": 0.169,
+    "nearest": "SW[3,0] socket courtyard",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     26.3604,
+     -8.0299,
+     30.1104,
+     -4.2799
+    ],
+    "w": 3.75,
+    "h": 3.75,
+    "area": 14.1,
+    "obstacle_slack": 0.19,
+    "nearest": "SW[2,0] pad1",
+    "edge_slack": 0.25
+   }
+  ],
+  "rect": [
+   {
+    "rect": [
+     -26.3697,
+     2.99,
+     63.1303,
+     8.49
+    ],
+    "w": 89.5,
+    "h": 5.5,
+    "area": 492.2,
+    "obstacle_slack": 0.305,
+    "nearest": "SW[0,1] hole d3.05",
+    "edge_slack": 0.209
+   },
+   {
+    "rect": [
+     -26.3697,
+     18.99,
+     63.1303,
+     24.49
+    ],
+    "w": 89.5,
+    "h": 5.5,
+    "area": 492.2,
+    "obstacle_slack": 0.205,
+    "nearest": "SW[0,2] hole d3.05",
+    "edge_slack": 0.209
+   },
+   {
+    "rect": [
+     -26.3697,
+     34.74,
+     63.1303,
+     39.99
+    ],
+    "w": 89.5,
+    "h": 5.25,
+    "area": 469.9,
+    "obstacle_slack": 0.44,
+    "nearest": "SW[0,2] hole d4.0",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     44.6303,
+     18.99,
+     63.1303,
+     39.99
+    ],
+    "w": 18.5,
+    "h": 21.0,
+    "area": 388.5,
+    "obstacle_slack": 0.494,
+    "nearest": "SW[3,2] pad2",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     53.8803,
+     2.99,
+     63.1303,
+     39.99
+    ],
+    "w": 9.25,
+    "h": 37.0,
+    "area": 342.2,
+    "obstacle_slack": 0.49,
+    "nearest": "SW[3,0] hole d4.0",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     48.8803,
+     17.74,
+     63.1303,
+     39.99
+    ],
+    "w": 14.25,
+    "h": 22.25,
+    "area": 317.1,
+    "obstacle_slack": 0.465,
+    "nearest": "SW[3,1] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     -26.3697,
+     -8.01,
+     -8.8697,
+     8.49
+    ],
+    "w": 17.5,
+    "h": 16.5,
+    "area": 288.8,
+    "obstacle_slack": 0.21,
+    "nearest": "SW[0,0] pad1",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     52.8803,
+     12.99,
+     63.1303,
+     39.99
+    ],
+    "w": 10.25,
+    "h": 27.0,
+    "area": 276.8,
+    "obstacle_slack": 0.526,
+    "nearest": "SW[3,1] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     -26.3697,
+     -8.01,
+     -18.1197,
+     24.49
+    ],
+    "w": 8.25,
+    "h": 32.5,
+    "area": 268.1,
+    "obstacle_slack": 0.21,
+    "nearest": "SW[0,2] socket courtyard",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     43.6303,
+     28.74,
+     63.1303,
+     39.99
+    ],
+    "w": 19.5,
+    "h": 11.25,
+    "area": 219.4,
+    "obstacle_slack": 0.456,
+    "nearest": "SW[3,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     -26.3697,
+     -8.01,
+     -15.6197,
+     11.49
+    ],
+    "w": 10.75,
+    "h": 19.5,
+    "area": 209.6,
+    "obstacle_slack": 0.14,
+    "nearest": "SW[0,1] socket courtyard",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     58.1303,
+     1.99,
+     63.1303,
+     39.99
+    ],
+    "w": 5.0,
+    "h": 38.0,
+    "area": 190.0,
+    "obstacle_slack": 0.615,
+    "nearest": "SW[3,0] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     -26.3697,
+     -0.51,
+     -6.6197,
+     8.49
+    ],
+    "w": 19.75,
+    "h": 9.0,
+    "area": 177.8,
+    "obstacle_slack": 0.165,
+    "nearest": "SW[0,0] hole d1.75",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     -26.3697,
+     1.99,
+     -2.8697,
+     8.49
+    ],
+    "w": 23.5,
+    "h": 6.5,
+    "area": 152.8,
+    "obstacle_slack": 0.305,
+    "nearest": "SW[0,1] hole d3.05",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     39.6303,
+     33.74,
+     63.1303,
+     39.99
+    ],
+    "w": 23.5,
+    "h": 6.25,
+    "area": 146.9,
+    "obstacle_slack": 0.565,
+    "nearest": "SW[3,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     42.3803,
+     18.99,
+     63.1303,
+     24.99
+    ],
+    "w": 20.75,
+    "h": 6.0,
+    "area": 124.5,
+    "obstacle_slack": 0.18,
+    "nearest": "SW[3,2] pad2",
+    "edge_slack": 0.209
+   },
+   {
+    "rect": [
+     -26.3697,
+     17.74,
+     -11.8697,
+     24.49
+    ],
+    "w": 14.5,
+    "h": 6.75,
+    "area": 97.9,
+    "obstacle_slack": 0.205,
+    "nearest": "SW[0,2] hole d3.05",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     -26.3697,
+     15.49,
+     -15.8697,
+     24.49
+    ],
+    "w": 10.5,
+    "h": 9.0,
+    "area": 94.5,
+    "obstacle_slack": 0.206,
+    "nearest": "SW[0,2] hole d3.05",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     12.1303,
+     17.74,
+     24.8803,
+     24.49
+    ],
+    "w": 12.75,
+    "h": 6.75,
+    "area": 86.1,
+    "obstacle_slack": 0.205,
+    "nearest": "SW[2,2] hole d3.05",
+    "edge_slack": 15.57
+   },
+   {
+    "rect": [
+     -6.1197,
+     17.74,
+     6.3803,
+     24.49
+    ],
+    "w": 12.5,
+    "h": 6.75,
+    "area": 84.4,
+    "obstacle_slack": 0.205,
+    "nearest": "SW[1,2] hole d3.05",
+    "edge_slack": 15.57
+   },
+   {
+    "rect": [
+     30.6303,
+     17.74,
+     43.1303,
+     24.49
+    ],
+    "w": 12.5,
+    "h": 6.75,
+    "area": 84.4,
+    "obstacle_slack": 0.205,
+    "nearest": "SW[3,2] hole d3.05",
+    "edge_slack": 15.57
+   },
+   {
+    "rect": [
+     2.8803,
+     1.99,
+     15.6303,
+     8.49
+    ],
+    "w": 12.75,
+    "h": 6.5,
+    "area": 82.9,
+    "obstacle_slack": 0.305,
+    "nearest": "SW[1,1] hole d3.05",
+    "edge_slack": 10.25
+   },
+   {
+    "rect": [
+     39.6303,
+     1.99,
+     52.3803,
+     8.49
+    ],
+    "w": 12.75,
+    "h": 6.5,
+    "area": 82.9,
+    "obstacle_slack": 0.305,
+    "nearest": "SW[3,1] hole d3.05",
+    "edge_slack": 10.25
+   },
+   {
+    "rect": [
+     21.3803,
+     1.99,
+     33.8803,
+     8.49
+    ],
+    "w": 12.5,
+    "h": 6.5,
+    "area": 81.2,
+    "obstacle_slack": 0.305,
+    "nearest": "SW[2,1] hole d3.05",
+    "edge_slack": 10.25
+   },
+   {
+    "rect": [
+     2.8803,
+     33.74,
+     15.6303,
+     39.99
+    ],
+    "w": 12.75,
+    "h": 6.25,
+    "area": 79.7,
+    "obstacle_slack": 0.565,
+    "nearest": "SW[1,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     -15.3697,
+     33.74,
+     -2.8697,
+     39.99
+    ],
+    "w": 12.5,
+    "h": 6.25,
+    "area": 78.1,
+    "obstacle_slack": 0.565,
+    "nearest": "SW[0,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     21.3803,
+     33.74,
+     33.8803,
+     39.99
+    ],
+    "w": 12.5,
+    "h": 6.25,
+    "area": 78.1,
+    "obstacle_slack": 0.565,
+    "nearest": "SW[2,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     -26.3697,
+     -8.01,
+     -6.6197,
+     -4.26
+    ],
+    "w": 19.75,
+    "h": 3.75,
+    "area": 74.1,
+    "obstacle_slack": 0.17,
+    "nearest": "SW[0,0] pad1",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     51.3803,
+     2.99,
+     63.1303,
+     8.99
+    ],
+    "w": 11.75,
+    "h": 6.0,
+    "area": 70.5,
+    "obstacle_slack": 0.28,
+    "nearest": "SW[3,1] pad2",
+    "edge_slack": 0.209
+   },
+   {
+    "rect": [
+     6.8803,
+     -0.51,
+     11.6303,
+     8.49
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.274,
+    "nearest": "SW[1,0] hole d1.75",
+    "edge_slack": 7.75
+   },
+   {
+    "rect": [
+     25.3803,
+     -0.51,
+     30.1303,
+     8.49
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.134,
+    "nearest": "SW[2,0] hole d1.75",
+    "edge_slack": 7.75
+   },
+   {
+    "rect": [
+     43.6303,
+     -0.51,
+     48.3803,
+     8.49
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.244,
+    "nearest": "SW[3,0] hole d1.75",
+    "edge_slack": 7.75
+   },
+   {
+    "rect": [
+     16.1303,
+     15.49,
+     20.8803,
+     24.49
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.204,
+    "nearest": "SW[2,1] hole d1.75",
+    "edge_slack": 15.57
+   },
+   {
+    "rect": [
+     34.3803,
+     15.49,
+     39.1303,
+     24.49
+    ],
+    "w": 4.75,
+    "h": 9.0,
+    "area": 42.8,
+    "obstacle_slack": 0.209,
+    "nearest": "SW[3,2] hole d3.05",
+    "edge_slack": 15.57
+   },
+   {
+    "rect": [
+     -11.3697,
+     31.24,
+     -6.6197,
+     39.99
+    ],
+    "w": 4.75,
+    "h": 8.75,
+    "area": 41.6,
+    "obstacle_slack": 0.165,
+    "nearest": "SW[1,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     6.8803,
+     31.24,
+     11.6303,
+     39.99
+    ],
+    "w": 4.75,
+    "h": 8.75,
+    "area": 41.6,
+    "obstacle_slack": 0.274,
+    "nearest": "SW[2,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     25.3803,
+     31.24,
+     30.1303,
+     39.99
+    ],
+    "w": 4.75,
+    "h": 8.75,
+    "area": 41.6,
+    "obstacle_slack": 0.134,
+    "nearest": "SW[3,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     -2.1197,
+     15.49,
+     2.3803,
+     24.49
+    ],
+    "w": 4.5,
+    "h": 9.0,
+    "area": 40.5,
+    "obstacle_slack": 0.21,
+    "nearest": "SW[1,2] socket courtyard",
+    "edge_slack": 15.57
+   },
+   {
+    "rect": [
+     -3.6197,
+     2.99,
+     2.6303,
+     8.99
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.28,
+    "nearest": "SW[0,1] pad2",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     33.1303,
+     2.99,
+     39.3803,
+     8.99
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.28,
+    "nearest": "SW[2,1] pad2",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     -12.8697,
+     18.99,
+     -6.6197,
+     24.99
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.18,
+    "nearest": "SW[0,2] pad2",
+    "edge_slack": 13.75
+   },
+   {
+    "rect": [
+     5.6303,
+     18.99,
+     11.8803,
+     24.99
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.18,
+    "nearest": "SW[1,2] pad2",
+    "edge_slack": 15.07
+   },
+   {
+    "rect": [
+     23.8803,
+     18.99,
+     30.1303,
+     24.99
+    ],
+    "w": 6.25,
+    "h": 6.0,
+    "area": 37.5,
+    "obstacle_slack": 0.18,
+    "nearest": "SW[2,2] pad2",
+    "edge_slack": 15.07
+   },
+   {
+    "rect": [
+     14.8803,
+     2.99,
+     20.8803,
+     8.99
+    ],
+    "w": 6.0,
+    "h": 6.0,
+    "area": 36.0,
+    "obstacle_slack": 0.28,
+    "nearest": "SW[1,1] pad2",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     -1.3697,
+     2.99,
+     2.6303,
+     11.49
+    ],
+    "w": 4.0,
+    "h": 8.5,
+    "area": 34.0,
+    "obstacle_slack": 0.25,
+    "nearest": "SW[1,1] socket courtyard",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     35.3803,
+     2.99,
+     39.3803,
+     11.49
+    ],
+    "w": 4.0,
+    "h": 8.5,
+    "area": 34.0,
+    "obstacle_slack": 0.219,
+    "nearest": "SW[3,1] socket courtyard",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     7.8803,
+     18.99,
+     11.8803,
+     27.49
+    ],
+    "w": 4.0,
+    "h": 8.5,
+    "area": 34.0,
+    "obstacle_slack": 0.179,
+    "nearest": "SW[2,2] socket courtyard",
+    "edge_slack": 12.57
+   },
+   {
+    "rect": [
+     -26.3697,
+     33.74,
+     -21.1197,
+     39.99
+    ],
+    "w": 5.25,
+    "h": 6.25,
+    "area": 32.8,
+    "obstacle_slack": 0.565,
+    "nearest": "SW[0,2] hole d1.75",
+    "edge_slack": 0.07
+   },
+   {
+    "rect": [
+     17.1303,
+     2.99,
+     20.8803,
+     11.49
+    ],
+    "w": 3.75,
+    "h": 8.5,
+    "area": 31.9,
+    "obstacle_slack": 0.32,
+    "nearest": "SW[2,1] pad1",
+    "edge_slack": 11.25
+   },
+   {
+    "rect": [
+     -10.3697,
+     18.99,
+     -6.6197,
+     27.49
+    ],
+    "w": 3.75,
+    "h": 8.5,
+    "area": 31.9,
+    "obstacle_slack": 0.22,
+    "nearest": "SW[1,2] pad1",
+    "edge_slack": 12.57
+   },
+   {
+    "rect": [
+     26.3803,
+     18.99,
+     30.1303,
+     27.49
+    ],
+    "w": 3.75,
+    "h": 8.5,
+    "area": 31.9,
+    "obstacle_slack": 0.22,
+    "nearest": "SW[3,2] pad1",
+    "edge_slack": 12.57
+   },
+   {
+    "rect": [
+     7.8803,
+     -8.01,
+     11.8803,
+     -4.26
+    ],
+    "w": 4.0,
+    "h": 3.75,
+    "area": 15.0,
+    "obstacle_slack": 0.17,
+    "nearest": "SW[1,0] pad1",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     44.6303,
+     -8.01,
+     48.6303,
+     -4.26
+    ],
+    "w": 4.0,
+    "h": 3.75,
+    "area": 15.0,
+    "obstacle_slack": 0.149,
+    "nearest": "SW[3,0] socket courtyard",
+    "edge_slack": 0.25
+   },
+   {
+    "rect": [
+     26.3803,
+     -8.01,
+     30.1303,
+     -4.26
+    ],
+    "w": 3.75,
+    "h": 3.75,
+    "area": 14.1,
+    "obstacle_slack": 0.17,
+    "nearest": "SW[2,0] pad1",
+    "edge_slack": 0.25
+   }
+  ]
+ },
+ "variant_a": {
+  "stepped": {
+   "pad_d": 2.5,
+   "pitch": 3.25,
+   "tolerance": 0.35,
+   "group_order": [
+    "bottom",
+    "right",
+    "top",
+    "left"
+   ],
+   "plan": [
+    {
+     "group": "bottom",
+     "lane": [
+      -26.39,
+      34.72,
+      44.61,
+      39.97
+     ],
+     "x0": -24.79,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J103.1",
+       "group": "bottom",
+       "x": -24.79,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 2.571,
+       "nearest": "SW[0,2] hole d1.75"
+      },
+      {
+       "net": "B_clk",
+       "role": "J103.2",
+       "group": "bottom",
+       "x": -21.54,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 1.859,
+       "nearest": "SW[0,2] hole d4.0"
+      },
+      {
+       "net": "B_data",
+       "role": "J103.3",
+       "group": "bottom",
+       "x": -18.29,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 1.445,
+       "nearest": "SW[0,2] hole d4.0"
+      },
+      {
+       "net": "GND",
+       "role": "J103.4",
+       "group": "bottom",
+       "x": -15.04,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 1.918,
+       "nearest": "SW[0,2] hole d4.0"
+      },
+      {
+       "net": "B_first",
+       "role": "J103.5",
+       "group": "bottom",
+       "x": -11.79,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 2.577,
+       "nearest": "SW[0,2] hole d1.75"
+      },
+      {
+       "net": "B_latch",
+       "role": "J103.6",
+       "group": "bottom",
+       "x": -8.54,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 3.105,
+       "nearest": "SW[1,2] hole d1.75"
+      },
+      {
+       "net": "B_W",
+       "role": "J103.7",
+       "group": "bottom",
+       "x": -5.29,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 2.57,
+       "nearest": "SW[1,2] hole d1.75"
+      },
+      {
+       "net": "GND",
+       "role": "J103.8",
+       "group": "bottom",
+       "x": -2.04,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 1.517,
+       "nearest": "SW[1,2] hole d4.0"
+      }
+     ]
+    },
+    {
+     "group": "right",
+     "lane": [
+      -26.39,
+      34.72,
+      44.61,
+      39.97
+     ],
+     "x0": 4.41,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J104.1",
+       "group": "right",
+       "x": 4.41,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 2.483,
+       "nearest": "SW[1,2] hole d4.0"
+      },
+      {
+       "net": "B_clk",
+       "role": "J104.2",
+       "group": "right",
+       "x": 7.66,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 2.771,
+       "nearest": "SW[1,2] hole d1.75"
+      },
+      {
+       "net": "B_data",
+       "role": "J104.3",
+       "group": "right",
+       "x": 10.91,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 2.714,
+       "nearest": "SW[2,2] hole d1.75"
+      },
+      {
+       "net": "GND",
+       "role": "J104.4",
+       "group": "right",
+       "x": 14.16,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 2.36,
+       "nearest": "SW[2,2] hole d4.0"
+      },
+      {
+       "net": "R_latch",
+       "role": "J104.5",
+       "group": "right",
+       "x": 17.41,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 1.445,
+       "nearest": "SW[2,2] hole d4.0"
+      },
+      {
+       "net": "GND",
+       "role": "J104.6",
+       "group": "right",
+       "x": 20.66,
+       "y": 37.345,
+       "d": 2.5,
+       "slack_after_tol": 1.572,
+       "nearest": "SW[2,2] hole d4.0"
+      }
+     ]
+    },
+    {
+     "group": "top",
+     "lane": [
+      -17.14,
+      18.97,
+      44.61,
+      24.47
+     ],
+     "x0": -15.54,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J102.1",
+       "group": "top",
+       "x": -15.54,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.375,
+       "nearest": "SW[0,2] hole d3.05"
+      },
+      {
+       "net": "T_clk",
+       "role": "J102.2",
+       "group": "top",
+       "x": -12.29,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.38,
+       "nearest": "SW[0,2] socket courtyard"
+      },
+      {
+       "net": "T_data",
+       "role": "J102.3",
+       "group": "top",
+       "x": -9.04,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.72,
+       "nearest": "SW[0,1] hole d4.0"
+      },
+      {
+       "net": "T_endcol",
+       "role": "J102.4",
+       "group": "top",
+       "x": -5.79,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.423,
+       "nearest": "SW[1,2] socket courtyard"
+      },
+      {
+       "net": "GND",
+       "role": "J102.5",
+       "group": "top",
+       "x": -2.54,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.38,
+       "nearest": "SW[1,2] socket courtyard"
+      },
+      {
+       "net": "L_latch",
+       "role": "J102.6",
+       "group": "top",
+       "x": 0.71,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.38,
+       "nearest": "SW[1,2] socket courtyard"
+      },
+      {
+       "net": "T_W",
+       "role": "J102.7",
+       "group": "top",
+       "x": 3.96,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.379,
+       "nearest": "SW[1,2] hole d3.05"
+      },
+      {
+       "net": "GND",
+       "role": "J102.8",
+       "group": "top",
+       "x": 7.21,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.688,
+       "nearest": "SW[1,2] socket courtyard"
+      }
+     ]
+    },
+    {
+     "group": "left",
+     "lane": [
+      -17.14,
+      18.97,
+      44.61,
+      24.47
+     ],
+     "x0": 13.66,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J101.1",
+       "group": "left",
+       "x": 13.66,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.38,
+       "nearest": "SW[2,2] socket courtyard"
+      },
+      {
+       "net": "L_clk",
+       "role": "J101.2",
+       "group": "left",
+       "x": 16.91,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.38,
+       "nearest": "SW[2,2] socket courtyard"
+      },
+      {
+       "net": "L_data",
+       "role": "J101.3",
+       "group": "left",
+       "x": 20.16,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.375,
+       "nearest": "SW[2,2] hole d3.05"
+      },
+      {
+       "net": "L_endrow",
+       "role": "J101.4",
+       "group": "left",
+       "x": 23.41,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.38,
+       "nearest": "SW[2,2] socket courtyard"
+      },
+      {
+       "net": "L_latch",
+       "role": "J101.5",
+       "group": "left",
+       "x": 26.66,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.72,
+       "nearest": "SW[2,1] hole d4.0"
+      },
+      {
+       "net": "GND",
+       "role": "J101.6",
+       "group": "left",
+       "x": 29.91,
+       "y": 21.72,
+       "d": 2.5,
+       "slack_after_tol": 1.672,
+       "nearest": "SW[3,2] socket courtyard"
+      }
+     ]
+    }
+   ],
+   "unresolved": []
+  },
+  "rect": {
+   "pad_d": 2.5,
+   "pitch": 3.25,
+   "tolerance": 0.35,
+   "group_order": [
+    "bottom",
+    "right",
+    "top",
+    "left"
+   ],
+   "plan": [
+    {
+     "group": "bottom",
+     "lane": [
+      -26.37,
+      34.74,
+      63.13,
+      39.99
+     ],
+     "x0": -24.77,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J103.1",
+       "group": "bottom",
+       "x": -24.77,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.591,
+       "nearest": "SW[0,2] hole d1.75"
+      },
+      {
+       "net": "B_clk",
+       "role": "J103.2",
+       "group": "bottom",
+       "x": -21.52,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.869,
+       "nearest": "SW[0,2] hole d4.0"
+      },
+      {
+       "net": "B_data",
+       "role": "J103.3",
+       "group": "bottom",
+       "x": -18.27,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.465,
+       "nearest": "SW[0,2] hole d4.0"
+      },
+      {
+       "net": "GND",
+       "role": "J103.4",
+       "group": "bottom",
+       "x": -15.02,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.945,
+       "nearest": "SW[0,2] hole d4.0"
+      },
+      {
+       "net": "B_first",
+       "role": "J103.5",
+       "group": "bottom",
+       "x": -11.77,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.598,
+       "nearest": "SW[0,2] hole d1.75"
+      },
+      {
+       "net": "B_latch",
+       "role": "J103.6",
+       "group": "bottom",
+       "x": -8.52,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 3.114,
+       "nearest": "SW[1,2] hole d1.75"
+      },
+      {
+       "net": "B_W",
+       "role": "J103.7",
+       "group": "bottom",
+       "x": -5.27,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.59,
+       "nearest": "SW[1,2] hole d1.75"
+      },
+      {
+       "net": "GND",
+       "role": "J103.8",
+       "group": "bottom",
+       "x": -2.02,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.533,
+       "nearest": "SW[1,2] hole d4.0"
+      }
+     ]
+    },
+    {
+     "group": "right",
+     "lane": [
+      -26.37,
+      34.74,
+      63.13,
+      39.99
+     ],
+     "x0": 4.43,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J104.1",
+       "group": "right",
+       "x": 4.43,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.51,
+       "nearest": "SW[1,2] hole d4.0"
+      },
+      {
+       "net": "B_clk",
+       "role": "J104.2",
+       "group": "right",
+       "x": 7.68,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.796,
+       "nearest": "SW[1,2] hole d1.75"
+      },
+      {
+       "net": "B_data",
+       "role": "J104.3",
+       "group": "right",
+       "x": 10.93,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.728,
+       "nearest": "SW[2,2] hole d1.75"
+      },
+      {
+       "net": "GND",
+       "role": "J104.4",
+       "group": "right",
+       "x": 14.18,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.365,
+       "nearest": "SW[2,2] hole d4.0"
+      },
+      {
+       "net": "R_latch",
+       "role": "J104.5",
+       "group": "right",
+       "x": 17.43,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.465,
+       "nearest": "SW[2,2] hole d4.0"
+      },
+      {
+       "net": "GND",
+       "role": "J104.6",
+       "group": "right",
+       "x": 20.68,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.596,
+       "nearest": "SW[2,2] hole d4.0"
+      }
+     ]
+    },
+    {
+     "group": "top",
+     "lane": [
+      -26.37,
+      34.74,
+      63.13,
+      39.99
+     ],
+     "x0": 27.13,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J102.1",
+       "group": "top",
+       "x": 27.13,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 3.232,
+       "nearest": "SW[2,2] hole d1.75"
+      },
+      {
+       "net": "T_clk",
+       "role": "J102.2",
+       "group": "top",
+       "x": 30.38,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.59,
+       "nearest": "SW[3,2] hole d1.75"
+      },
+      {
+       "net": "T_data",
+       "role": "J102.3",
+       "group": "top",
+       "x": 33.63,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.841,
+       "nearest": "SW[3,2] hole d4.0"
+      },
+      {
+       "net": "T_endcol",
+       "role": "J102.4",
+       "group": "top",
+       "x": 36.88,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.465,
+       "nearest": "SW[3,2] hole d4.0"
+      },
+      {
+       "net": "GND",
+       "role": "J102.5",
+       "group": "top",
+       "x": 40.13,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 1.976,
+       "nearest": "SW[3,2] hole d4.0"
+      },
+      {
+       "net": "L_latch",
+       "role": "J102.6",
+       "group": "top",
+       "x": 43.38,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 2.603,
+       "nearest": "SW[3,2] hole d1.75"
+      },
+      {
+       "net": "T_W",
+       "role": "J102.7",
+       "group": "top",
+       "x": 46.63,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 3.882,
+       "nearest": "SW[3,2] hole d1.75"
+      },
+      {
+       "net": "GND",
+       "role": "J102.8",
+       "group": "top",
+       "x": 49.88,
+       "y": 37.365,
+       "d": 2.5,
+       "slack_after_tol": 6.355,
+       "nearest": "SW[3,2] hole d1.75"
+      }
+     ]
+    },
+    {
+     "group": "left",
+     "lane": [
+      43.63,
+      28.74,
+      63.13,
+      39.99
+     ],
+     "x0": 45.23,
+     "pads": [
+      {
+       "net": "VCC",
+       "role": "J101.1",
+       "group": "left",
+       "x": 45.23,
+       "y": 34.365,
+       "d": 2.5,
+       "slack_after_tol": 0.822,
+       "nearest": "SW[3,2] hole d1.75"
+      },
+      {
+       "net": "L_clk",
+       "role": "J101.2",
+       "group": "left",
+       "x": 48.48,
+       "y": 34.365,
+       "d": 2.5,
+       "slack_after_tol": 3.863,
+       "nearest": "SW[3,2] hole d1.75"
+      },
+      {
+       "net": "L_data",
+       "role": "J101.3",
+       "group": "left",
+       "x": 51.73,
+       "y": 34.365,
+       "d": 2.5,
+       "slack_after_tol": 7.055,
+       "nearest": "SW[3,2] hole d1.75"
+      },
+      {
+       "net": "L_endrow",
+       "role": "J101.4",
+       "group": "left",
+       "x": 54.98,
+       "y": 34.365,
+       "d": 2.5,
+       "slack_after_tol": 10.278,
+       "nearest": "SW[3,2] hole d1.75"
+      },
+      {
+       "net": "L_latch",
+       "role": "J101.5",
+       "group": "left",
+       "x": 58.23,
+       "y": 34.365,
+       "d": 2.5,
+       "slack_after_tol": 13.465,
+       "nearest": "SW[3,2] pad2"
+      },
+      {
+       "net": "GND",
+       "role": "J101.6",
+       "group": "left",
+       "x": 61.48,
+       "y": 34.365,
+       "d": 2.5,
+       "slack_after_tol": 16.532,
+       "nearest": "SW[3,2] pad2"
+      }
+     ]
+    }
+   ],
+   "unresolved": []
+  }
+ },
+ "straps": {
+  "stepped": {
+   "strap_T": {
+    "pads": [
+     [
+      8.61,
+      -7.68
+     ],
+     [
+      11.61,
+      -7.68
+     ]
+    ],
+    "slack": 0.232,
+    "edge": "top"
+   },
+   "strap_B": {
+    "pads": [
+     [
+      -10.64,
+      39.48
+     ],
+     [
+      -7.64,
+      39.48
+     ]
+    ],
+    "slack": 5.525,
+    "edge": "bottom"
+   },
+   "strap_L": {
+    "pads": [
+     [
+      -25.64,
+      37.07
+     ],
+     [
+      -25.64,
+      39.27
+     ]
+    ],
+    "slack": 3.097,
+    "edge": "left"
+   }
+  },
+  "rect": {
+   "strap_T": {
+    "pads": [
+     [
+      -25.62,
+      -7.66
+     ],
+     [
+      -22.62,
+      -7.66
+     ]
+    ],
+    "slack": 13.007,
+    "edge": "top"
+   },
+   "strap_B": {
+    "pads": [
+     [
+      59.13,
+      39.46
+     ],
+     [
+      62.13,
+      39.46
+     ]
+    ],
+    "slack": 16.067,
+    "edge": "bottom"
+   },
+   "strap_L": {
+    "pads": [
+     [
+      -25.62,
+      -7.66
+     ],
+     [
+      -25.62,
+      -5.46
+     ]
+    ],
+    "slack": 15.645,
+    "edge": "left"
+   }
+  }
+ },
+ "chassis_springs": {
+  "S1941-42R": {
+   "failed": true,
+   "trials": [
+    {
+     "orientation": 0,
+     "banks": [
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "orientation": 1,
+     "banks": [
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  "S1971-46R": {
+   "banks": 2,
+   "orientation": "along x",
+   "body_mm": [
+    4.63,
+    3.7
+   ],
+   "bank_base_offset": -1.75,
+   "span_mm": 7.7,
+   "contacts_placed": 28,
+   "assignment": [
+    {
+     "role": "J103.1",
+     "group": "bottom",
+     "x": -24.79,
+     "y": 33.59,
+     "bank": 0
+    },
+    {
+     "role": "J103.2",
+     "group": "bottom",
+     "x": -21.54,
+     "y": 37.59,
+     "bank": 1
+    },
+    {
+     "role": "J103.3",
+     "group": "bottom",
+     "x": -18.29,
+     "y": 33.59,
+     "bank": 0
+    },
+    {
+     "role": "J103.4",
+     "group": "bottom",
+     "x": -15.04,
+     "y": 37.59,
+     "bank": 1
+    },
+    {
+     "role": "J103.5",
+     "group": "bottom",
+     "x": -11.79,
+     "y": 33.59,
+     "bank": 0
+    },
+    {
+     "role": "J103.6",
+     "group": "bottom",
+     "x": -8.54,
+     "y": 37.59,
+     "bank": 1
+    },
+    {
+     "role": "J103.7",
+     "group": "bottom",
+     "x": -5.29,
+     "y": 33.59,
+     "bank": 0
+    },
+    {
+     "role": "J103.8",
+     "group": "bottom",
+     "x": -2.04,
+     "y": 37.59,
+     "bank": 1
+    },
+    {
+     "role": "J104.1",
+     "group": "right",
+     "x": 4.41,
+     "y": 33.59,
+     "bank": 0
+    },
+    {
+     "role": "J104.2",
+     "group": "right",
+     "x": 7.66,
+     "y": 37.59,
+     "bank": 1
+    },
+    {
+     "role": "J104.3",
+     "group": "right",
+     "x": 10.91,
+     "y": 33.59,
+     "bank": 0
+    },
+    {
+     "role": "J104.4",
+     "group": "right",
+     "x": 14.16,
+     "y": 37.59,
+     "bank": 1
+    },
+    {
+     "role": "J104.5",
+     "group": "right",
+     "x": 17.41,
+     "y": 33.59,
+     "bank": 0
+    },
+    {
+     "role": "J104.6",
+     "group": "right",
+     "x": 20.66,
+     "y": 37.59,
+     "bank": 1
+    },
+    {
+     "role": "J102.1",
+     "group": "top",
+     "x": -15.54,
+     "y": 17.97,
+     "bank": 0
+    },
+    {
+     "role": "J102.2",
+     "group": "top",
+     "x": -12.29,
+     "y": 21.97,
+     "bank": 1
+    },
+    {
+     "role": "J102.3",
+     "group": "top",
+     "x": -9.04,
+     "y": 17.97,
+     "bank": 0
+    },
+    {
+     "role": "J102.4",
+     "group": "top",
+     "x": -5.79,
+     "y": 21.97,
+     "bank": 1
+    },
+    {
+     "role": "J102.5",
+     "group": "top",
+     "x": -2.54,
+     "y": 17.97,
+     "bank": 0
+    },
+    {
+     "role": "J102.6",
+     "group": "top",
+     "x": 0.71,
+     "y": 21.97,
+     "bank": 1
+    },
+    {
+     "role": "J102.7",
+     "group": "top",
+     "x": 3.96,
+     "y": 17.97,
+     "bank": 0
+    },
+    {
+     "role": "J102.8",
+     "group": "top",
+     "x": 7.21,
+     "y": 21.97,
+     "bank": 1
+    },
+    {
+     "role": "J101.1",
+     "group": "left",
+     "x": 13.66,
+     "y": 17.97,
+     "bank": 0
+    },
+    {
+     "role": "J101.2",
+     "group": "left",
+     "x": 16.91,
+     "y": 21.97,
+     "bank": 1
+    },
+    {
+     "role": "J101.3",
+     "group": "left",
+     "x": 20.16,
+     "y": 17.97,
+     "bank": 0
+    },
+    {
+     "role": "J101.4",
+     "group": "left",
+     "x": 23.41,
+     "y": 21.97,
+     "bank": 1
+    },
+    {
+     "role": "J101.5",
+     "group": "left",
+     "x": 26.66,
+     "y": 17.97,
+     "bank": 0
+    },
+    {
+     "role": "J101.6",
+     "group": "left",
+     "x": 29.91,
+     "y": 21.97,
+     "bank": 1
+    }
+   ],
+   "note": "tip anchored on pad centre (ASSUMPTION); banks staggered in chassis-plane y",
+   "trials": [
+    {
+     "orientation": 0,
+     "banks": [
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  }
+ },
+ "variant_b": {
+  "stepped": {
+   "df12_pair30": {
+    "tile_side": "Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical",
+    "chassis_side": "Hirose_DF12_DF12C3.0-30DS-0.5V_2x15_P0.50mm_Vertical",
+    "role_tile": "tile side (plug, 30 pos)",
+    "role_chassis": "chassis side (receptacle, 30 pos)",
+    "pin_count": 30,
+    "contacts_needed": 22,
+    "tile_courtyard_mm": [
+     10.79,
+     6.29
+    ],
+    "chassis_courtyard_mm": [
+     10.69,
+     6.29
+    ],
+    "island_need_mm": [
+     11.79,
+     7.29
+    ],
+    "island_need_with_escape_mm": [
+     11.79,
+     9.79
+    ],
+    "fits_board": false,
+    "fits_board_with_escape": false,
+    "example": null,
+    "min_bottom_extension_mm": 4.79,
+    "extension_island": {
+     "rect": [
+      -15.3896,
+      33.7201,
+      -2.6396,
+      44.7201
+     ],
+     "w": 12.75,
+     "h": 11.0,
+     "area": 140.2,
+     "obstacle_slack": 0.545,
+     "nearest": "SW[0,2] hole d1.75",
+     "edge_slack": 0.15
+    }
+   },
+   "df12_pair20": {
+    "tile_side": "Hirose_DF12_DF12E3.0-20DP-0.5V_2x10_P0.50mm_Vertical",
+    "chassis_side": "Hirose_DF12_DF12C3.0-20DS-0.5V_2x10_P0.50mm_Vertical",
+    "role_tile": "tile side (plug)",
+    "role_chassis": "chassis side (receptacle)",
+    "pin_count": 20,
+    "contacts_needed": 22,
+    "tile_courtyard_mm": [
+     8.29,
+     6.29
+    ],
+    "chassis_courtyard_mm": [
+     8.19,
+     6.29
+    ],
+    "island_need_mm": [
+     9.29,
+     7.29
+    ],
+    "island_need_with_escape_mm": [
+     9.29,
+     9.79
+    ],
+    "fits_board": false,
+    "fits_board_with_escape": false,
+    "example": null,
+    "min_bottom_extension_mm": 4.79,
+    "extension_island": {
+     "rect": [
+      -15.3896,
+      33.7201,
+      -2.6396,
+      44.7201
+     ],
+     "w": 12.75,
+     "h": 11.0,
+     "area": 140.2,
+     "obstacle_slack": 0.545,
+     "nearest": "SW[0,2] hole d1.75",
+     "edge_slack": 0.15
+    }
+   },
+   "gecko_pair20": {
+    "tile_side": "Harwin_Gecko-G125-MVX2005L0X_2x10_P1.25mm_Vertical",
+    "chassis_side": "Harwin_Gecko-G125-FVX2005L0X_2x10_P1.25mm_Vertical",
+    "role_tile": "tile side (male, 20 pos)",
+    "role_chassis": "chassis side (female, 20 pos)",
+    "pin_count": 20,
+    "contacts_needed": 22,
+    "tile_courtyard_mm": [
+     16.14,
+     6.0
+    ],
+    "chassis_courtyard_mm": [
+     16.14,
+     6.0
+    ],
+    "island_need_mm": [
+     17.14,
+     7.0
+    ],
+    "island_need_with_escape_mm": [
+     17.14,
+     9.5
+    ],
+    "fits_board": false,
+    "fits_board_with_escape": false,
+    "example": null,
+    "min_bottom_extension_mm": 4.5,
+    "extension_island": {
+     "rect": [
+      -26.3896,
+      34.7201,
+      44.6104,
+      44.4701
+     ],
+     "w": 71.0,
+     "h": 9.75,
+     "area": 692.2,
+     "obstacle_slack": 0.42,
+     "nearest": "SW[0,2] hole d4.0",
+     "edge_slack": 0.11
+    }
+   }
+  },
+  "rect": {
+   "df12_pair30": {
+    "tile_side": "Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical",
+    "chassis_side": "Hirose_DF12_DF12C3.0-30DS-0.5V_2x15_P0.50mm_Vertical",
+    "role_tile": "tile side (plug, 30 pos)",
+    "role_chassis": "chassis side (receptacle, 30 pos)",
+    "pin_count": 30,
+    "contacts_needed": 22,
+    "tile_courtyard_mm": [
+     10.79,
+     6.29
+    ],
+    "chassis_courtyard_mm": [
+     10.69,
+     6.29
+    ],
+    "island_need_mm": [
+     11.79,
+     7.29
+    ],
+    "island_need_with_escape_mm": [
+     11.79,
+     9.79
+    ],
+    "fits_board": true,
+    "fits_board_with_escape": true,
+    "example": {
+     "rect": [
+      44.6303,
+      18.99,
+      63.1303,
+      39.99
+     ],
+     "w": 18.5,
+     "h": 21.0,
+     "area": 388.5,
+     "obstacle_slack": 0.494,
+     "nearest": "SW[3,2] pad2",
+     "edge_slack": 0.07
+    }
+   },
+   "df12_pair20": {
+    "tile_side": "Hirose_DF12_DF12E3.0-20DP-0.5V_2x10_P0.50mm_Vertical",
+    "chassis_side": "Hirose_DF12_DF12C3.0-20DS-0.5V_2x10_P0.50mm_Vertical",
+    "role_tile": "tile side (plug)",
+    "role_chassis": "chassis side (receptacle)",
+    "pin_count": 20,
+    "contacts_needed": 22,
+    "tile_courtyard_mm": [
+     8.29,
+     6.29
+    ],
+    "chassis_courtyard_mm": [
+     8.19,
+     6.29
+    ],
+    "island_need_mm": [
+     9.29,
+     7.29
+    ],
+    "island_need_with_escape_mm": [
+     9.29,
+     9.79
+    ],
+    "fits_board": true,
+    "fits_board_with_escape": true,
+    "example": {
+     "rect": [
+      44.6303,
+      18.99,
+      63.1303,
+      39.99
+     ],
+     "w": 18.5,
+     "h": 21.0,
+     "area": 388.5,
+     "obstacle_slack": 0.494,
+     "nearest": "SW[3,2] pad2",
+     "edge_slack": 0.07
+    }
+   },
+   "gecko_pair20": {
+    "tile_side": "Harwin_Gecko-G125-MVX2005L0X_2x10_P1.25mm_Vertical",
+    "chassis_side": "Harwin_Gecko-G125-FVX2005L0X_2x10_P1.25mm_Vertical",
+    "role_tile": "tile side (male, 20 pos)",
+    "role_chassis": "chassis side (female, 20 pos)",
+    "pin_count": 20,
+    "contacts_needed": 22,
+    "tile_courtyard_mm": [
+     16.14,
+     6.0
+    ],
+    "chassis_courtyard_mm": [
+     16.14,
+     6.0
+    ],
+    "island_need_mm": [
+     17.14,
+     7.0
+    ],
+    "island_need_with_escape_mm": [
+     17.14,
+     9.5
+    ],
+    "fits_board": true,
+    "fits_board_with_escape": true,
+    "example": {
+     "rect": [
+      44.6303,
+      18.99,
+      63.1303,
+      39.99
+     ],
+     "w": 18.5,
+     "h": 21.0,
+     "area": 388.5,
+     "obstacle_slack": 0.494,
+     "nearest": "SW[3,2] pad2",
+     "edge_slack": 0.07
+    }
+   }
+  }
+ },
+ "chassis_stack": {
+  "S1941-42R": {
+   "free_height": 7.3,
+   "deflection": [
+    0.3,
+    0.8
+   ],
+   "tile_gap_window": [
+    6.5,
+    7.0
+   ],
+   "socket_depth_bound": 4.94,
+   "clears_socket_bound": true,
+   "margin_mm": 1.56
+  },
+  "S1971-46R": {
+   "free_height": 4.55,
+   "deflection": [
+    0.3,
+    0.6
+   ],
+   "tile_gap_window": [
+    3.95,
+    4.25
+   ],
+   "socket_depth_bound": 4.94,
+   "clears_socket_bound": false,
+   "margin_mm": -0.99
+  },
+  "mezzanine": {
+   "df12_mated_height": 3.0,
+   "needs_chassis_relief_under_sockets": true,
+   "note": "DF12 3/3.5/4/5 mm stacks exist; KiCad 10 ships only the 3.0 mm variant footprints. Gecko G125 pair is taller (exact mated height: see DRG-00182; not re-stated here)."
+  }
+ },
+ "detection": {
+  "lines": [
+   "DET_T",
+   "DET_L",
+   "DET_B"
+  ],
+  "table": {
+   "DET_T": {
+    "empty": 1,
+    "seated": 0,
+    "half_mated_tilt_along_edge": 0,
+    "half_mated_tilt_toward_edge": 1,
+    "half_mated_rocked_one_pad": 1
+   },
+   "DET_L": {
+    "empty": 1,
+    "seated": 0,
+    "half_mated_tilt_along_edge": 0,
+    "half_mated_tilt_toward_edge": 1,
+    "half_mated_rocked_one_pad": 1
+   },
+   "DET_B": {
+    "empty": 1,
+    "seated": 0,
+    "half_mated_tilt_along_edge": 0,
+    "half_mated_tilt_toward_edge": 1,
+    "half_mated_rocked_one_pad": 1
+   }
+  },
+  "rule": "DET_x = 0 (present) only through the neighbour tile's strap; pull-up otherwise. GND pad in the pair is permanent backplane GND, the STRAP is not."
+ },
+ "checks_summary": {
+  "ok": 64,
+  "total": 64
+ }
+}

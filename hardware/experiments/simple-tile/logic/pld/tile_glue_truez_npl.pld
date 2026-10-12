@@ -1,0 +1,40 @@
+GAL22V10
+TILEGLZ3
+
+BCLK  BLATCH RLATCH TW  BFIRST TDATA LDATA BDATA NC   NC    NC   GND
+HX    Q0     Q1     Q2  Q3     BW    TCLK  LCLK  LATCH NPL  DS   VCC
+
+; PROBE: true-Z T_clk AND keep the NPL macrocell. Needs 11 output macrocells;
+; the 22V10 has 10 (pins 14-23) and pin 13 is input-only. Expected to FAIL the
+; galette fit: that failure is the evidence for the "external 1G04 on ~PL" trade
+; in tile_glue_truez.pld. If this unexpectedly assembles, the trade is void.
+
+Q0.R  = /Q0
+Q1.R  = Q1 * /Q0 + /Q1 * Q0
+Q2.R  = Q2 * /Q1 + Q2 * /Q0 + /Q2 * Q1 * Q0
+Q3.R  = Q3 * /Q2 + Q3 * /Q1 + Q3 * /Q0 + /Q3 * Q2 * Q1 * Q0
+Q0.E  = GND
+Q1.E  = GND
+Q2.E  = GND
+Q3.E  = GND
+
+BW.R  = BW + BDATA * Q0 * Q1 * Q2 * Q3
+
+HX    = /TW + /BFIRST
+HX.E  = GND
+
+TCLK.T = BCLK
+TCLK.E = HX
+LCLK.T = BCLK
+LCLK.E = TW * BFIRST
+
+LATCH = BLATCH + RLATCH
+NPL   = /BLATCH * /RLATCH
+
+DS    = TW * BFIRST * LDATA + /TW * TDATA + /BFIRST * TDATA
+
+AR    = LATCH
+SP    = GND
+
+DESCRIPTION
+Probe: 11 output macrocells on a 10-macrocell device; expected not to fit.

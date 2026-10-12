@@ -1,0 +1,395 @@
+[
+ {
+  "id": "FP1",
+  "name": "vendored footprint parses: 2 SMD pads + 5 NPTH",
+  "ok": true,
+  "detail": "pads=2 holes=5"
+ },
+ {
+  "id": "FP2",
+  "name": "NPTH drills are {1x4.0, 2x3.05, 2x1.75} mm",
+  "ok": true,
+  "detail": "[1.75, 1.75, 3.05, 3.05, 4.0]"
+ },
+ {
+  "id": "FP3",
+  "name": "courtyard polygon chained closed (socket body)",
+  "ok": true,
+  "detail": "22 vertices"
+ },
+ {
+  "id": "INV1",
+  "name": "tile contact count = 28 rev-A pads (8 top + 8 bottom + 6 left + 6 right)",
+  "ok": true,
+  "detail": "{'top': 8, 'bottom': 8, 'left': 6, 'right': 6}"
+ },
+ {
+  "id": "INV2",
+  "name": "unique nets = 16 (14 signals + VCC + GND); B_clk/B_data merged across bottom+right legs",
+  "ok": true,
+  "detail": "16"
+ },
+ {
+  "id": "LAT1",
+  "name": "R = body + margin = 15.9 mm",
+  "ok": true,
+  "detail": "R=15.900"
+ },
+ {
+  "id": "LAT2",
+  "name": "P = R/sin(60deg) ~= 18.36 mm (equilateral)",
+  "ok": true,
+  "detail": "P=18.3597"
+ },
+ {
+  "id": "LAT3",
+  "name": "every diagonal neighbour distance equals P (equilateral)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "LAT4",
+  "name": "cross-tile key pitch equals P (stepped outline, lattice-continuous)",
+  "ok": true,
+  "detail": "{\"min_key_dist_right\": 18.36, \"min_key_dist_up\": 18.36}"
+ },
+ {
+  "id": "CAP1",
+  "name": "hex cap (Voronoi cell, shrunk by gap/2) keeps >= cap_gap with ALL neighbours incl. cross-tile",
+  "ok": true,
+  "detail": "min gap 0.500 mm"
+ },
+ {
+  "id": "CAP2",
+  "name": "CONTROL: square cap of side P-gap demonstrably OVERLAPS at this pitch (review point verified, stock square rejected)",
+  "ok": true,
+  "detail": "min gap 0.000 mm < 0"
+ },
+ {
+  "id": "CAP3",
+  "name": "largest non-overlapping square cap = R - gap (documented alternative)",
+  "ok": true,
+  "detail": "15.40 mm"
+ },
+ {
+  "id": "OUT1",
+  "name": "bottom copper pads clear of the outline (>= edge_clear + outline tol)",
+  "ok": true,
+  "detail": "worst pad-to-edge +0.620 mm"
+ },
+ {
+  "id": "OUT2",
+  "name": "every NPTH keeps drill-to-edge >= edge_clear + outline tolerance",
+  "ok": true,
+  "detail": "worst drill-to-edge 1.602 mm"
+ },
+ {
+  "id": "ISL1",
+  "name": "free islands found on the bottom side",
+  "ok": true,
+  "detail": "44 islands"
+ },
+ {
+  "id": "ISL2",
+  "name": "independent re-check: every published island is exact-clear",
+  "ok": true,
+  "detail": "checked 25"
+ },
+ {
+  "id": "ISL3",
+  "name": "at least one full-width lane >= 40 x 2.5 mm exists",
+  "ok": true,
+  "detail": "5 lanes"
+ },
+ {
+  "id": "VA1-stepped",
+  "name": "variant A places ALL 28 rev-A contacts (stepped outline)",
+  "ok": true,
+  "detail": "placed 28/28, unresolved groups: -"
+ },
+ {
+  "id": "VA2-stepped",
+  "name": "variant A pads collision-free incl. 0.35 mm chassis tolerance",
+  "ok": true,
+  "detail": "worst 1.38 mm"
+ },
+ {
+  "id": "VA3-stepped",
+  "name": "each direction group is one straight row (simple chassis rails)",
+  "ok": true,
+  "detail": "4 rails used"
+ },
+ {
+  "id": "VA4-stepped",
+  "name": "pad row keeps group contiguity and pin order (backplane wiring schedule)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "VA1-rect",
+  "name": "variant A places ALL 28 rev-A contacts (rect outline)",
+  "ok": true,
+  "detail": "placed 28/28, unresolved groups: -"
+ },
+ {
+  "id": "VA2-rect",
+  "name": "variant A pads collision-free incl. 0.35 mm chassis tolerance",
+  "ok": true,
+  "detail": "worst 0.82 mm"
+ },
+ {
+  "id": "VA3-rect",
+  "name": "each direction group is one straight row (simple chassis rails)",
+  "ok": true,
+  "detail": "4 rails used"
+ },
+ {
+  "id": "VA4-rect",
+  "name": "pad row keeps group contiguity and pin order (backplane wiring schedule)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "CH1",
+  "name": "spring part selection criteria derived: free height >= 5.74 mm AND body <= 6.20 x 3.65 mm (2-bank pack in a 8.6 mm free band)",
+  "ok": true,
+  "detail": "free>=5.74, body<=(6.20,3.65)"
+ },
+ {
+  "id": "CH-S1941",
+  "name": "S1941-42R is REJECTED for packing (body 5.70 mm deep exceeds the 2-bank limit 3.65 mm even though its z stack is fine) - rejection verified by exhaustive bank search",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "CH-S1971",
+  "name": "S1971-46R packs (2 banks) but is REJECTED by the z budget (4.55 mm free height < bound + deflection) - both facts verified, not assumed",
+  "ok": true,
+  "detail": "banks=2 base=-1.75"
+ },
+ {
+  "id": "VB0",
+  "name": "mezzanine footprint measures present (measure_footprints.py)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "VB1-df12_pair30",
+  "name": "df12_pair30 evaluated on the minimal tile (30 connector contacts vs 22 needed)",
+  "ok": true,
+  "detail": "minimal tile: NO FIT; need island [11.79, 9.79] mm; scope: tested candidates only, not all SMT connectors; certified with bottom extension +4.79 mm"
+ },
+ {
+  "id": "VB2-df12_pair30",
+  "name": "df12_pair30: extended-tile island certified by re-scan",
+  "ok": true,
+  "detail": "ext=4.79 mm"
+ },
+ {
+  "id": "VB4-df12_pair30",
+  "name": "df12_pair30 contact budget check (22 = 16 nets + 6 strap endpoints): SUFFICIENT",
+  "ok": true,
+  "detail": "connector contacts: 30"
+ },
+ {
+  "id": "VB1-df12_pair20",
+  "name": "df12_pair20 evaluated on the minimal tile (20 connector contacts vs 22 needed)",
+  "ok": true,
+  "detail": "minimal tile: NO FIT; need island [9.29, 9.79] mm; scope: tested candidates only, not all SMT connectors; certified with bottom extension +4.79 mm"
+ },
+ {
+  "id": "VB2-df12_pair20",
+  "name": "df12_pair20: extended-tile island certified by re-scan",
+  "ok": true,
+  "detail": "ext=4.79 mm"
+ },
+ {
+  "id": "VB4-df12_pair20",
+  "name": "df12_pair20 contact budget check (22 = 16 nets + 6 strap endpoints): REJECTED, too few contacts - verified fact",
+  "ok": true,
+  "detail": "connector contacts: 20"
+ },
+ {
+  "id": "VB1-gecko_pair20",
+  "name": "gecko_pair20 evaluated on the minimal tile (20 connector contacts vs 22 needed)",
+  "ok": true,
+  "detail": "minimal tile: NO FIT; need island [17.14, 9.5] mm; scope: tested candidates only, not all SMT connectors; certified with bottom extension +4.5 mm"
+ },
+ {
+  "id": "VB2-gecko_pair20",
+  "name": "gecko_pair20: extended-tile island certified by re-scan",
+  "ok": true,
+  "detail": "ext=4.5 mm"
+ },
+ {
+  "id": "VB4-gecko_pair20",
+  "name": "gecko_pair20 contact budget check (22 = 16 nets + 6 strap endpoints): REJECTED, too few contacts - verified fact",
+  "ok": true,
+  "detail": "connector contacts: 20"
+ },
+ {
+  "id": "BK",
+  "name": "backplane node count = 4 slots x 28 tile pads",
+  "ok": true,
+  "detail": "112"
+ },
+ {
+  "id": "BK",
+  "name": "backplane adjacency matches J102<->J103 / J101<->J104 pin mapping",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "BK",
+  "name": "B_clk / B_data merged across bottom and right legs (one net each)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "BK",
+  "name": "T_endcol/L_endrow/B_first see the neighbour GND through the backplane",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "BK",
+  "name": "every electrical net stays inside one of the six rev-A classes (no class-crossing wiring)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "id": "BK",
+  "name": "with the tile above removed, T_endcol has no GND path (reads absent)",
+  "ok": true,
+  "detail": [
+   "T_endcol"
+  ]
+ },
+ {
+  "id": "BK",
+  "name": "unrelated detect lines keep working when another slot is removed",
+  "ok": true,
+  "detail": [
+   "B_first",
+   "GND",
+   "L_endrow",
+   "T_endcol"
+  ]
+ },
+ {
+  "id": "BK",
+  "name": "corner slot B_first floats (no neighbour below) -> 'first' semantics kept",
+  "ok": true,
+  "detail": [
+   "B_first"
+  ]
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_T: empty reads 1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_T: seated reads 0",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_T: tilt-toward-edge reads 1 (no false present)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_T: one-pad rocked reads 1 (series strap open)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_L: empty reads 1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_L: seated reads 0",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_L: tilt-toward-edge reads 1 (no false present)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_L: one-pad rocked reads 1 (series strap open)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_B: empty reads 1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_B: seated reads 0",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_B: tilt-toward-edge reads 1 (no false present)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "detect DET_B: one-pad rocked reads 1 (series strap open)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "no permanent-only path DET->GND",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET",
+  "name": "with neighbour seated path exists",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "DET3",
+  "name": "detection straps placed collision-free on all 3 edges (stepped)",
+  "ok": true,
+  "detail": "{\"strap_T\": 0.232, \"strap_B\": 5.525, \"strap_L\": 3.097}"
+ },
+ {
+  "id": "Z1",
+  "name": "S1941-42R clears the socket depth bound (worst case)",
+  "ok": true,
+  "detail": "margin 1.56 mm"
+ },
+ {
+  "id": "Z2",
+  "name": "S1971-46R is correctly rejected as too short",
+  "ok": true,
+  "detail": "margin -0.99 mm"
+ },
+ {
+  "id": "Z3",
+  "name": "3.0 mm mezzanine < socket depth bound => chassis relief required (flagged, not hidden)",
+  "ok": true,
+  "detail": ""
+ }
+]

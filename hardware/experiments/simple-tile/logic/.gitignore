@@ -1,0 +1,4 @@
+# Locally cached vendor documents; source URLs and table provenance are in timing.json.
+timing/datasheets/
+# Compiled simulation artifacts are reproducible from source.
+equivalence/results/build/

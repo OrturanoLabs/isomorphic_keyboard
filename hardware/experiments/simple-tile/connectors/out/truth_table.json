@@ -1,0 +1,31 @@
+{
+ "lines": [
+  "DET_T",
+  "DET_L",
+  "DET_B"
+ ],
+ "table": {
+  "DET_T": {
+   "empty": 1,
+   "seated": 0,
+   "half_mated_tilt_along_edge": 0,
+   "half_mated_tilt_toward_edge": 1,
+   "half_mated_rocked_one_pad": 1
+  },
+  "DET_L": {
+   "empty": 1,
+   "seated": 0,
+   "half_mated_tilt_along_edge": 0,
+   "half_mated_tilt_toward_edge": 1,
+   "half_mated_rocked_one_pad": 1
+  },
+  "DET_B": {
+   "empty": 1,
+   "seated": 0,
+   "half_mated_tilt_along_edge": 0,
+   "half_mated_tilt_toward_edge": 1,
+   "half_mated_rocked_one_pad": 1
+  }
+ },
+ "rule": "DET_x = 0 (present) only through the neighbour tile's strap; pull-up otherwise. GND pad in the pair is permanent backplane GND, the STRAP is not."
+}

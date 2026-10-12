@@ -1,0 +1,10 @@
+# yosys generic-synthesis proxy for tile_full.vhdl (ATF1502ASV candidate).
+# PURPOSE: sanity-check synthesizability and elemental counts (FFs, logic cells)
+# of the transparent-/PL architecture. This is NOT an ATF1502 fit: the ATF1500
+# series has no open fitter (Microchip ProChip/WinCUPL is proprietary), and
+# macrocell/PT budgets are device-specific. No fit claim is made from these numbers.
+ghdl --std=08 -fsynopsys tile_full.vhdl -e tile_cpld
+hierarchy -top tile_cpld
+proc
+synth -top tile_cpld -run :fine
+stat

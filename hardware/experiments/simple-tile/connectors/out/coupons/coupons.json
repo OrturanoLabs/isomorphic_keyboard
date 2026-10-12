@@ -1,0 +1,58 @@
+{
+ "coupon_spring": {
+  "file": "hardware/experiments/simple-tile/connectors/out/coupons/coupon_spring.kicad_pcb",
+  "outline_mm": [
+   44.86,
+   33.22
+  ],
+  "footprints": 28,
+  "tracks": 11,
+  "skipped": [
+   {
+    "what": "tp TPST0 STRAP0",
+    "at": [
+     13.803202613448384,
+     1.2
+    ]
+   },
+   {
+    "what": "tp TPST1 STRAP1",
+    "at": [
+     32.00640522689677,
+     1.2
+    ]
+   },
+   {
+    "what": "track STRAP2",
+    "from": [
+     43.259607840345154,
+     23.646666666666665
+    ],
+    "to": [
+     40.65960784034515,
+     23.646666666666665
+    ]
+   }
+  ]
+ },
+ "coupon_mezz": {
+  "file": "hardware/experiments/simple-tile/connectors/out/coupons/coupon_mezz.kicad_pcb",
+  "outline_mm": [
+   44.86,
+   38.01
+  ],
+  "footprints": 11,
+  "tracks": 4,
+  "skipped": []
+ },
+ "coupon_direct": {
+  "file": "hardware/experiments/simple-tile/connectors/out/coupons/coupon_direct.kicad_pcb",
+  "outline_mm": [
+   44.86,
+   33.22
+  ],
+  "footprints": 14,
+  "tracks": 8,
+  "skipped": []
+ }
+}

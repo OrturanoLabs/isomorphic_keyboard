@@ -1,0 +1,7 @@
+SELFTEST-PASS default: system hop setup is UNKNOWN (null assumptions)
+SELFTEST-PASS default: component bound labeled NECESSARY-ONLY
+SELFTEST-PASS default: CPLD composed rows are PROVISIONAL (never PASS)
+SELFTEST-PASS zero fills: system hop (29.1) == component bound (29.1), verdict PASS
+SELFTEST-PASS nonzero fills: system hop 31.1 == component 29.1 + 2.0
+SELFTEST-PASS negative case: 100 ns route terms -> system hop verdict FAIL slack -179.1
+SELFTEST-PASS hold helper: 0.1 ns change vs 0.5 ns hold -> FAIL (was UNKNOWN bug)

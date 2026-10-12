@@ -1,0 +1,61 @@
+== Candidate A: optimized discrete ==
+PATH                                                   ARRIVAL_NS BUDGET_NS SLACK_NS  VERDICT
+hop setup, component bound                                   29.1      50.0     20.9  NECESSARY-ONLY  (no interconnect terms)
+hop setup, SYSTEM                                          UNKNOWN      50.0   UNKNOWN  UNKNOWN  (needs measured clock/data hop interconnect)
+hop hold, component bound                                     3.8       0.5      3.3  PASS  (min corners; FAIL if negative)
+hop hold, SYSTEM                                           UNKNOWN       0.5   UNKNOWN  UNKNOWN  (route mins reused from the same assumption)
+flag: LV161A RCO(cnt) + 2G08 AND + 2G32 OR + 2G74 t_su       28.0      50.0     22.0  NECESSARY-ONLY  (on-tile path, no interconnect in series)
+flag: HC161 RCO + 2G08 + 2G32 + 2G74 t_su                  UNKNOWN      50.0   UNKNOWN  UNKNOWN  (HC161 has NO 3.3 V column -> unprovable)
+flag: 165 tpdCQ + 2G08 + 2G32 + 2G74 t_su                    26.5      50.0     23.5  NECESSARY-ONLY  (B_data freshness sub-path)
+
+== Candidate B: ATF22LV10C + 2x LVC165A ==
+PATH                                  ARRIVAL_NS BUDGET_NS SLACK_NS  VERDICT
+hop setup, component bound [LV10C-15]       48.5      50.0      1.5  NECESSARY-ONLY  (GAL tPD max 15.0 @ CL=35pF)
+hop setup, SYSTEM [LV10C-15]              UNKNOWN      50.0   UNKNOWN  UNKNOWN
+hop hold, component bound [LV10C-15]         7.0       0.5      6.5  PASS
+BW D: 165 tpdCQ + GAL tS [LV10C-15]         26.5      50.0     23.5  NECESSARY-ONLY  (BDATA pin into the array; tS = input setup)
+hop setup, component bound [LV10C-10]       38.5      50.0     11.5  NECESSARY-ONLY  (GAL tPD max 10.0 @ CL=35pF)
+hop setup, SYSTEM [LV10C-10]              UNKNOWN      50.0   UNKNOWN  UNKNOWN
+hop hold, component bound [LV10C-10]         7.0       0.5      6.5  PASS
+BW D: 165 tpdCQ + GAL tS [LV10C-10]         22.0      50.0     28.0  NECESSARY-ONLY  (BDATA pin into the array; tS = input setup)
+
+== Candidate C: ATF1502ASV full tile ==
+PATH                                   ARRIVAL_NS BUDGET_NS SLACK_NS  VERDICT
+hop setup, DS-mux composed [tCOP]            28.0      50.0     22.0  PROVISIONAL  (tIN+tFSU model a full DS mux only approximately; needs closed-fitter STA)
+hop setup, SYSTEM [tCOP]                   UNKNOWN      50.0   UNKNOWN  UNKNOWN
+hop setup, DS-mux composed [tCOP+tOD1]       31.0      50.0     19.0  PROVISIONAL  (tIN+tFSU model a full DS mux only approximately; needs closed-fitter STA)
+hop setup, SYSTEM [tCOP+tOD1]              UNKNOWN      50.0   UNKNOWN  UNKNOWN
+BW D: tCOP + tIN + tLAD + tSU(global)        27.0      50.0     23.0  PROVISIONAL  (internal composition unverified)
+
+== Cross-cutting (controller, latch, chain) ==
+PATH                                                                               ARRIVAL_NS BUDGET_NS SLACK_NS  VERDICT
+return setup full period, component bound A/B (165 CQ)                                   24.0      50.0     26.0  NECESSARY-ONLY  (FPGA launch + tile CQ + FPGA setup only)
+return setup full period, SYSTEM A/B (165 CQ)                                          UNKNOWN      50.0   UNKNOWN  UNKNOWN  (needs cable out/in flight and FPGA sampling route)
+return setup half period, component bound A/B (165 CQ)                                   24.0      25.0      1.0  NECESSARY-ONLY  (FPGA launch + tile CQ + FPGA setup only)
+return setup half period, SYSTEM A/B (165 CQ)                                          UNKNOWN      25.0   UNKNOWN  UNKNOWN  (needs cable out/in flight and FPGA sampling route)
+return setup full period, component bound C (tCOP)                                       17.5      50.0     32.5  NECESSARY-ONLY  (FPGA launch + tile CQ + FPGA setup only)
+return setup full period, SYSTEM C (tCOP)                                              UNKNOWN      50.0   UNKNOWN  UNKNOWN  (needs cable out/in flight and FPGA sampling route)
+return setup half period, component bound C (tCOP)                                       17.5      25.0      7.5  NECESSARY-ONLY  (FPGA launch + tile CQ + FPGA setup only)
+return setup half period, SYSTEM C (tCOP)                                              UNKNOWN      25.0   UNKNOWN  UNKNOWN  (needs cable out/in flight and FPGA sampling route)
+return setup full period, component bound C (tCOP+tOD1)                                  20.5      50.0     29.5  NECESSARY-ONLY  (FPGA launch + tile CQ + FPGA setup only)
+return setup full period, SYSTEM C (tCOP+tOD1)                                         UNKNOWN      50.0   UNKNOWN  UNKNOWN  (needs cable out/in flight and FPGA sampling route)
+return setup half period, component bound C (tCOP+tOD1)                                  20.5      25.0      4.5  NECESSARY-ONLY  (FPGA launch + tile CQ + FPGA setup only)
+return setup half period, SYSTEM C (tCOP+tOD1)                                         UNKNOWN      25.0   UNKNOWN  UNKNOWN  (needs cable out/in flight and FPGA sampling route)
+return hold at FPGA, SYSTEM                                                            UNKNOWN       5.5   UNKNOWN  UNKNOWN  (FPGA tCO min not published; cables unmeasured -> UNKNOWN)
+latch pulse width, component requirement                                               UNKNOWN       8.0   UNKNOWN  UNKNOWN  (need pulse >= 8.0 ns (max of 165 tW 4.3, LV10C tAW 8.0, LV161 tW 5))
+latch pulse width, SYSTEM                                                              UNKNOWN       8.0   UNKNOWN  UNKNOWN  (controller at 16 tiles / 20 MHz not implemented; the existing ~1.42 us tick belongs to the 350 kHz FSM and does NOT qualify)
+latch deassert fwd-chain aggregate A discrete latch fwd=2G32                             76.8     -----   UNKNOWN  NECESSARY-ONLY  (16 x 4.8 = 76.8 ns device-only; interconnect extra)
+latch deassert->1st clock at last tile, SYSTEM A discrete latch fwd=2G32               UNKNOWN     -----   UNKNOWN  UNKNOWN  (recovery need >= 6.0 ns incl.; budget = controller gap)
+latch deassert fwd-chain aggregate B GAL latch fwd=tPD                                  240.0     -----   UNKNOWN  NECESSARY-ONLY  (16 x 15.0 = 240.0 ns device-only; interconnect extra)
+latch deassert->1st clock at last tile, SYSTEM B GAL latch fwd=tPD                     UNKNOWN     -----   UNKNOWN  UNKNOWN  (recovery need >= 6.0 ns incl.; budget = controller gap)
+latch deassert fwd-chain aggregate C CPLD latch fwd=tPD1 (provisional)                  240.0     -----   UNKNOWN  NECESSARY-ONLY  (16 x 15.0 = 240.0 ns device-only; interconnect extra)
+latch deassert->1st clock at last tile, SYSTEM C CPLD latch fwd=tPD1 (provisional)     UNKNOWN     -----   UNKNOWN  UNKNOWN  (recovery need >= 6.0 ns incl.; budget = controller gap)
+first bit at controller, component bound                                                 19.9     -----   UNKNOWN  NECESSARY-ONLY  (165 SH/LD->QH max 19.9 ns from latch assertion reaching the first tile; aggregate latch path + capacitive recovery NOT included)
+first bit at controller, SYSTEM                                                        UNKNOWN     -----   UNKNOWN  UNKNOWN  (conditional: full latch path / line capacitance recovery unmeasured)
+clock fwd-chain aggregate A                                                              84.8     -----   UNKNOWN  NECESSARY-ONLY  (16 x 5.3 = 84.8 ns. PER-HOP slack analysis did NOT prove system behavior for chained phase; sample-before-clock absorption claim REMOVED - open: inter-tile phase/clock-chain checks)
+clock fwd-chain aggregate B LV10C-15                                                    240.0     -----   UNKNOWN  NECESSARY-ONLY  (16 x 15.0 = 240.0 ns. PER-HOP slack analysis did NOT prove system behavior for chained phase; sample-before-clock absorption claim REMOVED - open: inter-tile phase/clock-chain checks)
+clock fwd-chain aggregate C                                                             240.0     -----   UNKNOWN  NECESSARY-ONLY  (16 x 15.0 = 240.0 ns. PER-HOP slack analysis did NOT prove system behavior for chained phase; sample-before-clock absorption claim REMOVED - open: inter-tile phase/clock-chain checks)
+
+NECESSARY-ONLY = component-level datasheet bound, not a system sign-off.
+UNKNOWN = a null assumption/datasheet cell blocks the number (fill via --set).
+PROVISIONAL = CPLD composed estimate pending closed-fitter STA.

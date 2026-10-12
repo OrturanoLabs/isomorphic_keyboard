@@ -1,0 +1,4 @@
+# Preserve exact tool-emitted evidence (including its formatting).
+logic/pld/results/*.fus whitespace=-blank-at-eof
+logic/pld/results/*.pin whitespace=-blank-at-eof
+logic/cpld/results/*.log whitespace=-blank-at-eof,-blank-at-eol

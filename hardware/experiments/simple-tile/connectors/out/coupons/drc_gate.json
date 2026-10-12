@@ -1,0 +1,23 @@
+{
+ "coupon_spring": {
+  "errors": 0,
+  "warnings": 232,
+  "unconnected_items": 0,
+  "gate_fail": false,
+  "note": "coupons have no schematic/ERC: concept, not fab-ready"
+ },
+ "coupon_mezz": {
+  "errors": 0,
+  "warnings": 38,
+  "unconnected_items": 0,
+  "gate_fail": false,
+  "note": "coupons have no schematic/ERC: concept, not fab-ready"
+ },
+ "coupon_direct": {
+  "errors": 0,
+  "warnings": 9,
+  "unconnected_items": 0,
+  "gate_fail": false,
+  "note": "coupons have no schematic/ERC: concept, not fab-ready"
+ }
+}

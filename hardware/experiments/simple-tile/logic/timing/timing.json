@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "title": "simple-tile logic timing database (3.3 V rail, 20 MHz shift clock target)",
+    "date": "2026-10-12",
+    "period_ns": 50.0,
+    "half_period_ns": 25.0,
+    "vcc_operating": "3.3 V +/- 0.3 V",
+    "rule": "every cell carries its datasheet source; values not specified by the source at 3.3 V stay null and yield UNKNOWN, never invented numbers",
+    "temperature_axis": "industrial corner -40..+125 C where offered, else -40..+85 C (noted per device)",
+    "note": "the 'assumptions' block is NOT datasheet data: every system/interconnect term starts null -> dependent paths report UNKNOWN until the chassis/route is measured. Reviewer rule: datasheet-only sums are component-level NECESSARY constraints, never a 20 MHz system sign-off"
+  },
+  "assumptions": {
+    "route_delays_ns": {
+      "clock_fwd_hop": {"value": null, "meaning": "interconnect flight time + uncertainty of the forwarded clock, one tile hop"},
+      "data_hop": {"value": null, "meaning": "interconnect flight time + uncertainty of the returned data, one tile hop"},
+      "latch_hop": {"value": null, "meaning": "latch line interconnect flight time + uncertainty, one tile hop"},
+      "ctrl_cable_out": {"value": null, "meaning": "controller BOARD_CLK/BOARD_LATCH to first tile: cable + connector flight + skew"},
+      "ctrl_cable_in": {"value": null, "meaning": "first tile B_data to controller FPGA pin: cable + connector flight + skew"},
+      "fpga_sample_route": {"value": null, "meaning": "FPGA-internal BOARD_DATA sampling route/skew relative to the output clock"}
+    },
+    "controller_ns": {
+      "latch_pulse_width": {"value": null, "meaning": "actual latch-high pulse width produced by the (not yet implemented) 16-tile 20 MHz controller; the existing FSM's ~1.42 us tick at 350 kHz does NOT qualify"},
+      "latch_deassert_to_first_clk": {"value": null, "meaning": "gap from latch deassertion reaching the LAST tile of the chain to the first board-clock edge there"}
+    }
+  },
+  "devices": {
+    "ti_74lvc165a": {
+      "mpn": "SN74LVC165A",
+      "source": {"doc": "TI SN74LVC165A datasheet SCLSA16 (May 2024)", "url": "https://www.ti.com/lit/ds/symlink/sn74lvc165a.pdf", "tables": "5.6 Timing Characteristics, 5.7 Switching Characteristics"},
+      "conditions": "VCC = 3.3V +/- 0.3V, CL = 50 pF, -40..+125 C",
+      "params": {
+        "fclock_min_mhz": 104,
+        "tw_shld_low_ns": 4.3,
+        "tw_clk_ns": 4.3,
+        "tsu_shld_high_ns": 3.5,
+        "tsu_ser_ns": 4.0,
+        "th_ser_ns": 0.5,
+        "tsu_par_data_ns": 5.3,
+        "th_par_data_ns": 0.0,
+        "tpd_cq_min_ns": 1.0,
+        "tpd_cq_typ_ns": 4.2,
+        "tpd_cq_max_ns": 14.5,
+        "tpd_load_out_max_ns": 19.9
+      },
+      "notes": "tpd_cq = CLK or CLK INH to QH/QHbar; tpd_load_out = SH/LD to QH (asynchronous parallel load to output, the first-bit path)"
+    },
+    "ti_74hc161": {
+      "mpn": "SN74HC161",
+      "source": {"doc": "TI SN74HC161 datasheet SCLS297D (Jan 1996, rev. Sep 2003)", "url": "https://www.ti.com/lit/ds/symlink/sn74hc161.pdf", "tables": "switching characteristics, CL = 50 pF"},
+      "conditions": "datasheet specifies 2 V / 4.5 V / 6 V ONLY; NO 3.3 V column",
+      "params": {
+        "fmax_min_mhz_3v3": null,
+        "tpd_cq_max_ns_3v3": null,
+        "tpd_rco_max_ns_3v3": null,
+        "fmax_min_mhz_4v5_ref": 25,
+        "tpd_cq_max_ns_4v5_ref": 51,
+        "tpd_rco_max_ns_4v5_ref": 54
+      },
+      "notes": "rev-A U109 as-built. 4.5 V values are reference-only and NOT valid at 3.3 V; timability of the rev-A counter at 3.3 V is UNPROVABLE from this datasheet"
+    },
+    "ti_74lv161a": {
+      "mpn": "SN74LV161A",
+      "source": {"doc": "TI SN74LV161A datasheet SCLS404F (Apr 1998, rev. Dec 2005)", "url": "https://www.ti.com/lit/ds/symlink/sn74lv161a.pdf", "tables": "timing requirements VCC=3.3V+/-0.3V; switching characteristics VCC=3.3V+/-0.3V"},
+      "conditions": "VCC = 3.3V +/- 0.3V, CL = 50 pF, SN74LV161A full range (TPD* marked: production-tested except for MIL-PRF-38535 variants)",
+      "params": {
+        "fmax_min_mhz": 50,
+        "tw_ns": 5,
+        "tsu_data_ns": 6.5,
+        "th_ns": 1.0,
+        "tpd_cq_min_ns": 1.0,
+        "tpd_cq_max_ns": 16.0,
+        "tpd_rco_min_ns": 1.0,
+        "tpd_rco_max_ns": 16.0,
+        "tpd_rco_preset_max_ns": 23.5,
+        "tphl_clr_max_ns": 19.5
+      },
+      "notes": "count-mode CLK to RCO max = 16 ns (CL=50 pF); 23.5 ns is preset-mode RCO; proposed drop-in replacement for the 3.3 V-unprovable HC161"
+    },
+    "ti_74lvc2g08": {
+      "mpn": "SN74LVC2G08",
+      "source": {"doc": "TI SN74LVC2G08 datasheet SCES198N (rev. Dec 2015)", "url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g08.pdf", "tables": "6.6 Switching Characteristics"},
+      "conditions": "VCC = 3.3V +/- 0.3V, CL = 50 pF (parameter measurement info table), -40..+125 C",
+      "params": {"tpd_min_ns": 1.0, "tpd_max_ns": 5.3},
+      "notes": "rev-A U102: W = T_W AND B_first, and flag AND (B_data AND Tc)"
+    },
+    "ti_74lvc2g32": {
+      "mpn": "SN74LVC2G32",
+      "source": {"doc": "TI SN74LVC2G32 datasheet SCES201N (rev. Sep 2015)", "url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g32.pdf", "tables": "6.6 Switching Characteristics"},
+      "conditions": "VCC = 3.3V +/- 0.3V, CL = 50 pF, -40..+125 C",
+      "params": {"tpd_min_ns": 1.0, "tpd_max_ns": 4.8},
+      "notes": "rev-A U106: latch OR and flag feedback OR"
+    },
+    "ti_74lvc2g125": {
+      "mpn": "SN74LVC2G125",
+      "source": {"doc": "TI SN74LVC2G125 datasheet SCES204Q (rev. Mar 2017)", "url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g125.pdf", "tables": "6.6/6.7 Switching Characteristics"},
+      "conditions": "VCC = 3.3V +/- 0.3V, CL = 50 pF, -40..+125 C",
+      "params": {"tpd_min_ns": 1.4, "tpd_max_ns": 5.3, "ten_max_ns": 5.7, "tdis_max_ns": 5.6},
+      "notes": "rev-A U107: T_clk clock forward and T_data buffer (active-low OE)"
+    },
+    "ti_74lvc2g126": {
+      "mpn": "SN74LVC2G126",
+      "source": {"doc": "TI SN74LVC2G126 datasheet SCES205N (rev. Sep 2020)", "url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g126.pdf", "tables": "6.6/6.7 Switching Characteristics"},
+      "conditions": "VCC = 3.3V +/- 0.3V, CL = 50 pF, -40..+125 C",
+      "params": {"tpd_min_ns": 1.4, "tpd_max_ns": 5.0, "ten_max_ns": 5.1, "tdis_max_ns": 5.4},
+      "notes": "rev-A U101: L_clk clock forward and L_data buffer (active-high OE)"
+    },
+    "ti_74lvc1g04": {
+      "mpn": "SN74LVC1G04",
+      "source": {"doc": "TI SN74LVC1G04 datasheet SCES214AF (rev. Oct 2025)", "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf", "tables": "5.8/5.9 Switching Characteristics"},
+      "conditions": "VCC = 3.3V +/- 0.3V, -40..+125 C",
+      "params": {"tpd_max_ns_cl15": 3.3, "tpd_max_ns_cl30_50": 4.2, "tpd_min_ns": 0.7},
+      "notes": "rev-A U105 (~rst inverter); also the external ~PL inverter of the true-Z GAL variant"
+    },
+    "ti_74lvc2g74": {
+      "mpn": "SN74LVC2G74",
+      "source": {"doc": "TI SN74LVC2G74 datasheet SCES203Q (rev. Sep 2021)", "url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g74.pdf", "tables": "6.7 Timing Requirements, 6.9 Switching Characteristics"},
+      "conditions": "VCC = 3.3V +/- 0.3V, CL = 50 pF, -40..+125 C",
+      "params": {
+        "fclock_min_mhz": 120,
+        "tw_clk_ns": 3.5,
+        "tsu_data_ns": 1.9,
+        "th_data_ns": 0.5,
+        "tsu_clr_inactive_ns": 1.8,
+        "tpd_cq_min_ns": 2.2,
+        "tpd_cq_max_ns": 6.9
+      },
+      "notes": "rev-A U108 sticky flag; tpd_cq_max = CLK to Q at -40..125 C (Q-bar column: 7.2 ns)"
+    },
+    "atf22lv10c": {
+      "mpn": "ATF22LV10C",
+      "source": {"doc": "Microchip/Atmel doc0780M datasheet (ATF22V10C/ATF22LV10C)", "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/doc0780.pdf", "tables": "3. DC and AC Operating Conditions (LV10C section: VCC 3.0-5.5 V), 3.3 AC Characteristics, 3.6 Output Test Loads"},
+      "conditions": "LV10C section: VCC 3.0..3.6 V (DC test at 3.6 V), output test load CL = 35 pF, commercial/industrial per ordering code",
+      "params": {
+        "g10": {"tpd_min_ns": 3.0, "tpd_max_ns": 10.0, "tcf_max_ns": 5.0, "tco_max_ns": 6.5, "ts_min_ns": 7.5, "th_ns": 0.0, "fmax_ext_mhz": 71.4, "fmax_int_mhz": 80.0, "fmax_nofb_mhz": 83.3, "tea_max_ns": 12.0, "ter_max_ns": 12.0, "taw_ns": 8.0, "tar_ns": 6.0},
+        "g15": {"tpd_min_ns": 3.0, "tpd_max_ns": 15.0, "tcf_max_ns": 8.0, "tco_max_ns": 10.0, "ts_min_ns": 12.0, "th_ns": 0.0, "fmax_ext_mhz": 45.5, "fmax_int_mhz": 50.0, "fmax_nofb_mhz": 62.5, "tea_max_ns": 15.0, "ter_max_ns": 15.0, "taw_ns": 8.0, "tar_ns": 6.0}
+      },
+      "notes": "tcf = clock to feedback; ts covers input-or-feedback setup including the BW D input (BDATA in through the array); internal-feedback fmax = 1/(ts+tcf) rates the 4-bit counter loop"
+    },
+    "atf1502asv": {
+      "mpn": "ATF1502ASV",
+      "source": {"doc": "Microchip ATF1502ASV datasheet DS20006485A (2020)", "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/ATF1502ASV-3.3V-32-Macrocell-CPLD-Data-Sheet-20006485A.pdf", "tables": "TABLE 1-4 AC Characteristics (-15 grade)"},
+      "conditions": "VCC = 3.0..3.6 V, -15 grade, CL = 35 pF output loads",
+      "params": {
+        "tpd1_max_ns": 15.0,
+        "tpd2_max_ns": 12.0,
+        "tsu_min_ns": 11.0,
+        "tfsu_min_ns": 3.0,
+        "tfh_ns": 1.0,
+        "tcop_max_ns": 8.0,
+        "tch_ns": 5.0,
+        "tcl_ns": 5.0,
+        "tcnt_max_ns": 13.0,
+        "fcnt_min_mhz": 76.9,
+        "fmax_min_mhz": 100.0,
+        "tin_max_ns": 2.0,
+        "tio_max_ns": 2.0,
+        "tsexp_max_ns": 8.0,
+        "tlad_max_ns": 6.0,
+        "tlac_max_ns": 6.0,
+        "tod1_max_ns": 3.0,
+        "tpre_max_ns": 4.0,
+        "tclr_max_ns": 4.0
+      },
+      "notes": "register AR from PT3 or GCLR, AP from PT5 (DS20006485A text; simultaneous PT3-AR + PT5-AS per macrocell also consistent with prjbureau fuzzed fusemap - see logic/cpld/results/verification)"
+    },
+    "lattice_ice40up5k": {
+      "mpn": "iCE40UP5K (pico-ice controller)",
+      "source": {"doc": "Lattice iCE40 UltraPlus Family Data Sheet FPGA-DS-02008-2.4 (Feb 2025)", "url": "https://www.latticesemi.com/view_document?document_id=51968", "tables": "General I/O Pin Parameters (global buffer clock, no PLL); note 1: 'All the data is from the worst cases'"},
+      "conditions": "PIO, global buffer clock without PLL, worst case",
+      "params": {
+        "tsu_pio_ns": -0.5,
+        "th_pio_ns": 5.55,
+        "tco_pio_max_ns": 10.0,
+        "tco_pio_min_ns": null,
+        "tpd_lut_max_ns": 9.0
+      },
+      "notes": "tco_pio has no MIN column: same-edge launched-data hold margin against the FPGA's 5.55 ns hold is UNPROVABLE from the datasheet (min-corner analysis needs an FPGA-out min)"
+    }
+  }
+}

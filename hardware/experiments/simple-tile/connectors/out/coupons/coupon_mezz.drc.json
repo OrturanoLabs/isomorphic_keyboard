@@ -1,0 +1,911 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-12T10:55:36",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "coupon_mezz.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 38.01
+                    },
+                    "uuid": "7a9b2b85-3f29-4651-a1c2-7351fbc37f26"
+                },
+                {
+                    "description": "PCB text 'COUPON B: mezzanine plug Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical, south tab +4.79 mm (study-certified)' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "aa71e02f-45a7-4b62-bb1a-88ddbc2c2cb9"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 44.859607,
+                        "y": 38.01
+                    },
+                    "uuid": "130f0108-1cd2-42c7-9944-912d307f8259"
+                },
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d979b94e-705d-4c38-98fa-9e252ea4083d"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "53196d51-ee77-4a72-9dba-d71dc6349226"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d979b94e-705d-4c38-98fa-9e252ea4083d"
+                },
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5269da19-e722-41a7-b564-755a51af1cfa"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d979b94e-705d-4c38-98fa-9e252ea4083d"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d145693f-c37a-4834-92aa-1452ca5b50e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d979b94e-705d-4c38-98fa-9e252ea4083d"
+                },
+                {
+                    "description": "Reference field of TP_P15",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "663860dd-2d09-4626-b6c6-f3e56cc8ebc7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d979b94e-705d-4c38-98fa-9e252ea4083d"
+                },
+                {
+                    "description": "Reference field of TP_P30",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4f0ae54a-7bd1-43dc-9301-95fb63b7c947"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d979b94e-705d-4c38-98fa-9e252ea4083d"
+                },
+                {
+                    "description": "Reference field of TP_P16",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d69852cb-6db2-42ef-93a4-df28c1aaf445"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5269da19-e722-41a7-b564-755a51af1cfa"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d145693f-c37a-4834-92aa-1452ca5b50e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5269da19-e722-41a7-b564-755a51af1cfa"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "53196d51-ee77-4a72-9dba-d71dc6349226"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5269da19-e722-41a7-b564-755a51af1cfa"
+                },
+                {
+                    "description": "Reference field of TP_P15",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "663860dd-2d09-4626-b6c6-f3e56cc8ebc7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P30",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4f0ae54a-7bd1-43dc-9301-95fb63b7c947"
+                },
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5269da19-e722-41a7-b564-755a51af1cfa"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "5269da19-e722-41a7-b564-755a51af1cfa"
+                },
+                {
+                    "description": "Reference field of TP_P16",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d69852cb-6db2-42ef-93a4-df28c1aaf445"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "53196d51-ee77-4a72-9dba-d71dc6349226"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d145693f-c37a-4834-92aa-1452ca5b50e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "53196d51-ee77-4a72-9dba-d71dc6349226"
+                },
+                {
+                    "description": "Reference field of TP_P15",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "663860dd-2d09-4626-b6c6-f3e56cc8ebc7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P30",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4f0ae54a-7bd1-43dc-9301-95fb63b7c947"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "53196d51-ee77-4a72-9dba-d71dc6349226"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "53196d51-ee77-4a72-9dba-d71dc6349226"
+                },
+                {
+                    "description": "Reference field of TP_P16",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d69852cb-6db2-42ef-93a4-df28c1aaf445"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P15",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "663860dd-2d09-4626-b6c6-f3e56cc8ebc7"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d145693f-c37a-4834-92aa-1452ca5b50e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P30",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4f0ae54a-7bd1-43dc-9301-95fb63b7c947"
+                },
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d145693f-c37a-4834-92aa-1452ca5b50e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of MH",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d145693f-c37a-4834-92aa-1452ca5b50e0"
+                },
+                {
+                    "description": "Reference field of TP_P16",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d69852cb-6db2-42ef-93a4-df28c1aaf445"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P30",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4f0ae54a-7bd1-43dc-9301-95fb63b7c947"
+                },
+                {
+                    "description": "Reference field of TP_P15",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "663860dd-2d09-4626-b6c6-f3e56cc8ebc7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P15",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "663860dd-2d09-4626-b6c6-f3e56cc8ebc7"
+                },
+                {
+                    "description": "Reference field of TP_P16",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d69852cb-6db2-42ef-93a4-df28c1aaf445"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P30",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "4f0ae54a-7bd1-43dc-9301-95fb63b7c947"
+                },
+                {
+                    "description": "Reference field of TP_P16",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d69852cb-6db2-42ef-93a4-df28c1aaf445"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of SW10 on B.Silkscreen",
+                    "pos": {
+                        "x": 32.099606,
+                        "y": 3.759999
+                    },
+                    "uuid": "3e1fcb1f-b33d-404b-b0a5-ebec7d55e3ca"
+                },
+                {
+                    "description": "PCB text 'COUPON B: mezzanine plug Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical, south tab +4.79 mm (study-certified)' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "aa71e02f-45a7-4b62-bb1a-88ddbc2c2cb9"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of SW00 on B.Silkscreen",
+                    "pos": {
+                        "x": 13.739868,
+                        "y": 3.759999
+                    },
+                    "uuid": "35c437d1-e0e7-4a49-88d7-fafb7c93fa0b"
+                },
+                {
+                    "description": "PCB text 'COUPON B: mezzanine plug Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical, south tab +4.79 mm (study-certified)' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "aa71e02f-45a7-4b62-bb1a-88ddbc2c2cb9"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B: mezzanine plug Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical, south tab +4.79 mm (study-certified)' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "aa71e02f-45a7-4b62-bb1a-88ddbc2c2cb9"
+                },
+                {
+                    "description": "Pad 2 [K10_C] of SW10 on B.Cu",
+                    "pos": {
+                        "x": 42.041607,
+                        "y": 3.58
+                    },
+                    "uuid": "076666f6-086a-4550-b31f-2b7761381a6e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B: mezzanine plug Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical, south tab +4.79 mm (study-certified)' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "aa71e02f-45a7-4b62-bb1a-88ddbc2c2cb9"
+                },
+                {
+                    "description": "NPTH pad of SW10",
+                    "pos": {
+                        "x": 38.739607,
+                        "y": 3.58
+                    },
+                    "uuid": "c9501384-7259-4b18-9314-caf96a87e232"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B: mezzanine plug Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical, south tab +4.79 mm (study-certified)' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "aa71e02f-45a7-4b62-bb1a-88ddbc2c2cb9"
+                },
+                {
+                    "description": "Pad 2 [K00_C] of SW00 on B.Cu",
+                    "pos": {
+                        "x": 23.681869,
+                        "y": 3.58
+                    },
+                    "uuid": "85e5fa6f-402f-4a8a-b269-1017bbc874d3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B: mezzanine plug Hirose_DF12_DF12E3.0-30DP-0.5V_2x15_P0.50mm_Vertical, south tab +4.79 mm (study-certified)' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "aa71e02f-45a7-4b62-bb1a-88ddbc2c2cb9"
+                },
+                {
+                    "description": "NPTH pad of SW00",
+                    "pos": {
+                        "x": 20.379869,
+                        "y": 3.58
+                    },
+                    "uuid": "feacf77a-a022-4615-9afd-bb38dbd74ec0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 1 [J1.1] of J1 on B.Cu",
+                    "pos": {
+                        "x": 25.929803,
+                        "y": 35.665
+                    },
+                    "uuid": "d5035d5e-5f10-4ee0-be42-2b8608cc5b89"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 3 [J1.3] of J1 on B.Cu",
+                    "pos": {
+                        "x": 24.929803,
+                        "y": 35.665
+                    },
+                    "uuid": "6bcb3023-6d51-43a5-816a-b7ec5a7e5185"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 5 [J1.5] of J1 on B.Cu",
+                    "pos": {
+                        "x": 23.929803,
+                        "y": 35.665
+                    },
+                    "uuid": "da0e5153-13ff-4dc7-a56f-29d92fb5374d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 6 [J1.6] of J1 on B.Cu",
+                    "pos": {
+                        "x": 23.429803,
+                        "y": 35.665
+                    },
+                    "uuid": "a3b8e7dd-e50e-4f53-bfb2-c1df4b507b08"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 7 [J1.7] of J1 on B.Cu",
+                    "pos": {
+                        "x": 22.929803,
+                        "y": 35.665
+                    },
+                    "uuid": "6e6cd67e-7bc1-481b-8458-ed107233803e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 8 [J1.8] of J1 on B.Cu",
+                    "pos": {
+                        "x": 22.429803,
+                        "y": 35.665
+                    },
+                    "uuid": "a75f6791-e95b-4dac-8099-1f4eb5c80569"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 9 [J1.9] of J1 on B.Cu",
+                    "pos": {
+                        "x": 21.929803,
+                        "y": 35.665
+                    },
+                    "uuid": "39e6aeed-7c3d-4558-a94f-16ea5311e629"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 15 [J1.15] of J1 on B.Cu",
+                    "pos": {
+                        "x": 18.929803,
+                        "y": 35.665
+                    },
+                    "uuid": "bdfbed95-54c2-4ef3-9e8f-b3d74414ae4a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - corner-pad TPs only, no full fan-out escape, no ERC' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.61
+                    },
+                    "uuid": "865bd2d6-3e8f-4e8a-a3d0-37b8e1590a52"
+                },
+                {
+                    "description": "Pad 1 [J1.15] of TP_P15 on B.Cu",
+                    "pos": {
+                        "x": 15.329803,
+                        "y": 35.665
+                    },
+                    "uuid": "de845acc-aa57-43a6-b231-ebb84b4a6824"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

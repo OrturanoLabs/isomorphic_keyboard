@@ -1,0 +1,9 @@
+# generated simulation outputs
+/build/
+/logs/
+# no VCD files are produced by default; if you add --vcd manually, keep them out
+*.vcd
+*.ghw
+/e~*
+/tile_grid_tb
+/probe_tb

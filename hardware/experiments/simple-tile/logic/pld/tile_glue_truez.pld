@@ -1,0 +1,53 @@
+GAL22V10
+TILEGLZ2
+
+BCLK  BLATCH RLATCH TW  BFIRST TDATA LDATA BDATA NC   NC    NC   GND
+NC    Q0     Q1     Q2  Q3     BW    TCLK  LCLK  LATCH HX   DS   VCC
+
+; Corrected variant of hardware/gal/tile_glue.pld: recovers TRUE tri-state T_clk
+; (rev-A electrical behaviour) inside the same 10-macrocell budget.
+; Trade: the NPL macrocell output is dropped; the two '165 ~PL pins are driven by
+; an external 74LVC1G04 fed from the LATCH pin (tile = GAL + 2x'165 + 1G04 = 4 ICs).
+;
+; The 22V10 gives each macrocell ONE output-enable product term. T_clk's enable is
+; an OR (/TW + /BFIRST), not a product -> the committed design drove T_clk low
+; instead. Here a helper macrocell HX = /TW + /BFIRST (a sum is fine for a data
+; equation) is fed back as the single-literal product term TCLK.E.
+
+; --- bit counter (unchanged) ---
+Q0.R  = /Q0
+Q1.R  = Q1 * /Q0 + /Q1 * Q0
+Q2.R  = Q2 * /Q1 + Q2 * /Q0 + /Q2 * Q1 * Q0
+Q3.R  = Q3 * /Q2 + Q3 * /Q1 + Q3 * /Q0 + /Q3 * Q2 * Q1 * Q0
+Q0.E  = GND
+Q1.E  = GND
+Q2.E  = GND
+Q3.E  = GND
+
+; --- column-end flag (unchanged) ---
+BW.R  = BW + BDATA * Q0 * Q1 * Q2 * Q3
+
+; --- helper: "top clock selected" as one feedback literal ---
+HX.T  = /TW + /BFIRST
+HX.E  = GND
+
+; --- clocks: BOTH truly tri-stated when unselected, as U101/U107 in rev A ---
+TCLK.T = BCLK
+TCLK.E = HX
+LCLK.T = BCLK
+LCLK.E = TW * BFIRST
+
+; --- latch merge --- (the '165 ~PL now comes from an external 1G04 on LATCH)
+LATCH = BLATCH + RLATCH
+
+; --- serial input (unchanged) ---
+DS    = TW * BFIRST * LDATA + /TW * TDATA + /BFIRST * TDATA
+
+AR    = LATCH
+SP    = GND
+
+DESCRIPTION
+
+Isomorphic keyboard tile, rev-A/B glue in one ATF22LV10C, variant with true-Z T_clk.
+Behavioural equivalence to rev A (including the Z) is checked in ../equivalence/.
+Macrocells: Q0..Q3, BW, TCLK, LCLK, LATCH, HX, DS = 10 of 10; no NPL pin.
