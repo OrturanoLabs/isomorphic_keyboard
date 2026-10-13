@@ -21,6 +21,7 @@ removed and moved while playing.
 
 The project is consolidated into this one directory. Start with the
 [current status](docs/architecture/current-development.md) and
+[ordered FPGA plan](docs/FPGA_PLAN.md); migration details are in the
 [consolidation record](docs/CONSOLIDATION.md). The FPGA/controller tests have
 advanced, but the new tile is not yet a routed, hardware-validated release.
 

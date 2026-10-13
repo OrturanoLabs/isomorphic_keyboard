@@ -1,6 +1,7 @@
 # Isomorphic keyboard — documentation
 
 - **Current development**
+  - [Ordered FPGA task register and session recovery](FPGA_PLAN.md)
   - [FPGA lead, discrete reference and retired approaches](architecture/current-development.md)
   - [Single-directory consolidation and cleanup](CONSOLIDATION.md)
   - [FPGA board readiness](../hardware/experiments/simple-tile/fpga/board/docs/readiness.md)

@@ -1,5 +1,7 @@
 # Current single-board tile development
 
+Next actions are registered in [the ordered FPGA plan](../FPGA_PLAN.md).
+
 ## Active choices
 
 **FPGA is the lead; discrete logic remains the reference and a conditional
