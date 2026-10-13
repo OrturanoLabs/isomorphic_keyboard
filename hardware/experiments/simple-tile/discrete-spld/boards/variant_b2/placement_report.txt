@@ -1,0 +1,13 @@
+keys: 12 placed, 0 rotated 180 deg (pattern from rotation_study)
+chassis pads: 19 (connector-next 19C aggregate, straps removed)
+ICs placed: 3/4; unplaced: ['UB1 (Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm)']
+33R series placement: ['ROLCK: no driver resolved, unanchored', 'ROTCK: no driver resolved, unanchored', 'ROLLA: no driver resolved, unanchored', 'ROBDA anchored at driver UB3.9 (net data_drv)', 'ROBW: no driver resolved, unanchored']
+decoupling placement: ['CB1: no IC mapping -> scan', 'CB2: no IC mapping -> scan', 'CB3: no IC mapping -> scan', 'CB4: no IC mapping -> scan']
+test points placed: 16/16
+courtyard collisions (exact courts, same-side): 0 []
+min bottom-side courtyard gap: 0.040 mm at ('ROLCK', 'TP_B_clk')
+bottom parts within socket courtyard(+0.3): 0 []
+courtyards off-board: 0 []
+93 footprints placed in /home/marco/Documents/OrturanoLabs/isomorphic_keyboard/hardware/experiments/simple-tile/discrete-spld/tools/../boards/variant_b2/tile_variant_b2.kicad_pcb
+nets: 48 (+ 1 empty-net); routed: 0 (placement prototype - all 48 nets unrouted)
+intentional no-connect pads (NC_* nets): 5

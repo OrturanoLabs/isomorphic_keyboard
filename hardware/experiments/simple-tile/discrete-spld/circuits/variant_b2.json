@@ -1,0 +1,1625 @@
+{
+ "checks": {
+  "frame": {
+   "order": [
+    "UB3:H..A (keys0..7)",
+    "UB2:H..E (keys8..11)",
+    "UB2:D,C markers",
+    "UB2:B=L_endrow",
+    "UB2:A=T_endcol"
+   ]
+  },
+  "gal_jedec_model": "results/truez_from_jed.json"
+ },
+ "circuit": "variant_b2",
+ "components": [
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG VCC",
+   "ref": "JP_VCC",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG T_clk",
+   "ref": "JP_T_clk",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG T_data",
+   "ref": "JP_T_data",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG T_endcol",
+   "ref": "JP_T_endcol",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG T_W",
+   "ref": "JP_T_W",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG B_clk",
+   "ref": "JP_B_clk",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG B_data",
+   "ref": "JP_B_data",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG B_first",
+   "ref": "JP_B_first",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG B_latch",
+   "ref": "JP_B_latch",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG B_W",
+   "ref": "JP_B_W",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG L_clk",
+   "ref": "JP_L_clk",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG L_data",
+   "ref": "JP_L_data",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG L_endrow",
+   "ref": "JP_L_endrow",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG L_latch",
+   "ref": "JP_L_latch",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "SIG R_latch",
+   "ref": "JP_R_latch",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "GND_lane GND",
+   "ref": "JP_GND",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "GND_lane GND_DET_T",
+   "ref": "JP_GND_DET_T",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "GND_lane GND_DET_B",
+   "ref": "JP_GND_DET_B",
+   "value": "PAD"
+  },
+  {
+   "device": "PAD",
+   "footprint": "Connector_Generic:Conn_01x01",
+   "notes": "GND_lane GND_DET_R",
+   "ref": "JP_GND_DET_R",
+   "value": "PAD"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "L_data pull",
+   "ref": "RPLDA",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "L_endrow pull",
+   "ref": "RPLER",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "B_first pull",
+   "ref": "RPBFI",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "T_W pull",
+   "ref": "RPTW",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "T_endcol pull",
+   "ref": "RPTEC",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "R_latch pull",
+   "ref": "RPRLA",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "B_latch pull",
+   "ref": "RPBLA",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "T_data pull",
+   "ref": "RPTDA",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "B_clk pull",
+   "ref": "RPBCK",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "L_clk series",
+   "ref": "ROLCK",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "T_clk series",
+   "ref": "ROTCK",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "L_latch series",
+   "ref": "ROLLA",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "B_data series",
+   "ref": "ROBDA",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "B_W series",
+   "ref": "ROBW",
+   "value": "33"
+  },
+  {
+   "device": "CP",
+   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "notes": "bulk decoupling",
+   "ref": "CB1",
+   "value": "4u7"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key0",
+   "ref": "SW1",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key0 pull-down",
+   "ref": "RK0",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key0 series",
+   "ref": "RS0",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key1",
+   "ref": "SW2",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key1 pull-down",
+   "ref": "RK1",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key1 series",
+   "ref": "RS1",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key2",
+   "ref": "SW3",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key2 pull-down",
+   "ref": "RK2",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key2 series",
+   "ref": "RS2",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key3",
+   "ref": "SW4",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key3 pull-down",
+   "ref": "RK3",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key3 series",
+   "ref": "RS3",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key4",
+   "ref": "SW5",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key4 pull-down",
+   "ref": "RK4",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key4 series",
+   "ref": "RS4",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key5",
+   "ref": "SW6",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key5 pull-down",
+   "ref": "RK5",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key5 series",
+   "ref": "RS5",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key6",
+   "ref": "SW7",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key6 pull-down",
+   "ref": "RK6",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key6 series",
+   "ref": "RS6",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key7",
+   "ref": "SW8",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key7 pull-down",
+   "ref": "RK7",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key7 series",
+   "ref": "RS7",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key8",
+   "ref": "SW9",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key8 pull-down",
+   "ref": "RK8",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key8 series",
+   "ref": "RS8",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key9",
+   "ref": "SW10",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key9 pull-down",
+   "ref": "RK9",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key9 series",
+   "ref": "RS9",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key10",
+   "ref": "SW11",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key10 pull-down",
+   "ref": "RK10",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key10 series",
+   "ref": "RS10",
+   "value": "100"
+  },
+  {
+   "device": "SW",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "notes": "key11",
+   "ref": "SW12",
+   "value": "SW"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key11 pull-down",
+   "ref": "RK11",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "notes": "key11 series",
+   "ref": "RS11",
+   "value": "100"
+  },
+  {
+   "device": "SN74LVC165A",
+   "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+   "notes": "shift-chain stage 1 (upper frame bits)",
+   "ref": "UB2",
+   "value": "SN74LVC165A"
+  },
+  {
+   "device": "SN74LVC165A",
+   "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+   "notes": "shift-chain stage 0 (output stage)",
+   "ref": "UB3",
+   "value": "SN74LVC165A"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "notes": "decoupling",
+   "ref": "CB1",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "notes": "decoupling",
+   "ref": "CB2",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "notes": "decoupling",
+   "ref": "CB3",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "notes": "decoupling",
+   "ref": "CB4",
+   "value": "100n"
+  },
+  {
+   "device": "ATF22LV10C-10",
+   "footprint": "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm",
+   "notes": "true-Z T_clk design; Q0..Q3,HX pins are Hi-Z on silicon (blown OE fuses, see results/galcheck_truez.txt) -> leave open",
+   "ref": "UB1",
+   "value": "ATF22LV10C-10"
+  },
+  {
+   "device": "SN74LVC1G04",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+   "notes": "",
+   "ref": "UB4",
+   "value": "SN74LVC1G04"
+  }
+ ],
+ "devices": {
+  "ATF22LV10C-10": {
+   "datasheet": "https://ww1.microchip.com/downloads/en/DeviceDoc/doc0780.pdf",
+   "footprint": "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm",
+   "package": "TSSOP-24",
+   "pins": {},
+   "power": {
+    "GND": "12",
+    "VCC": "24"
+   },
+   "sim": "ic_gal22v10"
+  },
+  "C": {
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "package": "0603",
+   "pins": {
+    "1": "1",
+    "2": "2"
+   },
+   "power": {},
+   "sim": "cap"
+  },
+  "CP": {
+   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "package": "1206",
+   "pins": {
+    "1": "1",
+    "2": "2"
+   },
+   "power": {},
+   "sim": "cap"
+  },
+  "PAD": {
+   "footprint": "Connector_Generic:Conn_01x01",
+   "package": "chassis-pad",
+   "pins": {
+    "1": "1"
+   },
+   "power": {},
+   "sim": "pad"
+  },
+  "R": {
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "package": "0603",
+   "pins": {
+    "1": "1",
+    "2": "2"
+   },
+   "power": {},
+   "sim": "resistor"
+  },
+  "SN74LVC165A": {
+   "datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc165a.pdf",
+   "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+   "package": "TSSOP-16",
+   "package_note": "PW (TSSOP-16) package: SOIC-16 (old rev-A choice) does NOT fit the 18.36mm-lattice tile lanes (proven in boards/*/placement_report); silicon identical family, same TI datasheet timing table basis as timing.json",
+   "pins": {
+    "1": "SH/LD",
+    "10": "SER",
+    "11": "A(D0)",
+    "12": "B(D1)",
+    "13": "C(D2)",
+    "14": "D(D3)",
+    "15": "CLKINH",
+    "16": "VCC",
+    "2": "CLK",
+    "3": "E(D4)",
+    "4": "F(D5)",
+    "5": "G(D6)",
+    "6": "H(D7)",
+    "7": "/QH",
+    "8": "GND",
+    "9": "QH"
+   },
+   "power": {
+    "GND": "8",
+    "VCC": "16"
+   },
+   "sim": "ic_74lvc165a"
+  },
+  "SN74LVC1G04": {
+   "datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+   "package": "SOT-23-5",
+   "pins": {
+    "1": "NC",
+    "2": "A",
+    "3": "GND",
+    "4": "Y",
+    "5": "VCC"
+   },
+   "power": {
+    "GND": "3",
+    "VCC": "5"
+   },
+   "sim": "ic_1g04"
+  },
+  "SW": {
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u",
+   "package": "Kailh-hotswap",
+   "pins": {
+    "1": "1",
+    "2": "2"
+   },
+   "power": {},
+   "sim": "switch"
+  }
+ },
+ "interface": {
+  "edges": {
+   "GND_lane": [
+    {
+     "pad": "JP_GND",
+     "signal": "GND"
+    },
+    {
+     "pad": "JP_GND_DET_T",
+     "signal": "GND_DET_T"
+    },
+    {
+     "pad": "JP_GND_DET_B",
+     "signal": "GND_DET_B"
+    },
+    {
+     "pad": "JP_GND_DET_R",
+     "signal": "GND_DET_R"
+    }
+   ],
+   "SIG": [
+    {
+     "pad": "JP_VCC",
+     "signal": "VCC"
+    },
+    {
+     "pad": "JP_T_clk",
+     "signal": "T_clk"
+    },
+    {
+     "pad": "JP_T_data",
+     "signal": "T_data"
+    },
+    {
+     "pad": "JP_T_endcol",
+     "signal": "T_endcol"
+    },
+    {
+     "pad": "JP_T_W",
+     "signal": "T_W"
+    },
+    {
+     "pad": "JP_B_clk",
+     "signal": "B_clk"
+    },
+    {
+     "pad": "JP_B_data",
+     "signal": "B_data"
+    },
+    {
+     "pad": "JP_B_first",
+     "signal": "B_first"
+    },
+    {
+     "pad": "JP_B_latch",
+     "signal": "B_latch"
+    },
+    {
+     "pad": "JP_B_W",
+     "signal": "B_W"
+    },
+    {
+     "pad": "JP_L_clk",
+     "signal": "L_clk"
+    },
+    {
+     "pad": "JP_L_data",
+     "signal": "L_data"
+    },
+    {
+     "pad": "JP_L_endrow",
+     "signal": "L_endrow"
+    },
+    {
+     "pad": "JP_L_latch",
+     "signal": "L_latch"
+    },
+    {
+     "pad": "JP_R_latch",
+     "signal": "R_latch"
+    }
+   ]
+  },
+  "keys": {
+   "key0": "KEY0",
+   "key1": "KEY1",
+   "key10": "KEY10",
+   "key11": "KEY11",
+   "key2": "KEY2",
+   "key3": "KEY3",
+   "key4": "KEY4",
+   "key5": "KEY5",
+   "key6": "KEY6",
+   "key7": "KEY7",
+   "key8": "KEY8",
+   "key9": "KEY9"
+  },
+  "signals": {
+   "B_W": "B_W",
+   "B_clk": "B_clk",
+   "B_data": "B_data",
+   "B_first": "B_first",
+   "B_latch": "B_latch",
+   "GND": "GND",
+   "GND_DET_B": "GND_DET_B",
+   "GND_DET_R": "GND_DET_R",
+   "GND_DET_T": "GND_DET_T",
+   "L_clk": "L_clk",
+   "L_data": "L_data",
+   "L_endrow": "L_endrow",
+   "L_latch": "L_latch",
+   "R_latch": "R_latch",
+   "T_W": "T_W",
+   "T_clk": "T_clk",
+   "T_data": "T_data",
+   "T_endcol": "T_endcol",
+   "VCC": "VCC"
+  }
+ },
+ "nets": {
+  "B_W": [
+   [
+    "JP_B_W",
+    "1"
+   ],
+   [
+    "ROBW",
+    "2"
+   ]
+  ],
+  "B_W_drv": [
+   [
+    "ROBW",
+    "1"
+   ],
+   [
+    "UB1",
+    "18"
+   ]
+  ],
+  "B_clk": [
+   [
+    "JP_B_clk",
+    "1"
+   ],
+   [
+    "RPBCK",
+    "1"
+   ],
+   [
+    "UB1",
+    "1"
+   ],
+   [
+    "UB2",
+    "2"
+   ],
+   [
+    "UB3",
+    "2"
+   ]
+  ],
+  "B_data": [
+   [
+    "JP_B_data",
+    "1"
+   ],
+   [
+    "ROBDA",
+    "2"
+   ]
+  ],
+  "B_first": [
+   [
+    "JP_B_first",
+    "1"
+   ],
+   [
+    "RPBFI",
+    "1"
+   ],
+   [
+    "UB1",
+    "5"
+   ]
+  ],
+  "B_latch": [
+   [
+    "JP_B_latch",
+    "1"
+   ],
+   [
+    "RPBLA",
+    "1"
+   ],
+   [
+    "UB1",
+    "2"
+   ]
+  ],
+  "CHAIN": [
+   [
+    "UB2",
+    "9"
+   ],
+   [
+    "UB3",
+    "10"
+   ]
+  ],
+  "DS_net": [
+   [
+    "UB1",
+    "23"
+   ],
+   [
+    "UB2",
+    "10"
+   ]
+  ],
+  "GND": [
+   [
+    "CB1",
+    "2"
+   ],
+   [
+    "CB1",
+    "2"
+   ],
+   [
+    "CB2",
+    "2"
+   ],
+   [
+    "CB3",
+    "2"
+   ],
+   [
+    "CB4",
+    "2"
+   ],
+   [
+    "JP_GND",
+    "1"
+   ],
+   [
+    "JP_GND_DET_B",
+    "1"
+   ],
+   [
+    "JP_GND_DET_R",
+    "1"
+   ],
+   [
+    "JP_GND_DET_T",
+    "1"
+   ],
+   [
+    "RK0",
+    "2"
+   ],
+   [
+    "RK1",
+    "2"
+   ],
+   [
+    "RK10",
+    "2"
+   ],
+   [
+    "RK11",
+    "2"
+   ],
+   [
+    "RK2",
+    "2"
+   ],
+   [
+    "RK3",
+    "2"
+   ],
+   [
+    "RK4",
+    "2"
+   ],
+   [
+    "RK5",
+    "2"
+   ],
+   [
+    "RK6",
+    "2"
+   ],
+   [
+    "RK7",
+    "2"
+   ],
+   [
+    "RK8",
+    "2"
+   ],
+   [
+    "RK9",
+    "2"
+   ],
+   [
+    "RPBLA",
+    "2"
+   ],
+   [
+    "RPLDA",
+    "2"
+   ],
+   [
+    "RPRLA",
+    "2"
+   ],
+   [
+    "RPTDA",
+    "2"
+   ],
+   [
+    "UB1",
+    "12"
+   ],
+   [
+    "UB2",
+    "15"
+   ],
+   [
+    "UB2",
+    "8"
+   ],
+   [
+    "UB3",
+    "15"
+   ],
+   [
+    "UB3",
+    "8"
+   ]
+  ],
+  "KEY0": [
+   [
+    "RS0",
+    "2"
+   ],
+   [
+    "UB3",
+    "6"
+   ]
+  ],
+  "KEY1": [
+   [
+    "RS1",
+    "2"
+   ],
+   [
+    "UB3",
+    "5"
+   ]
+  ],
+  "KEY10": [
+   [
+    "RS10",
+    "2"
+   ],
+   [
+    "UB2",
+    "4"
+   ]
+  ],
+  "KEY11": [
+   [
+    "RS11",
+    "2"
+   ],
+   [
+    "UB2",
+    "3"
+   ]
+  ],
+  "KEY2": [
+   [
+    "RS2",
+    "2"
+   ],
+   [
+    "UB3",
+    "4"
+   ]
+  ],
+  "KEY3": [
+   [
+    "RS3",
+    "2"
+   ],
+   [
+    "UB3",
+    "3"
+   ]
+  ],
+  "KEY4": [
+   [
+    "RS4",
+    "2"
+   ],
+   [
+    "UB3",
+    "14"
+   ]
+  ],
+  "KEY5": [
+   [
+    "RS5",
+    "2"
+   ],
+   [
+    "UB3",
+    "13"
+   ]
+  ],
+  "KEY6": [
+   [
+    "RS6",
+    "2"
+   ],
+   [
+    "UB3",
+    "12"
+   ]
+  ],
+  "KEY7": [
+   [
+    "RS7",
+    "2"
+   ],
+   [
+    "UB3",
+    "11"
+   ]
+  ],
+  "KEY8": [
+   [
+    "RS8",
+    "2"
+   ],
+   [
+    "UB2",
+    "6"
+   ]
+  ],
+  "KEY9": [
+   [
+    "RS9",
+    "2"
+   ],
+   [
+    "UB2",
+    "5"
+   ]
+  ],
+  "L_clk": [
+   [
+    "JP_L_clk",
+    "1"
+   ],
+   [
+    "ROLCK",
+    "2"
+   ]
+  ],
+  "L_clk_drv": [
+   [
+    "ROLCK",
+    "1"
+   ],
+   [
+    "UB1",
+    "20"
+   ]
+  ],
+  "L_data": [
+   [
+    "JP_L_data",
+    "1"
+   ],
+   [
+    "RPLDA",
+    "1"
+   ],
+   [
+    "UB1",
+    "7"
+   ]
+  ],
+  "L_endrow": [
+   [
+    "JP_L_endrow",
+    "1"
+   ],
+   [
+    "RPLER",
+    "1"
+   ],
+   [
+    "UB2",
+    "12"
+   ]
+  ],
+  "L_latch": [
+   [
+    "JP_L_latch",
+    "1"
+   ],
+   [
+    "ROLLA",
+    "2"
+   ]
+  ],
+  "NC_UB2_7": [
+   [
+    "UB2",
+    "7"
+   ]
+  ],
+  "NC_UB3_7": [
+   [
+    "UB3",
+    "7"
+   ]
+  ],
+  "NC_UB4_1": [
+   [
+    "UB4",
+    "1"
+   ]
+  ],
+  "NC_UB4_3": [
+   [
+    "UB4",
+    "3"
+   ]
+  ],
+  "NC_UB4_5": [
+   [
+    "UB4",
+    "5"
+   ]
+  ],
+  "R_latch": [
+   [
+    "JP_R_latch",
+    "1"
+   ],
+   [
+    "RPRLA",
+    "1"
+   ],
+   [
+    "UB1",
+    "3"
+   ]
+  ],
+  "SWN0": [
+   [
+    "RK0",
+    "1"
+   ],
+   [
+    "RS0",
+    "1"
+   ],
+   [
+    "SW1",
+    "2"
+   ]
+  ],
+  "SWN1": [
+   [
+    "RK1",
+    "1"
+   ],
+   [
+    "RS1",
+    "1"
+   ],
+   [
+    "SW2",
+    "2"
+   ]
+  ],
+  "SWN10": [
+   [
+    "RK10",
+    "1"
+   ],
+   [
+    "RS10",
+    "1"
+   ],
+   [
+    "SW11",
+    "2"
+   ]
+  ],
+  "SWN11": [
+   [
+    "RK11",
+    "1"
+   ],
+   [
+    "RS11",
+    "1"
+   ],
+   [
+    "SW12",
+    "2"
+   ]
+  ],
+  "SWN2": [
+   [
+    "RK2",
+    "1"
+   ],
+   [
+    "RS2",
+    "1"
+   ],
+   [
+    "SW3",
+    "2"
+   ]
+  ],
+  "SWN3": [
+   [
+    "RK3",
+    "1"
+   ],
+   [
+    "RS3",
+    "1"
+   ],
+   [
+    "SW4",
+    "2"
+   ]
+  ],
+  "SWN4": [
+   [
+    "RK4",
+    "1"
+   ],
+   [
+    "RS4",
+    "1"
+   ],
+   [
+    "SW5",
+    "2"
+   ]
+  ],
+  "SWN5": [
+   [
+    "RK5",
+    "1"
+   ],
+   [
+    "RS5",
+    "1"
+   ],
+   [
+    "SW6",
+    "2"
+   ]
+  ],
+  "SWN6": [
+   [
+    "RK6",
+    "1"
+   ],
+   [
+    "RS6",
+    "1"
+   ],
+   [
+    "SW7",
+    "2"
+   ]
+  ],
+  "SWN7": [
+   [
+    "RK7",
+    "1"
+   ],
+   [
+    "RS7",
+    "1"
+   ],
+   [
+    "SW8",
+    "2"
+   ]
+  ],
+  "SWN8": [
+   [
+    "RK8",
+    "1"
+   ],
+   [
+    "RS8",
+    "1"
+   ],
+   [
+    "SW9",
+    "2"
+   ]
+  ],
+  "SWN9": [
+   [
+    "RK9",
+    "1"
+   ],
+   [
+    "RS9",
+    "1"
+   ],
+   [
+    "SW10",
+    "2"
+   ]
+  ],
+  "T_W": [
+   [
+    "JP_T_W",
+    "1"
+   ],
+   [
+    "RPTW",
+    "1"
+   ],
+   [
+    "UB1",
+    "4"
+   ]
+  ],
+  "T_clk": [
+   [
+    "JP_T_clk",
+    "1"
+   ],
+   [
+    "ROTCK",
+    "2"
+   ]
+  ],
+  "T_clk_drv": [
+   [
+    "ROTCK",
+    "1"
+   ],
+   [
+    "UB1",
+    "19"
+   ]
+  ],
+  "T_data": [
+   [
+    "JP_T_data",
+    "1"
+   ],
+   [
+    "RPTDA",
+    "1"
+   ],
+   [
+    "UB1",
+    "6"
+   ]
+  ],
+  "T_endcol": [
+   [
+    "JP_T_endcol",
+    "1"
+   ],
+   [
+    "RPTEC",
+    "1"
+   ],
+   [
+    "UB2",
+    "11"
+   ]
+  ],
+  "VCC": [
+   [
+    "CB1",
+    "1"
+   ],
+   [
+    "CB1",
+    "1"
+   ],
+   [
+    "CB2",
+    "1"
+   ],
+   [
+    "CB3",
+    "1"
+   ],
+   [
+    "CB4",
+    "1"
+   ],
+   [
+    "JP_VCC",
+    "1"
+   ],
+   [
+    "RPBCK",
+    "2"
+   ],
+   [
+    "RPBFI",
+    "2"
+   ],
+   [
+    "RPLER",
+    "2"
+   ],
+   [
+    "RPTEC",
+    "2"
+   ],
+   [
+    "RPTW",
+    "2"
+   ],
+   [
+    "SW1",
+    "1"
+   ],
+   [
+    "SW10",
+    "1"
+   ],
+   [
+    "SW11",
+    "1"
+   ],
+   [
+    "SW12",
+    "1"
+   ],
+   [
+    "SW2",
+    "1"
+   ],
+   [
+    "SW3",
+    "1"
+   ],
+   [
+    "SW4",
+    "1"
+   ],
+   [
+    "SW5",
+    "1"
+   ],
+   [
+    "SW6",
+    "1"
+   ],
+   [
+    "SW7",
+    "1"
+   ],
+   [
+    "SW8",
+    "1"
+   ],
+   [
+    "SW9",
+    "1"
+   ],
+   [
+    "UB1",
+    "24"
+   ],
+   [
+    "UB2",
+    "13"
+   ],
+   [
+    "UB2",
+    "14"
+   ],
+   [
+    "UB2",
+    "16"
+   ],
+   [
+    "UB3",
+    "16"
+   ]
+  ],
+  "data_drv": [
+   [
+    "ROBDA",
+    "1"
+   ],
+   [
+    "UB1",
+    "8"
+   ],
+   [
+    "UB3",
+    "9"
+   ]
+  ],
+  "latch_drv": [
+   [
+    "ROLLA",
+    "1"
+   ],
+   [
+    "UB1",
+    "21"
+   ],
+   [
+    "UB4",
+    "2"
+   ]
+  ],
+  "nRST": [
+   [
+    "UB2",
+    "1"
+   ],
+   [
+    "UB3",
+    "1"
+   ],
+   [
+    "UB4",
+    "4"
+   ]
+  ]
+ },
+ "schema": 1,
+ "source": "hand-authored: GAL behaviour taken from the DECODED fuse map (results/truez_from_jed.json, proven == source equations); same passive plan as variant A",
+ "title": "variant B2: ATF22LV10C-10 (truez) + 2x SN74LVC165A + SN74LVC1G04"
+}

@@ -1,0 +1,70 @@
+PASS key0: SW101.2 --(10k pd 122, 100R 110)--> BTNs0
+PASS key1: SW102.2 --(10k pd 123, 100R 111)--> BTNs1
+PASS key2: SW103.2 --(10k pd 124, 100R 112)--> BTNs2
+PASS key3: SW104.2 --(10k pd 125, 100R 113)--> BTNs3
+PASS key4: SW105.2 --(10k pd 126, 100R 114)--> BTNs4
+PASS key5: SW106.2 --(10k pd 127, 100R 115)--> BTNs5
+PASS key6: SW107.2 --(10k pd 128, 100R 116)--> BTNs6
+PASS key7: SW108.2 --(10k pd 129, 100R 117)--> BTNs7
+PASS key8: SW109.2 --(10k pd 130, 100R 118)--> BTNs8
+PASS key9: SW110.2 --(10k pd 131, 100R 119)--> BTNs9
+PASS key10: SW111.2 --(10k pd 132, 100R 120)--> BTNs10
+PASS key11: SW112.2 --(10k pd 133, 100R 121)--> BTNs11
+PASS BTNs_L0 -> U104.6
+PASS BTNs_L1 -> U104.5
+PASS BTNs_L2 -> U104.4
+PASS BTNs_L3 -> U104.3
+PASS BTNs_L4 -> U104.14
+PASS BTNs_L5 -> U104.13
+PASS BTNs_L6 -> U104.12
+PASS BTNs_L7 -> U104.11
+PASS BTNs_L8 -> U103.6
+PASS BTNs_L9 -> U103.5
+PASS BTNs_L10 -> U103.4
+PASS BTNs_L11 -> U103.3
+PASS U103 D3,D2 (pins 14,13) tied to VCC (marker bits)
+PASS U103 D1(12) = L_endrow
+PASS U103 D0(11) = T_endcol
+PASS U103.Q7(9) -> U104.DS(10)
+PASS U104.Q7(9) -> data_drv
+PASS data_drv feeds series R205/R206 and U102.1 (flag AND)
+PASS pull L_data -> GND 10k (R101)
+PASS pull R_latch -> GND 10k (R106)
+PASS pull B_latch -> GND 10k (R107)
+PASS pull T_data -> GND 10k (R108)
+PASS pull L_endrow -> VCC 10k (R102)
+PASS pull B_first -> VCC 10k (R103)
+PASS pull T_W -> VCC 10k (R104)
+PASS pull T_endcol -> VCC 10k (R105)
+PASS pull B_clk -> VCC 10k (R109)
+PASS resistor census {'10k': 21, '33': 7, '100': 12} == 100:12, 10k:21, 33:7
+PASS series 33R R201: L_clk_drv -> L_clk
+PASS series 33R R202: T_clk_drv -> T_clk
+PASS series 33R R203: latch_drv -> L_latch
+PASS series 33R R204: latch_drv -> T_latch
+PASS series 33R R205: data_drv -> B_data
+PASS series 33R R206: data_drv -> R_data
+PASS series 33R R207: B_W_drv -> B_W
+PASS W net (Net-(U101-Pad1)) drives U101.1/7 and U107.1/7
+PASS U102 2A=T_W (pin5), 2B=B_first (pin6)
+PASS U109 Tc(15) -> U102.2 (flag AND)
+
+frame bit order (controller receives MSB-first):
+  bit 15: key0     U104.D7 (pin 6)
+  bit 14: key1     U104.D6 (pin 5)
+  bit 13: key2     U104.D5 (pin 4)
+  bit 12: key3     U104.D4 (pin 3)
+  bit 11: key4     U104.D3 (pin 14)
+  bit 10: key5     U104.D2 (pin 13)
+  bit  9: key6     U104.D1 (pin 12)
+  bit  8: key7     U104.D0 (pin 11)
+  bit  7: key8     U103.D7 (pin 6)
+  bit  6: key9     U103.D6 (pin 5)
+  bit  5: key10    U103.D5 (pin 4)
+  bit  4: key11    U103.D4 (pin 3)
+  bit  3: marker   U103.D3 (pin 14)
+  bit  2: marker   U103.D2 (pin 13)
+  bit  1: L_endrow U103.D1 (pin 12)
+  bit  0: T_endcol U103.D0 (pin 11)
+
+interface block written; 0 failures

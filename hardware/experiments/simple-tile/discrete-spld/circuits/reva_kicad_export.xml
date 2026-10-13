@@ -1,0 +1,3407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/marco/Documents/OrturanoLabs/isomorphic_keyboard-revc/hardware/kicad/tile/isomorphic_tile.kicad_sch</source>
+    <date>2026-10-12T11:37:12</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>isomorphic_tile.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>tile.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/tile/counter/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>counter.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>keyboard.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>power.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J101">
+      <value>Conn_LEFT</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal</footprint>
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="MPN">613010143121</field>
+        <field name="Link">https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/613010143121/2508632</field>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="613010143121"/>
+      <property name="Link" value="https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/613010143121/2508632"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30a70587-da55-4e72-9f54-34b2e7ffa2eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>Conn_TOP</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Horizontal</footprint>
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="MPN">613010143121</field>
+        <field name="Link">https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/613010143121/2508632</field>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="613010143121"/>
+      <property name="Link" value="https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/613010143121/2508632"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ca6a410-3256-41b0-b156-bc6fc9fe8f39</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J103">
+      <value>Conn_BOTTOM</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal</footprint>
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="MPN">61300811021</field>
+        <field name="Link">https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/61300811021/4846838</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="61300811021"/>
+      <property name="Link" value="https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/61300811021/4846838"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fdf231d3-cd82-40f9-b5fe-c4c175730643</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J104">
+      <value>Conn_RIGHT</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal</footprint>
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="MPN">61300811021</field>
+        <field name="Link">https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/61300811021/4846838</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="61300811021"/>
+      <property name="Link" value="https://www.digikey.it/it/products/detail/w%C3%BCrth-elektronik/61300811021/4846838"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aec82640-ddea-49b7-8364-caf3a8b2a6e9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J105">
+      <value>BTNs_L_MSB</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2724d650-7035-40f8-8a76-8c0023d626fe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J106">
+      <value>BTNs_L_LSB</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cde7fd2a-498d-42e1-a430-1595b9786a13</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J107">
+      <value>BTNs_MSB</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d94b823-c235-4bf6-9808-07e8e3c5a8ed</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J108">
+      <value>BTNs_LSB</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="isomorphic_tile"/>
+      <property name="Sheetfile" value="isomorphic_tile.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9b60b667-8a8f-43b0-b745-c49e04a94fdf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>76058348-a39d-4438-9ba3-d26631c798be</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>b6f04eb7-497d-4d6b-8693-ef0afe78fe70</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R103">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>d0fe0bcd-14eb-4b26-9f6b-542a13780ebf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R104">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>a605afc1-6f85-48c9-92e6-5538450cb41f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R105">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>390a4fc5-d060-4176-bc7c-913dd62222f4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R106">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>4a19d8df-cd0d-4b35-8f22-a24cdd58bbb2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R107">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>6ea515b2-66d7-4b08-a477-f88abfd6ffff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R108">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>a15cd799-83b5-4e60-be9b-0f4d3c8c464a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R109">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>4f1a932e-ff71-4de3-a0d6-b23fc1281a25</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R201">
+      <value>33</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>505454fc-b5b2-4ebc-b2d6-3863afa6f70f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R202">
+      <value>33</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>4fed5a55-537e-4e26-bf05-dd17432090b4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R203">
+      <value>33</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>5104449c-9e4e-4732-9d06-a4f1741bbd34</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R204">
+      <value>33</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>f8d5eaa6-74c5-42f8-9db4-08bdd86523e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R205">
+      <value>33</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>6deeb912-b84e-426f-b251-bff7e4a6d8a3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R206">
+      <value>33</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>fd03d969-c64f-4a84-81f3-bde43ffe2a8e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R207">
+      <value>33</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>21187ea5-d013-44d7-b23d-0c5cdb17765c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U101">
+      <value>74LVC2G126</value>
+      <footprint>Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <description>Dual Buffer Tri-State, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC2G126DCTR</field>
+        <field name="Footprint">Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual Buffer Tri-State, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74AUC2G126" description="Dual Buffer Tri-State, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC2G126DCTR"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="Dual Buff Tri-State LVC CMOS"/>
+      <property name="ki_fp_filters" value="VSSOP*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>eb99dabc-e904-457c-a02d-c128b8b850c2 e2fc3b05-1d3f-4b29-886f-464636700208</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U102">
+      <value>74LVC2G08</value>
+      <footprint>Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <description>Dual AND Gate, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC2G08DCTR</field>
+        <field name="Footprint">Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual AND Gate, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74AUC2G08" description="Dual AND Gate, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC2G08DCTR"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="Dual Gate AND LVC CMOS"/>
+      <property name="ki_fp_filters" value="SSOP* VSSOP*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>6896a9e0-80c7-4ad4-9788-6538bb862fd2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U103">
+      <value>74LVC165A</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf</datasheet>
+      <description>Shift Register, 8-bit, Parallel Load</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC165ADR</field>
+        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf</field>
+        <field name="Description">Shift Register, 8-bit, Parallel Load</field>
+      </fields>
+      <libsource lib="74xx" part="74HC165" description="Shift Register, 8-bit, Parallel Load"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC165ADR"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="8 bit shift register parallel load cmos"/>
+      <property name="ki_fp_filters" value="DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>c5fbeb48-6d61-4fcb-bfc3-1b35300b92dd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U104">
+      <value>74LVC165A</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf</datasheet>
+      <description>Shift Register, 8-bit, Parallel Load</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC165ADR</field>
+        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf</field>
+        <field name="Description">Shift Register, 8-bit, Parallel Load</field>
+      </fields>
+      <libsource lib="74xx" part="74HC165" description="Shift Register, 8-bit, Parallel Load"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC165ADR"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="8 bit shift register parallel load cmos"/>
+      <property name="ki_fp_filters" value="DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>2561d2b4-4942-4f1c-bc87-db33f3d9d28f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U105">
+      <value>74LVC1G04</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <description>Single NOT Gate, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC1G04DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Single NOT Gate, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74AHC1G04" description="Single NOT Gate, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC1G04DBVR"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="Single Gate NOT LVC CMOS"/>
+      <property name="ki_fp_filters" value="SOT* SG-*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>3fa1c47b-d65c-4290-a54b-aed47650d6b6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U106">
+      <value>74LVC2G32</value>
+      <footprint>Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <description>Dual OR Gate, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC2G32DCTR</field>
+        <field name="Footprint">Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual OR Gate, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74LVC2G32" description="Dual OR Gate, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC2G32DCTR"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="Dual Gate OR LVC CMOS"/>
+      <property name="ki_fp_filters" value="SSOP* VSSOP*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>0e5982d0-672f-4b0e-87af-45577ac4b740</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U107">
+      <value>74LVC2G125</value>
+      <footprint>Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <description>Dual Buffer Tri-State, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC2G125DCTR</field>
+        <field name="Footprint">Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual Buffer Tri-State, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74AUC2G125" description="Dual Buffer Tri-State, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC2G125DCTR"/>
+      <property name="Sheetname" value="tile"/>
+      <property name="Sheetfile" value="tile.kicad_sch"/>
+      <property name="ki_keywords" value="Dual Buff Tri-State LVC CMOS"/>
+      <property name="ki_fp_filters" value="VSSOP*"/>
+      <sheetpath names="/tile/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/"/>
+      <tstamps>f14798a3-7127-492c-b11f-dc5a9a4e56a7 d180d924-3869-4146-bfd9-1a1d7737d95d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U108">
+      <value>74LVC2G74</value>
+      <footprint>Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <description>74AUC1G74, Single D Flip-Flop, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC2G74DCTR</field>
+        <field name="Footprint">Package_SO:SSOP-8_2.95x2.8mm_P0.65mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">74AUC1G74, Single D Flip-Flop, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74LVC2G74" description="74AUC1G74, Single D Flip-Flop, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC2G74DCTR"/>
+      <property name="Sheetname" value="counter"/>
+      <property name="Sheetfile" value="counter.kicad_sch"/>
+      <property name="ki_keywords" value="Single D Flip-Flop D CMOS"/>
+      <property name="ki_fp_filters" value="SSOP* VSSOP*"/>
+      <sheetpath names="/tile/counter/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c/"/>
+      <tstamps>7e81d8bc-f65a-496f-a2a0-8adc9baadb8f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U109">
+      <value>74HC161</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74HC161DR</field>
+        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="74xx_IEEE" part="74LS161" description=""/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74HC161DR"/>
+      <property name="Sheetname" value="counter"/>
+      <property name="Sheetfile" value="counter.kicad_sch"/>
+      <sheetpath names="/tile/counter/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/41fc8254-caa5-4a09-ad79-5b9ed9e5d35c/"/>
+      <tstamps>bde4bbd1-a8fe-44f5-9cf2-d4fc0d6f0adc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="7"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="16"/>
+            <pin num="8"/>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R110">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>0b5c4683-2e8a-4fd5-bde8-a658cb2d2fd9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R111">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>c8623ba2-616c-407f-8819-2eb966f8ed49</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R112">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>6173256f-2c1b-4463-bd01-abd4782b9c10</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R113">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>3842083d-0eaa-4781-8f6e-9a39ee5e5ccc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R114">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>7ae36c50-7e02-432a-bbe1-d5e757f32ac8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R115">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>8a077f1b-cb77-4132-973d-ccc5fc1f470d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R116">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>db059c3b-682e-4877-8c78-f008af6c4f29</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R117">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>70b8dbff-31c6-4e50-923f-12a56050fea0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R118">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>3bd1b331-2001-4ffd-ae75-2e9fd1e69b90</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R119">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>a963633d-c9e9-4dac-975b-63526b32a63a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R120">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>45554f26-3ed4-4451-9a0b-939487b28bd3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R121">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>12ee50f8-261c-47f1-b98a-ff04be1e9224</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R122">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>c3576e7b-0f94-4a33-8a6d-338ce3ebdc54</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R123">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>a3d69062-012d-4b9f-93e7-a9d8276a4ac0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R124">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>84ee9896-a616-457a-8e4e-60134f5276da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R125">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>a637226a-bbb0-4070-9478-756b98bc603e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R126">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>d92f3f5c-3763-48db-bdc3-f16112872da2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R127">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>5c78926c-0a5b-4790-b257-46a4f513aa45</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R128">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>83147c33-40a7-4931-beae-4178dc7959e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R129">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>d64651ce-ada3-454c-bcd3-1be71a627550</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R130">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>9edffb13-37b6-4791-a20e-a7308f02090d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R131">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>466db5cb-c736-40b8-99d9-90860bdae74b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R132">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>c79c899d-08e7-4b97-b981-a92c78cbf547</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R133">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>e4b812a2-14fa-48cf-9903-fc6f9df04ab8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW101">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>948c8859-e951-41ac-a958-37689fb56279</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW102">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>81e9b275-41ab-484a-baf4-7ff77fb057b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW103">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>29284fe2-89ee-4516-95f0-2d7fe4062a10</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW104">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>15c505e3-d513-4f0e-a57a-0c7c6eb30fd3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW105">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>d767947f-7573-4d1a-8e55-02e20344588d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW106">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>99cf461c-d8cc-4112-8ab9-17daf0d826a2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW107">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>821ce554-c50e-49ad-9eef-2d376fdadebb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW108">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>48ea1d5a-38b9-48e5-a8d9-6acc02b31997</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW109">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>a6bcacaf-0215-46b9-8238-267c0859f0a1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW110">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>7c01a2b9-1b5a-4d33-adee-4a4f2053a5f6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW111">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>be26d344-1cf6-48df-9a62-e27b9879d428</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW112">
+      <value>SW_Push</value>
+      <footprint>Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</footprint>
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Manufacturer">Kailh</field>
+        <field name="MPN">CPG151101S11</field>
+        <field name="Footprint">Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim</field>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Manufacturer" value="Kailh"/>
+      <property name="MPN" value="CPG151101S11"/>
+      <property name="Sheetname" value="keyboard"/>
+      <property name="Sheetfile" value="keyboard.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/keyboard/" tstamps="/bfeae2e3-b46a-4fd7-b5de-f5f4e05399fc/"/>
+      <tstamps>8a487223-aab5-44dc-9024-641d3ea755d3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C101">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>daf76944-d7cc-4333-b7c2-edd464646efb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>5251d97d-59e6-4d3a-af52-e316b9c4f7e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>4u7</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <description>Polarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL31B475KAHNNNE</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL31B475KAHNNNE"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>60361c0c-aea3-4084-9deb-7b1f516bc839</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>4u7</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <description>Polarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL31B475KAHNNNE</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL31B475KAHNNNE"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>16d4e4c8-cfa3-4806-804a-9e10c89ae889</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C105">
+      <value>100u</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x7.7</footprint>
+      <description>Polarized capacitor</description>
+      <fields>
+        <field name="Manufacturer"/>
+        <field name="MPN"/>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x7.7</field>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="MPN" value=""/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>ded01ea0-562b-4080-b682-d700265f4e62</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C201">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>f9358a2b-31c3-4126-8507-2b1ecfb863cf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C202">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>bbf870b0-9b4b-41e0-9bba-81a25bb66617</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C203">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>edd9a70c-52d1-496a-97d4-17f0ac27a132</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C204">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>7ed067dc-07ea-4fb8-a9d0-8255cd683672</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C205">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>ebb982d9-9e94-48e6-911b-7101011cf7ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C206">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>91c6b13b-6665-425f-b7a3-7b81893f5d2b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C207">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>e8c37df9-a15a-4cc8-b97c-fb29694c6065</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C208">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>011aa975-5aa4-409c-adbb-cd299b028dd8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C209">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung</field>
+        <field name="MPN">CL10B104KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung"/>
+      <property name="MPN" value="CL10B104KB8NNNC"/>
+      <property name="Sheetname" value="power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/tile/power/" tstamps="/07e251ec-a89a-41e0-b307-1d6ec78f24c5/9a558694-86a7-4e5b-949e-b5a09151abcf/"/>
+      <tstamps>0118070b-70ac-466b-9825-b16e677c24d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xGxx" part="74AHC1G04">
+      <description>Single NOT Gate, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>SOT*</fp>
+        <fp>SG-*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74AHC1G04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Single NOT Gate, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xGxx" part="74AUC2G08">
+      <description>Dual AND Gate, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>SSOP*</fp>
+        <fp>VSSOP*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74AUC2G08</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual AND Gate, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xGxx" part="74AUC2G125">
+      <description>Dual Buffer Tri-State, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>VSSOP*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74AUC2G125</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual Buffer Tri-State, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="" type="tri_state"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="tri_state"/>
+        <pin num="7" name="" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xGxx" part="74AUC2G126">
+      <description>Dual Buffer Tri-State, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>VSSOP*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74AUC2G126</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual Buffer Tri-State, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="" type="tri_state"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="tri_state"/>
+        <pin num="7" name="" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xGxx" part="74LVC2G32">
+      <description>Dual OR Gate, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>SSOP*</fp>
+        <fp>VSSOP*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LVC2G32</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Dual OR Gate, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xGxx" part="74LVC2G74">
+      <description>74AUC1G74, Single D Flip-Flop, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>SSOP*</fp>
+        <fp>VSSOP*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LVC2G74</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">74AUC1G74, Single D Flip-Flop, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C" type="input"/>
+        <pin num="2" name="D" type="input"/>
+        <pin num="3" name="~{Q}" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="Q" type="output"/>
+        <pin num="6" name="~{CLR}" type="input"/>
+        <pin num="7" name="~{PRE}" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74HC165">
+      <description>Shift Register, 8-bit, Parallel Load</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf</docs>
+      <footprints>
+        <fp>DIP?16*</fp>
+        <fp>SO*16*3.9x9.9mm*P1.27mm*</fp>
+        <fp>SSOP*16*5.3x6.2mm*P0.65mm*</fp>
+        <fp>TSSOP*16*4.4x5mm*P0.65*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74HC165</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf</field>
+        <field name="Description">Shift Register, 8-bit, Parallel Load</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{PL}" type="input"/>
+        <pin num="2" name="CP" type="input"/>
+        <pin num="3" name="D4" type="input"/>
+        <pin num="4" name="D5" type="input"/>
+        <pin num="5" name="D6" type="input"/>
+        <pin num="6" name="D7" type="input"/>
+        <pin num="7" name="~{Q7}" type="output"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="Q7" type="output"/>
+        <pin num="10" name="DS" type="input"/>
+        <pin num="11" name="D0" type="input"/>
+        <pin num="12" name="D1" type="input"/>
+        <pin num="13" name="D2" type="input"/>
+        <pin num="14" name="D3" type="input"/>
+        <pin num="15" name="~{CE}" type="input"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx_IEEE" part="74LS161">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS161</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="~{MR}" type="input"/>
+        <pin num="2" name="CK" type="input"/>
+        <pin num="3" name="P0" type="input"/>
+        <pin num="4" name="P1" type="input"/>
+        <pin num="5" name="P2" type="input"/>
+        <pin num="6" name="P3" type="input"/>
+        <pin num="7" name="ENP" type="input"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="~{Pe}" type="input"/>
+        <pin num="10" name="ENT" type="input"/>
+        <pin num="11" name="Q3" type="output"/>
+        <pin num="12" name="Q2" type="output"/>
+        <pin num="13" name="Q1" type="output"/>
+        <pin num="14" name="Q0" type="output"/>
+        <pin num="15" name="Tc" type="output"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x08">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xGxx">
+      <uri>${KICAD10_SYMBOL_DIR}/74xGxx.kicad_sym</uri>
+    </library>
+    <library logical="74xx">
+      <uri>${KICAD10_SYMBOL_DIR}/74xx.kicad_sym</uri>
+    </library>
+    <library logical="74xx_IEEE">
+      <uri>${KICAD10_SYMBOL_DIR}/74xx_IEEE.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>${KICAD10_SYMBOL_DIR}/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/keyboard/BTNs0" class="Default">
+      <node ref="J108" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R110" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="/keyboard/BTNs1" class="Default">
+      <node ref="J108" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R111" pin="2" pintype="passive"/>
+    </net>
+    <net code="3" name="/keyboard/BTNs2" class="Default">
+      <node ref="J108" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R112" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="/keyboard/BTNs3" class="Default">
+      <node ref="J108" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R113" pin="2" pintype="passive"/>
+    </net>
+    <net code="5" name="/keyboard/BTNs4" class="Default">
+      <node ref="J108" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="R114" pin="2" pintype="passive"/>
+    </net>
+    <net code="6" name="/keyboard/BTNs5" class="Default">
+      <node ref="J108" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R115" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/keyboard/BTNs6" class="Default">
+      <node ref="J107" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R116" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="/keyboard/BTNs7" class="Default">
+      <node ref="J107" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R117" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="/keyboard/BTNs8" class="Default">
+      <node ref="J107" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R118" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="/keyboard/BTNs9" class="Default">
+      <node ref="J107" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R119" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="/keyboard/BTNs10" class="Default">
+      <node ref="J107" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="R120" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="/keyboard/BTNs11" class="Default">
+      <node ref="J107" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R121" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="/tile/BTNs_L0" class="Default">
+      <node ref="J106" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U104" pin="6" pinfunction="D7_6" pintype="input"/>
+    </net>
+    <net code="15" name="/tile/BTNs_L1" class="Default">
+      <node ref="J106" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U104" pin="5" pinfunction="D6_5" pintype="input"/>
+    </net>
+    <net code="16" name="/tile/BTNs_L2" class="Default">
+      <node ref="J106" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U104" pin="4" pinfunction="D5_4" pintype="input"/>
+    </net>
+    <net code="17" name="/tile/BTNs_L3" class="Default">
+      <node ref="J106" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="U104" pin="3" pinfunction="D4_3" pintype="input"/>
+    </net>
+    <net code="18" name="/tile/BTNs_L4" class="Default">
+      <node ref="J106" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="U104" pin="14" pinfunction="D3_14" pintype="input"/>
+    </net>
+    <net code="19" name="/tile/BTNs_L5" class="Default">
+      <node ref="J106" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="U104" pin="13" pinfunction="D2_13" pintype="input"/>
+    </net>
+    <net code="20" name="/tile/BTNs_L6" class="Default">
+      <node ref="J105" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U104" pin="12" pinfunction="D1_12" pintype="input"/>
+    </net>
+    <net code="21" name="/tile/BTNs_L7" class="Default">
+      <node ref="J105" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U104" pin="11" pinfunction="D0_11" pintype="input"/>
+    </net>
+    <net code="22" name="/tile/BTNs_L8" class="Default">
+      <node ref="J105" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U103" pin="6" pinfunction="D7_6" pintype="input"/>
+    </net>
+    <net code="23" name="/tile/BTNs_L9" class="Default">
+      <node ref="J105" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="U103" pin="5" pinfunction="D6_5" pintype="input"/>
+    </net>
+    <net code="24" name="/tile/BTNs_L10" class="Default">
+      <node ref="J105" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="U103" pin="4" pinfunction="D5_4" pintype="input"/>
+    </net>
+    <net code="25" name="/tile/BTNs_L11" class="Default">
+      <node ref="J105" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="U103" pin="3" pinfunction="D4_3" pintype="input"/>
+    </net>
+    <net code="27" name="/tile/B_W" class="Interboard">
+      <node ref="J103" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R207" pin="2" pintype="passive"/>
+    </net>
+    <net code="28" name="/tile/B_W_drv" class="Interboard">
+      <node ref="R207" pin="1" pintype="passive"/>
+      <node ref="U106" pin="5" pintype="input"/>
+      <node ref="U108" pin="5" pinfunction="Q_5" pintype="output"/>
+    </net>
+    <net code="29" name="/tile/B_clk" class="Interboard">
+      <node ref="J103" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J104" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R109" pin="2" pintype="passive"/>
+      <node ref="U101" pin="2" pintype="input"/>
+      <node ref="U103" pin="2" pinfunction="CP_2" pintype="input"/>
+      <node ref="U104" pin="2" pinfunction="CP_2" pintype="input"/>
+      <node ref="U107" pin="2" pintype="input"/>
+      <node ref="U108" pin="1" pinfunction="C_1" pintype="input"/>
+      <node ref="U109" pin="2" pinfunction="CK_2" pintype="input"/>
+    </net>
+    <net code="30" name="/tile/B_data" class="Interboard">
+      <node ref="J103" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R205" pin="2" pintype="passive"/>
+    </net>
+    <net code="31" name="/tile/B_first" class="Interboard">
+      <node ref="J103" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="U102" pin="6" pintype="input"/>
+    </net>
+    <net code="32" name="/tile/B_latch" class="Interboard">
+      <node ref="J103" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="U106" pin="1" pintype="input"/>
+    </net>
+    <net code="33" name="/tile/L_clk" class="Interboard">
+      <node ref="J101" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+    </net>
+    <net code="34" name="/tile/L_clk_drv" class="Interboard">
+      <node ref="R201" pin="1" pintype="passive"/>
+      <node ref="U101" pin="6" pintype="tri_state"/>
+    </net>
+    <net code="35" name="/tile/L_data" class="Interboard">
+      <node ref="J101" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+      <node ref="U101" pin="5" pintype="input"/>
+    </net>
+    <net code="36" name="/tile/L_endrow" class="Interboard">
+      <node ref="J101" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="U103" pin="12" pinfunction="D1_12" pintype="input"/>
+    </net>
+    <net code="37" name="/tile/L_latch" class="Interboard">
+      <node ref="J101" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+    </net>
+    <net code="38" name="/tile/R_data" class="Interboard">
+      <node ref="J104" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R206" pin="2" pintype="passive"/>
+    </net>
+    <net code="39" name="/tile/R_latch" class="Interboard">
+      <node ref="J104" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+      <node ref="U106" pin="2" pintype="input"/>
+    </net>
+    <net code="40" name="/tile/T_W" class="Interboard">
+      <node ref="J102" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="U102" pin="5" pintype="input"/>
+    </net>
+    <net code="41" name="/tile/T_clk" class="Interboard">
+      <node ref="J102" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+    </net>
+    <net code="42" name="/tile/T_clk_drv" class="Interboard">
+      <node ref="R202" pin="1" pintype="passive"/>
+      <node ref="U107" pin="6" pintype="tri_state"/>
+    </net>
+    <net code="43" name="/tile/T_data" class="Interboard">
+      <node ref="J102" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="U107" pin="5" pintype="input"/>
+    </net>
+    <net code="44" name="/tile/T_endcol" class="Interboard">
+      <node ref="J102" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+      <node ref="U103" pin="11" pinfunction="D0_11" pintype="input"/>
+    </net>
+    <net code="45" name="/tile/T_latch" class="Interboard">
+      <node ref="J102" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="R204" pin="2" pintype="passive"/>
+    </net>
+    <net code="46" name="/tile/counter/~{rst}" class="Default">
+      <node ref="U103" pin="1" pinfunction="~{PL}_1" pintype="input"/>
+      <node ref="U104" pin="1" pinfunction="~{PL}_1" pintype="input"/>
+      <node ref="U105" pin="4" pintype="output"/>
+      <node ref="U108" pin="6" pinfunction="~{CLR}_6" pintype="input"/>
+      <node ref="U109" pin="1" pinfunction="~{MR}_1" pintype="input"/>
+      <node ref="U109" pin="10" pinfunction="ENT_10" pintype="input"/>
+      <node ref="U109" pin="7" pinfunction="ENP_7" pintype="input"/>
+    </net>
+    <net code="47" name="/tile/data_drv" class="Interboard">
+      <node ref="R205" pin="1" pintype="passive"/>
+      <node ref="R206" pin="1" pintype="passive"/>
+      <node ref="U102" pin="1" pintype="input"/>
+      <node ref="U104" pin="9" pinfunction="Q7_9" pintype="output"/>
+    </net>
+    <net code="48" name="/tile/latch_drv" class="Interboard">
+      <node ref="R203" pin="1" pintype="passive"/>
+      <node ref="R204" pin="1" pintype="passive"/>
+      <node ref="U105" pin="2" pintype="input"/>
+      <node ref="U106" pin="7" pintype="output"/>
+    </net>
+    <net code="49" name="GND" class="Power">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C203" pin="2" pintype="passive"/>
+      <node ref="C204" pin="2" pintype="passive"/>
+      <node ref="C205" pin="2" pintype="passive"/>
+      <node ref="C206" pin="2" pintype="passive"/>
+      <node ref="C207" pin="2" pintype="passive"/>
+      <node ref="C208" pin="2" pintype="passive"/>
+      <node ref="C209" pin="2" pintype="passive"/>
+      <node ref="J101" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="J102" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="J102" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="J103" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J103" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="J104" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J104" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="J105" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="J106" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="R108" pin="2" pintype="passive"/>
+      <node ref="U101" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U102" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U103" pin="15" pinfunction="~{CE}_15" pintype="input"/>
+      <node ref="U103" pin="8" pinfunction="GND_8" pintype="power_in"/>
+      <node ref="U104" pin="15" pinfunction="~{CE}_15" pintype="input"/>
+      <node ref="U104" pin="8" pinfunction="GND_8" pintype="power_in"/>
+      <node ref="U105" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U106" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U107" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U108" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U109" pin="3" pinfunction="P0_3" pintype="input"/>
+      <node ref="U109" pin="4" pinfunction="P1_4" pintype="input"/>
+      <node ref="U109" pin="5" pinfunction="P2_5" pintype="input"/>
+      <node ref="U109" pin="6" pinfunction="P3_6" pintype="input"/>
+      <node ref="U109" pin="8" pinfunction="GND_8" pintype="power_in"/>
+    </net>
+    <net code="50" name="GND_T" class="Power">
+      <node ref="J107" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="J108" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="R122" pin="2" pintype="passive"/>
+      <node ref="R123" pin="2" pintype="passive"/>
+      <node ref="R124" pin="2" pintype="passive"/>
+      <node ref="R125" pin="2" pintype="passive"/>
+      <node ref="R126" pin="2" pintype="passive"/>
+      <node ref="R127" pin="2" pintype="passive"/>
+      <node ref="R128" pin="2" pintype="passive"/>
+      <node ref="R129" pin="2" pintype="passive"/>
+      <node ref="R130" pin="2" pintype="passive"/>
+      <node ref="R131" pin="2" pintype="passive"/>
+      <node ref="R132" pin="2" pintype="passive"/>
+      <node ref="R133" pin="2" pintype="passive"/>
+    </net>
+    <net code="51" name="Net-(R110-Pad1)" class="Default">
+      <node ref="R110" pin="1" pintype="passive"/>
+      <node ref="R122" pin="1" pintype="passive"/>
+      <node ref="SW101" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="52" name="Net-(R111-Pad1)" class="Default">
+      <node ref="R111" pin="1" pintype="passive"/>
+      <node ref="R123" pin="1" pintype="passive"/>
+      <node ref="SW102" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="53" name="Net-(R112-Pad1)" class="Default">
+      <node ref="R112" pin="1" pintype="passive"/>
+      <node ref="R124" pin="1" pintype="passive"/>
+      <node ref="SW103" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="54" name="Net-(R113-Pad1)" class="Default">
+      <node ref="R113" pin="1" pintype="passive"/>
+      <node ref="R125" pin="1" pintype="passive"/>
+      <node ref="SW104" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="55" name="Net-(R114-Pad1)" class="Default">
+      <node ref="R114" pin="1" pintype="passive"/>
+      <node ref="R126" pin="1" pintype="passive"/>
+      <node ref="SW105" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="56" name="Net-(R115-Pad1)" class="Default">
+      <node ref="R115" pin="1" pintype="passive"/>
+      <node ref="R127" pin="1" pintype="passive"/>
+      <node ref="SW106" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="57" name="Net-(R116-Pad1)" class="Default">
+      <node ref="R116" pin="1" pintype="passive"/>
+      <node ref="R128" pin="1" pintype="passive"/>
+      <node ref="SW107" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="58" name="Net-(R117-Pad1)" class="Default">
+      <node ref="R117" pin="1" pintype="passive"/>
+      <node ref="R129" pin="1" pintype="passive"/>
+      <node ref="SW108" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="59" name="Net-(R118-Pad1)" class="Default">
+      <node ref="R118" pin="1" pintype="passive"/>
+      <node ref="R130" pin="1" pintype="passive"/>
+      <node ref="SW109" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(R119-Pad1)" class="Default">
+      <node ref="R119" pin="1" pintype="passive"/>
+      <node ref="R131" pin="1" pintype="passive"/>
+      <node ref="SW110" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(R120-Pad1)" class="Default">
+      <node ref="R120" pin="1" pintype="passive"/>
+      <node ref="R132" pin="1" pintype="passive"/>
+      <node ref="SW111" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="62" name="Net-(R121-Pad1)" class="Default">
+      <node ref="R121" pin="1" pintype="passive"/>
+      <node ref="R133" pin="1" pintype="passive"/>
+      <node ref="SW112" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="63" name="Net-(U101-Pad1)" class="Default">
+      <node ref="U101" pin="1" pintype="input"/>
+      <node ref="U101" pin="7" pintype="input"/>
+      <node ref="U102" pin="3" pintype="output"/>
+      <node ref="U107" pin="1" pintype="input"/>
+      <node ref="U107" pin="7" pintype="input"/>
+    </net>
+    <net code="64" name="Net-(U102-Pad7)" class="Default">
+      <node ref="U102" pin="7" pintype="output"/>
+      <node ref="U106" pin="6" pintype="input"/>
+    </net>
+    <net code="65" name="Net-(U103-DS)" class="Default">
+      <node ref="U101" pin="3" pintype="tri_state"/>
+      <node ref="U103" pin="10" pinfunction="DS_10" pintype="input"/>
+      <node ref="U107" pin="3" pintype="tri_state"/>
+    </net>
+    <net code="66" name="Net-(U103-Q7)" class="Default">
+      <node ref="U103" pin="9" pinfunction="Q7_9" pintype="output"/>
+      <node ref="U104" pin="10" pinfunction="DS_10" pintype="input"/>
+    </net>
+    <net code="67" name="Net-(U108-D)" class="Default">
+      <node ref="U106" pin="3" pintype="output"/>
+      <node ref="U108" pin="2" pinfunction="D_2" pintype="input"/>
+    </net>
+    <net code="68" name="Net-(U109-Tc)" class="Default">
+      <node ref="U102" pin="2" pintype="input"/>
+      <node ref="U109" pin="15" pinfunction="Tc_15" pintype="output"/>
+    </net>
+    <net code="69" name="VCC" class="Power">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="C203" pin="1" pintype="passive"/>
+      <node ref="C204" pin="1" pintype="passive"/>
+      <node ref="C205" pin="1" pintype="passive"/>
+      <node ref="C206" pin="1" pintype="passive"/>
+      <node ref="C207" pin="1" pintype="passive"/>
+      <node ref="C208" pin="1" pintype="passive"/>
+      <node ref="C209" pin="1" pintype="passive"/>
+      <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J103" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J104" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J105" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J106" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="R109" pin="1" pintype="passive"/>
+      <node ref="U101" pin="8" pinfunction="VCC_8" pintype="power_in"/>
+      <node ref="U102" pin="8" pinfunction="VCC_8" pintype="power_in"/>
+      <node ref="U103" pin="13" pinfunction="D2_13" pintype="input"/>
+      <node ref="U103" pin="14" pinfunction="D3_14" pintype="input"/>
+      <node ref="U103" pin="16" pinfunction="VCC_16" pintype="power_in"/>
+      <node ref="U104" pin="16" pinfunction="VCC_16" pintype="power_in"/>
+      <node ref="U105" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U106" pin="8" pinfunction="VCC_8" pintype="power_in"/>
+      <node ref="U107" pin="8" pinfunction="VCC_8" pintype="power_in"/>
+      <node ref="U108" pin="7" pinfunction="~{PRE}_7" pintype="input"/>
+      <node ref="U108" pin="8" pinfunction="VCC_8" pintype="power_in"/>
+      <node ref="U109" pin="16" pinfunction="VCC_16" pintype="power_in"/>
+      <node ref="U109" pin="9" pinfunction="~{Pe}_9" pintype="input"/>
+    </net>
+    <net code="70" name="VCC_T" class="Power">
+      <node ref="J107" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J108" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="SW101" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW102" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW103" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW104" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW105" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW106" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW107" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW108" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW109" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW110" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW111" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW112" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="71" name="unconnected-(U103-~{Q7}-Pad7)" class="Default">
+      <node ref="U103" pin="7" pinfunction="~{Q7}_7" pintype="output+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U104-~{Q7}-Pad7)" class="Default">
+      <node ref="U104" pin="7" pinfunction="~{Q7}_7" pintype="output+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U108-~{Q}-Pad3)" class="Default">
+      <node ref="U108" pin="3" pinfunction="~{Q}_3" pintype="output+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U109-Q0-Pad14)" class="Default">
+      <node ref="U109" pin="14" pinfunction="Q0_14" pintype="output+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U109-Q1-Pad13)" class="Default">
+      <node ref="U109" pin="13" pinfunction="Q1_13" pintype="output+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U109-Q2-Pad12)" class="Default">
+      <node ref="U109" pin="12" pinfunction="Q2_12" pintype="output+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U109-Q3-Pad11)" class="Default">
+      <node ref="U109" pin="11" pinfunction="Q3_11" pintype="output+no_connect"/>
+    </net>
+  </nets>
+</export>

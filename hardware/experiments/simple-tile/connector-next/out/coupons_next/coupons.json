@@ -1,0 +1,81 @@
+{
+ "coupon_agg19": {
+  "name": "coupon_agg19",
+  "brect": [
+   0.0,
+   0.0,
+   81.57908496080536,
+   49.22
+  ],
+  "pads_placed": 19,
+  "pads_probed": 19,
+  "skipped": [],
+  "file": "hardware/experiments/simple-tile/connector-next/out/coupons_next/coupon_agg19.kicad_pcb",
+  "outline_mm": [
+   81.58,
+   49.22
+  ],
+  "footprints": 46,
+  "tracks": 38
+ },
+ "coupon_mezz20": {
+  "name": "coupon_mezz20",
+  "brect": [
+   0.0,
+   0.0,
+   81.57908496080536,
+   38.97
+  ],
+  "tab_mm": 5.75,
+  "skipped": [],
+  "file": "hardware/experiments/simple-tile/connector-next/out/coupons_next/coupon_mezz20.kicad_pcb",
+  "outline_mm": [
+   81.58,
+   38.97
+  ],
+  "footprints": 13,
+  "tracks": 4
+ },
+ "coupon_backplane": {
+  "name": "coupon_backplane",
+  "brect": [
+   -30.776315789473685,
+   -59.85789473684211,
+   106.16263845144672,
+   20.842105263157897
+  ],
+  "stub_traces": [
+   {
+    "from": "A.GND_DET_B",
+    "to": "S.T_endcol",
+    "net_on_backplane": "STUBDET.A.GND_DET_B>S.T_endcol",
+    "bonded_through_removable_tile": true,
+    "routed": true
+   },
+   {
+    "from": "S.GND_DET_T",
+    "to": "A.B_first",
+    "net_on_backplane": "STUBDET.S.GND_DET_T>A.B_first",
+    "bonded_through_removable_tile": true,
+    "routed": true
+   },
+   {
+    "from": "S.GND_DET_R",
+    "to": "R.L_endrow",
+    "net_on_backplane": "STUBDET.S.GND_DET_R>R.L_endrow",
+    "bonded_through_removable_tile": true,
+    "routed": true
+   }
+  ],
+  "probed": 51,
+  "seats": 57,
+  "skipped": [],
+  "file": "hardware/experiments/simple-tile/connector-next/out/coupons_next/coupon_backplane.kicad_pcb",
+  "outline_mm": [
+   136.94,
+   80.7
+  ],
+  "footprints": 111,
+  "tracks": 124
+ }
+}

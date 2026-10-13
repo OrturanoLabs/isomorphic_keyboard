@@ -1,5 +1,11 @@
 # Isomorphic keyboard — documentation
 
+- **Current development**
+  - [FPGA lead, discrete reference and retired approaches](architecture/current-development.md)
+  - [Single-directory consolidation and cleanup](CONSOLIDATION.md)
+  - [FPGA board readiness](../hardware/experiments/simple-tile/fpga/board/docs/readiness.md)
+  - [20 MHz scan-engine results](../firmware/ice40/scan20/RESULTS.md)
+
 - **Architecture**
   - [Overview](architecture/overview.md): tiles, stacking, controller
   - [Scan protocol and topology discovery](architecture/protocol.md): connector pinout,
@@ -21,4 +27,5 @@
 | Revision | State | Git |
 |---|---|---|
 | rev A | working prototype (double-stack tiles, hot-plug, MIDI DIN) | tag `rev-a-prototype` / `rev-a` |
-| rev B | signal-integrity fixes and assembly-ready PCB, same function | branch `rev-b` |
+| rev B | signal-integrity and assembly studies, not built | reference commit `d358953` |
+| single-board development | FPGA lead; discrete reference; target 20 MHz / 16 tiles | current `rev-c` working tree |

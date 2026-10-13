@@ -1,0 +1,21 @@
+# ATF1502ASV device-shaped synthesis for the cpld-fit one-chip tile candidate.
+#
+# What this script does: infers the design's storage/control/tri-state
+# structure and maps it onto ATF1502 macrocell primitives
+# (synth/atf1502_cells.v), then writes an EDIF netlist for a FITTER FRONT-END.
+# What it does NOT do: place/route, product-term allocation, fuse generation,
+# or static timing. Those require the proprietary Microchip fitter
+# (fit/run_fitter.sh). Do NOT quote the cell counts as a device fit.
+
+read_verilog -lib synth/atf1502_cells.v
+read_verilog src/tile_cpld.v
+hierarchy -top tile_cpld -check
+proc
+opt
+stat
+tribuf
+techmap -map synth/atf1502_techmap.v
+opt_clean
+check -assert
+stat
+write_edif -top tile_cpld results/tile_cpld_atf1502.edif

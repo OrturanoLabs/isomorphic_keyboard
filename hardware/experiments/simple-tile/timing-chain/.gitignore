@@ -1,0 +1,19 @@
+# generated simulation artifacts
+build/
+__pycache__/
+si/__pycache__/
+chain_tb
+e~*.o
+results/*.log
+results/sw_*
+results/summary.txt
+results/sweeps.txt
+results/report.md
+results/sync.log
+results/env.log
+si/measurements/
+si/results/selftest.log
+si/results/env.log
+
+# vendor models are fetched, not redistributed (see hardware/si/models/README.md)
+si/models/*.ibs

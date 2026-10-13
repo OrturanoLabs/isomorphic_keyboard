@@ -1,0 +1,7 @@
+run_fitter.sh selftest (2026-10-12, this session):
+  no-arg              -> exit 2  FIT-BLOCKED: no fitter path given
+  /nonexistent/fit1502 -> exit 2  FIT-BLOCKED: path does not exist
+  .exe without wine    -> exit 2  FIT-BLOCKED: CPLDFIT_WINE required, never auto-installed
+  dummy executable     -> invoked with <edif> <args>, fitter's stdout logged, exit 0 propagated
+  (dummy script lived at results/build/fakefit.sh; removed after test)
+  final clean-tree state: fit/run_fitter.sh with no args -> exit 2 (re-verified after clean rerun; nothing installed, no license accepted)

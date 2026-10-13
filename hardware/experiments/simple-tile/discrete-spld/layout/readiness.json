@@ -1,0 +1,104 @@
+{
+  "readiness_schema": 1,
+  "generated": "2026-10-13T09:31:00+02:00",
+  "author": "discrete-layout worker (variant-A 4-layer routing recovery)",
+  "board_variant": "variant_a (discrete all-LVC glue + SN74LV161A + 2x SN74LVC165A)",
+
+  "erc": {
+    "authoritative_schematic": false,
+    "erc_ran": false,
+    "explicit_note": "NO ERC claim is made anywhere: no schematic generator exists in this tree (rev-c MCU one removed with its worktree). The substitute authoritative-nets gate is layout/net_binding_check.py (circuit JSON <-> board pads, exact two-way match), and it PASSES on all delivered boards.",
+    "substitute_gate": {
+      "tool": "layout/net_binding_check.py",
+      "boards/variant_a/tile_variant_a.kicad_pcb": "PASS (261 pads, 52==52 named nets, 8 NC pins net-less, TP bindings ok)",
+      "layout/tile_variant_a_routed.kicad_pcb": "PASS (261 pads, 52==52 nets incl. full counter (UA9) / key (KEY0..11) / power pin coverage)",
+      "negative_control": "NON-VACUOUS: one pad rebound UA9.1 nRST->GND in a scratch copy -> gate FAILS with missing_on_board + extra_on_board diagnostics (exit 1)",
+      "power_gate_explicit_14_pins": "PASS: UA1/UA2/UA6/UA7/UA8 8=VCC 4=GND; UA5 5=VCC 3=GND; UA9 16=VCC 8=GND (TI pinouts, matches fabricated rev-A export)"
+    }
+  },
+
+  "canonical_circuit_fix_G1": {
+    "what": "tools/gen_circuits.py now consumes DEVICES[*]['power'] (VCC/GND pin per device) in Builder.finish(); a same-rail explicit pin is tolerated, a conflicting owner net is fatal. Previously the tables were dead data and 7/9 ICs (variant A) had their VCC/GND pins authored as NC_* - fabrication-blocking.",
+    "regenerated": ["circuits/variant_a.json", "circuits/variant_a2.json"],
+    "not_regenerated": "circuits/variant_b2.json (outside worker scope; owner rerun of full __main__ will also bind UB4.5->VCC / UB4.3->GND - same bug class)",
+    "diff_proof": "a: 74->60 nets, exactly 14 NC_* removed, GND/VCC gained exactly the 14 rail pins, every other net and all other JSON sections byte-identical (same for a2 with UA2/5/6/8/9 + UV1/UV2 pins)",
+    "old_plus_errata_equals_new": "PROVEN EXACT (net-for-net set equality; NC set 22->8) -> pre-existing routing built from old+overlay remains valid",
+    "overlay": "layout/errata_rails.json DELETED (removal condition met); build_4layer.py apply_errata() no-ops when absent",
+    "sim_impact": "logic nets unchanged by proof; reduced suite --circuits variant_a,variant_a2 re-run anyway: ALL PASS 22/22 (layout/logs/sim_g1fix_run1.log); prior full suite 33/33 baseline in layout/logs/sim_full_run1.log"
+  },
+
+  "artifacts": {
+    "boards/variant_a/tile_variant_a.kicad_pcb": {
+      "state": "placement prototype, regenerated on the FIXED canonical circuit; placement byte-identical to the previous corrected-outline placement (57/57 refs layer+xy+rot)",
+      "drc": {"errors": 0, "warnings": 162, "warning_detail": "silk cosmetics only (silk_overlap 48, silk_over_copper 109, silk_edge_clearance 5)", "unconnected": 189, "unconnected_note": "189 = 175 placement-prototype opens + the 14 ex-NC rail pads now correctly on VCC/GND"},
+      "net_binding": "PASS"
+    },
+    "layout/tile_variant_a_routed.kicad_pcb": {
+      "state": "BEST PARTIAL = best-connectivity routed state in budget (freerouting 47 min pass3 + KRT 12 h repair pass-1, adopted after KRT container exit; zones refilled; bounded strict-geometry manual repair attempted afterwards: 0/11 links had a legal corridor; board unchanged)",
+      "drc": {"errors": 1090, "warnings": 178, "unconnected": 12,
+        "error_breakdown": {"clearance": 499, "track_width": 199, "hole_clearance": 199, "via_diameter": 69, "drill_out_of_range": 69, "annular_width": 55},
+        "warning_breakdown": {"silk_*": 162, "via_dangling": 14, "track_dangling": 2},
+        "report": "layout/reports_drc_krt_final.json"},
+      "strict_fab_verdict": "NOT FAB-READY under strict rules (0.2/0.2 mm, via 0.6/0.3). 1445 segments at 0.0889 mm + 55 vias at 0.25-0.45 mm/0.15-0.2 drill are KRT 'net rescue'/'via clamp' escalation artifacts (escalation=board, recorded in krt_pass1.log JSON_SUMMARY), reported here - neither relaxed away nor hidden.",
+      "net_binding": "PASS (routing does not change pad bindings)"
+    },
+    "layout/tile_variant_a_routed_fix1.kicad_pcb": {
+      "state": "pre-KRT strict-geometry board (freerouting only, tracks restored to 0.2, 2 edge-illegal GND vias deleted)",
+      "drc": {"errors": 9, "error_breakdown": {"clearance": 9}, "unconnected": 36, "report": "layout/reports_drc_fix1.json"},
+      "verdict": "geometry strict but connectivity worse (36 opens); kept as the strict-geometry reference artifact"
+    }
+  },
+
+  "process_record": {
+    "baseline": "33/33 protocol sims PASS pre-change; regenerated placement 0 DRC errors / 189 unconnected, NET-BINDING PASS",
+    "routing_attempts": [
+      {"job": "fr_va_run1", "result": "KILLED (obsolete connector outline; fix proven via 6-neighbour overlap test)"},
+      {"job": "fr_va_run2", "result": "47 min: plateau 39-42 unrouted + 90 freerouting-internal violations, optimizer unbounded -> killed, no SES lost (SES only at normal end)"},
+      {"job": "fr_va_run3", "result": "COMPLETED 37m58s: 34 unrouted + 90 violations; SES written; imported by finish_4layer.py"},
+      {"job": "KRT container 81d289b860c9 (hungry_mahavira)", "cmd": "python /opt/krt/py_router/route.py pass_in pass_out --nets <30> --rip-existing-nets <same> --clearance 0.2 --track-width 0.2 --layers F.Cu B.Cu --via-size 0.6 --via-drill 0.3 --escalation board --same-net-pad-clearance 0.3 --hole-to-hole-clearance 0.25 --board-edge-clearance 0.5 --grid-step 0.05", "result": "pass 1 completed after ~12 h (78/88 pad pairs connected), plane-finalize done; reconciliation pass then ran ~12 min, container exited with no final write (host RAM 22/22 GB + swap full -> OOM-likely); on-disk pass_out = pass-1+finalize state, adopted",
+        "budget_note": "no duplicate router was started while it ran; after its exit NO new autorouter was launched (finite budget)"},
+      {"job": "manual repair layout/repair_opens.py (run3)", "result": "strict-geometry prober (0.2/0.2, via 0.6/0.3, snpc 0.3, hole-hole 0.25, edge 0.6): 0/11 links legal; GND island got 0 via sites (edge rule + pad spacing) and its south channel is sealed by placed parts; DRC digest byte-identical before/after (1090/12) - nothing added, nothing hidden"}
+    ]
+  },
+
+  "open_items_final_12": {
+    "note": "each is a missing LINK between DRC-named items; nets with multiple islands listed once per link. NONE is hidden; all require placement-level or rule-level decisions outside this worker's budget.",
+    "SWN1 (RK1.1<->RS1.1<->SW2.2, 2 links)": "key1 sense chain broken (key1 unreadable)",
+    "SWN3 (main<->SW4.2)": "key3/key4 region sense link (key3 unreadable)",
+    "latch_drv (UA6.7 island<->TP_latch_drv, UA5.2 open, 2 links + pad)": "shift-register reset drive broken (nRST path incomplete -> UA3/UA4/UA9 never reset)",
+    "W (4 islands, 3 links)": "OE window counter net broken (UA1/UA2/UA7 OEs; DS chain gating broken)",
+    "T_endcol (RPTEC stub<->UA3.11/JP island)": "T_endcol marker line broken (frame-column marker lost)",
+    "flag_and (UA2.7<->UA6.6, bare pads)": "window flag combiner broken (B_W flag path incomplete)",
+    "flag_d (UA6.3 stub<->UA8.2 via stub)": "B_W flag D-input broken (B_W status flag lost)",
+    "GND (B.Cu pour island + RPLDA.2 in it, 1 link)": "RPLDA.2 pull-down return floating -> L_data input of the tile column-0 floats when the left neighbour tri-states; root cause: original anchoring GND via (7.391,-6.782) violated the 0.5 mm edge rule and was deleted by fix_routed; remaining sliver has NO legal via site (edge rule + RPLDA/SW1/TP pads + rescue-era KEY0 diagonal copper) and the south B.Cu channel is sealed between TP_B_clk/TP_B_W/RPTW+VCC pads and the B_clk via + DS_net web at strict geometry"
+  },
+
+  "gates": {
+    "net_binding": "PASS (+ non-vacuous negative control)",
+    "explicit_power_gate_14_rail_pins": "PASS",
+    "via_in_pad_same_net_0.2mm": "PASS (0 bad vias)",
+    "tiling_6_neighbour": "PASS (0 outline overlaps / 6 neighbours, 0 socket cross-collisions, 105/105 anchors inside outline; corrected TileTiling, 1.0 mm rib gap)",
+    "series_R_source_placement_mm": {"ROTCK": 4.38, "ROLCK": 4.38, "ROLLA": 4.75, "ROBW": 4.08, "ROBDA": 1.87, "note": "pad-centre to driver-pin centre on the final board; ROBDA improved vs round-1's 7.06"},
+    "drc_strict": "FAIL on best-connectivity board (1090 errors, breakdown above); PASS-by-construction on placement prototype"
+  },
+
+  "timing_20mhz": {
+    "status": "UNKNOWN / still baseline-conditional, NOT demonstrated at routed geometry",
+    "known": ["timing-chain worker: 16/16 static PASS, 20 MHz conditionally OK at max corner with >=28 ns clock-high (30/20 duty model)", "per-net routed lengths measured on the final board (see below)"],
+    "unknown": ["no SI re-run at the AS-ROUTED (partially 0.0889 mm) geometry; the documented typ-corner far-clock-tree burst failure finding stands; 12 opens mean the routed netlist is not the proven netlist at the broken links"],
+    "verdict": "do NOT claim 20 MHz hardware readiness"
+  },
+  "routed_lengths_mm_vias_per_net_final_board": {
+    "B_W": [94.08, 9], "B_W_drv": [23.24, 4], "B_clk": [125.08, 9],
+    "B_data": [67.48, 7], "B_first": [116.61, 7], "B_latch": [70.28, 8],
+    "CHAIN": [30.05, 4], "DS_net": [48.71, 5], "GND": [62.88, 78],
+    "KEY0": [58.14, 2], "L_clk": [80.02, 11], "L_clk_drv": [4.69, 0],
+    "L_data": [124.35, 4], "L_endrow": [79.84, 4], "L_latch": [54.41, 3],
+    "R_latch": [94.95, 6], "T_W": [107.00, 10], "T_clk": [114.17, 8],
+    "T_clk_drv": [8.97, 2], "T_data": [102.69, 5], "T_endcol": [22.59, 3],
+    "Tc": [7.30, 0], "VCC": [63.36, 42], "W": [34.33, 5],
+    "data_drv": [55.94, 7], "flag_d": [3.32, 1], "latch_drv": [26.93, 6],
+    "nRST": [111.21, 11], "total_all_nets_mm": 2696.2, "total_vias": 338,
+    "note": "includes escalation copper (0.0889 mm); lengths alone are NOT a timing proof"
+  }
+}

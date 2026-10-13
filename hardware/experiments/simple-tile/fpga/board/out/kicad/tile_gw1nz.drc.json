@@ -1,0 +1,4109 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-13T10:40:21",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "tile_gw1nz.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 27 [B_W] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 6.8
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000126"
+                },
+                {
+                    "description": "Pad 1 [B_W] of JP_B_W on B.Cu",
+                    "pos": {
+                        "x": 20.235,
+                        "y": 21.7
+                    },
+                    "uuid": "ad2b4b10-8db9-4300-891c-aa0f88f27c6c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [B_clk] of JP_B_clk on B.Cu",
+                    "pos": {
+                        "x": 7.235,
+                        "y": 21.7
+                    },
+                    "uuid": "45c06455-5954-40a8-92f3-17e87e389d98"
+                },
+                {
+                    "description": "Pad 47 [B_clk] of U1 on B.Cu",
+                    "pos": {
+                        "x": 9.6597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000146"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 30 [B_data] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 5.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000129"
+                },
+                {
+                    "description": "Pad 1 [B_data] of JP_B_data on B.Cu",
+                    "pos": {
+                        "x": 10.485,
+                        "y": 21.7
+                    },
+                    "uuid": "22f7db86-be56-43d2-869d-6aab4a02620b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 40 [B_first] of U1 on B.Cu",
+                    "pos": {
+                        "x": 6.8597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000139"
+                },
+                {
+                    "description": "Pad 1 [B_first] of JP_B_first on B.Cu",
+                    "pos": {
+                        "x": 13.735,
+                        "y": 21.7
+                    },
+                    "uuid": "21eb9380-6861-42c4-806d-e2790e202573"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 22 [B_latch] of U1 on B.Cu",
+                    "pos": {
+                        "x": 6.4597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000121"
+                },
+                {
+                    "description": "Pad 1 [B_latch] of JP_B_latch on B.Cu",
+                    "pos": {
+                        "x": 16.985,
+                        "y": 21.7
+                    },
+                    "uuid": "f9ac6bb7-ca8e-4830-bcab-e05a5ce3585c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 46 [CFG_DONE] of U1 on B.Cu",
+                    "pos": {
+                        "x": 9.2597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000145"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [CFG_DONE] of R5 on B.Cu",
+                    "pos": {
+                        "x": 17.3347,
+                        "y": 5.2
+                    },
+                    "uuid": "2a4b37b0-428e-4dcc-aed4-b022e4d52b6e"
+                },
+                {
+                    "description": "Pad 46 [CFG_DONE] of U1 on B.Cu",
+                    "pos": {
+                        "x": 9.2597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000145"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 1 [CFG_READY] of R4 on B.Cu",
+                    "pos": {
+                        "x": 2.4347,
+                        "y": 9.2
+                    },
+                    "uuid": "baa847ff-35c4-4c10-8338-c0f20dc77126"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [CFG_READY] of R4 on B.Cu",
+                    "pos": {
+                        "x": 2.4347,
+                        "y": 9.2
+                    },
+                    "uuid": "baa847ff-35c4-4c10-8338-c0f20dc77126"
+                },
+                {
+                    "description": "Pad 45 [CFG_READY] of U1 on B.Cu",
+                    "pos": {
+                        "x": 8.8597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000144"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [CFG_RECONFIG] of R6 on B.Cu",
+                    "pos": {
+                        "x": 9.8847,
+                        "y": -5.05
+                    },
+                    "uuid": "e47b5bed-3d75-4d2a-b779-f3cf5ce082bd"
+                },
+                {
+                    "description": "Pad 48 [CFG_RECONFIG] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.0597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000147"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 48 [CFG_RECONFIG] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.0597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000147"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C7 on B.Cu",
+                    "pos": {
+                        "x": -14.49,
+                        "y": 19.2
+                    },
+                    "uuid": "ecd91720-c31d-4e4f-9262-1265c37a0f68"
+                },
+                {
+                    "description": "Pad 2 [GND] of U2 on B.Cu",
+                    "pos": {
+                        "x": -7.6275,
+                        "y": 25.2
+                    },
+                    "uuid": "c49bb6c8-27a6-4132-82a1-2e3c19c56937"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C7 on B.Cu",
+                    "pos": {
+                        "x": -14.49,
+                        "y": 19.2
+                    },
+                    "uuid": "ecd91720-c31d-4e4f-9262-1265c37a0f68"
+                },
+                {
+                    "description": "Pad 2 [GND] of R2 on B.Cu",
+                    "pos": {
+                        "x": 1.8347,
+                        "y": 7.45
+                    },
+                    "uuid": "8e828a18-ad05-41c3-818d-6c27cd46e729"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of U2 on B.Cu",
+                    "pos": {
+                        "x": -7.6275,
+                        "y": 25.2
+                    },
+                    "uuid": "c49bb6c8-27a6-4132-82a1-2e3c19c56937"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of R2 on B.Cu",
+                    "pos": {
+                        "x": 1.8347,
+                        "y": 7.45
+                    },
+                    "uuid": "8e828a18-ad05-41c3-818d-6c27cd46e729"
+                },
+                {
+                    "description": "Pad 26 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 7.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000125"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C3 on B.Cu",
+                    "pos": {
+                        "x": 1.8847,
+                        "y": 2.95
+                    },
+                    "uuid": "8b8c303b-723a-4a25-b8fe-75599b871bf1"
+                },
+                {
+                    "description": "Pad 2 [GND] of C2 on B.Cu",
+                    "pos": {
+                        "x": 1.8847,
+                        "y": 5.35
+                    },
+                    "uuid": "bf4c2d36-3806-458b-8fdf-bb99cbb3ed32"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C2 on B.Cu",
+                    "pos": {
+                        "x": 1.8847,
+                        "y": 5.35
+                    },
+                    "uuid": "bf4c2d36-3806-458b-8fdf-bb99cbb3ed32"
+                },
+                {
+                    "description": "Pad 2 [GND] of R2 on B.Cu",
+                    "pos": {
+                        "x": 1.8347,
+                        "y": 7.45
+                    },
+                    "uuid": "8e828a18-ad05-41c3-818d-6c27cd46e729"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 1 [GND] of JP_GND on B.Cu",
+                    "pos": {
+                        "x": 4.235,
+                        "y": 36.7
+                    },
+                    "uuid": "0671f887-3b41-4c3b-b3bf-2969688f6b39"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of JP_GND on B.Cu",
+                    "pos": {
+                        "x": 4.235,
+                        "y": 36.7
+                    },
+                    "uuid": "0671f887-3b41-4c3b-b3bf-2969688f6b39"
+                },
+                {
+                    "description": "Pad 1 [GND] of JP_GND_DET_T on B.Cu",
+                    "pos": {
+                        "x": 7.485,
+                        "y": 36.7
+                    },
+                    "uuid": "4d18c49a-16a4-45a5-9cac-c71fa562aae5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C5 on B.Cu",
+                    "pos": {
+                        "x": 7.3847,
+                        "y": -0.8
+                    },
+                    "uuid": "f1553bc8-2bb4-43cf-b925-9eb322064f7d"
+                },
+                {
+                    "description": "Pad 2 [GND] of R1 on B.Cu",
+                    "pos": {
+                        "x": 5.9847,
+                        "y": -2.55
+                    },
+                    "uuid": "02c135d1-4c4c-4d6f-a09c-1e4055f9170e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of JP_GND_DET_T on B.Cu",
+                    "pos": {
+                        "x": 7.485,
+                        "y": 36.7
+                    },
+                    "uuid": "4d18c49a-16a4-45a5-9cac-c71fa562aae5"
+                },
+                {
+                    "description": "Pad 1 [GND] of JP_GND_DET_B on B.Cu",
+                    "pos": {
+                        "x": 10.735,
+                        "y": 36.7
+                    },
+                    "uuid": "0b9eac52-5e06-49fc-bdc2-d03dc0234aa5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C1 on B.Cu",
+                    "pos": {
+                        "x": 7.7847,
+                        "y": 0.95
+                    },
+                    "uuid": "789e6da3-ed01-4c42-9931-2445eb6ed549"
+                },
+                {
+                    "description": "Pad 2 [GND] of C5 on B.Cu",
+                    "pos": {
+                        "x": 7.3847,
+                        "y": -0.8
+                    },
+                    "uuid": "f1553bc8-2bb4-43cf-b925-9eb322064f7d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C1 on B.Cu",
+                    "pos": {
+                        "x": 7.7847,
+                        "y": 0.95
+                    },
+                    "uuid": "789e6da3-ed01-4c42-9931-2445eb6ed549"
+                },
+                {
+                    "description": "Pad 2 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 3.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000101"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 49 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 7.8597,
+                        "y": 5.4
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000148"
+                },
+                {
+                    "description": "Pad 26 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 7.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000125"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of JP_GND_DET_B on B.Cu",
+                    "pos": {
+                        "x": 10.735,
+                        "y": 36.7
+                    },
+                    "uuid": "0b9eac52-5e06-49fc-bdc2-d03dc0234aa5"
+                },
+                {
+                    "description": "Pad 1 [GND] of JP_GND_DET_R on B.Cu",
+                    "pos": {
+                        "x": 13.985,
+                        "y": 36.7
+                    },
+                    "uuid": "bf570046-52d0-4712-ab0b-a76239d10e90"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 3.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000101"
+                },
+                {
+                    "description": "Pad 49 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 7.8597,
+                        "y": 5.4
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000148"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C4 on B.Cu",
+                    "pos": {
+                        "x": 12.2847,
+                        "y": 5.35
+                    },
+                    "uuid": "9be3a6d7-fc77-42b8-85f2-c1f146b2be21"
+                },
+                {
+                    "description": "Pad 2 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 3.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000101"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C4 on B.Cu",
+                    "pos": {
+                        "x": 12.2847,
+                        "y": 5.35
+                    },
+                    "uuid": "9be3a6d7-fc77-42b8-85f2-c1f146b2be21"
+                },
+                {
+                    "description": "Pad 2 [GND] of R3 on B.Cu",
+                    "pos": {
+                        "x": 15.4847,
+                        "y": 3.25
+                    },
+                    "uuid": "7334fbf6-5560-432c-8b7b-9a6993f60424"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C6 on B.Cu",
+                    "pos": {
+                        "x": 12.3347,
+                        "y": 7.6
+                    },
+                    "uuid": "b0080a76-023b-4b47-b766-290da5804ea1"
+                },
+                {
+                    "description": "Pad 2 [GND] of C4 on B.Cu",
+                    "pos": {
+                        "x": 12.2847,
+                        "y": 5.35
+                    },
+                    "uuid": "9be3a6d7-fc77-42b8-85f2-c1f146b2be21"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 44 [JTAGSEL_N] of U1 on B.Cu",
+                    "pos": {
+                        "x": 8.4597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000143"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 1 [JTAG_TCK] of R3 on B.Cu",
+                    "pos": {
+                        "x": 17.1347,
+                        "y": 3.25
+                    },
+                    "uuid": "5a1449db-9142-4ee6-a48e-affb64b39354"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [JTAG_TCK] of R3 on B.Cu",
+                    "pos": {
+                        "x": 17.1347,
+                        "y": 3.25
+                    },
+                    "uuid": "5a1449db-9142-4ee6-a48e-affb64b39354"
+                },
+                {
+                    "description": "Pad 3 [JTAG_TCK] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 4.0
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000102"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 5 [JTAG_TDI] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 4.8
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000104"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 7 [JTAG_TDO] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 5.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000106"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 4 [JTAG_TMS] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 4.4
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000103"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [K1] of SW1 on B.Cu",
+                    "pos": {
+                        "x": 5.842,
+                        "y": -5.08
+                    },
+                    "uuid": "e0a79b73-78b9-4257-bad1-98609ccbe0d5"
+                },
+                {
+                    "description": "Pad 8 [K1] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 6.0
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000107"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [K10] of SW10 on B.Cu",
+                    "pos": {
+                        "x": 5.842,
+                        "y": 26.72
+                    },
+                    "uuid": "f51cd739-e600-4322-93ae-697c80540387"
+                },
+                {
+                    "description": "Pad 23 [K10] of U1 on B.Cu",
+                    "pos": {
+                        "x": 6.0597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000122"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 33 [K11] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 4.4
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000132"
+                },
+                {
+                    "description": "Pad 2 [K11] of SW11 on B.Cu",
+                    "pos": {
+                        "x": 24.2017,
+                        "y": 26.72
+                    },
+                    "uuid": "7df3cce1-1adc-4b60-8463-c50ac0ce7ae9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 34 [K12] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 4.0
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000133"
+                },
+                {
+                    "description": "Pad 2 [K12] of SW12 on B.Cu",
+                    "pos": {
+                        "x": 42.5615,
+                        "y": 26.72
+                    },
+                    "uuid": "a6bed81c-5a79-4223-8263-f2fc6ed25a77"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 10 [K2] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 6.8
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000109"
+                },
+                {
+                    "description": "Pad 2 [K2] of SW2 on B.Cu",
+                    "pos": {
+                        "x": 24.2017,
+                        "y": -5.08
+                    },
+                    "uuid": "c57c4aac-4e0a-4b1e-bb85-5ba5d4123190"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 11 [K3] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 7.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000110"
+                },
+                {
+                    "description": "Pad 2 [K3] of SW3 on B.Cu",
+                    "pos": {
+                        "x": 42.5615,
+                        "y": -5.08
+                    },
+                    "uuid": "95c09247-c1c7-44c5-a93e-86e5f8fef31d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 13 [K4] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.0597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000112"
+                },
+                {
+                    "description": "Pad 2 [K4] of SW4 on B.Cu",
+                    "pos": {
+                        "x": 60.9212,
+                        "y": -5.08
+                    },
+                    "uuid": "401b49d3-4d9a-4f5d-b7f5-772e391a0511"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [K5] of SW5 on B.Cu",
+                    "pos": {
+                        "x": -3.3379,
+                        "y": 10.82
+                    },
+                    "uuid": "e342692f-4ca3-48bb-9b50-17e6e3dd8d3e"
+                },
+                {
+                    "description": "Pad 16 [K5] of U1 on B.Cu",
+                    "pos": {
+                        "x": 8.8597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000115"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 17 [K6] of U1 on B.Cu",
+                    "pos": {
+                        "x": 8.4597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000116"
+                },
+                {
+                    "description": "Pad 2 [K6] of SW6 on B.Cu",
+                    "pos": {
+                        "x": 15.0219,
+                        "y": 10.82
+                    },
+                    "uuid": "63adc252-2b27-41d1-b054-f9a4e9ebbafe"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 18 [K7] of U1 on B.Cu",
+                    "pos": {
+                        "x": 8.0597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000117"
+                },
+                {
+                    "description": "Pad 2 [K7] of SW7 on B.Cu",
+                    "pos": {
+                        "x": 33.3816,
+                        "y": 10.82
+                    },
+                    "uuid": "7347331a-d9bf-44da-82ef-ae3f2a531507"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 20 [K8] of U1 on B.Cu",
+                    "pos": {
+                        "x": 7.2597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000119"
+                },
+                {
+                    "description": "Pad 2 [K8] of SW8 on B.Cu",
+                    "pos": {
+                        "x": 51.7413,
+                        "y": 10.82
+                    },
+                    "uuid": "603a79bf-df48-4be5-9292-a2e41765d0f5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [K9] of SW9 on B.Cu",
+                    "pos": {
+                        "x": -12.5177,
+                        "y": 26.72
+                    },
+                    "uuid": "9b2a29fd-32fc-4560-9e24-30a8e84e99fc"
+                },
+                {
+                    "description": "Pad 21 [K9] of U1 on B.Cu",
+                    "pos": {
+                        "x": 6.8597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000120"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 19 [L_clk] of U1 on B.Cu",
+                    "pos": {
+                        "x": 7.6597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000118"
+                },
+                {
+                    "description": "Pad 1 [L_clk] of JP_L_clk on B.Cu",
+                    "pos": {
+                        "x": 23.485,
+                        "y": 21.7
+                    },
+                    "uuid": "2bb3cd89-4775-4c63-a6b6-83ff4bf99633"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 24 [L_data] of U1 on B.Cu",
+                    "pos": {
+                        "x": 5.6597,
+                        "y": 8.35
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000123"
+                },
+                {
+                    "description": "Pad 1 [L_data] of JP_L_data on B.Cu",
+                    "pos": {
+                        "x": 26.735,
+                        "y": 21.7
+                    },
+                    "uuid": "d854754f-117e-408b-949a-92f06c37d2c2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 41 [L_endrow] of U1 on B.Cu",
+                    "pos": {
+                        "x": 7.2597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000140"
+                },
+                {
+                    "description": "Pad 1 [L_endrow] of JP_L_endrow on B.Cu",
+                    "pos": {
+                        "x": 29.985,
+                        "y": 21.7
+                    },
+                    "uuid": "9c92446c-acb1-4ca4-ab40-66b46af65bed"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 31 [L_latch] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 5.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000130"
+                },
+                {
+                    "description": "Pad 1 [L_latch] of JP_L_latch on B.Cu",
+                    "pos": {
+                        "x": 33.235,
+                        "y": 21.7
+                    },
+                    "uuid": "ed4bccf5-6661-45c1-bee0-280a0dc1d0ed"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [MODE0] of R1 on B.Cu",
+                    "pos": {
+                        "x": 7.6347,
+                        "y": -2.55
+                    },
+                    "uuid": "ff8ac5ac-7596-43d1-89d4-b4a3190dd88c"
+                },
+                {
+                    "description": "Pad 43 [MODE0] of U1 on B.Cu",
+                    "pos": {
+                        "x": 8.0597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000142"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [MODE1] of R2 on B.Cu",
+                    "pos": {
+                        "x": 3.4847,
+                        "y": 7.45
+                    },
+                    "uuid": "21a477ff-73d0-465b-9340-6f096bafd1e1"
+                },
+                {
+                    "description": "Pad 42 [MODE1] of U1 on B.Cu",
+                    "pos": {
+                        "x": 7.6597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000141"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 32 [R_latch] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 4.8
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000131"
+                },
+                {
+                    "description": "Pad 1 [R_latch] of JP_R_latch on B.Cu",
+                    "pos": {
+                        "x": 36.485,
+                        "y": 21.7
+                    },
+                    "uuid": "083ae8d0-63be-4e14-9895-f9c61af6adc8"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [T_W] of JP_T_W on B.Cu",
+                    "pos": {
+                        "x": 3.985,
+                        "y": 21.7
+                    },
+                    "uuid": "eb8aaa50-cac1-4264-8a3f-04aec1d24f3d"
+                },
+                {
+                    "description": "Pad 38 [T_W] of U1 on B.Cu",
+                    "pos": {
+                        "x": 6.0597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000137"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [T_clk] of JP_T_clk on B.Cu",
+                    "pos": {
+                        "x": -5.765,
+                        "y": 21.7
+                    },
+                    "uuid": "55e04d96-b16d-4ea8-9fed-2fe4320d9c1b"
+                },
+                {
+                    "description": "Pad 35 [T_clk] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 3.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000134"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [T_data] of JP_T_data on B.Cu",
+                    "pos": {
+                        "x": -2.515,
+                        "y": 21.7
+                    },
+                    "uuid": "5da491e9-905d-4256-ac87-72702909986b"
+                },
+                {
+                    "description": "Pad 28 [T_data] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 6.4
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000127"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [T_endcol] of JP_T_endcol on B.Cu",
+                    "pos": {
+                        "x": 0.735,
+                        "y": 21.7
+                    },
+                    "uuid": "4cdf13b8-4c32-4497-b9b1-5470ff54e631"
+                },
+                {
+                    "description": "Pad 39 [T_endcol] of U1 on B.Cu",
+                    "pos": {
+                        "x": 6.4597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000138"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW5 on B.Cu",
+                    "pos": {
+                        "x": -16.1149,
+                        "y": 13.36
+                    },
+                    "uuid": "c618b477-aa79-4fd0-aeb3-e487c9566557"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C7 on B.Cu",
+                    "pos": {
+                        "x": -11.54,
+                        "y": 19.2
+                    },
+                    "uuid": "32a9b007-7f31-4ff8-b5ce-b750f02761b8"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of C7 on B.Cu",
+                    "pos": {
+                        "x": -11.54,
+                        "y": 19.2
+                    },
+                    "uuid": "32a9b007-7f31-4ff8-b5ce-b750f02761b8"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW9 on B.Cu",
+                    "pos": {
+                        "x": -25.2947,
+                        "y": 29.26
+                    },
+                    "uuid": "fa8921ea-46bc-4fe2-9788-7abc74a0b30f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of JP_VCC on B.Cu",
+                    "pos": {
+                        "x": -9.015,
+                        "y": 21.7
+                    },
+                    "uuid": "c77b61cd-effb-46da-bf4c-d475263ae534"
+                },
+                {
+                    "description": "Pad 1 [VCC] of U2 on B.Cu",
+                    "pos": {
+                        "x": -7.6275,
+                        "y": 24.25
+                    },
+                    "uuid": "3b5bd34a-84d0-4ca8-9dd4-d8de05966e72"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of JP_VCC on B.Cu",
+                    "pos": {
+                        "x": -9.015,
+                        "y": 21.7
+                    },
+                    "uuid": "c77b61cd-effb-46da-bf4c-d475263ae534"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C7 on B.Cu",
+                    "pos": {
+                        "x": -11.54,
+                        "y": 19.2
+                    },
+                    "uuid": "32a9b007-7f31-4ff8-b5ce-b750f02761b8"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of JP_VCC on B.Cu",
+                    "pos": {
+                        "x": -9.015,
+                        "y": 21.7
+                    },
+                    "uuid": "c77b61cd-effb-46da-bf4c-d475263ae534"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 3 [VCC] of U2 on B.Cu",
+                    "pos": {
+                        "x": -7.6275,
+                        "y": 26.15
+                    },
+                    "uuid": "92252045-2488-4bba-8b05-c170d5eed6d7"
+                },
+                {
+                    "description": "Pad 1 [VCC] of U2 on B.Cu",
+                    "pos": {
+                        "x": -7.6275,
+                        "y": 24.25
+                    },
+                    "uuid": "3b5bd34a-84d0-4ca8-9dd4-d8de05966e72"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW10 on B.Cu",
+                    "pos": {
+                        "x": -7.085,
+                        "y": 29.26
+                    },
+                    "uuid": "6d37d561-588b-4f89-a32f-05fc57bffaff"
+                },
+                {
+                    "description": "Pad 3 [VCC] of U2 on B.Cu",
+                    "pos": {
+                        "x": -7.6275,
+                        "y": 26.15
+                    },
+                    "uuid": "92252045-2488-4bba-8b05-c170d5eed6d7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW10 on B.Cu",
+                    "pos": {
+                        "x": -7.085,
+                        "y": 29.26
+                    },
+                    "uuid": "6d37d561-588b-4f89-a32f-05fc57bffaff"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW11 on B.Cu",
+                    "pos": {
+                        "x": 11.2747,
+                        "y": 29.26
+                    },
+                    "uuid": "abdfc0d5-b119-4712-b996-e3446c5d22d8"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW1 on B.Cu",
+                    "pos": {
+                        "x": -6.935,
+                        "y": -2.54
+                    },
+                    "uuid": "3c1c67b5-cbf4-4873-b32e-9f02f932196c"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C3 on B.Cu",
+                    "pos": {
+                        "x": 3.4347,
+                        "y": 2.95
+                    },
+                    "uuid": "0ec6cd23-cf27-4e0f-85d1-3df9969b83f7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW6 on B.Cu",
+                    "pos": {
+                        "x": 2.0949,
+                        "y": 13.36
+                    },
+                    "uuid": "ccb8b2f2-cfd3-44b4-921c-1ee5ee85b4eb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [VCC] of R4 on B.Cu",
+                    "pos": {
+                        "x": 0.7847,
+                        "y": 9.2
+                    },
+                    "uuid": "a785d270-b462-4b32-8f52-74c0f2e024d9"
+                },
+                {
+                    "description": "Pad 25 [VCC] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000124"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW6 on B.Cu",
+                    "pos": {
+                        "x": 2.0949,
+                        "y": 13.36
+                    },
+                    "uuid": "ccb8b2f2-cfd3-44b4-921c-1ee5ee85b4eb"
+                },
+                {
+                    "description": "Pad 2 [VCC] of R4 on B.Cu",
+                    "pos": {
+                        "x": 0.7847,
+                        "y": 9.2
+                    },
+                    "uuid": "a785d270-b462-4b32-8f52-74c0f2e024d9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of C3 on B.Cu",
+                    "pos": {
+                        "x": 3.4347,
+                        "y": 2.95
+                    },
+                    "uuid": "0ec6cd23-cf27-4e0f-85d1-3df9969b83f7"
+                },
+                {
+                    "description": "Pad 36 [VCC] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 3.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000135"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of C2 on B.Cu",
+                    "pos": {
+                        "x": 3.4347,
+                        "y": 5.35
+                    },
+                    "uuid": "58e3aea5-edb4-46f2-a7ba-4ef29e556f8b"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C3 on B.Cu",
+                    "pos": {
+                        "x": 3.4347,
+                        "y": 2.95
+                    },
+                    "uuid": "0ec6cd23-cf27-4e0f-85d1-3df9969b83f7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of C2 on B.Cu",
+                    "pos": {
+                        "x": 3.4347,
+                        "y": 5.35
+                    },
+                    "uuid": "58e3aea5-edb4-46f2-a7ba-4ef29e556f8b"
+                },
+                {
+                    "description": "Pad 25 [VCC] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000124"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 36 [VCC] of U1 on B.Cu",
+                    "pos": {
+                        "x": 4.9097,
+                        "y": 3.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000135"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C1 on B.Cu",
+                    "pos": {
+                        "x": 9.3347,
+                        "y": 0.95
+                    },
+                    "uuid": "a25328fa-9c06-4258-ac78-e60530aae246"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [VCC] of R6 on B.Cu",
+                    "pos": {
+                        "x": 8.2347,
+                        "y": -5.05
+                    },
+                    "uuid": "dc9eb80a-de7b-4f4d-9ed1-9137d74d57b8"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW2 on B.Cu",
+                    "pos": {
+                        "x": 11.2747,
+                        "y": -2.54
+                    },
+                    "uuid": "daa06632-ad9f-4ba8-a6a7-c798ec7d19f9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of C1 on B.Cu",
+                    "pos": {
+                        "x": 9.3347,
+                        "y": 0.95
+                    },
+                    "uuid": "a25328fa-9c06-4258-ac78-e60530aae246"
+                },
+                {
+                    "description": "Pad 1 [VCC] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 3.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000100"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 3.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000100"
+                },
+                {
+                    "description": "Pad 2 [VCC] of R5 on B.Cu",
+                    "pos": {
+                        "x": 15.6847,
+                        "y": 5.2
+                    },
+                    "uuid": "12154eba-2584-48ce-bfee-579abb92d80d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW2 on B.Cu",
+                    "pos": {
+                        "x": 11.2747,
+                        "y": -2.54
+                    },
+                    "uuid": "daa06632-ad9f-4ba8-a6a7-c798ec7d19f9"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C1 on B.Cu",
+                    "pos": {
+                        "x": 9.3347,
+                        "y": 0.95
+                    },
+                    "uuid": "a25328fa-9c06-4258-ac78-e60530aae246"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [VCC] of R5 on B.Cu",
+                    "pos": {
+                        "x": 15.6847,
+                        "y": 5.2
+                    },
+                    "uuid": "12154eba-2584-48ce-bfee-579abb92d80d"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW7 on B.Cu",
+                    "pos": {
+                        "x": 20.4546,
+                        "y": 13.36
+                    },
+                    "uuid": "554418fc-af73-4e12-b38a-bb269240727f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [VCC] of R5 on B.Cu",
+                    "pos": {
+                        "x": 15.6847,
+                        "y": 5.2
+                    },
+                    "uuid": "12154eba-2584-48ce-bfee-579abb92d80d"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW3 on B.Cu",
+                    "pos": {
+                        "x": 29.6345,
+                        "y": -2.54
+                    },
+                    "uuid": "00907b78-a620-43c1-b4c5-098162c9e18d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW7 on B.Cu",
+                    "pos": {
+                        "x": 20.4546,
+                        "y": 13.36
+                    },
+                    "uuid": "554418fc-af73-4e12-b38a-bb269240727f"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW8 on B.Cu",
+                    "pos": {
+                        "x": 38.8143,
+                        "y": 13.36
+                    },
+                    "uuid": "b85cf6e2-5653-4452-b178-e1eb62aa1afa"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW12 on B.Cu",
+                    "pos": {
+                        "x": 29.6345,
+                        "y": 29.26
+                    },
+                    "uuid": "7ccf04b2-ac8c-4693-b745-43569acdf4f6"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW8 on B.Cu",
+                    "pos": {
+                        "x": 38.8143,
+                        "y": 13.36
+                    },
+                    "uuid": "b85cf6e2-5653-4452-b178-e1eb62aa1afa"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC] of SW4 on B.Cu",
+                    "pos": {
+                        "x": 47.9942,
+                        "y": -2.54
+                    },
+                    "uuid": "3e652d9e-e7f0-45be-a990-664ffdc1c794"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW3 on B.Cu",
+                    "pos": {
+                        "x": 29.6345,
+                        "y": -2.54
+                    },
+                    "uuid": "00907b78-a620-43c1-b4c5-098162c9e18d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC1V2] of C5 on B.Cu",
+                    "pos": {
+                        "x": 8.9347,
+                        "y": -0.8
+                    },
+                    "uuid": "8ba16b95-ff30-429b-bff3-35b519af028e"
+                },
+                {
+                    "description": "Pad 37 [VCC1V2] of U1 on B.Cu",
+                    "pos": {
+                        "x": 5.6597,
+                        "y": 2.45
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000136"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 12 [VCC1V2] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000111"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C4 on B.Cu",
+                    "pos": {
+                        "x": 13.8347,
+                        "y": 5.35
+                    },
+                    "uuid": "5ea8c3d1-eaf4-427b-952e-14c56c1e7a4b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [VCC1V2] of FB1 on B.Cu",
+                    "pos": {
+                        "x": 12.2347,
+                        "y": 3.6
+                    },
+                    "uuid": "9f1518d7-f3df-4abc-8aa7-5269846115e3"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C5 on B.Cu",
+                    "pos": {
+                        "x": 8.9347,
+                        "y": -0.8
+                    },
+                    "uuid": "8ba16b95-ff30-429b-bff3-35b519af028e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC1V2] of C4 on B.Cu",
+                    "pos": {
+                        "x": 13.8347,
+                        "y": 5.35
+                    },
+                    "uuid": "5ea8c3d1-eaf4-427b-952e-14c56c1e7a4b"
+                },
+                {
+                    "description": "Pad 2 [VCC1V2] of FB1 on B.Cu",
+                    "pos": {
+                        "x": 12.2347,
+                        "y": 3.6
+                    },
+                    "uuid": "9f1518d7-f3df-4abc-8aa7-5269846115e3"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VCC1V2] of C4 on B.Cu",
+                    "pos": {
+                        "x": 13.8347,
+                        "y": 5.35
+                    },
+                    "uuid": "5ea8c3d1-eaf4-427b-952e-14c56c1e7a4b"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C6 on B.Cu",
+                    "pos": {
+                        "x": 15.2847,
+                        "y": 7.6
+                    },
+                    "uuid": "33adadeb-e405-40a7-82b8-f8b495f7c0f7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C6 on B.Cu",
+                    "pos": {
+                        "x": 15.2847,
+                        "y": 7.6
+                    },
+                    "uuid": "33adadeb-e405-40a7-82b8-f8b495f7c0f7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 5 [VCC1V2_RAW] of U2 on B.Cu",
+                    "pos": {
+                        "x": -9.9025,
+                        "y": 24.25
+                    },
+                    "uuid": "472ae703-09b6-4711-84f3-c52ae4257471"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2_RAW] of FB1 on B.Cu",
+                    "pos": {
+                        "x": 13.8847,
+                        "y": 3.6
+                    },
+                    "uuid": "1c6aff5e-6e6f-4b0a-9fbb-22d81f44e509"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": -8.6799,
+                        "y": 8.45
+                    },
+                    "uuid": "eaf4b5ce-43ae-4e00-8aab-ab1f630cb52f"
+                },
+                {
+                    "description": "Reference field of SW5",
+                    "pos": {
+                        "x": -9.1799,
+                        "y": 7.9
+                    },
+                    "uuid": "6cb3cec4-c5a3-487b-8344-e8b37cb86ab1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": -17.8597,
+                        "y": 24.35
+                    },
+                    "uuid": "eeb80a6e-6533-4ec9-aa2b-4be78aabdfb7"
+                },
+                {
+                    "description": "Reference field of SW9",
+                    "pos": {
+                        "x": -18.3597,
+                        "y": 23.8
+                    },
+                    "uuid": "82d77b0a-0250-4bf9-bc37-3ee4ca46a200"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C6",
+                    "pos": {
+                        "x": 13.8097,
+                        "y": 5.75
+                    },
+                    "uuid": "c37c6211-d0c6-423d-899d-c759fdf8ea29"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C4 on B.Silkscreen",
+                    "pos": {
+                        "x": 13.20028,
+                        "y": 5.86
+                    },
+                    "uuid": "a4146f03-0912-4876-b444-b4fd00cadf15"
+                },
+                {
+                    "description": "Reference field of C6",
+                    "pos": {
+                        "x": 13.8097,
+                        "y": 5.75
+                    },
+                    "uuid": "c37c6211-d0c6-423d-899d-c759fdf8ea29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on B.Silkscreen",
+                    "pos": {
+                        "x": 14.520952,
+                        "y": 8.51
+                    },
+                    "uuid": "4e084713-154a-402e-a0f4-29708ae34e52"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of U1",
+                    "pos": {
+                        "x": 7.8597,
+                        "y": 1.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "description": "Segment of C1 on B.Silkscreen",
+                    "pos": {
+                        "x": 8.70028,
+                        "y": 1.46
+                    },
+                    "uuid": "875e9cfe-11e1-435b-a662-70417aeb96f2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of R2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 6.02
+                    },
+                    "uuid": "765429b8-7e93-4ca5-ba5f-469bb9ebc62a"
+                },
+                {
+                    "description": "Segment of C2 on B.Silkscreen",
+                    "pos": {
+                        "x": 2.80028,
+                        "y": 5.86
+                    },
+                    "uuid": "fe411f5b-dfc0-4c98-b38f-a3c9471727a5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C4",
+                    "pos": {
+                        "x": 13.0597,
+                        "y": 3.92
+                    },
+                    "uuid": "14e51e83-d362-47e7-8294-dfadedc310eb"
+                },
+                {
+                    "description": "Segment of FB1 on B.Silkscreen",
+                    "pos": {
+                        "x": 13.296958,
+                        "y": 4.1225
+                    },
+                    "uuid": "3fa7e210-a4ac-4391-9316-49f37406e8d3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of SW6 on B.Silkscreen",
+                    "pos": {
+                        "x": 8.9799,
+                        "y": 13.2
+                    },
+                    "uuid": "92955dda-d82b-4aeb-99de-e29ca40724d3"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Circle of TP_GND on B.Silkscreen",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "232e49b3-175c-43f1-906b-a67d81adeac2"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of R4 on B.Silkscreen",
+                    "pos": {
+                        "x": 1.846958,
+                        "y": 9.7225
+                    },
+                    "uuid": "a83fdf36-1ff3-499f-8235-9777f1d5494e"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Circle of TP_GND on B.Silkscreen",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "232e49b3-175c-43f1-906b-a67d81adeac2"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C3",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 1.52
+                    },
+                    "uuid": "7db5cffa-148a-4089-b308-cea6e96710b2"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C1",
+                    "pos": {
+                        "x": 8.5597,
+                        "y": -0.48
+                    },
+                    "uuid": "163e68c1-69b8-4032-b29b-397dc188c639"
+                },
+                {
+                    "description": "Segment of C5 on B.Silkscreen",
+                    "pos": {
+                        "x": 8.30028,
+                        "y": -0.29
+                    },
+                    "uuid": "de07062e-9f62-4d23-8126-ed5128578e0e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C3 on B.Silkscreen",
+                    "pos": {
+                        "x": 2.80028,
+                        "y": 3.46
+                    },
+                    "uuid": "58baba68-6932-43e1-bbef-dede1a846d61"
+                },
+                {
+                    "description": "Reference field of C2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 3.92
+                    },
+                    "uuid": "dfea3b3f-4f00-42c5-842a-e9a80b8e010c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 3.92
+                    },
+                    "uuid": "dfea3b3f-4f00-42c5-842a-e9a80b8e010c"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of R2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 6.02
+                    },
+                    "uuid": "765429b8-7e93-4ca5-ba5f-469bb9ebc62a"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of R4",
+                    "pos": {
+                        "x": 1.6097,
+                        "y": 7.77
+                    },
+                    "uuid": "2998ad2e-f94e-4c9c-9c76-3da8eec27416"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of R4",
+                    "pos": {
+                        "x": 1.6097,
+                        "y": 7.77
+                    },
+                    "uuid": "2998ad2e-f94e-4c9c-9c76-3da8eec27416"
+                },
+                {
+                    "description": "Segment of R2 on B.Silkscreen",
+                    "pos": {
+                        "x": 2.896958,
+                        "y": 7.9725
+                    },
+                    "uuid": "c61681d1-e6cf-4c37-b31d-cf50b049c95a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Circle of TP_GND on B.Silkscreen",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "232e49b3-175c-43f1-906b-a67d81adeac2"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Circle of TP_GND on B.Silkscreen",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "232e49b3-175c-43f1-906b-a67d81adeac2"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of R5",
+                    "pos": {
+                        "x": 16.5097,
+                        "y": 3.77
+                    },
+                    "uuid": "dc31f961-01fd-4db2-b86e-7b9faa10db72"
+                },
+                {
+                    "description": "Segment of R3 on B.Silkscreen",
+                    "pos": {
+                        "x": 16.546958,
+                        "y": 3.7725
+                    },
+                    "uuid": "dd41e282-350c-466f-baa1-69955a5cbba8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of R5 on B.Silkscreen",
+                    "pos": {
+                        "x": 16.746958,
+                        "y": 5.7225
+                    },
+                    "uuid": "7c8a0a07-e221-48f6-a511-d3eb0db59765"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Circle of TP_GND on B.Silkscreen",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "232e49b3-175c-43f1-906b-a67d81adeac2"
+                },
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C6",
+                    "pos": {
+                        "x": 13.8097,
+                        "y": 5.75
+                    },
+                    "uuid": "c37c6211-d0c6-423d-899d-c759fdf8ea29"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C4 on B.Cu",
+                    "pos": {
+                        "x": 13.8347,
+                        "y": 5.35
+                    },
+                    "uuid": "5ea8c3d1-eaf4-427b-952e-14c56c1e7a4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C4 on B.Cu",
+                    "pos": {
+                        "x": 13.8347,
+                        "y": 5.35
+                    },
+                    "uuid": "5ea8c3d1-eaf4-427b-952e-14c56c1e7a4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C1",
+                    "pos": {
+                        "x": 8.5597,
+                        "y": -0.48
+                    },
+                    "uuid": "163e68c1-69b8-4032-b29b-397dc188c639"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C5 on B.Cu",
+                    "pos": {
+                        "x": 8.9347,
+                        "y": -0.8
+                    },
+                    "uuid": "8ba16b95-ff30-429b-bff3-35b519af028e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C4",
+                    "pos": {
+                        "x": 13.0597,
+                        "y": 3.92
+                    },
+                    "uuid": "14e51e83-d362-47e7-8294-dfadedc310eb"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2_RAW] of FB1 on B.Cu",
+                    "pos": {
+                        "x": 13.8847,
+                        "y": 3.6
+                    },
+                    "uuid": "1c6aff5e-6e6f-4b0a-9fbb-22d81f44e509"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 11 [K3] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 7.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000110"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 12 [VCC1V2] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000111"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 1 [VCC] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 3.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000100"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 2 [GND] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 3.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000101"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 3 [JTAG_TCK] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 4.0
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000102"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 4 [JTAG_TMS] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 4.4
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000103"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 5 [JTAG_TDI] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 4.8
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000104"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 6 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 5.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000105"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 7 [JTAG_TDO] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 5.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000106"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 8 [K1] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 6.0
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000107"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 9 [<no net>] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 6.4
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000108"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U1 on B.Silkscreen",
+                    "pos": {
+                        "x": 11.2597,
+                        "y": 7.6
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000009"
+                },
+                {
+                    "description": "Pad 10 [K2] of U1 on B.Cu",
+                    "pos": {
+                        "x": 10.8097,
+                        "y": 6.8
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000109"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C4",
+                    "pos": {
+                        "x": 13.0597,
+                        "y": 3.92
+                    },
+                    "uuid": "14e51e83-d362-47e7-8294-dfadedc310eb"
+                },
+                {
+                    "description": "Pad 2 [VCC1V2] of FB1 on B.Cu",
+                    "pos": {
+                        "x": 12.2347,
+                        "y": 3.6
+                    },
+                    "uuid": "9f1518d7-f3df-4abc-8aa7-5269846115e3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 2 [K6] of SW6 on B.Cu",
+                    "pos": {
+                        "x": 15.0219,
+                        "y": 10.82
+                    },
+                    "uuid": "63adc252-2b27-41d1-b054-f9a4e9ebbafe"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "NPTH pad of SW6",
+                    "pos": {
+                        "x": 11.7199,
+                        "y": 10.82
+                    },
+                    "uuid": "8a8d1b9d-eb80-4d77-aa7e-bbc093ea1f63"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW6 on B.Silkscreen",
+                    "pos": {
+                        "x": 7.979854,
+                        "y": 14.2
+                    },
+                    "uuid": "954dc12d-c0be-4a93-b3cd-55829d395b28"
+                },
+                {
+                    "description": "NPTH pad of SW6",
+                    "pos": {
+                        "x": 9.1799,
+                        "y": 15.9
+                    },
+                    "uuid": "fb17fe87-5bb8-4be6-b322-ab007717c5f8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [CFG_READY] of R4 on B.Cu",
+                    "pos": {
+                        "x": 2.4347,
+                        "y": 9.2
+                    },
+                    "uuid": "baa847ff-35c4-4c10-8338-c0f20dc77126"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW5 on B.Silkscreen",
+                    "pos": {
+                        "x": -10.379946,
+                        "y": 14.2
+                    },
+                    "uuid": "1c09dd9c-f49f-4469-b959-2b58e99c68b8"
+                },
+                {
+                    "description": "NPTH pad of SW5",
+                    "pos": {
+                        "x": -9.1799,
+                        "y": 15.9
+                    },
+                    "uuid": "1520c057-6697-4536-b981-2e9b46c649fd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "NPTH pad of SW5",
+                    "pos": {
+                        "x": -9.1799,
+                        "y": 15.9
+                    },
+                    "uuid": "1520c057-6697-4536-b981-2e9b46c649fd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW9 on B.Silkscreen",
+                    "pos": {
+                        "x": -19.559746,
+                        "y": 30.1
+                    },
+                    "uuid": "b350e17e-0368-4f65-83d4-1cdebeb6da75"
+                },
+                {
+                    "description": "NPTH pad of SW9",
+                    "pos": {
+                        "x": -18.3597,
+                        "y": 31.8
+                    },
+                    "uuid": "f11bb3b2-ed17-477b-8c92-ef4d08c6425a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 2 [K5] of SW5 on B.Cu",
+                    "pos": {
+                        "x": -3.3379,
+                        "y": 10.82
+                    },
+                    "uuid": "e342692f-4ca3-48bb-9b50-17e6e3dd8d3e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW6 on B.Cu",
+                    "pos": {
+                        "x": 2.0949,
+                        "y": 13.36
+                    },
+                    "uuid": "ccb8b2f2-cfd3-44b4-921c-1ee5ee85b4eb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of U2",
+                    "pos": {
+                        "x": -8.765,
+                        "y": 22.8
+                    },
+                    "uuid": "1481ee65-3b7a-476a-b89b-4bb22b1f12ef"
+                },
+                {
+                    "description": "Pad 1 [VCC] of JP_VCC on B.Cu",
+                    "pos": {
+                        "x": -9.015,
+                        "y": 21.7
+                    },
+                    "uuid": "c77b61cd-effb-46da-bf4c-d475263ae534"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW10 on B.Silkscreen",
+                    "pos": {
+                        "x": -1.200046,
+                        "y": 30.1
+                    },
+                    "uuid": "d7c65eca-aae5-4e64-8fcb-f8e38aa3ed8f"
+                },
+                {
+                    "description": "NPTH pad of SW10",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 31.8
+                    },
+                    "uuid": "bda13792-60bc-43fb-8668-3293545c094a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "NPTH pad of SW10",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 31.8
+                    },
+                    "uuid": "bda13792-60bc-43fb-8668-3293545c094a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "NPTH pad of SW10",
+                    "pos": {
+                        "x": 5.08,
+                        "y": 31.8
+                    },
+                    "uuid": "07c6feb0-1c7c-4c7c-9972-7b6a74e02f12"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW3 on B.Silkscreen",
+                    "pos": {
+                        "x": 35.519454,
+                        "y": -1.7
+                    },
+                    "uuid": "cbb0cde2-1d7b-4b30-b192-0a44e501f15b"
+                },
+                {
+                    "description": "NPTH pad of SW3",
+                    "pos": {
+                        "x": 36.7195,
+                        "y": 0.0
+                    },
+                    "uuid": "670e0e08-844f-4372-9b8d-daf1107373e6"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW8 on B.Silkscreen",
+                    "pos": {
+                        "x": 44.699254,
+                        "y": 14.2
+                    },
+                    "uuid": "068955b6-9f08-46ed-9b88-bd7bc99d4c71"
+                },
+                {
+                    "description": "NPTH pad of SW8",
+                    "pos": {
+                        "x": 45.8993,
+                        "y": 15.9
+                    },
+                    "uuid": "338fe998-3072-466b-bc01-a5fcb1e7150d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW4 on B.Silkscreen",
+                    "pos": {
+                        "x": 53.879154,
+                        "y": -1.7
+                    },
+                    "uuid": "659e8236-9bef-49f4-adcf-5c24861eef46"
+                },
+                {
+                    "description": "NPTH pad of SW4",
+                    "pos": {
+                        "x": 55.0792,
+                        "y": 0.0
+                    },
+                    "uuid": "8b80c856-acea-4601-a9f3-831fd2c62ba6"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW7 on B.Silkscreen",
+                    "pos": {
+                        "x": 26.339554,
+                        "y": 14.2
+                    },
+                    "uuid": "490ce65d-7e6b-48ed-be7c-fe19a9d26156"
+                },
+                {
+                    "description": "NPTH pad of SW7",
+                    "pos": {
+                        "x": 27.5396,
+                        "y": 15.9
+                    },
+                    "uuid": "a5d7edcc-6549-45c5-8789-d3ec7d9fbeaa"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW11 on B.Silkscreen",
+                    "pos": {
+                        "x": 17.159654,
+                        "y": 30.1
+                    },
+                    "uuid": "9e46465e-8939-4fe3-be98-4c6c7f482061"
+                },
+                {
+                    "description": "NPTH pad of SW11",
+                    "pos": {
+                        "x": 18.3597,
+                        "y": 31.8
+                    },
+                    "uuid": "e62b56b4-3836-4056-9aaf-8c12827bc35e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW12 on B.Silkscreen",
+                    "pos": {
+                        "x": 35.519454,
+                        "y": 30.1
+                    },
+                    "uuid": "3a8a1bb6-bcaa-4f9a-8dff-86316f79345a"
+                },
+                {
+                    "description": "NPTH pad of SW12",
+                    "pos": {
+                        "x": 36.7195,
+                        "y": 31.8
+                    },
+                    "uuid": "f614c4ac-b708-4d53-96f3-621f2f0c1fcf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [VCC] of SW7 on B.Cu",
+                    "pos": {
+                        "x": 20.4546,
+                        "y": 13.36
+                    },
+                    "uuid": "554418fc-af73-4e12-b38a-bb269240727f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW1 on B.Silkscreen",
+                    "pos": {
+                        "x": -1.200046,
+                        "y": -1.7
+                    },
+                    "uuid": "f1707a64-84fb-4948-8e8e-25e1f961f9a1"
+                },
+                {
+                    "description": "NPTH pad of SW1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "ca3dcaa1-0377-48c3-9a65-7214055d2ca1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R1",
+                    "pos": {
+                        "x": 6.8097,
+                        "y": -3.98
+                    },
+                    "uuid": "68ba46dc-07c7-4cc4-af14-edacd27d980c"
+                },
+                {
+                    "description": "Pad 2 [K1] of SW1 on B.Cu",
+                    "pos": {
+                        "x": 5.842,
+                        "y": -5.08
+                    },
+                    "uuid": "e0a79b73-78b9-4257-bad1-98609ccbe0d5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of U1",
+                    "pos": {
+                        "x": 7.8597,
+                        "y": 1.2
+                    },
+                    "uuid": "00000000-0000-0000-0000-000000000001"
+                },
+                {
+                    "description": "Pad 2 [GND] of C1 on B.Cu",
+                    "pos": {
+                        "x": 7.7847,
+                        "y": 0.95
+                    },
+                    "uuid": "789e6da3-ed01-4c42-9931-2445eb6ed549"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 2 [GND] of C3 on B.Cu",
+                    "pos": {
+                        "x": 1.8847,
+                        "y": 2.95
+                    },
+                    "uuid": "8b8c303b-723a-4a25-b8fe-75599b871bf1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C5",
+                    "pos": {
+                        "x": 8.1597,
+                        "y": -2.23
+                    },
+                    "uuid": "3ff3ed0c-b9e3-4552-a5ae-9fe4a258f6be"
+                },
+                {
+                    "description": "Pad 1 [MODE0] of R1 on B.Cu",
+                    "pos": {
+                        "x": 7.6347,
+                        "y": -2.55
+                    },
+                    "uuid": "ff8ac5ac-7596-43d1-89d4-b4a3190dd88c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "NPTH pad of SW1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "ca3dcaa1-0377-48c3-9a65-7214055d2ca1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 3.92
+                    },
+                    "uuid": "dfea3b3f-4f00-42c5-842a-e9a80b8e010c"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C3 on B.Cu",
+                    "pos": {
+                        "x": 3.4347,
+                        "y": 2.95
+                    },
+                    "uuid": "0ec6cd23-cf27-4e0f-85d1-3df9969b83f7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of C2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 3.92
+                    },
+                    "uuid": "dfea3b3f-4f00-42c5-842a-e9a80b8e010c"
+                },
+                {
+                    "description": "Pad 2 [GND] of C3 on B.Cu",
+                    "pos": {
+                        "x": 1.8847,
+                        "y": 2.95
+                    },
+                    "uuid": "8b8c303b-723a-4a25-b8fe-75599b871bf1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 6.02
+                    },
+                    "uuid": "765429b8-7e93-4ca5-ba5f-469bb9ebc62a"
+                },
+                {
+                    "description": "Pad 2 [GND] of C2 on B.Cu",
+                    "pos": {
+                        "x": 1.8847,
+                        "y": 5.35
+                    },
+                    "uuid": "bf4c2d36-3806-458b-8fdf-bb99cbb3ed32"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 2 [GND] of C2 on B.Cu",
+                    "pos": {
+                        "x": 1.8847,
+                        "y": 5.35
+                    },
+                    "uuid": "bf4c2d36-3806-458b-8fdf-bb99cbb3ed32"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R2",
+                    "pos": {
+                        "x": 2.6597,
+                        "y": 6.02
+                    },
+                    "uuid": "765429b8-7e93-4ca5-ba5f-469bb9ebc62a"
+                },
+                {
+                    "description": "Pad 1 [VCC] of C2 on B.Cu",
+                    "pos": {
+                        "x": 3.4347,
+                        "y": 5.35
+                    },
+                    "uuid": "58e3aea5-edb4-46f2-a7ba-4ef29e556f8b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 2 [GND] of R2 on B.Cu",
+                    "pos": {
+                        "x": 1.8347,
+                        "y": 7.45
+                    },
+                    "uuid": "8e828a18-ad05-41c3-818d-6c27cd46e729"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R4",
+                    "pos": {
+                        "x": 1.6097,
+                        "y": 7.77
+                    },
+                    "uuid": "2998ad2e-f94e-4c9c-9c76-3da8eec27416"
+                },
+                {
+                    "description": "Pad 2 [GND] of R2 on B.Cu",
+                    "pos": {
+                        "x": 1.8347,
+                        "y": 7.45
+                    },
+                    "uuid": "8e828a18-ad05-41c3-818d-6c27cd46e729"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 2 [K5] of SW5 on B.Cu",
+                    "pos": {
+                        "x": -3.3379,
+                        "y": 10.82
+                    },
+                    "uuid": "e342692f-4ca3-48bb-9b50-17e6e3dd8d3e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R3",
+                    "pos": {
+                        "x": 16.3097,
+                        "y": 1.82
+                    },
+                    "uuid": "06842733-a9f3-4faa-8fa0-6caf86846bfa"
+                },
+                {
+                    "description": "NPTH pad of SW2",
+                    "pos": {
+                        "x": 18.3597,
+                        "y": 0.0
+                    },
+                    "uuid": "1d3c89e3-534a-4bd6-b470-c096a6f1b8c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R5",
+                    "pos": {
+                        "x": 16.5097,
+                        "y": 3.77
+                    },
+                    "uuid": "dc31f961-01fd-4db2-b86e-7b9faa10db72"
+                },
+                {
+                    "description": "Pad 1 [JTAG_TCK] of R3 on B.Cu",
+                    "pos": {
+                        "x": 17.1347,
+                        "y": 3.25
+                    },
+                    "uuid": "5a1449db-9142-4ee6-a48e-affb64b39354"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R5",
+                    "pos": {
+                        "x": 16.5097,
+                        "y": 3.77
+                    },
+                    "uuid": "dc31f961-01fd-4db2-b86e-7b9faa10db72"
+                },
+                {
+                    "description": "Pad 2 [GND] of R3 on B.Cu",
+                    "pos": {
+                        "x": 15.4847,
+                        "y": 3.25
+                    },
+                    "uuid": "7334fbf6-5560-432c-8b7b-9a6993f60424"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 2 [VCC] of R5 on B.Cu",
+                    "pos": {
+                        "x": 15.6847,
+                        "y": 5.2
+                    },
+                    "uuid": "12154eba-2584-48ce-bfee-579abb92d80d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [CFG_DONE] of R5 on B.Cu",
+                    "pos": {
+                        "x": 17.3347,
+                        "y": 5.2
+                    },
+                    "uuid": "2a4b37b0-428e-4dcc-aed4-b022e4d52b6e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [VCC1V2] of C6 on B.Cu",
+                    "pos": {
+                        "x": 15.2847,
+                        "y": 7.6
+                    },
+                    "uuid": "33adadeb-e405-40a7-82b8-f8b495f7c0f7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of SW2 on B.Silkscreen",
+                    "pos": {
+                        "x": 17.159654,
+                        "y": -1.7
+                    },
+                    "uuid": "8fe092d2-7b7d-4f3c-b978-7391667a6057"
+                },
+                {
+                    "description": "NPTH pad of SW2",
+                    "pos": {
+                        "x": 18.3597,
+                        "y": 0.0
+                    },
+                    "uuid": "1d3c89e3-534a-4bd6-b470-c096a6f1b8c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of TP_GND",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 32.502
+                    },
+                    "uuid": "ed08342a-eaee-43e9-b96e-1dd00b47763e"
+                },
+                {
+                    "description": "Pad 1 [GND] of TP_GND on B.Cu",
+                    "pos": {
+                        "x": 3.235,
+                        "y": 33.95
+                    },
+                    "uuid": "bab732e9-e79a-410d-8a2b-e7d9e8d299bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

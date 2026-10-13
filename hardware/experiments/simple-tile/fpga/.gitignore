@@ -1,0 +1,6 @@
+build/
+logs/
+results/build/
+sim/tile_unit_tb
+sim/tile_grid_pair_tb
+sim/e~*.o

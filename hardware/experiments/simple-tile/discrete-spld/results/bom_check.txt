@@ -1,0 +1,35 @@
+line                                    revA  varA  varB2
+('C', '100n')                             11     9      4
+('C', '100u')                              1     0      0
+('C', '4u7')                               2     0      0
+('CONN', 'Conn_01x06')                     2     0      0
+('CONN', 'Conn_01x08')                     6     0      0
+('CP', '4u7')                              0     1      1
+('IC', '74LVC165A')                        2     0      0
+('IC', '74LVC1G04')                        1     0      0
+('IC', '74LVC2G08')                        1     0      0
+('IC', '74LVC2G125')                       1     0      0
+('IC', '74LVC2G126')                       1     0      0
+('IC', '74LVC2G32')                        1     0      0
+('IC', '74LVC2G74')                        1     0      0
+('IC', 'ATF22LV10C-10')                    0     0      1
+('IC', 'SN74LV161A')                       0     1      0
+('IC', 'SN74LV161A-candidate')             1     0      0
+('IC', 'SN74LVC165A')                      0     2      2
+('IC', 'SN74LVC1G04')                      0     1      1
+('IC', 'SN74LVC2G08')                      0     1      0
+('IC', 'SN74LVC2G125')                     0     1      0
+('IC', 'SN74LVC2G126')                     0     1      0
+('IC', 'SN74LVC2G32')                      0     1      0
+('IC', 'SN74LVC2G74')                      0     1      0
+('MECH', 'PAD')                            0    19     19
+('MECH', 'SW')                            12    12     12
+('R', '100')                              12    12     12
+('R', '10k')                              21    21     21
+('R', '33')                                7     5      5
+
+IC totals: revA=9 varA=9 varB2=4
+logic-glue ICs (excl. 2x 165): revA=7 varA=7 varB2=2
+
+variant A vs rev A (logic): identical function set; 74HC161 replaced by SN74LV161A (3.3V-native); debug headers J105..J108 (4x Conn_01x08) removed; J101..104 edge connectors become the connector-next aggregate: 19 chassis pads (14 signals + VCC + GND + 3 detect-GND; DET straps NOT carried to the tile budget).
+variant B2 vs rev A: glue U101,U102,U105,U106,U107,U108,U109 (7 ICs) replaced by ONE ATF22LV10C-10; +1 SN74LVC1G04 for /PL -> net glue ICs: 2 (GAL+1G04) vs 7. Total ICs 4 vs 9.

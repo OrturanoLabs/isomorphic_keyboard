@@ -1,0 +1,97 @@
+{
+  "part": "GW1NZ-LV1QN48C6/I5",
+  "package": "QN48 = QFN48, 0.4 mm pitch, 6x6 mm, EPAD",
+  "sources": {
+    "UG842": {
+      "doc": "UG842-1.6.8E GW1NZ-1 Pinout (gw1nz-1 non-automotive)",
+      "url": "https://cdn.gowinsemi.com.cn/UG842E.pdf",
+      "sha256_file": "b7f0dd8ebd51a88d4f5b895ec80ee34d908db541d79adae45cc6ce54517e099d",
+      "fetched": "2026-10-12",
+      "pages_used": "p.6-7 'Pin List' QN48 column; p.5 'Power' (VCC LV 1.07-1.26V; VCCIO 1.14-3.6V; VCCX 1.71-3.6V; VCCX>=VCCIO; EPAD GND recommended); p.2-3 Pin Definitions (internal weak pulls, DONE/READY open-drain defaults)"
+    },
+    "DS841": {
+      "doc": "DS841-2.8E 04/03/2026 GW1NZ series Datasheet",
+      "url": "https://cdn.gowinsemi.com.cn/DS841E.pdf",
+      "sha256_file": "a19cdd7a2aa17b798c92b5cfd2be936b82ca53a10a0ba2e86fa6ac8c48c7dbc4",
+      "fetched": "2026-10-12",
+      "sections_used": "1.3 QN48 max user IO = 41; 2.13 SRAM config + on-chip Flash (instant-on, few ms); 2.14 on-chip OSC (2.5 MHz default, up to 125); 3.1.3 ramp rates (VCC 0.6-6 mV/us, VCCX 0.6-10, VCCIO 0.1-10, monotonic); 3.1.5 POR trip points (VCC 0.8V, VCCX 1.5V, VCCIO 0.95V); 4.1 part naming (LV=1.2V core grade)"
+    },
+    "UG290": {
+      "doc": "UG290-2.9.1E Gowin FPGA Products Programming and Configuration",
+      "url": "https://cdn.gowinsemi.com.cn/UG290E.pdf",
+      "note": "fetched 2026-10-12; Table 5-1 LittleBee modes: AUTO BOOT = MODE[2:0]=000; JTAG = XXX (MODE-independent); SERIAL=101, SSPI=001, MSPI=010, DUAL BOOT=110, CPU=111, I2C=100"
+    },
+    "UG293": {
+      "doc": "UG293-1.3.4E GW1NZ series Schematic Manual",
+      "url": "https://cdn.gowinsemi.com.cn/UG293E.pdf",
+      "note": "fetched 2026-10-12; per power pin 0.1uF ceramic; core rail FB+4.7uF filter (FB ref MH2029-221Y); TCK 4.7K pull-down on PCB; READY/RECONFIG_N/DONE 4.7K pull-ups to VCCIO0; MODE fixed with 4.7K up / 1K down; flash init condition VCC>=1.08V & VCCX>=1.62V at config start"
+    },
+    "UG846": {
+      "doc": "UG846-1.1E GW1NZ (AUTOMOTIVE) Package & Pinout",
+      "url": "https://cdn.gowinsemi.com.cn/UG846E.pdf",
+      "note": "fetched 2026-10-12; Fig 4-1/4-2 QN48 package outline + recommended PCB layout dims (D=E=6.00, D2=E2=2.70, P=5.90, e=0.40, L=0.85, b=0.20); HAZARD: automotive variant lists VCC on pin 9 (UG842-1.5.1E note: 'location of pin 9 in QN48 modified') - commercial UG842-1.6.8E lists pin 9 as IOR2A user IO; we therefore EXCLUDE pin 9 from the tile assignment (order-code hazard, see pincon_check rule H1)"
+    },
+    "chipdb_probe": {
+      "doc": "nextpnr-himbaechel empirical pad census (fpga workstream, docs/pin_budget.md)",
+      "note": "41 of 48 placeable; missing pads {1,2,12,25,26,36,37} == UG842 power/ground set {VCCIO0,VSS,VCC,VCCIO1,VSS,VCCX,VCC} - EXACT MATCH"
+    }
+  },
+  "pins": {
+    "1":  {"role": "power", "net": "VCCIO0", "ug842": "VCCIO0"},
+    "2":  {"role": "ground", "net": "GND", "ug842": "VSS"},
+    "3":  {"role": "jtag", "name": "IOT7B/TCK", "net": "JTAG_TCK", "ug293": "TCK 4.7K pull-down on PCB"},
+    "4":  {"role": "jtag", "name": "IOT7A/TMS", "net": "JTAG_TMS"},
+    "5":  {"role": "jtag", "name": "IOT8A/TDI", "net": "JTAG_TDI"},
+    "6":  {"role": "io_config_shared", "name": "IOT9A/SCLK", "note": "SCLK only used in SERIAL/CPU modes; plain IO in AUTO BOOT"},
+    "7":  {"role": "jtag", "name": "IOT8B/TDO", "net": "JTAG_TDO"},
+    "8":  {"role": "io", "name": "IOT10B/GCLKC_0"},
+    "9":  {"role": "excluded_hazard", "name": "IOR2A", "hazard": "automotive UG846 lists pin 9 = VCC (order-code hazard); excluded from assignment"},
+    "10": {"role": "io", "name": "IOR2B"},
+    "11": {"role": "io", "name": "IOR3A"},
+    "12": {"role": "power", "net": "VCC1V2", "ug842": "VCC"},
+    "13": {"role": "io", "name": "IOR10B"},
+    "14": {"role": "io_config_shared", "name": "IOR6B/MO"},
+    "15": {"role": "io_config_shared", "name": "IOR6D/MCLK"},
+    "16": {"role": "io", "name": "IOR6F"},
+    "17": {"role": "io", "name": "IOR6G"},
+    "18": {"role": "io", "name": "IOR6H"},
+    "19": {"role": "io_config_shared", "name": "IOR6J/DOUT/WE_N"},
+    "20": {"role": "io", "name": "IOR10A"},
+    "21": {"role": "io", "name": "IOR7B"},
+    "22": {"role": "io_config_shared", "name": "IOR9A/SI"},
+    "23": {"role": "io", "name": "IOR8B"},
+    "24": {"role": "io_config_shared", "name": "IOR8A/SO"},
+    "25": {"role": "power", "net": "VCCIO1", "ug842": "VCCIO1"},
+    "26": {"role": "ground", "net": "GND", "ug842": "VSS"},
+    "27": {"role": "io_config_shared", "name": "IOR7A/GCLKT_3/SSPI_CS_N/D0"},
+    "28": {"role": "io_config_shared", "name": "IOR6I/DIN/CLKHOLD_N"},
+    "29": {"role": "io_config_shared", "name": "IOR6E/FASTRD_N/D3"},
+    "30": {"role": "io_config_shared", "name": "IOR6C/MCS_N/D5"},
+    "31": {"role": "io_config_shared", "name": "IOR6A/MI/D7"},
+    "32": {"role": "io", "name": "IOR5B/GCLKC_2"},
+    "33": {"role": "io_gclk", "name": "IOR5A/GCLKT_2"},
+    "34": {"role": "io", "name": "IOR3B"},
+    "35": {"role": "io", "name": "IOT17B"},
+    "36": {"role": "power", "net": "VCCX3V3", "ug842": "VCCX", "rule": "VCCX >= VCCIO (both 3.3V here)"},
+    "37": {"role": "power", "net": "VCC1V2", "ug842": "VCC"},
+    "38": {"role": "io", "name": "IOT17A"},
+    "39": {"role": "io", "name": "IOT16B"},
+    "40": {"role": "io", "name": "IOT16A"},
+    "41": {"role": "io", "name": "IOT15B"},
+    "42": {"role": "strap", "name": "IOT14B/MODE1", "net": "GND", "strap": "1K pull-down (UG293) -> MODE1=0"},
+    "43": {"role": "strap", "name": "IOT14A/MODE0", "net": "GND", "strap": "1K pull-down (UG293) -> MODE0=0"},
+    "44": {"role": "jspare", "name": "IOT13A/JTAGSEL_N", "net": "JTAGSEL_N", "note": "internal weak pull-up; leave unconnected (test pad)"},
+    "45": {"role": "cfg_status", "name": "IOT12B/READY", "net": "CFG_READY", "pull": "4.7K up to VCCIO0 (UG293)"},
+    "46": {"role": "cfg_status", "name": "IOT12A/DONE", "net": "CFG_DONE", "pull": "4.7K up to VCCIO0 (UG293)"},
+    "47": {"role": "io_gclk", "name": "IOT10A/GCLKT_0", "note": "global-clock-capable input used for the merged 20 MHz shift clock"},
+    "48": {"role": "cfg_status", "name": "IOT9B/RECONFIG_N", "net": "CFG_RECONFIG", "pull": "4.7K up to VCCIO0 (UG293); low pulse >=25 ns retriggers config (UG293)"},
+    "EPAD": {"role": "ground", "net": "GND", "ug842": "EPAD connect to GND (highly recommended)"}
+  },
+  "mode_decision": {
+    "value": "MODE[2:0] = 000 = AUTO BOOT from embedded Flash (UG290 Table 5-1)",
+    "how": "MODE2 internally grounded on QN48 (UG842 pin list footnote [1]); MODE1(pin42)/MODE0(pin43) tied to GND via 1K (UG293 strap guidance)",
+    "jtag": "JTAG = MODE-independent (UG290 Table 5-1 note [2]); JTAGSEL_N left floating (internal weak pull-up) keeps JTAG pins in JTAG function"
+  },
+  "banks": {"bank0": "IOTxx pins, VCCIO0=pin1", "bank1": "IORxx pins, VCCIO1=pin25", "voltage": "both 3.3V on this board"},
+  "core": {"net": "VCC1V2", "value": "1.2V typ (LV version, 1.07-1.26V per UG842 Power sheet)", "source": "LDO from VCC 3.3V backplane rail"}
+}

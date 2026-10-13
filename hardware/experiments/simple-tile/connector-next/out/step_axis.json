@@ -1,0 +1,103 @@
+{
+ "step_file": "hardware/kicad/lib/3dmodels/SW_Hotswap_Kailh_MX.stp",
+ "footprint_model_reference": "the .kicad_mod references the WRL with an identity transform (at 0 0 0 / scale 1 / rotate 0); the WRL is a partial mesh (contact cage), so the full-frame evidence comes from the STEP, registered here against the footprint pads/holes",
+ "points": 16027,
+ "planar_scores": [
+  {
+   "map": "fp=(+x,-y)",
+   "rms_mm": 0.1188,
+   "w_centroid": [
+    -6.982,
+    -2.432
+   ],
+   "e_centroid": [
+    5.782,
+    -5.128
+   ]
+  },
+  {
+   "map": "fp=(-x,-y)",
+   "rms_mm": 2.8902,
+   "w_centroid": [
+    -5.782,
+    -5.128
+   ],
+   "e_centroid": [
+    6.982,
+    -2.432
+   ]
+  },
+  {
+   "map": "fp=(-x,+y)",
+   "rms_mm": 7.6885,
+   "w_centroid": [
+    -5.782,
+    5.128
+   ],
+   "e_centroid": [
+    6.982,
+    2.432
+   ]
+  },
+  {
+   "map": "fp=(+x,+y)",
+   "rms_mm": 8.0293,
+   "w_centroid": [
+    -6.982,
+    2.432
+   ],
+   "e_centroid": [
+    5.782,
+    5.128
+   ]
+  },
+  {
+   "map": "fp=(+y,+x)",
+   "rms_mm": 9999.0,
+   "note": "x-split degenerates under this map"
+  },
+  {
+   "map": "fp=(+y,-x)",
+   "rms_mm": 9999.0,
+   "note": "x-split degenerates under this map"
+  },
+  {
+   "map": "fp=(-y,+x)",
+   "rms_mm": 9999.0,
+   "note": "x-split degenerates under this map"
+  },
+  {
+   "map": "fp=(-y,-x)",
+   "rms_mm": 9999.0,
+   "note": "x-split degenerates under this map"
+  }
+ ],
+ "board_plane_stpz": -2.0,
+ "plane_tests": [
+  {
+   "candidate_plane": -3.5,
+   "boxtop_flush_residual_mm": 1.52,
+   "metal_above_board_top_mm": 1.52,
+   "rejected": true
+  },
+  {
+   "candidate_plane": -2.0,
+   "boxtop_flush_residual_mm": 0.02,
+   "metal_above_board_top_mm": 0.0,
+   "rejected": false
+  }
+ ],
+ "box_top_z99_mm": -0.38,
+ "verified": {
+  "in_plane_map": "fp.x = stp.x ; fp.y = -stp.y",
+  "board_plane": "stp z = -2.0 (solder-foot plate plane; box tops flush at the board top face within 0.1 mm)",
+  "socket_below_board_mm": 2.443,
+  "socket_below_board_plus_guard_mm": 2.943,
+  "conservative_full_extent_bound_plus_guard_mm": 4.943,
+  "note": "the registration involves a y-mirror (baked into the verified map); the chassis z-budget keeps the conservative bound, the model-verified depth is reported alongside."
+ },
+ "checks_summary": {
+  "ok": 6,
+  "total": 6
+ }
+}

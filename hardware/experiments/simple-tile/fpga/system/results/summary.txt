@@ -1,0 +1,56 @@
+== fpga-system timing-aware chain runs (20 MHz, synthetic corners) ==
+ghdl: GHDL 7.0.0-dev (6.0.0.r515.g6ea214092.dirty) [Dunoon edition]
+    vhdl/chain_sys_tb.vhdl:622:5:@11250ns:(report note): SYSSUMMARY pos_n1x4_fit arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_n1x4_fit
+    vhdl/chain_sys_tb.vhdl:622:5:@17650ns:(report note): SYSSUMMARY pos_n2x4_fit arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_n2x4_fit
+    vhdl/chain_sys_tb.vhdl:622:5:@107250ns:(report note): SYSSUMMARY pos_n16x4_fit arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_n16x4_fit
+    vhdl/chain_sys_tb.vhdl:622:5:@30500ns:(report note): SYSSUMMARY pos_n1x16_fit arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_n1x16_fit
+    vhdl/chain_sys_tb.vhdl:622:5:@30450ns:(report note): SYSSUMMARY pos_g4x4_fit arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_g4x4_fit
+    vhdl/chain_sys_tb.vhdl:622:5:@11250ns:(report note): SYSSUMMARY pos_n1x4_min arrival_min_ns=6 arrival_max_ns=6
+PASS  pos_n1x4_min
+    vhdl/chain_sys_tb.vhdl:622:5:@17650ns:(report note): SYSSUMMARY pos_n2x4_min arrival_min_ns=6 arrival_max_ns=6
+PASS  pos_n2x4_min
+    vhdl/chain_sys_tb.vhdl:622:5:@107250ns:(report note): SYSSUMMARY pos_n16x4_min arrival_min_ns=6 arrival_max_ns=6
+PASS  pos_n16x4_min
+    vhdl/chain_sys_tb.vhdl:622:5:@30500ns:(report note): SYSSUMMARY pos_n1x16_min arrival_min_ns=6 arrival_max_ns=6
+PASS  pos_n1x16_min
+    vhdl/chain_sys_tb.vhdl:622:5:@30450ns:(report note): SYSSUMMARY pos_g4x4_min arrival_min_ns=6 arrival_max_ns=6
+PASS  pos_g4x4_min
+    vhdl/chain_sys_tb.vhdl:622:5:@11250ns:(report note): SYSSUMMARY pos_n1x4_max arrival_min_ns=14 arrival_max_ns=14
+PASS  pos_n1x4_max
+    vhdl/chain_sys_tb.vhdl:622:5:@17650ns:(report note): SYSSUMMARY pos_n2x4_max arrival_min_ns=14 arrival_max_ns=14
+PASS  pos_n2x4_max
+    vhdl/chain_sys_tb.vhdl:622:5:@107250ns:(report note): SYSSUMMARY pos_n16x4_max arrival_min_ns=14 arrival_max_ns=14
+PASS  pos_n16x4_max
+    vhdl/chain_sys_tb.vhdl:622:5:@30500ns:(report note): SYSSUMMARY pos_n1x16_max arrival_min_ns=14 arrival_max_ns=14
+PASS  pos_n1x16_max
+    vhdl/chain_sys_tb.vhdl:622:5:@30450ns:(report note): SYSSUMMARY pos_g4x4_max arrival_min_ns=14 arrival_max_ns=14
+PASS  pos_g4x4_max
+    vhdl/chain_sys_tb.vhdl:622:5:@107250ns:(report note): SYSSUMMARY pos_n16x4_r0_max arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_n16x4_r0_max
+    vhdl/chain_sys_tb.vhdl:622:5:@30500ns:(report note): SYSSUMMARY pos_n1x16_r0_max arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_n1x16_r0_max
+    vhdl/chain_sys_tb.vhdl:622:5:@107250ns:(report note): SYSSUMMARY pos_n16x4_r30_max arrival_min_ns=18 arrival_max_ns=18
+PASS  pos_n16x4_r30_max
+PASS  u_latch_or_b_leg
+PASS  u_latch_or_r_leg
+PASS  u_latch_or_skew
+PASS  u_latch_or_keyok
+PASS  u_track_contract
+PASS  neg_guard00_fit (fails as designed: rc=1 token=TIMING-FAIL:SNAP-XDOM)
+PASS  neg_guard04_fit (fails as designed: rc=1 token=TIMING-FAIL:SNAP-XDOM)
+PASS  neg_wlow_s250_max (fails as designed: rc=1 token=TIMING-FAIL:W-LOWPHASE)
+PASS  neg_deepxdom_max (fails as designed: rc=1 token=TIMING-FAIL:SNAP-XDOM)
+PASS  neg_lead45_fit (fails as designed: rc=1 token=TIMING-FAIL:STREAM)
+PASS  neg_release_r30_max (fails as designed: rc=1 token=TIMING-FAIL:RELEASE-HIGH)
+PASS  neg_lead25_settle_max (fails as designed: rc=1 token=TIMING-FAIL:DATA-SETTLE)
+PASS  u_latch_or_glitch (fails as designed: rc=1 token=TIMING-FAIL:LATCH-GLITCH)
+PASS  u_snap_window (fails as designed: rc=1 token=TIMING-FAIL:SNAP-WINDOW)
+PASS  u_track_shortlatch (fails as designed: rc=1 token=TIMING-FAIL:STREAM)
+
+runs passed: 33, failed: 0
+FPGA-SYSTEM PASS

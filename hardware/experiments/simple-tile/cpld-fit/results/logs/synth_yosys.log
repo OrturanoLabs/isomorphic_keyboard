@@ -1,0 +1,424 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+
+-- Executing script file `synth/tile_cpld_atf1502.ys' --
+
+1. Executing Verilog-2005 frontend: synth/atf1502_cells.v
+Parsing Verilog input from `synth/atf1502_cells.v' to AST representation.
+Generating RTLIL representation for module `\ATF1502_FF_D_AR'.
+Generating RTLIL representation for module `\ATF1502_FF_D_AP'.
+Generating RTLIL representation for module `\ATF1502_FF_D_SR_CE'.
+Generating RTLIL representation for module `\ATF1502_FF_D_AR_CE'.
+Generating RTLIL representation for module `\ATF1502_FF_D_AP_CE'.
+Generating RTLIL representation for module `\ATF1502_OBUF_TRI'.
+Generating RTLIL representation for module `\ATF1502_GCLKBUF'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: src/tile_cpld.v
+Parsing Verilog input from `src/tile_cpld.v' to AST representation.
+src/tile_cpld.v:69: Warning: Yosys has only limited support for tri-state logic at the moment.
+src/tile_cpld.v:70: Warning: Yosys has only limited support for tri-state logic at the moment.
+Generating RTLIL representation for module `\tile_cpld'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \tile_cpld
+
+3.2. Analyzing design hierarchy..
+Top module:  \tile_cpld
+Removed 0 unused modules.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$48 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$46 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$44 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$42 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$40 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$38 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$36 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$34 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$32 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$30 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$28 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$26 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$24 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$22 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$20 in module tile_cpld.
+Marked 2 switch rules as full_case in process $proc$src/tile_cpld.v:96$18 in module tile_cpld.
+Marked 1 switch rules as full_case in process $proc$src/tile_cpld.v:117$13 in module tile_cpld.
+Marked 1 switch rules as full_case in process $proc$src/tile_cpld.v:109$11 in module tile_cpld.
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 2 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \ar_v [15] in `\tile_cpld.$proc$src/tile_cpld.v:96$48'.
+Found async reset \ap_v [15] in `\tile_cpld.$proc$src/tile_cpld.v:96$48'.
+Found async reset \ar_v [14] in `\tile_cpld.$proc$src/tile_cpld.v:96$46'.
+Found async reset \ap_v [14] in `\tile_cpld.$proc$src/tile_cpld.v:96$46'.
+Found async reset \ar_v [13] in `\tile_cpld.$proc$src/tile_cpld.v:96$44'.
+Found async reset \ap_v [13] in `\tile_cpld.$proc$src/tile_cpld.v:96$44'.
+Found async reset \ar_v [12] in `\tile_cpld.$proc$src/tile_cpld.v:96$42'.
+Found async reset \ap_v [12] in `\tile_cpld.$proc$src/tile_cpld.v:96$42'.
+Found async reset \ar_v [11] in `\tile_cpld.$proc$src/tile_cpld.v:96$40'.
+Found async reset \ap_v [11] in `\tile_cpld.$proc$src/tile_cpld.v:96$40'.
+Found async reset \ar_v [10] in `\tile_cpld.$proc$src/tile_cpld.v:96$38'.
+Found async reset \ap_v [10] in `\tile_cpld.$proc$src/tile_cpld.v:96$38'.
+Found async reset \ar_v [9] in `\tile_cpld.$proc$src/tile_cpld.v:96$36'.
+Found async reset \ap_v [9] in `\tile_cpld.$proc$src/tile_cpld.v:96$36'.
+Found async reset \ar_v [8] in `\tile_cpld.$proc$src/tile_cpld.v:96$34'.
+Found async reset \ap_v [8] in `\tile_cpld.$proc$src/tile_cpld.v:96$34'.
+Found async reset \ar_v [7] in `\tile_cpld.$proc$src/tile_cpld.v:96$32'.
+Found async reset \ap_v [7] in `\tile_cpld.$proc$src/tile_cpld.v:96$32'.
+Found async reset \ar_v [6] in `\tile_cpld.$proc$src/tile_cpld.v:96$30'.
+Found async reset \ap_v [6] in `\tile_cpld.$proc$src/tile_cpld.v:96$30'.
+Found async reset \ar_v [5] in `\tile_cpld.$proc$src/tile_cpld.v:96$28'.
+Found async reset \ap_v [5] in `\tile_cpld.$proc$src/tile_cpld.v:96$28'.
+Found async reset \ar_v [4] in `\tile_cpld.$proc$src/tile_cpld.v:96$26'.
+Found async reset \ap_v [4] in `\tile_cpld.$proc$src/tile_cpld.v:96$26'.
+Found async reset \ar_v [3] in `\tile_cpld.$proc$src/tile_cpld.v:96$24'.
+Found async reset \ap_v [3] in `\tile_cpld.$proc$src/tile_cpld.v:96$24'.
+Found async reset \ar_v [2] in `\tile_cpld.$proc$src/tile_cpld.v:96$22'.
+Found async reset \ap_v [2] in `\tile_cpld.$proc$src/tile_cpld.v:96$22'.
+Found async reset \ar_v [1] in `\tile_cpld.$proc$src/tile_cpld.v:96$20'.
+Found async reset \ap_v [1] in `\tile_cpld.$proc$src/tile_cpld.v:96$20'.
+Found async reset \ar_v [0] in `\tile_cpld.$proc$src/tile_cpld.v:96$18'.
+Found async reset \ap_v [0] in `\tile_cpld.$proc$src/tile_cpld.v:96$18'.
+Found async reset \latch in `\tile_cpld.$proc$src/tile_cpld.v:117$13'.
+Found async reset \latch in `\tile_cpld.$proc$src/tile_cpld.v:109$11'.
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~17 debug messages>
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$48'.
+     1/1: $0\shreg[15:15]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$46'.
+     1/1: $0\shreg[14:14]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$44'.
+     1/1: $0\shreg[13:13]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$42'.
+     1/1: $0\shreg[12:12]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$40'.
+     1/1: $0\shreg[11:11]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$38'.
+     1/1: $0\shreg[10:10]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$36'.
+     1/1: $0\shreg[9:9]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$34'.
+     1/1: $0\shreg[8:8]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$32'.
+     1/1: $0\shreg[7:7]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$30'.
+     1/1: $0\shreg[6:6]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$28'.
+     1/1: $0\shreg[5:5]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$26'.
+     1/1: $0\shreg[4:4]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$24'.
+     1/1: $0\shreg[3:3]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$22'.
+     1/1: $0\shreg[2:2]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$20'.
+     1/1: $0\shreg[1:1]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:96$18'.
+     1/1: $0\shreg[0:0]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:117$13'.
+     1/1: $0\bw[0:0]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:109$11'.
+     1/1: $0\cnt[3:0]
+Creating decoders for process `\tile_cpld.$proc$src/tile_cpld.v:86$7'.
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\tile_cpld.\ar_v' from process `\tile_cpld.$proc$src/tile_cpld.v:86$7'.
+No latch inferred for signal `\tile_cpld.\ap_v' from process `\tile_cpld.$proc$src/tile_cpld.v:86$7'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\tile_cpld.\shreg [15]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$48'.
+Warning: Complex async reset for dff `\shreg [15]'.
+  created $dffsr cell `$procdff$96' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [14]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$46'.
+Warning: Complex async reset for dff `\shreg [14]'.
+  created $dffsr cell `$procdff$109' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [13]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$44'.
+Warning: Complex async reset for dff `\shreg [13]'.
+  created $dffsr cell `$procdff$122' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [12]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$42'.
+Warning: Complex async reset for dff `\shreg [12]'.
+  created $dffsr cell `$procdff$135' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [11]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$40'.
+Warning: Complex async reset for dff `\shreg [11]'.
+  created $dffsr cell `$procdff$148' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [10]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$38'.
+Warning: Complex async reset for dff `\shreg [10]'.
+  created $dffsr cell `$procdff$161' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [9]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$36'.
+Warning: Complex async reset for dff `\shreg [9]'.
+  created $dffsr cell `$procdff$174' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [8]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$34'.
+Warning: Complex async reset for dff `\shreg [8]'.
+  created $dffsr cell `$procdff$187' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [7]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$32'.
+Warning: Complex async reset for dff `\shreg [7]'.
+  created $dffsr cell `$procdff$200' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [6]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$30'.
+Warning: Complex async reset for dff `\shreg [6]'.
+  created $dffsr cell `$procdff$213' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [5]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$28'.
+Warning: Complex async reset for dff `\shreg [5]'.
+  created $dffsr cell `$procdff$226' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [4]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$26'.
+Warning: Complex async reset for dff `\shreg [4]'.
+  created $dffsr cell `$procdff$239' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [3]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$24'.
+Warning: Complex async reset for dff `\shreg [3]'.
+  created $dffsr cell `$procdff$252' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [2]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$22'.
+Warning: Complex async reset for dff `\shreg [2]'.
+  created $dffsr cell `$procdff$265' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [1]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$20'.
+Warning: Complex async reset for dff `\shreg [1]'.
+  created $dffsr cell `$procdff$278' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\shreg [0]' using process `\tile_cpld.$proc$src/tile_cpld.v:96$18'.
+Warning: Complex async reset for dff `\shreg [0]'.
+  created $dffsr cell `$procdff$291' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `\tile_cpld.\bw' using process `\tile_cpld.$proc$src/tile_cpld.v:117$13'.
+  created $adff cell `$procdff$294' with positive edge clock and positive level reset.
+Creating register for signal `\tile_cpld.\cnt' using process `\tile_cpld.$proc$src/tile_cpld.v:109$11'.
+  created $adff cell `$procdff$297' with positive edge clock and positive level reset.
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$48'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$48'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$46'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$46'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$44'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$44'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$42'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$42'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$40'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$40'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$38'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$38'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$36'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$36'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$34'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$34'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$32'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$32'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$30'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$30'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$28'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$28'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$26'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$26'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$24'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$24'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$22'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$22'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$20'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$20'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:96$18'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:96$18'.
+Found and cleaned up 1 empty switch in `\tile_cpld.$proc$src/tile_cpld.v:117$13'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:117$13'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:109$11'.
+Removing empty process `tile_cpld.$proc$src/tile_cpld.v:86$7'.
+Cleaned up 17 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tile_cpld.
+<suppressed ~66 debug messages>
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tile_cpld.
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tile_cpld'.
+Computing hashes of 113 cells of `\tile_cpld'.
+Finding duplicate cells in `\tile_cpld'.
+Computing hashes of 98 cells of `\tile_cpld'.
+Finding duplicate cells in `\tile_cpld'.
+<suppressed ~45 debug messages>
+Removed a total of 15 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tile_cpld..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~120 debug messages>
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tile_cpld.
+Performed a total of 0 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tile_cpld'.
+Computing hashes of 98 cells of `\tile_cpld'.
+Finding duplicate cells in `\tile_cpld'.
+Removed a total of 0 cells.
+
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$187 ($dffsr) from module tile_cpld (D = \shreg [7], Q = \shreg [8]).
+Adding EN signal on $procdff$252 ($dffsr) from module tile_cpld (D = \shreg [2], Q = \shreg [3]).
+Adding EN signal on $procdff$200 ($dffsr) from module tile_cpld (D = \shreg [6], Q = \shreg [7]).
+Adding EN signal on $procdff$291 ($dffsr) from module tile_cpld (D = $ternary$src/tile_cpld.v:73$6_Y, Q = \shreg [0]).
+Adding EN signal on $procdff$96 ($dffsr) from module tile_cpld (D = \shreg [14], Q = \shreg [15]).
+Adding EN signal on $procdff$213 ($dffsr) from module tile_cpld (D = \shreg [5], Q = \shreg [6]).
+Adding EN signal on $procdff$265 ($dffsr) from module tile_cpld (D = \shreg [1], Q = \shreg [2]).
+Adding EN signal on $procdff$109 ($dffsr) from module tile_cpld (D = \shreg [13], Q = \shreg [14]).
+Adding EN signal on $procdff$122 ($dffsr) from module tile_cpld (D = \shreg [12], Q = \shreg [13]).
+Adding EN signal on $procdff$226 ($dffsr) from module tile_cpld (D = \shreg [4], Q = \shreg [5]).
+Adding EN signal on $procdff$135 ($dffsr) from module tile_cpld (D = \shreg [11], Q = \shreg [12]).
+Adding EN signal on $procdff$294 ($adff) from module tile_cpld (D = 1'1, Q = \bw).
+Adding EN signal on $procdff$148 ($dffsr) from module tile_cpld (D = \shreg [10], Q = \shreg [11]).
+Adding EN signal on $procdff$239 ($dffsr) from module tile_cpld (D = \shreg [3], Q = \shreg [4]).
+Adding EN signal on $procdff$161 ($dffsr) from module tile_cpld (D = \shreg [9], Q = \shreg [10]).
+Adding EN signal on $procdff$174 ($dffsr) from module tile_cpld (D = \shreg [8], Q = \shreg [9]).
+Adding EN signal on $procdff$278 ($dffsr) from module tile_cpld (D = \shreg [0], Q = \shreg [1]).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tile_cpld..
+Removed 18 unused cells and 128 unused wires.
+<suppressed ~19 debug messages>
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tile_cpld.
+
+5.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tile_cpld..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~86 debug messages>
+
+5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tile_cpld.
+Performed a total of 0 changes.
+
+5.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tile_cpld'.
+Computing hashes of 80 cells of `\tile_cpld'.
+Finding duplicate cells in `\tile_cpld'.
+Removed a total of 0 cells.
+
+5.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tile_cpld..
+
+5.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tile_cpld.
+
+5.16. Finished fast OPT passes. (There is nothing left to do.)
+
+6. Printing statistics.
+
+=== tile_cpld ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       79 wires
+      171 wire bits
+       25 public wires
+       99 public wire bits
+       17 ports
+       28 port bits
+       80 cells
+        1   $add
+        1   $adff
+        1   $adffe
+        3   $and
+       16   $dffsre
+        1   $eq
+        2   $logic_and
+        1   $logic_not
+       51   $mux
+        2   $not
+        1   $or
+
+7. Executing TRIBUF pass.
+
+8. Executing TECHMAP pass (map to technology primitives).
+
+8.1. Executing Verilog-2005 frontend: synth/atf1502_techmap.v
+Parsing Verilog input from `synth/atf1502_techmap.v' to AST representation.
+Generating RTLIL representation for module `$dffsre'.
+Generating RTLIL representation for module `$adff'.
+Generating RTLIL representation for module `$adffe'.
+Generating RTLIL representation for module `$tribuf'.
+Successfully finished Verilog frontend.
+
+8.2. Continuing TECHMAP pass.
+Using template $paramod$d9d8a98906c63e44e95ff348557182a2e97d18a6$dffsre for cells of type $dffsre.
+Using template $paramod$e512bc0e5b9dae4fb7d949b9ec0c3ac43f481af9$adffe for cells of type $adffe.
+Using template $paramod$tribuf\WIDTH=32'00000000000000000000000000000001 for cells of type $tribuf.
+Using template $paramod$cf873983f3931103641c9a819fdf645053da3e7b$adff for cells of type $adff.
+No more expansions possible.
+<suppressed ~84 debug messages>
+
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tile_cpld..
+Removed 0 unused cells and 111 unused wires.
+<suppressed ~1 debug messages>
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module tile_cpld...
+Found and reported 0 problems.
+
+11. Printing statistics.
+
+=== tile_cpld ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       80 wires
+      172 wire bits
+       25 public wires
+       99 public wire bits
+       17 ports
+       28 port bits
+       84 cells
+        1   $add
+        3   $and
+        1   $eq
+        2   $logic_and
+        1   $logic_not
+       49   $mux
+        3   $not
+        1   $or
+        4   ATF1502_FF_D_AR
+        1   ATF1502_FF_D_AR_CE
+       16   ATF1502_FF_D_SR_CE
+        2   ATF1502_OBUF_TRI
+
+12. Executing EDIF backend.
+edif ATF1502 references: 30
+EDIF sanity: balanced, 5 device cell types, 16 scalar ports + buttons[12] array,
+         buttons[b] -> member(11-b) consistent; device cells: {'ATF1502_FF_D_SR_CE': 16, 'ATF1502_FF_D_AR': 4, 'ATF1502_FF_D_AR_CE': 1, 'ATF1502_OBUF_TRI': 2}

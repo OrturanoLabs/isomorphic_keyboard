@@ -1,5 +1,10 @@
 # Rev C study: a single-board tile
 
+**Historical geometry study.** Current FPGA/discrete development, corrected
+tiling checks and chassis contacts are described in
+[current-development.md](current-development.md). This earlier study is retained
+for its stack/lattice analysis, not as the current build recommendation.
+
 Question: can the double stack (key board over logic board) become **one PCB**, keeping
 the key lattice and the logic unchanged?
 

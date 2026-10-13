@@ -1,0 +1,42 @@
+// SPDX-License-Identifier: CERN-OHL-S-2.0
+// GW1NZ-LV1QN48C6/I5 pin proposal for the single-PCB tile (26 user IO).
+// clk_pin is the merged B_clk/R_clk board net (J103.2 = J104.2).
+// Pad numbers from the empirical nextpnr chipdb probe (41 of 48 QN48 pads
+// host IO bels; missing: 1,2,12,25,26,36,37). Board pulls expressed as pad
+// PULL_MODE (Gowin LVCMOS33 supports UP and DOWN -> zero pull BOM).
+// JTAG left live (no --jtag_as_gpio needed).
+
+IO_LOC "keys[0]"  3;
+IO_LOC "keys[1]"  4;
+IO_LOC "keys[2]"  5;
+IO_LOC "keys[3]"  6;
+IO_LOC "keys[4]"  7;
+IO_LOC "keys[5]"  8;
+IO_LOC "keys[6]"  9;
+IO_LOC "keys[7]"  10;
+IO_LOC "keys[8]"  11;
+IO_LOC "keys[9]"  13;
+IO_LOC "keys[10]" 14;
+IO_LOC "keys[11]" 15;
+
+// rev-A pull-UP inputs (J102.7 T_W, J102.4 T_endcol, J103.5 B_first,
+// J101.4 L_endrow, merged clock J103.2/J104.2)
+IO_LOC "clk_pin"      16; IO_PORT "clk_pin"      PULL_MODE=UP;
+IO_LOC "t_w_pin"      17; IO_PORT "t_w_pin"      PULL_MODE=UP;
+IO_LOC "t_endcol_pin" 18; IO_PORT "t_endcol_pin" PULL_MODE=UP;
+IO_LOC "b_first_pin"  19; IO_PORT "b_first_pin"  PULL_MODE=UP;
+IO_LOC "l_endrow_pin" 20; IO_PORT "l_endrow_pin" PULL_MODE=UP;
+
+// rev-A pull-DOWN inputs (J102.3 T_data, J101.3 L_data, latch legs J103.6 /
+// J104.5)
+IO_LOC "t_data_pin"   21; IO_PORT "t_data_pin"   PULL_MODE=DOWN;
+IO_LOC "l_data_pin"   22; IO_PORT "l_data_pin"   PULL_MODE=DOWN;
+IO_LOC "b_latch_pin"  23; IO_PORT "b_latch_pin"  PULL_MODE=DOWN;
+IO_LOC "r_latch_pin"  24; IO_PORT "r_latch_pin"  PULL_MODE=DOWN;
+
+// outputs (t_clk/l_clk are true tri-state TBUF outputs, as rev A)
+IO_LOC "t_clk_pin"  27;
+IO_LOC "l_clk_pin"  28;
+IO_LOC "latcho_pin" 29;
+IO_LOC "dout_pin"   30;
+IO_LOC "b_w_pin"    31;

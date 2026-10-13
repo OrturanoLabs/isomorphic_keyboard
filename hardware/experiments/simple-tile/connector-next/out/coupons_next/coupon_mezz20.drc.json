@@ -1,0 +1,681 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-12T17:02:57",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "coupon_mezz20.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 38.97
+                    },
+                    "uuid": "363236b5-95cc-4c99-a479-5ab3ac3dc6c5"
+                },
+                {
+                    "description": "PCB text 'COUPON B': Gecko-20 mezzanine plug (THT tails, in production), ISOLATED-tile certified south tab +5.75 mm; corner pads probed' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "8721efb8-5006-4393-9480-e104fe87ef4e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 81.579084,
+                        "y": 38.97
+                    },
+                    "uuid": "7acf73a8-6565-4741-898f-60fbe9d89aa5"
+                },
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "ab5f769d-7950-4689-a949-f72f6dbcf044"
+                },
+                {
+                    "description": "Reference field of TP_P20",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2ca21e68-79e5-4a25-b7e2-0e84463e6090"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "ab5f769d-7950-4689-a949-f72f6dbcf044"
+                },
+                {
+                    "description": "Reference field of TP_P11",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d6fb1bfa-91c0-4d2a-a50f-24b491e2c1a0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "ab5f769d-7950-4689-a949-f72f6dbcf044"
+                },
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "1fb689ea-46b3-4685-9711-b0bf95a35685"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "ab5f769d-7950-4689-a949-f72f6dbcf044"
+                },
+                {
+                    "description": "Reference field of TP_P10",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7c96d912-a80b-4f63-973e-9879e9845902"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "1fb689ea-46b3-4685-9711-b0bf95a35685"
+                },
+                {
+                    "description": "Reference field of TP_P20",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2ca21e68-79e5-4a25-b7e2-0e84463e6090"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P20",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2ca21e68-79e5-4a25-b7e2-0e84463e6090"
+                },
+                {
+                    "description": "Reference field of TP_P11",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d6fb1bfa-91c0-4d2a-a50f-24b491e2c1a0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P20",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "2ca21e68-79e5-4a25-b7e2-0e84463e6090"
+                },
+                {
+                    "description": "Reference field of TP_P10",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7c96d912-a80b-4f63-973e-9879e9845902"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "1fb689ea-46b3-4685-9711-b0bf95a35685"
+                },
+                {
+                    "description": "Reference field of TP_P11",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d6fb1bfa-91c0-4d2a-a50f-24b491e2c1a0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P10",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7c96d912-a80b-4f63-973e-9879e9845902"
+                },
+                {
+                    "description": "Reference field of TP_P11",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "d6fb1bfa-91c0-4d2a-a50f-24b491e2c1a0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP_P1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "1fb689ea-46b3-4685-9711-b0bf95a35685"
+                },
+                {
+                    "description": "Reference field of TP_P10",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7c96d912-a80b-4f63-973e-9879e9845902"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of SW20 on B.Silkscreen",
+                    "pos": {
+                        "x": 50.459345,
+                        "y": 3.759999
+                    },
+                    "uuid": "681dd31f-a485-4b60-aa41-3983d05a844b"
+                },
+                {
+                    "description": "PCB text 'COUPON B': Gecko-20 mezzanine plug (THT tails, in production), ISOLATED-tile certified south tab +5.75 mm; corner pads probed' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "8721efb8-5006-4393-9480-e104fe87ef4e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of SW10 on B.Silkscreen",
+                    "pos": {
+                        "x": 32.099606,
+                        "y": 3.759999
+                    },
+                    "uuid": "038c9cbe-df70-4e03-86b8-e5afbb979475"
+                },
+                {
+                    "description": "PCB text 'COUPON B': Gecko-20 mezzanine plug (THT tails, in production), ISOLATED-tile certified south tab +5.75 mm; corner pads probed' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "8721efb8-5006-4393-9480-e104fe87ef4e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                },
+                {
+                    "description": "Arc of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 41.439543,
+                        "y": 36.345001
+                    },
+                    "uuid": "d316a87b-9f03-477a-bd44-3090ce744925"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 41.939542,
+                        "y": 36.995
+                    },
+                    "uuid": "5260d6d2-8086-43d6-b513-e5d89b55c435"
+                },
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                },
+                {
+                    "description": "Segment of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 41.439542,
+                        "y": 36.595
+                    },
+                    "uuid": "e98f5a8e-12b6-476c-ac71-560800f102d5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Polygon of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 40.789542,
+                        "y": 37.0
+                    },
+                    "uuid": "558d1803-040e-4ecf-99f9-af51eb363380"
+                },
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                },
+                {
+                    "description": "Segment of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 40.489542,
+                        "y": 36.995
+                    },
+                    "uuid": "cc28271e-2730-46bf-b019-94968b2e3627"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                },
+                {
+                    "description": "Segment of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 28.639542,
+                        "y": 36.345
+                    },
+                    "uuid": "e8eaa3ca-6779-4d14-af4b-449d864c4203"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                },
+                {
+                    "description": "Segment of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 29.889542,
+                        "y": 36.295
+                    },
+                    "uuid": "affce20f-233d-4e94-9c3e-6c888f284128"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 29.889542,
+                        "y": 36.595
+                    },
+                    "uuid": "8f5d07c6-e2e5-4599-9f04-c5d4f76efd50"
+                },
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 28.389542,
+                        "y": 36.245
+                    },
+                    "uuid": "581a1763-1a59-4003-b97e-bbe8102f5aae"
+                },
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - no ERC; branch judged NOFIT at placement level by the study (shrunk-board drill/pad clearance fails) - concept geometry only' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 36.97
+                    },
+                    "uuid": "9e94d581-4a84-4376-a8a8-5df559124265"
+                },
+                {
+                    "description": "Arc of J1 on B.Silkscreen",
+                    "pos": {
+                        "x": 28.889542,
+                        "y": 36.345
+                    },
+                    "uuid": "b3583d26-fa0a-40c4-9219-764d813da25a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B': Gecko-20 mezzanine plug (THT tails, in production), ISOLATED-tile certified south tab +5.75 mm; corner pads probed' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "8721efb8-5006-4393-9480-e104fe87ef4e"
+                },
+                {
+                    "description": "Pad 2 [<no net>] of SW10 on B.Cu",
+                    "pos": {
+                        "x": 42.041607,
+                        "y": 3.58
+                    },
+                    "uuid": "dac9b7bf-3498-42a2-967f-4cd1576f1de3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B': Gecko-20 mezzanine plug (THT tails, in production), ISOLATED-tile certified south tab +5.75 mm; corner pads probed' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "8721efb8-5006-4393-9480-e104fe87ef4e"
+                },
+                {
+                    "description": "NPTH pad of SW10",
+                    "pos": {
+                        "x": 38.739607,
+                        "y": 3.58
+                    },
+                    "uuid": "31affcae-e2a2-4a5a-9cea-0594eed9bb82"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B': Gecko-20 mezzanine plug (THT tails, in production), ISOLATED-tile certified south tab +5.75 mm; corner pads probed' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "8721efb8-5006-4393-9480-e104fe87ef4e"
+                },
+                {
+                    "description": "Pad 2 [<no net>] of SW00 on B.Cu",
+                    "pos": {
+                        "x": 23.681869,
+                        "y": 3.58
+                    },
+                    "uuid": "5469fdf0-fdae-49bf-9f0c-b7f90f2f4c85"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'COUPON B': Gecko-20 mezzanine plug (THT tails, in production), ISOLATED-tile certified south tab +5.75 mm; corner pads probed' on B.Silkscreen",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 3.0
+                    },
+                    "uuid": "8721efb8-5006-4393-9480-e104fe87ef4e"
+                },
+                {
+                    "description": "NPTH pad of SW00",
+                    "pos": {
+                        "x": 20.379869,
+                        "y": 3.58
+                    },
+                    "uuid": "3208fc6d-5170-4462-bec1-3f97adc5c6cb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

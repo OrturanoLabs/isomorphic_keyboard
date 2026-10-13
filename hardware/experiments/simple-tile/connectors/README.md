@@ -1,5 +1,12 @@
 # Drop-in connector study for the passive simple tile
 
+**Retired first-round study.** Current consumers use its geometry helper and
+placement inputs as library/reference data. Its old coupon generator, runner
+and coupon outputs were removed because subsequent review corrected the
+outline, contact budget and cross-tile assumptions. Use
+[`../connector-next/`](../connector-next/README.md) and the FPGA board study for
+current work; do not treat the historical conclusions below as design approval.
+
 Executable mechanical placement + connector comparison for the `simple-tile`
 experiment (see `../README.md`): a single PCB carrying 12 Cherry-MX-style keys
 in SMD Kailh hot-swap sockets keeping the **rev-A per-tile logic interface**
@@ -8,10 +15,10 @@ minimum practical equilateral lattice (~18.36 mm pitch), drop-in chassis,
 no tile-side MCU/LED/Hall; target 20 MHz shift clock over up to 16 tiles;
 open tooling only (KiCad flatpak + host python3 stdlib).
 
-## Run
+## Historical run (retired)
 
 ```sh
-./run.sh          # measure library footprints -> study -> coupons -> coupon DRC
+# The old pipeline was retired; use ../connector-next/run.sh instead.
 ```
 
 Everything lands in `out/`. The study alone: `python3 study.py` (host python3,
@@ -115,8 +122,7 @@ review against a real chassis CAD.
 
 - `study.py` - study runner (checks, SVG/JSON/report)
 - `measure_footprints.py` - pcbnew library-footprint measurement
-- `make_coupons.py` - coupon generator (pcbnew)
-- `run.sh` - the pipeline above
+- Old coupon generator and pipeline: removed; recoverable from commit `6572e0f`.
 - `out/`: `placement.json`, `placement.svg`, `report.md`, `checks.json`,
   `truth_table.json`, `mezzanine_measures.json`, `versions.txt`,
   `coupons/` (+ `coupons.json`, per-coupon `*.drc.json`, `drc_gate.json`)

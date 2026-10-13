@@ -1,0 +1,14 @@
+lane-clean patterns with a >=7.8x8.3 rect (0.5mm grid): 0/64
+== all-0 (baseline)
+   free rect -8.54,2.57..54.71,8.82 = 63.25x6.25 mm
+   free rect -8.54,2.57..54.71,8.57 = 63.25x6.00 mm
+   free rect -8.54,2.57..54.71,8.32 = 63.25x5.75 mm
+   free rect -8.54,2.57..63.96,7.57 = 72.50x5.00 mm
+   same-tile pad/court overlap pairs: 0 []
+   6-neighbour courtyard-arm/pad collisions: []
+   SIG/GND lane pad vs rotated courtyard hits: 0 []
+   worst pad/hole edge clearance: 0.320 mm @ ('rect', -17.54, 12.11)
+
+study largest island (baseline): 71.0x5.25
+min pitch baseline: 18.90973856023011
+min pitch all-180: 18.90973856023011

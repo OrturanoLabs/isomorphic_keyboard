@@ -1,0 +1,41 @@
+# SPDX-License-Identifier: CERN-OHL-S-2.0
+# iCE40LP8K-CM81 as mounted on the TinyFPGA BX module (mandatory candidate).
+# sysclk_pin = module 16 MHz oscillator on B2 (amaranth-boards
+# tinyfpga_bx.py); only needed for SNAP_MODE="track" (spare with "fall").
+# 26 user IO (clk_pin merges B_clk/R_clk on the one board net, as rev A).
+# User IO mapped onto BX edge-connector pad letters; NOTE a real LP8K tile is
+# either bare CM81 on the tile PCB (0.4 mm WLCSP; +external SPI flash) or the
+# whole BX module as a mezzanine (docs/alternatives.md). Pull-up only pads:
+# +4 board resistors for the rev-A DOWN pulls.
+
+set_io sysclk_pin B2
+
+set_io keys[0] A2
+set_io keys[1] A1
+set_io keys[2] B1
+set_io keys[3] C2
+set_io keys[4] C1
+set_io keys[5] D2
+set_io keys[6] D1
+set_io keys[7] E2
+set_io keys[8] E1
+set_io keys[9] G2
+set_io keys[10] H1
+set_io keys[11] J1
+
+set_io -pullup yes clk_pin H2
+set_io -pullup yes t_w_pin H9
+set_io -pullup yes t_endcol_pin D9
+set_io -pullup yes b_first_pin D8
+set_io -pullup yes l_endrow_pin C9
+
+set_io t_data_pin A9
+set_io l_data_pin B8
+set_io b_latch_pin A8
+set_io r_latch_pin B7
+
+set_io t_clk_pin B6
+set_io l_clk_pin A6
+set_io latcho_pin G1
+set_io dout_pin J3
+set_io b_w_pin J4

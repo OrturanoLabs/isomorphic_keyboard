@@ -1,0 +1,21 @@
+{
+  "schema": "fpga-system/sources/v1",
+  "note": "Read-only references consumed by fpga/system. sha256 recorded at task start (2026-10-12); results/check_system_sync.py FAILS on drift so the system model never silently tracks changed inputs. Ownership stays with the other workstreams; nothing here is written.",
+  "files": {
+    "hardware/experiments/simple-tile/fpga/rtl/tile_fpga.vhdl": "5e21172ea2286af8653269f20b1baefbebae9884c361dc8c6c07d00ce9ad9692",
+    "hardware/experiments/simple-tile/fpga/rtl/top_gw1nz.vhdl": "77d61ebf37c1d30836a0bc2fa45a35d89410fa5533d4ebc9551fa8bb98928fce",
+    "hardware/simulation/tile.vhdl": "5571e9ed5e605a5d238dd0a6d5a479169565aec3720e70fce658d89b63f13d3d",
+    "hardware/experiments/simple-tile/regression/tile_reg_pkg.vhdl": "4395e865c75ba3ca6667b117bf1e14d685f4e2761298cd4325957a1d5a91ce86",
+    "docs/architecture/protocol.md": "b79830b2148cbbd835ae69c8eacbbfb208eb116a47cb6adf542a947953eaa690",
+    "hardware/experiments/simple-tile/fpga/synth/results/logs/gw1nz_fall_nextpnr.log": "b94e966757103483d4a7ac60c51688e51a3bcc777f3e5ad9c9be9a761f5aa576",
+    "hardware/experiments/simple-tile/fpga/synth/results/logs/gw1nz_track_nextpnr.log": "a93a150b96ecba3023e07dbfccb86d0d699244b3d4b1ab823376906c6244ccdd",
+    "hardware/experiments/simple-tile/fpga/synth/results/logs/up5k_fall_icetime.log": "5d2eb1296ef5c7b0d77b907d494a7c2c6f14f1c7d2ef1819c5d20c3d1a092093",
+    "hardware/experiments/simple-tile/fpga/synth/results/logs/lp8k_fall_icetime.log": "e295bee01da737ac447ef150bc74382a258aebf8c0ffdb4841fecbcfdd8031a1",
+    "hardware/experiments/simple-tile/fpga/synth/tile_gw1nz.cst": "0d454f5b4f268abebb5b6f52163df866d42d9f775dbf05f5edf2053eb3d89d67"
+  },
+  "pin_budget_check": {
+    "cst": "hardware/experiments/simple-tile/fpga/synth/tile_gw1nz.cst",
+    "expected_io_loc": 26,
+    "note": "the 26-pin FPGA plan (fpga/docs/pin_budget.md); checker counts IO_LOC entries"
+  }
+}

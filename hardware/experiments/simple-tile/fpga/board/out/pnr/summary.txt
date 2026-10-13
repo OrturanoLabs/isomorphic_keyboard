@@ -1,0 +1,60 @@
+date_utc: 2026-10-13T08:02:24Z
+yosys:    Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+nextpnr:  
+constraints: constraints/tile_gw1nz_board.cst / constraints/tile_up5k_board.pcf (production, vendor-verified)
+== gw1nz_fall_boardcst ==
+gw1nz_fall_boardcst .fs: 351954 bytes
+== gw1nz_track_boardcst ==
+gw1nz_track_boardcst .fs: 351954 bytes
+== up5k_fall_boardpcf ==
+up5k_fall_boardpcf .bin: 104090 bytes
+== up5k_track_boardpcf ==
+up5k_track_boardpcf .bin: 104090 bytes
+
+== pin-legality + utilization + timing digest ==
+--- gw1nz_fall_boardcst ---
+Info: Reading constraints...
+Info: Placed 0 cells based on constraints.
+Info: 	                 IOB:      24/     48    50%
+Info: 	                LUT4:      34/   1152     2%
+Info: 	            IOLOGICI:       0/     38     0%
+Info: 	            IOLOGICO:       0/     38     0%
+Info: 	           MUX2_LUT5:       4/    576     0%
+Info: 	           MUX2_LUT6:       2/    288     0%
+Info: 	           MUX2_LUT7:       0/    144     0%
+Info: 	           MUX2_LUT8:       0/    144     0%
+Info: Max frequency for clock 'u_tile.b_clk': 342.35 MHz (PASS at 20.00 MHz)
+Info: Max frequency for clock 'u_tile.b_clk': 234.25 MHz (PASS at 20.00 MHz)
+--- gw1nz_track_boardcst ---
+Info: Reading constraints...
+Info: Placed 0 cells based on constraints.
+Info: 	                 IOB:      24/     48    50%
+Info: 	                LUT4:      34/   1152     2%
+Info: 	            IOLOGICI:       0/     38     0%
+Info: 	            IOLOGICO:       0/     38     0%
+Info: 	           MUX2_LUT5:       4/    576     0%
+Info: 	           MUX2_LUT6:       2/    288     0%
+Info: 	           MUX2_LUT7:       0/    144     0%
+Info: 	           MUX2_LUT8:       0/    144     0%
+Info: Max frequency for clock 'u_tile.b_clk': 336.47 MHz (PASS at 20.00 MHz)
+Info: Max frequency for clock 'u_tile.b_clk': 213.68 MHz (PASS at 20.00 MHz)
+--- up5k_fall_boardpcf ---
+Info: Placed 26 cells based on constraints.
+Info: 	               SB_IO:      26/     39    66%
+Info: 	        ICESTORM_DSP:       0/      8     0%
+Info: 	      ICESTORM_HFOSC:       0/      1     0%
+Info: 	      ICESTORM_LFOSC:       0/      1     0%
+Info: 	              IO_I3C:       0/      2     0%
+Info: Max frequency for clock 'clk_pin$SB_IO_IN_$glb_clk': 64.30 MHz (PASS at 20.00 MHz)
+Info: Max frequency for clock 'clk_pin$SB_IO_IN_$glb_clk': 68.76 MHz (PASS at 20.00 MHz)
+--- up5k_track_boardpcf ---
+Info:     Derived frequency constraint of 6.0 MHz for net sysclk
+Info: Placed 28 cells based on constraints.
+Info: 	               SB_IO:      26/     39    66%
+Info: 	        ICESTORM_DSP:       0/      8     0%
+Info: 	      ICESTORM_HFOSC:       1/      1   100%
+Info: 	      ICESTORM_LFOSC:       0/      1     0%
+Info: 	              IO_I3C:       0/      2     0%
+Info: Max frequency for clock 'clk_pin$SB_IO_IN_$glb_clk': 61.71 MHz (PASS at 20.00 MHz)
+Info: Max frequency for clock 'clk_pin$SB_IO_IN_$glb_clk': 66.88 MHz (PASS at 20.00 MHz)
+BOARD-PNR PASS (4 runs, production pin maps)

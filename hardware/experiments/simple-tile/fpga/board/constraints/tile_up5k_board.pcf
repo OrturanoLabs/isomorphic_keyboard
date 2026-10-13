@@ -1,0 +1,62 @@
+# SPDX-License-Identifier: CERN-OHL-S-2.0
+#
+# tile_up5k_board.pcf -- BOARD/production pin map for the UP5K fallback board
+# (iCE40UP5K-SG48I, SG48 = QFN48 7x7 mm, 0.5 mm pitch, GND paddle).
+#
+# Every pin verified against the Lattice primary pinout file fetched
+# 2026-10-12 from the Lattice product page (document_id=51971, "# Pin Out
+# For iCE5UP5K" Rev 1.1, F column = SG48; see ../data/pins_ice40up_sg48.json
+# for provenance + sha256) plus FPGA-DS-02008-2.4 (rails, POR, power-up
+# sequence) and FPGA-TN-02001-3.5 (boot selection, CRESET_B pure input).
+# The empirical chipdb census (pads missing {1,5,7,8,22,24,29,30,33} =
+# {VCCIO2,VCC,CDONE,CRESET_B,SPI_VCCIO1,VPP_2V5,VCCPLL,VCC,VCCIO0}) matches
+# the vendor map EXACTLY - no inference from tool behaviour anywhere here.
+#
+# RESERVED (never tile IO): 7 CDONE, 8 CRESET_B, 14 SPI_SO, 15 SPI_SCK,
+# 16 SPI_SS, 17 SPI_SI (the four SPI config pads route to the external config
+# flash + in-circuit programming test pads), 39/40/41 RGB LED drivers
+# (excluded: open-drain LED outputs, no-LED user rule), power pins
+# 1,5,22,24,29,30,33 + paddle GND.
+#
+# iCE40 pads: pull-UP only -> the rev-A pull-DOWN inputs get PAD pull-ups
+# ONLY for the UP class; the DOWN class (t_data, l_data, b_latch, r_latch)
+# and all 12 keys carry external 10K pull-down resistors on the board
+# (BOM delta +16 x 10K vs the GW1NZ variant; see docs/power_reg.md).
+# clk on IOT_46b_G0 (GBIN): the choice gives the merged 20 MHz clock a
+# direct global buffer path.
+
+# 12 keys (switch to VCC + EXTERNAL 10K pull-down each; no pad pull set)
+set_io keys[0] 2
+set_io keys[1] 3
+set_io keys[2] 4
+set_io keys[3] 9
+set_io keys[4] 10
+set_io keys[5] 11
+set_io keys[6] 12
+set_io keys[7] 13
+set_io keys[8] 18
+set_io keys[9] 19
+set_io keys[10] 20
+set_io keys[11] 44
+
+# merged 20 MHz shift clock (J103.2 = J104.2) on the GBIN pad
+set_io -pullup yes clk_pin 35
+
+# rev-A pull-UP strap inputs
+set_io -pullup yes t_w_pin 23
+set_io -pullup yes t_endcol_pin 25
+set_io -pullup yes b_first_pin 26
+set_io -pullup yes l_endrow_pin 27
+
+# rev-A pull-DOWN inputs (external 10K on the board; no pad pull set)
+set_io t_data_pin 28
+set_io l_data_pin 31
+set_io b_latch_pin 32
+set_io r_latch_pin 34
+
+# outputs (t_clk/l_clk are true tri-state SB_IO, verified by the fpga flow)
+set_io t_clk_pin 36
+set_io l_clk_pin 37
+set_io latcho_pin 38
+set_io dout_pin 42
+set_io b_w_pin 43

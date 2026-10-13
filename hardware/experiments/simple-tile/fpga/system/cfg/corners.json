@@ -1,0 +1,53 @@
+{
+  "schema": "fpga-system/corners/v1",
+  "scope": "EXPLORATION ONLY - NOT hardware sign-off. One FPGA tile (GW1NZ-LV1QN48 lead, SNAP_MODE=fall) in the 20 MHz / <=16-tile chain. Interior values anchor to fitted nextpnr max-analysis numbers extracted into ../results/interior_delays.json; every exterior value (pads, TBUF en/dis, board hop) is SYNTHETIC because open-device datasheets (Gowin DS861) are not available and nextpnr offers no min analysis or IO timing model here.",
+  "voltage_temp": "ambient, LVCMOS33 class assumption only (no datasheet applied)",
+  "device_lead": "GW1NZ-LV1QN48C6/I5",
+  "snap_mode": "fall",
+  "delays_ns": {
+    "_comment_keys": "each entry: [syn_min, fit, syn_max]. fit = fitted-interior anchor where noted + synthetic exterior; signatures of sources recorded in machine.json",
+    "t_padin":    [0.5, 1.5, 3.0],
+    "_t_padin_src": "synthetic (IBUF+pad, DS861 unavailable) unknown-by-default",
+
+    "t_do_int":   [0.7, 1.5, 3.93],
+    "_t_do_int_src": "fit: 0.46 clk2q + ~1.0 logic/route class from fitted crit report; syn_max: fitted crit total 3.93 (max-analysis, widest interior claim); syn_min: synthetic 0.3x-class bound, nextpnr has no min analysis",
+
+    "t_bw_int":   [0.7, 1.5, 3.93],
+    "_t_bw_int_src": "same class as t_do_int (FF clk-to-q + routed logic to B_W flag, interior)",
+
+    "t_latcho_int": [0.3, 0.8, 2.0],
+    "_t_latcho_src": "latch OR + forward comb interior; fit anchored on fitted LUT-chain class (cross report shows 1.03 ns LUT4 stage), no direct fitted path exists - labelled partial-anchor",
+
+    "t_padout":   [0.5, 1.5, 3.0],
+    "_t_padout_src": "synthetic (OBUF+pad) unknown-by-default",
+
+    "t_tbuf_en":  [0.3, 1.0, 2.5],
+    "t_tbuf_dis": [0.3, 1.0, 2.5],
+    "t_tbuf_pd":  [0.3, 1.0, 2.0],
+    "_t_tbuf_src": "synthetic TBUF enable/disable/propagate, unknown-by-default; compare discrete rev-A 2G125/2G126 ten/tdis max 5.1-5.7 ns (datasheet real; FPGA pad lib has no open model here)",
+
+    "t_xdom_req": [1.5, 4.9, 4.9],
+    "_t_xdom_req_src": "first-shift special-load recovery requirement: latch-clocked shadow FF -> clk-clocked shreg. fit/syn_max = fitted 4.86 ns (nextpnr max) + 0.04 setup = 4.9; syn_min = synthetic slack exploration bound (min delays unbounded in the tool)",
+
+    "t_snap_su":  [0.2, 0.5, 0.8],
+    "t_snap_hd":  [0.2, 0.5, 0.8],
+    "_t_snap_src": "SYNTHETIC placeholder for the shadow-FF setup/hold window at the latch falling edge (analogue of 74x165 /PL recovery); UNSIGNED - no device STA exists here",
+
+    "t_clkhi_req": [3.0, 5.0, 8.0],
+    "_t_clkhi_src": "synthetic min high/low pulse guard band for the fabric shift clock; the 20 MHz binding constraint is the W-switch containment, this only rejects degenerate duty",
+
+    "route_hop":  [0.2, 1.5, 3.0],
+    "_route_hop_src": "SYNTHETIC connector-pair + short trace hop, unknown-by-default; 1.5 matches the discrete timing-chain synthetic hop for cross-family comparison; NOT a field-solved value"
+  },
+  "corners": {
+    "syn_min": {"index": 0, "note": "all-fast exploration"},
+    "fit":     {"index": 1, "note": "fitted interior anchors + mid synthetic exterior; reference corner"},
+    "syn_max": {"index": 2, "note": "slowest exploration; interior = fitted max-analysis anchors"}
+  },
+  "controller_fixed": {
+    "tclk_ns": 50.0,
+    "shift_mhz": 20.0,
+    "latch_width_ns": 200.0,
+    "note": "20 MHz shift clock at the controller, 200 ns latch pulse; guard/lead/high-phase swept separately"
+  }
+}

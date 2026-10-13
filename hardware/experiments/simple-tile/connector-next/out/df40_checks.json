@@ -1,0 +1,38 @@
+[
+ {
+  "id": "DF-P0",
+  "name": "STEP parses (2237 points expected)",
+  "ok": true,
+  "detail": "2237"
+ },
+ {
+  "id": "DF-P1",
+  "name": "foot pin grid recovers EXACTLY 2 rows x 10 pins at the published 0.4 mm pitch",
+  "ok": true,
+  "detail": "pitch samples [0.3949, 0.4, 0.4, 0.4, 0.4]... mean 0.3994"
+ },
+ {
+  "id": "DF-P2",
+  "name": "solder feet form two rows: separate x bands, shared mounting plane (feet underside)",
+  "ok": true,
+  "detail": "rowsep 3.185 mm; foot plane y=-0.81"
+ },
+ {
+  "id": "DF-P3",
+  "name": "pin tip width measured (~0.22 mm)",
+  "ok": true,
+  "detail": "[0.21, 0.22, 0.22, 0.22]"
+ },
+ {
+  "id": "DF-C1",
+  "name": "custom footprint emitted with 20 SMD pads at 0.4 mm pitch",
+  "ok": true,
+  "detail": "pad 0.3 x 1.305 mm, rows y=-1.593/1.593"
+ },
+ {
+  "id": "DF-C2",
+  "name": "provenance + lifecycle captured (series live; -70 sibling explicitly Discontinued; receptacle STEP blocked = gate retained, nothing invented)",
+  "ok": true,
+  "detail": ""
+ }
+]

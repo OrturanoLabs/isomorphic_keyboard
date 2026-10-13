@@ -1,0 +1,2166 @@
+{
+ "circuit": "reva_reference",
+ "components": [
+  {
+   "device": "Conn_01x06",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal",
+   "lib": "Connector_Generic:Conn_01x06",
+   "mpn": null,
+   "ref": "J101",
+   "value": "Conn_LEFT"
+  },
+  {
+   "device": "Conn_01x08",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Horizontal",
+   "lib": "Connector_Generic:Conn_01x08",
+   "mpn": null,
+   "ref": "J102",
+   "value": "Conn_TOP"
+  },
+  {
+   "device": "Conn_01x08",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal",
+   "lib": "Connector_Generic:Conn_01x08",
+   "mpn": null,
+   "ref": "J103",
+   "value": "Conn_BOTTOM"
+  },
+  {
+   "device": "Conn_01x06",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal",
+   "lib": "Connector_Generic:Conn_01x06",
+   "mpn": null,
+   "ref": "J104",
+   "value": "Conn_RIGHT"
+  },
+  {
+   "device": "Conn_01x08",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical",
+   "lib": "Connector_Generic:Conn_01x08",
+   "mpn": "",
+   "ref": "J105",
+   "value": "BTNs_L_MSB"
+  },
+  {
+   "device": "Conn_01x08",
+   "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical",
+   "lib": "Connector_Generic:Conn_01x08",
+   "mpn": "",
+   "ref": "J106",
+   "value": "BTNs_L_LSB"
+  },
+  {
+   "device": "Conn_01x08",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+   "lib": "Connector_Generic:Conn_01x08",
+   "mpn": "",
+   "ref": "J107",
+   "value": "BTNs_MSB"
+  },
+  {
+   "device": "Conn_01x08",
+   "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+   "lib": "Connector_Generic:Conn_01x08",
+   "mpn": "",
+   "ref": "J108",
+   "value": "BTNs_LSB"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R101",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R102",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R103",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R104",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R105",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R106",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R107",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R108",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R109",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R201",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R202",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R203",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R204",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R205",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R206",
+   "value": "33"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R207",
+   "value": "33"
+  },
+  {
+   "device": "74AUC2G126",
+   "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+   "lib": "74xGxx:74AUC2G126",
+   "mpn": null,
+   "ref": "U101",
+   "value": "74LVC2G126"
+  },
+  {
+   "device": "74AUC2G08",
+   "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+   "lib": "74xGxx:74AUC2G08",
+   "mpn": null,
+   "ref": "U102",
+   "value": "74LVC2G08"
+  },
+  {
+   "device": "74HC165",
+   "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+   "lib": "74xx:74HC165",
+   "mpn": null,
+   "ref": "U103",
+   "value": "74LVC165A"
+  },
+  {
+   "device": "74HC165",
+   "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+   "lib": "74xx:74HC165",
+   "mpn": null,
+   "ref": "U104",
+   "value": "74LVC165A"
+  },
+  {
+   "device": "74AHC1G04",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+   "lib": "74xGxx:74AHC1G04",
+   "mpn": null,
+   "ref": "U105",
+   "value": "74LVC1G04"
+  },
+  {
+   "device": "74LVC2G32",
+   "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+   "lib": "74xGxx:74LVC2G32",
+   "mpn": null,
+   "ref": "U106",
+   "value": "74LVC2G32"
+  },
+  {
+   "device": "74AUC2G125",
+   "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+   "lib": "74xGxx:74AUC2G125",
+   "mpn": null,
+   "ref": "U107",
+   "value": "74LVC2G125"
+  },
+  {
+   "device": "74LVC2G74",
+   "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+   "lib": "74xGxx:74LVC2G74",
+   "mpn": null,
+   "ref": "U108",
+   "value": "74LVC2G74"
+  },
+  {
+   "device": "74LS161",
+   "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+   "lib": "74xx_IEEE:74LS161",
+   "mpn": null,
+   "ref": "U109",
+   "value": "74HC161"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R110",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R111",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R112",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R113",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R114",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R115",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R116",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R117",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R118",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R119",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R120",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R121",
+   "value": "100"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R122",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R123",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R124",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R125",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R126",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R127",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R128",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R129",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R130",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R131",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R132",
+   "value": "10k"
+  },
+  {
+   "device": "R",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "lib": "Device:R",
+   "mpn": null,
+   "ref": "R133",
+   "value": "10k"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW101",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW102",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW103",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW104",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW105",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW106",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW107",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW108",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW109",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW110",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW111",
+   "value": "SW_Push"
+  },
+  {
+   "device": "SW_Push",
+   "footprint": "Switch_Keyboard_Hotswap_Kailh:SW_Hotswap_Kailh_MX_1.00u_EdgeTrim",
+   "lib": "Switch:SW_Push",
+   "mpn": null,
+   "ref": "SW112",
+   "value": "SW_Push"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C101",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C102",
+   "value": "100n"
+  },
+  {
+   "device": "C_Polarized",
+   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "lib": "Device:C_Polarized",
+   "mpn": null,
+   "ref": "C103",
+   "value": "4u7"
+  },
+  {
+   "device": "C_Polarized",
+   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "lib": "Device:C_Polarized",
+   "mpn": null,
+   "ref": "C104",
+   "value": "4u7"
+  },
+  {
+   "device": "C_Polarized",
+   "footprint": "Capacitor_SMD:CP_Elec_6.3x7.7",
+   "lib": "Device:C_Polarized",
+   "mpn": null,
+   "ref": "C105",
+   "value": "100u"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C201",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C202",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C203",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C204",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C205",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C206",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C207",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C208",
+   "value": "100n"
+  },
+  {
+   "device": "C",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "lib": "Device:C",
+   "mpn": null,
+   "ref": "C209",
+   "value": "100n"
+  }
+ ],
+ "interface": {
+  "edges": {
+   "bottom": {
+    "B_W": [
+     "J103",
+     "7"
+    ],
+    "B_clk": [
+     "J103",
+     "2"
+    ],
+    "B_data": [
+     "J103",
+     "3"
+    ],
+    "B_first": [
+     "J103",
+     "5"
+    ],
+    "B_latch": [
+     "J103",
+     "6"
+    ],
+    "GND": [
+     "J103",
+     "4"
+    ],
+    "GND2": [
+     "J103",
+     "8"
+    ],
+    "VCC": [
+     "J103",
+     "1"
+    ]
+   },
+   "left": {
+    "GND": [
+     "J101",
+     "6"
+    ],
+    "L_clk": [
+     "J101",
+     "2"
+    ],
+    "L_data": [
+     "J101",
+     "3"
+    ],
+    "L_endrow": [
+     "J101",
+     "4"
+    ],
+    "L_latch": [
+     "J101",
+     "5"
+    ],
+    "VCC": [
+     "J101",
+     "1"
+    ]
+   },
+   "right": {
+    "B_clk": [
+     "J104",
+     "2"
+    ],
+    "B_data": [
+     "J104",
+     "3"
+    ],
+    "GND": [
+     "J104",
+     "4"
+    ],
+    "GND2": [
+     "J104",
+     "6"
+    ],
+    "R_latch": [
+     "J104",
+     "5"
+    ],
+    "VCC": [
+     "J104",
+     "1"
+    ]
+   },
+   "top": {
+    "GND": [
+     "J102",
+     "5"
+    ],
+    "GND2": [
+     "J102",
+     "8"
+    ],
+    "L_latch": [
+     "J102",
+     "6"
+    ],
+    "T_W": [
+     "J102",
+     "7"
+    ],
+    "T_clk": [
+     "J102",
+     "2"
+    ],
+    "T_data": [
+     "J102",
+     "3"
+    ],
+    "T_endcol": [
+     "J102",
+     "4"
+    ],
+    "VCC": [
+     "J102",
+     "1"
+    ]
+   }
+  },
+  "keys": {
+   "key0": "BTNs_L0",
+   "key1": "BTNs_L1",
+   "key10": "BTNs_L10",
+   "key11": "BTNs_L11",
+   "key2": "BTNs_L2",
+   "key3": "BTNs_L3",
+   "key4": "BTNs_L4",
+   "key5": "BTNs_L5",
+   "key6": "BTNs_L6",
+   "key7": "BTNs_L7",
+   "key8": "BTNs_L8",
+   "key9": "BTNs_L9"
+  },
+  "note": "B_clk/B_data are single nets shared by the bottom and right legs, exactly as rev A; T_latch and L_latch are two 33R-tapped copies of latch_drv.",
+  "signals": {
+   "B_W": "B_W",
+   "B_clk": "B_clk",
+   "B_data": "B_data",
+   "B_first": "B_first",
+   "B_latch": "B_latch",
+   "GND": "GND",
+   "L_clk": "L_clk",
+   "L_data": "L_data",
+   "L_endrow": "L_endrow",
+   "L_latch": "L_latch",
+   "R_data": "R_data",
+   "R_latch": "R_latch",
+   "T_W": "T_W",
+   "T_clk": "T_clk",
+   "T_data": "T_data",
+   "T_endcol": "T_endcol",
+   "T_latch": "T_latch",
+   "VCC": "VCC"
+  }
+ },
+ "nets": {
+  "BTNs0": [
+   [
+    "J108",
+    "2"
+   ],
+   [
+    "R110",
+    "2"
+   ]
+  ],
+  "BTNs1": [
+   [
+    "J108",
+    "3"
+   ],
+   [
+    "R111",
+    "2"
+   ]
+  ],
+  "BTNs10": [
+   [
+    "J107",
+    "6"
+   ],
+   [
+    "R120",
+    "2"
+   ]
+  ],
+  "BTNs11": [
+   [
+    "J107",
+    "7"
+   ],
+   [
+    "R121",
+    "2"
+   ]
+  ],
+  "BTNs2": [
+   [
+    "J108",
+    "4"
+   ],
+   [
+    "R112",
+    "2"
+   ]
+  ],
+  "BTNs3": [
+   [
+    "J108",
+    "5"
+   ],
+   [
+    "R113",
+    "2"
+   ]
+  ],
+  "BTNs4": [
+   [
+    "J108",
+    "6"
+   ],
+   [
+    "R114",
+    "2"
+   ]
+  ],
+  "BTNs5": [
+   [
+    "J108",
+    "7"
+   ],
+   [
+    "R115",
+    "2"
+   ]
+  ],
+  "BTNs6": [
+   [
+    "J107",
+    "2"
+   ],
+   [
+    "R116",
+    "2"
+   ]
+  ],
+  "BTNs7": [
+   [
+    "J107",
+    "3"
+   ],
+   [
+    "R117",
+    "2"
+   ]
+  ],
+  "BTNs8": [
+   [
+    "J107",
+    "4"
+   ],
+   [
+    "R118",
+    "2"
+   ]
+  ],
+  "BTNs9": [
+   [
+    "J107",
+    "5"
+   ],
+   [
+    "R119",
+    "2"
+   ]
+  ],
+  "BTNs_L0": [
+   [
+    "J106",
+    "2"
+   ],
+   [
+    "U104",
+    "6"
+   ]
+  ],
+  "BTNs_L1": [
+   [
+    "J106",
+    "3"
+   ],
+   [
+    "U104",
+    "5"
+   ]
+  ],
+  "BTNs_L10": [
+   [
+    "J105",
+    "6"
+   ],
+   [
+    "U103",
+    "4"
+   ]
+  ],
+  "BTNs_L11": [
+   [
+    "J105",
+    "7"
+   ],
+   [
+    "U103",
+    "3"
+   ]
+  ],
+  "BTNs_L2": [
+   [
+    "J106",
+    "4"
+   ],
+   [
+    "U104",
+    "4"
+   ]
+  ],
+  "BTNs_L3": [
+   [
+    "J106",
+    "5"
+   ],
+   [
+    "U104",
+    "3"
+   ]
+  ],
+  "BTNs_L4": [
+   [
+    "J106",
+    "6"
+   ],
+   [
+    "U104",
+    "14"
+   ]
+  ],
+  "BTNs_L5": [
+   [
+    "J106",
+    "7"
+   ],
+   [
+    "U104",
+    "13"
+   ]
+  ],
+  "BTNs_L6": [
+   [
+    "J105",
+    "2"
+   ],
+   [
+    "U104",
+    "12"
+   ]
+  ],
+  "BTNs_L7": [
+   [
+    "J105",
+    "3"
+   ],
+   [
+    "U104",
+    "11"
+   ]
+  ],
+  "BTNs_L8": [
+   [
+    "J105",
+    "4"
+   ],
+   [
+    "U103",
+    "6"
+   ]
+  ],
+  "BTNs_L9": [
+   [
+    "J105",
+    "5"
+   ],
+   [
+    "U103",
+    "5"
+   ]
+  ],
+  "B_W": [
+   [
+    "J103",
+    "7"
+   ],
+   [
+    "R207",
+    "2"
+   ]
+  ],
+  "B_W_drv": [
+   [
+    "R207",
+    "1"
+   ],
+   [
+    "U106",
+    "5"
+   ],
+   [
+    "U108",
+    "5"
+   ]
+  ],
+  "B_clk": [
+   [
+    "J103",
+    "2"
+   ],
+   [
+    "J104",
+    "2"
+   ],
+   [
+    "R109",
+    "2"
+   ],
+   [
+    "U101",
+    "2"
+   ],
+   [
+    "U103",
+    "2"
+   ],
+   [
+    "U104",
+    "2"
+   ],
+   [
+    "U107",
+    "2"
+   ],
+   [
+    "U108",
+    "1"
+   ],
+   [
+    "U109",
+    "2"
+   ]
+  ],
+  "B_data": [
+   [
+    "J103",
+    "3"
+   ],
+   [
+    "R205",
+    "2"
+   ]
+  ],
+  "B_first": [
+   [
+    "J103",
+    "5"
+   ],
+   [
+    "R103",
+    "2"
+   ],
+   [
+    "U102",
+    "6"
+   ]
+  ],
+  "B_latch": [
+   [
+    "J103",
+    "6"
+   ],
+   [
+    "R107",
+    "1"
+   ],
+   [
+    "U106",
+    "1"
+   ]
+  ],
+  "GND": [
+   [
+    "C101",
+    "2"
+   ],
+   [
+    "C102",
+    "2"
+   ],
+   [
+    "C103",
+    "2"
+   ],
+   [
+    "C104",
+    "2"
+   ],
+   [
+    "C105",
+    "2"
+   ],
+   [
+    "C201",
+    "2"
+   ],
+   [
+    "C202",
+    "2"
+   ],
+   [
+    "C203",
+    "2"
+   ],
+   [
+    "C204",
+    "2"
+   ],
+   [
+    "C205",
+    "2"
+   ],
+   [
+    "C206",
+    "2"
+   ],
+   [
+    "C207",
+    "2"
+   ],
+   [
+    "C208",
+    "2"
+   ],
+   [
+    "C209",
+    "2"
+   ],
+   [
+    "J101",
+    "6"
+   ],
+   [
+    "J102",
+    "5"
+   ],
+   [
+    "J102",
+    "8"
+   ],
+   [
+    "J103",
+    "4"
+   ],
+   [
+    "J103",
+    "8"
+   ],
+   [
+    "J104",
+    "4"
+   ],
+   [
+    "J104",
+    "6"
+   ],
+   [
+    "J105",
+    "8"
+   ],
+   [
+    "J106",
+    "8"
+   ],
+   [
+    "R101",
+    "2"
+   ],
+   [
+    "R106",
+    "2"
+   ],
+   [
+    "R107",
+    "2"
+   ],
+   [
+    "R108",
+    "2"
+   ],
+   [
+    "U101",
+    "4"
+   ],
+   [
+    "U102",
+    "4"
+   ],
+   [
+    "U103",
+    "15"
+   ],
+   [
+    "U103",
+    "8"
+   ],
+   [
+    "U104",
+    "15"
+   ],
+   [
+    "U104",
+    "8"
+   ],
+   [
+    "U105",
+    "3"
+   ],
+   [
+    "U106",
+    "4"
+   ],
+   [
+    "U107",
+    "4"
+   ],
+   [
+    "U108",
+    "4"
+   ],
+   [
+    "U109",
+    "3"
+   ],
+   [
+    "U109",
+    "4"
+   ],
+   [
+    "U109",
+    "5"
+   ],
+   [
+    "U109",
+    "6"
+   ],
+   [
+    "U109",
+    "8"
+   ]
+  ],
+  "GND_T": [
+   [
+    "J107",
+    "8"
+   ],
+   [
+    "J108",
+    "8"
+   ],
+   [
+    "R122",
+    "2"
+   ],
+   [
+    "R123",
+    "2"
+   ],
+   [
+    "R124",
+    "2"
+   ],
+   [
+    "R125",
+    "2"
+   ],
+   [
+    "R126",
+    "2"
+   ],
+   [
+    "R127",
+    "2"
+   ],
+   [
+    "R128",
+    "2"
+   ],
+   [
+    "R129",
+    "2"
+   ],
+   [
+    "R130",
+    "2"
+   ],
+   [
+    "R131",
+    "2"
+   ],
+   [
+    "R132",
+    "2"
+   ],
+   [
+    "R133",
+    "2"
+   ]
+  ],
+  "L_clk": [
+   [
+    "J101",
+    "2"
+   ],
+   [
+    "R201",
+    "2"
+   ]
+  ],
+  "L_clk_drv": [
+   [
+    "R201",
+    "1"
+   ],
+   [
+    "U101",
+    "6"
+   ]
+  ],
+  "L_data": [
+   [
+    "J101",
+    "3"
+   ],
+   [
+    "R101",
+    "1"
+   ],
+   [
+    "U101",
+    "5"
+   ]
+  ],
+  "L_endrow": [
+   [
+    "J101",
+    "4"
+   ],
+   [
+    "R102",
+    "2"
+   ],
+   [
+    "U103",
+    "12"
+   ]
+  ],
+  "L_latch": [
+   [
+    "J101",
+    "5"
+   ],
+   [
+    "R203",
+    "2"
+   ]
+  ],
+  "Net-(R110-Pad1)": [
+   [
+    "R110",
+    "1"
+   ],
+   [
+    "R122",
+    "1"
+   ],
+   [
+    "SW101",
+    "2"
+   ]
+  ],
+  "Net-(R111-Pad1)": [
+   [
+    "R111",
+    "1"
+   ],
+   [
+    "R123",
+    "1"
+   ],
+   [
+    "SW102",
+    "2"
+   ]
+  ],
+  "Net-(R112-Pad1)": [
+   [
+    "R112",
+    "1"
+   ],
+   [
+    "R124",
+    "1"
+   ],
+   [
+    "SW103",
+    "2"
+   ]
+  ],
+  "Net-(R113-Pad1)": [
+   [
+    "R113",
+    "1"
+   ],
+   [
+    "R125",
+    "1"
+   ],
+   [
+    "SW104",
+    "2"
+   ]
+  ],
+  "Net-(R114-Pad1)": [
+   [
+    "R114",
+    "1"
+   ],
+   [
+    "R126",
+    "1"
+   ],
+   [
+    "SW105",
+    "2"
+   ]
+  ],
+  "Net-(R115-Pad1)": [
+   [
+    "R115",
+    "1"
+   ],
+   [
+    "R127",
+    "1"
+   ],
+   [
+    "SW106",
+    "2"
+   ]
+  ],
+  "Net-(R116-Pad1)": [
+   [
+    "R116",
+    "1"
+   ],
+   [
+    "R128",
+    "1"
+   ],
+   [
+    "SW107",
+    "2"
+   ]
+  ],
+  "Net-(R117-Pad1)": [
+   [
+    "R117",
+    "1"
+   ],
+   [
+    "R129",
+    "1"
+   ],
+   [
+    "SW108",
+    "2"
+   ]
+  ],
+  "Net-(R118-Pad1)": [
+   [
+    "R118",
+    "1"
+   ],
+   [
+    "R130",
+    "1"
+   ],
+   [
+    "SW109",
+    "2"
+   ]
+  ],
+  "Net-(R119-Pad1)": [
+   [
+    "R119",
+    "1"
+   ],
+   [
+    "R131",
+    "1"
+   ],
+   [
+    "SW110",
+    "2"
+   ]
+  ],
+  "Net-(R120-Pad1)": [
+   [
+    "R120",
+    "1"
+   ],
+   [
+    "R132",
+    "1"
+   ],
+   [
+    "SW111",
+    "2"
+   ]
+  ],
+  "Net-(R121-Pad1)": [
+   [
+    "R121",
+    "1"
+   ],
+   [
+    "R133",
+    "1"
+   ],
+   [
+    "SW112",
+    "2"
+   ]
+  ],
+  "Net-(U101-Pad1)": [
+   [
+    "U101",
+    "1"
+   ],
+   [
+    "U101",
+    "7"
+   ],
+   [
+    "U102",
+    "3"
+   ],
+   [
+    "U107",
+    "1"
+   ],
+   [
+    "U107",
+    "7"
+   ]
+  ],
+  "Net-(U102-Pad7)": [
+   [
+    "U102",
+    "7"
+   ],
+   [
+    "U106",
+    "6"
+   ]
+  ],
+  "Net-(U103-DS)": [
+   [
+    "U101",
+    "3"
+   ],
+   [
+    "U103",
+    "10"
+   ],
+   [
+    "U107",
+    "3"
+   ]
+  ],
+  "Net-(U103-Q7)": [
+   [
+    "U103",
+    "9"
+   ],
+   [
+    "U104",
+    "10"
+   ]
+  ],
+  "Net-(U108-D)": [
+   [
+    "U106",
+    "3"
+   ],
+   [
+    "U108",
+    "2"
+   ]
+  ],
+  "Net-(U109-Tc)": [
+   [
+    "U102",
+    "2"
+   ],
+   [
+    "U109",
+    "15"
+   ]
+  ],
+  "R_data": [
+   [
+    "J104",
+    "3"
+   ],
+   [
+    "R206",
+    "2"
+   ]
+  ],
+  "R_latch": [
+   [
+    "J104",
+    "5"
+   ],
+   [
+    "R106",
+    "1"
+   ],
+   [
+    "U106",
+    "2"
+   ]
+  ],
+  "T_W": [
+   [
+    "J102",
+    "7"
+   ],
+   [
+    "R104",
+    "2"
+   ],
+   [
+    "U102",
+    "5"
+   ]
+  ],
+  "T_clk": [
+   [
+    "J102",
+    "2"
+   ],
+   [
+    "R202",
+    "2"
+   ]
+  ],
+  "T_clk_drv": [
+   [
+    "R202",
+    "1"
+   ],
+   [
+    "U107",
+    "6"
+   ]
+  ],
+  "T_data": [
+   [
+    "J102",
+    "3"
+   ],
+   [
+    "R108",
+    "1"
+   ],
+   [
+    "U107",
+    "5"
+   ]
+  ],
+  "T_endcol": [
+   [
+    "J102",
+    "4"
+   ],
+   [
+    "R105",
+    "2"
+   ],
+   [
+    "U103",
+    "11"
+   ]
+  ],
+  "T_latch": [
+   [
+    "J102",
+    "6"
+   ],
+   [
+    "R204",
+    "2"
+   ]
+  ],
+  "VCC": [
+   [
+    "C101",
+    "1"
+   ],
+   [
+    "C102",
+    "1"
+   ],
+   [
+    "C103",
+    "1"
+   ],
+   [
+    "C104",
+    "1"
+   ],
+   [
+    "C105",
+    "1"
+   ],
+   [
+    "C201",
+    "1"
+   ],
+   [
+    "C202",
+    "1"
+   ],
+   [
+    "C203",
+    "1"
+   ],
+   [
+    "C204",
+    "1"
+   ],
+   [
+    "C205",
+    "1"
+   ],
+   [
+    "C206",
+    "1"
+   ],
+   [
+    "C207",
+    "1"
+   ],
+   [
+    "C208",
+    "1"
+   ],
+   [
+    "C209",
+    "1"
+   ],
+   [
+    "J101",
+    "1"
+   ],
+   [
+    "J102",
+    "1"
+   ],
+   [
+    "J103",
+    "1"
+   ],
+   [
+    "J104",
+    "1"
+   ],
+   [
+    "J105",
+    "1"
+   ],
+   [
+    "J106",
+    "1"
+   ],
+   [
+    "R102",
+    "1"
+   ],
+   [
+    "R103",
+    "1"
+   ],
+   [
+    "R104",
+    "1"
+   ],
+   [
+    "R105",
+    "1"
+   ],
+   [
+    "R109",
+    "1"
+   ],
+   [
+    "U101",
+    "8"
+   ],
+   [
+    "U102",
+    "8"
+   ],
+   [
+    "U103",
+    "13"
+   ],
+   [
+    "U103",
+    "14"
+   ],
+   [
+    "U103",
+    "16"
+   ],
+   [
+    "U104",
+    "16"
+   ],
+   [
+    "U105",
+    "5"
+   ],
+   [
+    "U106",
+    "8"
+   ],
+   [
+    "U107",
+    "8"
+   ],
+   [
+    "U108",
+    "7"
+   ],
+   [
+    "U108",
+    "8"
+   ],
+   [
+    "U109",
+    "16"
+   ],
+   [
+    "U109",
+    "9"
+   ]
+  ],
+  "VCC_T": [
+   [
+    "J107",
+    "1"
+   ],
+   [
+    "J108",
+    "1"
+   ],
+   [
+    "SW101",
+    "1"
+   ],
+   [
+    "SW102",
+    "1"
+   ],
+   [
+    "SW103",
+    "1"
+   ],
+   [
+    "SW104",
+    "1"
+   ],
+   [
+    "SW105",
+    "1"
+   ],
+   [
+    "SW106",
+    "1"
+   ],
+   [
+    "SW107",
+    "1"
+   ],
+   [
+    "SW108",
+    "1"
+   ],
+   [
+    "SW109",
+    "1"
+   ],
+   [
+    "SW110",
+    "1"
+   ],
+   [
+    "SW111",
+    "1"
+   ],
+   [
+    "SW112",
+    "1"
+   ]
+  ],
+  "data_drv": [
+   [
+    "R205",
+    "1"
+   ],
+   [
+    "R206",
+    "1"
+   ],
+   [
+    "U102",
+    "1"
+   ],
+   [
+    "U104",
+    "9"
+   ]
+  ],
+  "latch_drv": [
+   [
+    "R203",
+    "1"
+   ],
+   [
+    "R204",
+    "1"
+   ],
+   [
+    "U105",
+    "2"
+   ],
+   [
+    "U106",
+    "7"
+   ]
+  ],
+  "unconnected-(U103-~{Q7}-Pad7)": [
+   [
+    "U103",
+    "7"
+   ]
+  ],
+  "unconnected-(U104-~{Q7}-Pad7)": [
+   [
+    "U104",
+    "7"
+   ]
+  ],
+  "unconnected-(U108-~{Q}-Pad3)": [
+   [
+    "U108",
+    "3"
+   ]
+  ],
+  "unconnected-(U109-Q0-Pad14)": [
+   [
+    "U109",
+    "14"
+   ]
+  ],
+  "unconnected-(U109-Q1-Pad13)": [
+   [
+    "U109",
+    "13"
+   ]
+  ],
+  "unconnected-(U109-Q2-Pad12)": [
+   [
+    "U109",
+    "12"
+   ]
+  ],
+  "unconnected-(U109-Q3-Pad11)": [
+   [
+    "U109",
+    "11"
+   ]
+  ],
+  "~{rst}": [
+   [
+    "U103",
+    "1"
+   ],
+   [
+    "U104",
+    "1"
+   ],
+   [
+    "U105",
+    "4"
+   ],
+   [
+    "U108",
+    "6"
+   ],
+   [
+    "U109",
+    "1"
+   ],
+   [
+    "U109",
+    "10"
+   ],
+   [
+    "U109",
+    "7"
+   ]
+  ]
+ },
+ "renames": {
+  "/keyboard/BTNs0": "BTNs0",
+  "/keyboard/BTNs1": "BTNs1",
+  "/keyboard/BTNs10": "BTNs10",
+  "/keyboard/BTNs11": "BTNs11",
+  "/keyboard/BTNs2": "BTNs2",
+  "/keyboard/BTNs3": "BTNs3",
+  "/keyboard/BTNs4": "BTNs4",
+  "/keyboard/BTNs5": "BTNs5",
+  "/keyboard/BTNs6": "BTNs6",
+  "/keyboard/BTNs7": "BTNs7",
+  "/keyboard/BTNs8": "BTNs8",
+  "/keyboard/BTNs9": "BTNs9",
+  "/tile/BTNs_L0": "BTNs_L0",
+  "/tile/BTNs_L1": "BTNs_L1",
+  "/tile/BTNs_L10": "BTNs_L10",
+  "/tile/BTNs_L11": "BTNs_L11",
+  "/tile/BTNs_L2": "BTNs_L2",
+  "/tile/BTNs_L3": "BTNs_L3",
+  "/tile/BTNs_L4": "BTNs_L4",
+  "/tile/BTNs_L5": "BTNs_L5",
+  "/tile/BTNs_L6": "BTNs_L6",
+  "/tile/BTNs_L7": "BTNs_L7",
+  "/tile/BTNs_L8": "BTNs_L8",
+  "/tile/BTNs_L9": "BTNs_L9",
+  "/tile/B_W": "B_W",
+  "/tile/B_W_drv": "B_W_drv",
+  "/tile/B_clk": "B_clk",
+  "/tile/B_data": "B_data",
+  "/tile/B_first": "B_first",
+  "/tile/B_latch": "B_latch",
+  "/tile/L_clk": "L_clk",
+  "/tile/L_clk_drv": "L_clk_drv",
+  "/tile/L_data": "L_data",
+  "/tile/L_endrow": "L_endrow",
+  "/tile/L_latch": "L_latch",
+  "/tile/R_data": "R_data",
+  "/tile/R_latch": "R_latch",
+  "/tile/T_W": "T_W",
+  "/tile/T_clk": "T_clk",
+  "/tile/T_clk_drv": "T_clk_drv",
+  "/tile/T_data": "T_data",
+  "/tile/T_endcol": "T_endcol",
+  "/tile/T_latch": "T_latch",
+  "/tile/counter/~{rst}": "~{rst}",
+  "/tile/data_drv": "data_drv",
+  "/tile/latch_drv": "latch_drv"
+ },
+ "source": "kicad-cli sch export netlist of /home/marco/Documents/OrturanoLabs/isomorphic_keyboard-revc/hardware/kicad/tile/isomorphic_tile.kicad_sch",
+ "title": "rev-A tile (KiCad export via kicad-cli, hierarchical)"
+}

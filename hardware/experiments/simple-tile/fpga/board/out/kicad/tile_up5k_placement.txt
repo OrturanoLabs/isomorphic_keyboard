@@ -1,0 +1,7 @@
+== up5k: Single-PCB FPGA tile - iCE40UP5K-SG48 fallback (placement prototype)
+keys: 12 at lattice P=18.3597 R=15.9 (EdgeTrim 3)
+chassis pads: 19 at connector-next tier coords (14 tile signals + VCC + GND; the 3 GND_DET_* presence pads keep their refs/roles but are bonded to tile GND on this removable tile)
+FPGA iCE40UP5K-SG48I: NO PLACE FOUND (largest all-free square ~7.50 mm side on a 0.5 mm samples grid; FPGA courtyard would need 7.6 x 7.6 mm + 0.25 gap)
+NOTE: board emission continues WITHOUT the FPGA body (placement-failure review copy; not buildable)
+parts placed: 70; unplaced: []
+nets: 36, unrouted - placement prototype (0 tracks by design)

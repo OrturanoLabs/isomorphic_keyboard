@@ -1,0 +1,172 @@
+{
+ "date": "2026-10-12",
+ "board": "2-layer tile, TMM per BOM",
+ "lines": [
+  {
+   "device": "SN74LVC165A",
+   "mpn": "SN74LVC165APW (TI)",
+   "package": "TSSOP-16",
+   "qty_variant_a": 2,
+   "qty_variant_a2": 2,
+   "qty_variant_b2": 2,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LV161A",
+   "mpn": "SN74LV161APW (TI)",
+   "package": "TSSOP-16",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 1,
+   "qty_variant_b2": 0,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LVC2G126",
+   "mpn": "SN74LVC2G126DCTR (TI)",
+   "package": "SM8",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 0,
+   "qty_variant_b2": 0,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LVC2G125",
+   "mpn": "SN74LVC2G125DCTR (TI)",
+   "package": "SM8",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 0,
+   "qty_variant_b2": 0,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LVC2G08",
+   "mpn": "SN74LVC2G08DCTR (TI)",
+   "package": "SM8",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 1,
+   "qty_variant_b2": 0,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LVC2G32",
+   "mpn": "SN74LVC2G32DCTR (TI)",
+   "package": "SM8",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 1,
+   "qty_variant_b2": 0,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LVC2G74",
+   "mpn": "SN74LVC2G74DCTR (TI)",
+   "package": "SM8",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 1,
+   "qty_variant_b2": 0,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LVC2G241",
+   "mpn": "SN74LVC2G241DCTR (TI)",
+   "package": "SM8",
+   "qty_variant_a": 0,
+   "qty_variant_a2": 2,
+   "qty_variant_b2": 0,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SN74LVC1G04",
+   "mpn": "SN74LVC1G04DBVR (TI)",
+   "package": "SOT-23-5",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 1,
+   "qty_variant_b2": 1,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "ATF22LV10C-10",
+   "mpn": "ATF22LV10C-10XU (Microchip)",
+   "package": "TSSOP-24",
+   "qty_variant_a": 0,
+   "qty_variant_a2": 0,
+   "qty_variant_b2": 1,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "R_10k",
+   "mpn": "RC0603FR-0710KL (Yageo) or equiv.",
+   "package": "0603",
+   "qty_variant_a": 21,
+   "qty_variant_a2": 21,
+   "qty_variant_b2": 21,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "R_100",
+   "mpn": "RC0603FR-07100RL or equiv.",
+   "package": "0603",
+   "qty_variant_a": 12,
+   "qty_variant_a2": 12,
+   "qty_variant_b2": 12,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "R_33",
+   "mpn": "RC0603FR-0733RL or equiv.",
+   "package": "0603",
+   "qty_variant_a": 7,
+   "qty_variant_a2": 7,
+   "qty_variant_b2": 7,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "C_100n",
+   "mpn": "CC0603KRX7R9BB104 or equiv.",
+   "package": "0603",
+   "qty_variant_a": 9,
+   "qty_variant_a2": 9,
+   "qty_variant_b2": 4,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "C_4u7",
+   "mpn": "CL31A475KAHNNNE or equiv.",
+   "package": "1206",
+   "qty_variant_a": 1,
+   "qty_variant_a2": 1,
+   "qty_variant_b2": 1,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  },
+  {
+   "device": "SW",
+   "mpn": "Kailh CPG151101S11 (MX hotswap socket)",
+   "package": "-",
+   "qty_variant_a": 12,
+   "qty_variant_a2": 12,
+   "qty_variant_b2": 12,
+   "unit_price_usd": "unknown",
+   "price_evidence": "distributor fetches blocked from this host 2026-10-12 (digikey Cloudflare, mouser captcha, lcsc soft-block, newark/microchipdirect fetch errors)"
+  }
+ ],
+ "totals_ics": {
+  "variant_a": 9,
+  "variant_a2": 9,
+  "variant_b2": 4
+ },
+ "note": "chassis springs/pogo hardware is costed by the connectors study, not here; programming fixture for ATF22LV10C: see results/programmer_gap.md"
+}

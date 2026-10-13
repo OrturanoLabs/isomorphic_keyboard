@@ -1,0 +1,23 @@
+{
+ "coupon_agg19": {
+  "errors": 0,
+  "warnings": 248,
+  "unconnected_items": 0,
+  "gate_fail": false,
+  "note": "coupons have no schematic/ERC: concept, not fab-ready"
+ },
+ "coupon_mezz20": {
+  "errors": 0,
+  "warnings": 28,
+  "unconnected_items": 0,
+  "gate_fail": false,
+  "note": "coupons have no schematic/ERC: concept, not fab-ready"
+ },
+ "coupon_backplane": {
+  "errors": 0,
+  "warnings": 201,
+  "unconnected_items": 0,
+  "gate_fail": false,
+  "note": "coupons have no schematic/ERC: concept, not fab-ready"
+ }
+}

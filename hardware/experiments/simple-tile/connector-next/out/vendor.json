@@ -1,0 +1,54 @@
+{
+ "harwin_s1971": {
+  "fact": "S1971-46R: free height 4.55 mm, top-down deflection 0.3..0.6 mm, body 4.63 x 3.70 x 4.55 mm, 14 A",
+  "url": "https://www.harwin.com/products/S1971-46R"
+ },
+ "harwin_s1961": {
+  "fact": "S1961-46R: free height 3.55 mm, top-down deflection 0.2..0.6 mm, body 4.63 x 3.70 x 3.55 mm, 14 A",
+  "url": "https://www.harwin.com/products/S1961-46R"
+ },
+ "harwin_s1941": {
+  "fact": "S1941-42R: free height 7.3 mm, deflection 0.3..0.8 mm, 9.59 x 5.70 x 7.25 mm, 9 A, gold contact",
+  "url": "https://www.harwin.com/products/S1941-42R"
+ },
+ "harwin_range": {
+  "fact": "PD013 EZi SMT spring contact datasheet: free height range 1.23..10.00 mm; compact (4.63x3.70) body tops out at 4.55 mm (S1971) in the fetched range",
+  "url": "https://content.harwin.com/asset/b78b8265-eabd-4ec9-b6e1-cca806faa177/PD013-Product-Datasheet-SPRING-CONTACTS-SMT-Spring-Contacts-EZi.pdf"
+ },
+ "hirose_df12": {
+  "fact": "DF12 series page bears the banner 'Planned End of Life' (fetched 2026-10-12); stacks 3/3.5/4/5 mm",
+  "url": "https://www.hirose.com/en/product/series/DF12"
+ },
+ "hirose_df40": {
+  "fact": "DF40 series page (no EOL banner): 0.4 mm pitch, mated heights 1.5/2/2.5/3/3.5/4 mm; NOT stocked in the KiCad 10.0.6 footprint library -> custom footprint required",
+  "url": "https://www.hirose.com/en/product/series/DF40"
+ },
+ "hirose_bm24": {
+  "fact": "BM24 series page bears the banner 'Not recommended for new design' (fetched 2026-10-12); 0.35 mm, 0.8 mm stack",
+  "url": "https://www.hirose.com/en/product/series/BM24"
+ },
+ "harwin_gecko": {
+  "fact": "Gecko (G125) family page, actively marketed, no EOL notice: 'Board-mounted connectors, Surface Mount or Throughboard'",
+  "url": "https://www.harwin.com/hri/gecko/"
+ },
+ "harwin_drg_03073": {
+  "fact": "S1971 technical drawing (RECOMMENDED PCB PAD LAYOUT 2.25 x 3.70 mm, positioned text)",
+  "url": "https://content.harwin.com/asset/350d2138-67fd-4d7e-bfe2-9ecb2bf0c9fc/DRG-03073-Technical-Drawing-Datasheet-S1971R-pdf.pdf"
+ },
+ "harwin_drg_03072": {
+  "fact": "S1961 technical drawing (same 2.25 x 3.70 mm recommended layout; body 4.63 x 3.70)",
+  "url": "https://content.harwin.com/asset/f4cd037e-0829-4c4c-a570-f0dd6472082e/DRG-03072-Technical-Drawing-Datasheet-S1961R-pdf.pdf"
+ },
+ "hirose_df40_plug": {
+  "fact": "DF40C-20DP-0.4V(51) official part page (CL0684-4010-9-51): 20 pos, 0.4 mm SMT, mated-height steps 1.5/2/2.5/3.5 mm; no EOL banner",
+  "url": "https://www.hirose.com/en/product/p/CL0684-4010-9-51"
+ },
+ "hirose_df40_rec35": {
+  "fact": "DF40HC(3.5)-20DS-0.4V(51) receptacle (CL0684-4188-0-51): the 3.5 mm stack mate; its STEP download was rate-limited (403) this session",
+  "url": "https://www.hirose.com/en/product/p/CL0684-4188-0-51"
+ },
+ "gecko_drg_male": {
+  "fact": "DRG-00182 (G125-MV male vertical): dims table A..E for 20 pos = 16.45/15.05/13.65/13.75/11.25 mm; mated stack height NOT stated on pages fetched in this run",
+  "url": "https://content.harwin.com/m/62fd8add13144f50/original/DRG-00182-Technical-Drawing-Datasheet-G125-MVXXX05LXP-pdf.pdf"
+ }
+}

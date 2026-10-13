@@ -1,11 +1,16 @@
 # Simple-tile logic experiments: discrete vs 22LV10 glue vs ATF1502ASV
 
+**Comparison reference.** Active choices are now FPGA plus the discrete baseline;
+see [current development](../../../../docs/architecture/current-development.md).
+The `timing/` database remains shared validation input. SPLD/CPLD models and fuse
+fixtures preserve findings but are not active implementation targets.
+
 Scope answered here: for the 16-tile, 20 MHz shift-clock, drop-in chassis with no
 tile-side MCU/LED/Hall and a strong open-flow preference, compare
 
 - **A – optimized discrete:** rev-A glue set rebuilt in LVC (+ SN74LV161A counter,
   see below), two 74LVC165A.
-- **B – ATF22LV10C glue + two 74LVC165A:** the committed `hardware/gal/tile_glue.pld`
+- **B – ATF22LV10C glue + two 74LVC165A:** the preserved `pld/tile_glue_golden.pld`
   (variant **B1**) and a corrected true-tri-state variant (variant **B2**).
 - **C – ATF1502ASV full tile** (glue + both shift registers inside the CPLD).
 

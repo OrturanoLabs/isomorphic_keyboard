@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="420" viewBox="0 0 210.000 420.000" font-family="monospace">
+<rect x="10" y="264.0" width="46" height="96.0" fill="#dcb" stroke="#000" stroke-width="0.3"/>
+<text x="112.000" y="316.000" font-size="2.2" text-anchor="start" fill="#000">chassis board (passive backplane) z=0..1.6</text>
+<rect x="10" y="183.4" width="46" height="80.6" fill="#bba" stroke="#000" stroke-width="0.3"/>
+<rect x="64" y="174.4" width="46" height="89.6" fill="#a99" stroke="#000" stroke-width="0.3"/>
+<text x="114.000" y="187.444" font-size="1.8" text-anchor="start" fill="#000">SIG rail +1.34 mm</text>
+<text x="114.000" y="152.444" font-size="1.8" text-anchor="start" fill="#000">GND rail +1.49 mm (tier offset +0.15)</text>
+<rect x="10" y="-89.6" width="46" height="273.0" fill="#fd6" stroke="#000" stroke-width="0.3"/>
+<rect x="64" y="-98.6" width="46" height="273.0" fill="#fa4" stroke="#000" stroke-width="0.3"/>
+<text x="114.000" y="-138.556" font-size="1.8" text-anchor="start" fill="#000">S1971-46R springs free 4.55 mm; GND reach &gt; SIG reach by 0.15 mm (stagger)</text>
+<rect x="10" y="-62.6" width="46" height="96.0" fill="#9c9" stroke="#000" stroke-width="0.3"/>
+<text x="114.000" y="-10.556" font-size="2.2" text-anchor="start" fill="#000">tile PCB 1.6 mm; tile bottom at 5.44 mm</text>
+<rect x="130" y="33.4" width="46" height="296.6" fill="rgba(255,80,0,0.30)" stroke="#000" stroke-width="0.3"/>
+<rect x="140" y="33.4" width="46" height="176.6" fill="rgba(255,150,0,0.45)" stroke="#000" stroke-width="0.3"/>
+<text x="114.000" y="181.734" font-size="1.8" text-anchor="start" fill="#000">socket bound 4.94 mm / model 2.94 mm (must clear chassis board)</text>
+<text x="10.000" y="18.000" font-size="12" text-anchor="start" fill="#000">assembly cross-section x-z (mm, scale exaggerated): staggered tiered rails, spring reach, tile bottom clearance</text>
+<text x="10.000" y="34.000" font-size="11" text-anchor="start" fill="#a00">NOTE: produced as parametric SVG - OpenSCAD is NOT INSTALLED on this host; flagged honestly, no 3D render claimed</text>
+</svg>

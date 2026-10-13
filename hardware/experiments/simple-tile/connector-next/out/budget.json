@@ -1,0 +1,476 @@
+{
+ "slot_map": {
+  "shape": "4x4",
+  "slots": [
+   [
+    0,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    3
+   ]
+  ],
+  "why": "16 tiles = acceptance field"
+ },
+ "budget": {
+  "reva_directional_floor": 28,
+  "aggregated_reva": 19,
+  "aggregated_revb_perleg_Rs": 21,
+  "revb_series_table_matches_R201_to_R207": true,
+  "revb_split_legs_are_reva_merged_pins": true,
+  "derivation": {
+   "unique_nets_reva": 16,
+   "fold": "4 plain GND pads -> 1 GND contact; 3 detect-GND pads stay separate contacts",
+   "arithmetic": "14 signal nets + VCC + GND + 3 dedicated detect-GND = 19 (rev A); + T_latch + R_data splits = 21 (rev B with per-leg series resistors)"
+  },
+  "detstraps_removed": true,
+  "detstrap_note": "baseline study's DET_T/DET_L/DET_B strap pairs (+6 pads, pull-up electronics on the backplane) are removed: T_endcol/L_endrow/B_first already deliver one detection per direction; no extra electronics kept"
+ },
+ "provenance": {
+  "aggregated_reva": {
+   "unique_nets_reva": 16,
+   "gnd_plain_folded": [
+    "J102.8",
+    "J103.8",
+    "J101.6",
+    "J104.6"
+   ],
+   "det_ground_order": [
+    "GND_DET_T (J102.5)",
+    "GND_DET_B (J103.4)",
+    "GND_DET_R (J104.4)"
+   ]
+  },
+  "aggregated_revb": {
+   "unique_nets_reva": 16,
+   "gnd_plain_folded": [
+    "J102.8",
+    "J103.8",
+    "J101.6",
+    "J104.6"
+   ],
+   "det_ground_order": [
+    "GND_DET_T (J102.5)",
+    "GND_DET_B (J103.4)",
+    "GND_DET_R (J104.4)"
+   ]
+  }
+ },
+ "contacts_reva_19": [
+  {
+   "contact": "B_W",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.7"
+   ]
+  },
+  {
+   "contact": "B_clk",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.2",
+    "J104.2"
+   ]
+  },
+  {
+   "contact": "B_data",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.3",
+    "J104.3"
+   ]
+  },
+  {
+   "contact": "B_first",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.5"
+   ]
+  },
+  {
+   "contact": "B_latch",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.6"
+   ]
+  },
+  {
+   "contact": "L_clk",
+   "kind": "signal",
+   "reva_pins": [
+    "J101.2"
+   ]
+  },
+  {
+   "contact": "L_data",
+   "kind": "signal",
+   "reva_pins": [
+    "J101.3"
+   ]
+  },
+  {
+   "contact": "L_endrow",
+   "kind": "signal",
+   "reva_pins": [
+    "J101.4"
+   ]
+  },
+  {
+   "contact": "L_latch",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.6",
+    "J101.5"
+   ]
+  },
+  {
+   "contact": "R_latch",
+   "kind": "signal",
+   "reva_pins": [
+    "J104.5"
+   ]
+  },
+  {
+   "contact": "T_W",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.7"
+   ]
+  },
+  {
+   "contact": "T_clk",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.2"
+   ]
+  },
+  {
+   "contact": "T_data",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.3"
+   ]
+  },
+  {
+   "contact": "T_endcol",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.4"
+   ]
+  },
+  {
+   "contact": "VCC",
+   "kind": "power",
+   "reva_pins": [
+    "J102.1",
+    "J103.1",
+    "J101.1",
+    "J104.1"
+   ]
+  },
+  {
+   "contact": "GND",
+   "kind": "power",
+   "reva_pins": [
+    "J102.8",
+    "J103.8",
+    "J101.6",
+    "J104.6"
+   ]
+  },
+  {
+   "contact": "GND_DET_T",
+   "kind": "dedicated detect GND",
+   "reva_pins": [
+    "J102.5"
+   ],
+   "serves": "above neighbour's B_first",
+   "note": "same GND net on the tile; separate physical contact; backplane trace bonds to GND only through the removable tile's copper"
+  },
+  {
+   "contact": "GND_DET_B",
+   "kind": "dedicated detect GND",
+   "reva_pins": [
+    "J103.4"
+   ],
+   "serves": "below neighbour's T_endcol",
+   "note": "same GND net on the tile; separate physical contact; backplane trace bonds to GND only through the removable tile's copper"
+  },
+  {
+   "contact": "GND_DET_R",
+   "kind": "dedicated detect GND",
+   "reva_pins": [
+    "J104.4"
+   ],
+   "serves": "right neighbour's L_endrow",
+   "note": "same GND net on the tile; separate physical contact; backplane trace bonds to GND only through the removable tile's copper"
+  }
+ ],
+ "contacts_revb_21": [
+  {
+   "contact": "B_W",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.7"
+   ]
+  },
+  {
+   "contact": "B_clk",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.2",
+    "J104.2"
+   ]
+  },
+  {
+   "contact": "B_data",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.3"
+   ]
+  },
+  {
+   "contact": "B_first",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.5"
+   ]
+  },
+  {
+   "contact": "B_latch",
+   "kind": "signal",
+   "reva_pins": [
+    "J103.6"
+   ]
+  },
+  {
+   "contact": "L_clk",
+   "kind": "signal",
+   "reva_pins": [
+    "J101.2"
+   ]
+  },
+  {
+   "contact": "L_data",
+   "kind": "signal",
+   "reva_pins": [
+    "J101.3"
+   ]
+  },
+  {
+   "contact": "L_endrow",
+   "kind": "signal",
+   "reva_pins": [
+    "J101.4"
+   ]
+  },
+  {
+   "contact": "L_latch",
+   "kind": "signal",
+   "reva_pins": [
+    "J101.5"
+   ]
+  },
+  {
+   "contact": "R_data",
+   "kind": "signal",
+   "reva_pins": [
+    "J104.3"
+   ]
+  },
+  {
+   "contact": "R_latch",
+   "kind": "signal",
+   "reva_pins": [
+    "J104.5"
+   ]
+  },
+  {
+   "contact": "T_W",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.7"
+   ]
+  },
+  {
+   "contact": "T_clk",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.2"
+   ]
+  },
+  {
+   "contact": "T_data",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.3"
+   ]
+  },
+  {
+   "contact": "T_endcol",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.4"
+   ]
+  },
+  {
+   "contact": "T_latch",
+   "kind": "signal",
+   "reva_pins": [
+    "J102.6"
+   ]
+  },
+  {
+   "contact": "VCC",
+   "kind": "power",
+   "reva_pins": [
+    "J102.1",
+    "J103.1",
+    "J101.1",
+    "J104.1"
+   ]
+  },
+  {
+   "contact": "GND",
+   "kind": "power",
+   "reva_pins": [
+    "J102.8",
+    "J103.8",
+    "J101.6",
+    "J104.6"
+   ]
+  },
+  {
+   "contact": "GND_DET_T",
+   "kind": "dedicated detect GND",
+   "reva_pins": [
+    "J102.5"
+   ],
+   "serves": "above neighbour's B_first",
+   "note": "same GND net on the tile; separate physical contact; backplane trace bonds to GND only through the removable tile's copper"
+  },
+  {
+   "contact": "GND_DET_B",
+   "kind": "dedicated detect GND",
+   "reva_pins": [
+    "J103.4"
+   ],
+   "serves": "below neighbour's T_endcol",
+   "note": "same GND net on the tile; separate physical contact; backplane trace bonds to GND only through the removable tile's copper"
+  },
+  {
+   "contact": "GND_DET_R",
+   "kind": "dedicated detect GND",
+   "reva_pins": [
+    "J104.4"
+   ],
+   "serves": "right neighbour's L_endrow",
+   "note": "same GND net on the tile; separate physical contact; backplane trace bonds to GND only through the removable tile's copper"
+  }
+ ],
+ "fanout_counterexample": {
+  "fused_truth_all_17_states_ok": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "fused_inputs_sharing_node_with_other_tiles": 36,
+  "dedicated_inputs_sharing_node_with_other_tiles": 0,
+  "fault_sweep": {
+   "cases": 816,
+   "worst_dedicated_false_puts": 1,
+   "worst_fused_false_puts": 3,
+   "worst_case_example": {
+    "removed": [
+     0,
+     1
+    ],
+    "fault": [
+     [
+      0,
+      0
+     ],
+     "T_endcol"
+    ],
+    "false_dedicated": 1,
+    "false_fused": 3
+   },
+   "gap": 2
+  }
+ },
+ "checks_summary": {
+  "ok": 21,
+  "total": 21
+ }
+}

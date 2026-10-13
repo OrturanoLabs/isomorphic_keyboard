@@ -1,0 +1,55 @@
+== mut_flagswap (expect fail) ==
+FAIL [883]: DUT dout != expected stream bit
+FAIL [883]: DUT dout != REF dout
+FAIL [928]: DUT dout != expected stream bit
+FAIL [928]: DUT dout != REF dout
+FAIL [938]: DUT B_W != expected flag (post-edge)
+FAIL [974]: DUT B_W != expected flag (pre-edge)
+FAIL [984]: DUT B_W != expected flag (post-edge)
+FAIL [1019]: DUT B_W != expected flag (pre-edge)
+FAIL [1029]: DUT B_W != expected flag (post-edge)
+FAIL [1064]: DUT B_W != expected flag (pre-edge)
+FAIL [1074]: DUT B_W != expected flag (post-edge)
+FAIL [1109]: DUT B_W != expected flag (pre-edge)
+FAIL [1119]: DUT B_W != expected flag (post-edge)
+FAIL [1154]: DUT B_W != expected flag (pre-edge)
+FAIL [1164]: DUT B_W != expected flag (post-edge)
+FAIL [1199]: DUT B_W != expected flag (pre-edge)
+FAIL [1209]: DUT B_W != expected flag (post-edge)
+FAIL [1244]: DUT B_W != expected flag (pre-edge)
+FAIL [1254]: DUT B_W != expected flag (post-edge)
+FAIL [1289]: DUT B_W != expected flag (pre-edge)
+FAIL [1299]: DUT B_W != expected flag (post-edge)
+FAIL [1334]: DUT B_W != expected flag (pre-edge)
+FAIL [1344]: DUT B_W != expected flag (post-edge)
+FAIL [1379]: DUT B_W != expected flag (pre-edge)
+FAIL [1389]: DUT B_W != expected flag (post-edge)
+FAIL [1424]: DUT B_W != expected flag (pre-edge)
+FAIL [1434]: DUT B_W != expected flag (post-edge)
+FAIL [1469]: DUT B_W != expected flag (pre-edge)
+FAIL [1479]: DUT B_W != expected flag (post-edge)
+FAIL [1514]: DUT B_W != expected flag (pre-edge)
+FAIL [1524]: DUT B_W != expected flag (post-edge)
+FAIL [1559]: DUT B_W != expected flag (pre-edge)
+FAIL [1569]: DUT B_W != expected flag (post-edge)
+FAIL [1604]: DUT B_W != expected flag (pre-edge)
+FAIL [1614]: DUT B_W != expected flag (post-edge)
+FAIL [1649]: DUT B_W != expected flag (pre-edge)
+FAIL [3445]: DUT dout != expected stream bit
+FAIL [3445]: DUT dout != REF dout
+FAIL [3490]: DUT dout != expected stream bit
+FAIL [3490]: DUT dout != REF dout
+FAIL [3500]: DUT B_W != expected flag (post-edge)
+FAIL [3533]: DUT: endcol=1 frame must set B_W at edge 16
+FAIL [3535]: DUT B_W != expected flag (pre-edge)
+FAIL [3545]: DUT B_W != expected flag (post-edge)
+FAIL [3580]: DUT B_W != expected flag (pre-edge)
+FAIL [3590]: DUT B_W != expected flag (post-edge)
+FAIL [3625]: DUT B_W != expected flag (pre-edge)
+FAIL [3635]: DUT B_W != expected flag (post-edge)
+FAIL [3670]: DUT B_W != expected flag (pre-edge)
+FAIL [3680]: DUT B_W != expected flag (post-edge)
+FATAL: src/tile_cpld_tb.v:376: CPLD_FIT_TB FAIL: 50 error(s) in 1180 checks
+       Time: 3713  Scope: tile_cpld_tb
+  exit=1 pass_marker=0 fail_lines=1
+  OK: mutant mut_flagswap caught (exit=1)

@@ -1,0 +1,132 @@
+[
+ {
+  "id": "B1",
+  "name": "aggregated rev-A budget is EXACTLY 19 contacts",
+  "ok": true,
+  "detail": "14 signals + VCC + GND + 3 dedicated detect-GND"
+ },
+ {
+  "id": "B2",
+  "name": "the 6 DET-strap endpoints are gone (0 extra pads, 0 extra nets)",
+  "ok": true,
+  "detail": "no extra electronics on tile or backplane"
+ },
+ {
+  "id": "B3",
+  "name": "28-contact directional rev-A floor remains valid",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "B4",
+  "name": "rev-B per-leg series R variant budget = 21 (+2 nets)",
+  "ok": true,
+  "detail": "R201..R207; splits: T_latch (J102.6) off L_latch, R_data (J104.3) off B_data"
+ },
+ {
+  "id": "RA-N0",
+  "name": "[RA] aggregated tile carries exactly 19 contact nets",
+  "ok": true,
+  "detail": "19"
+ },
+ {
+  "id": "RA-N1",
+  "name": "[RA] backplane node count = 16 slots x 19 pads",
+  "ok": true,
+  "detail": "304"
+ },
+ {
+  "id": "RA-C1",
+  "name": "[RA] every net stays inside a rev-A class (fully populated 4x4)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "id": "RA-C2",
+  "name": "[RA] signal nets exist on corner probes",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "RA-D1",
+  "name": "[RA] full field: all 3 detect directions correct everywhere (edges read absent)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "RA-D2",
+  "name": "[RA] removal of each of 16 slots: exactly the 3 neighbour detections flip to absent (fewer at edges), all other detects stable, all signals in class",
+  "ok": true,
+  "detail": "slots 36/36 flips"
+ },
+ {
+  "id": "RA-P1",
+  "name": "[RA] no phantom path: detect stub floats when the neighbour is out (no GND_PLANE, no GND names at all)",
+  "ok": true,
+  "detail": [
+   "T_endcol"
+  ]
+ },
+ {
+  "id": "RB-N0",
+  "name": "[RB] aggregated tile carries exactly 21 contact nets",
+  "ok": true,
+  "detail": "21"
+ },
+ {
+  "id": "RB-N1",
+  "name": "[RB] backplane node count = 16 slots x 21 pads",
+  "ok": true,
+  "detail": "336"
+ },
+ {
+  "id": "RB-C1",
+  "name": "[RB] every net stays inside a rev-A class (fully populated 4x4)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "id": "RB-C2",
+  "name": "[RB] signal nets exist on corner probes",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "RB-D1",
+  "name": "[RB] full field: all 3 detect directions correct everywhere (edges read absent)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "RB-D2",
+  "name": "[RB] removal of each of 16 slots: exactly the 3 neighbour detections flip to absent (fewer at edges), all other detects stable, all signals in class",
+  "ok": true,
+  "detail": "slots 36/36 flips"
+ },
+ {
+  "id": "RB-P1",
+  "name": "[RB] no phantom path: detect stub floats when the neighbour is out (no GND_PLANE, no GND names at all)",
+  "ok": true,
+  "detail": [
+   "T_endcol"
+  ]
+ },
+ {
+  "id": "B5",
+  "name": "SCOPE: 19 is the DERIVED SCHEME budget, NOT a global floor: the donor-fan-out variant reaches 18 and its detect truth table is CORRECT in all 17 occupancy states (honest, evidence-first)",
+  "ok": true,
+  "detail": "fused = 1 donor contact fans to 3 neighbour detect inputs"
+ },
+ {
+  "id": "B6",
+  "name": "BUT fan-out merges presence channels: 36 of 48 detect inputs end up in backplane nodes SHARED with other tiles' detect inputs (dedicated scheme: 0) - documented merge; dedicated chosen for channel independence",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "B7",
+  "name": "single-point GND fault amplification PROVEN by exhaustive sweep: fault [(0, 0), 'T_endcol'] with slot (0, 1) removed falsifies 3 independent detections fused vs 1 dedicated (816 cases)",
+  "ok": true,
+  "detail": "one copper fault => three tiles' detections wrong (correlated failure)"
+ }
+]

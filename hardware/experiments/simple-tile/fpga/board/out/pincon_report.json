@@ -1,0 +1,348 @@
+[
+ {
+  "variant": "GW1NZ_QN48",
+  "part": "GW1NZ-LV1QN48C6/I5",
+  "checks": [
+   {
+    "id": "GW1NZ_QN48:B1a",
+    "desc": "constraint assigns exactly the 26 tile nets",
+    "ok": true,
+    "detail": "missing=[] extra=[]"
+   },
+   {
+    "id": "GW1NZ_QN48:B1b",
+    "desc": "26 distinct pads",
+    "ok": true,
+    "detail": "26 assignments / 26 distinct"
+   },
+   {
+    "id": "GW1NZ_QN48:B2",
+    "desc": "every assigned pad is a vendor-verified user IO",
+    "ok": true,
+    "detail": "all 26 pads IO-classed"
+   },
+   {
+    "id": "GW1NZ_QN48:B3a",
+    "desc": "no tile net lands on a reserved pad (JTAG/strap/config/power)",
+    "ok": true,
+    "detail": "clash=[]"
+   },
+   {
+    "id": "GW1NZ_QN48:B3b",
+    "desc": "config/JTAG/strap pads are enumerated for the board test pads",
+    "ok": true,
+    "detail": "reserved cfg/jtag pads: ['3', '4', '42', '43', '45', '46', '48', '5', '7']"
+   },
+   {
+    "id": "GW1NZ_QN48:B4",
+    "desc": "vendor power/ground(/config-only) pad set == chipdb-missing set (power fact now sourced from the vendor pin list, not inferred)",
+    "ok": true,
+    "detail": "vendor=[1, 2, 12, 25, 26, 36, 37] empirical=[1, 2, 12, 25, 26, 36, 37]"
+   },
+   {
+    "id": "GW1NZ_QN48:B5",
+    "desc": "pad pull directions: 5xUP; 4xDOWN only where the silicon can",
+    "ok": true,
+    "detail": "pulls consistent"
+   },
+   {
+    "id": "GW1NZ_QN48:B6",
+    "desc": "key pull strategy = pad-down",
+    "ok": true,
+    "detail": "key pulls on pads: ['DOWN']"
+   },
+   {
+    "id": "GW1NZ_QN48:H1",
+    "desc": "excluded-hazard/LED pads unused by tile nets",
+    "ok": true,
+    "detail": "used=[] excluded=['9']"
+   },
+   {
+    "id": "GW1NZ_QN48:S1",
+    "desc": "pin DB cites vendor primary sources (URL + sha256), pin list present",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "pins_assigned": {
+   "b_first_pin": {
+    "pad": 40,
+    "pad_pull": "UP"
+   },
+   "b_latch_pin": {
+    "pad": 22,
+    "pad_pull": "DOWN"
+   },
+   "b_w_pin": {
+    "pad": 27,
+    "pad_pull": null
+   },
+   "clk_pin": {
+    "pad": 47,
+    "pad_pull": "UP"
+   },
+   "dout_pin": {
+    "pad": 30,
+    "pad_pull": null
+   },
+   "keys[0]": {
+    "pad": 8,
+    "pad_pull": "DOWN"
+   },
+   "keys[10]": {
+    "pad": 33,
+    "pad_pull": "DOWN"
+   },
+   "keys[11]": {
+    "pad": 34,
+    "pad_pull": "DOWN"
+   },
+   "keys[1]": {
+    "pad": 10,
+    "pad_pull": "DOWN"
+   },
+   "keys[2]": {
+    "pad": 11,
+    "pad_pull": "DOWN"
+   },
+   "keys[3]": {
+    "pad": 13,
+    "pad_pull": "DOWN"
+   },
+   "keys[4]": {
+    "pad": 16,
+    "pad_pull": "DOWN"
+   },
+   "keys[5]": {
+    "pad": 17,
+    "pad_pull": "DOWN"
+   },
+   "keys[6]": {
+    "pad": 18,
+    "pad_pull": "DOWN"
+   },
+   "keys[7]": {
+    "pad": 20,
+    "pad_pull": "DOWN"
+   },
+   "keys[8]": {
+    "pad": 21,
+    "pad_pull": "DOWN"
+   },
+   "keys[9]": {
+    "pad": 23,
+    "pad_pull": "DOWN"
+   },
+   "l_clk_pin": {
+    "pad": 19,
+    "pad_pull": null
+   },
+   "l_data_pin": {
+    "pad": 24,
+    "pad_pull": "DOWN"
+   },
+   "l_endrow_pin": {
+    "pad": 41,
+    "pad_pull": "UP"
+   },
+   "latcho_pin": {
+    "pad": 31,
+    "pad_pull": null
+   },
+   "r_latch_pin": {
+    "pad": 32,
+    "pad_pull": "DOWN"
+   },
+   "t_clk_pin": {
+    "pad": 35,
+    "pad_pull": null
+   },
+   "t_data_pin": {
+    "pad": 28,
+    "pad_pull": "DOWN"
+   },
+   "t_endcol_pin": {
+    "pad": 39,
+    "pad_pull": "UP"
+   },
+   "t_w_pin": {
+    "pad": 38,
+    "pad_pull": "UP"
+   }
+  },
+  "ok": true
+ },
+ {
+  "variant": "UP5K_SG48",
+  "part": "iCE40UP5K-SG48I (fallback board variant)",
+  "checks": [
+   {
+    "id": "UP5K_SG48:B1a",
+    "desc": "constraint assigns exactly the 26 tile nets",
+    "ok": true,
+    "detail": "missing=[] extra=[]"
+   },
+   {
+    "id": "UP5K_SG48:B1b",
+    "desc": "26 distinct pads",
+    "ok": true,
+    "detail": "26 assignments / 26 distinct"
+   },
+   {
+    "id": "UP5K_SG48:B2",
+    "desc": "every assigned pad is a vendor-verified user IO",
+    "ok": true,
+    "detail": "all 26 pads IO-classed"
+   },
+   {
+    "id": "UP5K_SG48:B3a",
+    "desc": "no tile net lands on a reserved pad (JTAG/strap/config/power)",
+    "ok": true,
+    "detail": "clash=[]"
+   },
+   {
+    "id": "UP5K_SG48:B3b",
+    "desc": "config/JTAG/strap pads are enumerated for the board test pads",
+    "ok": true,
+    "detail": "reserved cfg/jtag pads: ['14', '15', '16', '17', '7', '8']"
+   },
+   {
+    "id": "UP5K_SG48:B4",
+    "desc": "vendor power/ground(/config-only) pad set == chipdb-missing set (power fact now sourced from the vendor pin list, not inferred)",
+    "ok": true,
+    "detail": "vendor=[1, 5, 7, 8, 22, 24, 29, 30, 33] empirical=[1, 5, 7, 8, 22, 24, 29, 30, 33]"
+   },
+   {
+    "id": "UP5K_SG48:B5",
+    "desc": "pad pull directions: 5xUP; 4xDOWN only where the silicon can",
+    "ok": true,
+    "detail": "pulls consistent"
+   },
+   {
+    "id": "UP5K_SG48:B6",
+    "desc": "key pull strategy = external-10k",
+    "ok": true,
+    "detail": "key pulls on pads: [None]"
+   },
+   {
+    "id": "UP5K_SG48:H1",
+    "desc": "excluded-hazard/LED pads unused by tile nets",
+    "ok": true,
+    "detail": "used=[] excluded=['39', '40', '41']"
+   },
+   {
+    "id": "UP5K_SG48:S1",
+    "desc": "pin DB cites vendor primary sources (URL + sha256), pin list present",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "pins_assigned": {
+   "b_first_pin": {
+    "pad": 26,
+    "pad_pull": "UP"
+   },
+   "b_latch_pin": {
+    "pad": 32,
+    "pad_pull": null
+   },
+   "b_w_pin": {
+    "pad": 43,
+    "pad_pull": null
+   },
+   "clk_pin": {
+    "pad": 35,
+    "pad_pull": "UP"
+   },
+   "dout_pin": {
+    "pad": 42,
+    "pad_pull": null
+   },
+   "keys[0]": {
+    "pad": 2,
+    "pad_pull": null
+   },
+   "keys[10]": {
+    "pad": 20,
+    "pad_pull": null
+   },
+   "keys[11]": {
+    "pad": 44,
+    "pad_pull": null
+   },
+   "keys[1]": {
+    "pad": 3,
+    "pad_pull": null
+   },
+   "keys[2]": {
+    "pad": 4,
+    "pad_pull": null
+   },
+   "keys[3]": {
+    "pad": 9,
+    "pad_pull": null
+   },
+   "keys[4]": {
+    "pad": 10,
+    "pad_pull": null
+   },
+   "keys[5]": {
+    "pad": 11,
+    "pad_pull": null
+   },
+   "keys[6]": {
+    "pad": 12,
+    "pad_pull": null
+   },
+   "keys[7]": {
+    "pad": 13,
+    "pad_pull": null
+   },
+   "keys[8]": {
+    "pad": 18,
+    "pad_pull": null
+   },
+   "keys[9]": {
+    "pad": 19,
+    "pad_pull": null
+   },
+   "l_clk_pin": {
+    "pad": 37,
+    "pad_pull": null
+   },
+   "l_data_pin": {
+    "pad": 31,
+    "pad_pull": null
+   },
+   "l_endrow_pin": {
+    "pad": 27,
+    "pad_pull": "UP"
+   },
+   "latcho_pin": {
+    "pad": 38,
+    "pad_pull": null
+   },
+   "r_latch_pin": {
+    "pad": 34,
+    "pad_pull": null
+   },
+   "t_clk_pin": {
+    "pad": 36,
+    "pad_pull": null
+   },
+   "t_data_pin": {
+    "pad": 28,
+    "pad_pull": null
+   },
+   "t_endcol_pin": {
+    "pad": 25,
+    "pad_pull": "UP"
+   },
+   "t_w_pin": {
+    "pad": 23,
+    "pad_pull": "UP"
+   }
+  },
+  "ok": true
+ }
+]

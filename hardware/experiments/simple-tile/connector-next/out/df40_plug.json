@@ -1,0 +1,46 @@
+{
+ "provenance": {
+  "part": "Hirose DF40C-20DP-0.4V(51), clcode CL0684-4010-9-51",
+  "series_page": "https://www.hirose.com/en/product/series/DF40",
+  "part_page": "https://www.hirose.com/en/product/p/CL0684-4010-9-51",
+  "step_zip_api": "https://www.hirose.com/api/v1/products/CL0684-4010-9-51/documents/model_3d_step/content",
+  "lifecycle": "part page lists this variant without an EOL banner (fetched 2026-10-12); the sibling -70 code is explicitly marked Discontinued, proving per-code lifecycle flags",
+  "receptacle_3p5": "DF40HC(3.5)-20DS-0.4V(51), clcode CL0684-4188-0-51 (3.5 mm stack with this plug; its STEP download was rate-limited (403) in this session - receptacle footprint NOT verified -> candidate gate retained)",
+  "stack_claim": "mated height steps 1.5/2/2.5/3.5 mm per the part page (plug 'Mated Height (Max.) 3.5 mm')",
+  "drawing_text": "2D drawing PDF (downloaded) renders all dimension text as outline curves: no machine-readable dims -> STEP used"
+ },
+ "measured": {
+  "rowsep_mm": 3.1851457863886647,
+  "foot_len_mm": 1.0551457863886702,
+  "foot_width_mm": 0.22,
+  "mean_pitch_mm": 0.3994333333333333,
+  "pin_centres_raw_z": [
+   0.59,
+   0.9848805483837144,
+   1.3848805483837152,
+   1.7848805483837151,
+   2.184880548383715,
+   2.584880548383715,
+   2.984880548383715,
+   3.384880548383715,
+   3.7848805483837147,
+   4.184880548383715
+  ]
+ },
+ "generated": {
+  "pad_w_x": 0.3,
+  "pad_l_y": 1.305,
+  "rows_y": [
+   -1.5925728931943324,
+   1.5925728931943324
+  ],
+  "pitch": 0.4,
+  "courtyard": {
+   "x0": -4.32,
+   "x1": 3.35,
+   "y0": -2.3701457863886675,
+   "y1": 2.3701457863886626
+  }
+ },
+ "note": "pad oversize is a documented allowance; CONFIRM vs the 2D drawing (outline-text PDF) before any fabrication"
+}

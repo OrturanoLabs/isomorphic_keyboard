@@ -1,0 +1,38 @@
+=== BATTERY v2 2026-10-12T16:31:11+02:00 ===
+--- keymap_check ---
+
+interface block written; 0 failures
+--- gen_circuits (19C interface) ---
+/home/marco/Documents/OrturanoLabs/isomorphic_keyboard-revc/hardware/experiments/simple-tile/discrete-spld/tools/../circuits/variant_a.json: 88 components, 74 nets
+/home/marco/Documents/OrturanoLabs/isomorphic_keyboard-revc/hardware/experiments/simple-tile/discrete-spld/tools/../circuits/variant_a2.json: 88 components, 74 nets
+/home/marco/Documents/OrturanoLabs/isomorphic_keyboard-revc/hardware/experiments/simple-tile/discrete-spld/tools/../circuits/variant_b2.json: 78 components, 53 nets
+--- galcheck truez ---
+MATCH  AR                     (vars=13)
+OVERALL: MATCH
+--- galcheck golden ---
+MATCH  AR                     (vars=13)
+OVERALL: MATCH
+--- sim suite FULL ---
+
+ALL PASS (33 configs)
+--- bom_check ---
+IC totals: revA=9 varA=9 varB2=4
+logic-glue ICs (excl. 2x 165): revA=7 varA=7 varB2=2
+
+variant A vs rev A (logic): identical function set; 74HC161 replaced by SN74LV161A (3.3V-native); debug headers J105..J108 (4x Conn_01x08) removed; J101..104 edge connectors become 28 chassis pads + 3x2 DET strap pads.
+variant B2 vs rev A: glue U101,U102,U105,U106,U107,U108,U109 (7 ICs) replaced by ONE ATF22LV10C-10; +1 SN74LVC1G04 for /PL -> net glue ICs: 2 (GAL+1G04) vs 7. Total ICs 4 vs 9.
+--- rotation_study ---
+lane-clean patterns with a >=7.8x8.3 rect (0.5mm grid): 0/64
+min pitch baseline: 18.90973856023011
+min pitch all-180: 18.90973856023011
+--- board_gen ---
+== variant_a
+  keys: 12 placed, 0 rotated 180 deg (pattern from rotation_study)
+  ICs placed: 9/9; unplaced: []
+  test points placed: 17/17
+  105 footprints placed in /home/marco/Documents/OrturanoLabs/isomorphic_keyboard-revc/hardware/experiments/simple-tile/discrete-spld/tools/../boards/variant_a/tile_variant_a.kicad_pcb
+== variant_b2
+  keys: 12 placed, 0 rotated 180 deg (pattern from rotation_study)
+  ICs placed: 3/4; unplaced: ['UB1 (Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm)']
+  test points placed: 16/16
+  93 footprints placed in /home/marco/Documents/OrturanoLabs/isomorphic_keyboard-revc/hardware/experiments/simple-tile/discrete-spld/tools/../boards/variant_b2/tile_variant_b2.kicad_pcb

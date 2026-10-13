@@ -1,0 +1,2 @@
+20 MHz burst SI: 9 case-checks pass, 15 case-checks fail (script rc=1)
+selftest: SI-SELFTEST PASS

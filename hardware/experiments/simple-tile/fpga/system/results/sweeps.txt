@@ -1,0 +1,22 @@
+# sweep tables, 20 MHz (50 ns), synthetic corners (cfg/corners.json)
+# guard: latch deassert -> first clock (xdom budget); lead: sample lead
+# high: clock high phase (W-switch containment); scale: stress x100
+# columns: corner shape | min_guard_ns | min_lead_ns | max_lead_ns | min_high_ns | wlow_scale_min_pct
+N=2 H=4 corner=fit : min_guard_ns=10 min_lead_ns=1 max_lead_ns=30 min_high_ns=15.0 wlow_scale_max_ok_pct=250
+SWEEP N=2 H=4 corner=fit guard_min_ns=10 lead_min_ns=1 lead_max_ns=30 high_min_ns=15.0 wlow_scale_max_ok_pct=250
+N=16 H=4 corner=fit : min_guard_ns=10 min_lead_ns=1 max_lead_ns=30 min_high_ns=15.0 wlow_scale_max_ok_pct=250
+SWEEP N=16 H=4 corner=fit guard_min_ns=10 lead_min_ns=1 lead_max_ns=30 high_min_ns=15.0 wlow_scale_max_ok_pct=250
+N=1 H=16 corner=fit : min_guard_ns=25 min_lead_ns=1 max_lead_ns=30 min_high_ns=15.0 wlow_scale_max_ok_pct=200
+SWEEP N=1 H=16 corner=fit guard_min_ns=25 lead_min_ns=1 lead_max_ns=30 high_min_ns=15.0 wlow_scale_max_ok_pct=200
+N=2 H=4 corner=max : min_guard_ns=15 min_lead_ns=1 max_lead_ns=30 min_high_ns=22.0 wlow_scale_max_ok_pct=100
+SWEEP N=2 H=4 corner=max guard_min_ns=15 lead_min_ns=1 lead_max_ns=30 high_min_ns=22.0 wlow_scale_max_ok_pct=100
+N=16 H=4 corner=max : min_guard_ns=15 min_lead_ns=1 max_lead_ns=30 min_high_ns=22.0 wlow_scale_max_ok_pct=100
+SWEEP N=16 H=4 corner=max guard_min_ns=15 lead_min_ns=1 lead_max_ns=30 high_min_ns=22.0 wlow_scale_max_ok_pct=100
+N=1 H=16 corner=max : min_guard_ns=50 min_lead_ns=1 max_lead_ns=30 min_high_ns=22.0 wlow_scale_max_ok_pct=100
+SWEEP N=1 H=16 corner=max guard_min_ns=50 lead_min_ns=1 lead_max_ns=30 high_min_ns=22.0 wlow_scale_max_ok_pct=100
+N=1 H=4 corner=fit : min_guard_ns=10 min_lead_ns=1 max_lead_ns=30 min_high_ns=15.0 wlow_scale_max_ok_pct=250
+SWEEP N=1 H=4 corner=fit guard_min_ns=10 lead_min_ns=1 lead_max_ns=30 high_min_ns=15.0 wlow_scale_max_ok_pct=250
+N=2 H=4 corner=min : min_guard_ns=3 min_lead_ns=1 max_lead_ns=40 min_high_ns=15.0 wlow_scale_max_ok_pct=300
+SWEEP N=2 H=4 corner=min guard_min_ns=3 lead_min_ns=1 lead_max_ns=40 high_min_ns=15.0 wlow_scale_max_ok_pct=300
+N=16 H=4 corner=min : min_guard_ns=3 min_lead_ns=1 max_lead_ns=40 min_high_ns=15.0 wlow_scale_max_ok_pct=300
+SWEEP N=16 H=4 corner=min guard_min_ns=3 lead_min_ns=1 lead_max_ns=40 high_min_ns=15.0 wlow_scale_max_ok_pct=300

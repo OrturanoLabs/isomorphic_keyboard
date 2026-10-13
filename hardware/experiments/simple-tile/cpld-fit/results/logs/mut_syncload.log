@@ -1,0 +1,66 @@
+== mut_syncload (expect fail) ==
+FAIL [201]: DUT first bit not valid before first clock (latch window)
+FAIL [211]: DUT transparent load: buttons[11]=1 must follow during latch
+FAIL [221]: DUT transparent load: buttons[11]=0 must follow during latch
+FAIL [231]: DUT transparent load: re-settle to 1 during latch
+FAIL [251]: DUT first bit not present before first shift clock
+FAIL [253]: DUT dout != expected stream bit
+FAIL [253]: DUT dout != REF dout
+FAIL [298]: DUT dout != expected stream bit
+FAIL [298]: DUT dout != REF dout
+FAIL [343]: DUT dout != expected stream bit
+FAIL [343]: DUT dout != REF dout
+FAIL [388]: DUT dout != expected stream bit
+FAIL [388]: DUT dout != REF dout
+FAIL [433]: DUT dout != expected stream bit
+FAIL [433]: DUT dout != REF dout
+FAIL [478]: DUT dout != expected stream bit
+FAIL [478]: DUT dout != REF dout
+FAIL [523]: DUT dout != expected stream bit
+FAIL [523]: DUT dout != REF dout
+FAIL [568]: DUT dout != expected stream bit
+FAIL [568]: DUT dout != REF dout
+FAIL [613]: DUT dout != expected stream bit
+FAIL [613]: DUT dout != REF dout
+FAIL [658]: DUT dout != expected stream bit
+FAIL [658]: DUT dout != REF dout
+FAIL [703]: DUT dout != expected stream bit
+FAIL [703]: DUT dout != REF dout
+FAIL [748]: DUT dout != expected stream bit
+FAIL [748]: DUT dout != REF dout
+FAIL [793]: DUT dout != expected stream bit
+FAIL [793]: DUT dout != REF dout
+FAIL [838]: DUT dout != expected stream bit
+FAIL [838]: DUT dout != REF dout
+FAIL [883]: DUT dout != expected stream bit
+FAIL [883]: DUT dout != REF dout
+FAIL [928]: DUT dout != expected stream bit
+FAIL [928]: DUT dout != REF dout
+FAIL [2995]: DUT dout != expected stream bit
+FAIL [2995]: DUT dout != REF dout
+FAIL [3040]: DUT dout != expected stream bit
+FAIL [3040]: DUT dout != REF dout
+FAIL [3085]: DUT dout != expected stream bit
+FAIL [3085]: DUT dout != REF dout
+FAIL [3130]: DUT dout != expected stream bit
+FAIL [3130]: DUT dout != REF dout
+FAIL [3355]: DUT dout != expected stream bit
+FAIL [3355]: DUT dout != REF dout
+FAIL [3400]: DUT dout != expected stream bit
+FAIL [3400]: DUT dout != REF dout
+FAIL [3490]: DUT dout != expected stream bit
+FAIL [3490]: DUT dout != REF dout
+FAIL [3500]: DUT B_W != expected flag (post-edge)
+FAIL [3533]: DUT: endcol=1 frame must set B_W at edge 16
+FAIL [3535]: DUT B_W != expected flag (pre-edge)
+FAIL [3545]: DUT B_W != expected flag (post-edge)
+FAIL [3580]: DUT B_W != expected flag (pre-edge)
+FAIL [3590]: DUT B_W != expected flag (post-edge)
+FAIL [3625]: DUT B_W != expected flag (pre-edge)
+FAIL [3635]: DUT B_W != expected flag (post-edge)
+FAIL [3670]: DUT B_W != expected flag (pre-edge)
+FAIL [3680]: DUT B_W != expected flag (post-edge)
+FATAL: src/tile_cpld_tb.v:376: CPLD_FIT_TB FAIL: 61 error(s) in 1180 checks
+       Time: 3713  Scope: tile_cpld_tb
+  exit=1 pass_marker=0 fail_lines=1
+  OK: mutant mut_syncload caught (exit=1)

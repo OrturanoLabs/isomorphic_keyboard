@@ -1,0 +1,9 @@
+date_utc: 2026-10-12T14:43:27Z
+image: localhost/oss-cad-suite:2026-09-26
+image_id: 58f58619c735ff1e6f1ce5b71a318dacbf2e8823231d96ddd4862975dbcf2640
+yosys: Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+src_sha256:
+  226f49606b8c08999f1c67741d14685e5d1997534a6936a2e11695e8502cf160  src/tile_cpld.v
+  309100f61d1ac8b89167b48e7cc70aadef688e09640891b75456220d30e813ca  synth/atf1502_cells.v
+  ac3d1d4e1710e3926d3f20a783dd1c77a6eed3a262f384d86608aa56f7c18a18  synth/atf1502_techmap.v
+  f3ce357117483081d6ce99ae67310d0fdaeb4014129591841102f9316e1cd659  synth/tile_cpld_atf1502.ys

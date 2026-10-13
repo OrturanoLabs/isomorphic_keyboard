@@ -1,0 +1,3 @@
+# Local router scratch and progress logs; preserve delivered boards and readiness reports.
+krt_attempt/
+logs/

@@ -1,0 +1,5 @@
+== sim_tile_cpld (expect pass) ==
+CPLD_FIT_TB PASS: 1180 checks, 0 errors (2 scans, frames+flags+mux+transparency)
+src/tile_cpld_tb.v:378: $finish called at 3713 (1ns)
+  exit=0 pass_marker=1 fail_lines=0
+  OK: candidate PASS

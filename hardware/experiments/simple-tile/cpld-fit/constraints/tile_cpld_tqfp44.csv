@@ -1,0 +1,34 @@
+# tile_cpld pin constraints -- ATF1502ASV TQFP-44 (DS20006485A Tables 1-6/1-7)
+# candidate C: whole tile (glue + both '165 chains) in one CPLD; NO MCU/Hall/LED
+# columns: signal,dir,pin,block,role,note
+# dir: in|out ; pin: TQFP44 number or '-'/internal ; role: io|gclk|jtag|pd|internal
+# Validated by check_pins.py. Bit order note for the EDIF netlist:
+# EDIF array member k of port 'buttons' carries RTL bit buttons[11-k].
+bclk,in,37,dedicated,GCLK1,20 MHz scan clock on global clock input (tCOP/fCNT specified for GCK)
+buttons[11],in,42,A,io,key 11 (first bit out of the chain)
+buttons[10],in,43,A,io,key 10
+buttons[9],in,44,A,io,key 9
+buttons[8],in,2,A,io,key 8 (MC4/pin1 skipped: reserved TDI)
+buttons[7],in,3,A,io,key 7
+buttons[6],in,6,A,io,key 6 (MC7/pin5=PD1 and MC9/pin7=TMS skipped)
+buttons[5],in,8,A,io,key 5
+buttons[4],in,10,A,io,key 4
+buttons[3],in,11,A,io,key 3
+buttons[2],in,12,A,io,key 2
+buttons[1],in,13,A,io,key 1
+buttons[0],in,14,A,io,key 0
+endrow,in,15,A,io,L_endrow edge input (pull-up per connector system)
+endcol,in,35,B,io,T_endcol edge input; MC17 is GCLK3-capable (used here as plain input)
+blatch,in,34,B,io,B_latch from controller
+rlatch,in,33,B,io,R_latch from right neighbour
+tw,in,31,B,io,T_W = B_W of tile above (pull-up per connector system)
+bfirst,in,30,B,io,B_first (pull-up: 1=bottom tile)
+tdata,in,28,B,io,T_data chain input (pull-down per connector system)
+ldata,in,27,B,io,L_data chain input (pull-down per connector system)
+dout,out,25,B,io,chain output to B_data/R_data net (registered: shreg[15])
+bw,out,23,B,io,B_W sticky column-end flag output
+latcho,out,22,B,io,merged latch forwarded to T_latch/L_latch
+tclk,out,21,B,io,T_clk forwarded when W=0 else released Z (per-macrocell PT OE)
+lclk,out,20,B,io,L_clk forwarded when W=1 else released Z (per-macrocell PT OE)
+npl,out,-,-,internal,observability only in TB; real design keeps /PL internal
+ds,out,-,-,internal,observability only in TB; real design keeps the chain input internal

@@ -1,0 +1,26 @@
+NOTE Q0: OE term is FALSE (fully blown fuse row) -> pin is permanently Hi-Z on silicon
+NOTE Q1: OE term is FALSE (fully blown fuse row) -> pin is permanently Hi-Z on silicon
+NOTE Q2: OE term is FALSE (fully blown fuse row) -> pin is permanently Hi-Z on silicon
+NOTE Q3: OE term is FALSE (fully blown fuse row) -> pin is permanently Hi-Z on silicon
+MATCH  Q0.R next-state        (vars=13)
+MATCH  Q0 OE                  (vars=13)
+MATCH  Q1.R next-state        (vars=13)
+MATCH  Q1 OE                  (vars=13)
+MATCH  Q2.R next-state        (vars=13)
+MATCH  Q2 OE                  (vars=13)
+MATCH  Q3.R next-state        (vars=13)
+MATCH  Q3 OE                  (vars=13)
+MATCH  BW.R next-state        (vars=13)
+MATCH  BW OE                  (vars=13)
+MATCH  TCLK comb value        (vars=13)
+MATCH  TCLK OE                (vars=13)
+MATCH  LCLK comb value        (vars=13)
+MATCH  LCLK OE                (vars=13)
+MATCH  LATCH comb value       (vars=13)
+MATCH  LATCH OE               (vars=13)
+MATCH  NPL comb value         (vars=13)
+MATCH  NPL OE                 (vars=13)
+MATCH  DS comb value          (vars=13)
+MATCH  DS OE                  (vars=13)
+MATCH  AR                     (vars=13)
+OVERALL: MATCH

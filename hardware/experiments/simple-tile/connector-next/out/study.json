@@ -1,0 +1,794 @@
+{
+ "params": {
+  "pad_d": 2.5,
+  "pitch": 3.25,
+  "tol": 0.35,
+  "gap_margin": 0.5,
+  "rail_delta": 0.15
+ },
+ "tiers": {
+  "GND": {
+   "lane": [
+    -26.3896,
+    34.7,
+    44.6104,
+    38.7
+   ],
+   "pads": [
+    {
+     "net": "GND",
+     "role": "GND.1",
+     "group": "GND",
+     "x": 4.235,
+     "y": 36.7,
+     "d": 2.5,
+     "slack_after_tol": 1.865,
+     "nearest": "SW[1,2] hole d4.0",
+     "edge_slack": 1.3
+    },
+    {
+     "net": "GND_DET_T",
+     "role": "GND.2",
+     "group": "GND",
+     "x": 7.485,
+     "y": 36.7,
+     "d": 2.5,
+     "slack_after_tol": 2.104,
+     "nearest": "SW[1,2] hole d1.75",
+     "edge_slack": 1.3
+    },
+    {
+     "net": "GND_DET_B",
+     "role": "GND.3",
+     "group": "GND",
+     "x": 10.735,
+     "y": 36.7,
+     "d": 2.5,
+     "slack_after_tol": 2.148,
+     "nearest": "SW[2,2] hole d1.75",
+     "edge_slack": 1.3
+    },
+    {
+     "net": "GND_DET_R",
+     "role": "GND.4",
+     "group": "GND",
+     "x": 13.985,
+     "y": 36.7,
+     "d": 2.5,
+     "slack_after_tol": 1.925,
+     "nearest": "SW[2,2] hole d1.75",
+     "edge_slack": 1.3
+    }
+   ]
+  },
+  "SIG": {
+   "lane": [
+    -17.1396,
+    18.95,
+    44.6104,
+    24.45
+   ],
+   "pads": [
+    {
+     "net": "VCC",
+     "role": "SIG.1",
+     "group": "SIG",
+     "x": -9.015,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.7,
+     "nearest": "SW[0,1] hole d4.0",
+     "edge_slack": 7.595
+    },
+    {
+     "net": "T_clk",
+     "role": "SIG.2",
+     "group": "SIG",
+     "x": -5.765,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.441,
+     "nearest": "SW[1,2] socket courtyard",
+     "edge_slack": 10.845
+    },
+    {
+     "net": "T_data",
+     "role": "SIG.3",
+     "group": "SIG",
+     "x": -2.515,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[1,2] socket courtyard",
+     "edge_slack": 12.968
+    },
+    {
+     "net": "T_endcol",
+     "role": "SIG.4",
+     "group": "SIG",
+     "x": 0.735,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[1,2] socket courtyard",
+     "edge_slack": 14.515
+    },
+    {
+     "net": "T_W",
+     "role": "SIG.5",
+     "group": "SIG",
+     "x": 3.985,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[1,2] socket courtyard",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "B_clk",
+     "role": "SIG.6",
+     "group": "SIG",
+     "x": 7.235,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.718,
+     "nearest": "SW[1,2] socket courtyard",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "B_data",
+     "role": "SIG.7",
+     "group": "SIG",
+     "x": 10.485,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.7,
+     "nearest": "SW[1,1] hole d4.0",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "B_first",
+     "role": "SIG.8",
+     "group": "SIG",
+     "x": 13.735,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[2,2] socket courtyard",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "B_latch",
+     "role": "SIG.9",
+     "group": "SIG",
+     "x": 16.985,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[2,2] socket courtyard",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "B_W",
+     "role": "SIG.10",
+     "group": "SIG",
+     "x": 20.235,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.395,
+     "nearest": "SW[2,2] hole d3.05",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "L_clk",
+     "role": "SIG.11",
+     "group": "SIG",
+     "x": 23.485,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[2,2] socket courtyard",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "L_data",
+     "role": "SIG.12",
+     "group": "SIG",
+     "x": 26.735,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.7,
+     "nearest": "SW[2,1] hole d4.0",
+     "edge_slack": 16.3
+    },
+    {
+     "net": "L_endrow",
+     "role": "SIG.13",
+     "group": "SIG",
+     "x": 29.985,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.667,
+     "nearest": "SW[3,2] socket courtyard",
+     "edge_slack": 14.17
+    },
+    {
+     "net": "L_latch",
+     "role": "SIG.14",
+     "group": "SIG",
+     "x": 33.235,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[3,2] socket courtyard",
+     "edge_slack": 10.921
+    },
+    {
+     "net": "R_latch",
+     "role": "SIG.15",
+     "group": "SIG",
+     "x": 36.485,
+     "y": 21.7,
+     "d": 2.5,
+     "slack_after_tol": 1.4,
+     "nearest": "SW[3,2] socket courtyard",
+     "edge_slack": 7.674
+    }
+   ]
+  }
+ },
+ "springs": {
+  "S1971-46R": {
+   "free": 4.55,
+   "dmin": 0.3,
+   "dmax": 0.6,
+   "body": [
+    4.63,
+    3.7
+   ],
+   "current_A": 14,
+   "role": "GND-class (taller reach)"
+  },
+  "S1961-46R": {
+   "free": 3.55,
+   "dmin": 0.2,
+   "dmax": 0.6,
+   "body": [
+    4.63,
+    3.7
+   ],
+   "current_A": 14,
+   "role": "signals (same body)"
+  },
+  "S1941-42R": {
+   "free": 7.3,
+   "dmin": 0.3,
+   "dmax": 0.8,
+   "body": [
+    9.59,
+    5.7
+   ],
+   "current_A": 9,
+   "role": "control: z-ok, pack-rejected (baseline)"
+  },
+  "S1981-46R": {
+   "free": 8.5,
+   "dmin": 0.4,
+   "dmax": 1.0,
+   "body": [
+    9.63,
+    5.7
+   ],
+   "current_A": 14,
+   "role": "control: big body"
+  }
+ },
+ "pack": {
+  "banks": 2,
+  "orientation": "along x",
+  "body_mm": [
+   4.63,
+   3.7
+  ],
+  "bank_base_offset": -1.25,
+  "span_mm": 7.7,
+  "contacts_placed": 19,
+  "assignment": [
+   {
+    "role": "GND.1",
+    "group": "GND",
+    "x": 4.24,
+    "y": 33.45,
+    "bank": 0
+   },
+   {
+    "role": "GND.2",
+    "group": "GND",
+    "x": 7.49,
+    "y": 37.45,
+    "bank": 1
+   },
+   {
+    "role": "GND.3",
+    "group": "GND",
+    "x": 10.73,
+    "y": 33.45,
+    "bank": 0
+   },
+   {
+    "role": "GND.4",
+    "group": "GND",
+    "x": 13.98,
+    "y": 37.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.1",
+    "group": "SIG",
+    "x": -9.02,
+    "y": 18.45,
+    "bank": 0
+   },
+   {
+    "role": "SIG.2",
+    "group": "SIG",
+    "x": -5.76,
+    "y": 22.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.3",
+    "group": "SIG",
+    "x": -2.52,
+    "y": 18.45,
+    "bank": 0
+   },
+   {
+    "role": "SIG.4",
+    "group": "SIG",
+    "x": 0.73,
+    "y": 22.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.5",
+    "group": "SIG",
+    "x": 3.98,
+    "y": 18.45,
+    "bank": 0
+   },
+   {
+    "role": "SIG.6",
+    "group": "SIG",
+    "x": 7.24,
+    "y": 22.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.7",
+    "group": "SIG",
+    "x": 10.48,
+    "y": 18.45,
+    "bank": 0
+   },
+   {
+    "role": "SIG.8",
+    "group": "SIG",
+    "x": 13.73,
+    "y": 22.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.9",
+    "group": "SIG",
+    "x": 16.98,
+    "y": 18.45,
+    "bank": 0
+   },
+   {
+    "role": "SIG.10",
+    "group": "SIG",
+    "x": 20.23,
+    "y": 22.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.11",
+    "group": "SIG",
+    "x": 23.48,
+    "y": 18.45,
+    "bank": 0
+   },
+   {
+    "role": "SIG.12",
+    "group": "SIG",
+    "x": 26.73,
+    "y": 22.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.13",
+    "group": "SIG",
+    "x": 29.98,
+    "y": 18.45,
+    "bank": 0
+   },
+   {
+    "role": "SIG.14",
+    "group": "SIG",
+    "x": 33.23,
+    "y": 22.45,
+    "bank": 1
+   },
+   {
+    "role": "SIG.15",
+    "group": "SIG",
+    "x": 36.48,
+    "y": 18.45,
+    "bank": 0
+   }
+  ],
+  "note": "tip anchored on pad centre (ASSUMPTION); banks staggered in chassis-plane y",
+  "trials": [
+   {
+    "orientation": 0,
+    "banks": [
+     2,
+     3,
+     4
+    ]
+   }
+  ]
+ },
+ "stack": {
+  "socket_depth_bound_conservative_mm": 4.943,
+  "socket_depth_model_verified_mm": 2.943,
+  "g_abs_tile_bottom_mm": 5.44260833079,
+  "rail_sig_mm": 1.343,
+  "rail_gnd_mm": 1.493,
+  "deflections_mm": {
+   "sig": 0.4500000000000002,
+   "gnd": 0.5999999999999996
+  }
+ },
+ "tilt": {
+  "theta_cap_zero_margin_rad": 0.004219056401844043,
+  "theta_cap_zero_margin_deg": 0.24173412535331473,
+  "analytic_pair_bound_rad": 0.0031746031746031633,
+  "worst_L1_pair_separation_mm": 47.25,
+  "stagger_mm": 0.14999999999999947,
+  "margin_at_theta_cap": 1.3550272015550036e-13,
+  "margin_at_1p5x": -0.07499999999979648,
+  "gnd_class_pads": [
+   [
+    "GND",
+    4.235,
+    36.7
+   ],
+   [
+    "GND_DET_T",
+    7.485,
+    36.7
+   ],
+   [
+    "GND_DET_B",
+    10.735,
+    36.7
+   ],
+   [
+    "GND_DET_R",
+    13.985,
+    36.7
+   ]
+  ],
+  "n_signal_pads": 15
+ },
+ "mezzanine": {
+  "df12_pair20": {
+   "tile_side": "Hirose_DF12_DF12E3.0-20DP-0.5V_2x10_P0.50mm_Vertical",
+   "chassis_side": "Hirose_DF12_DF12C3.0-20DS-0.5V_2x10_P0.50mm_Vertical",
+   "tile_courtyard_mm": [
+    8.29,
+    6.29
+   ],
+   "pad_count": 20,
+   "style": "SMT",
+   "drills_mm": [],
+   "contacts_needed": 19,
+   "fits_minimal_tile": false,
+   "min_bottom_extension_mm": 6.04,
+   "extension_island": {
+    "rect": [
+     -15.3896,
+     33.7,
+     -2.6396,
+     44.7
+    ],
+    "w": 12.75,
+    "h": 11.0,
+    "area": 140.2,
+    "obstacle_slack": 0.525,
+    "nearest": "SW[0,2] hole d1.75",
+    "edge_slack": 0.19
+   }
+  },
+  "gecko_pair20_THT": {
+   "tile_side": "Harwin_Gecko-G125-MVX2005L0X_2x10_P1.25mm_Vertical",
+   "chassis_side": "Harwin_Gecko-G125-FVX2005L0X_2x10_P1.25mm_Vertical",
+   "tile_courtyard_mm": [
+    16.14,
+    6.0
+   ],
+   "pad_count": 20,
+   "style": "through-board (drills)",
+   "drills_mm": [
+    0.55
+   ],
+   "contacts_needed": 19,
+   "fits_minimal_tile": false,
+   "min_bottom_extension_mm": 5.75,
+   "extension_island": {
+    "rect": [
+     -26.3896,
+     34.7,
+     44.6104,
+     44.45
+    ],
+    "w": 71.0,
+    "h": 9.75,
+    "area": 692.2,
+    "obstacle_slack": 0.4,
+    "nearest": "SW[0,2] hole d4.0",
+    "edge_slack": 0.15
+   }
+  }
+ },
+ "tab_cross_tile_eval": {
+  "df40_custom20": {
+   "ext_mm": 3.24,
+   "min_outline_gap_mm": 0.0,
+   "collides_at_min_pitch": true,
+   "remedy": {
+    "verdict": "NOFIT",
+    "inset_G_final_mm": 8.49,
+    "ext_final_mm": 7.49,
+    "history": [
+     {
+      "inset_G": 4.24,
+      "ext": 3.24
+     },
+     {
+      "inset_G": 7.24,
+      "ext": 6.24
+     },
+     {
+      "inset_G": 8.74,
+      "ext": 7.74
+     },
+     {
+      "inset_G": 8.24,
+      "ext": 7.24
+     },
+     {
+      "inset_G": 7.99,
+      "ext": 6.99
+     },
+     {
+      "inset_G": 8.99,
+      "ext": 7.99
+     },
+     {
+      "inset_G": 8.49,
+      "ext": 7.49
+     },
+     {
+      "inset_G": 8.24,
+      "ext": 7.24
+     },
+     {
+      "inset_G": 7.99,
+      "ext": 6.99
+     },
+     {
+      "inset_G": 8.99,
+      "ext": 7.99
+     },
+     {
+      "inset_G": 8.49,
+      "ext": 7.49
+     },
+     {
+      "inset_G": 8.24,
+      "ext": 7.24
+     },
+     {
+      "inset_G": 7.99,
+      "ext": 6.99
+     },
+     {
+      "inset_G": 8.99,
+      "ext": 7.99
+     },
+     {
+      "inset_G": 8.49,
+      "ext": 7.49
+     }
+    ],
+    "outline_separation_mm": 1.0,
+    "island": {
+     "rect": [
+      -15.3946,
+      33.695,
+      -2.6446,
+      42.195
+     ],
+     "w": 12.75,
+     "h": 8.5,
+     "area": 108.4,
+     "obstacle_slack": 0.52,
+     "nearest": "SW[0,2] hole d1.75",
+     "edge_slack": 0.15
+    },
+    "island_slack_mm": 0.52,
+    "island_edge_slack_mm": 0.8,
+    "worst_drill_to_edge_mm": -0.73,
+    "worst_socketpad_to_edge_mm": 0.0,
+    "net_tab_area_mm2": 486.5,
+    "cross_neighbour_body_gap_mm": 0.3,
+    "note": "widening the inset SHRINKS the board; tiles keep their stations; keys/lattice unchanged"
+   }
+  },
+  "df12_pair20": {
+   "ext_mm": 6.04,
+   "min_outline_gap_mm": 0.0,
+   "per_neighbour_gaps": {
+    "(73.44,0.00)": 1.0,
+    "(-73.44,0.00)": 1.0,
+    "(9.18,-47.70)": 0.0,
+    "(-9.18,47.70)": 0.0,
+    "(64.26,47.70)": 10.1799,
+    "(-64.26,-47.70)": 10.1799
+   },
+   "collides_at_min_pitch": true,
+   "remedy": {
+    "verdict": "NOFIT",
+    "inset_G_final_mm": 13.0,
+    "ext_final_mm": 12,
+    "history": [
+     {
+      "inset_G": 7.04,
+      "ext": 6.04
+     },
+     {
+      "inset_G": 10.04,
+      "ext": 9.04
+     },
+     {
+      "inset_G": 10.54,
+      "ext": 9.54
+     },
+     {
+      "inset_G": 13.0,
+      "ext": 12
+     },
+     {
+      "inset_G": 13.0,
+      "ext": 12
+     }
+    ],
+    "outline_separation_mm": 1.0,
+    "island": {
+     "rect": [
+      -15.3896,
+      33.7,
+      -2.6396,
+      44.7
+     ],
+     "w": 12.75,
+     "h": 11.0,
+     "area": 140.2,
+     "obstacle_slack": 0.525,
+     "nearest": "SW[0,2] hole d1.75",
+     "edge_slack": 0.15
+    },
+    "island_slack_mm": 0.525,
+    "island_edge_slack_mm": 0.55,
+    "worst_drill_to_edge_mm": -1.385,
+    "worst_socketpad_to_edge_mm": 0.0,
+    "net_tab_area_mm2": 725.3,
+    "cross_neighbour_body_gap_mm": 0.3,
+    "note": "widening the inset SHRINKS the board; tiles keep their stations; keys/lattice unchanged"
+   }
+  },
+  "gecko_pair20_THT": {
+   "ext_mm": 5.75,
+   "min_outline_gap_mm": 0.0,
+   "per_neighbour_gaps": {
+    "(73.44,0.00)": 1.0,
+    "(-73.44,0.00)": 1.0,
+    "(9.18,-47.70)": 0.0,
+    "(-9.18,47.70)": 0.0,
+    "(64.26,47.70)": 10.1799,
+    "(-64.26,-47.70)": 10.1799
+   },
+   "collides_at_min_pitch": true,
+   "remedy": {
+    "verdict": "NOFIT",
+    "inset_G_final_mm": 13.0,
+    "ext_final_mm": 12,
+    "history": [
+     {
+      "inset_G": 6.75,
+      "ext": 5.75
+     },
+     {
+      "inset_G": 9.75,
+      "ext": 8.75
+     },
+     {
+      "inset_G": 13.0,
+      "ext": 12
+     },
+     {
+      "inset_G": 13.0,
+      "ext": 12
+     }
+    ],
+    "outline_separation_mm": 1.0,
+    "island": {
+     "rect": [
+      -20.3896,
+      34.7,
+      38.6104,
+      44.7
+     ],
+     "w": 59.0,
+     "h": 10.0,
+     "area": 590.0,
+     "obstacle_slack": 0.4,
+     "nearest": "SW[0,2] hole d4.0",
+     "edge_slack": 0.15
+    },
+    "island_slack_mm": 0.4,
+    "island_edge_slack_mm": 0.55,
+    "worst_drill_to_edge_mm": -1.385,
+    "worst_socketpad_to_edge_mm": 0.0,
+    "net_tab_area_mm2": 725.3,
+    "cross_neighbour_body_gap_mm": 0.3,
+    "note": "widening the inset SHRINKS the board; tiles keep their stations; keys/lattice unchanged"
+   }
+  }
+ },
+ "df40": {
+  "footprint": "DF40C-20DP_connector-next.kicad_mod (custom, STEP-derived)",
+  "courtyard_mm": [
+   7.67,
+   4.74
+  ],
+  "fits_minimal_tile_no_tab": false,
+  "min_bottom_extension_mm": 3.24,
+  "contacts": 20,
+  "mated_stack_mm": "mated height steps 1.5/2/2.5/3.5 mm per the part page (plug 'Mated Height (Max.) 3.5 mm')",
+  "clears_verified_socket_bound_2p94": true,
+  "clears_conservative_bound_4p94": false
+ },
+ "vendor": {
+  "harwin_s1971": "https://www.harwin.com/products/S1971-46R",
+  "harwin_s1961": "https://www.harwin.com/products/S1961-46R",
+  "harwin_s1941": "https://www.harwin.com/products/S1941-42R",
+  "harwin_range": "https://content.harwin.com/asset/b78b8265-eabd-4ec9-b6e1-cca806faa177/PD013-Product-Datasheet-SPRING-CONTACTS-SMT-Spring-Contacts-EZi.pdf",
+  "hirose_df12": "https://www.hirose.com/en/product/series/DF12",
+  "hirose_df40": "https://www.hirose.com/en/product/series/DF40",
+  "hirose_bm24": "https://www.hirose.com/en/product/series/BM24",
+  "harwin_gecko": "https://www.harwin.com/hri/gecko/",
+  "harwin_drg_03073": "https://content.harwin.com/asset/350d2138-67fd-4d7e-bfe2-9ecb2bf0c9fc/DRG-03073-Technical-Drawing-Datasheet-S1971R-pdf.pdf",
+  "harwin_drg_03072": "https://content.harwin.com/asset/f4cd037e-0829-4c4c-a570-f0dd6472082e/DRG-03072-Technical-Drawing-Datasheet-S1961R-pdf.pdf",
+  "hirose_df40_plug": "https://www.hirose.com/en/product/p/CL0684-4010-9-51",
+  "hirose_df40_rec35": "https://www.hirose.com/en/product/p/CL0684-4188-0-51",
+  "gecko_drg_male": "https://content.harwin.com/m/62fd8add13144f50/original/DRG-00182-Technical-Drawing-Datasheet-G125-MVXXX05LXP-pdf.pdf"
+ },
+ "checks_summary": {
+  "ok": 28,
+  "total": 28
+ }
+}

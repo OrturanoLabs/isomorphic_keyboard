@@ -1,0 +1,202 @@
+{
+  "anchors": {
+    "board_interconnect_ns": {
+      "unknown": true
+    },
+    "ff_recovery_window_ns": {
+      "unknown": true
+    },
+    "fit_clk2q_ns": 0.46,
+    "fit_crit_logic_ns": 1.36,
+    "fit_crit_routing_ns": 2.57,
+    "fit_crit_total_ns": 3.93,
+    "fit_fmax_shift_clk_mhz": 254.84,
+    "fit_xdom_neglatch_posclk_ns": 4.86,
+    "gw1nz_track_xdom_posysclk_posclk_ns": 5.59,
+    "min_delay_analysis": {
+      "unknown": true
+    },
+    "pad_input_delay_ns": {
+      "unknown": true
+    },
+    "pad_output_delay_ns": {
+      "unknown": true
+    },
+    "tbuf_enable_disable_ns": {
+      "unknown": true
+    }
+  },
+  "cell_census": {
+    "gw1nz_fall": {
+      "ALU": 6,
+      "BANDGAP": 1,
+      "BUFG": 1,
+      "DFFC": 21,
+      "DFFCE": 1,
+      "DFFN": 15,
+      "GOWIN_GND": 1,
+      "GOWIN_VCC": 1,
+      "GSR": 1,
+      "IBUF": 21,
+      "LUT1": 6,
+      "LUT2": 3,
+      "LUT3": 16,
+      "LUT4": 20,
+      "MUX2_LUT5": 4,
+      "MUX2_LUT6": 2,
+      "OBUF": 3,
+      "TBUF": 2
+    }
+  },
+  "gw1nz_fall": {
+    "nextpnr": {
+      "clocks": {
+        "u_tile.b_clk": {
+          "fmax_postroute_mhz": 254.84,
+          "fmax_preroute_mhz": 335.8
+        }
+      },
+      "crit": {
+        "u_tile.b_clk": {
+          "logic_ns": 1.36,
+          "routing_ns": 2.57
+        }
+      },
+      "crit_clk2q_ns": 0.46,
+      "cross_paths": {
+        "negedge u_tile.r_latch_LUT2_I1_F -> posedge u_tile.b_clk": {
+          "postroute_ns": 4.86,
+          "preroute_ns": 2.98
+        }
+      }
+    }
+  },
+  "gw1nz_track": {
+    "nextpnr": {
+      "clocks": {
+        "u_tile.b_clk": {
+          "fmax_postroute_mhz": 193.8,
+          "fmax_preroute_mhz": 360.75
+        }
+      },
+      "crit": {
+        "u_tile.b_clk": {
+          "logic_ns": 1.36,
+          "routing_ns": 3.8
+        }
+      },
+      "crit_clk2q_ns": 0.46,
+      "cross_paths": {
+        "posedge sysclk -> posedge u_tile.b_clk": {
+          "postroute_ns": 5.59,
+          "preroute_ns": 2.78
+        }
+      }
+    }
+  },
+  "lp8k_fall": {
+    "icetime": {
+      "fmax_mhz": 69.17,
+      "period_ns": 14.46
+    },
+    "nextpnr": {
+      "clocks": {
+        "clk_pin$SB_IO_IN_$glb_clk": {
+          "fmax_postroute_mhz": 138.43,
+          "fmax_preroute_mhz": 163.93
+        }
+      },
+      "crit": {
+        "clk_pin$SB_IO_IN_$glb_clk": {
+          "logic_ns": 2.01,
+          "routing_ns": 5.21
+        }
+      },
+      "crit_clk2q_ns": 0.8,
+      "cross_paths": {
+        "<async>                               -> <async>": {
+          "postroute_ns": 12.59,
+          "preroute_ns": 12.39
+        },
+        "<async>                               -> negedge latcho_pin$SB_IO_OUT_$glb_clk": {
+          "postroute_ns": 4.74,
+          "preroute_ns": 5.67
+        },
+        "<async>                               -> posedge clk_pin$SB_IO_IN_$glb_clk": {
+          "postroute_ns": 14.53,
+          "preroute_ns": 13.57
+        },
+        "negedge latcho_pin$SB_IO_OUT_$glb_clk -> <async>": {
+          "postroute_ns": 6.76,
+          "preroute_ns": 6.44
+        },
+        "negedge latcho_pin$SB_IO_OUT_$glb_clk -> posedge clk_pin$SB_IO_IN_$glb_clk": {
+          "postroute_ns": 8.71,
+          "preroute_ns": 7.62
+        },
+        "posedge clk_pin$SB_IO_IN_$glb_clk     -> <async>": {
+          "postroute_ns": 5.28,
+          "preroute_ns": 4.95
+        }
+      }
+    }
+  },
+  "provenance_note": "Extracted verbatim from existing fpga/synth artifacts by tools/extract_delays.py; every value carries its source file + sha256. These are FPGA-INTERIOR fitted numbers from nextpnr max-analysis / icetime only. Absent quantities (min delays, pad delays, interconnect, external recovery/metastability windows) are emitted as unknown=true and must come from SYNTHETIC corner config - never from here.",
+  "schema": "fpga-system/interior_delays/v1",
+  "sources": {
+    "gw1nz_fall_nextpnr.log": "b94e966757103483d4a7ac60c51688e51a3bcc777f3e5ad9c9be9a761f5aa576",
+    "gw1nz_fall_pnr.json": "85e9d6d85fbd629f28f3d04c01383d50a7c1a564b2ee05f1c0282cfe7baf4b2c",
+    "gw1nz_track_nextpnr.log": "a93a150b96ecba3023e07dbfccb86d0d699244b3d4b1ab823376906c6244ccdd",
+    "lp8k_fall_icetime.log": "e295bee01da737ac447ef150bc74382a258aebf8c0ffdb4841fecbcfdd8031a1",
+    "lp8k_fall_nextpnr.log": "0aef2b665167bcd754c8725ed9244e328bd8bdc591379ccc8572d21f782e68cb",
+    "up5k_fall_icetime.log": "5d2eb1296ef5c7b0d77b907d494a7c2c6f14f1c7d2ef1819c5d20c3d1a092093",
+    "up5k_fall_nextpnr.log": "8cb43ce1d50619b652b9cb4fc0029f1178306bd2e3075a8bf5a8cf2486b9b8f2"
+  },
+  "up5k_fall": {
+    "icetime": {
+      "fmax_mhz": 40.19,
+      "period_ns": 24.88
+    },
+    "nextpnr": {
+      "clocks": {
+        "clk_pin$SB_IO_IN_$glb_clk": {
+          "fmax_postroute_mhz": 69.42,
+          "fmax_preroute_mhz": 64.84
+        }
+      },
+      "crit": {
+        "clk_pin$SB_IO_IN_$glb_clk": {
+          "logic_ns": 3.9,
+          "routing_ns": 10.51
+        }
+      },
+      "crit_clk2q_ns": 1.39,
+      "cross_paths": {
+        "<async>                               -> <async>": {
+          "postroute_ns": 21.16,
+          "preroute_ns": 19.57
+        },
+        "<async>                               -> negedge latcho_pin$SB_IO_OUT_$glb_clk": {
+          "postroute_ns": 5.38,
+          "preroute_ns": 4.93
+        },
+        "<async>                               -> posedge clk_pin$SB_IO_IN_$glb_clk": {
+          "postroute_ns": 24.37,
+          "preroute_ns": 21.72
+        },
+        "negedge latcho_pin$SB_IO_OUT_$glb_clk -> <async>": {
+          "postroute_ns": 14.21,
+          "preroute_ns": 13.68
+        },
+        "negedge latcho_pin$SB_IO_OUT_$glb_clk -> posedge clk_pin$SB_IO_IN_$glb_clk": {
+          "postroute_ns": 17.42,
+          "preroute_ns": 15.83
+        },
+        "posedge clk_pin$SB_IO_IN_$glb_clk     -> <async>": {
+          "postroute_ns": 11.2,
+          "preroute_ns": 10.66
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+[
+ {
+  "id": "CN1",
+  "name": "baseline geometry engine imported READONLY; lattice P = 18.3597",
+  "ok": true,
+  "detail": "P=18.3597"
+ },
+ {
+  "id": "CT0",
+  "name": "baseline connectors stepped outline overlaps the UP/DOWN lattice neighbours (measured, not asserted); corrected outline (revc_build construction) restores exactly rib_gap at all 6 neighbours - CONNECTOR-NEXT USES THE CORRECTED OUTLINE",
+  "ok": true,
+  "detail": "baseline up-neighbour gap 0.000 mm (should be 1.0); corrected min gap 1.000 mm"
+ },
+ {
+  "id": "CT1",
+  "name": "corrected outline matches the revc_build.py construction exactly (y band top/bottom = -R/2+G/2 .. 2.5R+G/2, x margins P/2)",
+  "ok": true,
+  "detail": "top -7.450, bottom 39.250"
+ },
+ {
+  "id": "CN2",
+  "name": "aggregated contact set = exactly the 19 budget nets",
+  "ok": true,
+  "detail": "19 contacts"
+ },
+ {
+  "id": "CN3",
+  "name": "19 aggregated contacts placed on the underside in 2 tier lanes",
+  "ok": true,
+  "detail": "GND lane [-26.4, 34.7, 44.6, 38.7], SIG lane [-17.1, 18.9, 44.6, 24.4]"
+ },
+ {
+  "id": "CN4",
+  "name": "every placed pad collision-free incl. 0.35 mm chassis tolerance",
+  "ok": true,
+  "detail": "worst slack after tolerance 1.395 mm (SW[0,1] hole d4.0)"
+ },
+ {
+  "id": "CN5",
+  "name": "tiers do NOT share a lane (distinct chassis rail heights)",
+  "ok": true,
+  "detail": "lane y 34.7..38.7 vs 18.9..24.4"
+ },
+ {
+  "id": "CN6",
+  "name": "compact 4.63x3.70 mm bodies pack on the chassis (exact banks + keep-out engine incl. 6 lattice-neighbour tiles)",
+  "ok": true,
+  "detail": "banks=2 orient=along x base=-1.25"
+ },
+ {
+  "id": "CN7",
+  "name": "stagger identity verified: reach difference = deflection difference at the final assembly (coplanar pads, tiered rails)",
+  "ok": true,
+  "detail": "stagger=0.150 mm = d_gnd 0.600 - d_sig 0.450"
+ },
+ {
+  "id": "CN8",
+  "name": "deflection windows hold at the final assembly (0.30..0.60 mm both classes; assembly window >= 0.10 mm)",
+  "ok": true,
+  "detail": "d_sig=0.450 d_gnd=0.600 assembly window=0.150 mm"
+ },
+ {
+  "id": "CN9",
+  "name": "rail heights are manufacturable and clear the CONSERVATIVE socket bound (4.94 mm): rails rise on the chassis board",
+  "ok": true,
+  "detail": "r_sig=1.34 r_gnd=1.49 g_abs=5.44 >= 4.94"
+ },
+ {
+  "id": "CN10",
+  "name": "tilt sweep executed on the actual pad map: zero-margin tilt radius reported (first-mate guarantee envelope)",
+  "ok": true,
+  "detail": "theta_cap=0.242 deg; worst L1 pair sep 47.2 mm"
+ },
+ {
+  "id": "CN11",
+  "name": "first-mate REQUIREMENT derived: pocket guide depth >= 36 mm at +/-0.15 mm play is impractical -> the study does NOT claim GND-first; the requirement is recorded",
+  "ok": true,
+  "detail": "would need guide-depth 36 mm; impractical -> documented, no first-mate claim"
+ },
+ {
+  "id": "MZ1",
+  "name": "fresh pcbnew footprint measures present (measure_next.py)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "MZ2",
+  "name": "pin budget at 19 contacts: DF12-20 and Gecko-20 both SUFFICIENT (the baseline 22-contact rejection is GONE)",
+  "ok": true,
+  "detail": "{'df12_pair20': 20, 'gecko_pair20_THT': 20}"
+ },
+ {
+  "id": "MZ3",
+  "name": "stocked Gecko pair measured as THROUGH-BOARD (0.55 mm drills) -- the baseline 'SMT mezzanine' label corrected",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "MZ4-df12_pair20",
+  "name": "df12_pair20: minimal-tile fit at 19 contacts (certified tab +6.04 mm)",
+  "ok": true,
+  "detail": "need [8.29, 6.29] + escape"
+ },
+ {
+  "id": "MZ4-gecko_pair20_THT",
+  "name": "gecko_pair20_THT: minimal-tile fit at 19 contacts (certified tab +5.75 mm)",
+  "ok": true,
+  "detail": "need [16.14, 6.0] + escape"
+ },
+ {
+  "id": "DF40-1",
+  "name": "DF40 custom plug footprint (STEP-derived) on the minimal tile: needs certified tab +3.24 mm",
+  "ok": true,
+  "detail": "courtyard [7.67, 4.74]; stack 3.5 mm cleared vs verified 2.94 bound -> no relief pockets"
+ },
+ {
+  "id": "DF40-2",
+  "name": "DF40 stack decision at 3.5 mm: clears the model-verified socket bound (2.94 mm) WITHOUT chassis relief pockets; under the conservative 4.94 mm bound relief pockets would still be needed - both stated",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "id": "MZ5-df40_custom20",
+  "name": "cross-tile check for the DF40 tab +3.24 mm at minimal pitch: worst gap 0.000 mm -> COLLIDES (isolated certification is NOT enough)",
+  "ok": true,
+  "detail": "{'(73.44,0.00)': 1.0, '(-73.44,0.00)': 1.0, '(9.18,-47.70)': 0.0, '(-9.18,47.70)': 0.0, '(64.26,47.70)': 10.1799, '(-64.26,-47.70)': 10.1799}"
+ },
+ {
+  "id": "MZ6-df40_custom20",
+  "name": "tab remedy evaluated at placement level: widened inset G=8.49 mm, re-certified tab +7.49 mm (was +3.24); verdict: NOFIT (island slack 0.52, drill-edge -0.73 mm, pad-edge 0.0 mm, body gap 0.3 mm, net tab area 486.5 mm2)",
+  "ok": true,
+  "detail": "history [{'inset_G': 4.24, 'ext': 3.24}, {'inset_G': 7.24, 'ext': 6.24}, {'inset_G': 8.74, 'ext': 7.74}, {'inset_G': 8.24, 'ext': 7.24}, {'inset_G': 7.99, 'ext': 6.99}, {'inset_G': 8.99, 'ext': 7.99}, {'inset_G': 8.49, 'ext': 7.49}, {'inset_G': 8.24, 'ext': 7.24}, {'inset_G': 7.99, 'ext': 6.99}, {'inset_G': 8.99, 'ext': 7.99}, {'inset_G': 8.49, 'ext': 7.49}, {'inset_G': 8.24, 'ext': 7.24}, {'inset_G': 7.99, 'ext': 6.99}, {'inset_G': 8.99, 'ext': 7.99}, {'inset_G': 8.49, 'ext': 7.49}] (a NOFIT verdict is a verified rejection, not a script failure)"
+ },
+ {
+  "id": "MZ5-df12_pair20",
+  "name": "cross-tile outline check at minimal pitch: tab +6.04 mm leaves worst outline gap 0.000 mm (rib_gap 1.0) -> COLLIDES at minimal pitch",
+  "ok": true,
+  "detail": "per-neighbour {'(73.44,0.00)': 1.0, '(-73.44,0.00)': 1.0, '(9.18,-47.70)': 0.0, '(-9.18,47.70)': 0.0, '(64.26,47.70)': 10.1799, '(-64.26,-47.70)': 10.1799}"
+ },
+ {
+  "id": "MZ6-df12_pair20",
+  "name": "tab remedy evaluated at placement level: widened inset G=13.0 mm, re-certified tab +12 mm (was +6.04); verdict NOFIT (island slack 0.525, drill-edge -1.385, pad-edge 0.0, body gap 0.3, net area 725.3 mm2)",
+  "ok": true,
+  "detail": "history [{'inset_G': 7.04, 'ext': 6.04}, {'inset_G': 10.04, 'ext': 9.04}, {'inset_G': 10.54, 'ext': 9.54}, {'inset_G': 13.0, 'ext': 12}, {'inset_G': 13.0, 'ext': 12}] (a NOFIT verdict is a verified rejection, not a script failure)"
+ },
+ {
+  "id": "MZ5-gecko_pair20_THT",
+  "name": "cross-tile outline check at minimal pitch: tab +5.75 mm leaves worst outline gap 0.000 mm (rib_gap 1.0) -> COLLIDES at minimal pitch",
+  "ok": true,
+  "detail": "per-neighbour {'(73.44,0.00)': 1.0, '(-73.44,0.00)': 1.0, '(9.18,-47.70)': 0.0, '(-9.18,47.70)': 0.0, '(64.26,47.70)': 10.1799, '(-64.26,-47.70)': 10.1799}"
+ },
+ {
+  "id": "MZ6-gecko_pair20_THT",
+  "name": "tab remedy evaluated at placement level: widened inset G=13.0 mm, re-certified tab +12 mm (was +5.75); verdict NOFIT (island slack 0.4, drill-edge -1.385, pad-edge 0.0, body gap 0.3, net area 725.3 mm2)",
+  "ok": true,
+  "detail": "history [{'inset_G': 6.75, 'ext': 5.75}, {'inset_G': 9.75, 'ext': 8.75}, {'inset_G': 13.0, 'ext': 12}, {'inset_G': 13.0, 'ext': 12}] (a NOFIT verdict is a verified rejection, not a script failure)"
+ },
+ {
+  "id": "SP1",
+  "name": "chassis-side S1971/S1961 land pattern is DRAWING-sourced: 2.25 x 3.70 mm per DRG-03072/03073 (was: unverified assumption)",
+  "ok": true,
+  "detail": "(2.25, 3.7)"
+ },
+ {
+  "id": "SP2",
+  "name": "tile-side target pad dia 2.5 mm >= drawing tab width 2.25 mm + 0.25 mm placement margin (documented relation, no longer blind)",
+  "ok": true,
+  "detail": "dia 2.5; DRG tab 2.25"
+ }
+]

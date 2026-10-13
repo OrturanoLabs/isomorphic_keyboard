@@ -1,0 +1,17 @@
+self-test: galette/jedutil fuse-map geometry agreement OK
+file: ../../../../hardware/gal/tile_glue.jed
+fuse checksum: declared=9790 computed=9790 -> OK
+signature/UES: 0101010001001001010011000100010101000111010011000101010101000101
+AR: P21
+SP: FALSE
+P23: S0=1 S1=1 [com,hi] OE='1' SOP=TW * BFIRST * LDATA + /TW * TDATA + /BFIRST * TDATA
+P22: S0=1 S1=1 [com,hi] OE='1' SOP=/BLATCH * /RLATCH
+P21: S0=1 S1=1 [com,hi] OE='1' SOP=BLATCH + RLATCH
+P20: S0=1 S1=1 [com,hi] OE=TW * BFIRST SOP=BCLK
+P19: S0=1 S1=1 [com,hi] OE='1' SOP=BCLK * /TW + BCLK * /BFIRST
+P18: S0=1 S1=0 [reg,hi] OE='1' SOP=/BW + BDATA * /Q0 * /Q1 * /Q2 * /Q3
+P17: S0=1 S1=0 [reg,hi] OE=FALSE SOP=Q2 * /Q3 + Q1 * /Q3 + Q0 * /Q3 + /Q0 * /Q1 * /Q2 * Q3
+P16: S0=1 S1=0 [reg,hi] OE=FALSE SOP=Q1 * /Q2 + Q0 * /Q2 + /Q0 * /Q1 * Q2
+P15: S0=1 S1=0 [reg,hi] OE=FALSE SOP=Q0 * /Q1 + /Q0 * Q1
+P14: S0=1 S1=0 [reg,hi] OE=FALSE SOP=Q0
+checksum declared==computed: True

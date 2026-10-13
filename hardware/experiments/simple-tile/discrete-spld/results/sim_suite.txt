@@ -1,0 +1,35 @@
+PASS  variant_a   single    distinctive samples=32 rounds=293 first_bit=ok settle_fail=0
+PASS  variant_a   single    pressed     samples=32 rounds=287 first_bit=ok settle_fail=0
+PASS  variant_a   single    released    samples=32 rounds=291 first_bit=ok settle_fail=0
+PASS  variant_a   column2   distinctive samples=64 rounds=514 first_bit=ok settle_fail=0
+PASS  variant_a   column2   pressed     samples=64 rounds=498 first_bit=ok settle_fail=0
+PASS  variant_a   column4   distinctive samples=128 rounds=1302 first_bit=ok settle_fail=0
+PASS  variant_a   row4      distinctive samples=128 rounds=1674 first_bit=ok settle_fail=0
+PASS  variant_a   grid2x3   distinctive samples=192 rounds=1955 first_bit=ok settle_fail=0
+PASS  variant_a   grid4x4   distinctive samples=512 rounds=6872 first_bit=ok settle_fail=0
+PASS  variant_a   grid4x4   pressed     samples=512 rounds=6778 first_bit=ok settle_fail=0
+PASS  variant_a   grid4x4   released    samples=512 rounds=6817 first_bit=ok settle_fail=0
+PASS  variant_a2  single    distinctive samples=32 rounds=293 first_bit=ok settle_fail=0
+PASS  variant_a2  single    pressed     samples=32 rounds=287 first_bit=ok settle_fail=0
+PASS  variant_a2  single    released    samples=32 rounds=291 first_bit=ok settle_fail=0
+PASS  variant_a2  column2   distinctive samples=64 rounds=514 first_bit=ok settle_fail=0
+PASS  variant_a2  column2   pressed     samples=64 rounds=498 first_bit=ok settle_fail=0
+PASS  variant_a2  column4   distinctive samples=128 rounds=1300 first_bit=ok settle_fail=0
+PASS  variant_a2  row4      distinctive samples=128 rounds=1674 first_bit=ok settle_fail=0
+PASS  variant_a2  grid2x3   distinctive samples=192 rounds=1953 first_bit=ok settle_fail=0
+PASS  variant_a2  grid4x4   distinctive samples=512 rounds=6872 first_bit=ok settle_fail=0
+PASS  variant_a2  grid4x4   pressed     samples=512 rounds=6778 first_bit=ok settle_fail=0
+PASS  variant_a2  grid4x4   released    samples=512 rounds=6816 first_bit=ok settle_fail=0
+PASS  variant_b2  single    distinctive samples=32 rounds=280 first_bit=ok settle_fail=0
+PASS  variant_b2  single    pressed     samples=32 rounds=274 first_bit=ok settle_fail=0
+PASS  variant_b2  single    released    samples=32 rounds=276 first_bit=ok settle_fail=0
+PASS  variant_b2  column2   distinctive samples=64 rounds=492 first_bit=ok settle_fail=0
+PASS  variant_b2  column2   pressed     samples=64 rounds=476 first_bit=ok settle_fail=0
+PASS  variant_b2  column4   distinctive samples=128 rounds=1274 first_bit=ok settle_fail=0
+PASS  variant_b2  row4      distinctive samples=128 rounds=1656 first_bit=ok settle_fail=0
+PASS  variant_b2  grid2x3   distinctive samples=192 rounds=1928 first_bit=ok settle_fail=0
+PASS  variant_b2  grid4x4   distinctive samples=512 rounds=6818 first_bit=ok settle_fail=0
+PASS  variant_b2  grid4x4   pressed     samples=512 rounds=6724 first_bit=ok settle_fail=0
+PASS  variant_b2  grid4x4   released    samples=512 rounds=6760 first_bit=ok settle_fail=0
+
+ALL PASS (33 configs)

@@ -1,0 +1,135 @@
+{
+ "ok": true,
+ "variants": {
+  "gw1nz": {
+   "ok": true,
+   "source": "UG846-1.1E Fig 4-1/4-2 recommended PCB layout (D/E 6.00, D2/E2 2.70, P 5.90, e 0.40, L 0.85, b 0.20); land-provenance = VENDOR-RECOMMENDED",
+   "checks": [
+    {
+     "id": "F1",
+     "ok": true,
+     "detail": "48 perimeter pads + EP (want 48+EP; rows 24v+24h)"
+    },
+    {
+     "id": "F2",
+     "ok": true,
+     "detail": "left-column dy set = [0.4] over 12 pads (want {0.4})"
+    },
+    {
+     "id": "F3",
+     "ok": true,
+     "detail": "rows x=[-2.95, 2.95] y=[-2.95, 2.95] (want +/-2.95 -> P=5.90)"
+    },
+    {
+     "id": "F4",
+     "ok": true,
+     "detail": "pad sizes [(0.2, 0.85), (0.85, 0.2)] subset of [(0.2, 0.85), (0.85, 0.2)]"
+    },
+    {
+     "id": "F5",
+     "ok": true,
+     "detail": "EP at (0.0, 0.0, 2.7, 2.7) (want centred 2.7x2.7)"
+    },
+    {
+     "id": "F6",
+     "ok": true,
+     "detail": "row centre 2.95 - L/2 = 2.525 vs EP/2 1.350 -> clearance 1.175 mm"
+    },
+    {
+     "id": "F7",
+     "ok": true,
+     "detail": "fab box 6.00 x 6.00 (want 6.0)"
+    },
+    {
+     "id": "F8",
+     "ok": true,
+     "detail": "pad1 at (-2.95, -2.2) (want (-2.95, -2.2000) = top-left, CCW)"
+    },
+    {
+     "id": "F9",
+     "ok": true,
+     "detail": "toe extension 0.375 mm past body edge (want 0.2..0.6)"
+    },
+    {
+     "id": "F10",
+     "ok": true,
+     "detail": "courtyard x -3.3..3.3 (want +/-3.30)"
+    }
+   ]
+  },
+  "up5k": {
+   "ok": true,
+   "source": "FPGA-DS-02053-8.8 sec.31 PACKAGE dims (D/E 7.0 BSC, D2/E2 5.35 nom, e 0.50 BSC, b 0.15-0.30, L 0.35-0.45); land geometry rows +/-3.45 / 0.8x0.25 = KiCad stock practice -> LAND-TBD (no vendor recommended-land captured)",
+   "checks": [
+    {
+     "id": "F1",
+     "ok": true,
+     "detail": "48 perimeter pads + EP (want 48+EP; rows 24v+24h)"
+    },
+    {
+     "id": "F2",
+     "ok": true,
+     "detail": "left-column dy set = [0.5] over 12 pads (want {0.5})"
+    },
+    {
+     "id": "F3",
+     "ok": true,
+     "detail": "rows x=[-3.45, 3.45] y=[-3.45, 3.45] (want +/-3.45 -> P=6.90)"
+    },
+    {
+     "id": "F4",
+     "ok": true,
+     "detail": "pad sizes [(0.25, 0.8), (0.8, 0.25)] subset of [(0.25, 0.8), (0.8, 0.25)]"
+    },
+    {
+     "id": "F5",
+     "ok": true,
+     "detail": "EP at (0.0, 0.0, 5.35, 5.35) (want centred 5.35x5.35)"
+    },
+    {
+     "id": "F6",
+     "ok": true,
+     "detail": "row centre 3.45 - L/2 = 3.050 vs EP/2 2.675 -> clearance 0.375 mm"
+    },
+    {
+     "id": "F7",
+     "ok": true,
+     "detail": "fab box 7.00 x 7.00 (want 7.0)"
+    },
+    {
+     "id": "F8",
+     "ok": true,
+     "detail": "pad1 at (-3.45, -2.75) (want (-3.45, -2.7500) = top-left, CCW)"
+    },
+    {
+     "id": "F9",
+     "ok": true,
+     "detail": "toe extension 0.350 mm past body edge (want 0.2..0.6)"
+    },
+    {
+     "id": "F10",
+     "ok": true,
+     "detail": "courtyard x -3.8..3.8 (want +/-3.80)"
+    }
+   ]
+  }
+ },
+ "negative_control": [
+  {
+   "case": "gw1nz:pitch+0.05",
+   "failed_as_expected": true
+  },
+  {
+   "case": "gw1nz:ep+0.1",
+   "failed_as_expected": true
+  },
+  {
+   "case": "up5k:pitch+0.05",
+   "failed_as_expected": true
+  },
+  {
+   "case": "up5k:ep+0.1",
+   "failed_as_expected": true
+  }
+ ]
+}

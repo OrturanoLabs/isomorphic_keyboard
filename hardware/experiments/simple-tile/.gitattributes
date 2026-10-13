@@ -2,3 +2,11 @@
 logic/pld/results/*.fus whitespace=-blank-at-eof
 logic/pld/results/*.pin whitespace=-blank-at-eof
 logic/cpld/results/*.log whitespace=-blank-at-eof,-blank-at-eol
+**/*.log whitespace=-blank-at-eof,-blank-at-eol
+# Keep generated CAD and evidence formatting byte-for-byte.
+**/*.kicad_pcb whitespace=-blank-at-eol,-space-before-tab,-blank-at-eof
+**/*.stp whitespace=-blank-at-eol
+checkpoints/*.md whitespace=-blank-at-eol,-blank-at-eof
+discrete-spld/results/boards_drc.md whitespace=-blank-at-eof
+fpga/board/out/pnr/summary.txt whitespace=-blank-at-eol
+fpga/system/results/report.md whitespace=-blank-at-eol

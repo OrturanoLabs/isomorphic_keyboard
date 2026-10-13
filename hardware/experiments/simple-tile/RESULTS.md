@@ -1,5 +1,8 @@
 # Single-board tile: first experiment results
 
+Historical first-round snapshot (`6572e0f`). The subsequent experiments and
+review corrections are summarized in [FOLLOWUP_RESULTS.md](FOLLOWUP_RESULTS.md).
+
 ## Decision status
 
 No candidate has 20 MHz system timing sign-off or hardware validation yet.

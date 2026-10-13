@@ -1,0 +1,53 @@
+# 20 MHz burst hop SI; model source: TI IBIS sn74lvc2g126.ibs / sn74lvc2g125.ibs (typ column), fetched via hardware/si/models/fetch.sh ids SCEM283/288; no IBIS min/max corner is modelled (IBIS-lite typ only)
+# thresholds: VIH=2.0 V, VIL=0.8 V; budgets: contiguous dwell>=4.3 ns (165 tw),
+# exactly one crossing per active edge, overshoot<=+30%, undershoot>=-0.99 V
+# (ASSUMED budgets, typical-corner IBIS, lossless track - NOT a signoff)
+SI-PROGRESS case fam=A rs=0 start elapsed_s=0
+SI-FAIL clock fam=A rs= 0 node=near over=   66% under=-0.85V min-dwell-hi= 4.3ns min-dwell-lo= 0.0ns | cyc@3: VIL-dn=0; cyc@3: dwell-low 0.0ns < 4.3ns; cyc@4: VIL-dn=2; cyc@4: dwell-high 4.3ns < 4.3ns; cyc@5: VIL-dn=0; cyc@5: dwell-low 0.0ns < 4.3ns; cyc@6: VIL-dn=2; cyc@7: VIL-dn=0; cyc@7: dwell-low 0.0ns < 4.3ns; cyc@8: VIL-dn=2; cyc@9: VIL-dn=0; cyc@9: dwell-low 0.0ns < 4.3ns; overshoot 66% > 30%
+SI-FAIL clock fam=A rs= 0 node=far  over=   76% under=-0.95V min-dwell-hi= 1.1ns min-dwell-lo= 0.0ns | cyc@3: VIL-dn=0; cyc@3: dwell-high 2.3ns < 4.3ns; cyc@3: dwell-low 0.0ns < 4.3ns; cyc@5: VIL-dn=0; cyc@5: dwell-low 0.0ns < 4.3ns; cyc@6: VIL-dn=0; cyc@6: dwell-high 2.2ns < 4.3ns; cyc@6: dwell-low 0.0ns < 4.3ns; cyc@8: VIL-dn=0; cyc@8: dwell-low 0.0ns < 4.3ns; cyc@9: VIL-dn=0; cyc@9: dwell-high 1.1ns < 4.3ns; cyc@9: dwell-low 0.0ns < 4.3ns; overshoot 76% > 30%
+SI-FAIL data  fam=A rs= 0 node=far  over=   76% under=-0.96V | cell5: 8 threshold crossings; cell8: 8 threshold crossings; bit9(0): @60% = 2.86V; bit11(0): @60% = 2.86V; overshoot 76% > 30%
+SI-INFO release fam=A rs= 0 float VIL->VIH   191.5 ns (10k pull-up), crossings VIH=5 VIL=1
+SI-PROGRESS case fam=A rs=0 done case_s=55
+SI-PROGRESS case fam=A rs=22 start elapsed_s=55
+SI-FAIL clock fam=A rs=22 node=near over=   36% under=-0.86V min-dwell-hi= 7.7ns min-dwell-lo=11.6ns | overshoot 36% > 30%
+SI-FAIL clock fam=A rs=22 node=far  over=   42% under=-0.80V min-dwell-hi=34.9ns min-dwell-lo=55.5ns | overshoot 42% > 30%
+SI-FAIL data  fam=A rs=22 node=far  over=   42% under=-0.80V | overshoot 42% > 30%
+SI-INFO release fam=A rs=22 float VIL->VIH   188.8 ns (10k pull-up), crossings VIH=3 VIL=1
+SI-PROGRESS case fam=A rs=22 done case_s=57
+SI-PROGRESS case fam=A rs=33 start elapsed_s=112
+SI-PASS clock fam=A rs=33 node=near over=   25% under=-0.84V min-dwell-hi=85.3ns min-dwell-lo=91.3ns
+SI-FAIL clock fam=A rs=33 node=far  over=   31% under=-0.79V min-dwell-hi= 8.0ns min-dwell-lo= 8.5ns | overshoot 31% > 30%
+SI-FAIL data  fam=A rs=33 node=far  over=   30% under=-0.79V | overshoot 30% > 30%
+SI-INFO release fam=A rs=33 float VIL->VIH   188.8 ns (10k pull-up), crossings VIH=3 VIL=1
+SI-PROGRESS case fam=A rs=33 done case_s=56
+SI-PROGRESS case fam=A rs=47 start elapsed_s=169
+SI-PASS clock fam=A rs=47 node=near over=   14% under=-0.55V min-dwell-hi=69.7ns min-dwell-lo=70.7ns
+SI-PASS clock fam=A rs=47 node=far  over=   20% under=-0.70V min-dwell-hi= 7.2ns min-dwell-lo= 7.2ns
+SI-PASS data  fam=A rs=47 node=far  over=   19% under=-0.71V
+SI-INFO release fam=A rs=47 float VIL->VIH   189.6 ns (10k pull-up), crossings VIH=3 VIL=3
+SI-PROGRESS case fam=A rs=47 done case_s=51
+SI-PROGRESS case fam=B rs=0 start elapsed_s=220
+SI-FAIL clock fam=B rs= 0 node=near over=   49% under=-0.97V min-dwell-hi=69.0ns min-dwell-lo=163.7ns | overshoot 49% > 30%
+SI-FAIL clock fam=B rs= 0 node=far  over=   69% under=-0.87V min-dwell-hi= 5.1ns min-dwell-lo= 0.0ns | cyc@3: VIL-dn=0; cyc@3: dwell-low 0.0ns < 4.3ns; cyc@5: VIL-dn=0; cyc@5: dwell-low 0.0ns < 4.3ns; cyc@7: VIL-dn=0; cyc@7: dwell-low 0.0ns < 4.3ns; cyc@9: VIL-dn=0; cyc@9: dwell-low 0.0ns < 4.3ns; overshoot 69% > 30%
+SI-FAIL data  fam=B rs= 0 node=far  over=   69% under=-0.87V | cell5: 4 threshold crossings; cell8: 4 threshold crossings; cell10: 4 threshold crossings; overshoot 69% > 30%
+SI-INFO release fam=B rs= 0 float VIL->VIH   246.6 ns (10k pull-up), crossings VIH=5 VIL=5
+SI-PROGRESS case fam=B rs=0 done case_s=67
+SI-PROGRESS case fam=B rs=22 start elapsed_s=288
+SI-PASS clock fam=B rs=22 node=near over=   17% under=-0.58V min-dwell-hi=12.3ns min-dwell-lo=13.2ns
+SI-FAIL clock fam=B rs=22 node=far  over=   27% under=-0.86V min-dwell-hi= 0.8ns min-dwell-lo= 0.9ns | cyc@6: dwell-high 0.8ns < 4.3ns; cyc@6: dwell-low 0.9ns < 4.3ns
+SI-PASS data  fam=B rs=22 node=far  over=   27% under=-0.86V
+SI-INFO release fam=B rs=22 float VIL->VIH   246.7 ns (10k pull-up), crossings VIH=3 VIL=5
+SI-PROGRESS case fam=B rs=22 done case_s=64
+SI-PROGRESS case fam=B rs=33 start elapsed_s=353
+SI-PASS clock fam=B rs=33 node=near over=   10% under=-0.42V min-dwell-hi=91.1ns min-dwell-lo=93.3ns
+SI-FAIL clock fam=B rs=33 node=far  over=   14% under=-0.60V min-dwell-hi= 1.9ns min-dwell-lo= 1.9ns | cyc@9: dwell-high 1.9ns < 4.3ns; cyc@9: dwell-low 1.9ns < 4.3ns
+SI-PASS data  fam=B rs=33 node=far  over=   14% under=-0.60V
+SI-INFO release fam=B rs=33 float VIL->VIH   244.9 ns (10k pull-up), crossings VIH=5 VIL=1
+SI-PROGRESS case fam=B rs=33 done case_s=66
+SI-PROGRESS case fam=B rs=47 start elapsed_s=420
+SI-PASS clock fam=B rs=47 node=near over=    2% under=-0.11V min-dwell-hi=110.7ns min-dwell-lo=105.8ns
+SI-FAIL clock fam=B rs=47 node=far  over=    2% under=-0.11V min-dwell-hi= 4.4ns min-dwell-lo= 4.3ns | cyc@3: VIL-dn=3; cyc@4: VIL-dn=3; cyc@5: VIL-dn=3; cyc@6: VIL-dn=3; cyc@7: VIL-dn=3; cyc@8: VIL-dn=3; cyc@8: dwell-low 4.3ns < 4.3ns; cyc@9: VIL-dn=3
+SI-FAIL data  fam=B rs=47 node=far  over=    2% under=-0.12V | cell4: 6 threshold crossings; cell6: 6 threshold crossings; cell9: 6 threshold crossings; cell11: 6 threshold crossings
+SI-INFO release fam=B rs=47 float VIL->VIH   246.5 ns (10k pull-up), crossings VIH=3 VIL=3
+SI-PROGRESS case fam=B rs=47 done case_s=67
+SI-DONE rc=1

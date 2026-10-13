@@ -1,0 +1,697 @@
+{
+ "schema": "fpga-system/results/v3",
+ "generated_utc": "2026-10-12T17:02:16Z",
+ "verdict": "FPGA-SYSTEM PASS",
+ "runs_passed": 33,
+ "runs_failed": 0,
+ "environment": {
+  "date_utc": "2026-10-12T16:56:03Z",
+  "mode": "container localhost/oss-cad-suite:2026-09-26",
+  "image_id": "58f58619c735ff1e6f1ce5b71a318dacbf2e8823231d96ddd4862975dbcf2640",
+  "ghdl_version": "GHDL 7.0.0-dev (6.0.0.r515.g6ea214092.dirty) [Dunoon edition]",
+  "kernel": "Linux 7.2.8-arch1-2 x86_64 GNU/Linux",
+  "scope": "SYNTHETIC corners exploration at 20 MHz; NOT hardware sign-off"
+ },
+ "non_signoff": "Synthetic corners exploration at 20 MHz; interior anchors from nextpnr/icetime post-route max-analysis; pad / TBUF / interconnect / recovery windows synthetic or unknown; NOT hardware sign-off.",
+ "design": {
+  "device_lead": "GW1NZ-LV1QN48C6/I5",
+  "snap_mode": "fall",
+  "pins_user_io": 26,
+  "pin_plan_source": "fpga/docs/pin_budget.md + synth/tile_gw1nz.cst",
+  "pin_plan_io_loc_count": 26
+ },
+ "fitted_anchors_gw1nz_fall": {
+  "fit_clk2q_ns": 0.46,
+  "fit_crit_logic_ns": 1.36,
+  "fit_crit_routing_ns": 2.57,
+  "fit_crit_total_ns": 3.93,
+  "fit_fmax_shift_clk_mhz": 254.84,
+  "fit_xdom_neglatch_posclk_ns": 4.86,
+  "gw1nz_track_xdom_posysclk_posclk_ns": 5.59
+ },
+ "unknown_by_default": [
+  "board_interconnect_ns",
+  "ff_recovery_window_ns",
+  "min_delay_analysis",
+  "pad_input_delay_ns",
+  "pad_output_delay_ns",
+  "tbuf_enable_disable_ns"
+ ],
+ "corners": {
+  "t_padin": [
+   0.5,
+   1.5,
+   3.0
+  ],
+  "t_do_int": [
+   0.7,
+   1.5,
+   3.93
+  ],
+  "t_bw_int": [
+   0.7,
+   1.5,
+   3.93
+  ],
+  "t_latcho_int": [
+   0.3,
+   0.8,
+   2.0
+  ],
+  "t_padout": [
+   0.5,
+   1.5,
+   3.0
+  ],
+  "t_tbuf_en": [
+   0.3,
+   1.0,
+   2.5
+  ],
+  "t_tbuf_dis": [
+   0.3,
+   1.0,
+   2.5
+  ],
+  "t_tbuf_pd": [
+   0.3,
+   1.0,
+   2.0
+  ],
+  "t_xdom_req": [
+   1.5,
+   4.9,
+   4.9
+  ],
+  "t_snap_su": [
+   0.2,
+   0.5,
+   0.8
+  ],
+  "t_snap_hd": [
+   0.2,
+   0.5,
+   0.8
+  ],
+  "t_clkhi_req": [
+   3.0,
+   5.0,
+   8.0
+  ],
+  "route_hop": [
+   0.2,
+   1.5,
+   3.0
+  ]
+ },
+ "controller_fixed": {
+  "tclk_ns": 50.0,
+  "shift_mhz": 20.0,
+  "latch_width_ns": 200.0,
+  "note": "20 MHz shift clock at the controller, 200 ns latch pulse; guard/lead/high-phase swept separately"
+ },
+ "runs": [
+  {
+   "name": "pos_n1x4_fit",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n2x4_fit",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n16x4_fit",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n1x16_fit",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_g4x4_fit",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n1x4_min",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n2x4_min",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n16x4_min",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n1x16_min",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_g4x4_min",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n1x4_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n2x4_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n16x4_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n1x16_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_g4x4_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n16x4_r0_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n1x16_r0_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "pos_n16x4_r30_max",
+   "class": "positive",
+   "result": "pass"
+  },
+  {
+   "name": "u_latch_or_b_leg",
+   "class": "unit",
+   "result": "pass"
+  },
+  {
+   "name": "u_latch_or_r_leg",
+   "class": "unit",
+   "result": "pass"
+  },
+  {
+   "name": "u_latch_or_skew",
+   "class": "unit",
+   "result": "pass"
+  },
+  {
+   "name": "u_latch_or_keyok",
+   "class": "unit",
+   "result": "pass"
+  },
+  {
+   "name": "u_track_contract",
+   "class": "unit",
+   "result": "pass"
+  },
+  {
+   "name": "neg_guard00_fit",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:SNAP-XDOM"
+  },
+  {
+   "name": "neg_guard04_fit",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:SNAP-XDOM"
+  },
+  {
+   "name": "neg_wlow_s250_max",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:W-LOWPHASE"
+  },
+  {
+   "name": "neg_deepxdom_max",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:SNAP-XDOM"
+  },
+  {
+   "name": "neg_lead45_fit",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:STREAM"
+  },
+  {
+   "name": "neg_release_r30_max",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:RELEASE-HIGH"
+  },
+  {
+   "name": "neg_lead25_settle_max",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:DATA-SETTLE"
+  },
+  {
+   "name": "u_latch_or_glitch",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:LATCH-GLITCH"
+  },
+  {
+   "name": "u_snap_window",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:SNAP-WINDOW"
+  },
+  {
+   "name": "u_track_shortlatch",
+   "class": "negative",
+   "result": "pass",
+   "failed_token": "TIMING-FAIL:STREAM"
+  }
+ ],
+ "arrival_ns": {
+  "pos_n1x4_fit": {
+   "min_ns": 9,
+   "max_ns": 9
+  },
+  "pos_n2x4_fit": {
+   "min_ns": 9,
+   "max_ns": 9
+  },
+  "pos_n16x4_fit": {
+   "min_ns": 9,
+   "max_ns": 9
+  },
+  "pos_n1x16_fit": {
+   "min_ns": 9,
+   "max_ns": 9
+  },
+  "pos_g4x4_fit": {
+   "min_ns": 9,
+   "max_ns": 9
+  },
+  "pos_n1x4_min": {
+   "min_ns": 6,
+   "max_ns": 6
+  },
+  "pos_n2x4_min": {
+   "min_ns": 6,
+   "max_ns": 6
+  },
+  "pos_n16x4_min": {
+   "min_ns": 6,
+   "max_ns": 6
+  },
+  "pos_n1x16_min": {
+   "min_ns": 6,
+   "max_ns": 6
+  },
+  "pos_g4x4_min": {
+   "min_ns": 6,
+   "max_ns": 6
+  },
+  "pos_n1x4_max": {
+   "min_ns": 14,
+   "max_ns": 14
+  },
+  "pos_n2x4_max": {
+   "min_ns": 14,
+   "max_ns": 14
+  },
+  "pos_n16x4_max": {
+   "min_ns": 14,
+   "max_ns": 14
+  },
+  "pos_n1x16_max": {
+   "min_ns": 14,
+   "max_ns": 14
+  },
+  "pos_g4x4_max": {
+   "min_ns": 14,
+   "max_ns": 14
+  },
+  "pos_n16x4_r0_max": {
+   "min_ns": 9,
+   "max_ns": 9
+  },
+  "pos_n1x16_r0_max": {
+   "min_ns": 9,
+   "max_ns": 9
+  },
+  "pos_n16x4_r30_max": {
+   "min_ns": 18,
+   "max_ns": 18
+  }
+ },
+ "wphase": {
+  "pos_n2x4_fit": {
+   "1": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "2": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   }
+  },
+  "pos_n2x4_max": {
+   "1": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "2": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   }
+  },
+  "pos_n16x4_fit": {
+   "1": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "2": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "3": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "4": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "5": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "6": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "7": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "8": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "9": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "10": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "11": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "12": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "13": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "14": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "15": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "16": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   }
+  },
+  "pos_n16x4_max": {
+   "1": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "2": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "3": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "4": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "5": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "6": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "7": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "8": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "9": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "10": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "11": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "12": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "13": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "14": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "15": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   },
+   "16": {
+    "since_src_rise_ns": 17,
+    "local_phase": "high"
+   }
+  },
+  "pos_n1x16_fit": {
+   "1": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   }
+  },
+  "pos_g4x4_fit": {
+   "1": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "2": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "3": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   },
+   "4": {
+    "since_src_rise_ns": 10,
+    "local_phase": "high"
+   }
+  }
+ },
+ "sweeps": [
+  {
+   "N": 2,
+   "H": 4,
+   "corner": "fit",
+   "guard_min_ns": "10",
+   "lead_min_ns": "1",
+   "lead_max_ns": "30",
+   "high_min_ns": "15.0",
+   "wlow_scale_max_ok_pct": "250"
+  },
+  {
+   "N": 16,
+   "H": 4,
+   "corner": "fit",
+   "guard_min_ns": "10",
+   "lead_min_ns": "1",
+   "lead_max_ns": "30",
+   "high_min_ns": "15.0",
+   "wlow_scale_max_ok_pct": "250"
+  },
+  {
+   "N": 1,
+   "H": 16,
+   "corner": "fit",
+   "guard_min_ns": "25",
+   "lead_min_ns": "1",
+   "lead_max_ns": "30",
+   "high_min_ns": "15.0",
+   "wlow_scale_max_ok_pct": "200"
+  },
+  {
+   "N": 2,
+   "H": 4,
+   "corner": "max",
+   "guard_min_ns": "15",
+   "lead_min_ns": "1",
+   "lead_max_ns": "30",
+   "high_min_ns": "22.0",
+   "wlow_scale_max_ok_pct": "100"
+  },
+  {
+   "N": 16,
+   "H": 4,
+   "corner": "max",
+   "guard_min_ns": "15",
+   "lead_min_ns": "1",
+   "lead_max_ns": "30",
+   "high_min_ns": "22.0",
+   "wlow_scale_max_ok_pct": "100"
+  },
+  {
+   "N": 1,
+   "H": 16,
+   "corner": "max",
+   "guard_min_ns": "50",
+   "lead_min_ns": "1",
+   "lead_max_ns": "30",
+   "high_min_ns": "22.0",
+   "wlow_scale_max_ok_pct": "100"
+  },
+  {
+   "N": 1,
+   "H": 4,
+   "corner": "fit",
+   "guard_min_ns": "10",
+   "lead_min_ns": "1",
+   "lead_max_ns": "30",
+   "high_min_ns": "15.0",
+   "wlow_scale_max_ok_pct": "250"
+  },
+  {
+   "N": 2,
+   "H": 4,
+   "corner": "min",
+   "guard_min_ns": "3",
+   "lead_min_ns": "1",
+   "lead_max_ns": "40",
+   "high_min_ns": "15.0",
+   "wlow_scale_max_ok_pct": "300"
+  },
+  {
+   "N": 16,
+   "H": 4,
+   "corner": "min",
+   "guard_min_ns": "3",
+   "lead_min_ns": "1",
+   "lead_max_ns": "40",
+   "high_min_ns": "15.0",
+   "wlow_scale_max_ok_pct": "300"
+  }
+ ],
+ "constraints_at_20mhz": {
+  "applies_to": "controller driving the chain at 20 MHz, 50 ns period; values from the sweep table (synthetic corners) plus the fitted xdom anchor; exploration, not sign-off",
+  "guard_latch_deassert_to_first_clock_ns": {
+   "4-deep column (any N cols) fit": "10",
+   "4-deep column (any N cols) max": "15",
+   "16-deep column fit": "25",
+   "16-deep column max": "50",
+   "bound_explanation": "guard - d_hop*(depth-1) >= xdom_req 4.9 ns(fitted 4.86+0.04), d_hop = (latcho+hop+padin) - (tbuf_pd+hop+padin) per level; the latch-OR forward chain must not lose the race to the TBUF clock chain"
+  },
+  "sample_lead_window_ns": {
+   "fit": [
+    "1",
+    "30"
+   ],
+   "max": [
+    "1",
+    "30"
+   ],
+   "min": [
+    "1",
+    "40"
+   ]
+  },
+  "clock_high_min_ns_50_duty_class": {
+   "fit": "15.0",
+   "max": "22.0",
+   "why": "W-switch containment: the L_clk enable / T_clk release must land while the source clock is still high"
+  },
+  "w_enable_low_phase_exposure_scale_pct": {
+   "fit_safe_through": "250",
+   "max_safe_through": "100"
+  },
+  "fixed": {
+   "latch_pulse_width_ns": 200.0,
+   "shift_clock": "20 MHz actual at the controller",
+   "cross_domain_req_ns": 4.9
+  }
+ },
+ "track_characterisation": {
+  "u_track_contract.log": {
+   "stale_in_window": 6,
+   "captured": 34,
+   "steps": 40
+  }
+ },
+ "sources_sha256": {
+  "hardware/experiments/simple-tile/fpga/rtl/tile_fpga.vhdl": "5e21172ea2286af8653269f20b1baefbebae9884c361dc8c6c07d00ce9ad9692",
+  "hardware/experiments/simple-tile/fpga/rtl/top_gw1nz.vhdl": "77d61ebf37c1d30836a0bc2fa45a35d89410fa5533d4ebc9551fa8bb98928fce",
+  "hardware/simulation/tile.vhdl": "5571e9ed5e605a5d238dd0a6d5a479169565aec3720e70fce658d89b63f13d3d",
+  "hardware/experiments/simple-tile/regression/tile_reg_pkg.vhdl": "4395e865c75ba3ca6667b117bf1e14d685f4e2761298cd4325957a1d5a91ce86",
+  "docs/architecture/protocol.md": "b79830b2148cbbd835ae69c8eacbbfb208eb116a47cb6adf542a947953eaa690",
+  "hardware/experiments/simple-tile/fpga/synth/results/logs/gw1nz_fall_nextpnr.log": "b94e966757103483d4a7ac60c51688e51a3bcc777f3e5ad9c9be9a761f5aa576",
+  "hardware/experiments/simple-tile/fpga/synth/results/logs/gw1nz_track_nextpnr.log": "a93a150b96ecba3023e07dbfccb86d0d699244b3d4b1ab823376906c6244ccdd",
+  "hardware/experiments/simple-tile/fpga/synth/results/logs/up5k_fall_icetime.log": "5d2eb1296ef5c7b0d77b907d494a7c2c6f14f1c7d2ef1819c5d20c3d1a092093",
+  "hardware/experiments/simple-tile/fpga/synth/results/logs/lp8k_fall_icetime.log": "e295bee01da737ac447ef150bc74382a258aebf8c0ffdb4841fecbcfdd8031a1",
+  "hardware/experiments/simple-tile/fpga/synth/tile_gw1nz.cst": "0d454f5b4f268abebb5b6f52163df866d42d9f775dbf05f5edf2053eb3d89d67"
+ },
+ "reproduce": {
+  "extract": "python3 tools/extract_delays.py",
+  "guard": "python3 results/check_system_sync.py",
+  "sims": "bash run_system.sh   (or: bash run_system.sh quick)",
+  "report": "python3 results/make_report.py"
+ }
+}

@@ -1,0 +1,4 @@
+# Regenerate controller simulations and routed test bitstreams from source.
+sim/build/
+synth/build/
+sim/scan20_tb

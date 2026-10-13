@@ -1,0 +1,101 @@
+{
+  "part": "iCE40UP5K-SG48I (fallback board variant)",
+  "package": "SG48 = 48-pin QFN, 0.5 mm pitch, 7.0x7.0 mm, paddle=GND (die paddle must be grounded, DS 4.x note + pinout '*SG48 GND is connected to package paddle')",
+  "sources": {
+    "pinout_xlsx": {
+      "doc": "iCE40UP5K Pinout (Lattice, '# Pin Out For iCE5UP5K', Rev 1.1 Jun-19-2017: fix RGB pins, swap C5/A5, 39/41)",
+      "url": "https://www.latticesemi.com/view_document?document_id=51971",
+      "sha256_file": "cee14ad47beaf22298246228e913e539c87e33bf078e04d65988d1a24237d938",
+      "fetched": "2026-10-12",
+      "note": "column F = SG48; every pin below transcribed from that column"
+    },
+    "DS": {
+      "doc": "FPGA-DS-02008-2.4 iCE40 UltraPlus Family Data Sheet",
+      "url": "https://www.latticesemi.com/view_document?document_id=51968",
+      "sha256_file": "2ef891342e6bc31ebbdf1d3bef1fafaa2299a3a3ec66dab00ffc7f57d8547cc6",
+      "fetched": "2026-10-12",
+      "sections_used": "T4.1/T4.2 operating conditions (VCC 1.14-1.26V, VCCPLL 1.14-1.26V, VCCIO 1.20-3.46V, VPP_2V5 2.30-3.46V master-SPI/NVCM, 2.30-3.00 while programming NVCM); 4.4 POR monitors (VCC, SPI_VCCIO1, VPP_2V5); 4.5 power-up sequence (VCC,VCCPLL first, then SPI_VCCIO1, then VPP_2V5; others any time after 0.5V); 4.6 CRESET_B external reset; T4.24 sysCONFIG (tCRESET_B>=200ns, tCR_SCK typ 1200us, master-SPI MCLK low 7-17/typ 12 MHz); NVCM one-time; config = NVCM or Master-SPI external flash or Slave SPI; SG48 paddle must connect GND"
+    },
+    "TN02001": {
+      "doc": "FPGA-TN-02001-3.5 iCE40 Programming and Configuration",
+      "url": "https://www.latticesemi.com/view_document?document_id=46502",
+      "sha256_file": "c09f115e41891c04af72e05c64fae1c66e379d6effd26b8192f484752e638d55",
+      "note": "boot source: on POR/CRESET_B rising, SPI_SS sampled - HIGH: configure from NVCM if programmed, else SPI Master from external flash; LOW: slave-SPI wait. CRESET_B is a pure input with NO internal pull-up (10K pull-up required if undriven); 49 config clock cycles after CDONE before PIOs activate"
+    },
+    "TN02006": {
+      "doc": "FPGA-TN-02006-2.4 iCE40 Hardware Checklist",
+      "url": "https://www.latticesemi.com/view_document?document_id=47779",
+      "sha256_file": "1d0b2f0832277bfbf1e5586a6e409b9d45cbab0fe0fd9588c57a04e0d255438a",
+      "note": "filter groups: VCC = 4.7uF + 100nF/pin; SPI_VCC = 4.7uF + 100nF/pin; VCCPLL = 100ohm + 4.7uF + 100nF; VCCPLL tied to VCC when PLL unused (external filter still required)"
+    },
+    "pkgdiag": {
+      "doc": "FPGA-DS-02053-8.8 Package Diagrams, sec.31 48-Pin QFN (iCE40 UltraPlus SG48)",
+      "url": "https://www.latticesemi.com/view_document?document_id=213",
+      "sha256_file": "9e8224ab72a438ee9916eb582c05bb8f9354ca8021760805eb9b885caf908f0c",
+      "note": "D=E=7.0 BSC; D2/E2=5.20/5.35/5.50; e=0.50 BSC; b=0.15/0.225/0.30; L=0.35/0.40/0.45"
+    },
+    "chipdb_probe": {
+      "doc": "nextpnr-ice40 empirical pad census (fpga workstream, docs/pin_budget.md)",
+      "note": "39 usable; missing {1,5,7,8,22,24,29,30,33} == datasheet non-IO set {VCCIO2,VCC,CDONE,CRESET_B,SPI_VCCIO1,VPP_2V5,VCCPLL,VCC,VCCIO0} - EXACT MATCH"
+    }
+  },
+  "pins": {
+    "1":  {"role": "power", "net": "VCCIO", "name": "VCCIO_2"},
+    "2":  {"role": "io", "name": "IOB_6a", "bank": "2"},
+    "3":  {"role": "io", "name": "IOB_9b", "bank": "2"},
+    "4":  {"role": "io", "name": "IOB_8a", "bank": "2"},
+    "5":  {"role": "power", "net": "VCC1V2", "name": "VCC"},
+    "6":  {"role": "io", "name": "IOB_13b", "bank": "1"},
+    "7":  {"role": "cfg_status", "name": "CDONE", "net": "CFG_DONE", "bank": "1"},
+    "8":  {"role": "cfg_status", "name": "creset_b", "net": "CFG_CRESET", "pull": "10K pull-up to VCCIO bank; pure input, no internal pull (TN02001)"},
+    "9":  {"role": "io", "name": "IOB_16a", "bank": "1"},
+    "10": {"role": "io", "name": "IOB_18a", "bank": "1"},
+    "11": {"role": "io", "name": "IOB_20a", "bank": "1"},
+    "12": {"role": "io", "name": "IOB_22a", "bank": "1"},
+    "13": {"role": "io", "name": "IOB_24a", "bank": "1"},
+    "14": {"role": "spi_cfg", "name": "IOB_32a_SPI_SO", "bank": "1", "net": "SPI_SO", "flash": "to flash DO (MISO at FPGA in master mode)"},
+    "15": {"role": "spi_cfg", "name": "IOB_34a_SPI_SCK", "bank": "1", "net": "SPI_SCK", "flash": "to flash CLK; master-mode output"},
+    "16": {"role": "spi_cfg", "name": "IOB_35b_SPI_SS", "bank": "1", "net": "SPI_SS", "flash": "to flash CS#; boot source select at CRESET_B release (HIGH=NVCM-or-MasterSPI; internal pull-up)"},
+    "17": {"role": "spi_cfg", "name": "IOB_33b_SPI_SI", "bank": "1", "net": "SPI_SI", "flash": "to flash DI (MOSI at FPGA)"},
+    "18": {"role": "io", "name": "IOB_31b", "bank": "1"},
+    "19": {"role": "io", "name": "IOB_29b", "bank": "1"},
+    "20": {"role": "io_gbin", "name": "IOB_25b_G3", "bank": "1"},
+    "21": {"role": "io", "name": "IOB_23b", "bank": "1"},
+    "22": {"role": "power", "net": "SPI_VCCIO1", "name": "SPI_Vccio1", "note": "bank1 IO supply AND config-domain supply; = VCCIO 3.3V here"},
+    "23": {"role": "io", "name": "IOT_37a", "bank": "0", "note": "I3C-capable"},
+    "24": {"role": "power", "net": "VPP_2V5", "name": "VPP_2V5", "spec": "2.30-3.46V (master-SPI/NVCM op); apply 3.3V"},
+    "25": {"role": "io", "name": "IOT_36b", "bank": "0", "note": "I3C-capable"},
+    "26": {"role": "io", "name": "IOT_39a", "bank": "0"},
+    "27": {"role": "io", "name": "IOT_38b", "bank": "0"},
+    "28": {"role": "io", "name": "IOT_41a", "bank": "0"},
+    "29": {"role": "power", "net": "VCCPLL_1V2", "name": "VCCPLL", "filter": "100ohm+4.7uF+100nF to VCC1V2 (TN02006); PLL unused in fall mode"},
+    "30": {"role": "power", "net": "VCC1V2", "name": "VCC"},
+    "31": {"role": "io", "name": "IOT_42b", "bank": "0"},
+    "32": {"role": "io", "name": "IOT_43a", "bank": "0"},
+    "33": {"role": "power", "net": "VCCIO", "name": "VCCIO_0"},
+    "34": {"role": "io", "name": "IOT_44b", "bank": "0"},
+    "35": {"role": "io_gbin", "name": "IOT_46b_G0", "bank": "0", "note": "global-buffer input: merged 20 MHz shift clock lands here"},
+    "36": {"role": "io", "name": "IOT_48b", "bank": "0"},
+    "37": {"role": "io_gbin", "name": "IOT_45a_G1", "bank": "0"},
+    "38": {"role": "io", "name": "IOT_50b", "bank": "0"},
+    "39": {"role": "excluded_led", "name": "RGB0", "bank": "0", "why": "constant-current open-drain LED driver output; user rule: no LED on tile; not an input pad"},
+    "40": {"role": "excluded_led", "name": "RGB1", "bank": "0"},
+    "41": {"role": "excluded_led", "name": "RGB2", "bank": "0"},
+    "42": {"role": "io", "name": "IOT_51a", "bank": "0"},
+    "43": {"role": "io", "name": "IOT_49a", "bank": "0"},
+    "44": {"role": "io_gbin", "name": "IOB_3b_G6", "bank": "2"},
+    "45": {"role": "io", "name": "IOB_5b", "bank": "2"},
+    "46": {"role": "io", "name": "IOB_0a", "bank": "2"},
+    "47": {"role": "io", "name": "IOB_2a", "bank": "2"},
+    "48": {"role": "io", "name": "IOB_4a", "bank": "2"},
+    "Paddle": {"role": "ground", "net": "GND"}
+  },
+  "pull_capability": "iCE40 pads have internal pull-UP only -> the four rev-A pull-DOWN inputs (T_data, L_data, B_latch, R_latch) and the 12 key pull-downs need external 10K resistors (BOM delta +16 vs GW1NZ)",
+  "config_decision": {
+    "value": "external SPI flash (Master-SPI/NVCM-also-present path)",
+    "why": "NVCM is one-time-programmable and its OPEN programming flow is unverified in the installed tools (fpga workstream); an external SOIC-8 flash is reprogrammable via in-circuit SPI with the FPGA held in CRESET_B (io tri-stated per DS 4.6)",
+    "boot": "SPI_SS pin 16 sampled HIGH at boot (flash CS# pull-up on board) + blank/deselected NVCM -> Master SPI power-up from external flash (TN02001 sec.3.1)"
+  },
+  "banks": {"bank0": "VCCIO_0=pin33", "bank1": "SPI_Vccio1=pin22", "bank2": "VCCIO_2=pin1", "voltage": "all 3.3V on this board"},
+  "core": {"net": "VCC1V2", "value": "1.2V (1.14-1.26V per DS T4.2)", "source": "LDO from VCC 3.3V backplane rail; VCCPLL ties to VCC1V2 through 100ohm+4.7uF+100nF"}
+}

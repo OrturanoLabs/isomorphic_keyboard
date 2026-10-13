@@ -1,0 +1,108 @@
+[
+ {
+  "variant": "gw1nz",
+  "ok": true,
+  "checks": [
+   {
+    "id": 1,
+    "desc": "outline = TileTiling (revc-exact): 6-neighbour min gap = rib_gap 1.0 mm",
+    "ok": true,
+    "detail": "gaps={'(73.44,0.00)': 1.0, '(-73.44,0.00)': 1.0, '(9.18,-47.70)': 1.0, '(-9.18,47.70)': 1.0, '(64.26,47.70)': 10.229, '(-64.26,-47.70)': 10.229}"
+   },
+   {
+    "id": 2,
+    "desc": "19 pads identical to connector-next certified coords AND re-cleared incl 0.35mm chassis tol",
+    "ok": true,
+    "detail": "coord-eq=True, worst slack+tol=1.395 mm"
+   },
+   {
+    "id": 3,
+    "desc": "12 sockets exactly at the 18.36/15.9 lattice centres (0 rotation)",
+    "ok": true,
+    "detail": "count=12"
+   },
+   {
+    "id": 4,
+    "desc": "full pairwise courtyard matrix (46 rects incl. 19 contact pads) + socket polygons",
+    "ok": true,
+    "detail": "rect-overlaps=[] sock-hits=[]"
+   },
+   {
+    "id": 5,
+    "desc": "NPTH drill-to-edge and socket-pad-to-edge non-negative",
+    "ok": true,
+    "detail": "worst drill-to-edge 0.845 mm, worst socket-pad-to-edge 0.620 mm (SW[0,1] pad1 (EdgeTrim))"
+   },
+   {
+    "id": 6,
+    "desc": "FPGA pads net-assigned from the verified pin DB (netlist level)",
+    "ok": true,
+    "detail": "44 pads with nets of 49"
+   },
+   {
+    "id": 7,
+    "desc": "part counts: 12 SW + 19 JP + passives + TPs; FPGA placed",
+    "ok": true,
+    "detail": "SW=12 JP=19 total=58 unplaced=[] fpga_at=(7.86, 5.4)"
+   }
+  ],
+  "fpga_placed": true,
+  "fpga_nofit_analysis": null
+ },
+ {
+  "variant": "up5k",
+  "ok": true,
+  "checks": [
+   {
+    "id": 1,
+    "desc": "outline = TileTiling (revc-exact): 6-neighbour min gap = rib_gap 1.0 mm",
+    "ok": true,
+    "detail": "gaps={'(73.44,0.00)': 1.0, '(-73.44,0.00)': 1.0, '(9.18,-47.70)': 1.0, '(-9.18,47.70)': 1.0, '(64.26,47.70)': 10.229, '(-64.26,-47.70)': 10.229}"
+   },
+   {
+    "id": 2,
+    "desc": "19 pads identical to connector-next certified coords AND re-cleared incl 0.35mm chassis tol",
+    "ok": true,
+    "detail": "coord-eq=True, worst slack+tol=1.395 mm"
+   },
+   {
+    "id": 3,
+    "desc": "12 sockets exactly at the 18.36/15.9 lattice centres (0 rotation)",
+    "ok": true,
+    "detail": "count=12"
+   },
+   {
+    "id": 4,
+    "desc": "full pairwise courtyard matrix (58 rects incl. 19 contact pads) + socket polygons",
+    "ok": true,
+    "detail": "rect-overlaps=[] sock-hits=[]"
+   },
+   {
+    "id": 5,
+    "desc": "NPTH drill-to-edge and socket-pad-to-edge non-negative",
+    "ok": true,
+    "detail": "worst drill-to-edge 0.845 mm, worst socket-pad-to-edge 0.620 mm (SW[0,1] pad1 (EdgeTrim))"
+   },
+   {
+    "id": 6,
+    "desc": "FPGA pads net-assigned from the verified pin DB (netlist level)",
+    "ok": true,
+    "detail": "40 pads with nets of 49"
+   },
+   {
+    "id": 7,
+    "desc": "part counts: 12 SW + 19 JP + passives + TPs; FPGA placement NOFIT (documented)",
+    "ok": true,
+    "detail": "SW=12 JP=19 total=70 unplaced=[] fpga_at=None"
+   },
+   {
+    "id": "N",
+    "desc": "FPGA placement on the tile bottom: NOFIT - largest all-free square ~7.50 mm side on a 0.5 mm samples grid; FPGA courtyard would need 7.6 x 7.6 mm + 0.25 gap; board copy ships the keys/pads/passives only as a placement-review artifact",
+    "ok": true,
+    "detail": "concession options recorded in docs/candidate.md"
+   }
+  ],
+  "fpga_placed": false,
+  "fpga_nofit_analysis": "largest all-free square ~7.50 mm side on a 0.5 mm samples grid; FPGA courtyard would need 7.6 x 7.6 mm + 0.25 gap"
+ }
+]

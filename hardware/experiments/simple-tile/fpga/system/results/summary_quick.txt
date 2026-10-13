@@ -1,0 +1,9 @@
+== fpga-system timing-aware chain runs (20 MHz, synthetic corners) ==
+ghdl: GHDL 7.0.0-dev (6.0.0.r515.g6ea214092.dirty) [Dunoon edition]
+    vhdl/chain_sys_tb.vhdl:622:5:@11250ns:(report note): SYSSUMMARY pos_n1x4_fit arrival_min_ns=9 arrival_max_ns=9
+PASS  pos_n1x4_fit
+PASS  neg_guard00_fit (fails as designed: rc=1 token=TIMING-FAIL:SNAP-XDOM)
+PASS  u_latch_or_a
+
+runs passed: 3, failed: 0
+FPGA-SYSTEM PASS
