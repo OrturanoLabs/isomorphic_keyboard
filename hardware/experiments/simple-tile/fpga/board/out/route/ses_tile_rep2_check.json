@@ -1,0 +1,82 @@
+{
+ "ok": true,
+ "problems": [],
+ "name_drift_report_only": [
+  [
+   "\"L_clk_DRV\"",
+   "L_clk_DRV"
+  ],
+  [
+   "\"CFG_RECONFIG\"",
+   "CFG_RECONFIG"
+  ],
+  [
+   "\"T_clk\"",
+   "T_clk"
+  ],
+  [
+   "\"JTAG_TCK\"",
+   "JTAG_TCK"
+  ],
+  [
+   "\"B_clk\"",
+   "B_clk"
+  ],
+  [
+   "\"L_data\"",
+   "L_data"
+  ],
+  [
+   "\"B_W\"",
+   "B_W"
+  ],
+  [
+   "\"CFG_DONE\"",
+   "CFG_DONE"
+  ],
+  [
+   "\"L_endrow\"",
+   "L_endrow"
+  ],
+  [
+   "\"B_data\"",
+   "B_data"
+  ],
+  [
+   "\"VCC1V2_RAW\"",
+   "VCC1V2_RAW"
+  ],
+  [
+   "\"L_clk\"",
+   "L_clk"
+  ],
+  [
+   "\"CFG_READY\"",
+   "CFG_READY"
+  ],
+  [
+   "\"L_latch\"",
+   "L_latch"
+  ]
+ ],
+ "_frame_note": "SES numeric coords at (resolution um 10) granularity (=0.1 um units); the KiCad DSN boundary reads in raw um -- verifier divides SES coords by the resolution value before boundary comparison (fixture-verified round-trip frame convention)",
+ "dsn": "tile_gw1nz_classes.dsn",
+ "ses": "tile_gw1nz_rep2.ses",
+ "dsn_nets": 45,
+ "routed_nets": 25,
+ "complete_routes": false,
+ "resolution": 10,
+ "lib_vias": [
+  "Via[0-1]_600:300_um"
+ ],
+ "layers_used": [
+  "B.Cu",
+  "F.Cu"
+ ],
+ "widths_seen": [
+  2000,
+  3750,
+  5000
+ ],
+ "points": 384
+}

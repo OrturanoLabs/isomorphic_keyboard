@@ -1,0 +1,168 @@
+[resource_guard] WARNING DELEGATION: podman containers run in their own cgroup, outside this wrapper's hard caps (only the client is capped). Container-side limits present (--memory --memory-swap --cpus --pids-limit); relying on those.
+[resource_guard] single-job lock acquired: /tmp/opencode/isomorphic-resource-guard.lock
+[resource_guard] admitted: MemAvailable=7069 MiB (need >= 6144), SwapFree=4 MiB, psi_some_avg10=0.00
+[resource_guard] systemd scope rg-1795425-f44352: caps=MemoryMax=2048M,MemorySwapMax=0,CPUQuota=100%,TasksMax=256,TimeoutStopSec=5; stop_escalation=5s
+2026-10-16 12:28:37.146 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-10-16 12:28:39.680 INFO   [EA090F\4DCE5A] Loading board file 'tile_gw1nz_4l_router.dsn'...
+2026-10-16 12:28:40.187 INFO   New version available: v2.5.0
+2026-10-16 12:28:40.403 WARN   Power-plane validation failed:
+- Dedicated power layer 'In1.Cu' has no conduction areas defined.
+- Dedicated power layer 'In2.Cu' has no conduction areas defined.
+
+Proper Definition and Best Practices for Power Planes:
+1. What Belongs on a Power Plane:
+   - Solid Copper Pours: A single, uninterrupted sheet of copper assigned to one voltage (e.g., +3.3V).
+   - Split Planes: Multiple distinct voltage zones divided by thin isolation gaps (puzzle pieces).
+   - Vias and Anti-Pads: Plated holes passing through the board, surrounded by circular voids (anti-pads) to prevent shorting.
+   - Thermal Reliefs: Spoked connections for vias or pins that connect to the plane, facilitating soldering.
+2. Why Signal Wires/Traces are Banned:
+   - Destroyed Return Paths: High-speed signals on adjacent layers couple to the solid plane below/above as return paths. Crossing a trace gap detours return currents, causing severe EMI and signal integrity issues.
+   - Compromised Power Delivery: Power planes should provide the lowest impedance path. Routing traces chops up the copper, creating bottleneck restrictions and voltage drops.
+
+2026-10-16 12:28:40.487 INFO   [EA090F\4DCE5A] Job 'EA090F\4DCE5A' started at 2026-10-16T12:28:40.486526864Z.
+2026-10-16 12:28:41.211 INFO   [EA090F\4DCE5A] Fanout stage started on board '7a2b219ec86ca903271bb779bba4097b' with 144 of 150 SMD pins needing fanout (0 already connected, 6 netless).
+2026-10-16 12:28:51.385 INFO   [EA090F\4DCE5A] Fanout pass #1 on board 'fc2487435b889a684a6ca463b722fa5f' completed in 9.99 seconds with 54 SMD pins fanouted, 38 not routed, 0 insert errors, +46 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-10-16 12:28:55.014 INFO   [EA090F\4DCE5A] Fanout pass #2 on board 'ee7f58b920184bc10ccfedfc9c0d8c38' completed in 3.54 seconds with 14 SMD pins fanouted, 32 not routed, 0 insert errors, +6 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-10-16 12:28:56.513 INFO   [EA090F\4DCE5A] Fanout pass #3 on board 'dcef2951ea64e7824002134b196a443d' completed in 1.48 seconds with 6 SMD pins fanouted, 31 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-10-16 12:28:57.627 INFO   [EA090F\4DCE5A] Fanout pass #4 on board '33fc428685c6443f816ff19e074b6d87' completed in 1.09 seconds with 4 SMD pins fanouted, 31 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-10-16 12:28:58.587 INFO   [EA090F\4DCE5A] Fanout pass #5 on board '4723294a4b9df773621ed1ec39a8187b' completed in 0.89 seconds with 1 SMD pin fanouted, 34 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=500).
+2026-10-16 12:28:59.510 INFO   [EA090F\4DCE5A] Fanout pass #6 on board '5083ae07edec40210f7731c18cfd7217' completed in 0.91 seconds with 1 SMD pin fanouted, 34 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=600).
+2026-10-16 12:29:00.528 INFO   [EA090F\4DCE5A] Fanout pass #7 on board '259badb65ca0aa9c7e256d4764b4c0b8' completed in 0.98 seconds with 1 SMD pin fanouted, 34 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=700).
+2026-10-16 12:29:01.492 INFO   [EA090F\4DCE5A] Fanout pass #8 on board 'd8fcbf6586d6257000bcda589620100c' completed in 0.90 seconds with 1 SMD pin fanouted, 34 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=800).
+2026-10-16 12:29:01.492 INFO   Fanout stopped after 8 passes: no progress for 3 consecutive passes.
+2026-10-16 12:29:01.530 INFO   [EA090F\4DCE5A] Fanout stage completed: started with 144 total SMD pins, completed in 20.23 seconds, escaped pins: 93/144 (64.6%), using 8.62 total CPU seconds, 12.36 GB total allocated, and 93.5 MB peak heap usage.
+2026-10-16 12:29:01.599 INFO   [EA090F\4DCE5A] Auto-routing stage started on board 'd8fcbf6586d6257000bcda589620100c' for 93 unrouted items.
+2026-10-16 12:29:32.735 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'GND' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-16 12:30:31.351 INFO   [EA090F\4DCE5A] Auto-routing pass #1 on board 'd8fcbf6586d6257000bcda589620100c' was completed in 89.46 seconds with score 123.22 (78 unrouted and 44 violations), using 62.22 CPU seconds and the job allocated 164.07 GB of memory so far.
+2026-10-16 12:31:22.011 INFO   [EA090F\4DCE5A] Auto-routing pass #2 on board '72fb5f88252a93b1aa913d366c71e291' was completed in 50.32 seconds with score 183.83 (72 unrouted and 44 violations), using 98.89 CPU seconds and the job allocated 242.89 GB of memory so far.
+2026-10-16 12:31:55.809 INFO   [EA090F\4DCE5A] Auto-routing pass #3 on board '1e43b0130cf5b36ba12e600bd0435913' was completed in 33.67 seconds with score 214.13 (69 unrouted and 44 violations), using 127.42 CPU seconds and the job allocated 312.70 GB of memory so far.
+2026-10-16 12:32:34.947 INFO   [EA090F\4DCE5A] Auto-routing pass #4 on board '19d868c08ee41a771315e632f04b64b7' was completed in 39.04 seconds with score 204.03 (70 unrouted and 44 violations), using 158.99 CPU seconds and the job allocated 383.76 GB of memory so far.
+2026-10-16 12:33:10.236 INFO   [EA090F\4DCE5A] Auto-routing pass #5 on board '3fef7221292a3e0eeb2d533c3046d4b4' was completed in 35.04 seconds with score 244.43 (66 unrouted and 44 violations), using 188.43 CPU seconds and the job allocated 450.55 GB of memory so far.
+2026-10-16 12:33:47.073 INFO   [EA090F\4DCE5A] Auto-routing pass #6 on board 'eab94d43d2574f616d6a3c1a742f61d2' was completed in 36.73 seconds with score 274.74 (63 unrouted and 44 violations), using 219.21 CPU seconds and the job allocated 521.54 GB of memory so far.
+2026-10-16 12:34:23.046 INFO   [EA090F\4DCE5A] Auto-routing pass #7 on board '015701782245a463497f36d301634e00' was completed in 35.86 seconds with score 254.53 (65 unrouted and 44 violations), using 248.90 CPU seconds and the job allocated 588.47 GB of memory so far.
+2026-10-16 12:34:58.451 INFO   [EA090F\4DCE5A] Auto-routing pass #8 on board 'd6e994edeb5d42b94524a61fc6cafeb8' was completed in 35.28 seconds with score 284.84 (62 unrouted and 44 violations), using 278.73 CPU seconds and the job allocated 654.91 GB of memory so far.
+2026-10-16 12:35:36.831 INFO   [EA090F\4DCE5A] Auto-routing pass #9 on board 'f00b44c47a06cab0245ea7f2cd624eaf' was completed in 38.18 seconds with score 284.84 (62 unrouted and 44 violations), using 310.62 CPU seconds and the job allocated 726.64 GB of memory so far.
+2026-10-16 12:36:12.762 INFO   [EA090F\4DCE5A] Auto-routing pass #10 on board '2c93ae8e3f24d4da2d5b3a95a252c4d2' was completed in 35.83 seconds with score 294.94 (61 unrouted and 44 violations), using 341.31 CPU seconds and the job allocated 804.37 GB of memory so far.
+2026-10-16 12:36:46.516 INFO   [EA090F\4DCE5A] Auto-routing pass #11 on board '24ed425d41a2ad9c699f084197c12440' was completed in 33.67 seconds with score 254.53 (65 unrouted and 44 violations), using 371.20 CPU seconds and the job allocated 884.42 GB of memory so far.
+2026-10-16 12:37:16.187 INFO   [EA090F\4DCE5A] Auto-routing pass #12 on board '24ed425d41a2ad9c699f084197c12440' was completed in 0.00 seconds with score 294.94 (61 unrouted and 44 violations), using 396.51 CPU seconds and the job allocated 952.27 GB of memory so far.
+2026-10-16 12:37:35.526 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'GND' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-16 12:38:14.327 INFO   [EA090F\4DCE5A] Auto-routing pass #13 on board '24ed425d41a2ad9c699f084197c12440' was completed in 58.07 seconds with score 264.64 (64 unrouted and 44 violations), using 445.56 CPU seconds and the job allocated 1095.12 GB of memory so far.
+2026-10-16 12:38:45.526 INFO   [EA090F\4DCE5A] Auto-routing pass #14 on board '520b48b56d80ee8fda02289095c50161' was completed in 31.12 seconds with score 264.64 (64 unrouted and 44 violations), using 473.18 CPU seconds and the job allocated 1170.06 GB of memory so far.
+2026-10-16 12:39:17.476 INFO   [EA090F\4DCE5A] Auto-routing pass #15 on board 'fb14489b198b96599312ec64050bf80e' was completed in 31.80 seconds with score 264.64 (64 unrouted and 44 violations), using 500.26 CPU seconds and the job allocated 1240.69 GB of memory so far.
+2026-10-16 12:39:51.336 INFO   [EA090F\4DCE5A] Auto-routing pass #16 on board '24ed425d41a2ad9c699f084197c12440' was completed in 0.00 seconds with score 294.94 (61 unrouted and 44 violations), using 528.05 CPU seconds and the job allocated 1311.55 GB of memory so far.
+2026-10-16 12:40:09.208 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'GND' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-16 12:40:45.653 INFO   [EA090F\4DCE5A] Auto-routing pass #17 on board '24ed425d41a2ad9c699f084197c12440' was completed in 54.25 seconds with score 264.64 (64 unrouted and 44 violations), using 574.75 CPU seconds and the job allocated 1456.73 GB of memory so far.
+2026-10-16 12:41:20.260 INFO   [EA090F\4DCE5A] Auto-routing pass #18 on board '67f26c9dec73290f1eca306acda35d40' was completed in 34.52 seconds with score 264.64 (64 unrouted and 44 violations), using 602.88 CPU seconds and the job allocated 1528.20 GB of memory so far.
+2026-10-16 12:41:57.791 INFO   [EA090F\4DCE5A] Auto-routing pass #19 on board '19602feb3eccfae869ace3553e62bf11' was completed in 37.43 seconds with score 274.74 (63 unrouted and 44 violations), using 635.05 CPU seconds and the job allocated 1603.04 GB of memory so far.
+2026-10-16 12:42:37.832 INFO   [EA090F\4DCE5A] Auto-routing pass #20 on board '24ed425d41a2ad9c699f084197c12440' was completed in 0.00 seconds with score 294.94 (61 unrouted and 44 violations), using 667.98 CPU seconds and the job allocated 1678.26 GB of memory so far.
+2026-10-16 12:42:37.870 INFO   [EA090F\4DCE5A] The router's best score (294.94) has not improved by more than 0.5 points since pass #10. Stopping the auto-router after 20 passes (61 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'VCC' (9 unrouted connections):
+    - C3-1  ->  U1-36
+    - SW10-1  ->  via
+    - C3-1  ->  C2-1
+    - U1-25  ->  C2-1
+    - R6-2  ->  SW2-1
+    - C1-1  ->  SW2-1
+    - SW10-1  ->  SW11-1
+    - SW3-1  ->  SW4-1
+    - SW8-1  ->  SW7-1
+  Net 'K2' (1 unrouted connection):
+    - SW2-2  ->  U1-10
+  Net 'K7' (1 unrouted connection):
+    - SW7-2  ->  U1-18
+  Net 'K8' (1 unrouted connection):
+    - SW8-2  ->  U1-20
+  Net 'K9' (1 unrouted connection):
+    - SW9-2  ->  U1-21
+  Net 'K4' (1 unrouted connection):
+    - SW4-2  ->  U1-13
+  Net 'K12' (1 unrouted connection):
+    - SW12-2  ->  U1-34
+  Net 'K3' (1 unrouted connection):
+    - SW3-2  ->  U1-11
+  Net 'K6' (1 unrouted connection):
+    - SW6-2  ->  U1-17
+  Net 'K11' (1 unrouted connection):
+    - SW11-2  ->  U1-33
+  Net 'K10' (1 unrouted connection):
+    - SW10-2  ->  U1-23
+  Net 'K1' (1 unrouted connection):
+    - U1-8  ->  SW1-2
+  Net 'GND' (11 unrouted connections):
+    - R2-2  ->  via
+    - C1-2  ->  C5-2
+    - U1-2  ->  via
+    - U1-26  ->  via
+    - C4-2  ->  C6-2
+    - via  ->  C7-2
+    - C3-2  ->  C2-2
+    - U1-26  ->  U1-49
+    - U1-2  ->  C1-2
+    - U2-2  ->  TP_GND-1
+    - R2-2  ->  C8-2
+  Net 'CFG_DONE' (2 unrouted connections):
+    - R5-1  ->  TP_DONE-1
+    - R5-1  ->  U1-46
+  Net 'MODE0' (1 unrouted connection):
+    - R1-1  ->  U1-43
+  Net 'CFG_READY' (1 unrouted connection):
+    - U1-45  ->  via
+  Net 'JTAGSEL_N' (1 unrouted connection):
+    - TP_JTAGSEL-1  ->  U1-44
+  Net 'T_clk_DRV' (1 unrouted connection):
+    - U1-35  ->  R7-1
+  Net 'VCC1V2' (3 unrouted connections):
+    - via  ->  C6-1
+    - U1-12  ->  via
+    - via  ->  C5-1
+  Net 'T_endcol' (1 unrouted connection):
+    - U1-39  ->  JP_T_endcol-1
+  Net 'L_endrow' (1 unrouted connection):
+    - U1-41  ->  JP_L_endrow-1
+  Net 'B_data_DRV' (1 unrouted connection):
+    - R10-1  ->  U1-30
+  Net 'B_data' (1 unrouted connection):
+    - JP_B_data-1  ->  R10-2
+  Net 'B_first' (1 unrouted connection):
+    - JP_B_first-1  ->  U1-40
+  Net 'L_clk_DRV' (1 unrouted connection):
+    - R8-1  ->  U1-19
+  Net 'JTAG_TMS' (1 unrouted connection):
+    - TP_TMS-1  ->  U1-4
+  Net 'CFG_RECONFIG' (2 unrouted connections):
+    - R6-1  ->  U1-48
+    - U1-48  ->  TP_RECFG-1
+  Net 'T_W' (1 unrouted connection):
+    - U1-38  ->  JP_T_W-1
+  Net 'B_clk' (1 unrouted connection):
+    - U1-47  ->  JP_B_clk-1
+  Net 'JTAG_TDO' (1 unrouted connection):
+    - TP_TDO-1  ->  U1-7
+  Net 'B_W_DRV' (1 unrouted connection):
+    - U1-27  ->  R11-1
+  Net 'JTAG_TDI' (1 unrouted connection):
+    - U1-5  ->  TP_TDI-1
+  Net 'JTAG_TCK' (1 unrouted connection):
+    - U1-3  ->  R3-1
+  Net 'B_latch' (1 unrouted connection):
+    - JP_B_latch-1  ->  U1-22
+  Net 'L_latch_DRV' (1 unrouted connection):
+    - U1-31  ->  R9-1
+  Net 'L_data' (1 unrouted connection):
+    - U1-24  ->  JP_L_data-1
+  Net 'T_data' (1 unrouted connection):
+    - U1-28  ->  JP_T_data-1
+  Net 'R_latch' (1 unrouted connection):
+    - JP_R_latch-1  ->  U1-32
+  Net 'MODE1' (1 unrouted connection):
+    - U1-42  ->  R2-1
+2026-10-16 12:42:38.031 INFO   [EA090F\4DCE5A] Auto-routing stage completed: started with 99 unrouted nets, completed in 837.07 seconds, final score: 294.94 (61 unrouted and 44 violations), using 667.98 total CPU seconds, 1678.26 GB total allocated, and 472.9 MB peak heap usage.
+2026-10-16 12:42:38.101 INFO   [EA090F\4DCE5A] Optimization stage started on board '2a7695c6ec377e0fb92da41762eced4b' with score 264.64 (64 unrouted and 44 violations).
+2026-10-16 12:42:43.242 INFO   [EA090F\4DCE5A] Optimizer pass #1 on board '4f20281116184f476a848f69b47fe19a' was completed in 4.63 seconds with the score of 264.64 (64 unrouted and 44 violations).
+2026-10-16 12:42:43.337 INFO   [EA090F\4DCE5A] Stopping optimizer because the improvement in this pass (0.0006%) is below the threshold (1.00%).
+2026-10-16 12:42:43.392 INFO   [EA090F\4DCE5A] Optimization stage completed: started with score 264.64 (64 unrouted and 44 violations), completed in 5.24 seconds, final score: 264.64 (64 unrouted and 44 violations), using 3.68 total CPU seconds, 14.65 GB total allocated, and 108.8 MB peak heap usage.
+2026-10-16 12:42:43.401 INFO   [EA090F\4DCE5A] Job 'EA090F\4DCE5A' finished with state: COMPLETED (elapsed: 14 minutes 2.91 seconds, finished at UTC: 2026-10-16T12:42:43.400522041Z).
+2026-10-16 12:42:43.804 INFO   Saving output file '/work/hardware/experiments/simple-tile/fpga/board/four-layer/out/tile_gw1nz_4l.ses' (SES)...
+2026-10-16 12:42:43.807 INFO   Successfully saved output file '/work/hardware/experiments/simple-tile/fpga/board/four-layer/out/tile_gw1nz_4l.ses' (17472 bytes).
+[resource_guard] done mode=systemd exit=0 wall=849.7s ru_maxrss_of_direct_children=52 MiB

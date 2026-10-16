@@ -2,5 +2,5 @@
 keys: 12 at lattice P=18.3597 R=15.9 (EdgeTrim 3)
 chassis pads: 19 at connector-next tier coords (14 tile signals + VCC + GND; the 3 GND_DET_* presence pads keep their refs/roles but are bonded to tile GND on this removable tile)
 U1 (GW1NZ-LV1QN48C6/I5) at (7.86,5.40) on B side
-parts placed: 58; unplaced: []
-nets: 40, unrouted - placement prototype (0 tracks by design)
+parts placed: 65; unplaced: []
+nets: 45, unrouted - placement prototype (0 tracks by design)

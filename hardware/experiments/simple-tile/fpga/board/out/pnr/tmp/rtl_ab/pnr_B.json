@@ -1,0 +1,4152 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.11.1-33-g1aea87ab)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/noCtrlSet": "0 ",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "0011000101000001010110010010011001010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "himbaechel",
+        "router": "default",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "20000000.000000",
+        "cst.filename": "out/pnr/tmp/rtl_ab/clean.cst",
+        "packer.partno": "GW1NZ-LV1QN48C6/I5",
+        "packer.chipdb": "GW1NZ-1",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "t_w_pin": {
+          "direction": "input",
+          "bits": [ 2530 ]
+        },
+        "t_endcol_pin": {
+          "direction": "input",
+          "bits": [ 2529 ]
+        },
+        "t_data_pin": {
+          "direction": "input",
+          "bits": [ 2528 ]
+        },
+        "t_clk_pin": {
+          "direction": "output",
+          "bits": [ 2527 ]
+        },
+        "r_latch_pin": {
+          "direction": "input",
+          "bits": [ 2526 ]
+        },
+        "latcho_pin": {
+          "direction": "output",
+          "bits": [ 2525 ]
+        },
+        "l_endrow_pin": {
+          "direction": "input",
+          "bits": [ 2524 ]
+        },
+        "l_data_pin": {
+          "direction": "input",
+          "bits": [ 2523 ]
+        },
+        "l_clk_pin": {
+          "direction": "output",
+          "bits": [ 2522 ]
+        },
+        "keys": {
+          "direction": "input",
+          "bits": [ 2571, 2567, 2595, 2591, 2587, 2583, 2579, 2575, 2563, 2559, 2604, 2599 ]
+        },
+        "dout_pin": {
+          "direction": "output",
+          "bits": [ 2520 ]
+        },
+        "clk_pin": {
+          "direction": "input",
+          "bits": [ 2519 ]
+        },
+        "b_w_pin": {
+          "direction": "output",
+          "bits": [ 2518 ]
+        },
+        "b_latch_pin": {
+          "direction": "input",
+          "bits": [ 2517 ]
+        },
+        "b_first_pin": {
+          "direction": "input",
+          "bits": [ 2516 ]
+        }
+      },
+      "cells": {
+        "u_tile.shadow_DFFN_Q_11_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y6/LUT3"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2892 ],
+            "I3": [ 2593 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_12_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X18Y2/LUT2"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2890 ],
+            "I3": [ 2597 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_13_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y1/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2888 ],
+            "I3": [ 2569 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_14_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X13Y1/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2886 ],
+            "I3": [ 2573 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_2_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X15Y1/LUT2"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2884 ],
+            "I3": [ 2721 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_3_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X18Y2/LUT3"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2882 ],
+            "I3": [ 2601 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_4_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y4/LUT4"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2880 ],
+            "I3": [ 2606 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_5_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y6/LUT2"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2878 ],
+            "I3": [ 2561 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_6_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X16Y6/LUT3"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2876 ],
+            "I3": [ 2565 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_7_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X16Y6/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2874 ],
+            "I3": [ 2577 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_8_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X16Y4/LUT0"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2872 ],
+            "I3": [ 2581 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_9_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y4/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2870 ],
+            "I3": [ 2585 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_DFFC_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111111111111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y3/LUT0"
+          },
+          "port_directions": {
+            "F": "output"
+          },
+          "connections": {
+            "F": [ 2868 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111111111111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X18Y2/LUT0"
+          },
+          "port_directions": {
+            "F": "output"
+          },
+          "connections": {
+            "F": [ 2904 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y4/LUT2"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2902 ],
+            "I3": [ 2678 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_2_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X17Y3/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2900 ],
+            "I3": [ 2686 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111111111111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X14Y1/LUT5"
+          },
+          "port_directions": {
+            "F": "output"
+          },
+          "connections": {
+            "F": [ 2898 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_1_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X15Y1/LUT4"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2896 ],
+            "I3": [ 2613 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_10_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X16Y3/LUT3"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 2894 ],
+            "I3": [ 2589 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_1_D_ALU_SUM_DUMMY_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/ALU5"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/ALU0"
+          },
+          "port_directions": {
+            "I2": "input",
+            "COUT": "output"
+          },
+          "connections": {
+            "I2": [ 2826 ],
+            "COUT": [ 2832 ]
+          }
+        },
+        "BANDGAP": {
+          "hide_name": 0,
+          "type": "BANDGAP",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y10/BANDGAP"
+          },
+          "port_directions": {
+            "BGEN": "input"
+          },
+          "connections": {
+            "BGEN": [ 2826 ]
+          }
+        },
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 2826 ]
+          }
+        },
+        "u_tile.t_w_LUT2_I1": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "0111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y1/LUT1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 2549 ],
+            "I0": [ 2547 ],
+            "F": [ 2540 ]
+          }
+        },
+        "u_tile.t_w_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X16Y0/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2549 ],
+            "I": [ 2530 ]
+          }
+        },
+        "u_tile.t_endcol_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X15Y0/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2721 ],
+            "I": [ 2529 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :174"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2635 ],
+            "D": [ 2868 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y4/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2630 ],
+            "D": [ 2808 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y4/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2806 ],
+            "I0": [ 2727 ],
+            "F": [ 2808 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y4/DFF1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2806 ],
+            "D": [ 2804 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y4/LUT1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2802 ],
+            "I0": [ 2730 ],
+            "F": [ 2804 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y4/DFF2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2802 ],
+            "D": [ 2800 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y4/LUT2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2798 ],
+            "I0": [ 2733 ],
+            "F": [ 2800 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y4/DFF3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2798 ],
+            "D": [ 2796 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y4/LUT3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2794 ],
+            "I0": [ 2736 ],
+            "F": [ 2796 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y3/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2794 ],
+            "D": [ 2792 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y3/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2790 ],
+            "I0": [ 2739 ],
+            "F": [ 2792 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/DFF1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2790 ],
+            "D": [ 2788 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/LUT1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2786 ],
+            "I0": [ 2742 ],
+            "F": [ 2788 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/DFF2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2786 ],
+            "D": [ 2784 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/LUT2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2782 ],
+            "I0": [ 2706 ],
+            "F": [ 2784 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/DFF3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2782 ],
+            "D": [ 2780 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/LUT3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2778 ],
+            "I0": [ 2709 ],
+            "F": [ 2780 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y2/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2778 ],
+            "D": [ 2776 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y2/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2774 ],
+            "I0": [ 2712 ],
+            "F": [ 2776 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y1/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2774 ],
+            "D": [ 2772 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y1/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2770 ],
+            "I0": [ 2715 ],
+            "F": [ 2772 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X14Y1/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2770 ],
+            "D": [ 2768 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X14Y1/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2766 ],
+            "I0": [ 2718 ],
+            "F": [ 2768 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X14Y1/DFF1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2766 ],
+            "D": [ 2764 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X14Y1/LUT1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2762 ],
+            "I0": [ 2698 ],
+            "F": [ 2764 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y1/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2762 ],
+            "D": [ 2760 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y1/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2758 ],
+            "I0": [ 2698 ],
+            "F": [ 2760 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y1/DFF1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2758 ],
+            "D": [ 2756 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y1/LUT1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2754 ],
+            "I0": [ 2703 ],
+            "F": [ 2756 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y2/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2754 ],
+            "D": [ 2752 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y2/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2635 ],
+            "I1": [ 2750 ],
+            "I0": [ 2723 ],
+            "F": [ 2752 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y2/DFF1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :172"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2750 ],
+            "D": [ 2748 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.t_data_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "11001010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y2/LUT1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 2540 ],
+            "I1": [ 2745 ],
+            "I0": [ 2609 ],
+            "F": [ 2748 ]
+          }
+        },
+        "u_tile.t_data_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y5/IOBI",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2745 ],
+            "I": [ 2528 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_9": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y4/DFF5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2742 ],
+            "D": [ 2870 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_8": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y4/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2739 ],
+            "D": [ 2872 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_7": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y6/DFF5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2736 ],
+            "D": [ 2874 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_6": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y6/DFF3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2733 ],
+            "D": [ 2876 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_5": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y6/DFF2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2730 ],
+            "D": [ 2878 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_4": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y4/DFF4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2727 ],
+            "D": [ 2880 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_3": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y2/DFF3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2626 ],
+            "D": [ 2882 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_2": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y1/DFF2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2723 ],
+            "D": [ 2884 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_14": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X13Y1/DFF5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2718 ],
+            "D": [ 2886 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_13": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y1/DFF5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2715 ],
+            "D": [ 2888 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_12": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y2/DFF2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2712 ],
+            "D": [ 2890 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_11": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y6/DFF3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2709 ],
+            "D": [ 2892 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_10": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y3/DFF3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2706 ],
+            "D": [ 2894 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q_1": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X15Y1/DFF4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2703 ],
+            "D": [ 2896 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.shadow_DFFN_Q": {
+          "hide_name": 0,
+          "type": "DFFN",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X14Y1/DFF5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:7.7-7.48",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :171"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 2698 ],
+            "D": [ 2898 ],
+            "CLK": [ 2542 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN_ALU_COUT_I1_DFFC_Q_D_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/LUT4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 2675 ],
+            "F": [ 2694 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN_ALU_COUT_I1_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/DFF4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :168"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2675 ],
+            "D": [ 2694 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN_ALU_COUT": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000000011000000111111",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/ALU1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 2826 ],
+            "SUM": [ 2692 ],
+            "I3": [  ],
+            "I1": [ 2675 ],
+            "I0": [  ],
+            "COUT": [ 2690 ],
+            "CIN": [ 2832 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/ALU2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 2826 ],
+            "SUM": [ 2678 ],
+            "I3": [  ],
+            "I1": [ 2673 ],
+            "I0": [  ],
+            "COUT": [ 2688 ],
+            "CIN": [ 2690 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_2_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/ALU3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 2826 ],
+            "SUM": [ 2686 ],
+            "I3": [  ],
+            "I1": [ 2672 ],
+            "I0": [  ],
+            "COUT": [ 2682 ],
+            "CIN": [ 2688 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_2": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y3/DFF5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :168"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2672 ],
+            "D": [ 2900 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 2827 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_1_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/ALU4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 2826 ],
+            "SUM": [ 2680 ],
+            "I3": [  ],
+            "I1": [ 2671 ],
+            "I0": [  ],
+            "COUT": [ 2683 ],
+            "CIN": [ 2682 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_1": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/DFF4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :168"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2671 ],
+            "D": [ 2680 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X17Y4/DFF2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :168"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 2673 ],
+            "D": [ 2902 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I1_MUX2_LUT5_O_I1_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 2669 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I1_MUX2_LUT5_O_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 2675 ],
+            "I2": [ 2673 ],
+            "I1": [ 2672 ],
+            "I0": [ 2671 ],
+            "F": [ 2668 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I1_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/MUX0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 2533 ],
+            "O": [ 2661 ],
+            "I1": [ 2669 ],
+            "I0": [ 2668 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I0_MUX2_LUT5_O_I1_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT3",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 2664 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I0_MUX2_LUT5_O_I0_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 2663 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I0_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/MUX2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 2533 ],
+            "O": [ 2660 ],
+            "I1": [ 2664 ],
+            "I0": [ 2663 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT6",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/MUX1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:160.14-160.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 2536 ],
+            "O": [ 2657 ],
+            "I1": [ 2661 ],
+            "I0": [ 2660 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y2/DFF0",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001",
+            "hdlname": "u_tile :170"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 2533 ],
+            "D": [ 2904 ],
+            "CLK": [ 2539 ],
+            "CLEAR": [ 2542 ],
+            "CE": [ 2657 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_I1_MUX2_LUT5_O_I1_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "11"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 2652 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_I1_MUX2_LUT5_O_I0_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 2651 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_I1_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/MUX4",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 2630 ],
+            "O": [ 2633 ],
+            "I1": [ 2652 ],
+            "I0": [ 2651 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0": {
+          "hide_name": 0,
+          "type": "MUX2_LUT6",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/MUX5",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:160.14-160.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 2635 ],
+            "O": [ 2536 ],
+            "I1": [ 2633 ],
+            "I0": [ 2629 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111000011100010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT6",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 2620 ],
+            "I2": [ 2601 ],
+            "I1": [ 2556 ],
+            "I0": [ 2626 ],
+            "F": [ 2628 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/MUX6",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 2630 ],
+            "O": [ 2629 ],
+            "I1": [ 2624 ],
+            "I0": [ 2628 ]
+          }
+        },
+        "u_tile.r_latch_LUT4_I3": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111000011100010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y3/LUT7",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 2620 ],
+            "I2": [ 2601 ],
+            "I1": [ 2556 ],
+            "I0": [ 2626 ],
+            "F": [ 2624 ]
+          }
+        },
+        "u_tile.r_latch_LUT2_I1": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "1110"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X18Y4/LUT6",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 2620 ],
+            "I0": [ 2556 ],
+            "F": [ 2542 ]
+          }
+        },
+        "u_tile.r_latch_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y4/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2620 ],
+            "I": [ 2526 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 2826 ]
+          }
+        },
+        "u_tile.l_endrow_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X14Y0/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2613 ],
+            "I": [ 2524 ]
+          }
+        },
+        "u_tile.l_data_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y7/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2609 ],
+            "I": [ 2523 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_9": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y4/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2606 ],
+            "I": [ 2604 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_8": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y2/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2601 ],
+            "I": [ 2599 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_7": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y2/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2597 ],
+            "I": [ 2595 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_6": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y9/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2593 ],
+            "I": [ 2591 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_5": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y5/IOBF",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2589 ],
+            "I": [ 2587 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_4": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y5/IOBG",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2585 ],
+            "I": [ 2583 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_3": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y5/IOBH",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2581 ],
+            "I": [ 2579 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_2": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y9/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2577 ],
+            "I": [ 2575 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_11": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X9Y0/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2573 ],
+            "I": [ 2571 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_10": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y1/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2569 ],
+            "I": [ 2567 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O_1": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y6/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2565 ],
+            "I": [ 2563 ]
+          }
+        },
+        "u_tile.buttons_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y7/IOBB",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2561 ],
+            "I": [ 2559 ]
+          }
+        },
+        "u_tile.b_latch_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y8/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2556 ],
+            "I": [ 2517 ]
+          }
+        },
+        "u_tile.b_first_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X15Y0/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2547 ],
+            "I": [ 2516 ]
+          }
+        },
+        "u_tile.b_clk_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X9Y0/IOBA",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2539 ],
+            "I": [ 2519 ]
+          }
+        },
+        "t_clk_pin_TBUF_O_OEN_LUT2_F": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "1000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X16Y1/LUT2",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 2549 ],
+            "I0": [ 2547 ],
+            "F": [ 2544 ]
+          }
+        },
+        "t_clk_pin_TBUF_O": {
+          "hide_name": 0,
+          "type": "TBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET",
+            "NET_OEN": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X16Y0/IOBB",
+            "DRIVE": "24",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "OEN": "input",
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "OEN": [ 2544 ],
+            "O": [ 2527 ],
+            "I": [ 2539 ]
+          }
+        },
+        "latcho_pin_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y5/IOBA",
+            "DRIVE": "24",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2525 ],
+            "I": [ 2542 ]
+          }
+        },
+        "l_clk_pin_TBUF_O": {
+          "hide_name": 0,
+          "type": "TBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET",
+            "NET_OEN": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y5/IOBJ",
+            "DRIVE": "24",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "OEN": "input",
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "OEN": [ 2540 ],
+            "O": [ 2522 ],
+            "I": [ 2539 ]
+          }
+        },
+        "dout_pin_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y5/IOBC",
+            "DRIVE": "24",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2520 ],
+            "I": [ 2536 ]
+          }
+        },
+        "b_w_pin_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X19Y6/IOBA",
+            "DRIVE": "24",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 2518 ],
+            "I": [ 2533 ]
+          }
+        }
+      },
+      "netnames": {
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2904 ] ,
+          "attributes": {
+            "ROUTING": "X18Y2/F0;;1;X18Y2/XD0;X18Y2/XD0/F0;1"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2902 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/F2;;1;X17Y4/XD2;X17Y4/XD2/F2;1"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_2$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2900 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/F5;;1;X17Y3/XD5;X17Y3/XD5/F5;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2898 ] ,
+          "attributes": {
+            "ROUTING": "X14Y1/F5;;1;X14Y1/XD5;X14Y1/XD5/F5;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_1$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2896 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/F4;;1;X15Y1/XD4;X15Y1/XD4/F4;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_10$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2894 ] ,
+          "attributes": {
+            "ROUTING": "X16Y3/F3;;1;X16Y3/XD3;X16Y3/XD3/F3;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_11$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2892 ] ,
+          "attributes": {
+            "ROUTING": "X17Y6/F3;;1;X17Y6/XD3;X17Y6/XD3/F3;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_12$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2890 ] ,
+          "attributes": {
+            "ROUTING": "X18Y2/F2;;1;X18Y2/XD2;X18Y2/XD2/F2;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_13$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2888 ] ,
+          "attributes": {
+            "ROUTING": "X17Y1/F5;;1;X17Y1/XD5;X17Y1/XD5/F5;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_14$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2886 ] ,
+          "attributes": {
+            "ROUTING": "X13Y1/F5;;1;X13Y1/XD5;X13Y1/XD5/F5;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_2$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2884 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/F2;;1;X15Y1/XD2;X15Y1/XD2/F2;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_3$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2882 ] ,
+          "attributes": {
+            "ROUTING": "X18Y2/F3;;1;X18Y2/XD3;X18Y2/XD3/F3;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_4$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2880 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/F4;;1;X17Y4/XD4;X17Y4/XD4/F4;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_5$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2878 ] ,
+          "attributes": {
+            "ROUTING": "X17Y6/F2;;1;X17Y6/XD2;X17Y6/XD2/F2;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_6$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2876 ] ,
+          "attributes": {
+            "ROUTING": "X16Y6/F3;;1;X16Y6/XD3;X16Y6/XD3/F3;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_7$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2874 ] ,
+          "attributes": {
+            "ROUTING": "X16Y6/F5;;1;X16Y6/XD5;X16Y6/XD5/F5;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_8$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2872 ] ,
+          "attributes": {
+            "ROUTING": "X16Y4/F0;;1;X16Y4/XD0;X16Y4/XD0/F0;1"
+          }
+        },
+        "u_tile.shadow_DFFN_Q_9$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2870 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/F5;;1;X17Y4/XD5;X17Y4/XD5/F5;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_DFFC_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 2868 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/F0;;1;X17Y3/XD0;X17Y3/XD0/F0;1"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+          "hide_name": 0,
+          "bits": [ 2832 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/COUT0;;1"
+          }
+        },
+        "t_w_pin": {
+          "hide_name": 0,
+          "bits": [ 2530 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "t_endcol_pin": {
+          "hide_name": 0,
+          "bits": [ 2529 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2808 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/F0;;1;X17Y4/XD0;X17Y4/XD0/F0;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2806 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/Q1;;1;X17Y4/S100;X17Y4/S100/Q1;1;X17Y4/B0;X17Y4/B0/S100;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2804 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/F1;;1;X17Y4/XD1;X17Y4/XD1/F1;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2802 ] ,
+          "attributes": {
+            "ROUTING": "X16Y4/Q2;;1;X16Y4/E130;X16Y4/E130/Q2;1;X17Y4/B1;X17Y4/B1/E131;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2800 ] ,
+          "attributes": {
+            "ROUTING": "X16Y4/F2;;1;X16Y4/XD2;X16Y4/XD2/F2;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2798 ] ,
+          "attributes": {
+            "ROUTING": "X16Y4/Q3;;1;X16Y4/S130;X16Y4/S130/Q3;1;X16Y4/B2;X16Y4/B2/S130;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2796 ] ,
+          "attributes": {
+            "ROUTING": "X16Y4/F3;;1;X16Y4/XD3;X16Y4/XD3/F3;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2794 ] ,
+          "attributes": {
+            "ROUTING": "X16Y3/Q0;;1;X16Y3/SN10;X16Y3/SN10/Q0;1;X16Y4/B3;X16Y4/B3/S111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2792 ] ,
+          "attributes": {
+            "ROUTING": "X16Y3/F0;;1;X16Y3/XD0;X16Y3/XD0/F0;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2790 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/Q1;;1;X17Y3/W210;X17Y3/W210/Q1;1;X16Y3/B0;X16Y3/B0/W211;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2788 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/F1;;1;X17Y3/XD1;X17Y3/XD1/F1;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2786 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/Q2;;1;X17Y3/X05;X17Y3/X05/Q2;1;X17Y3/B1;X17Y3/B1/X05;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2784 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/F2;;1;X17Y3/XD2;X17Y3/XD2/F2;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2782 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/Q3;;1;X17Y3/S130;X17Y3/S130/Q3;1;X17Y3/B2;X17Y3/B2/S130;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2780 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/F3;;1;X17Y3/XD3;X17Y3/XD3/F3;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2778 ] ,
+          "attributes": {
+            "ROUTING": "X17Y2/Q0;;1;X17Y2/SN10;X17Y2/SN10/Q0;1;X17Y3/B3;X17Y3/B3/S111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2776 ] ,
+          "attributes": {
+            "ROUTING": "X17Y2/F0;;1;X17Y2/XD0;X17Y2/XD0/F0;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2774 ] ,
+          "attributes": {
+            "ROUTING": "X17Y1/Q0;;1;X17Y1/SN10;X17Y1/SN10/Q0;1;X17Y2/B0;X17Y2/B0/S111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2772 ] ,
+          "attributes": {
+            "ROUTING": "X17Y1/F0;;1;X17Y1/XD0;X17Y1/XD0/F0;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2770 ] ,
+          "attributes": {
+            "ROUTING": "X14Y1/Q0;;1;X14Y1/E200;X14Y1/E200/Q0;1;X16Y1/E210;X16Y1/E210/E202;1;X17Y1/B0;X17Y1/B0/E211;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2768 ] ,
+          "attributes": {
+            "ROUTING": "X14Y1/F0;;1;X14Y1/XD0;X14Y1/XD0/F0;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2766 ] ,
+          "attributes": {
+            "ROUTING": "X14Y1/Q1;;1;X14Y1/S100;X14Y1/S100/Q1;1;X14Y1/B0;X14Y1/B0/S100;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2764 ] ,
+          "attributes": {
+            "ROUTING": "X14Y1/F1;;1;X14Y1/XD1;X14Y1/XD1/F1;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2762 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/Q0;;1;X15Y1/EW10;X15Y1/EW10/Q0;1;X14Y1/B1;X14Y1/B1/W111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2760 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/F0;;1;X15Y1/XD0;X15Y1/XD0/F0;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2758 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/Q1;;1;X15Y1/S100;X15Y1/S100/Q1;1;X15Y1/B0;X15Y1/B0/S100;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2756 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/F1;;1;X15Y1/XD1;X15Y1/XD1/F1;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2754 ] ,
+          "attributes": {
+            "ROUTING": "X15Y2/Q0;;1;X15Y2/N130;X15Y2/N130/Q0;1;X15Y1/B1;X15Y1/B1/N131;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2752 ] ,
+          "attributes": {
+            "ROUTING": "X15Y2/F0;;1;X15Y2/XD0;X15Y2/XD0/F0;1"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q[1]": {
+          "hide_name": 0,
+          "bits": [ 2750 ] ,
+          "attributes": {
+            "ROUTING": "X17Y2/Q1;;1;X17Y2/W210;X17Y2/W210/Q1;1;X15Y2/B0;X15Y2/B0/W212;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2748 ] ,
+          "attributes": {
+            "ROUTING": "X17Y2/F1;;1;X17Y2/XD1;X17Y2/XD1/F1;1"
+          }
+        },
+        "u_tile.t_data": {
+          "hide_name": 0,
+          "bits": [ 2745 ] ,
+          "attributes": {
+            "ROUTING": "X19Y5/Q6;;1;X19Y5/N830;X19Y5/N830/Q6;1;X19Y2/W250;X19Y2/W250/S838;1;X17Y2/X04;X17Y2/X04/W252;1;X17Y2/B1;X17Y2/B1/X04;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile tda_p"
+          }
+        },
+        "t_data_pin": {
+          "hide_name": 0,
+          "bits": [ 2528 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.shadow[9]": {
+          "hide_name": 0,
+          "bits": [ 2742 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/Q5;;1;X17Y4/SN10;X17Y4/SN10/Q5;1;X17Y3/A1;X17Y3/A1/N111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[10]": {
+          "hide_name": 0,
+          "bits": [ 2739 ] ,
+          "attributes": {
+            "ROUTING": "X16Y4/Q0;;1;X16Y4/SN10;X16Y4/SN10/Q0;1;X16Y3/A0;X16Y3/A0/N111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[11]": {
+          "hide_name": 0,
+          "bits": [ 2736 ] ,
+          "attributes": {
+            "ROUTING": "X16Y6/Q5;;1;X16Y6/N250;X16Y6/N250/Q5;1;X16Y4/A3;X16Y4/A3/N252;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[12]": {
+          "hide_name": 0,
+          "bits": [ 2733 ] ,
+          "attributes": {
+            "ROUTING": "X16Y6/Q3;;1;X16Y6/N230;X16Y6/N230/Q3;1;X16Y4/X02;X16Y4/X02/N232;1;X16Y4/A2;X16Y4/A2/X02;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[13]": {
+          "hide_name": 0,
+          "bits": [ 2730 ] ,
+          "attributes": {
+            "ROUTING": "X17Y6/Q2;;1;X17Y6/N220;X17Y6/N220/Q2;1;X17Y4/X01;X17Y4/X01/N222;1;X17Y4/A1;X17Y4/A1/X01;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[14]": {
+          "hide_name": 0,
+          "bits": [ 2727 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/Q4;;1;X17Y4/X03;X17Y4/X03/Q4;1;X17Y4/A0;X17Y4/A0/X03;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[0]": {
+          "hide_name": 0,
+          "bits": [ 2723 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/Q2;;1;X15Y1/S130;X15Y1/S130/Q2;1;X15Y2/A0;X15Y2/A0/S131;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.pd[0]": {
+          "hide_name": 0,
+          "bits": [ 2721 ] ,
+          "attributes": {
+            "ROUTING": "X15Y0/Q6;;1;X15Y0/SN20;X15Y0/SN20/Q6;1;X15Y1/D2;X15Y1/D2/S121;1",
+            "hdlname": "u_tile t_endcol"
+          }
+        },
+        "u_tile.shadow[4]": {
+          "hide_name": 0,
+          "bits": [ 2718 ] ,
+          "attributes": {
+            "ROUTING": "X13Y1/Q5;;1;X13Y1/EW10;X13Y1/EW10/Q5;1;X14Y1/A0;X14Y1/A0/E111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[5]": {
+          "hide_name": 0,
+          "bits": [ 2715 ] ,
+          "attributes": {
+            "ROUTING": "X17Y1/Q5;;1;X17Y1/N100;X17Y1/N100/Q5;1;X17Y1/A0;X17Y1/A0/N100;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[6]": {
+          "hide_name": 0,
+          "bits": [ 2712 ] ,
+          "attributes": {
+            "ROUTING": "X18Y2/Q2;;1;X18Y2/W130;X18Y2/W130/Q2;1;X17Y2/A0;X17Y2/A0/W131;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[7]": {
+          "hide_name": 0,
+          "bits": [ 2709 ] ,
+          "attributes": {
+            "ROUTING": "X17Y6/Q3;;1;X17Y6/N130;X17Y6/N130/Q3;1;X17Y5/N270;X17Y5/N270/N131;1;X17Y3/A3;X17Y3/A3/N272;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[8]": {
+          "hide_name": 0,
+          "bits": [ 2706 ] ,
+          "attributes": {
+            "ROUTING": "X16Y3/Q3;;1;X16Y3/EW10;X16Y3/EW10/Q3;1;X17Y3/A2;X17Y3/A2/E111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[1]": {
+          "hide_name": 0,
+          "bits": [ 2703 ] ,
+          "attributes": {
+            "ROUTING": "X15Y1/Q4;;1;X15Y1/X03;X15Y1/X03/Q4;1;X15Y1/A1;X15Y1/A1/X03;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.shadow[2]": {
+          "hide_name": 0,
+          "bits": [ 2698 ] ,
+          "attributes": {
+            "ROUTING": "X14Y1/EW10;X14Y1/EW10/Q5;1;X15Y1/A0;X15Y1/A0/E111;1;X14Y1/Q5;;1;X14Y1/N100;X14Y1/N100/Q5;1;X14Y1/A1;X14Y1/A1/N100;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN_ALU_COUT_I1_DFFC_Q_D": {
+          "hide_name": 0,
+          "bits": [ 2694 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/F4;;1;X17Y3/XD4;X17Y3/XD4/F4;1"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN_ALU_COUT_SUM": {
+          "hide_name": 0,
+          "bits": [ 2692 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_CIN": {
+          "hide_name": 0,
+          "bits": [ 2690 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/COUT1;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 2688 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/COUT2;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_2_D": {
+          "hide_name": 0,
+          "bits": [ 2686 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/F3;;1;X18Y4/N100;X18Y4/N100/F3;1;X18Y3/W200;X18Y3/W200/N101;1;X17Y3/D5;X17Y3/D5/W201;1"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_1_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 2683 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_2_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 2682 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/COUT3;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_1_D": {
+          "hide_name": 0,
+          "bits": [ 2680 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/F4;;1;X18Y4/XD4;X18Y4/XD4/F4;1"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFC_Q_D": {
+          "hide_name": 0,
+          "bits": [ 2678 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/F2;;1;X18Y4/W220;X18Y4/W220/F2;1;X17Y4/D2;X17Y4/D2/W221;1"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O[3]": {
+          "hide_name": 0,
+          "bits": [ 2675 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/A4;X17Y3/A4/E100;1;X17Y3/E100;X17Y3/E100/Q4;1;X18Y3/D0;X18Y3/D0/E101;1;X17Y3/Q4;;1;X17Y3/EW10;X17Y3/EW10/Q4;1;X18Y3/S210;X18Y3/S210/E111;1;X18Y4/B1;X18Y4/B1/S211;1",
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O[2]": {
+          "hide_name": 0,
+          "bits": [ 2673 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/E130;X17Y4/E130/Q2;1;X18Y4/B2;X18Y4/B2/E131;1;X17Y4/Q2;;1;X17Y4/SN20;X17Y4/SN20/Q2;1;X17Y3/E260;X17Y3/E260/N121;1;X18Y3/C0;X18Y3/C0/E261;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O[1]": {
+          "hide_name": 0,
+          "bits": [ 2672 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/E130;X17Y3/E130/Q5;1;X18Y3/B0;X18Y3/B0/E131;1;X17Y3/Q5;;1;X17Y3/SN10;X17Y3/SN10/Q5;1;X17Y4/E210;X17Y4/E210/S111;1;X18Y4/B3;X18Y4/B3/E211;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O[0]": {
+          "hide_name": 0,
+          "bits": [ 2671 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/N240;X18Y4/N240/Q4;1;X18Y4/B4;X18Y4/B4/N240;1;X18Y4/Q4;;1;X18Y4/SN10;X18Y4/SN10/Q4;1;X18Y3/A0;X18Y3/A0/N111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I1_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 2669 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F1;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I1_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 2668 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F0;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I0_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 2664 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F3;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I0_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 2663 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F2;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I1": {
+          "hide_name": 0,
+          "bits": [ 2661 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/OF0;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:157.13-157.15"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE_MUX2_LUT6_O_I0": {
+          "hide_name": 0,
+          "bits": [ 2660 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/OF2;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:157.9-157.11"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O_DFFCE_Q_CE": {
+          "hide_name": 0,
+          "bits": [ 2657 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/OF1;;1;X18Y3/N210;X18Y3/N210/OF1;1;X18Y2/CE0;X18Y2/CE0/N211;1"
+          }
+        },
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 2827 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_I1_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 2652 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F5;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_I1_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 2651 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F4;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:159.41-159.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q[2]": {
+          "hide_name": 0,
+          "bits": [ 2635 ] ,
+          "attributes": {
+            "ROUTING": "X16Y3/W230;X16Y3/W230/W131;1;X16Y3/C0;X16Y3/C0/W230;1;X17Y4/C1;X17Y4/C1/S101;1;X15Y2/N260;X15Y2/N260/W262;1;X15Y1/C0;X15Y1/C0/N261;1;X17Y3/C3;X17Y3/C3/X01;1;X17Y3/C1;X17Y3/C1/X01;1;X17Y3/X01;X17Y3/X01/Q0;1;X17Y3/C2;X17Y3/C2/X01;1;X17Y2/W260;X17Y2/W260/N121;1;X15Y2/C0;X15Y2/C0/W262;1;X14Y1/C1;X14Y1/C1/X01;1;X15Y1/W200;X15Y1/W200/W202;1;X14Y1/X01;X14Y1/X01/W201;1;X14Y1/C0;X14Y1/C0/X01;1;X17Y1/X01;X17Y1/X01/N202;1;X17Y1/C0;X17Y1/C0/X01;1;X17Y3/N200;X17Y3/N200/Q0;1;X17Y1/W200;X17Y1/W200/N202;1;X15Y1/X01;X15Y1/X01/W202;1;X15Y1/C1;X15Y1/C1/X01;1;X16Y4/C2;X16Y4/C2/W241;1;X17Y3/SN20;X17Y3/SN20/Q0;1;X17Y2/C0;X17Y2/C0/N121;1;X17Y4/W240;X17Y4/W240/S101;1;X16Y4/C3;X16Y4/C3/W241;1;X17Y3/S100;X17Y3/S100/Q0;1;X17Y4/C0;X17Y4/C0/S101;1;X17Y3/Q0;;1;X17Y3/W130;X17Y3/W130/Q0;1;X17Y3/E270;X17Y3/E270/W130;1;X18Y3/X04;X18Y3/X04/E271;1;X18Y3/SEL5;X18Y3/SEL5/X04;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_I1": {
+          "hide_name": 0,
+          "bits": [ 2633 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/OF4;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:157.13-157.15"
+          }
+        },
+        "u_tile.t_data_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q_LUT3_I1_F_DFFC_D_Q[4]": {
+          "hide_name": 0,
+          "bits": [ 2630 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/SEL6;X18Y3/SEL6/X05;1;X18Y3/SEL4;X18Y3/SEL4/X05;1;X17Y4/N100;X17Y4/N100/Q0;1;X17Y3/E200;X17Y3/E200/N101;1;X18Y3/X05;X18Y3/X05/E201;1;X17Y4/Q0;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O": {
+          "hide_name": 0,
+          "bits": [ 2629 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/OF6;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:157.9-157.11"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_I0": {
+          "hide_name": 0,
+          "bits": [ 2628 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F6;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "u_tile.shadow[15]": {
+          "hide_name": 0,
+          "bits": [ 2626 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/A6;X18Y3/A6/S101;1;X18Y2/Q3;;1;X18Y2/S100;X18Y2/S100/Q3;1;X18Y3/A7;X18Y3/A7/S101;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile shadow"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F": {
+          "hide_name": 0,
+          "bits": [ 2624 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/F7;;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:158.41-158.66|/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "u_tile.r_latch": {
+          "hide_name": 0,
+          "bits": [ 2620 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/D7;X18Y3/D7/W222;1;X19Y4/SN20;X19Y4/SN20/Q6;1;X19Y3/E220;X19Y3/E220/N121;1;X18Y3/D6;X18Y3/D6/W222;1;X19Y4/Q6;;1;X19Y4/EW10;X19Y4/EW10/Q6;1;X18Y4/B6;X18Y4/B6/W111;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile rla_p"
+          }
+        },
+        "r_latch_pin": {
+          "hide_name": 0,
+          "bits": [ 2526 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 2826 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/C0;X18Y4/C0/E262;1;X16Y4/E260;X16Y4/E260/VCC;1;X16Y4/VCC;;1;X18Y4/C4;X18Y4/C4/E241;1;X17Y4/E240;X17Y4/E240/VCC;1;X17Y4/VCC;;1;X0Y0/C4;X0Y0/C4/E261;1;X0Y0/W260;X0Y0/W260/VCC;1;X0Y0/VCC;;1;X18Y4/C3;X18Y4/C3/N262;1;X18Y6/N260;X18Y6/N260/VCC;1;X18Y6/VCC;;1;X18Y10/C1;X18Y10/C1/E261;1;X17Y10/E260;X17Y10/E260/VCC;1;X17Y10/VCC;;1;X18Y4/C1;X18Y4/C1/S241;1;X18Y3/S240;X18Y3/S240/VCC;1;X18Y3/VCC;;1;X18Y4/C2;X18Y4/C2/X04;1;X18Y4/X04;X18Y4/X04/VCC;1;X18Y4/VCC;;1"
+          }
+        },
+        "u_tile.l_endrow": {
+          "hide_name": 0,
+          "bits": [ 2613 ] ,
+          "attributes": {
+            "ROUTING": "X14Y0/Q6;;1;X14Y0/EW20;X14Y0/EW20/Q6;1;X15Y0/N260;X15Y0/N260/E121;1;X15Y1/D4;X15Y1/D4/S262;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "l_endrow_pin": {
+          "hide_name": 0,
+          "bits": [ 2524 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.l_data": {
+          "hide_name": 0,
+          "bits": [ 2609 ] ,
+          "attributes": {
+            "ROUTING": "X19Y7/F6;;1;X19Y7/N830;X19Y7/N830/F6;1;X19Y3/W250;X19Y3/W250/N834;1;X17Y3/N250;X17Y3/N250/W252;1;X17Y2/A1;X17Y2/A1/N251;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile lda_p"
+          }
+        },
+        "l_data_pin": {
+          "hide_name": 0,
+          "bits": [ 2523 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[10]": {
+          "hide_name": 0,
+          "bits": [ 2606 ] ,
+          "attributes": {
+            "ROUTING": "X19Y4/F6;;1;X19Y4/W260;X19Y4/W260/F6;1;X17Y4/W270;X17Y4/W270/W262;1;X17Y4/D4;X17Y4/D4/W270;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[10]": {
+          "hide_name": 0,
+          "bits": [ 2604 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[11]": {
+          "hide_name": 0,
+          "bits": [ 2601 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/C6;X18Y3/C6/S221;1;X18Y2/S220;X18Y2/S220/W121;1;X18Y3/C7;X18Y3/C7/S221;1;X19Y2/Q6;;1;X19Y2/EW20;X19Y2/EW20/Q6;1;X18Y2/D3;X18Y2/D3/W121;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[11]": {
+          "hide_name": 0,
+          "bits": [ 2599 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[2]": {
+          "hide_name": 0,
+          "bits": [ 2597 ] ,
+          "attributes": {
+            "ROUTING": "X19Y2/F6;;1;X19Y2/W130;X19Y2/W130/F6;1;X18Y2/S270;X18Y2/S270/W131;1;X18Y2/D2;X18Y2/D2/S270;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[2]": {
+          "hide_name": 0,
+          "bits": [ 2595 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[3]": {
+          "hide_name": 0,
+          "bits": [ 2593 ] ,
+          "attributes": {
+            "ROUTING": "X19Y9/Q6;;1;X19Y9/N100;X19Y9/N100/Q6;1;X19Y8/N200;X19Y8/N200/N101;1;X19Y6/W200;X19Y6/W200/N202;1;X17Y6/D3;X17Y6/D3/W202;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[3]": {
+          "hide_name": 0,
+          "bits": [ 2591 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[4]": {
+          "hide_name": 0,
+          "bits": [ 2589 ] ,
+          "attributes": {
+            "ROUTING": "X19Y5/Q3;;1;X19Y5/E800;X19Y5/E800/Q3;1;X16Y5/N200;X16Y5/N200/W804;1;X16Y3/D3;X16Y3/D3/N202;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[4]": {
+          "hide_name": 0,
+          "bits": [ 2587 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[5]": {
+          "hide_name": 0,
+          "bits": [ 2585 ] ,
+          "attributes": {
+            "ROUTING": "X19Y5/Q4;;1;X19Y5/W240;X19Y5/W240/Q4;1;X17Y5/N240;X17Y5/N240/W242;1;X17Y4/D5;X17Y4/D5/N241;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[5]": {
+          "hide_name": 0,
+          "bits": [ 2583 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[6]": {
+          "hide_name": 0,
+          "bits": [ 2581 ] ,
+          "attributes": {
+            "ROUTING": "X19Y5/Q5;;1;X19Y5/E830;X19Y5/E830/Q5;1;X16Y5/N250;X16Y5/N250/W834;1;X16Y4/X06;X16Y4/X06/N251;1;X16Y4/D0;X16Y4/D0/X06;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[6]": {
+          "hide_name": 0,
+          "bits": [ 2579 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[7]": {
+          "hide_name": 0,
+          "bits": [ 2577 ] ,
+          "attributes": {
+            "ROUTING": "X19Y9/F6;;1;X19Y9/E830;X19Y9/E830/F6;1;X16Y9/N260;X16Y9/N260/W834;1;X16Y7/N260;X16Y7/N260/N262;1;X16Y6/D5;X16Y6/D5/N261;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[7]": {
+          "hide_name": 0,
+          "bits": [ 2575 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[0]": {
+          "hide_name": 0,
+          "bits": [ 2573 ] ,
+          "attributes": {
+            "ROUTING": "X9Y0/Q6;;1;X9Y0/E260;X9Y0/E260/Q6;1;X11Y0/E260;X11Y0/E260/E262;1;X13Y0/S260;X13Y0/S260/E262;1;X13Y1/D5;X13Y1/D5/S261;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[0]": {
+          "hide_name": 0,
+          "bits": [ 2571 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[1]": {
+          "hide_name": 0,
+          "bits": [ 2569 ] ,
+          "attributes": {
+            "ROUTING": "X19Y1/Q6;;1;X19Y1/W260;X19Y1/W260/Q6;1;X17Y1/X07;X17Y1/X07/W262;1;X17Y1/D5;X17Y1/D5/X07;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[1]": {
+          "hide_name": 0,
+          "bits": [ 2567 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[8]": {
+          "hide_name": 0,
+          "bits": [ 2565 ] ,
+          "attributes": {
+            "ROUTING": "X19Y6/Q6;;1;X19Y6/EW20;X19Y6/EW20/Q6;1;X18Y6/W220;X18Y6/W220/W121;1;X16Y6/D3;X16Y6/D3/W222;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[8]": {
+          "hide_name": 0,
+          "bits": [ 2563 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.buttons[9]": {
+          "hide_name": 0,
+          "bits": [ 2561 ] ,
+          "attributes": {
+            "ROUTING": "X19Y7/Q6;;1;X19Y7/SN10;X19Y7/SN10/Q6;1;X19Y6/W210;X19Y6/W210/N111;1;X17Y6/X06;X17Y6/X06/W212;1;X17Y6/D2;X17Y6/D2/X06;1",
+            "hdlname": "u_tile pd"
+          }
+        },
+        "keys[9]": {
+          "hide_name": 0,
+          "bits": [ 2559 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.b_latch": {
+          "hide_name": 0,
+          "bits": [ 2556 ] ,
+          "attributes": {
+            "ROUTING": "X18Y3/B6;X18Y3/B6/N251;1;X18Y4/A6;X18Y4/A6/W252;1;X19Y8/F6;;1;X19Y8/N830;X19Y8/N830/F6;1;X19Y4/E250;X19Y4/E250/N834;1;X18Y4/N250;X18Y4/N250/W252;1;X18Y3/B7;X18Y3/B7/N251;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "hdlname": "u_tile bla_p"
+          }
+        },
+        "b_latch_pin": {
+          "hide_name": 0,
+          "bits": [ 2517 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "b_first_pin": {
+          "hide_name": 0,
+          "bits": [ 2516 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "clk_pin": {
+          "hide_name": 0,
+          "bits": [ 2519 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "u_tile.t_w": {
+          "hide_name": 0,
+          "bits": [ 2549 ] ,
+          "attributes": {
+            "ROUTING": "X16Y1/B1;X16Y1/B1/S111;1;X16Y0/F6;;1;X16Y0/SN10;X16Y0/SN10/F6;1;X16Y1/B2;X16Y1/B2/S111;1",
+            "hdlname": "u_tile tw_p"
+          }
+        },
+        "u_tile.b_first": {
+          "hide_name": 0,
+          "bits": [ 2547 ] ,
+          "attributes": {
+            "ROUTING": "X16Y1/A1;X16Y1/A1/S271;1;X15Y0/F6;;1;X15Y0/E130;X15Y0/E130/F6;1;X16Y0/S270;X16Y0/S270/E131;1;X16Y1/A2;X16Y1/A2/S271;1",
+            "hdlname": "u_tile bf_p"
+          }
+        },
+        "t_clk_pin_TBUF_O_OEN": {
+          "hide_name": 0,
+          "bits": [ 2544 ] ,
+          "attributes": {
+            "ROUTING": "X16Y1/F2;;1;X16Y1/N130;X16Y1/N130/F2;1;X16Y0/D5;X16Y0/D5/N131;1"
+          }
+        },
+        "t_clk_pin": {
+          "hide_name": 0,
+          "bits": [ 2527 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "DRIVE": "24"
+          }
+        },
+        "latcho_pin": {
+          "hide_name": 0,
+          "bits": [ 2525 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "DRIVE": "24"
+          }
+        },
+        "u_tile.r_latch_LUT2_I1_F": {
+          "hide_name": 0,
+          "bits": [ 2542 ] ,
+          "attributes": {
+            "ROUTING": "X17Y3/LSR0;X17Y3/LSR0/X06;1;X17Y1/X04;X17Y1/X04/N271;1;X17Y1/CLK2;X17Y1/CLK2/X04;1;X15Y4/N260;X15Y4/N260/W261;1;X15Y2/X05;X15Y2/X05/N262;1;X15Y2/LSR0;X15Y2/LSR0/X05;1;X17Y4/S260;X17Y4/S260/W121;1;X17Y6/X01;X17Y6/X01/S262;1;X17Y6/CLK1;X17Y6/CLK1/X01;1;X16Y4/X07;X16Y4/X07/W262;1;X16Y4/LSR1;X16Y4/LSR1/X07;1;X15Y1/X08;X15Y1/X08/W272;1;X15Y1/LSR0;X15Y1/LSR0/X08;1;X17Y3/LSR2;X17Y3/LSR2/X06;1;X18Y4/X07;X18Y4/X07/F6;1;X18Y4/LSR2;X18Y4/LSR2/X07;1;X15Y1/CLK2;X15Y1/CLK2/X04;1;X17Y2/X07;X17Y2/X07/N262;1;X17Y2/LSR0;X17Y2/LSR0/X07;1;X17Y3/X06;X17Y3/X06/W231;1;X17Y3/LSR1;X17Y3/LSR1/X06;1;X16Y3/X06;X16Y3/X06/W232;1;X16Y3/LSR0;X16Y3/LSR0/X06;1;X17Y4/LSR1;X17Y4/LSR1/X07;1;X18Y3/W230;X18Y3/W230/N131;1;X16Y3/X02;X16Y3/X02/W232;1;X16Y3/CLK1;X16Y3/CLK1/X02;1;X14Y1/X04;X14Y1/X04/W271;1;X14Y1/CLK2;X14Y1/CLK2/X04;1;X18Y4/E130;X18Y4/E130/F6;1;X19Y4/S270;X19Y4/S270/E131;1;X19Y5/A0;X19Y5/A0/S271;1;X16Y4/X03;X16Y4/X03/W262;1;X16Y4/CLK0;X16Y4/CLK0/X03;1;X18Y4/N130;X18Y4/N130/F6;1;X18Y4/W240;X18Y4/W240/N130;1;X17Y4/CLK2;X17Y4/CLK2/W241;1;X16Y6/CLK2;X16Y6/CLK2/X03;1;X16Y4/W260;X16Y4/W260/W262;1;X14Y4/N260;X14Y4/N260/W262;1;X14Y2/N270;X14Y2/N270/N262;1;X14Y1/LSR0;X14Y1/LSR0/N271;1;X15Y1/X04;X15Y1/X04/W272;1;X15Y1/CLK1;X15Y1/CLK1/X04;1;X17Y1/W270;X17Y1/W270/N271;1;X15Y1/W270;X15Y1/W270/W272;1;X13Y1/X04;X13Y1/X04/W272;1;X13Y1/CLK2;X13Y1/CLK2/X04;1;X17Y4/X07;X17Y4/X07/W261;1;X17Y4/LSR0;X17Y4/LSR0/X07;1;X18Y4/EW20;X18Y4/EW20/F6;1;X17Y4/N260;X17Y4/N260/W121;1;X17Y2/N270;X17Y2/N270/N262;1;X17Y1/LSR0;X17Y1/LSR0/N271;1;X18Y2/X07;X18Y2/X07/N262;1;X18Y2/LSR0;X18Y2/LSR0/X07;1;X18Y4/W260;X18Y4/W260/F6;1;X16Y4/S260;X16Y4/S260/W262;1;X16Y6/X03;X16Y6/X03/S262;1;X16Y6/CLK1;X16Y6/CLK1/X03;1;X18Y4/F6;;1;X18Y4/N260;X18Y4/N260/F6;1;X18Y2/X01;X18Y2/X01/N262;1;X18Y2/CLK1;X18Y2/CLK1/X01;1"
+          }
+        },
+        "u_tile.t_w_LUT2_I1_F[2]": {
+          "hide_name": 0,
+          "bits": [ 2540 ] ,
+          "attributes": {
+            "ROUTING": "X16Y1/S100;X16Y1/S100/F1;1;X16Y2/E240;X16Y2/E240/S101;1;X17Y2/C1;X17Y2/C1/E241;1;X16Y1/F1;;1;X16Y1/E810;X16Y1/E810/F1;1;X19Y1/S210;X19Y1/S210/W814;1;X19Y3/S240;X19Y3/S240/S212;1;X19Y5/C3;X19Y5/C3/S242;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "l_clk_pin": {
+          "hide_name": 0,
+          "bits": [ 2522 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "DRIVE": "24"
+          }
+        },
+        "u_tile.b_clk": {
+          "hide_name": 0,
+          "bits": [ 2539 ] ,
+          "attributes": {
+            "ROUTING": "X17Y4/CLK0;X17Y4/CLK0/GB00;5;X16Y4/CLK1;X16Y4/CLK1/GB00;5;X16Y3/CLK0;X16Y3/CLK0/GB00;5;X17Y3/CLK0;X17Y3/CLK0/GB00;5;X17Y3/CLK1;X17Y3/CLK1/GB00;5;X16Y1/GB00;X17Y1/GBO0/GT00;5;X17Y1/CLK0;X17Y1/CLK0/GB00;5;X14Y1/CLK0;X14Y1/CLK0/GB00;5;X13Y1/GB00;X13Y1/GBO0/GT00;5;X15Y1/CLK0;X15Y1/CLK0/GB00;5;X13Y9/GT00;X13Y6/GT00/SPINE24;5;X13Y2/GBO0;X13Y2/GBO0/GT00;5;X15Y2/CLK0;X15Y2/CLK0/GB00;5;X17Y2/CLK0;X17Y2/CLK0/GB00;5;X16Y3/GB00;X17Y3/GBO0/GT00;5;X17Y3/CLK2;X17Y3/CLK2/GB00;5;X18Y4/CLK2;X18Y4/CLK2/GB00;5;X16Y4/GB00;X17Y4/GBO0/GT00;5;X17Y4/CLK1;X17Y4/CLK1/GB00;5;X16Y2/GB00;X17Y2/GBO0/GT00;5;X18Y2/CLK0;X18Y2/CLK0/GB00;5;X18Y0/GB00;X17Y0/GBO0/GT00;5;X17Y0/EW20;X17Y0/EW20/GB00;5;X16Y0/D1;X16Y0/D1/W121;5;X8Y5/PCLKT0;X9Y0/PCLK_DUMMY/F6;5;X17Y6/SPINE24;X10Y5/SPINE24/PCLKT0;5;X17Y3/GT00;X17Y6/GT00/SPINE24;5;X18Y5/GB00;X17Y5/GBO0/GT00;5;X19Y5/EW10;X19Y5/EW10/GB00;5;X19Y5/B1;X19Y5/B1/W111;5;X9Y0/F6;;5",
+            "hdlname": "u_tile bck_p"
+          }
+        },
+        "dout_pin": {
+          "hide_name": 0,
+          "bits": [ 2520 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "DRIVE": "24"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O[5]": {
+          "hide_name": 0,
+          "bits": [ 2536 ] ,
+          "attributes": {
+            "ROUTING": "X19Y3/S220;X19Y3/S220/E121;1;X19Y5/X07;X19Y5/X07/S222;1;X19Y5/A2;X19Y5/A2/X07;1;X18Y3/OF5;;1;X18Y3/EW20;X18Y3/EW20/OF5;1;X19Y3/E260;X19Y3/E260/E121;1;X18Y3/X03;X18Y3/X03/W262;1;X18Y3/SEL1;X18Y3/SEL1/X03;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "b_w_pin": {
+          "hide_name": 0,
+          "bits": [ 2518 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "DRIVE": "24"
+          }
+        },
+        "u_tile.r_latch_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I0_O[4]": {
+          "hide_name": 0,
+          "bits": [ 2533 ] ,
+          "attributes": {
+            "ROUTING": "X18Y4/S210;X18Y4/S210/S202;1;X18Y6/E210;X18Y6/E210/S212;1;X19Y6/X02;X19Y6/X02/E211;1;X19Y6/A0;X19Y6/A0/X02;1;X18Y3/SEL2;X18Y3/SEL2/X07;1;X18Y2/Q0;;1;X18Y2/S200;X18Y2/S200/Q0;1;X18Y3/X07;X18Y3/X07/S201;1;X18Y3/SEL0;X18Y3/SEL0/X07;1",
+            "src": "/opt/oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        }
+      }
+    }
+  }
+}

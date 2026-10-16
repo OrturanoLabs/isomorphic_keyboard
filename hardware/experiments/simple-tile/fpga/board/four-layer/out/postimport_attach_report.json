@@ -1,0 +1,1131 @@
+{
+ "in": "hardware/experiments/simple-tile/fpga/board/four-layer/out/tile_gw1nz_4l_repaired.kicad_pcb",
+ "out": "hardware/experiments/simple-tile/fpga/board/four-layer/out/tile_gw1nz_4l_ground.kicad_pcb",
+ "placed": [
+  {
+   "ref": "U2",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -9.19,
+    25.2
+   ],
+   "stub_mm": 1.562,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C1",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    6.4347,
+    0.95
+   ],
+   "stub_mm": 1.35,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C2",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    2.8746,
+    6.3399
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C3",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    2.8746,
+    1.9601
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 58
+  },
+  {
+   "ref": "C5",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    8.3746,
+    -1.7899
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 59
+  },
+  {
+   "ref": "C6",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "+x",
+   "via_mm": [
+    13.7489,
+    9.0142
+   ],
+   "stub_mm": 2.0,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C7",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -15.965,
+    19.2
+   ],
+   "stub_mm": 1.475,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C8",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -10.5299,
+    20.1899
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C9",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -14.39,
+    21.45
+   ],
+   "stub_mm": 1.35,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "R1",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    4.6847,
+    -2.55
+   ],
+   "stub_mm": 1.3,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "R2",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    0.5347,
+    7.45
+   ],
+   "stub_mm": 1.3,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "R3",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    15.4847,
+    1.875
+   ],
+   "stub_mm": 1.375,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "TP_GND",
+   "pad": "1",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "+x",
+   "via_mm": [
+    4.635,
+    33.95
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "U2",
+   "pad": "5",
+   "net": "VCC1V2_RAW",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -11.465,
+    24.25
+   ],
+   "stub_mm": 1.562,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C8",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "kind": "surface_stub",
+   "escape_dir": "+x",
+   "via_mm": [
+    -7.0001,
+    18.2101
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 58
+  },
+  {
+   "ref": "FB1",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    13.8847,
+    2.225
+   ],
+   "stub_mm": 1.375,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "U1",
+   "pad": "12",
+   "net": "VCC1V2",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    10.8097,
+    8.6
+   ],
+   "stub_mm": 1.0,
+   "layer": "B.Cu",
+   "cand_idx": 2
+  },
+  {
+   "ref": "U1",
+   "pad": "37",
+   "net": "VCC1V2",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    2.9727,
+    -0.237
+   ],
+   "stub_mm": 3.8,
+   "layer": "B.Cu",
+   "cand_idx": 47
+  },
+  {
+   "ref": "C4",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    13.8347,
+    6.725
+   ],
+   "stub_mm": 1.375,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C6",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    13.8097,
+    7.6
+   ],
+   "stub_mm": 1.475,
+   "layer": "B.Cu",
+   "cand_idx": 2
+  },
+  {
+   "ref": "TP_VCC1V2",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -3.7903,
+    5.4
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW1",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    -6.935,
+    -4.69
+   ],
+   "stub_mm": 2.15,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW2",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    9.0997,
+    -2.54
+   ],
+   "stub_mm": 2.175,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW3",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    27.4595,
+    -2.54
+   ],
+   "stub_mm": 2.175,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW4",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    45.8192,
+    -2.54
+   ],
+   "stub_mm": 2.175,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW5",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    -16.1149,
+    11.21
+   ],
+   "stub_mm": 2.15,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW6",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    2.0949,
+    15.51
+   ],
+   "stub_mm": 2.15,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW7",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    20.4546,
+    11.21
+   ],
+   "stub_mm": 2.15,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW8",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    36.6393,
+    13.36
+   ],
+   "stub_mm": 2.175,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW9",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    -25.2947,
+    27.11
+   ],
+   "stub_mm": 2.15,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW10",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -9.26,
+    29.26
+   ],
+   "stub_mm": 2.175,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW11",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    9.0997,
+    29.26
+   ],
+   "stub_mm": 2.175,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "SW12",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    27.4595,
+    29.26
+   ],
+   "stub_mm": 2.175,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "U1",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y",
+   "via_mm": [
+    10.8097,
+    2.2
+   ],
+   "stub_mm": 1.0,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "U1",
+   "pad": "25",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    4.9097,
+    8.6
+   ],
+   "stub_mm": 1.0,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "U2",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+x",
+   "via_mm": [
+    -6.065,
+    24.25
+   ],
+   "stub_mm": 1.562,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "U2",
+   "pad": "3",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    -7.6275,
+    27.35
+   ],
+   "stub_mm": 1.2,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C1",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+x",
+   "via_mm": [
+    10.6847,
+    0.95
+   ],
+   "stub_mm": 1.35,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C7",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -13.015,
+    19.2
+   ],
+   "stub_mm": 1.475,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "C9",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    -11.49,
+    22.825
+   ],
+   "stub_mm": 1.375,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "R4",
+   "pad": "2",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-x",
+   "via_mm": [
+    -0.5153,
+    9.2
+   ],
+   "stub_mm": 1.3,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  },
+  {
+   "ref": "R5",
+   "pad": "2",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    16.6746,
+    6.1899
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 16
+  },
+  {
+   "ref": "R6",
+   "pad": "2",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+y",
+   "via_mm": [
+    8.2347,
+    -6.45
+   ],
+   "stub_mm": 1.4,
+   "layer": "B.Cu",
+   "cand_idx": 51
+  },
+  {
+   "ref": "TP_VCC",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "+x",
+   "via_mm": [
+    -3.515,
+    18.7
+   ],
+   "stub_mm": 2.5,
+   "layer": "B.Cu",
+   "cand_idx": 0
+  }
+ ],
+ "unplaced": [
+  {
+   "ref": "U1",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "-x"
+  },
+  {
+   "ref": "U1",
+   "pad": "26",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "+x"
+  },
+  {
+   "ref": "C4",
+   "pad": "2",
+   "net": "GND",
+   "kind": "surface_stub",
+   "escape_dir": "+y"
+  },
+  {
+   "ref": "C5",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "surface_stub",
+   "escape_dir": "-y"
+  },
+  {
+   "ref": "FB1",
+   "pad": "2",
+   "net": "VCC1V2",
+   "kind": "surface_stub",
+   "escape_dir": "-y"
+  },
+  {
+   "ref": "U1",
+   "pad": "36",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y"
+  },
+  {
+   "ref": "C2",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y"
+  },
+  {
+   "ref": "C3",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "surface_stub",
+   "escape_dir": "-y"
+  }
+ ],
+ "ep": {
+  "pad_bbox": [
+   6.51,
+   4.05,
+   9.21,
+   6.75
+  ],
+  "net": "GND",
+  "ring_vias": [
+   {
+    "ref": "U1",
+    "pad": "49",
+    "net": "GND",
+    "via_mm": [
+     9.7047,
+     7.245
+    ],
+    "stub_mm": 2.609,
+    "layer": "B.Cu",
+    "cand_idx": 0
+   },
+   {
+    "ref": "U1",
+    "pad": "49",
+    "net": "GND",
+    "via_mm": [
+     6.0147,
+     7.245
+    ],
+    "stub_mm": 2.609,
+    "layer": "B.Cu",
+    "cand_idx": 0
+   },
+   {
+    "ref": "U1",
+    "pad": "49",
+    "net": "GND",
+    "via_mm": [
+     6.0147,
+     3.555
+    ],
+    "stub_mm": 2.609,
+    "layer": "B.Cu",
+    "cand_idx": 0
+   }
+  ],
+  "fill_membership": [
+   {
+    "via": [
+     9.7047,
+     7.245
+    ],
+    "in_bcu_fill": true
+   },
+   {
+    "via": [
+     6.0147,
+     7.245
+    ],
+    "in_bcu_fill": true
+   },
+   {
+    "via": [
+     6.0147,
+     3.555
+    ],
+    "in_bcu_fill": true
+   }
+  ],
+  "island_tied_via_fill": true
+ },
+ "neck": {
+  "note": "see notch"
+ },
+ "proof": [
+  {
+   "ref": "U2",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C1",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C2",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C3",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C5",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C6",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C7",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C8",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C9",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "R1",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "R2",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "R3",
+   "pad": "2",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "TP_GND",
+   "pad": "1",
+   "net": "GND",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "U2",
+   "pad": "5",
+   "net": "VCC1V2_RAW",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C8",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "FB1",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "U1",
+   "pad": "12",
+   "net": "VCC1V2",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "U1",
+   "pad": "37",
+   "net": "VCC1V2",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C4",
+   "pad": "1",
+   "net": "VCC1V2",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C6",
+   "pad": "1",
+   "net": "VCC1V2",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "TP_VCC1V2",
+   "pad": "1",
+   "net": "VCC1V2",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW1",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW2",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW3",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW4",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW5",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW6",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW7",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW8",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW9",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW10",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW11",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "SW12",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "U1",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "U1",
+   "pad": "25",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "U2",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "U2",
+   "pad": "3",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C1",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C7",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "C9",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "R4",
+   "pad": "2",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "R5",
+   "pad": "2",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "R6",
+   "pad": "2",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  },
+  {
+   "ref": "TP_VCC",
+   "pad": "1",
+   "net": "VCC",
+   "via_present_net_ok": true,
+   "stub_pad_to_via": true,
+   "proven": true
+  }
+ ],
+ "notes": [
+  "pad in planned: False"
+ ],
+ "corner_stitch": {
+  "stitch_mm": [
+   62.959,
+   6.65
+  ]
+ },
+ "notch": {
+  "bool_err": "AttributeError(\"type object 'SHAPE_POLY_SET' has no attribute 'PM_FAST'\")",
+  "outline_before": 1,
+  "outline_after": 1,
+  "method": "boolean_failed"
+ },
+ "summary": {
+  "pads_at_load": 449,
+  "placed": 44,
+  "unplaced": 8,
+  "proven": 44,
+  "ep_ring": 3,
+  "ep_island_tied": true
+ }
+}

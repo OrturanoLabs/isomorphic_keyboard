@@ -1,0 +1,106 @@
+{
+ "ok": true,
+ "problems": [],
+ "name_drift_report_only": [
+  [
+   "\"T_data\"",
+   "T_data"
+  ],
+  [
+   "\"B_W_drv\"",
+   "B_W_drv"
+  ],
+  [
+   "\"B_clk\"",
+   "B_clk"
+  ],
+  [
+   "\"L_endrow\"",
+   "L_endrow"
+  ],
+  [
+   "\"B_data\"",
+   "B_data"
+  ],
+  [
+   "\"data_drv\"",
+   "data_drv"
+  ],
+  [
+   "\"B_W\"",
+   "B_W"
+  ],
+  [
+   "\"flag_d\"",
+   "flag_d"
+  ],
+  [
+   "\"B_first\"",
+   "B_first"
+  ],
+  [
+   "\"B_latch\"",
+   "B_latch"
+  ],
+  [
+   "\"DS_net\"",
+   "DS_net"
+  ],
+  [
+   "\"latch_drv\"",
+   "latch_drv"
+  ],
+  [
+   "\"L_clk_drv\"",
+   "L_clk_drv"
+  ],
+  [
+   "\"L_data\"",
+   "L_data"
+  ],
+  [
+   "\"T_W\"",
+   "T_W"
+  ],
+  [
+   "\"T_endcol\"",
+   "T_endcol"
+  ],
+  [
+   "\"T_clk\"",
+   "T_clk"
+  ],
+  [
+   "\"L_clk\"",
+   "L_clk"
+  ],
+  [
+   "\"L_latch\"",
+   "L_latch"
+  ],
+  [
+   "\"R_latch\"",
+   "R_latch"
+  ]
+ ],
+ "_frame_note": "SES numeric coords at (resolution um 10) granularity (=0.1 um units); the KiCad DSN boundary reads in raw um -- verifier divides SES coords by the resolution value before boundary comparison (fixture-verified round-trip frame convention)",
+ "dsn": "tile_variant_a_4l.dsn",
+ "ses": "tile_variant_a_4l.ses",
+ "dsn_nets": 52,
+ "routed_nets": 46,
+ "complete_routes": false,
+ "resolution": 10,
+ "lib_vias": [
+  "Via[0-3]_600:300_um"
+ ],
+ "layers_used": [
+  "B.Cu",
+  "F.Cu"
+ ],
+ "widths_seen": [
+  1500,
+  2000,
+  2500
+ ],
+ "points": 1390
+}

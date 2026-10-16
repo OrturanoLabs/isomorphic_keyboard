@@ -1,0 +1,62 @@
+{
+ "tool": "widen_apply_probe.py",
+ "scope": "text-level SES widen to class minima; arms bare and four_l_planes (stub arm skipped: own-escape decision)",
+ "limits": "pad/via keepouts NOT modeled -> conflicts near pads may be false positives; widened SES is a repair candidate, not DRC-verified; adoption still needs pcb-side fix pass + full DRC (fix_routed precedent)",
+ "clearance_mm": 0.2,
+ "arms": [
+  {
+   "id": "bare",
+   "src": "out/route/tile_gw1nz.ses",
+   "out": "out/route/tile_gw1nz_widened.ses",
+   "src_sha256_12": "fa54ef9b0920",
+   "out_sha256_12": "d17633f4bf05",
+   "paths_total": 106,
+   "widths_raised": 7,
+   "raised_by_net": {
+    "GND": 2,
+    "VCC": 5
+   },
+   "inverse_identity": true,
+   "conflicts": [],
+   "conflict_count": 0,
+   "conflict_nets": []
+  },
+  {
+   "id": "four_l_planes",
+   "src": "out/route/tile_gw1nz_4l.ses",
+   "out": "out/route/tile_gw1nz_4l_widened.ses",
+   "src_sha256_12": "9faa9cf2fd22",
+   "out_sha256_12": "7648136a66b3",
+   "paths_total": 98,
+   "widths_raised": 9,
+   "raised_by_net": {
+    "GND": 4,
+    "K5": 1,
+    "VCC": 4
+   },
+   "inverse_identity": true,
+   "conflicts": [],
+   "conflict_count": 0,
+   "conflict_nets": []
+  },
+  {
+   "id": "four_l_attach_vias",
+   "src": "out/route/tile_gw1nz_4l_attach.ses",
+   "out": "out/route/tile_gw1nz_4l_attach_widened.ses",
+   "src_sha256_12": "0a65642d22fe",
+   "out_sha256_12": "9b6e4cc430bb",
+   "paths_total": 115,
+   "widths_raised": 12,
+   "raised_by_net": {
+    "GND": 4,
+    "L_clk": 1,
+    "L_clk_DRV": 1,
+    "VCC": 6
+   },
+   "inverse_identity": true,
+   "conflicts": [],
+   "conflict_count": 0,
+   "conflict_nets": []
+  }
+ ]
+}

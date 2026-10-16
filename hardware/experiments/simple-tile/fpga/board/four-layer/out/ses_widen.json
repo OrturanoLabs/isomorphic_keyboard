@@ -1,0 +1,9 @@
+{
+ "raised": 2,
+ "widths_after_0p1um": [
+  2000
+ ],
+ "notes": "width-only text edits; non-width bytes compared identical by report-side re-check",
+ "ok": true,
+ "nonwidth_identical": true
+}

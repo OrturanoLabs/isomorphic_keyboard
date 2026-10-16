@@ -75,16 +75,35 @@ def load_db(name):
 def parse_cst(path):
     """Return {net: (pin, pull)} from a Gowin .cst. Statements may share a
     line (the fpga workstream's synth/tile_gw1nz.cst style, accepted by
-    nextpnr): scan ALL IO_LOC/IO_PORT occurrences, not one per line."""
+    nextpnr): scan ALL IO_LOC/IO_PORT occurrences, not one per line.
+    IO_PORT statements may carry an attribute body (e.g. the production
+    board file's UNVERIFIED vendor hints `IO_TYPE=LVCMOS33 DRIVE=2
+    SLEW_RATE=SLOW`); every attribute key must be in ATTR_KEYS (strict
+    hygiene: unknown keys/values fail the parse, they are never silently
+    skimmed). `SLEW_RATE` is the SUG935-documented spelling; `SLEWRATE`
+    is also accepted (pre-2026-10-15 spelling of the same hint; the OSS
+    flow provably ignores both)."""
+    ATTR_KEYS = {"IO_TYPE", "DRIVE", "SLEW_RATE", "SLEWRATE", "PULL_MODE"}
+    port_re = r'IO_PORT\s+"([^"]+)"\s+([^;]*);'
     locs, pulls = {}, {}
     for ln in open(path):
         ln = re.sub(r'//.*$', '', ln)
         for m in re.finditer(r'IO_LOC\s+"([^"]+)"\s+(\d+)\s*;', ln):
             locs[m.group(1)] = int(m.group(2))
-        for m in re.finditer(r'IO_PORT\s+"([^"]+)"\s+PULL_MODE=(UP|DOWN)\s*;', ln):
-            pulls[m.group(1)] = m.group(2)
+        for m in re.finditer(port_re, ln):
+            for tok in m.group(2).split():
+                if "=" not in tok:
+                    raise ValueError(
+                        f"{path}: bad IO_PORT attr token: {tok!r}")
+                k, v = tok.split("=", 1)
+                if k not in ATTR_KEYS or \
+                        not re.fullmatch(r"[A-Za-z0-9_.\-]+", v):
+                    raise ValueError(f"{path}: unknown IO_PORT attr {tok!r}")
+            pm = re.search(r'PULL_MODE=(UP|DOWN)\b', m.group(2))
+            if pm:
+                pulls[m.group(1)] = pm.group(1)
         rest = re.sub(r'IO_LOC\s+"[^"]+"\s+\d+\s*;', '', ln)
-        rest = re.sub(r'IO_PORT\s+"[^"]+"\s+PULL_MODE=(UP|DOWN)\s*;', '', rest)
+        rest = re.sub(port_re, '', rest)
         if rest.strip():
             raise ValueError(f"{path}: unparsed residue: {rest.strip()!r}")
     return {n: (p, pulls.get(n)) for n, p in locs.items()}

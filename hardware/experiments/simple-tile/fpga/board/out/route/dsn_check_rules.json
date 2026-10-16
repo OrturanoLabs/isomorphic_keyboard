@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "problems": [],
+ "inventory": {
+  "boundary_paths": 1,
+  "layers": [
+   "F.Cu",
+   "B.Cu"
+  ],
+  "width_um": [
+   "200",
+   "200"
+  ],
+  "clearance_um": [
+   "200",
+   "50",
+   "200"
+  ],
+  "vias": [
+   "Via[0-1]_600:300_um"
+  ],
+  "nets": 45,
+  "pins": 144
+ },
+ "classes": [
+  {
+   "name": "kicad_default",
+   "nets": 45,
+   "width_um": 200,
+   "clearance_um": 200
+  }
+ ],
+ "pcb_nets": 45,
+ "dsn_nets": 45,
+ "source_pcb": "tile_gw1nz_rules.kicad_pcb",
+ "dsn": "tile_gw1nz_rules.dsn"
+}

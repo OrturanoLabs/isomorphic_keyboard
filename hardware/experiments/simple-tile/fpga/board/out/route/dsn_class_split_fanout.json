@@ -1,0 +1,43 @@
+{
+ "ok": true,
+ "problems": [],
+ "source_dsn": "tile_gw1nz.dsn",
+ "out": "tile_gw1nz_fanout_classes.dsn",
+ "classes": {
+  "channel_in": {
+   "width_um": 200,
+   "clearance_um": 200,
+   "via": "Via[0-1]_600:300_um"
+  },
+  "config": {
+   "width_um": 200,
+   "clearance_um": 200,
+   "via": "Via[0-1]_600:300_um"
+  },
+  "edge_critical": {
+   "width_um": 200,
+   "clearance_um": 200,
+   "via": "Via[0-1]_600:300_um"
+  },
+  "keys": {
+   "width_um": 200,
+   "clearance_um": 200,
+   "via": "Via[0-1]_600:300_um"
+  },
+  "level_out": {
+   "width_um": 200,
+   "clearance_um": 200,
+   "via": "Via[0-1]_600:300_um"
+  },
+  "power": {
+   "width_um": 500,
+   "clearance_um": 200,
+   "via": "Via[0-1]_600:300_um"
+  }
+ },
+ "inverse_diff_identity": true,
+ "block_span_lines": [
+  746,
+  758
+ ]
+}

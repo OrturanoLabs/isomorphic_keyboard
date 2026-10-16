@@ -65,6 +65,7 @@ MYLIB = os.path.join(HERE, "lib", "fpga_board.pretty")
 
 STOCK = {
     "R0603": "Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+    "R0402": "Resistor_SMD.pretty/R_0402_1005Metric.kicad_mod",
     "C0603": "Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
     "C1206": "Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod",
     "SOT235": "Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
@@ -531,6 +532,19 @@ def key_net(i):
     return f"K{i + 1}"
 
 
+# Frame-neutral source-termination positions on the five forward-driven
+# tile outputs (docs/termination.md, session-5 design comparison).  Each
+# output splits into <net>_DRV (U1 pin -> Rn.1) and <net> (Rn.2 -> JP pad);
+# the certified 19-contact coordinates are untouched.  R7..R11 ship as 0R
+# (today's circuit exactly); value selected after bench item B2.
+# Mirrored in tools/board_net_check.py, kicad/sch_gen.py and
+# tools/schematic_check.py -- N10/S6 guard the split against drift.
+SERIES_DRV_GW1NZ = (("T_clk", "R7", "35"), ("L_clk", "R8", "19"),
+                    ("L_latch", "R9", "31"), ("B_data", "R10", "30"),
+                    ("B_W", "R11", "27"))
+SERIES_DRV_NETS = {b for b, _r, _p in SERIES_DRV_GW1NZ}
+
+
 CONSTRAINT_NET2PADS = {}
 
 
@@ -574,7 +588,12 @@ def fpga_nets_gw1nz(pins):
     db = json.load(open(os.path.join(BOARD, "data", "pins_gw1nz_qn48.json")))
     nets = {}
     for n, pads in pins.items():
-        nets[str(pads[0])] = tile_net_of_gw1nz(n)
+        net = tile_net_of_gw1nz(n)
+        # outputs with series-termination positions drive Rn.1 on <net>_DRV
+        # (the JP pad keeps the interface net name -- R sits in between)
+        if net in SERIES_DRV_NETS:
+            net += "_DRV"
+        nets[str(pads[0])] = net
     for p, row in db["pins"].items():
         if p == "EPAD":
             nets["49"] = "GND"
@@ -601,11 +620,24 @@ def tile_net_of_gw1nz(net):
     return m[net]
 
 
+SERIES_PARTS_GW1NZ = [
+    {"ref": ref, "fp": "R0402", "value": "0R",
+     "pins": {"1": net + "_DRV", "2": net},
+     "anchor_fpga_pin": pin,
+     "note": "frame-neutral source-termination position (docs/termination.md): "
+            "0R populated by default == today's circuit; value chosen after "
+            "bench item B2 (33-100R class if edges ring); the free first-line "
+            "edge knob is the RTL DRIVE attribute (OSS-proven path), cst "
+            "attrs are dead."}
+    for net, ref, pin in SERIES_DRV_GW1NZ
+]
+
+
 def parts_gw1nz():
     parts = [
-        {"ref": "U2", "fp": "SOT235", "value": "LDO-1V2",
+        {"ref": "U2", "fp": "SOT235", "value": "TLV75512PDBVR",
          "pins": {"1": "VCC", "2": "GND", "3": "VCC", "5": "VCC1V2_RAW"},
-         "note": "SOT-23-5 fixed 1.2V LDO (TLV75512 class; pin1 IN, pin5 OUT convention - final part TBD); OUT is VCC1V2_RAW, FB1 filters it into the FPGA core rail VCC1V2 (UG293)", "anchor_net": "VCC"},
+         "note": "TI TLV755P 500mA LDO, fixed 1.2V, SOT-23-5(DBV); pinout VERIFIED vs TI SBVS320D Table 4-1: 1=IN 2=GND 3=EN 4=NC 5=OUT; EN->IN (no shutdown needed, DS 6.4); CIN/COUT >= 1uF required (C9/C8); UVLO max 1.44V << 3.3V in; soft-start monotonic;", "anchor_net": "VCC"},
         {"ref": "C1", "fp": "C0603", "value": "100n", "pins": {"1": "VCC", "2": "GND"}, "anchor_fpga_pin": "1"},
         {"ref": "C2", "fp": "C0603", "value": "100n", "pins": {"1": "VCC", "2": "GND"}, "anchor_fpga_pin": "25"},
         {"ref": "C3", "fp": "C0603", "value": "100n", "pins": {"1": "VCC", "2": "GND"}, "anchor_fpga_pin": "36"},
@@ -613,6 +645,8 @@ def parts_gw1nz():
         {"ref": "C5", "fp": "C0603", "value": "100n", "pins": {"1": "VCC1V2", "2": "GND"}, "anchor_fpga_pin": "37"},
         {"ref": "C6", "fp": "C1206", "value": "4u7", "pins": {"1": "VCC1V2", "2": "GND"}, "anchor_fpga_pin": "12"},
         {"ref": "C7", "fp": "C1206", "value": "4u7", "pins": {"1": "VCC", "2": "GND"}, "anchor_net": "VCC"},
+        {"ref": "C8", "fp": "C0603", "value": "1u", "pins": {"1": "VCC1V2_RAW", "2": "GND"}, "note": "TLV755P COUT >= 1uF at the OUT pin BEFORE the bead (SBVS320D 5.3/Table 4-1); without it the bead isolates all bypass from the LDO (found 2026-10-14)", "anchor_net": "VCC"},
+        {"ref": "C9", "fp": "C0603", "value": "1u", "pins": {"1": "VCC", "2": "GND"}, "note": "TLV755P CIN >= 1uF at the IN pin (SBVS320D Table 4-1 'required')", "anchor_net": "VCC"},
         {"ref": "FB1", "fp": "R0603", "value": "FB 120R@100M", "pins": {"1": "VCC1V2_RAW", "2": "VCC1V2"}, "note": "core-rail noise filter (UG293: FB class MH2029-221Y) between LDO OUT (VCC1V2_RAW) and the FPGA core pins (VCC1V2) + C6", "anchor_fpga_pin": "12"},
         {"ref": "R1", "fp": "R0603", "value": "1k", "pins": {"1": "MODE0", "2": "GND"}, "note": "MODE0=0 auto-boot strap (UG293)", "anchor_fpga_pin": "43"},
         {"ref": "R2", "fp": "R0603", "value": "1k", "pins": {"1": "MODE1", "2": "GND"}, "note": "MODE1=0 auto-boot strap (UG293)", "anchor_fpga_pin": "42"},
@@ -620,6 +654,7 @@ def parts_gw1nz():
         {"ref": "R4", "fp": "R0603", "value": "4k7", "pins": {"1": "CFG_READY", "2": "VCC"}, "anchor_fpga_pin": "45"},
         {"ref": "R5", "fp": "R0603", "value": "4k7", "pins": {"1": "CFG_DONE", "2": "VCC"}, "anchor_fpga_pin": "46"},
         {"ref": "R6", "fp": "R0603", "value": "4k7", "pins": {"1": "CFG_RECONFIG", "2": "VCC"}, "anchor_fpga_pin": "48"},
+        *SERIES_PARTS_GW1NZ,
     ]
     return parts
 
@@ -676,9 +711,9 @@ def fpga_nets_up5k(pins):
 
 def parts_up5k():
     parts = [
-        {"ref": "U2", "fp": "SOT235", "value": "LDO-1V2",
+        {"ref": "U2", "fp": "SOT235", "value": "TLV75512PDBVR",
          "pins": {"1": "VCC", "2": "GND", "3": "VCC", "5": "VCC1V2"},
-         "note": "SOT-23-5 fixed 1.2V LDO (TLV75512 class; pin1 IN, pin5 OUT convention - final part TBD)"},
+         "note": "TI TLV755P 500mA LDO, fixed 1.2V, SOT-23-5(DBV); pinout VERIFIED vs TI SBVS320D Table 4-1: 1=IN 2=GND 3=EN 4=NC 5=OUT; CIN/COUT >= 1uF required -> C11 at IN, existing C1/C2/C7+C12 at OUT"},
         {"ref": "U3", "fp": "SOIC8", "value": "SPI-FLASH",
          "pins": {"1": "SPI_SS", "2": "SPI_SO", "3": "VCC", "4": "GND",
                   "5": "SPI_SI", "6": "SPI_SCK", "7": "VCC", "8": "VCC"},
@@ -695,6 +730,8 @@ def parts_up5k():
         {"ref": "R2", "fp": "R0603", "value": "100", "pins": {"1": "VCC1V2", "2": "VCCPLL_1V2"}, "note": "VCCPLL RC filter (TN02006): 100ohm + C3(4u7)+C9(100n)", "anchor_fpga_pin": "29"},
         {"ref": "C9", "fp": "C1206", "value": "4u7", "pins": {"1": "VCCPLL_1V2", "2": "GND"}, "anchor_fpga_pin": "29"},
         {"ref": "C10", "fp": "C0603", "value": "100n", "pins": {"1": "VCCPLL_1V2", "2": "GND"}, "anchor_fpga_pin": "29"},
+        {"ref": "C11", "fp": "C0603", "value": "1u", "pins": {"1": "VCC", "2": "GND"}, "note": "TLV755P CIN >= 1uF at the LDO IN pin (SBVS320D)", "anchor_net": "VCC"},
+        {"ref": "C12", "fp": "C0603", "value": "1u", "pins": {"1": "VCC1V2", "2": "GND"}, "note": "TLV755P COUT >= 1uF close to the LDO OUT pin (SBVS320D)", "anchor_net": "VCC"},
         {"ref": "R3", "fp": "R0603", "value": "10k", "pins": {"1": "VCC", "2": "VCC"}, "skip": True,
          "note": "placeholder removed in netlist pass"},
     ]

@@ -1,0 +1,125 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "rules": {
+        "max_error": 0.005,
+        "min_clearance": 0.2,
+        "min_connection": 0.2,
+        "min_copper_edge_clearance": 0.3,
+        "min_groove_width": 0.0,
+        "min_hole_clearance": 0.25,
+        "min_hole_to_hole": 0.25,
+        "min_microvia_diameter": 0.2,
+        "min_microvia_drill": 0.1,
+        "min_resolved_spokes": 1,
+        "min_silk_clearance": 0.0,
+        "min_text_height": 0.8,
+        "min_text_thickness": 0.08,
+        "min_through_hole_diameter": 0.3,
+        "min_track_width": 0.2,
+        "min_via_annular_width": 0.15,
+        "min_via_diameter": 0.6,
+        "solder_mask_to_copper_clearance": 0.0,
+        "use_height_for_length_calcs": true
+      }
+    },
+    "layer_presets": []
+  },
+  "meta": {
+    "filename": "tile_gw1nz.kicad_pro",
+    "version": 1
+  },
+  "sheets": [],
+  "net_settings": {
+    "classes": [
+      {
+        "clearance": 0.2,
+        "hole_clearance": 0.25,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "channel_in",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.2,
+        "hole_clearance": 0.25,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "config",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.2,
+        "hole_clearance": 0.25,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "edge_critical",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.2,
+        "hole_clearance": 0.25,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "keys",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.2,
+        "hole_clearance": 0.25,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "level_out",
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.2,
+        "hole_clearance": 0.25,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "power",
+        "track_width": 0.5,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      }
+    ],
+    "class_patterns": [
+      {
+        "netclass": "channel_in",
+        "pattern": "^(B_clk|B_first|B_latch|L_data|L_endrow|R_latch|T_W|T_data|T_endcol)$"
+      },
+      {
+        "netclass": "config",
+        "pattern": "^(CFG_DONE|CFG_READY|CFG_RECONFIG|JTAGSEL_N|JTAG_TCK|JTAG_TDI|JTAG_TDO|JTAG_TMS|MODE0|MODE1)$"
+      },
+      {
+        "netclass": "edge_critical",
+        "pattern": "^(L_clk|L_clk_DRV|L_latch|L_latch_DRV|T_clk|T_clk_DRV)$"
+      },
+      {
+        "netclass": "keys",
+        "pattern": "^(K1|K10|K11|K12|K2|K3|K4|K5|K6|K7|K8|K9)$"
+      },
+      {
+        "netclass": "level_out",
+        "pattern": "^(B_W|B_W_DRV|B_data|B_data_DRV)$"
+      },
+      {
+        "netclass": "power",
+        "pattern": "^(GND|VCC|VCC1V2|VCC1V2_RAW)$"
+      }
+    ]
+  }
+}

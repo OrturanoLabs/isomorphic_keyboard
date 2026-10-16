@@ -41,7 +41,12 @@ SUMMARY="$OUT/summary.txt"
 
 rc_all=0
 
+# Optional narrowing for constraint-only iterations (default: both):
+#   RUN_VARIANTS="gw1nz" run_board_pnr.sh   # skip the up5k leg entirely
+RUN_VARIANTS=${RUN_VARIANTS:-"gw1nz up5k"}
+
 # ---- gw1nz, both snapshot modes, production cst ---------------------------
+if [[ " $RUN_VARIANTS " == *" gw1nz "* ]]; then
 for mode in fall track; do
   [ "$mode" = track ] && top=top_gw1nz_track || top=top_gw1nz
   tag="gw1nz_${mode}_boardcst"
@@ -67,8 +72,11 @@ for mode in fall track; do
   fi
 done
 
+fi                                          # end RUN_VARIANTS gw1nz
+
 # ---- up5k, both snapshot modes, production pcf (pack-legality; SG48 board
 # itself is placement-NOFIT - this checks the verified pin MAP only) -------
+if [[ " $RUN_VARIANTS " == *" up5k "* ]]; then
 for mode in fall track; do
   [ "$mode" = track ] && top=top_ice40up_track || top=top_ice40up
   tag="up5k_${mode}_boardpcf"
@@ -90,13 +98,22 @@ for mode in fall track; do
       | tee -a "$SUMMARY"; rc_all=1; continue
   fi
 done
+fi                                          # end RUN_VARIANTS up5k
 
 # ---- digest: pin acceptance, utilization, Fmax ----------------------------
 {
   echo
   echo "== pin-legality + utilization + timing digest =="
-  for f in "$LOGS"/*_nextpnr.log; do
-    tag="$(basename "$f" _nextpnr.log)"
+  tags=()
+  for v in $RUN_VARIANTS; do
+    for mode in fall track; do
+      [ "$v" = gw1nz ] && tags+=("gw1nz_${mode}_boardcst") \
+                       || tags+=("up5k_${mode}_boardpcf")
+    done
+  done
+  for tag in "${tags[@]}"; do
+    f="$LOGS/${tag}_nextpnr.log"
+    [ -f "$f" ] || continue
     echo "--- $tag ---"
     grep -E "IO_LOC|IO_PORT|constraint|Unconstrained|is not valid|cannot place" "$f" | head -5 || true
     grep -E "utilisation:" -A14 "$f" | grep -E "LUT|DFF|IO|OSC|HFOSC|BLK|DSP" | head -8 || true

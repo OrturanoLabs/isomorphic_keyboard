@@ -1,8 +1,8 @@
 # FPGA implementation plan — persistent task register
 
-Updated: 2026-10-13. Implementation baseline: `b19aa80`.
+Updated: 2026-10-16. Implementation baseline: `b19aa80`.
 
-**Next task: FPGA-01.** All four tasks below are pending. Work through them in
+**Next task: FPGA-01 (in progress).** Later tasks remain pending. Work through them in
 order; a task is completed only when its acceptance gate has recorded evidence.
 
 ## Objective and fixed scope
@@ -19,8 +19,8 @@ SPLD/CPLD artifacts are retained findings, not active development tasks.
 
 ## Ordered register
 
-- [ ] **FPGA-01 — Complete the electrical design** — pending; no dependency.
-- [ ] **FPGA-02 — Route the FPGA tile** — pending; depends on FPGA-01.
+- [ ] **FPGA-01 — Complete the electrical design** — in progress; no dependency.
+- [ ] **FPGA-02 — Route the FPGA tile** — four-layer feasibility trial authorized 2026-10-16; acceptance still depends on FPGA-01.
 - [ ] **FPGA-03 — Validate the complete digital system** — pending; depends on FPGA-02.
 - [ ] **FPGA-04 — Build and validate a small hardware set** — pending; depends on FPGA-03.
 
@@ -46,6 +46,32 @@ Starting point: `hardware/experiments/simple-tile/fpga/board/`.
 Checkpoint: `hardware/experiments/simple-tile/checkpoints/fpga-01.md`.
 
 ### FPGA-02 — Route the FPGA tile
+
+**2026-10-16 user direction:** try four copper layers in the same single tile
+PCB (no mezzanine). This authorizes a recoverable four-layer routing variant
+while FPGA-01 remains open; it does not waive the quote or bench requirements
+or close either gate. Proposed stack-up: F.Cu / GND / GND / B.Cu, with routed
+power and continuous reference planes under edge-critical paths. Preserve the
+certified 19 contacts, 1.6 mm total thickness and existing fabrication rules.
+Keep the two-layer baseline unchanged until the variant is reviewed. Record
+actual filled-zone connectivity and KiCad DRC, not router plane assumptions.
+
+**Trial review (2026-10-16):** a real four-layer variant exists in
+`fpga/board/four-layer/`; canonical two-layer baseline preserved. First repaired
+variant has 73 unconnected items, 0 error-severity DRC violations and 153
+warnings. Independent review found lost post-router power attachments, an
+isolated EP ground pour, remaining ground opens and two sub-0.2 mm copper-neck
+warnings. These are real blockers, not a clean DRC pass. Follow-up repair is
+delegated; see `checkpoints/fpga-02.md` and `checkpoints/fpga-02-review.md`
+under `hardware/experiments/simple-tile/`. No acceptance gate is closed.
+
+**Work stopped (2026-10-16, 15:18 CEST, user request):** routing trial left
+incomplete and committed as-is. Latest artifact
+`fpga/board/four-layer/out/tile_gw1nz_4l_ground.kicad_pcb` + DRC JSON:
+0 error-severity DRC violations, 150 warnings, 54 ground opens, 44/52
+post-import power attachments, 3 legal EP vias placed, 2 sub-0.2 mm
+copper-neck warnings still failing, 8 components unplaced. No acceptance
+gate is closed; do not treat this as a routed board.
 
 1. Route clock, returning data and latch paths with continuous ground returns
    and deliberate source termination, using the approved contact interface.
@@ -108,6 +134,51 @@ Checkpoint: `hardware/experiments/simple-tile/checkpoints/fpga-04.md`.
 
 ## Session recovery procedure
 
+### Active unattended session — 2026-10-14
+
+**Latest reviewed state (2026-10-15):** r6 follow-up completed successfully;
+the earlier r6 log's SCH0 failure is superseded by
+`/tmp/opencode/fpga01-regen-r6b.log`. Independent validation confirms ERC
+0 violations, schematic/board parity and all five resistor-node splits;
+GW1NZ DRC has 0 error-severity violations, 107 silkscreen warnings and
+99 unconnected items. New resistor-bypass/wrong-pin negative controls pass.
+Fresh canonical tool reruns were resource-admission blocked by low memory
+and competing Rust builds; existing reports are from the completed follow-up.
+See `hardware/experiments/simple-tile/checkpoints/fpga-01-validation.md`.
+FPGA-01 remains in progress: assembly quote not obtained, termination bench
+evidence outstanding. Zero-ohm resistor positions do not prove damping;
+the board remains unrouted and not fabrication-ready.
+
+- Electrical implementation is delegated to CERN Kimi K3; FPGA-01's checkpoint
+  is authoritative for new artifacts and acceptance evidence.
+- Review reproduced clean ERC and schematic/board parity. FPGA-01 remains
+  **in progress**: the assembly quote is blocked, and termination rationale,
+  GPIO-attribute claims and stale result counts require repair. See
+  `hardware/experiments/simple-tile/checkpoints/fpga-01-review.md`.
+  Evidence-level progress is not acceptance-gate completion.
+- **Provider blocker (2026-10-15 ~00:05 Europe/Rome):** CERN/Flatiron Kimi
+  endpoint `inference001.flatironinstitute.org:8000` refused connection on
+  remediation and its same-session recovery attempt. Partial session-5 work
+  is preserved in the FPGA-01 checkpoint. Resume worker session
+  `ses_ec4abb8cdffepb5cQvRYDDVTDd` after service recovery; inspect surviving
+  jobs first. No paid-provider fallback or duplicate writer was launched.
+  The quote remains NOT OBTAINED; do not silently carry it into FPGA-02.
+- **Restart requested (2026-10-15 10:39 Europe/Rome):** user reports Kimi
+  restored. Same worker session resumed for a bounded remediation batch,
+  with new-command cutoff **12:10 Europe/Rome today**, not an extension of
+  overnight authorization. Recover partial work/jobs first; preserve resource
+  admission and explicit container caps. Provider recovery is not yet verified
+  by completed worker output. FPGA-01 remains in progress.
+- Resource admission/caps and recovery evidence:
+  `hardware/experiments/simple-tile/checkpoints/fpga-resource.md`.
+  Use `hardware/experiments/simple-tile/tools/resource_guard.py` for heavy jobs;
+  retain explicit container limits because delegators can escape scope caps.
+- Preparatory findings (not later-task acceptance):
+  `hardware/experiments/simple-tile/checkpoints/fpga-downstream-preparation.md`
+  and `hardware/experiments/simple-tile/checkpoints/fpga-programming-review.md`.
+- Stop new unattended jobs by **2026-10-15 10:00 Europe/Rome**. Preserve logs
+  and partial results if resource admission prevents a run or this session ends.
+
 1. Use the sole checkout `isomorphic_keyboard/`; do not recreate the removed
    `isomorphic_keyboard-revc/` directory.
 2. Read this register, [current development](architecture/current-development.md),
@@ -126,3 +197,18 @@ Checkpoint: `hardware/experiments/simple-tile/checkpoints/fpga-04.md`.
 The tested rev A fabrication and golden controller firmware remain the reference.
 Existing checks and results are indexed in
 [current development](architecture/current-development.md) and the workstream READMEs.
+
+### Overnight scheduling — 2026-10-15/16 (armed 2026-10-15 ~19:05 CEST)
+
+An unattended overnight window was authorized for **2026-10-15 21:43 CEST to
+2026-10-16 11:00 CEST** (fresh cutoff; the 12:10 remediation cutoff is
+expired). A systemd-user-armed orchestrator
+(`hardware/experiments/simple-tile/tools/fpga_overnight.py`, timers
+`fpga-overnight-20261015.timer` + `-stop.timer`) runs bounded Kimi K3 batches
+in the dedicated session `ses_fpga_overnight_20261015` with a 3 GiB cgroup
+cap, guard-gated admission, 15/30/60 min provider-failure retry, and
+READY/BLOCKED/COMPLETE outcome gating. Worker scope: `fpga/board/**` and
+`checkpoints/fpga-01.md` evidence only; ordered FPGA-01..04 with no silent
+waivers; no purchases/logins/submissions/hardware/commits/installs. Full
+units, commands, memory limits, setup evidence, cancellation instructions
+and per-batch results: `hardware/experiments/simple-tile/checkpoints/fpga-overnight.md`.

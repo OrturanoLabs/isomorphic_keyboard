@@ -1,0 +1,1972 @@
+{
+ "_meta": {
+  "model": "stub 0.2 track + via 0.6/0.3, via centre at pad_edge+0.5 (0.2 clr + via r); obstacle model from routing_geo parse (AABB pads/holes, NPTH +0.15 annulus); envelope = stub+via bbox (conservative); edge rule 0.6 via-corner to true Edge.Cuts polygon; plan vs plan collisions only across different nets",
+  "context": "2L baseline; same stub list feeds 4L plane attach (LEDGER: freerouting cannot attach SMD to planes)",
+  "generated_by": "tools/fanout_prep.py",
+  "written_copper": 0
+ },
+ "planned_pads": [
+  {
+   "ref": "SW1",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -8.059999999999999,
+    -3.79,
+    -5.81,
+    -1.29
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    -7.035,
+    -4.39,
+    -6.835,
+    -3.78
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.35,
+   "fan_corner_to_edge": 1.645,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.15,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 1.35,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW2",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    9.999699999999999,
+    -3.79,
+    12.5497,
+    -1.29
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    9.4,
+    -2.64,
+    10.01,
+    -2.44
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.165,
+   "fan_corner_to_edge": 4.81,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.965,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.165,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW3",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    28.359499999999997,
+    -3.79,
+    30.909499999999994,
+    -1.29
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    27.759,
+    -2.64,
+    28.369,
+    -2.44
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 2.574,
+   "fan_corner_to_edge": 4.81,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 2.306,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 2.574,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW4",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    46.7192,
+    -3.79,
+    49.2692,
+    -1.29
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    46.119,
+    -2.64,
+    46.729,
+    -2.44
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 2.574,
+   "fan_corner_to_edge": 4.81,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 2.306,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 2.574,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW5",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -17.2399,
+    12.11,
+    -14.989899999999999,
+    14.61
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    -16.215,
+    11.51,
+    -16.015,
+    12.12
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.35,
+   "fan_corner_to_edge": 1.645,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.15,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 1.35,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW6",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    0.8199000000000001,
+    12.11,
+    3.3699,
+    14.61
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    1.995,
+    14.6,
+    2.195,
+    15.21
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.88,
+   "fan_corner_to_edge": 12.32,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.68,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.88,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW7",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    19.1796,
+    12.11,
+    21.729599999999998,
+    14.61
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    20.355,
+    11.51,
+    20.555,
+    12.12
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.5,
+   "fan_corner_to_edge": 18.96,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.3,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 1.5,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW8",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    37.5393,
+    12.11,
+    40.089299999999994,
+    14.61
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    36.939,
+    13.26,
+    37.549,
+    13.46
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 2.574,
+   "fan_corner_to_edge": 12.627,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 2.306,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 2.574,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW9",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -26.4197,
+    28.01,
+    -24.1697,
+    30.51
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    -25.395,
+    27.41,
+    -25.195,
+    28.02
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.35,
+   "fan_corner_to_edge": 1.645,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.15,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 1.35,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW10",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -8.36,
+    28.01,
+    -5.8100000000000005,
+    30.51
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -8.96,
+    29.16,
+    -8.35,
+    29.36
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 2.574,
+   "fan_corner_to_edge": 9.89,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 2.306,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 2.574,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW11",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    9.999699999999999,
+    28.01,
+    12.5497,
+    30.51
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    9.4,
+    29.16,
+    10.01,
+    29.36
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 2.574,
+   "fan_corner_to_edge": 9.89,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 2.306,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 2.574,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "SW12",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    28.359499999999997,
+    28.01,
+    30.909499999999994,
+    30.51
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    27.759,
+    29.16,
+    28.369,
+    29.36
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 2.574,
+   "fan_corner_to_edge": 9.89,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 2.306,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 2.574,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "JP_GND",
+   "pad": "1",
+   "net": "GND",
+   "box": [
+    2.9850000000000003,
+    35.45,
+    5.485,
+    37.95
+   ],
+   "anchor": true,
+   "note": "chassis contact: no fanout stub (probe pad)"
+  },
+  {
+   "ref": "JP_GND_DET_T",
+   "pad": "1",
+   "net": "GND",
+   "box": [
+    6.235,
+    35.45,
+    8.735,
+    37.95
+   ],
+   "anchor": true,
+   "note": "chassis contact: no fanout stub (probe pad)"
+  },
+  {
+   "ref": "JP_GND_DET_B",
+   "pad": "1",
+   "net": "GND",
+   "box": [
+    9.485,
+    35.45,
+    11.985,
+    37.95
+   ],
+   "anchor": true,
+   "note": "chassis contact: no fanout stub (probe pad)"
+  },
+  {
+   "ref": "JP_GND_DET_R",
+   "pad": "1",
+   "net": "GND",
+   "box": [
+    12.735,
+    35.45,
+    15.235,
+    37.95
+   ],
+   "anchor": true,
+   "note": "chassis contact: no fanout stub (probe pad)"
+  },
+  {
+   "ref": "JP_VCC",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -10.265,
+    20.45,
+    -7.765000000000001,
+    22.95
+   ],
+   "anchor": true,
+   "note": "chassis contact: no fanout stub (probe pad)"
+  },
+  {
+   "ref": "U1",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    10.384699999999999,
+    3.1,
+    11.2347,
+    3.3000000000000003
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    10.71,
+    2.5,
+    10.91,
+    3.11
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.39,
+   "fan_corner_to_edge": 9.95,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.35,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.39,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U1",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    10.384699999999999,
+    3.5000000000000004,
+    11.2347,
+    3.7000000000000006
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    9.785,
+    3.5,
+    10.395,
+    3.7
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.2,
+   "fan_corner_to_edge": 10.95,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.0,
+    "feasible": false
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 0.2,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U1",
+   "pad": "12",
+   "net": "VCC1V2",
+   "box": [
+    10.384699999999999,
+    7.500000000000001,
+    11.2347,
+    7.7
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    10.71,
+    7.69,
+    10.91,
+    8.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.39,
+   "fan_corner_to_edge": 15.14,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.35,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.39,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U1",
+   "pad": "25",
+   "net": "VCC",
+   "box": [
+    4.4847,
+    7.500000000000001,
+    5.3347,
+    7.7
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    4.81,
+    7.69,
+    5.01,
+    8.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.39,
+   "fan_corner_to_edge": 13.49,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.35,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.39,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U1",
+   "pad": "26",
+   "net": "GND",
+   "box": [
+    4.4847,
+    7.1000000000000005,
+    5.3347,
+    7.3
+   ],
+   "escape_dir": "+x",
+   "kind": "surface_stub",
+   "fan_box": [
+    5.325,
+    7.1,
+    5.935,
+    7.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.2,
+   "fan_corner_to_edge": 14.005,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.0,
+    "feasible": false
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 0.2,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U1",
+   "pad": "36",
+   "net": "VCC",
+   "box": [
+    4.4847,
+    3.1,
+    5.3347,
+    3.3000000000000003
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    4.81,
+    2.5,
+    5.01,
+    3.11
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.39,
+   "fan_corner_to_edge": 9.95,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.35,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.39,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U1",
+   "pad": "37",
+   "net": "VCC1V2",
+   "box": [
+    5.5597,
+    2.0250000000000004,
+    5.7597,
+    2.875
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    5.56,
+    1.425,
+    5.76,
+    2.035
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.2,
+   "fan_corner_to_edge": 8.875,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.0,
+    "feasible": false
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.2,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U1",
+   "pad": "49",
+   "net": "GND",
+   "box": [
+    6.5097000000000005,
+    4.050000000000001,
+    9.2097,
+    6.75
+   ],
+   "anchor": true,
+   "note": "EP soldered to GND (batch-4 decision analysis): no stub/via; paste window only"
+  },
+  {
+   "ref": "U2",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -8.290000000000001,
+    23.95,
+    -6.965000000000001,
+    24.55
+   ],
+   "escape_dir": "+x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -6.975,
+    24.15,
+    -6.365,
+    24.35
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.55,
+   "fan_corner_to_edge": 10.885,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.35,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 0.55,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U2",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    -8.290000000000001,
+    24.9,
+    -6.965000000000001,
+    25.5
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -8.89,
+    25.1,
+    -8.28,
+    25.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.55,
+   "fan_corner_to_edge": 9.001,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.35,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 0.55,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U2",
+   "pad": "3",
+   "net": "VCC",
+   "box": [
+    -8.290000000000001,
+    25.849999999999998,
+    -6.965000000000001,
+    26.45
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    -7.728,
+    26.44,
+    -7.528,
+    27.05
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.94,
+   "fan_corner_to_edge": 10.346,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.76,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.94,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "U2",
+   "pad": "5",
+   "net": "VCC1V2_RAW",
+   "box": [
+    -10.565,
+    23.95,
+    -9.24,
+    24.55
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -11.165,
+    24.15,
+    -10.555,
+    24.35
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.123,
+   "fan_corner_to_edge": 6.695,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.92,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.123,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C1",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    8.8847,
+    0.475,
+    9.784699999999999,
+    1.4249999999999998
+   ],
+   "escape_dir": "+x",
+   "kind": "surface_stub",
+   "fan_box": [
+    9.775,
+    0.85,
+    10.385,
+    1.05
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.975,
+   "fan_corner_to_edge": 8.3,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.775,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 0.975,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C1",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    7.334699999999999,
+    0.475,
+    8.234699999999998,
+    1.4249999999999998
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    6.735,
+    0.85,
+    7.345,
+    1.05
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.63,
+   "fan_corner_to_edge": 8.3,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.43,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 0.63,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C2",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    2.9846999999999997,
+    4.875,
+    3.8847,
+    5.824999999999999
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    3.335,
+    4.275,
+    3.535,
+    4.885
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.85,
+   "fan_corner_to_edge": 11.725,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.65,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.85,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C2",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    1.4347,
+    4.875,
+    2.3347,
+    5.824999999999999
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    1.785,
+    4.275,
+    1.985,
+    4.885
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.85,
+   "fan_corner_to_edge": 10.465,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.65,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.85,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C3",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    2.9846999999999997,
+    2.475,
+    3.8847,
+    3.4250000000000003
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    3.335,
+    1.875,
+    3.535,
+    2.485
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.997,
+   "fan_corner_to_edge": 9.325,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.725,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.997,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C3",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    1.4347,
+    2.475,
+    2.3347,
+    3.4250000000000003
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    1.785,
+    3.415,
+    1.985,
+    4.025
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.85,
+   "fan_corner_to_edge": 10.465,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.65,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.85,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C4",
+   "pad": "1",
+   "net": "VCC1V2",
+   "box": [
+    13.3847,
+    4.875,
+    14.284699999999999,
+    5.824999999999999
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    13.735,
+    5.815,
+    13.935,
+    6.425
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.822,
+   "fan_corner_to_edge": 13.265,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.58,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.822,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C4",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    11.8347,
+    4.875,
+    12.734699999999998,
+    5.824999999999999
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    12.185,
+    5.815,
+    12.385,
+    6.425
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.275,
+   "fan_corner_to_edge": 13.265,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.075,
+    "feasible": false
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.275,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C5",
+   "pad": "1",
+   "net": "VCC1V2",
+   "box": [
+    8.484700000000002,
+    -1.275,
+    9.3847,
+    -0.32500000000000007
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    8.835,
+    -1.875,
+    9.035,
+    -1.265
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.673,
+   "fan_corner_to_edge": 5.575,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.401,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.673,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C5",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    6.9347,
+    -1.275,
+    7.834700000000001,
+    -0.32500000000000007
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    6.335,
+    -0.9,
+    6.945,
+    -0.7
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.23,
+   "fan_corner_to_edge": 6.55,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.03,
+    "feasible": false
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 0.23,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C6",
+   "pad": "1",
+   "net": "VCC1V2",
+   "box": [
+    14.7097,
+    6.699999999999999,
+    15.859699999999998,
+    8.5
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    14.11,
+    7.5,
+    14.72,
+    7.7
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.2,
+   "fan_corner_to_edge": 14.95,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.0,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.2,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C6",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    11.7597,
+    6.699999999999999,
+    12.909699999999999,
+    8.5
+   ],
+   "escape_dir": "+x",
+   "kind": "surface_stub",
+   "fan_box": [
+    12.9,
+    7.5,
+    13.51,
+    7.7
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.6,
+   "fan_corner_to_edge": 14.95,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.4,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 0.6,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C7",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -12.115,
+    18.3,
+    -10.965000000000002,
+    20.099999999999998
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -12.715,
+    19.1,
+    -12.105,
+    19.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.2,
+   "fan_corner_to_edge": 5.145,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.0,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.2,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C7",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    -15.065,
+    18.3,
+    -13.915000000000001,
+    20.099999999999998
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -15.665,
+    19.1,
+    -15.055,
+    19.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 2.175,
+   "fan_corner_to_edge": 2.195,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.975,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 2.175,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C8",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "box": [
+    -8.44,
+    18.724999999999998,
+    -7.54,
+    19.675
+   ],
+   "escape_dir": "+x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -7.55,
+    19.1,
+    -6.94,
+    19.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.425,
+   "fan_corner_to_edge": 10.31,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.225,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 0.425,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C8",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    -9.99,
+    18.724999999999998,
+    -9.090000000000002,
+    19.675
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -10.59,
+    19.1,
+    -9.98,
+    19.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.375,
+   "fan_corner_to_edge": 7.27,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.175,
+    "feasible": false
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 0.375,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C9",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -11.94,
+    20.974999999999998,
+    -11.040000000000001,
+    21.925
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    -11.59,
+    21.915,
+    -11.39,
+    22.525
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.0,
+   "fan_corner_to_edge": 6.27,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.8,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 1.0,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "C9",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    -13.49,
+    20.974999999999998,
+    -12.590000000000002,
+    21.925
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -14.09,
+    21.35,
+    -13.48,
+    21.55
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.25,
+   "fan_corner_to_edge": 3.77,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.05,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.25,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "FB1",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "box": [
+    13.484699999999998,
+    3.125,
+    14.284699999999999,
+    4.075
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    13.785,
+    2.525,
+    13.985,
+    3.135
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.1,
+   "fan_corner_to_edge": 9.975,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.9,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 1.1,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "FB1",
+   "pad": "2",
+   "net": "VCC1V2",
+   "box": [
+    11.8347,
+    3.125,
+    12.6347,
+    4.075
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    12.135,
+    2.525,
+    12.335,
+    3.135
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.9,
+   "fan_corner_to_edge": 9.975,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.7,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.9,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "R1",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    5.5847,
+    -3.025,
+    6.3847000000000005,
+    -2.0749999999999997
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    4.985,
+    -2.65,
+    5.595,
+    -2.45
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.078,
+   "fan_corner_to_edge": 4.8,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.795,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.078,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "R2",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    1.4346999999999999,
+    6.9750000000000005,
+    2.2347,
+    7.925
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    0.835,
+    7.35,
+    1.445,
+    7.55
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.175,
+   "fan_corner_to_edge": 9.515,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.975,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.175,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "R3",
+   "pad": "2",
+   "net": "GND",
+   "box": [
+    15.0847,
+    2.775,
+    15.8847,
+    3.725
+   ],
+   "escape_dir": "-y",
+   "kind": "surface_stub",
+   "fan_box": [
+    15.385,
+    2.175,
+    15.585,
+    2.785
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.625,
+   "fan_corner_to_edge": 9.625,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.425,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-y",
+    "clr_to_obstacles": 0.625,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "R4",
+   "pad": "2",
+   "net": "VCC",
+   "box": [
+    0.38469999999999993,
+    8.725,
+    1.1846999999999999,
+    9.674999999999999
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -0.215,
+    9.1,
+    0.395,
+    9.3
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.041,
+   "fan_corner_to_edge": 8.49,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.783,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.041,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "R5",
+   "pad": "2",
+   "net": "VCC",
+   "box": [
+    15.284699999999999,
+    4.7250000000000005,
+    16.084699999999998,
+    5.675
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    15.585,
+    5.665,
+    15.785,
+    6.275
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.425,
+   "fan_corner_to_edge": 13.115,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.225,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.425,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "R6",
+   "pad": "2",
+   "net": "VCC",
+   "box": [
+    7.8347,
+    -5.5249999999999995,
+    8.6347,
+    -4.575
+   ],
+   "escape_dir": "+y",
+   "kind": "surface_stub",
+   "fan_box": [
+    8.135,
+    -4.585,
+    8.335,
+    -3.975
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 0.955,
+   "fan_corner_to_edge": 2.865,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+y",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.75,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+y",
+    "clr_to_obstacles": 0.955,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "TP_VCC1V2",
+   "pad": "1",
+   "net": "VCC1V2",
+   "box": [
+    -2.8903,
+    4.9,
+    -1.8902999999999999,
+    5.9
+   ],
+   "escape_dir": "-x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -3.49,
+    5.3,
+    -2.88,
+    5.5
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.65,
+   "fan_corner_to_edge": 5.19,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "-x",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.45,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "-x",
+    "clr_to_obstacles": 1.65,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "TP_VCC",
+   "pad": "1",
+   "net": "VCC",
+   "box": [
+    -6.515,
+    18.2,
+    -5.515,
+    19.2
+   ],
+   "escape_dir": "+x",
+   "kind": "surface_stub",
+   "fan_box": [
+    -5.525,
+    18.6,
+    -4.915,
+    18.8
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.446,
+   "fan_corner_to_edge": 10.629,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 1.419,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 1.446,
+    "feasible": true
+   }
+  },
+  {
+   "ref": "TP_GND",
+   "pad": "1",
+   "net": "GND",
+   "box": [
+    2.735,
+    33.45,
+    3.735,
+    34.45
+   ],
+   "escape_dir": "+x",
+   "kind": "surface_stub",
+   "fan_box": [
+    3.725,
+    33.85,
+    4.335,
+    34.05
+   ],
+   "stub_len_or_via_off": 0.6,
+   "via_center": null,
+   "measured_clr_to_obstacles": 1.025,
+   "fan_corner_to_edge": 5.2,
+   "inside_outline": true,
+   "ok": true,
+   "via_alternative": {
+    "escape_dir": "+x",
+    "ring": 0.5,
+    "clr_to_obstacles": 0.825,
+    "feasible": true
+   },
+   "stub_alternative": {
+    "escape_dir": "+x",
+    "clr_to_obstacles": 1.025,
+    "feasible": true
+   }
+  }
+ ],
+ "conflicts": [],
+ "via_vs_via_collisions": [],
+ "vacuity_control": "observed reduction",
+ "census": {
+  "power_pads_total": 58,
+  "anchors": 6,
+  "fans_planned": 52,
+  "via_fans": 0,
+  "surface_stubs": 52,
+  "via_feasible_pads": 46,
+  "ok": 52
+ }
+}

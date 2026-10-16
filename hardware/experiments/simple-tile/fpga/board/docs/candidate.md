@@ -69,8 +69,9 @@ proving the production `.cst` was really applied.
 ## Honest open items
 
 - Board not routed; silkscreen cleanup pending; see docs/readiness.md.
-- LDO part class only (TLV75512-class SOT-23-5); exact part + quiescent
-  choice TBD (docs/power_reg.md).
+- LDO selected 2026-10-14: TI TLV75512PDBVR, pinout verified vs TI
+  SBVS320D (docs/power_reg.md); open items are bench-only (B1 ramp,
+  core load current).
 - Bench confirm of pad pull-DOWN strength on keys (cst note: external 10k
   fallback exists).
 - 21-contact rev-B interface: needs a connector-next certification run

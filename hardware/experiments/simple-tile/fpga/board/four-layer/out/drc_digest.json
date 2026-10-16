@@ -1,0 +1,16 @@
+{
+ "types": {
+  "track_dangling": 25,
+  "via_dangling": 17,
+  "connection_width": 2,
+  "silk_edge_clearance": 2,
+  "silk_overlap": 29,
+  "silk_over_copper": 76
+ },
+ "severity": {
+  "warning": 151
+ },
+ "open_nets": {
+  "?": 81
+ }
+}

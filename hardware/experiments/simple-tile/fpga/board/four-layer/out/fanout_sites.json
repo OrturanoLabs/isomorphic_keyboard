@@ -1,0 +1,687 @@
+{
+ "_meta": {
+  "tool": "four-layer/tools/build_4l_variant.py",
+  "canon_sha256_12": "c7d5b66fa1db",
+  "stackup": "F.Cu/In1=GND/In2=GND/B.Cu 1.6mm (0.035/0.2104/0.0152/1.065/0.0152/0.2104/0.035 ENIG)",
+  "rules": "0.2/0.2 track, 0.6/0.3 via (unchanged)",
+  "zones": "In1.Cu+In2.Cu GND, unfilled until finish step"
+ },
+ "planned_pads": 52,
+ "fanout_kinds": {
+  "attach_ring": 33,
+  "dogbone_compass": 14,
+  "dogbone": 5
+ },
+ "ep_ring_placed": 0,
+ "unresolved": {},
+ "sites": [
+  {
+   "ref": "SW1",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -6.935,
+    -4.69
+   ]
+  },
+  {
+   "ref": "SW2",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    9.099699,
+    -2.54
+   ]
+  },
+  {
+   "ref": "SW3",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    27.4595,
+    -2.54
+   ]
+  },
+  {
+   "ref": "SW4",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    45.8192,
+    -2.54
+   ]
+  },
+  {
+   "ref": "SW5",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -16.114899,
+    11.21
+   ]
+  },
+  {
+   "ref": "SW6",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    2.0949,
+    15.51
+   ]
+  },
+  {
+   "ref": "SW7",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    20.4546,
+    11.21
+   ]
+  },
+  {
+   "ref": "SW8",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    36.6393,
+    13.36
+   ]
+  },
+  {
+   "ref": "SW9",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -25.2947,
+    27.11
+   ]
+  },
+  {
+   "ref": "SW10",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -9.26,
+    29.26
+   ]
+  },
+  {
+   "ref": "SW11",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    9.099699,
+    29.26
+   ]
+  },
+  {
+   "ref": "SW12",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    27.4595,
+    29.26
+   ]
+  },
+  {
+   "ref": "U1",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    10.8097,
+    2.2
+   ]
+  },
+  {
+   "ref": "U1",
+   "pad": "2",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 5.0,
+   "was_blocker": true,
+   "via_mm": [
+    10.8097,
+    8.6
+   ]
+  },
+  {
+   "ref": "U1",
+   "pad": "12",
+   "net": "VCC1V2",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 2.8,
+   "was_blocker": false,
+   "via_mm": [
+    13.6097,
+    7.6
+   ]
+  },
+  {
+   "ref": "U1",
+   "pad": "25",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    4.9097,
+    8.6
+   ]
+  },
+  {
+   "ref": "U1",
+   "pad": "26",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 3.8,
+   "was_blocker": true,
+   "via_mm": [
+    7.596705,
+    9.887005
+   ]
+  },
+  {
+   "ref": "U1",
+   "pad": "36",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    4.9097,
+    2.2
+   ]
+  },
+  {
+   "ref": "U1",
+   "pad": "37",
+   "net": "VCC1V2",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 1.4,
+   "was_blocker": true,
+   "via_mm": [
+    6.649649,
+    3.439949
+   ]
+  },
+  {
+   "ref": "U2",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -6.065,
+    24.25
+   ]
+  },
+  {
+   "ref": "U2",
+   "pad": "2",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -9.19,
+    25.2
+   ]
+  },
+  {
+   "ref": "U2",
+   "pad": "3",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -7.6275,
+    27.349999
+   ]
+  },
+  {
+   "ref": "U2",
+   "pad": "5",
+   "net": "VCC1V2_RAW",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -11.465,
+    24.25
+   ]
+  },
+  {
+   "ref": "C1",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    10.6847,
+    0.95
+   ]
+  },
+  {
+   "ref": "C1",
+   "pad": "2",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    6.434699,
+    0.95
+   ]
+  },
+  {
+   "ref": "C2",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "dogbone",
+   "stub_len_mm": 3.8,
+   "was_blocker": false,
+   "via_mm": [
+    3.4347,
+    1.075
+   ]
+  },
+  {
+   "ref": "C2",
+   "pad": "2",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 1.4,
+   "was_blocker": false,
+   "via_mm": [
+    2.874649,
+    6.339949
+   ]
+  },
+  {
+   "ref": "C3",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "dogbone",
+   "stub_len_mm": 2.8,
+   "was_blocker": false,
+   "via_mm": [
+    3.4347,
+    -0.324999
+   ]
+  },
+  {
+   "ref": "C3",
+   "pad": "2",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 5.0,
+   "was_blocker": false,
+   "via_mm": [
+    -1.650833,
+    6.485533
+   ]
+  },
+  {
+   "ref": "C4",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    13.8347,
+    6.725
+   ]
+  },
+  {
+   "ref": "C4",
+   "pad": "2",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 2.8,
+   "was_blocker": true,
+   "via_mm": [
+    12.2847,
+    2.55
+   ]
+  },
+  {
+   "ref": "C5",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "dogbone",
+   "stub_len_mm": 2.8,
+   "was_blocker": false,
+   "via_mm": [
+    8.9347,
+    -4.074999
+   ]
+  },
+  {
+   "ref": "C5",
+   "pad": "2",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 5.0,
+   "was_blocker": true,
+   "via_mm": [
+    10.920233,
+    -4.335533
+   ]
+  },
+  {
+   "ref": "C6",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 3.8,
+   "was_blocker": false,
+   "via_mm": [
+    19.0847,
+    7.6
+   ]
+  },
+  {
+   "ref": "C6",
+   "pad": "2",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 2.0,
+   "was_blocker": false,
+   "via_mm": [
+    13.748913,
+    9.014213
+   ]
+  },
+  {
+   "ref": "C7",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -13.015,
+    19.2
+   ]
+  },
+  {
+   "ref": "C7",
+   "pad": "2",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -15.965,
+    19.2
+   ]
+  },
+  {
+   "ref": "C8",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "kind": "dogbone",
+   "stub_len_mm": 2.8,
+   "was_blocker": false,
+   "via_mm": [
+    -4.74,
+    19.2
+   ]
+  },
+  {
+   "ref": "C8",
+   "pad": "2",
+   "net": "GND",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 1.4,
+   "was_blocker": true,
+   "via_mm": [
+    -10.529949,
+    20.189949
+   ]
+  },
+  {
+   "ref": "C9",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -11.49,
+    22.825
+   ]
+  },
+  {
+   "ref": "C9",
+   "pad": "2",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -14.39,
+    21.45
+   ]
+  },
+  {
+   "ref": "FB1",
+   "pad": "1",
+   "net": "VCC1V2_RAW",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    13.8847,
+    2.225
+   ]
+  },
+  {
+   "ref": "FB1",
+   "pad": "2",
+   "net": "VCC1V2",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 2.8,
+   "was_blocker": false,
+   "via_mm": [
+    9.4347,
+    3.6
+   ]
+  },
+  {
+   "ref": "R1",
+   "pad": "2",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    4.684699,
+    -2.55
+   ]
+  },
+  {
+   "ref": "R2",
+   "pad": "2",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    0.534699,
+    7.45
+   ]
+  },
+  {
+   "ref": "R3",
+   "pad": "2",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    15.4847,
+    1.875
+   ]
+  },
+  {
+   "ref": "R4",
+   "pad": "2",
+   "net": "VCC",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -0.5153,
+    9.2
+   ]
+  },
+  {
+   "ref": "R5",
+   "pad": "2",
+   "net": "VCC",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 2.8,
+   "was_blocker": false,
+   "via_mm": [
+    18.4847,
+    5.2
+   ]
+  },
+  {
+   "ref": "R6",
+   "pad": "2",
+   "net": "VCC",
+   "kind": "dogbone_compass",
+   "stub_len_mm": 3.8,
+   "was_blocker": false,
+   "via_mm": [
+    12.0347,
+    -5.05
+   ]
+  },
+  {
+   "ref": "TP_VCC1V2",
+   "pad": "1",
+   "net": "VCC1V2",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    -3.7903,
+    5.4
+   ]
+  },
+  {
+   "ref": "TP_VCC",
+   "pad": "1",
+   "net": "VCC",
+   "kind": "dogbone",
+   "stub_len_mm": 2.0,
+   "was_blocker": false,
+   "via_mm": [
+    -3.514999,
+    18.7
+   ]
+  },
+  {
+   "ref": "TP_GND",
+   "pad": "1",
+   "net": "GND",
+   "kind": "attach_ring",
+   "stub_len_mm": 0.9,
+   "was_blocker": false,
+   "via_mm": [
+    4.635,
+    33.95
+   ]
+  },
+  {
+   "kind": "ep_ring",
+   "ref": "U1",
+   "pad": "49",
+   "net": "GND",
+   "dir": [
+    1,
+    0
+   ],
+   "placed": false
+  },
+  {
+   "kind": "ep_ring",
+   "ref": "U1",
+   "pad": "49",
+   "net": "GND",
+   "dir": [
+    -1,
+    0
+   ],
+   "placed": false
+  },
+  {
+   "kind": "ep_ring",
+   "ref": "U1",
+   "pad": "49",
+   "net": "GND",
+   "dir": [
+    0,
+    1
+   ],
+   "placed": false
+  },
+  {
+   "kind": "ep_ring",
+   "ref": "U1",
+   "pad": "49",
+   "net": "GND",
+   "dir": [
+    0,
+    -1
+   ],
+   "placed": false
+  }
+ ]
+}

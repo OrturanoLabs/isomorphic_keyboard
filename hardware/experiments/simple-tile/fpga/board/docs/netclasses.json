@@ -1,0 +1,181 @@
+{
+ "_meta": {
+  "source_pcb": "out/kicad/tile_gw1nz.kicad_pcb",
+  "generated_by": "tools/netclass_prep.py (FPGA-02 preparation; nothing routed, nothing activated)",
+  "board_rev": "r6 placement prototype, 45 nets, 0 tracks",
+  "checks": "N1 partition exact; N2 series topology off pcb; N3 power set; N4 JP/presence coverage; N5 vacuity control"
+ },
+ "rule_reference": {
+  "track_mm": 0.2,
+  "clearance_mm": 0.2,
+  "via_d_mm": 0.6,
+  "via_drill_mm": 0.3,
+  "source": "docs/routing_plan.md"
+ },
+ "classes": {
+  "edge_critical": {
+   "nets": [
+    "T_clk",
+    "T_clk_DRV",
+    "L_clk",
+    "L_clk_DRV",
+    "L_latch",
+    "L_latch_DRV"
+   ],
+   "rule": {
+    "track_mm": 0.2,
+    "clearance_mm": 0.2,
+    "via_d_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "note": "clock/strobe class: any threshold re-crossing is a spurious shift/latch (termination.md); route with adjacent continuous GND return, no plane splits under the run, B2-scoped at the far contact"
+   },
+   "bench": "B2"
+  },
+  "level_out": {
+   "nets": [
+    "B_data",
+    "B_data_DRV",
+    "B_W",
+    "B_W_DRV"
+   ],
+   "rule": {
+    "track_mm": 0.2,
+    "clearance_mm": 0.2,
+    "via_d_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "note": "level nets (star or p2p): settle before the capture edge; continuous return still required; B_data is B2-scoped as the star-class representative"
+   },
+   "bench": "B2"
+  },
+  "channel_in": {
+   "nets": [
+    "B_clk",
+    "T_W",
+    "T_endcol",
+    "B_first",
+    "L_endrow",
+    "T_data",
+    "L_data",
+    "B_latch",
+    "R_latch"
+   ],
+   "rule": {
+    "track_mm": 0.2,
+    "clearance_mm": 0.2,
+    "via_d_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "note": "downstream/return channel inputs; pad pull per cst (PULL_MODE); keep out of the switch contact bounce shadow is NOT a routing feature"
+   },
+   "bench": null
+  },
+  "keys": {
+   "nets": [
+    "K1",
+    "K2",
+    "K3",
+    "K4",
+    "K5",
+    "K6",
+    "K7",
+    "K8",
+    "K9",
+    "K10",
+    "K11",
+    "K12"
+   ],
+   "rule": {
+    "track_mm": 0.2,
+    "clearance_mm": 0.2,
+    "via_d_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "note": "key matrix inputs, pad pull-DOWN (external-10k bench fallback), slow human signals"
+   },
+   "bench": null
+  },
+  "power": {
+   "nets": [
+    "VCC",
+    "VCC1V2",
+    "VCC1V2_RAW",
+    "GND"
+   ],
+   "rule": {
+    "track_mm": 0.5,
+    "clearance_mm": 0.2,
+    "via_d_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "note": "GND = pour/plane first-class net; VCC1V2_RAW is the ~31 mm LDO->bead run: wide trace, ~1.5 mV IR at 30 mA (power_reg.md); VCC1V2 = bead-filtered core rail"
+   },
+   "bench": "B1"
+  },
+  "config": {
+   "nets": [
+    "JTAG_TCK",
+    "JTAG_TMS",
+    "JTAG_TDI",
+    "JTAG_TDO",
+    "JTAGSEL_N",
+    "MODE0",
+    "MODE1",
+    "CFG_READY",
+    "CFG_DONE",
+    "CFG_RECONFIG"
+   ],
+   "rule": {
+    "track_mm": 0.2,
+    "clearance_mm": 0.2,
+    "via_d_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "note": "one-time programming/strap class; every net has exactly one TP (checker N4) which must stay probed-able; JTAG cable reference = 3.3 V"
+   },
+   "bench": "B3"
+  }
+ },
+ "net_to_class": {
+  "L_clk": "edge_critical",
+  "L_clk_DRV": "edge_critical",
+  "L_latch": "edge_critical",
+  "L_latch_DRV": "edge_critical",
+  "T_clk": "edge_critical",
+  "T_clk_DRV": "edge_critical",
+  "B_W": "level_out",
+  "B_W_DRV": "level_out",
+  "B_data": "level_out",
+  "B_data_DRV": "level_out",
+  "B_clk": "channel_in",
+  "B_first": "channel_in",
+  "B_latch": "channel_in",
+  "L_data": "channel_in",
+  "L_endrow": "channel_in",
+  "R_latch": "channel_in",
+  "T_W": "channel_in",
+  "T_data": "channel_in",
+  "T_endcol": "channel_in",
+  "K1": "keys",
+  "K10": "keys",
+  "K11": "keys",
+  "K12": "keys",
+  "K2": "keys",
+  "K3": "keys",
+  "K4": "keys",
+  "K5": "keys",
+  "K6": "keys",
+  "K7": "keys",
+  "K8": "keys",
+  "K9": "keys",
+  "GND": "power",
+  "VCC": "power",
+  "VCC1V2": "power",
+  "VCC1V2_RAW": "power",
+  "CFG_DONE": "config",
+  "CFG_READY": "config",
+  "CFG_RECONFIG": "config",
+  "JTAGSEL_N": "config",
+  "JTAG_TCK": "config",
+  "JTAG_TDI": "config",
+  "JTAG_TDO": "config",
+  "JTAG_TMS": "config",
+  "MODE0": "config",
+  "MODE1": "config"
+ }
+}

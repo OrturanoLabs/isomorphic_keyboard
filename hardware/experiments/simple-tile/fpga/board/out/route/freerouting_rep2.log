@@ -1,0 +1,157 @@
+[resource_guard] WARNING DELEGATION: podman containers run in their own cgroup, outside this wrapper's hard caps (only the client is capped). Container-side limits present (--memory --memory-swap --cpus --pids-limit); relying on those.
+[resource_guard] single-job lock acquired: /tmp/opencode/isomorphic-resource-guard.lock
+[resource_guard] admitted: MemAvailable=7504 MiB (need >= 6144), SwapFree=0 MiB, psi_some_avg10=0.00
+[resource_guard] systemd scope rg-734590-417dbb: caps=MemoryMax=2048M,MemorySwapMax=0,CPUQuota=100%,TasksMax=256,TimeoutStopSec=5; stop_escalation=5s
+2026-10-15 22:17:59.023 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-10-15 22:18:00.557 INFO   [D340AF\15458E] Loading board file 'tile_gw1nz_classes.dsn'...
+2026-10-15 22:18:00.709 INFO   [D340AF\15458E] Job 'D340AF\15458E' started at 2026-10-15T22:18:00.709130539Z.
+2026-10-15 22:18:00.738 INFO   New version available: v2.5.0
+2026-10-15 22:18:00.952 INFO   [D340AF\15458E] Fanout stage started on board '57e70e694b5e7d7f8aa7d16c58a67544' with 144 of 150 SMD pins needing fanout (0 already connected, 6 netless).
+2026-10-15 22:18:05.057 INFO   [D340AF\15458E] Fanout pass #1 on board 'ce76b13a4bdc7a85eca1b2d63c0af71f' completed in 4.03 seconds with 109 SMD pins fanouted, 35 not routed, 0 insert errors, +74 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-10-15 22:18:07.238 INFO   [D340AF\15458E] Fanout pass #2 on board '05d85597ebee0c53ab3bef8802e7a297' completed in 2.16 seconds with 48 SMD pins fanouted, 26 not routed, 0 insert errors, +9 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-10-15 22:18:08.782 INFO   [D340AF\15458E] Fanout pass #3 on board 'bfd7f013c483a3f8b146bbfb546810f6' completed in 1.53 seconds with 35 SMD pins fanouted, 26 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-10-15 22:18:10.062 INFO   [D340AF\15458E] Fanout pass #4 on board '782e89cf0515ec011a153a891b4f06b5' completed in 1.26 seconds with 26 SMD pins fanouted, 32 not routed, 0 insert errors, +5 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-10-15 22:18:10.932 INFO   [D340AF\15458E] Fanout pass #5 on board '169e78daed84fe17c817efc8438bd885' completed in 0.85 seconds with 9 SMD pins fanouted, 33 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=500).
+2026-10-15 22:18:11.788 INFO   [D340AF\15458E] Fanout pass #6 on board '9fb7531b7589c3b540fc3ec395effb2a' completed in 0.84 seconds with 16 SMD pins fanouted, 30 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=600).
+2026-10-15 22:18:12.644 INFO   [D340AF\15458E] Fanout pass #7 on board '81f9ac7fdb9eda09554d2b8e08027b80' completed in 0.84 seconds with 13 SMD pins fanouted, 30 not routed, 0 insert errors, +5 extra vias (0 SMD pins still to check in pass, ripup costs=700).
+2026-10-15 22:18:13.302 INFO   [D340AF\15458E] Fanout pass #8 on board '227b593be80fb0488f844933ee10c5c9' completed in 0.62 seconds with 9 SMD pins fanouted, 29 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=800).
+2026-10-15 22:18:13.853 INFO   [D340AF\15458E] Fanout pass #9 on board 'e54af6e5f73942108c3816466b0c50cb' completed in 0.53 seconds with 7 SMD pins fanouted, 29 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=900).
+2026-10-15 22:18:14.339 INFO   [D340AF\15458E] Fanout pass #10 on board 'b6ea7cfd0fec8b53019f6b031f35512d' completed in 0.47 seconds with 4 SMD pins fanouted, 29 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1000).
+2026-10-15 22:18:14.780 INFO   [D340AF\15458E] Fanout pass #11 on board 'bcb999768c34a24adf9261674b504535' completed in 0.43 seconds with 4 SMD pins fanouted, 29 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1100).
+2026-10-15 22:18:15.233 INFO   [D340AF\15458E] Fanout pass #12 on board 'bde12270e1fd4e750840fb153253ef36' completed in 0.44 seconds with 4 SMD pins fanouted, 29 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1200).
+2026-10-15 22:18:15.658 INFO   [D340AF\15458E] Fanout pass #13 on board '03b2d54d65b8681b088cdff092a1730b' completed in 0.41 seconds with 4 SMD pins fanouted, 29 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1300).
+2026-10-15 22:18:15.659 INFO   Fanout stopped after 13 passes: no progress for 3 consecutive passes.
+2026-10-15 22:18:15.688 INFO   [D340AF\15458E] Fanout stage completed: started with 144 total SMD pins, completed in 14.68 seconds, escaped pins: 115/144 (79.9%), using 13.07 total CPU seconds, 31.55 GB total allocated, and 183.9 MB peak heap usage.
+2026-10-15 22:18:15.709 INFO   [D340AF\15458E] Auto-routing stage started on board '03b2d54d65b8681b088cdff092a1730b' for 78 unrouted items.
+2026-10-15 22:18:36.185 INFO   [D340AF\15458E] Auto-routing pass #1 on board '03b2d54d65b8681b088cdff092a1730b' was completed in 20.35 seconds with score 363.63 (63 unrouted and 0 violations), using 31.75 CPU seconds and the job allocated 82.41 GB of memory so far.
+2026-10-15 22:18:59.242 INFO   [D340AF\15458E] Auto-routing pass #2 on board 'e652cbbd0147c2306d3bfc7670aa9e60' was completed in 22.97 seconds with score 414.13 (58 unrouted and 0 violations), using 53.43 CPU seconds and the job allocated 139.30 GB of memory so far.
+2026-10-15 22:19:21.742 INFO   [D340AF\15458E] Auto-routing pass #3 on board 'df400f9df07866b253e01d2dbe2aa3a9' was completed in 22.42 seconds with score 404.03 (59 unrouted and 0 violations), using 74.11 CPU seconds and the job allocated 193.83 GB of memory so far.
+2026-10-15 22:19:40.219 INFO   [D340AF\15458E] Auto-routing pass #4 on board 'e25a33a18b22a955337c8d4662fb0bc6' was completed in 18.40 seconds with score 371.71 (62 unrouted and 1 violation), using 92.19 CPU seconds and the job allocated 245.68 GB of memory so far.
+2026-10-15 22:19:56.589 INFO   [D340AF\15458E] Auto-routing pass #5 on board 'c29e71a55d78aa48dd2cabaf221fd681' was completed in 16.29 seconds with score 424.24 (57 unrouted and 0 violations), using 107.36 CPU seconds and the job allocated 287.19 GB of memory so far.
+2026-10-15 22:20:16.784 INFO   [D340AF\15458E] Auto-routing pass #6 on board 'ba930b32d4349c294c97e01a9f96ae29' was completed in 20.12 seconds with score 424.24 (57 unrouted and 0 violations), using 126.33 CPU seconds and the job allocated 338.69 GB of memory so far.
+2026-10-15 22:20:38.185 INFO   [D340AF\15458E] Auto-routing pass #7 on board '0f46b2ac2271bf29766a75d6ec1fdd92' was completed in 21.31 seconds with score 424.24 (57 unrouted and 0 violations), using 147.24 CPU seconds and the job allocated 396.98 GB of memory so far.
+2026-10-15 22:20:57.200 INFO   [D340AF\15458E] Auto-routing pass #8 on board '7f6dab931363f63ae9dd5377f7d8198b' was completed in 18.94 seconds with score 434.34 (56 unrouted and 0 violations), using 165.34 CPU seconds and the job allocated 444.98 GB of memory so far.
+2026-10-15 22:21:15.783 INFO   [D340AF\15458E] Auto-routing pass #9 on board '54ef80088517a35eb10a15ff62585e08' was completed in 18.51 seconds with score 444.44 (55 unrouted and 0 violations), using 182.46 CPU seconds and the job allocated 489.55 GB of memory so far.
+2026-10-15 22:21:31.454 INFO   [D340AF\15458E] Auto-routing pass #10 on board '62e5e27b867624f3f32b7f883f0b4562' was completed in 15.58 seconds with score 424.24 (57 unrouted and 0 violations), using 197.69 CPU seconds and the job allocated 531.12 GB of memory so far.
+2026-10-15 22:21:46.995 INFO   [D340AF\15458E] Auto-routing pass #11 on board '9700c97700ef8353e68cc2c7cba14524' was completed in 15.46 seconds with score 454.54 (54 unrouted and 0 violations), using 212.92 CPU seconds and the job allocated 573.74 GB of memory so far.
+2026-10-15 22:22:00.534 INFO   [D340AF\15458E] Auto-routing pass #12 on board '7225874604f608477c37ad0cca83d315' was completed in 13.46 seconds with score 454.54 (54 unrouted and 0 violations), using 225.32 CPU seconds and the job allocated 610.57 GB of memory so far.
+2026-10-15 22:22:18.397 INFO   [D340AF\15458E] Auto-routing pass #13 on board '7225874604f608477c37ad0cca83d315' was completed in 17.82 seconds with score 444.44 (55 unrouted and 0 violations), using 242.46 CPU seconds and the job allocated 658.55 GB of memory so far.
+2026-10-15 22:22:33.056 INFO   [D340AF\15458E] Auto-routing pass #14 on board '360b23f3ce614516d0adedf9462ac9ba' was completed in 14.58 seconds with score 434.34 (56 unrouted and 0 violations), using 256.80 CPU seconds and the job allocated 699.54 GB of memory so far.
+2026-10-15 22:22:49.757 INFO   [D340AF\15458E] Auto-routing pass #15 on board 'baeda5b872df9f9990c5585445d0985f' was completed in 16.58 seconds with score 434.34 (56 unrouted and 0 violations), using 272.09 CPU seconds and the job allocated 740.75 GB of memory so far.
+2026-10-15 22:23:07.893 INFO   [D340AF\15458E] Auto-routing pass #16 on board '708d454242e26e6d357c893003446198' was completed in 18.05 seconds with score 464.64 (53 unrouted and 0 violations), using 290.19 CPU seconds and the job allocated 789.43 GB of memory so far.
+2026-10-15 22:23:24.883 INFO   [D340AF\15458E] Auto-routing pass #17 on board '163906a6c0ba710ad2eac8669aac34c3' was completed in 16.90 seconds with score 444.44 (55 unrouted and 0 violations), using 306.41 CPU seconds and the job allocated 831.89 GB of memory so far.
+2026-10-15 22:23:42.047 INFO   [D340AF\15458E] Auto-routing pass #18 on board '5767ea4c57db03af8fd8bb977040b9fb' was completed in 17.08 seconds with score 444.44 (55 unrouted and 0 violations), using 322.59 CPU seconds and the job allocated 875.70 GB of memory so far.
+2026-10-15 22:24:13.875 INFO   [D340AF\15458E] Auto-routing pass #19 on board '5c7786420145c58ef41aacef4d1c72dd' was completed in 31.75 seconds with score 454.54 (54 unrouted and 0 violations), using 351.51 CPU seconds and the job allocated 923.76 GB of memory so far.
+2026-10-15 22:24:43.807 INFO   [D340AF\15458E] Auto-routing pass #20 on board '163906a6c0ba710ad2eac8669aac34c3' was completed in 0.00 seconds with score 464.64 (53 unrouted and 0 violations), using 379.56 CPU seconds and the job allocated 970.27 GB of memory so far.
+2026-10-15 22:25:13.451 INFO   [D340AF\15458E] Auto-routing pass #21 on board '163906a6c0ba710ad2eac8669aac34c3' was completed in 29.57 seconds with score 454.54 (54 unrouted and 0 violations), using 407.68 CPU seconds and the job allocated 1015.26 GB of memory so far.
+2026-10-15 22:25:42.611 INFO   [D340AF\15458E] Auto-routing pass #22 on board '044c3690eef2651bf32f69dcd54d2a9d' was completed in 29.02 seconds with score 454.54 (54 unrouted and 0 violations), using 434.70 CPU seconds and the job allocated 1057.57 GB of memory so far.
+2026-10-15 22:26:25.116 INFO   [D340AF\15458E] Auto-routing pass #23 on board 'e95b34fa83c415be018e584f81d60b2b' was completed in 42.38 seconds with score 444.44 (55 unrouted and 0 violations), using 474.79 CPU seconds and the job allocated 1118.80 GB of memory so far.
+2026-10-15 22:26:59.544 INFO   [D340AF\15458E] Auto-routing pass #24 on board '163906a6c0ba710ad2eac8669aac34c3' was completed in 0.00 seconds with score 464.64 (53 unrouted and 0 violations), using 506.87 CPU seconds and the job allocated 1165.21 GB of memory so far.
+2026-10-15 22:27:30.592 INFO   [D340AF\15458E] Auto-routing pass #25 on board '163906a6c0ba710ad2eac8669aac34c3' was completed in 30.97 seconds with score 454.54 (54 unrouted and 0 violations), using 536.05 CPU seconds and the job allocated 1209.69 GB of memory so far.
+2026-10-15 22:27:59.878 INFO   [D340AF\15458E] Auto-routing pass #26 on board '2f21e730f7dff7a33eb760ec058de490' was completed in 29.17 seconds with score 454.54 (54 unrouted and 0 violations), using 563.15 CPU seconds and the job allocated 1251.84 GB of memory so far.
+2026-10-15 22:27:59.903 INFO   [D340AF\15458E] The router's best score (464.64) has not improved by more than 0.5 points since pass #16. Stopping the auto-router after 26 passes (53 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'B_W_DRV' (1 unrouted connection):
+    - R11-1  ->  U1-27
+  Net 'B_clk' (1 unrouted connection):
+    - U1-47  ->  JP_B_clk-1
+  Net 'B_data_DRV' (1 unrouted connection):
+    - R10-1  ->  U1-30
+  Net 'B_first' (1 unrouted connection):
+    - JP_B_first-1  ->  U1-40
+  Net 'B_latch' (1 unrouted connection):
+    - JP_B_latch-1  ->  U1-22
+  Net 'CFG_DONE' (2 unrouted connections):
+    - R5-1  ->  TP_DONE-1
+    - U1-46  ->  R5-1
+  Net 'CFG_READY' (1 unrouted connection):
+    - R4-1  ->  U1-45
+  Net 'CFG_RECONFIG' (1 unrouted connection):
+    - U1-48  ->  R6-1
+  Net 'GND' (8 unrouted connections):
+    - C1-2  ->  C5-2
+    - U1-2  ->  C4-2
+    - U1-26  ->  R2-2
+    - U1-26  ->  U1-49
+    - U1-49  ->  U1-2
+    - C4-2  ->  R3-2
+    - TP_GND-1  ->  via
+    - R2-2  ->  C8-2
+  Net 'JTAGSEL_N' (1 unrouted connection):
+    - U1-44  ->  TP_JTAGSEL-1
+  Net 'JTAG_TCK' (1 unrouted connection):
+    - R3-1  ->  U1-3
+  Net 'JTAG_TDI' (1 unrouted connection):
+    - TP_TDI-1  ->  U1-5
+  Net 'JTAG_TDO' (1 unrouted connection):
+    - U1-7  ->  TP_TDO-1
+  Net 'JTAG_TMS' (1 unrouted connection):
+    - U1-4  ->  TP_TMS-1
+  Net 'K1' (1 unrouted connection):
+    - U1-8  ->  SW1-2
+  Net 'K10' (1 unrouted connection):
+    - SW10-2  ->  U1-23
+  Net 'K11' (1 unrouted connection):
+    - SW11-2  ->  U1-33
+  Net 'K12' (1 unrouted connection):
+    - U1-34  ->  SW12-2
+  Net 'K2' (1 unrouted connection):
+    - U1-10  ->  SW2-2
+  Net 'K3' (1 unrouted connection):
+    - U1-11  ->  SW3-2
+  Net 'K4' (1 unrouted connection):
+    - SW4-2  ->  U1-13
+  Net 'K5' (1 unrouted connection):
+    - SW5-2  ->  U1-16
+  Net 'K6' (1 unrouted connection):
+    - U1-17  ->  SW6-2
+  Net 'K7' (1 unrouted connection):
+    - SW7-2  ->  U1-18
+  Net 'K8' (1 unrouted connection):
+    - SW8-2  ->  U1-20
+  Net 'K9' (1 unrouted connection):
+    - SW9-2  ->  U1-21
+  Net 'L_clk_DRV' (1 unrouted connection):
+    - U1-19  ->  R8-1
+  Net 'L_data' (1 unrouted connection):
+    - JP_L_data-1  ->  U1-24
+  Net 'L_endrow' (1 unrouted connection):
+    - U1-41  ->  JP_L_endrow-1
+  Net 'L_latch' (1 unrouted connection):
+    - JP_L_latch-1  ->  R9-2
+  Net 'L_latch_DRV' (1 unrouted connection):
+    - R9-1  ->  U1-31
+  Net 'MODE0' (1 unrouted connection):
+    - R1-1  ->  U1-43
+  Net 'MODE1' (1 unrouted connection):
+    - U1-42  ->  R2-1
+  Net 'R_latch' (1 unrouted connection):
+    - U1-32  ->  JP_R_latch-1
+  Net 'T_W' (1 unrouted connection):
+    - JP_T_W-1  ->  U1-38
+  Net 'T_clk_DRV' (1 unrouted connection):
+    - R7-1  ->  U1-35
+  Net 'T_data' (1 unrouted connection):
+    - JP_T_data-1  ->  U1-28
+  Net 'T_endcol' (1 unrouted connection):
+    - U1-39  ->  JP_T_endcol-1
+  Net 'VCC' (6 unrouted connections):
+    - C3-1  ->  U1-36
+    - C2-1  ->  U1-25
+    - C1-1  ->  U1-1
+    - R4-2  ->  U1-25
+    - R5-2  ->  U1-1
+    - SW11-1  ->  SW10-1
+  Net 'VCC1V2' (2 unrouted connections):
+    - FB1-2  ->  U1-12
+    - U1-37  ->  C5-1
+2026-10-15 22:28:00.167 INFO   [D340AF\15458E] Auto-routing stage completed: started with 99 unrouted nets, completed in 599.22 seconds, final score: 464.64 (53 unrouted and 0 violations), using 564.05 total CPU seconds, 1253.99 GB total allocated, and 313.8 MB peak heap usage.
+2026-10-15 22:28:00.225 INFO   [D340AF\15458E] Optimization stage started on board '3dd174cf282cfb0cfa897ab3d47e6bc1' with score 454.54 (54 unrouted and 0 violations).
+2026-10-15 22:28:05.976 INFO   [D340AF\15458E] Stopping optimization pass #1 early after 50 consecutive items could not be improved.
+2026-10-15 22:28:06.040 INFO   [D340AF\15458E] Optimizer pass #1 on board 'fe3905208c84d0b583fa436125128843' was completed in 5.60 seconds with the score of 454.54 (54 unrouted and 0 violations).
+2026-10-15 22:28:06.088 INFO   [D340AF\15458E] Stopping optimizer because the improvement in this pass (0.0004%) is below the threshold (1.00%).
+2026-10-15 22:28:06.132 INFO   [D340AF\15458E] Optimization stage completed: started with score 454.54 (54 unrouted and 0 violations), completed in 5.87 seconds, final score: 454.54 (54 unrouted and 0 violations), using 5.35 total CPU seconds, 18.03 GB total allocated, and 284.6 MB peak heap usage.
+2026-10-15 22:28:06.150 INFO   [D340AF\15458E] Job 'D340AF\15458E' finished with state: COMPLETED (elapsed: 10 minutes 5.44 seconds, finished at UTC: 2026-10-15T22:28:06.148870095Z).
+2026-10-15 22:28:06.299 INFO   Saving output file '/work/tile_gw1nz_rep2.ses' (SES)...
+2026-10-15 22:28:06.303 INFO   Successfully saved output file '/work/tile_gw1nz_rep2.ses' (22333 bytes).
+[resource_guard] done mode=systemd exit=0 wall=608.7s ru_maxrss_of_direct_children=52 MiB

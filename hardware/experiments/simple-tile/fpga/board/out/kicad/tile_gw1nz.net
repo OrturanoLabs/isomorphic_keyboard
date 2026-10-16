@@ -1,0 +1,4862 @@
+(export
+	(version "E")
+	(design
+		(source "/home/marco/Documents/OrturanoLabs/isomorphic_keyboard/hardware/experiments/simple-tile/fpga/board/out/kicad/tile_gw1nz.kicad_sch")
+		(date "2026-10-15T21:58:44")
+		(tool "Eeschema 10.0.6")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "tile_gw1nz.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "27f16853-c398-56c7-b773-747d229dfce9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4db9ace8-ac80-5416-b41b-db101cb35456")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6ee66302-aaa5-50d1-8928-1d1122aaf0ed")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4aa0c568-d79c-571f-8f1d-4ce27e472ac2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "38551c7a-d65c-5656-adfc-6a87d30d8c48")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "4u7")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9e1d579d-a754-5bff-8a88-31170089226b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "4u7")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c324ad4a-62ff-508d-b38d-b3f259cc126f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C8")
+			(value "1u")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "02c11c82-a931-56ef-bf34-14e9bbbb3432")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C9")
+			(value "1u")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "C")
+				(description "Capacitor (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fdab6f8b-c231-5d9f-bef9-7ba37d334237")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FB1")
+			(value "FB 120R@100M")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "FB")
+				(description "Ferrite bead 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6a8a70dd-2105-5a6b-a5ad-5d6ba7fb6264")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FLG1")
+			(value "VCC1V2 via FB1")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "PWR_FLAG")
+				(description "power flag: VCC1V2 is driven by U2 (TLV75512PDBVR) through FB1 (120R@100MHz bead) - KiCad ERC cannot propagate drive through a passive bead, so this flag's power_out pin carries the filtered rail. NOT an ERC exclusion.")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4578261e-0c54-55a2-9e36-f4f8fc7571df")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_B_clk")
+			(value "B_clk IN (20 MHz shift clock)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a473f0a9-e4a2-5082-8bac-c7dcb1146ada")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_B_data")
+			(value "B_data OUT (chain serial data)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fe3e12dd-8454-5882-b429-0276b80fc400")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_B_first")
+			(value "B_first IN (presence)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "89e4f130-a996-54db-8a7c-e2c2369228cc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_B_latch")
+			(value "B_latch IN")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "36020d1e-54f3-584c-affe-e3916b317e9e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_B_W")
+			(value "B_W OUT (column end)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "26af70f8-2e2c-55d1-b08c-ddf10677e10a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_GND")
+			(value "GND")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD_PWR")
+				(description "chassis spring-contact target pad D2.5 (pin type power_out: this contact FEEDS the tile's GND/VCC net)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b28400f3-fdba-52ef-9af3-4ff5e3dd2c38")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_GND_DET_B")
+			(value "presence GND (J103.4: serves below neighbour's T_endcol)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "579cc093-6d17-525e-9901-252e47821b65")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_GND_DET_R")
+			(value "presence GND (J104.4: serves right neighbour's L_endrow)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f58885bd-6048-5569-b387-824cff3ca44d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_GND_DET_T")
+			(value "presence GND (J102.5: serves above neighbour's B_first)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1a320ace-059f-5ca3-9bb8-d317edc56022")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_L_clk")
+			(value "L_clk OUT (to left neighbour)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dd1dc097-4c60-5b4b-8d22-eccb1cd56eeb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_L_data")
+			(value "L_data IN")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5c14a33b-1f57-5d6a-8d71-9b7617c5fd78")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_L_endrow")
+			(value "L_endrow IN (presence)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "75ec6f99-40d6-5fc1-90c1-9d6f524232d3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_L_latch")
+			(value "L_latch OUT (latch forward)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "11142b95-75a2-5602-81d0-ec71fda3b169")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_R_latch")
+			(value "R_latch IN")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "06f2d3a9-fc64-558f-8211-9225bc1c5214")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_T_clk")
+			(value "T_clk OUT (to above neighbour)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7f797bd8-1449-5dd1-8fd7-eaa5f0fbf442")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_T_data")
+			(value "T_data IN")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "561787a5-c5b0-5e7d-8ba9-4b433eb17661")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_T_endcol")
+			(value "T_endcol IN (presence)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f6955c25-5acf-5e5e-b428-d7272528ab7b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_T_W")
+			(value "T_W IN (presence)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD")
+				(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "db547286-58eb-50d4-a027-5c9c7492f526")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP_VCC")
+			(value "VCC IN (3.3 V from chassis)")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "JP_PAD_PWR")
+				(description "chassis spring-contact target pad D2.5 (pin type power_out: this contact FEEDS the tile's GND/VCC net)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "92c23fcc-c922-5ced-a4a8-c0acb4b69ab8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "1k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cd551ec6-7c34-5a97-ac3b-686a12387456")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "1k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e81f2baf-7619-51dc-9303-d38208264005")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "4k7")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1ed5bff9-d1d6-5449-8759-aab40ecf2fdc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R4")
+			(value "4k7")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bc89bc17-1515-5c39-878c-232c8df8b730")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R5")
+			(value "4k7")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "42a3837e-cb49-5675-8ac6-532b22b83dce")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R6")
+			(value "4k7")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0c6e3731-dac1-5f81-8ec0-673847f48140")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R7")
+			(value "0R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2b2c35e0-dfb8-5899-b92e-9097bfdb3d8b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R8")
+			(value "0R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e8a608d5-8c7c-5a00-8af6-8de57af9d3b4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R9")
+			(value "0R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f86521c8-97b4-5dcf-8209-6911bc108680")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R10")
+			(value "0R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fd170b65-a4f2-50d2-8b79-11b0916d5abf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R11")
+			(value "0R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "R")
+				(description "Resistor 0603 (project local)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a3ef97b5-dbd3-5395-b83b-ffd0f7a6bd39")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW1")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "84ff94c2-6211-52bd-8a5d-1c98dea426ea")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW2")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "54875766-5b29-5fe3-8c7c-9d4a9324e7a8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW3")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f92625e5-b7ef-512f-b6ea-156441be9043")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW4")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a8d5c186-a114-5d77-ada8-d2f03c2ff740")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW5")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "662408f1-4e12-50af-b7b0-bc8e55343b3b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW6")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c010fc3c-fa0b-562d-a567-a5b943692d00")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW7")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ef825d0a-fc50-59b3-b80e-87793e1c0db5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW8")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "55d99f5c-756a-5692-bcd3-f60c2fd67ce6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW9")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2a1f3dcf-56ae-5e68-8078-c68a588bf27b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW10")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "005e09f3-45f4-55a1-836e-f320c2ffaebe")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW11")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "409ff752-f24e-51e4-8b22-90ece62ee0ae")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW12")
+			(value "Kailh MX hotswap")
+			(footprint "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+			(fields
+				(field
+					(name "Footprint") "fpga-vendored:SW_Hotswap_Kailh_MX_1.00u")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "SW_KAILH")
+				(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "210a8936-238d-57f7-9354-4d3523810c34")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_DONE")
+			(value "CFG_DONE")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d4d78c02-9661-568d-bd9f-af08ce1cc98e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_GND")
+			(value "GND")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dc59adae-ecfd-5b25-81ad-bf2ea54aee8d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_JTAGSEL")
+			(value "JTAGSEL_N")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cde49201-8f81-586b-a759-7ff80da22b73")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_READY")
+			(value "CFG_READY")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "05d456e9-ea9c-5320-befd-ed3bf55ac053")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_RECFG")
+			(value "CFG_RECONFIG")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2fff8776-8392-5e1d-95d9-5cdb3c4c07d2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_TCK")
+			(value "JTAG_TCK")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "80652b37-b95f-56dc-84b9-dca7a30a02bb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_TDI")
+			(value "JTAG_TDI")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e6b8b6db-1809-5d8c-afd4-f70b10c2d66d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_TDO")
+			(value "JTAG_TDO")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "48de9550-0c59-55b7-bfdc-2db9581b1550")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_TMS")
+			(value "JTAG_TMS")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "56a769e1-ddef-5336-b63d-e81101a9259c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_VCC")
+			(value "VCC")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b0f25d5a-34f5-5fac-9d5b-2ea90d3c4457")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP_VCC1V2")
+			(value "VCC1V2")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TP")
+				(description "test pad D1.0 (board pad, no component)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b5365286-f5d8-5f79-a69d-a0bc22bd1d58")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "GW1NZ-LV1QN48C6/I5")
+			(footprint "fpga_board:GW1NZ-QN48_6x6_P0.4mm_EP2.7x2.7mm")
+			(datasheet "DS841E.pdf (sha256 a19cdd7a..; see board/data)")
+			(fields
+				(field
+					(name "Footprint") "fpga_board:GW1NZ-QN48_6x6_P0.4mm_EP2.7x2.7mm")
+				(field
+					(name "Datasheet") "DS841E.pdf (sha256 a19cdd7a..; see board/data)")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "GW1NZ_QN48")
+				(description "Gowin LittleBee GW1NZ-1 FPGA, QFN48 6x6 P0.4, EPAD 49 (GND); pins 6/9/14/15/29 unused (pin 9 = UG842-vs-UG846 order-code hazard, excluded)")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a4405d66-26e1-560e-b1ec-4a0ae14c9d90")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "33")
+						)
+						(pin
+							(num "34")
+						)
+						(pin
+							(num "47")
+						)
+						(pin
+							(num "38")
+						)
+						(pin
+							(num "39")
+						)
+						(pin
+							(num "40")
+						)
+						(pin
+							(num "41")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "32")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "37")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "49")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "36")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "29")
+						)
+						(pin
+							(num "35")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "31")
+						)
+						(pin
+							(num "30")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "45")
+						)
+						(pin
+							(num "46")
+						)
+						(pin
+							(num "48")
+						)
+						(pin
+							(num "44")
+						)
+						(pin
+							(num "43")
+						)
+						(pin
+							(num "42")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "TLV75512PDBVR")
+			(footprint "Package_TO_SOT_SMD:SOT-23-5")
+			(datasheet "tlv755p.pdf SBVS320D; 1=IN 2=GND 3=EN 4=NC 5=OUT")
+			(fields
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23-5")
+				(field
+					(name "Datasheet") "tlv755p.pdf SBVS320D; 1=IN 2=GND 3=EN 4=NC 5=OUT")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "fpga_tile")
+				(part "TLV755P_DBV")
+				(description "500mA fixed LDO, SOT-23-5 DBV: 1=IN 2=GND 3=EN 4=NC 5=OUT (TI SBVS320D Tbl 4-1); OUT is power_out - it sources VCC1V2_RAW")
+			)
+			(property
+				(name "Sheetname")
+				(value "tile_gw1nz")
+			)
+			(property
+				(name "Sheetfile")
+				(value "tile_gw1nz.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "691f8f65-8bbf-5b29-b7c0-6415a799aa61")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "fpga_tile")
+			(part "C")
+			(description "Capacitor (project local)")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Capacitor (project local)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "FB")
+			(description "Ferrite bead 0603 (project local)")
+			(fields
+				(field
+					(name "Reference") "FB")
+				(field
+					(name "Value") "FB")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Ferrite bead 0603 (project local)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "GW1NZ_QN48")
+			(description "Gowin LittleBee GW1NZ-1 FPGA, QFN48 6x6 P0.4, EPAD 49 (GND); pins 6/9/14/15/29 unused (pin 9 = UG842-vs-UG846 order-code hazard, excluded)")
+			(docs "https://cdn.gowinsemi.com.cn/DS841E.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "GW1NZ-LV1QN48C6/I5")
+				(field
+					(name "Footprint") "fpga_board:GW1NZ-QN48_6x6_P0.4mm_EP2.7x2.7mm")
+				(field
+					(name "Datasheet") "https://cdn.gowinsemi.com.cn/DS841E.pdf")
+				(field
+					(name "Description") "Gowin LittleBee GW1NZ-1 FPGA, QFN48 6x6 P0.4, EPAD 49 (GND); pins 6/9/14/15/29 unused (pin 9 = UG842-vs-UG846 order-code hazard, excluded)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VCC")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "JTAG_TCK")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "JTAG_TMS")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "JTAG_TDI")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "7")
+					(name "JTAG_TDO")
+					(type "output")
+				)
+				(pin
+					(num "8")
+					(name "K1")
+					(type "bidirectional")
+				)
+				(pin
+					(num "9")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "10")
+					(name "K2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "11")
+					(name "K3")
+					(type "bidirectional")
+				)
+				(pin
+					(num "12")
+					(name "VCC1V2")
+					(type "power_in")
+				)
+				(pin
+					(num "13")
+					(name "K4")
+					(type "bidirectional")
+				)
+				(pin
+					(num "14")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "15")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "16")
+					(name "K5")
+					(type "bidirectional")
+				)
+				(pin
+					(num "17")
+					(name "K6")
+					(type "bidirectional")
+				)
+				(pin
+					(num "18")
+					(name "K7")
+					(type "bidirectional")
+				)
+				(pin
+					(num "19")
+					(name "L_clk")
+					(type "output")
+				)
+				(pin
+					(num "20")
+					(name "K8")
+					(type "bidirectional")
+				)
+				(pin
+					(num "21")
+					(name "K9")
+					(type "bidirectional")
+				)
+				(pin
+					(num "22")
+					(name "B_latch")
+					(type "input")
+				)
+				(pin
+					(num "23")
+					(name "K10")
+					(type "bidirectional")
+				)
+				(pin
+					(num "24")
+					(name "L_data")
+					(type "input")
+				)
+				(pin
+					(num "25")
+					(name "VCC")
+					(type "power_in")
+				)
+				(pin
+					(num "26")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "27")
+					(name "B_W")
+					(type "output")
+				)
+				(pin
+					(num "28")
+					(name "T_data")
+					(type "input")
+				)
+				(pin
+					(num "29")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "30")
+					(name "B_data")
+					(type "output")
+				)
+				(pin
+					(num "31")
+					(name "L_latch")
+					(type "output")
+				)
+				(pin
+					(num "32")
+					(name "R_latch")
+					(type "input")
+				)
+				(pin
+					(num "33")
+					(name "K11")
+					(type "bidirectional")
+				)
+				(pin
+					(num "34")
+					(name "K12")
+					(type "bidirectional")
+				)
+				(pin
+					(num "35")
+					(name "T_clk")
+					(type "output")
+				)
+				(pin
+					(num "36")
+					(name "VCC")
+					(type "power_in")
+				)
+				(pin
+					(num "37")
+					(name "VCC1V2")
+					(type "power_in")
+				)
+				(pin
+					(num "38")
+					(name "T_W")
+					(type "input")
+				)
+				(pin
+					(num "39")
+					(name "T_endcol")
+					(type "input")
+				)
+				(pin
+					(num "40")
+					(name "B_first")
+					(type "input")
+				)
+				(pin
+					(num "41")
+					(name "L_endrow")
+					(type "input")
+				)
+				(pin
+					(num "42")
+					(name "MODE1")
+					(type "input")
+				)
+				(pin
+					(num "43")
+					(name "MODE0")
+					(type "input")
+				)
+				(pin
+					(num "44")
+					(name "JTAGSEL_N")
+					(type "input")
+				)
+				(pin
+					(num "45")
+					(name "CFG_READY")
+					(type "output")
+				)
+				(pin
+					(num "46")
+					(name "CFG_DONE")
+					(type "output")
+				)
+				(pin
+					(num "47")
+					(name "B_clk")
+					(type "input")
+				)
+				(pin
+					(num "48")
+					(name "CFG_RECONFIG")
+					(type "input")
+				)
+				(pin
+					(num "49")
+					(name "GND")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "JP_PAD")
+			(description "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			(fields
+				(field
+					(name "Reference") "JP")
+				(field
+					(name "Value") "JP_PAD")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "chassis spring-contact target pad D2.5 (net passes through to the chassis trace)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "JP_PAD_PWR")
+			(description "chassis spring-contact target pad D2.5 (pin type power_out: this contact FEEDS the tile's GND/VCC net)")
+			(fields
+				(field
+					(name "Reference") "JP")
+				(field
+					(name "Value") "JP_PAD_PWR")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "chassis spring-contact target pad D2.5 (pin type power_out: this contact FEEDS the tile's GND/VCC net)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "power_out")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "PWR_FLAG")
+			(description "power flag: VCC1V2 is driven by U2 (TLV75512PDBVR) through FB1 (120R@100MHz bead) - KiCad ERC cannot propagate drive through a passive bead, so this flag's power_out pin carries the filtered rail. NOT an ERC exclusion.")
+			(fields
+				(field
+					(name "Reference") "PWR_FLAG")
+				(field
+					(name "Value") "PWR_FLAG")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "power flag: VCC1V2 is driven by U2 (TLV75512PDBVR) through FB1 (120R@100MHz bead) - KiCad ERC cannot propagate drive through a passive bead, so this flag's power_out pin carries the filtered rail. NOT an ERC exclusion.")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "power_out")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "R")
+			(description "Resistor 0603 (project local)")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor 0603 (project local)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "SW_KAILH")
+			(description "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			(fields
+				(field
+					(name "Reference") "SW")
+				(field
+					(name "Value") "Kailh MX hotswap socket")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "SMD MX hot-swap key socket (Kailh CPG1511; pin1 = VCC side, pin2 = key-net side)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "TLV755P_DBV")
+			(description "500mA fixed LDO, SOT-23-5 DBV: 1=IN 2=GND 3=EN 4=NC 5=OUT (TI SBVS320D Tbl 4-1); OUT is power_out - it sources VCC1V2_RAW")
+			(docs "https://www.ti.com/lit/ds/symlink/tlv755p.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "TLV755P_DBV")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23-5")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/tlv755p.pdf")
+				(field
+					(name "Description") "500mA fixed LDO, SOT-23-5 DBV: 1=IN 2=GND 3=EN 4=NC 5=OUT (TI SBVS320D Tbl 4-1); OUT is power_out - it sources VCC1V2_RAW")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "IN")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "EN")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "5")
+					(name "OUT")
+					(type "power_out")
+				)
+			)
+		)
+		(libpart
+			(lib "fpga_tile")
+			(part "TP")
+			(description "test pad D1.0 (board pad, no component)")
+			(fields
+				(field
+					(name "Reference") "TP")
+				(field
+					(name "Value") "TP")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test pad D1.0 (board pad, no component)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "fpga_tile")
+			(uri "${KIPRJMOD}/lib/fpga_tile.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/B_W")
+			(class "Default")
+			(node
+				(ref "JP_B_W")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "2")
+			(name "/B_W_DRV")
+			(class "Default")
+			(node
+				(ref "R11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "27")
+				(pinfunction "B_W_27")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "3")
+			(name "/B_clk")
+			(class "Default")
+			(node
+				(ref "JP_B_clk")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "47")
+				(pinfunction "B_clk_47")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "4")
+			(name "/B_data")
+			(class "Default")
+			(node
+				(ref "JP_B_data")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/B_data_DRV")
+			(class "Default")
+			(node
+				(ref "R10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "30")
+				(pinfunction "B_data_30")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "6")
+			(name "/B_first")
+			(class "Default")
+			(node
+				(ref "JP_B_first")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "40")
+				(pinfunction "B_first_40")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "7")
+			(name "/B_latch")
+			(class "Default")
+			(node
+				(ref "JP_B_latch")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "22")
+				(pinfunction "B_latch_22")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "8")
+			(name "/CFG_DONE")
+			(class "Default")
+			(node
+				(ref "R5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP_DONE")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "46")
+				(pinfunction "CFG_DONE_46")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "9")
+			(name "/CFG_READY")
+			(class "Default")
+			(node
+				(ref "R4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP_READY")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "45")
+				(pinfunction "CFG_READY_45")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "10")
+			(name "/CFG_RECONFIG")
+			(class "Default")
+			(node
+				(ref "R6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP_RECFG")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "48")
+				(pinfunction "CFG_RECONFIG_48")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "11")
+			(name "/JTAGSEL_N")
+			(class "Default")
+			(node
+				(ref "TP_JTAGSEL")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "44")
+				(pinfunction "JTAGSEL_N_44")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "12")
+			(name "/JTAG_TCK")
+			(class "Default")
+			(node
+				(ref "R3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP_TCK")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "JTAG_TCK_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "13")
+			(name "/JTAG_TDI")
+			(class "Default")
+			(node
+				(ref "TP_TDI")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "JTAG_TDI_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "14")
+			(name "/JTAG_TDO")
+			(class "Default")
+			(node
+				(ref "TP_TDO")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "JTAG_TDO_7")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "15")
+			(name "/JTAG_TMS")
+			(class "Default")
+			(node
+				(ref "TP_TMS")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "JTAG_TMS_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "16")
+			(name "/K1")
+			(class "Default")
+			(node
+				(ref "SW1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "K1_8")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "17")
+			(name "/K2")
+			(class "Default")
+			(node
+				(ref "SW2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "10")
+				(pinfunction "K2_10")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "18")
+			(name "/K3")
+			(class "Default")
+			(node
+				(ref "SW3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "11")
+				(pinfunction "K3_11")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "19")
+			(name "/K4")
+			(class "Default")
+			(node
+				(ref "SW4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "13")
+				(pinfunction "K4_13")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "20")
+			(name "/K5")
+			(class "Default")
+			(node
+				(ref "SW5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "16")
+				(pinfunction "K5_16")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "21")
+			(name "/K6")
+			(class "Default")
+			(node
+				(ref "SW6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "17")
+				(pinfunction "K6_17")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "22")
+			(name "/K7")
+			(class "Default")
+			(node
+				(ref "SW7")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "18")
+				(pinfunction "K7_18")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "23")
+			(name "/K8")
+			(class "Default")
+			(node
+				(ref "SW8")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "20")
+				(pinfunction "K8_20")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "24")
+			(name "/K9")
+			(class "Default")
+			(node
+				(ref "SW9")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "21")
+				(pinfunction "K9_21")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "25")
+			(name "/K10")
+			(class "Default")
+			(node
+				(ref "SW10")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "23")
+				(pinfunction "K10_23")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "26")
+			(name "/K11")
+			(class "Default")
+			(node
+				(ref "SW11")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "33")
+				(pinfunction "K11_33")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "27")
+			(name "/K12")
+			(class "Default")
+			(node
+				(ref "SW12")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "34")
+				(pinfunction "K12_34")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "28")
+			(name "/L_clk")
+			(class "Default")
+			(node
+				(ref "JP_L_clk")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "29")
+			(name "/L_clk_DRV")
+			(class "Default")
+			(node
+				(ref "R8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "19")
+				(pinfunction "L_clk_19")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "30")
+			(name "/L_data")
+			(class "Default")
+			(node
+				(ref "JP_L_data")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "24")
+				(pinfunction "L_data_24")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "31")
+			(name "/L_endrow")
+			(class "Default")
+			(node
+				(ref "JP_L_endrow")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "41")
+				(pinfunction "L_endrow_41")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "32")
+			(name "/L_latch")
+			(class "Default")
+			(node
+				(ref "JP_L_latch")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "33")
+			(name "/L_latch_DRV")
+			(class "Default")
+			(node
+				(ref "R9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "31")
+				(pinfunction "L_latch_31")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "34")
+			(name "/MODE0")
+			(class "Default")
+			(node
+				(ref "R1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "43")
+				(pinfunction "MODE0_43")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "35")
+			(name "/MODE1")
+			(class "Default")
+			(node
+				(ref "R2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "42")
+				(pinfunction "MODE1_42")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "36")
+			(name "/R_latch")
+			(class "Default")
+			(node
+				(ref "JP_R_latch")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "32")
+				(pinfunction "R_latch_32")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "37")
+			(name "/T_W")
+			(class "Default")
+			(node
+				(ref "JP_T_W")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "38")
+				(pinfunction "T_W_38")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "38")
+			(name "/T_clk")
+			(class "Default")
+			(node
+				(ref "JP_T_clk")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R7")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "39")
+			(name "/T_clk_DRV")
+			(class "Default")
+			(node
+				(ref "R7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "35")
+				(pinfunction "T_clk_35")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "40")
+			(name "/T_data")
+			(class "Default")
+			(node
+				(ref "JP_T_data")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "28")
+				(pinfunction "T_data_28")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "41")
+			(name "/T_endcol")
+			(class "Default")
+			(node
+				(ref "JP_T_endcol")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "39")
+				(pinfunction "T_endcol_39")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "42")
+			(name "/VCC1V2_RAW")
+			(class "Default")
+			(node
+				(ref "C8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "OUT_5")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "43")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C8")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C9")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP_GND")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "JP_GND_DET_B")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP_GND_DET_R")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP_GND_DET_T")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP_GND")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "26")
+				(pinfunction "GND_26")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "49")
+				(pinfunction "GND_49")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "44")
+			(name "VCC")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP_VCC")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "R4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW12")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP_VCC")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "VCC_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "25")
+				(pinfunction "VCC_25")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "36")
+				(pinfunction "VCC_36")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "IN_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "EN_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "45")
+			(name "VCC1V2")
+			(class "Default")
+			(node
+				(ref "C4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "FLG1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "TP_VCC1V2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "12")
+				(pinfunction "VCC1V2_12")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "37")
+				(pinfunction "VCC1V2_37")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "46")
+			(name "unconnected-(U1-NC-Pad6)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "NC_6")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "47")
+			(name "unconnected-(U1-NC-Pad9)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "NC_9")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "48")
+			(name "unconnected-(U1-NC-Pad14)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "14")
+				(pinfunction "NC_14")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "49")
+			(name "unconnected-(U1-NC-Pad15)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "15")
+				(pinfunction "NC_15")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "50")
+			(name "unconnected-(U1-NC-Pad29)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "29")
+				(pinfunction "NC_29")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "51")
+			(name "unconnected-(U2-NC-Pad4)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "NC_4")
+				(pintype "no_connect")
+			)
+		)
+	)
+)

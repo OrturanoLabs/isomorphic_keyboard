@@ -1,0 +1,13 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "fpga_board")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/../../kicad/lib/fpga_board.pretty")
+		(options "")
+		(descr "tile-board local footprints (GW1NZ QN48, connector pads)"))
+	(lib (name "fpga-vendored")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/../../../../../../kicad/lib/Switch_Keyboard_Hotswap_Kailh.pretty")
+		(options "")
+		(descr "rev-A vendored Kailh hotswap socket footprints (read-only)"))
+)

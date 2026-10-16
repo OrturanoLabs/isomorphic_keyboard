@@ -1,0 +1,8 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "fpga_tile")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/lib/fpga_tile.kicad_sym")
+		(options "")
+		(descr "project-local FPGA tile symbols (kicad/sch_gen.py)"))
+)

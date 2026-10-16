@@ -23,7 +23,7 @@
    },
    {
     "id": 4,
-    "desc": "full pairwise courtyard matrix (46 rects incl. 19 contact pads) + socket polygons",
+    "desc": "full pairwise courtyard matrix (53 rects incl. 19 contact pads) + socket polygons",
     "ok": true,
     "detail": "rect-overlaps=[] sock-hits=[]"
    },
@@ -43,7 +43,7 @@
     "id": 7,
     "desc": "part counts: 12 SW + 19 JP + passives + TPs; FPGA placed",
     "ok": true,
-    "detail": "SW=12 JP=19 total=58 unplaced=[] fpga_at=(7.86, 5.4)"
+    "detail": "SW=12 JP=19 total=65 unplaced=[] fpga_at=(7.86, 5.4)"
    }
   ],
   "fpga_placed": true,
@@ -73,7 +73,7 @@
    },
    {
     "id": 4,
-    "desc": "full pairwise courtyard matrix (58 rects incl. 19 contact pads) + socket polygons",
+    "desc": "full pairwise courtyard matrix (60 rects incl. 19 contact pads) + socket polygons",
     "ok": true,
     "detail": "rect-overlaps=[] sock-hits=[]"
    },
@@ -93,7 +93,7 @@
     "id": 7,
     "desc": "part counts: 12 SW + 19 JP + passives + TPs; FPGA placement NOFIT (documented)",
     "ok": true,
-    "detail": "SW=12 JP=19 total=70 unplaced=[] fpga_at=None"
+    "detail": "SW=12 JP=19 total=72 unplaced=[] fpga_at=None"
    },
    {
     "id": "N",

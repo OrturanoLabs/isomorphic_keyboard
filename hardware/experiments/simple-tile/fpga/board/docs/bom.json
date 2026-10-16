@@ -1,0 +1,81 @@
+{
+  "tile_variant": "gw1nz",
+  "evidence_fetched": "2026-10-14",
+  "note": "all supplier data fetched 2026-10-14; assembly quote is a BLOCKED gate (needs account+upload); passives are commodity spec'd lines",
+  "lines": [
+    {
+      "refs": ["U1"], "qty": 1,
+      "mpn": "GW1NZ-LV1QN48C6/I5", "mfr": "Gowin",
+      "desc": "FPGA 1.152k LUT4, QFN-48 0.4mm",
+      "supplier": "LCSC", "sku": "C5799569",
+      "url": "https://www.lcsc.com/product-detail/C5799569.html",
+      "stock": 888, "currency": "USD",
+      "price_breaks": {"1": 6.6772, "10": 5.6426, "30": 5.012, "100": 4.4832},
+      "alt": "Mouser lists GW1NZ-LV1QN48C6/I5 (price not captured); Win Source broker 1080 @ 2.19-3.28 (not primary)"
+    },
+    {
+      "refs": ["U2"], "qty": 1,
+      "mpn": "TLV75512PDBVR", "mfr": "Texas Instruments",
+      "desc": "LDO fixed 1.2V 500mA SOT-23-5 (DBV)",
+      "supplier": "DigiKey", "sku": "296-TLV75512PDBVR",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/TLV75512PDBVR/9356525",
+      "stock": 8346, "currency": "USD",
+      "price_breaks": {"1": 0.30, "10": 0.206, "25": 0.1832, "100": 0.1573, "250": 0.14496, "3000": 0.1239}
+    },
+    {
+      "refs": ["SW1","SW2","SW3","SW4","SW5","SW6","SW7","SW8","SW9","SW10","SW11","SW12"], "qty": 12,
+      "mpn": "CPG151101S11", "mfr": "Kailh",
+      "desc": "MX hotswap socket (gold contact)",
+      "supplier": "kailhswitch.net (official Kailh store)", "sku": "CPG151101S11-16",
+      "url": "https://kailhswitch.net/products/kailh-hotswap-sockets-mx-and-choc-switch-mechanical-keyboard-switches-socket",
+      "stock": null, "currency": "USD",
+      "price_breaks": {"1": 0.21},
+      "assembly_note": "keyboard-market part, NOT in LCSC/JLC PCBA libraries -> hand-solder or consigned"
+    },
+    {
+      "refs": ["FB1"], "qty": 1,
+      "mpn": "BLM18PG121SN1D", "mfr": "Murata",
+      "desc": "ferrite bead 120ohm@100MHz 0603 2A (UG293 class)",
+      "supplier": "LCSC", "sku": "C14709",
+      "url": "https://www.lcsc.com/product-detail/C14709.html",
+      "stock": 1294550, "currency": "USD",
+      "price_breaks": {"50": 0.0147},
+      "alt": "DigiKey 1.57M stock @ $0.14@1 (digikey.sg)"
+    },
+    {
+      "refs": ["C1","C2","C3","C4","C5"], "qty": 5,
+      "mpn": "commodity", "desc": "100nF 50V X7R 0603 (Yageo CC0603KRX7R9BB104 class)",
+      "supplier": "any", "commodity": true
+    },
+    {
+      "refs": ["C8","C9"], "qty": 2,
+      "mpn": "commodity", "desc": "1uF 25V X5R/X7R 0603 (TLV755P CIN/COUT, SBVS320D-required)",
+      "supplier": "any", "commodity": true
+    },
+    {
+      "refs": ["C6","C7"], "qty": 2,
+      "mpn": "commodity", "desc": "4.7uF 16V X5R/X7R 1206 bulk",
+      "supplier": "any", "commodity": true
+    },
+    {
+      "refs": ["R1","R2"], "qty": 2,
+      "mpn": "commodity", "desc": "1k 0603 (MODE0/1 auto-boot straps, UG293)",
+      "supplier": "any", "commodity": true
+    },
+    {
+      "refs": ["R3","R4","R5","R6"], "qty": 4,
+      "mpn": "commodity", "desc": "4.7k 0603 (TCK pull-down, READY/DONE/RECONFIG pulls)",
+      "supplier": "any", "commodity": true
+    },
+    {
+      "refs": ["R7","R8","R9","R10","R11"], "qty": 5,
+      "mpn": "commodity", "desc": "0R jumper 0402 -- series-termination positions on the 5 outputs (docs/termination.md); populated 0R by default, value after bench B2; never DNP at fab",
+      "supplier": "any", "commodity": true
+    }
+  ],
+  "cost_rollup_usd": {
+    "qty1": {"U1": 6.6772, "U2": 0.30, "sockets": 2.52, "FB1": 0.02, "passives_est": 0.10, "total_components": 9.62},
+    "qty10": {"total_components_est": 8.6},
+    "pcba_quote": "TBD -- BLOCKED (JLCPCB quote needs account+Gerber/BOM/CPL upload); published structure: no setup fee w/ coupons, 680k+ parts, fine-pitch >=0.35mm; GOWIN x JLCPCB coop 2026-04-30"
+  }
+}

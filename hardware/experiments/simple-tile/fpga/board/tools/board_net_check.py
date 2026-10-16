@@ -12,8 +12,9 @@ This re-derives the expected netlist INDEPENDENTLY of kicad/board_gen.py
      the generator (the 2026-10-13 singleton-rail bug class)
   N3 strap/filter/pull resistors: exact pad-net sets + values
   N4 config/JTAG/SPI test-pad coverage: each covered net has exactly one TP
-  N5 decoupling census per rail + ferrite series topology (VCC1V2_RAW has
-     exactly {U2.5, FB1.1}; FPGA core pads sit on the FILTERED side VCC1V2)
+  N5 decoupling census per rail + ferrite/LDO topology (VCC1V2_RAW has
+     exactly {U2.5, FB1.1, C8.1} = LDO COUT + bead input; FPGA core pads sit
+     on the FILTERED side VCC1V2)
   N6 12 key sockets (pad1=VCC, pad2=Kn) + 19 chassis pads with the
      connector-next net set (14 signals + VCC + GND)
   N7 unused FPGA pads == expected pool complement exactly (pin-9 hazard
@@ -27,6 +28,9 @@ This re-derives the expected netlist INDEPENDENTLY of kicad/board_gen.py
      presence semantics: hard ground on an inserted tile, open when
      removed; the backplane's separate traces belong to connector-next
      and are not graph-changeable from here)
+  N10 gw1nz series-termination positions R7..R11 (docs/termination.md):
+     each output is exactly U1.pin--Rn.1, Rn.2--JP_pad; the JP pad keeps
+     the interface net name, the driver stub is <net>_DRV
 NEGATIVE CONTROL: the same checks are re-run with (a) a corrupted EXPECTED
 map ( FPGA core pin bound to GND), (b) a corrupted PARSED board (a key
 socket pad net renamed K1->K2), and (c) a presence pad rebound to an
@@ -53,6 +57,14 @@ TILE_NETS = {"clk_pin": "B_clk", "t_w_pin": "T_W", "t_endcol_pin": "T_endcol",
              "b_latch_pin": "B_latch", "r_latch_pin": "R_latch",
              "t_clk_pin": "T_clk", "l_clk_pin": "L_clk",
              "latcho_pin": "L_latch", "dout_pin": "B_data", "b_w_pin": "B_W"}
+
+# frame-neutral series-termination positions on the five forward-driven
+# outputs (docs/termination.md, session-5 mirror of board_gen.SERIES_DRV_GW1NZ;
+# N10 catches drift between the two copies): base net, series R, U1 pin.
+SERIES_DRV = (("T_clk", "R7", "35"), ("L_clk", "R8", "19"),
+              ("L_latch", "R9", "31"), ("B_data", "R10", "30"),
+              ("B_W", "R11", "27"))
+SERIES_DRV_NETS = {b for b, _r, _p in SERIES_DRV}
 
 # rail rollup: vendor rail name -> board net (independent restatement of the
 # binding rule; docs/power_reg.md carries the prose + source)
@@ -150,8 +162,11 @@ def expected_fpga(variant):
     exp = {str(i): None for i in range(1, 49)}
     exp["49"] = "GND"
     for n, (pad, _pull) in pins.items():
-        exp[str(pad)] = (f"K{int(n[5:-1]) + 1}" if n.startswith("keys[")
-                         else TILE_NETS[n])
+        net = f"K{int(n[5:-1]) + 1}" if n.startswith("keys[") else TILE_NETS[n]
+        # outputs with series-termination positions: U1 drives Rn.1 on <net>_DRV
+        if variant == "gw1nz" and net in SERIES_DRV_NETS:
+            net += "_DRV"
+        exp[str(pad)] = net
     io_class = {"io", "io_config_shared", "io_gclk"}
     for p, row in db["pins"].items():
         pp = "49" if p in ("EPAD", "Paddle") else p
@@ -241,19 +256,28 @@ def run_checks(variant, pcb, exp, unused):
         n_v12_100n = len(caps.get((variant, "VCC1V2", "100n"), []))
         n_vcc_4u7 = len(caps.get((variant, "VCC", "4u7"), []))
         n_v12_4u7 = len(caps.get((variant, "VCC1V2", "4u7"), []))
+        n_vcc_1u = len(caps.get((variant, "VCC", "1u"), []))
+        n_raw_1u = len(caps.get((variant, "VCC1V2_RAW", "1u"), []))
         raw = sorted(nets.get("VCC1V2_RAW", []))
         ok = (n_vcc_100n >= 3 and n_v12_100n >= 2 and n_vcc_4u7 >= 1 and
-              n_v12_4u7 >= 1 and raw == ["FB1.1", "U2.5"])
+              n_v12_4u7 >= 1 and n_vcc_1u == 1 and n_raw_1u == 1 and
+              raw == ["C8.1", "FB1.1", "U2.5"])
         c("N5", ok, f"100n: VCC x{n_vcc_100n} VCC1V2 x{n_v12_100n}; 4u7: VCC "
-                    f"x{n_vcc_4u7} VCC1V2 x{n_v12_4u7}; VCC1V2_RAW pads={raw} "
-                    f"(want exactly [FB1.1, U2.5] = ferrite series)")
+                    f"x{n_vcc_4u7} VCC1V2 x{n_v12_4u7}; 1u: VCC x{n_vcc_1u} "
+                    f"VCC1V2_RAW x{n_raw_1u}; VCC1V2_RAW pads={raw} "
+                    f"(want exactly [C8.1, FB1.1, U2.5] = LDO COUT cap + "
+                    f"ferrite series)")
     else:
         n_vcc_100n = len(caps.get((variant, "VCC", "100n"), []))
         n_v12_100n = len(caps.get((variant, "VCC1V2", "100n"), []))
+        n_vcc_1u = len(caps.get((variant, "VCC", "1u"), []))
+        n_v12_1u = len(caps.get((variant, "VCC1V2", "1u"), []))
         n_pll = (len(caps.get((variant, "VCCPLL_1V2", "100n"), [])) +
                  len(caps.get((variant, "VCCPLL_1V2", "4u7"), [])))
-        ok = n_vcc_100n >= 4 and n_v12_100n >= 2 and n_pll >= 2
+        ok = (n_vcc_100n >= 4 and n_v12_100n >= 2 and n_pll >= 2 and
+              n_vcc_1u >= 1 and n_v12_1u >= 1)
         c("N5", ok, f"100n: VCC x{n_vcc_100n} VCC1V2 x{n_v12_100n}; "
+                    f"1u: VCC x{n_vcc_1u} VCC1V2 x{n_v12_1u}; "
                     f"VCCPLL caps x{n_pll}")
 
     # N6 sockets + chassis pads
@@ -310,6 +334,25 @@ def run_checks(variant, pcb, exp, unused):
                 f"{[fps[r]['pads'].get('1') for r in PRESENCE_REFS
                     if r in fps]}; required GND nodes missing={missing or '[]'}"
                 + (f"; BAD: {pbad}" if pbad else ""))
+
+    # N10 series-termination split (gw1nz rev-A.2): each of the 5 outputs is
+    # exactly U1.pin --Rn.1, Rn.2-- JP_<net>.1; the pad side keeps the
+    # interface net name, the driver side is <net>_DRV, no other nodes.
+    if variant == "gw1nz":
+        bad = []
+        for base, ref, pin in SERIES_DRV:
+            drv = base + "_DRV"
+            got_drv = sorted(nets.get(drv, []))
+            got_pad = sorted(nets.get(base, []))
+            if got_drv != sorted([f"U1.{pin}", f"{ref}.1"]):
+                bad.append(f"{drv}={got_drv}")
+            if got_pad != sorted([f"JP_{base}.1", f"{ref}.2"]):
+                bad.append(f"{base}={got_pad}")
+        c("N10", not bad, "series-R split R7..R11 exact "
+                          "(U1--Rn.1, Rn.2--JP; DRV nets mirror interface)"
+          if not bad else f"BAD: {bad}")
+    else:
+        c("N10", True, "n/a (series positions are gw1nz-only)")
     return rows
 
 

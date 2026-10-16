@@ -1,0 +1,1084 @@
+{
+ "src": "hardware/experiments/simple-tile/fpga/board/four-layer/out/tile_gw1nz_4l_routed.kicad_pcb",
+ "dst": "hardware/experiments/simple-tile/fpga/board/four-layer/out/tile_gw1nz_4l_repaired.kicad_pcb",
+ "removed_vias": [
+  {
+   "pos": [
+    -7.0143,
+    22.9493
+   ],
+   "net": "T_clk"
+  }
+ ],
+ "pairs": [
+  {
+   "net": "VCC",
+   "uuid": [
+    "97ebb7d1-e9ae-4ef3-9334-62ba7cccd427",
+    "63da1759-78ec-445b-afaf-56d48f159dd0"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 6.1481 mm",
+    "Pad 1 [VCC] of SW9 on B.Cu"
+   ],
+   "dist": 2.15,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "eebd6f31-62b1-4e77-b052-c4dc91d874e4",
+    "e36fb8e0-5f9e-415e-a859-0c23bee28722"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 0.2983 mm",
+    "Track [VCC] on B.Cu, length 0.0707 mm"
+   ],
+   "dist": 1.5643,
+   "result": "repaired",
+   "path": [
+    [
+     -13.015,
+     18.9017
+    ],
+    [
+     -11.49,
+     19.25
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "9cc702b8-a6bb-46bc-9319-ead2df5c3b25",
+    "d7b7bb32-5606-4e99-b191-f9a85b63f76b"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 2.2250 mm",
+    "Track [VCC] on F.Cu, length 3.3716 mm"
+   ],
+   "dist": 5.9539,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "50a146fb-d386-4f47-9661-48db7b4fbd48",
+    "0c7a73ef-9a52-474a-b009-4b80622e4af1"
+   ],
+   "desc": [
+    "Pad 3 [VCC] of U2 on B.Cu",
+    "Track [VCC] on F.Cu, length 2.2097 mm"
+   ],
+   "dist": 1.604,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "0c7a73ef-9a52-474a-b009-4b80622e4af1",
+    "ea73bdfa-95b7-41d7-a227-55eb562cf5ac"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 2.2097 mm",
+    "Pad 1 [VCC] of SW10 on B.Cu"
+   ],
+   "dist": 3.6192,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "08ccdb25-0eca-4c91-bafa-167fafed5f02",
+    "ce238a7c-3f73-4083-8767-69d293b5e406"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 1.5375 mm",
+    "Track [VCC] on B.Cu, length 1.1625 mm"
+   ],
+   "dist": 1.9475,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "9bd6c125-4787-48aa-bb7b-ef28802cae4f",
+    "fe514f34-f881-4c0e-bdeb-be7f26481efa"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 3.0000 mm",
+    "Track [VCC] on B.Cu, length 3.4615 mm"
+   ],
+   "dist": 3.0,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "fc2fec7f-e95f-4368-8f50-38c17fc088c2",
+    "3c1bc3b2-893e-419e-a9cc-4e3b421a811f"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 0.9206 mm",
+    "Track [VCC] on F.Cu, length 0.8485 mm"
+   ],
+   "dist": 0.0,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "bb21e47e-5696-4093-9d4b-262c6b29544b",
+    "38c86c2f-2270-4927-9a9e-4347778fb3cd"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 3.0383 mm",
+    "Pad 1 [VCC] of SW11 on B.Cu"
+   ],
+   "dist": 15.4868,
+   "result": "skip_dist"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "090fad99-5d6b-4cc8-8abe-15f6a3944e60",
+    "3c1bc3b2-893e-419e-a9cc-4e3b421a811f"
+   ],
+   "desc": [
+    "Pad 2 [VCC] of R4 on B.Cu",
+    "Track [VCC] on F.Cu, length 0.8485 mm"
+   ],
+   "dist": 1.3,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "5fd72695-e800-4ffd-86b7-2bed5709ee05",
+    "121bb131-ef8e-4273-bcc7-0fbb51183142"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 1.0416 mm",
+    "Pad 1 [VCC] of SW6 on B.Cu"
+   ],
+   "dist": 3.1916,
+   "result": "repaired",
+   "path": [
+    [
+     2.0949,
+     16.5516
+    ],
+    [
+     2.0949,
+     13.36
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "586aebdd-adf5-41d3-9b2e-dcb76f517db9",
+    "00000000-0000-0000-0000-000000000135"
+   ],
+   "desc": [
+    "Pad 1 [VCC] of C3 on B.Cu",
+    "Pad 36 [VCC] of U1 on B.Cu"
+   ],
+   "dist": 1.496,
+   "result": "repaired",
+   "path": [
+    [
+     3.4347,
+     2.95
+    ],
+    [
+     4.9097,
+     3.2
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "586aebdd-adf5-41d3-9b2e-dcb76f517db9",
+    "7ccb58bf-adee-42e4-aad4-017c9f1baba4"
+   ],
+   "desc": [
+    "Pad 1 [VCC] of C3 on B.Cu",
+    "Pad 1 [VCC] of C2 on B.Cu"
+   ],
+   "dist": 2.4,
+   "result": "repaired",
+   "path": [
+    [
+     3.4347,
+     2.95
+    ],
+    [
+     3.4347,
+     5.35
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "7ccb58bf-adee-42e4-aad4-017c9f1baba4",
+    "00000000-0000-0000-0000-000000000124"
+   ],
+   "desc": [
+    "Pad 1 [VCC] of C2 on B.Cu",
+    "Pad 25 [VCC] of U1 on B.Cu"
+   ],
+   "dist": 2.6904,
+   "result": "failed_collision"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "89566207-0879-4a6c-868e-d55d29747193",
+    "00000000-0000-0000-0000-000000000135"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 5.9000 mm",
+    "Pad 36 [VCC] of U1 on B.Cu"
+   ],
+   "dist": 1.0,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "8a9c32a5-b065-44e7-aea1-311216104d80",
+    "43985be4-2104-4afb-ac7e-3e1a95e2748a"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 1.9452 mm",
+    "Track [VCC] on F.Cu, length 4.8250 mm"
+   ],
+   "dist": 4.825,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "43985be4-2104-4afb-ac7e-3e1a95e2748a",
+    "00000000-0000-0000-0000-000000000124"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 4.8250 mm",
+    "Pad 25 [VCC] of U1 on B.Cu"
+   ],
+   "dist": 4.9275,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "61c9db65-b724-4b36-a682-3860c127efb2",
+    "3b6b8462-bc74-48f0-b692-db02f9210cba"
+   ],
+   "desc": [
+    "Pad 2 [VCC] of R6 on B.Cu",
+    "Pad 1 [VCC] of SW2 on B.Cu"
+   ],
+   "dist": 3.9423,
+   "result": "repaired",
+   "path": [
+    [
+     8.2347,
+     -5.05
+    ],
+    [
+     11.2747,
+     -2.54
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "63016133-f628-4677-8498-3d56ca18fcc9",
+    "e7b41a01-c78a-457c-8a5a-2c93bd03d0e9"
+   ],
+   "desc": [
+    "Pad 1 [VCC] of C1 on B.Cu",
+    "Track [VCC] on B.Cu, length 0.6033 mm"
+   ],
+   "dist": 1.8271,
+   "result": "repaired",
+   "path": [
+    [
+     9.3347,
+     0.95
+    ],
+    [
+     11.1113,
+     1.3766
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "89566207-0879-4a6c-868e-d55d29747193",
+    "86a8ec4f-8f83-4316-aded-43a9851acc8e"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 5.9000 mm",
+    "Track [VCC] on B.Cu, length 0.4265 mm"
+   ],
+   "dist": 6.2089,
+   "result": "skip_dist"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000100",
+    "86a8ec4f-8f83-4316-aded-43a9851acc8e"
+   ],
+   "desc": [
+    "Pad 1 [VCC] of U1 on B.Cu",
+    "Track [VCC] on B.Cu, length 0.4265 mm"
+   ],
+   "dist": 1.3361,
+   "result": "repaired",
+   "path": [
+    [
+     10.8097,
+     3.2
+    ],
+    [
+     11.1113,
+     1.8984
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "3b6b8462-bc74-48f0-b692-db02f9210cba",
+    "e7b41a01-c78a-457c-8a5a-2c93bd03d0e9"
+   ],
+   "desc": [
+    "Pad 1 [VCC] of SW2 on B.Cu",
+    "Track [VCC] on B.Cu, length 0.6033 mm"
+   ],
+   "dist": 3.92,
+   "result": "repaired",
+   "path": [
+    [
+     11.2747,
+     -2.54
+    ],
+    [
+     11.1113,
+     1.3766
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "f9ed335a-f0c8-4a24-b42b-fe5e3b126f90",
+    "851ac658-ccb0-404a-b081-52ed875f0e73"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 1.0253 mm",
+    "Track [VCC] on F.Cu, length 2.7859 mm"
+   ],
+   "dist": 5.1607,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "851ac658-ccb0-404a-b081-52ed875f0e73",
+    "80d986b4-62cc-4b4d-afe4-6bc2e513e189"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 2.7859 mm",
+    "Pad 1 [VCC] of SW3 on B.Cu"
+   ],
+   "dist": 13.3624,
+   "result": "skip_dist"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "2e087aa2-8968-493b-b7cb-445ea5c59d7f",
+    "7841d1c2-a449-4c57-ae33-bcff9aff4700"
+   ],
+   "desc": [
+    "Track [VCC] on F.Cu, length 4.0401 mm",
+    "Pad 1 [VCC] of SW7 on B.Cu"
+   ],
+   "dist": 2.15,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "b58bef1d-7d23-4043-93d6-2a42b038b7c0",
+    "7841d1c2-a449-4c57-ae33-bcff9aff4700"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 8.8952 mm",
+    "Pad 1 [VCC] of SW7 on B.Cu"
+   ],
+   "dist": 17.9144,
+   "result": "skip_dist"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "ef0b959c-9fad-4b13-bf7c-1f730d1830ae",
+    "9de53dc0-285a-449c-9bbe-885c44a4db54"
+   ],
+   "desc": [
+    "Track [VCC] on B.Cu, length 9.9064 mm",
+    "Track [VCC] on B.Cu, length 2.6200 mm"
+   ],
+   "dist": 4.4332,
+   "result": "repaired",
+   "path": [
+    [
+     38.8143,
+     13.36
+    ],
+    [
+     34.7867,
+     15.2126
+    ]
+   ],
+   "layer": "B.Cu"
+  },
+  {
+   "net": "VCC",
+   "uuid": [
+    "30182d9d-f744-437b-888c-e7d3a47f1d59",
+    "fa192d8c-6dac-4c1d-a425-336744c09656"
+   ],
+   "desc": [
+    "Pad 1 [VCC] of SW4 on B.Cu",
+    "Track [VCC] on B.Cu, length 8.8951 mm"
+   ],
+   "dist": 9.1572,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K2",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000109",
+    "ab0ece1a-9b92-4738-aadc-3547777a4de8"
+   ],
+   "desc": [
+    "Pad 10 [K2] of U1 on B.Cu",
+    "Via [K2] on F.Cu - B.Cu"
+   ],
+   "dist": 15.7117,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K7",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000117",
+    "2db57f81-ffd7-4af7-b36f-a2177ebd3660"
+   ],
+   "desc": [
+    "Pad 18 [K7] of U1 on B.Cu",
+    "Track [K7] on B.Cu, length 2.1922 mm"
+   ],
+   "dist": 25.4421,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K8",
+   "uuid": [
+    "35597eab-e8de-4875-bde3-a28bedbe84f4",
+    "00000000-0000-0000-0000-000000000119"
+   ],
+   "desc": [
+    "Via [K8] on F.Cu - B.Cu",
+    "Pad 20 [K8] of U1 on B.Cu"
+   ],
+   "dist": 44.4873,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K9",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000120",
+    "bedb9c01-4a73-4c64-972c-038ca2cd97a1"
+   ],
+   "desc": [
+    "Pad 21 [K9] of U1 on B.Cu",
+    "Via [K9] on F.Cu - B.Cu"
+   ],
+   "dist": 25.5167,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K4",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000112",
+    "b118448f-0c38-4f31-b836-6190f40df1d9"
+   ],
+   "desc": [
+    "Pad 13 [K4] of U1 on B.Cu",
+    "Via [K4] on F.Cu - B.Cu"
+   ],
+   "dist": 50.706,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K12",
+   "uuid": [
+    "1f37ef98-72be-4a46-94e6-1b72c299efa8",
+    "00000000-0000-0000-0000-000000000133"
+   ],
+   "desc": [
+    "Via [K12] on F.Cu - B.Cu",
+    "Pad 34 [K12] of U1 on B.Cu"
+   ],
+   "dist": 43.0839,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K3",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000110",
+    "830790e8-16b2-427e-a408-86f316128b03"
+   ],
+   "desc": [
+    "Pad 11 [K3] of U1 on B.Cu",
+    "Track [K3] on B.Cu, length 2.1951 mm"
+   ],
+   "dist": 32.0484,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K6",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000116",
+    "205cdfd0-3c26-4920-b563-375150f81590"
+   ],
+   "desc": [
+    "Pad 17 [K6] of U1 on B.Cu",
+    "Track [K6] on B.Cu, length 2.1874 mm"
+   ],
+   "dist": 7.0117,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K11",
+   "uuid": [
+    "f6a60670-9eda-4d03-b603-0f5806d332ce",
+    "00000000-0000-0000-0000-000000000132"
+   ],
+   "desc": [
+    "Track [K11] on B.Cu, length 1.7671 mm",
+    "Pad 33 [K11] of U1 on B.Cu"
+   ],
+   "dist": 29.5019,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K10",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000122",
+    "fc3b6330-ad0f-4d16-a3d6-7b96e4053c44"
+   ],
+   "desc": [
+    "Pad 23 [K10] of U1 on B.Cu",
+    "Pad 2 [K10] of SW10 on B.Cu"
+   ],
+   "dist": 18.3713,
+   "result": "skip_dist"
+  },
+  {
+   "net": "K1",
+   "uuid": [
+    "b0eb2656-146d-424d-91e6-684a9c87c253",
+    "00000000-0000-0000-0000-000000000107"
+   ],
+   "desc": [
+    "Pad 2 [K1] of SW1 on B.Cu",
+    "Pad 8 [K1] of U1 on B.Cu"
+   ],
+   "dist": 12.1427,
+   "result": "skip_dist"
+  },
+  {
+   "net": "GND",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000125",
+    "fdff02ef-449d-4beb-99c8-a1cb2d53bc97"
+   ],
+   "desc": [
+    "Pad 26 [GND] of U1 on B.Cu",
+    "Track [GND] on F.Cu, length 5.0111 mm"
+   ],
+   "dist": 4.6547,
+   "result": "skip_layer"
+  },
+  {
+   "net": "GND",
+   "uuid": [
+    "172e8be9-c5fc-4133-b4c8-7be41ba0b347",
+    "45170f53-5415-40b4-8176-a09d634e4c1a"
+   ],
+   "desc": [
+    "Zone [GND] on F.Cu, priority 1",
+    "Zone [GND] on B.Cu, priority 1"
+   ],
+   "dist": 0.0,
+   "result": "skip_layer"
+  },
+  {
+   "net": "GND",
+   "uuid": [
+    "c00b3d21-251c-4a8a-9ec7-3d38333b04e6",
+    "00000000-0000-0000-0000-000000000101"
+   ],
+   "desc": [
+    "Track [GND] on F.Cu, length 2.2131 mm",
+    "Pad 2 [GND] of U1 on B.Cu"
+   ],
+   "dist": 3.7612,
+   "result": "skip_layer"
+  },
+  {
+   "net": "CFG_DONE",
+   "uuid": [
+    "1e83f857-08a1-4988-9a72-e0caa189c9a9",
+    "00000000-0000-0000-0000-000000000145"
+   ],
+   "desc": [
+    "Pad 1 [CFG_DONE] of R5 on B.Cu",
+    "Pad 46 [CFG_DONE] of U1 on B.Cu"
+   ],
+   "dist": 8.5304,
+   "result": "skip_dist"
+  },
+  {
+   "net": "MODE0",
+   "uuid": [
+    "5a117414-b714-46f6-b8e1-bdd03ccf522c",
+    "00000000-0000-0000-0000-000000000142"
+   ],
+   "desc": [
+    "Pad 1 [MODE0] of R1 on B.Cu",
+    "Pad 43 [MODE0] of U1 on B.Cu"
+   ],
+   "dist": 5.018,
+   "result": "failed_collision"
+  },
+  {
+   "net": "CFG_READY",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000144",
+    "fe0ea96f-731a-413e-b162-9bf2c5f3477b"
+   ],
+   "desc": [
+    "Pad 45 [CFG_READY] of U1 on B.Cu",
+    "Track [CFG_READY] on F.Cu, length 4.8151 mm"
+   ],
+   "dist": 8.3043,
+   "result": "skip_dist"
+  },
+  {
+   "net": "JTAGSEL_N",
+   "uuid": [
+    "7050423f-80d9-4c9e-81ea-cb7bc5e7bd8d",
+    "00000000-0000-0000-0000-000000000143"
+   ],
+   "desc": [
+    "Track [JTAGSEL_N] on B.Cu, length 1.0038 mm",
+    "Pad 44 [JTAGSEL_N] of U1 on B.Cu"
+   ],
+   "dist": 10.8726,
+   "result": "skip_dist"
+  },
+  {
+   "net": "T_clk_DRV",
+   "uuid": [
+    "f287de7a-6eac-4614-9149-97744897dd09",
+    "00000000-0000-0000-0000-000000000134"
+   ],
+   "desc": [
+    "Pad 1 [T_clk_DRV] of R7 on B.Cu",
+    "Pad 35 [T_clk_DRV] of U1 on B.Cu"
+   ],
+   "dist": 4.5178,
+   "result": "failed_collision"
+  },
+  {
+   "net": "VCC1V2",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000136",
+    "f2a2214d-0913-472b-9746-b11bb6593a59"
+   ],
+   "desc": [
+    "Pad 37 [VCC1V2] of U1 on B.Cu",
+    "Track [VCC1V2] on F.Cu, length 6.0517 mm"
+   ],
+   "dist": 7.9466,
+   "result": "skip_dist"
+  },
+  {
+   "net": "VCC1V2",
+   "uuid": [
+    "38ab2ff9-4bbd-4ea5-bc80-cd56ca086a15",
+    "9d58002a-c121-4265-806c-b788e31ef4e3"
+   ],
+   "desc": [
+    "Track [VCC1V2] on F.Cu, length 2.6501 mm",
+    "Pad 1 [VCC1V2] of C5 on B.Cu"
+   ],
+   "dist": 5.3193,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC1V2",
+   "uuid": [
+    "17e96ac9-b8d7-45b8-aded-41f6196aeca6",
+    "00000000-0000-0000-0000-000000000136"
+   ],
+   "desc": [
+    "Track [VCC1V2] on F.Cu, length 0.2264 mm",
+    "Pad 37 [VCC1V2] of U1 on B.Cu"
+   ],
+   "dist": 1.6264,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC1V2",
+   "uuid": [
+    "bb1991d5-690e-40ee-afac-fe2c61024f8d",
+    "cc1a60ef-3f6b-4304-9729-5cca03af5814"
+   ],
+   "desc": [
+    "Track [VCC1V2] on F.Cu, length 1.2750 mm",
+    "Pad 2 [VCC1V2] of FB1 on B.Cu"
+   ],
+   "dist": 1.525,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC1V2",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000111",
+    "b06180be-64cc-4a88-aad0-d92d135316f7"
+   ],
+   "desc": [
+    "Pad 12 [VCC1V2] of U1 on B.Cu",
+    "Track [VCC1V2] on F.Cu, length 4.4194 mm"
+   ],
+   "dist": 3.149,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC1V2",
+   "uuid": [
+    "09cc190e-af37-4980-9144-d406dd745528",
+    "b06180be-64cc-4a88-aad0-d92d135316f7"
+   ],
+   "desc": [
+    "Pad 1 [VCC1V2] of C4 on B.Cu",
+    "Track [VCC1V2] on F.Cu, length 4.4194 mm"
+   ],
+   "dist": 1.375,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC1V2",
+   "uuid": [
+    "f75753ee-e326-4744-a85e-3a470e90b818",
+    "b06180be-64cc-4a88-aad0-d92d135316f7"
+   ],
+   "desc": [
+    "Pad 1 [VCC1V2] of C6 on B.Cu",
+    "Track [VCC1V2] on F.Cu, length 4.4194 mm"
+   ],
+   "dist": 1.6936,
+   "result": "skip_layer"
+  },
+  {
+   "net": "T_endcol",
+   "uuid": [
+    "4f5f03eb-e518-436d-bad5-8ba33637ec9c",
+    "00000000-0000-0000-0000-000000000138"
+   ],
+   "desc": [
+    "Pad 1 [T_endcol] of JP_T_endcol on B.Cu",
+    "Pad 39 [T_endcol] of U1 on B.Cu"
+   ],
+   "dist": 20.0832,
+   "result": "skip_dist"
+  },
+  {
+   "net": "L_endrow",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000140",
+    "daeab6ff-b2fb-4de6-b51a-9c0c2a70788b"
+   ],
+   "desc": [
+    "Pad 41 [L_endrow] of U1 on B.Cu",
+    "Pad 1 [L_endrow] of JP_L_endrow on B.Cu"
+   ],
+   "dist": 29.7826,
+   "result": "skip_dist"
+  },
+  {
+   "net": "B_data_DRV",
+   "uuid": [
+    "3d60074d-07b9-4e35-a105-b716ba38827d",
+    "00000000-0000-0000-0000-000000000129"
+   ],
+   "desc": [
+    "Pad 1 [B_data_DRV] of R10 on B.Cu",
+    "Pad 30 [B_data_DRV] of U1 on B.Cu"
+   ],
+   "dist": 4.497,
+   "result": "failed_collision"
+  },
+  {
+   "net": "B_data",
+   "uuid": [
+    "76d3d4ea-2aa8-49df-b926-6bb83bc53a48",
+    "7dc872b7-f9b2-4226-b1a7-bdd57e40a5e6"
+   ],
+   "desc": [
+    "Track [B_data] on B.Cu, length 1.1180 mm",
+    "Pad 2 [B_data] of R10 on B.Cu"
+   ],
+   "dist": 18.3322,
+   "result": "skip_dist"
+  },
+  {
+   "net": "B_first",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000139",
+    "fe0eab45-1675-4cb3-b323-631210f43ae4"
+   ],
+   "desc": [
+    "Pad 40 [B_first] of U1 on B.Cu",
+    "Pad 1 [B_first] of JP_B_first on B.Cu"
+   ],
+   "dist": 20.4409,
+   "result": "skip_dist"
+  },
+  {
+   "net": "L_clk_DRV",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000118",
+    "4adf85e2-0872-46f6-af6b-ef1f03a6c382"
+   ],
+   "desc": [
+    "Pad 19 [L_clk_DRV] of U1 on B.Cu",
+    "Track [L_clk_DRV] on B.Cu, length 0.1080 mm"
+   ],
+   "dist": 7.793,
+   "result": "skip_dist"
+  },
+  {
+   "net": "VCC1V2_RAW",
+   "uuid": [
+    "0e469ac3-2d04-4d44-837d-4769fd45552d",
+    "47c3a589-c889-4c1d-8e32-ae2f01f4f53c"
+   ],
+   "desc": [
+    "Track [VCC1V2_RAW] on F.Cu, length 7.1418 mm",
+    "Pad 5 [VCC1V2_RAW] of U2 on B.Cu"
+   ],
+   "dist": 6.6487,
+   "result": "skip_dist"
+  },
+  {
+   "net": "VCC1V2_RAW",
+   "uuid": [
+    "4ef922d3-5d1a-43a4-81b6-7fc29343c43b",
+    "0e469ac3-2d04-4d44-837d-4769fd45552d"
+   ],
+   "desc": [
+    "Pad 1 [VCC1V2_RAW] of C8 on B.Cu",
+    "Track [VCC1V2_RAW] on F.Cu, length 7.1418 mm"
+   ],
+   "dist": 2.4122,
+   "result": "skip_layer"
+  },
+  {
+   "net": "VCC1V2_RAW",
+   "uuid": [
+    "e17c2404-8ef2-44bb-98f0-47d6a38a175f",
+    "f21d564e-f943-4c70-9e2d-53ed997ce17d"
+   ],
+   "desc": [
+    "Pad 1 [VCC1V2_RAW] of FB1 on B.Cu",
+    "Track [VCC1V2_RAW] on F.Cu, length 0.9522 mm"
+   ],
+   "dist": 1.375,
+   "result": "skip_layer"
+  },
+  {
+   "net": "CFG_RECONFIG",
+   "uuid": [
+    "6d976002-0853-497c-8cd8-356958f9a45f",
+    "00000000-0000-0000-0000-000000000147"
+   ],
+   "desc": [
+    "Pad 1 [CFG_RECONFIG] of R6 on B.Cu",
+    "Pad 48 [CFG_RECONFIG] of U1 on B.Cu"
+   ],
+   "dist": 7.502,
+   "result": "skip_dist"
+  },
+  {
+   "net": "T_W",
+   "uuid": [
+    "c7e6cb0a-4133-4f4c-a103-6e567ef0d1fa",
+    "00000000-0000-0000-0000-000000000137"
+   ],
+   "desc": [
+    "Pad 1 [T_W] of JP_T_W on B.Cu",
+    "Pad 38 [T_W] of U1 on B.Cu"
+   ],
+   "dist": 19.3615,
+   "result": "skip_dist"
+  },
+  {
+   "net": "B_clk",
+   "uuid": [
+    "7f94a445-ba6d-4aa1-aace-aede1cc7873c",
+    "00000000-0000-0000-0000-000000000146"
+   ],
+   "desc": [
+    "Pad 1 [B_clk] of JP_B_clk on B.Cu",
+    "Pad 47 [B_clk] of U1 on B.Cu"
+   ],
+   "dist": 19.4021,
+   "result": "skip_dist"
+  },
+  {
+   "net": "B_W_DRV",
+   "uuid": [
+    "3f412386-e2a3-4e9e-abe2-85d33ed2978f",
+    "00000000-0000-0000-0000-000000000126"
+   ],
+   "desc": [
+    "Via [B_W_DRV] on F.Cu - B.Cu",
+    "Pad 27 [B_W_DRV] of U1 on B.Cu"
+   ],
+   "dist": 4.8357,
+   "result": "failed_collision"
+  },
+  {
+   "net": "JTAG_TCK",
+   "uuid": [
+    "acd33745-128e-4ffa-a13c-49fa33bec311",
+    "00000000-0000-0000-0000-000000000102"
+   ],
+   "desc": [
+    "Track [JTAG_TCK] on B.Cu, length 0.2828 mm",
+    "Pad 3 [JTAG_TCK] of U1 on B.Cu"
+   ],
+   "dist": 6.6502,
+   "result": "skip_dist"
+  },
+  {
+   "net": "B_latch",
+   "uuid": [
+    "003a8c32-0a4c-4aad-8706-68bc29b12b79",
+    "00000000-0000-0000-0000-000000000121"
+   ],
+   "desc": [
+    "Via [B_latch] on F.Cu - B.Cu",
+    "Pad 22 [B_latch] of U1 on B.Cu"
+   ],
+   "dist": 15.0617,
+   "result": "skip_dist"
+  },
+  {
+   "net": "L_latch_DRV",
+   "uuid": [
+    "bb527375-d019-425d-924d-63a5a59fbf87",
+    "00000000-0000-0000-0000-000000000130"
+   ],
+   "desc": [
+    "Pad 1 [L_latch_DRV] of R9 on B.Cu",
+    "Pad 31 [L_latch_DRV] of U1 on B.Cu"
+   ],
+   "dist": 4.5522,
+   "result": "failed_collision"
+  },
+  {
+   "net": "L_data",
+   "uuid": [
+    "00000000-0000-0000-0000-000000000123",
+    "565b3cd6-43fb-4ab3-87b8-29aecde1bd40"
+   ],
+   "desc": [
+    "Pad 24 [L_data] of U1 on B.Cu",
+    "Pad 1 [L_data] of JP_L_data on B.Cu"
+   ],
+   "dist": 24.9478,
+   "result": "skip_dist"
+  },
+  {
+   "net": "T_data",
+   "uuid": [
+    "3267e9d8-9218-4a2b-b204-08fa1ded8b11",
+    "00000000-0000-0000-0000-000000000127"
+   ],
+   "desc": [
+    "Pad 1 [T_data] of JP_T_data on B.Cu",
+    "Pad 28 [T_data] of U1 on B.Cu"
+   ],
+   "dist": 17.0064,
+   "result": "skip_dist"
+  },
+  {
+   "net": "R_latch",
+   "uuid": [
+    "6c30dbc6-0791-47ea-9cf9-5d6783522e07",
+    "00000000-0000-0000-0000-000000000131"
+   ],
+   "desc": [
+    "Via [R_latch] on F.Cu - B.Cu",
+    "Pad 32 [R_latch] of U1 on B.Cu"
+   ],
+   "dist": 34.6887,
+   "result": "skip_dist"
+  },
+  {
+   "net": "MODE1",
+   "uuid": [
+    "4bab892f-859c-4786-ae5c-241869bcd40b",
+    "00000000-0000-0000-0000-000000000141"
+   ],
+   "desc": [
+    "Pad 1 [MODE1] of R2 on B.Cu",
+    "Pad 42 [MODE1] of U1 on B.Cu"
+   ],
+   "dist": 6.5139,
+   "result": "skip_dist"
+  }
+ ],
+ "n_pairs": 74,
+ "n_repaired": 9,
+ "n_skip_dist": 35,
+ "n_skip_layer": 24,
+ "n_skip_mixednet": 7,
+ "n_skip_item": 0,
+ "n_failed_collision": 6,
+ "removed_count": 1
+}

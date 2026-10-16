@@ -63,8 +63,20 @@ IO_LOC "b_latch_pin"  22; IO_PORT "b_latch_pin"  PULL_MODE=DOWN;
 IO_LOC "r_latch_pin"  32; IO_PORT "r_latch_pin"  PULL_MODE=DOWN;
 
 // outputs (t_clk/l_clk are true tri-state TBUF, verified by the fpga flow)
-IO_LOC "t_clk_pin"  35;
-IO_LOC "l_clk_pin"  19;
-IO_LOC "latcho_pin" 31;
-IO_LOC "dout_pin"   30;
-IO_LOC "b_w_pin"    27;
+// Termination decision (2026-10-14, docs/termination.md): the certified
+// 19-contact frame is KEPT (merged forward-driven outputs on one board
+// net each). DRIVE=2 / SLEW_RATE=SLOW below are UNVERIFIED VENDOR HINTS:
+// spelled per SUG935 A.2 (documented form is SLEW_RATE), syntactically
+// valid Gowin cst, but NO Gowin-EDA run has ever been executed here, so
+// whether the vendor flow honors them is UNVERIFIED. Evidence (2026-10-14)
+// about the OSS flow only: nextpnr-himbaechel (oss-cad-suite 2026-09-26)
+// silently ignores these attributes - A/B runs differing only in
+// DRIVE=2/SLOW vs DRIVE=24/FAST yield byte-identical .fs, and the libexec
+// binary contains no slew-attribute string. With the OSS flow the pads
+// therefore run at silicon-default drive/slew; ringing margin on the
+// unterminated chassis runs is bench-gated (B2, docs/termination.md).
+IO_LOC "t_clk_pin"  35; IO_PORT "t_clk_pin"  IO_TYPE=LVCMOS33 DRIVE=2 SLEW_RATE=SLOW;
+IO_LOC "l_clk_pin"  19; IO_PORT "l_clk_pin"  IO_TYPE=LVCMOS33 DRIVE=2 SLEW_RATE=SLOW;
+IO_LOC "latcho_pin" 31; IO_PORT "latcho_pin" IO_TYPE=LVCMOS33 DRIVE=2 SLEW_RATE=SLOW;
+IO_LOC "dout_pin"   30; IO_PORT "dout_pin"   IO_TYPE=LVCMOS33 DRIVE=2 SLEW_RATE=SLOW;
+IO_LOC "b_w_pin"    27; IO_PORT "b_w_pin"    IO_TYPE=LVCMOS33 DRIVE=2 SLEW_RATE=SLOW;

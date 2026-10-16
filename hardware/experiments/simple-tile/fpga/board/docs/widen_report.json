@@ -1,0 +1,1987 @@
+{
+ "tool": "widen_check.py",
+ "width_basis": "docs/netclasses.json class rules; floor 0.2 mm all classes, 0.5 mm power",
+ "ledger_precedent": "discrete fix_routed.py: freerouting emits below-rule widths with 0 violations scored",
+ "arms": [
+  {
+   "id": "bare",
+   "ses": "out/route/tile_gw1nz.ses",
+   "ses_sha256_12": "fa54ef9b0920",
+   "nets_with_wire": 25,
+   "wire_paths": 106,
+   "widen_paths": 7,
+   "sub_rule_paths": 0,
+   "widen_list": [
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -7.6275,
+      -25.2
+     ],
+     "n_points": 3,
+     "length_mm": 1.288
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -13.2645,
+      -20.5512
+     ],
+     "n_points": 2,
+     "length_mm": 0.225
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -9.0194,
+      -25.1667
+     ],
+     "n_points": 2,
+     "length_mm": 0.086
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      2.647,
+      -10.2257
+     ],
+     "n_points": 3,
+     "length_mm": 0.489
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7892,
+      -24.8495
+     ],
+     "n_points": 3,
+     "length_mm": 0.186
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7286,
+      -24.4492
+     ],
+     "n_points": 3,
+     "length_mm": 1.184
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7408,
+      -25.7995
+     ],
+     "n_points": 3,
+     "length_mm": 0.492
+    }
+   ],
+   "sub_rule_list": [],
+   "routed_lengths_by_net": {
+    "B_W": {
+     "routed_mm_partial": 32.128,
+     "mst_budget_mm": 30.74,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_clk": {
+     "routed_mm_partial": 1.774,
+     "mst_budget_mm": 21.67,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_data": {
+     "routed_mm_partial": 25.127,
+     "mst_budget_mm": 26.94,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_DONE": {
+     "routed_mm_partial": 5.228,
+     "mst_budget_mm": 15.55,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_READY": {
+     "routed_mm_partial": 17.64,
+     "mst_budget_mm": 34.3,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_RECONFIG": {
+     "routed_mm_partial": 27.048,
+     "mst_budget_mm": 24.68,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "GND": {
+     "routed_mm_partial": 59.664,
+     "mst_budget_mm": 110.27,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TCK": {
+     "routed_mm_partial": 12.045,
+     "mst_budget_mm": 19.0,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K1": {
+     "routed_mm_partial": 4.596,
+     "mst_budget_mm": 16.05,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K11": {
+     "routed_mm_partial": 2.197,
+     "mst_budget_mm": 41.61,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K12": {
+     "routed_mm_partial": 2.189,
+     "mst_budget_mm": 60.37,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K4": {
+     "routed_mm_partial": 2.198,
+     "mst_budget_mm": 64.29,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K5": {
+     "routed_mm_partial": 5.019,
+     "mst_budget_mm": 14.67,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K7": {
+     "routed_mm_partial": 1.76,
+     "mst_budget_mm": 27.79,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K8": {
+     "routed_mm_partial": 2.185,
+     "mst_budget_mm": 46.95,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K9": {
+     "routed_mm_partial": 1.775,
+     "mst_budget_mm": 37.75,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_clk": {
+     "routed_mm_partial": 15.615,
+     "mst_budget_mm": 19.19,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_clk_DRV": {
+     "routed_mm_partial": 0.793,
+     "mst_budget_mm": 11.01,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_data": {
+     "routed_mm_partial": 1.933,
+     "mst_budget_mm": 34.43,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_endrow": {
+     "routed_mm_partial": 2.484,
+     "mst_budget_mm": 41.98,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_latch": {
+     "routed_mm_partial": 44.394,
+     "mst_budget_mm": 51.09,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "T_clk": {
+     "routed_mm_partial": 21.05,
+     "mst_budget_mm": 23.76,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC": {
+     "routed_mm_partial": 199.213,
+     "mst_budget_mm": 229.7,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2": {
+     "routed_mm_partial": 34.573,
+     "mst_budget_mm": 36.75,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2_RAW": {
+     "routed_mm_partial": 41.433,
+     "mst_budget_mm": 44.44,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    }
+   },
+   "routed_over_budget_partial_max": 1.096
+  },
+  {
+   "id": "dead_end_stubs",
+   "ses": "out/route/tile_gw1nz_fanout.ses",
+   "ses_sha256_12": "9319e5841c61",
+   "nets_with_wire": 28,
+   "wire_paths": 191,
+   "widen_paths": 63,
+   "sub_rule_paths": 0,
+   "widen_list": [
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      4.9847,
+      2.55
+     ],
+     "n_points": 2,
+     "length_mm": 0.011
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -10.9135,
+      -20.5976
+     ],
+     "n_points": 2,
+     "length_mm": 0.104
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 300.0,
+     "required_um": 500.0,
+     "start": [
+      -11.54,
+      -20.564
+     ],
+     "n_points": 3,
+     "length_mm": 0.64
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -12.154,
+      -20.564
+     ],
+     "n_points": 2,
+     "length_mm": 0.614
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      4.9097,
+      -7.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.025
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      1.8347,
+      -7.45
+     ],
+     "n_points": 2,
+     "length_mm": 1.0
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      7.7847,
+      -0.95
+     ],
+     "n_points": 2,
+     "length_mm": 1.05
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -13.04,
+      -21.45
+     ],
+     "n_points": 2,
+     "length_mm": 1.05
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -14.49,
+      -19.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.175
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      5.9847,
+      2.55
+     ],
+     "n_points": 2,
+     "length_mm": 1.0
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -7.6275,
+      -25.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.262
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      12.3347,
+      -7.6
+     ],
+     "n_points": 2,
+     "length_mm": 1.175
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      1.8847,
+      -5.35
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      7.3847,
+      0.8
+     ],
+     "n_points": 2,
+     "length_mm": 1.05
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      3.235,
+      -33.95
+     ],
+     "n_points": 2,
+     "length_mm": 1.1
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      1.8847,
+      -2.95
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      12.2847,
+      -5.35
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      10.8097,
+      -3.6
+     ],
+     "n_points": 2,
+     "length_mm": 1.025
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      15.4847,
+      -3.25
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -9.54,
+      -19.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.05
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -7.4812,
+      -22.4744
+     ],
+     "n_points": 2,
+     "length_mm": 0.818
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -6.9027,
+      -23.1531
+     ],
+     "n_points": 2,
+     "length_mm": 0.023
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.6076,
+      -24.4492
+     ],
+     "n_points": 3,
+     "length_mm": 1.063
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -9.0629,
+      -25.1232
+     ],
+     "n_points": 3,
+     "length_mm": 0.858
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7408,
+      -25.7995
+     ],
+     "n_points": 3,
+     "length_mm": 0.492
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -11.54,
+      -19.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.175
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -6.935,
+      2.54
+     ],
+     "n_points": 2,
+     "length_mm": 1.85
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      11.2747,
+      2.54
+     ],
+     "n_points": 2,
+     "length_mm": 1.875
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -16.1149,
+      -13.36
+     ],
+     "n_points": 2,
+     "length_mm": 1.85
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      20.4546,
+      -13.36
+     ],
+     "n_points": 2,
+     "length_mm": 1.85
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      4.9097,
+      -3.2
+     ],
+     "n_points": 2,
+     "length_mm": 0.7
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      8.2347,
+      5.05
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      29.6345,
+      -29.26
+     ],
+     "n_points": 2,
+     "length_mm": 1.875
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      10.8097,
+      -3.2
+     ],
+     "n_points": 2,
+     "length_mm": 0.7
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -7.6275,
+      -24.25
+     ],
+     "n_points": 2,
+     "length_mm": 1.262
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      3.4347,
+      -2.95
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -25.2947,
+      -29.26
+     ],
+     "n_points": 2,
+     "length_mm": 1.85
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      38.8143,
+      -13.36
+     ],
+     "n_points": 2,
+     "length_mm": 1.875
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      47.9942,
+      2.54
+     ],
+     "n_points": 2,
+     "length_mm": 1.875
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      29.6345,
+      2.54
+     ],
+     "n_points": 2,
+     "length_mm": 1.875
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      2.0949,
+      -13.36
+     ],
+     "n_points": 2,
+     "length_mm": 1.85
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -7.6275,
+      -26.15
+     ],
+     "n_points": 2,
+     "length_mm": 0.9
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      9.3347,
+      -0.95
+     ],
+     "n_points": 2,
+     "length_mm": 1.05
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      15.6847,
+      -5.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      11.2747,
+      -29.26
+     ],
+     "n_points": 2,
+     "length_mm": 1.875
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -6.015,
+      -18.7
+     ],
+     "n_points": 2,
+     "length_mm": 1.1
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -11.49,
+      -21.45
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      0.7847,
+      -9.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.0
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -7.085,
+      -29.26
+     ],
+     "n_points": 2,
+     "length_mm": 1.875
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      3.4347,
+      -5.35
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      4.9097,
+      -7.6
+     ],
+     "n_points": 2,
+     "length_mm": 0.7
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -3.4903,
+      -5.4
+     ],
+     "n_points": 2,
+     "length_mm": 0.002
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      12.2347,
+      -3.6
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      13.8347,
+      -5.35
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      10.8097,
+      -7.6
+     ],
+     "n_points": 2,
+     "length_mm": 0.7
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      15.2847,
+      -7.6
+     ],
+     "n_points": 2,
+     "length_mm": 1.175
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      5.6597,
+      -2.45
+     ],
+     "n_points": 2,
+     "length_mm": 1.025
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -2.3903,
+      -5.4
+     ],
+     "n_points": 2,
+     "length_mm": 1.1
+    },
+    {
+     "net": "VCC1V2",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      8.9347,
+      0.8
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    },
+    {
+     "net": "VCC1V2_RAW",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      13.8847,
+      -2.525
+     ],
+     "n_points": 2,
+     "length_mm": 0.002
+    },
+    {
+     "net": "VCC1V2_RAW",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -7.99,
+      -19.2
+     ],
+     "n_points": 2,
+     "length_mm": 1.05
+    },
+    {
+     "net": "VCC1V2_RAW",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      -9.9025,
+      -24.25
+     ],
+     "n_points": 2,
+     "length_mm": 1.262
+    },
+    {
+     "net": "VCC1V2_RAW",
+     "class": "power",
+     "layer": "F.Cu",
+     "width_um": 200.0,
+     "required_um": 500.0,
+     "start": [
+      13.8847,
+      -3.6
+     ],
+     "n_points": 2,
+     "length_mm": 1.075
+    }
+   ],
+   "sub_rule_list": [],
+   "routed_lengths_by_net": {
+    "B_clk": {
+     "routed_mm_partial": 2.01,
+     "mst_budget_mm": 21.67,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_data": {
+     "routed_mm_partial": 25.694,
+     "mst_budget_mm": 26.94,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_latch": {
+     "routed_mm_partial": 1.786,
+     "mst_budget_mm": 23.88,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_DONE": {
+     "routed_mm_partial": 5.793,
+     "mst_budget_mm": 15.55,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_READY": {
+     "routed_mm_partial": 17.64,
+     "mst_budget_mm": 34.3,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_RECONFIG": {
+     "routed_mm_partial": 27.043,
+     "mst_budget_mm": 24.68,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "GND": {
+     "routed_mm_partial": 113.4,
+     "mst_budget_mm": 110.27,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAGSEL_N": {
+     "routed_mm_partial": 1.038,
+     "mst_budget_mm": 11.55,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TCK": {
+     "routed_mm_partial": 12.027,
+     "mst_budget_mm": 19.0,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TDI": {
+     "routed_mm_partial": 5.6,
+     "mst_budget_mm": 14.8,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TDO": {
+     "routed_mm_partial": 1.329,
+     "mst_budget_mm": 8.35,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K1": {
+     "routed_mm_partial": 3.764,
+     "mst_budget_mm": 16.05,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K10": {
+     "routed_mm_partial": 2.193,
+     "mst_budget_mm": 18.59,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K11": {
+     "routed_mm_partial": 9.56,
+     "mst_budget_mm": 41.61,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K12": {
+     "routed_mm_partial": 2.185,
+     "mst_budget_mm": 60.37,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K4": {
+     "routed_mm_partial": 2.212,
+     "mst_budget_mm": 64.29,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K5": {
+     "routed_mm_partial": 1.962,
+     "mst_budget_mm": 14.67,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K6": {
+     "routed_mm_partial": 2.533,
+     "mst_budget_mm": 9.03,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K7": {
+     "routed_mm_partial": 1.768,
+     "mst_budget_mm": 27.79,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K8": {
+     "routed_mm_partial": 1.77,
+     "mst_budget_mm": 46.95,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K9": {
+     "routed_mm_partial": 2.202,
+     "mst_budget_mm": 37.75,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_clk": {
+     "routed_mm_partial": 15.589,
+     "mst_budget_mm": 19.19,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_latch": {
+     "routed_mm_partial": 1.754,
+     "mst_budget_mm": 51.09,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "T_clk": {
+     "routed_mm_partial": 25.555,
+     "mst_budget_mm": 23.76,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "T_clk_DRV": {
+     "routed_mm_partial": 2.293,
+     "mst_budget_mm": 4.99,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC": {
+     "routed_mm_partial": 239.019,
+     "mst_budget_mm": 229.7,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2": {
+     "routed_mm_partial": 29.635,
+     "mst_budget_mm": 36.75,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2_RAW": {
+     "routed_mm_partial": 6.846,
+     "mst_budget_mm": 44.44,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    }
+   },
+   "routed_over_budget_partial_max": 1.096
+  },
+  {
+   "id": "four_l_planes",
+   "ses": "out/route/tile_gw1nz_4l.ses",
+   "ses_sha256_12": "9faa9cf2fd22",
+   "nets_with_wire": 34,
+   "wire_paths": 98,
+   "widen_paths": 9,
+   "sub_rule_paths": 1,
+   "widen_list": [
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -13.04,
+      -20.5512
+     ],
+     "n_points": 2,
+     "length_mm": 1.5
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -13.2645,
+      -20.5512
+     ],
+     "n_points": 2,
+     "length_mm": 0.225
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -10.9135,
+      -20.5976
+     ],
+     "n_points": 2,
+     "length_mm": 0.104
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 300.0,
+     "required_um": 500.0,
+     "start": [
+      -11.54,
+      -20.5512
+     ],
+     "n_points": 3,
+     "length_mm": 0.646
+    },
+    {
+     "net": "K5",
+     "class": "keys",
+     "layer": "B.Cu",
+     "width_um": 150.0,
+     "required_um": 200.0,
+     "start": [
+      8.8597,
+      -8.35
+     ],
+     "n_points": 3,
+     "length_mm": 0.928
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -12.3924,
+      -18.0058
+     ],
+     "n_points": 3,
+     "length_mm": 1.547
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7892,
+      -24.8495
+     ],
+     "n_points": 3,
+     "length_mm": 0.186
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7286,
+      -24.4492
+     ],
+     "n_points": 3,
+     "length_mm": 1.184
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7408,
+      -25.7995
+     ],
+     "n_points": 3,
+     "length_mm": 0.492
+    }
+   ],
+   "sub_rule_list": [
+    {
+     "net": "K5",
+     "class": "keys",
+     "layer": "B.Cu",
+     "width_um": 150.0,
+     "required_um": 200.0,
+     "start": [
+      8.8597,
+      -8.35
+     ],
+     "n_points": 3,
+     "length_mm": 0.928
+    }
+   ],
+   "routed_lengths_by_net": {
+    "B_W": {
+     "routed_mm_partial": 27.541,
+     "mst_budget_mm": 30.74,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_W_DRV": {
+     "routed_mm_partial": 1.884,
+     "mst_budget_mm": 7.49,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_clk": {
+     "routed_mm_partial": 7.526,
+     "mst_budget_mm": 21.67,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_data": {
+     "routed_mm_partial": 24.683,
+     "mst_budget_mm": 26.94,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_latch": {
+     "routed_mm_partial": 2.027,
+     "mst_budget_mm": 23.88,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_DONE": {
+     "routed_mm_partial": 5.043,
+     "mst_budget_mm": 15.55,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_READY": {
+     "routed_mm_partial": 17.698,
+     "mst_budget_mm": 34.3,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_RECONFIG": {
+     "routed_mm_partial": 1.068,
+     "mst_budget_mm": 24.68,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "GND": {
+     "routed_mm_partial": 31.046,
+     "mst_budget_mm": 110.27,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAGSEL_N": {
+     "routed_mm_partial": 1.16,
+     "mst_budget_mm": 11.55,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TCK": {
+     "routed_mm_partial": 13.851,
+     "mst_budget_mm": 19.0,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TDI": {
+     "routed_mm_partial": 1.814,
+     "mst_budget_mm": 14.8,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K1": {
+     "routed_mm_partial": 2.27,
+     "mst_budget_mm": 16.05,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K10": {
+     "routed_mm_partial": 2.187,
+     "mst_budget_mm": 18.59,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K11": {
+     "routed_mm_partial": 1.755,
+     "mst_budget_mm": 41.61,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K12": {
+     "routed_mm_partial": 2.05,
+     "mst_budget_mm": 60.37,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K2": {
+     "routed_mm_partial": 2.203,
+     "mst_budget_mm": 25.27,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K3": {
+     "routed_mm_partial": 2.195,
+     "mst_budget_mm": 44.03,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K4": {
+     "routed_mm_partial": 2.212,
+     "mst_budget_mm": 64.29,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K5": {
+     "routed_mm_partial": 14.145,
+     "mst_budget_mm": 14.67,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K6": {
+     "routed_mm_partial": 2.199,
+     "mst_budget_mm": 9.03,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K7": {
+     "routed_mm_partial": 2.192,
+     "mst_budget_mm": 27.79,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K8": {
+     "routed_mm_partial": 1.77,
+     "mst_budget_mm": 46.95,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K9": {
+     "routed_mm_partial": 1.765,
+     "mst_budget_mm": 37.75,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_clk": {
+     "routed_mm_partial": 14.978,
+     "mst_budget_mm": 19.19,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_data": {
+     "routed_mm_partial": 1.762,
+     "mst_budget_mm": 34.43,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_endrow": {
+     "routed_mm_partial": 2.031,
+     "mst_budget_mm": 41.98,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_latch": {
+     "routed_mm_partial": 48.801,
+     "mst_budget_mm": 51.09,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "R_latch": {
+     "routed_mm_partial": 1.756,
+     "mst_budget_mm": 48.48,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "T_clk": {
+     "routed_mm_partial": 24.42,
+     "mst_budget_mm": 23.76,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "T_data": {
+     "routed_mm_partial": 1.763,
+     "mst_budget_mm": 22.72,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC": {
+     "routed_mm_partial": 150.28,
+     "mst_budget_mm": 229.7,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2": {
+     "routed_mm_partial": 5.263,
+     "mst_budget_mm": 36.75,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2_RAW": {
+     "routed_mm_partial": 40.469,
+     "mst_budget_mm": 44.44,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    }
+   },
+   "routed_over_budget_partial_max": 1.028
+  },
+  {
+   "id": "four_l_attach_vias",
+   "ses": "out/route/tile_gw1nz_4l_attach.ses",
+   "ses_sha256_12": "0a65642d22fe",
+   "nets_with_wire": 29,
+   "wire_paths": 115,
+   "widen_paths": 12,
+   "sub_rule_paths": 2,
+   "widen_list": [
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      7.009,
+      1.6599
+     ],
+     "n_points": 3,
+     "length_mm": 0.476
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -10.9135,
+      -20.5976
+     ],
+     "n_points": 2,
+     "length_mm": 0.104
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 300.0,
+     "required_um": 500.0,
+     "start": [
+      -11.54,
+      -20.564
+     ],
+     "n_points": 3,
+     "length_mm": 0.64
+    },
+    {
+     "net": "GND",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -12.154,
+      -20.564
+     ],
+     "n_points": 2,
+     "length_mm": 0.614
+    },
+    {
+     "net": "L_clk",
+     "class": "edge_critical",
+     "layer": "B.Cu",
+     "width_um": 150.0,
+     "required_um": 200.0,
+     "start": [
+      12.8347,
+      -16.7766
+     ],
+     "n_points": 3,
+     "length_mm": 1.515
+    },
+    {
+     "net": "L_clk_DRV",
+     "class": "edge_critical",
+     "layer": "B.Cu",
+     "width_um": 150.0,
+     "required_um": 200.0,
+     "start": [
+      7.6597,
+      -9.0769
+     ],
+     "n_points": 2,
+     "length_mm": 0.727
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -12.4701,
+      -17.9795
+     ],
+     "n_points": 3,
+     "length_mm": 1.606
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -9.0115,
+      -25.1746
+     ],
+     "n_points": 2,
+     "length_mm": 0.314
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7892,
+      -24.7994
+     ],
+     "n_points": 3,
+     "length_mm": 0.136
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -7.7173,
+      -24.25
+     ],
+     "n_points": 2,
+     "length_mm": 0.09
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7286,
+      -24.4492
+     ],
+     "n_points": 3,
+     "length_mm": 1.057
+    },
+    {
+     "net": "VCC",
+     "class": "power",
+     "layer": "B.Cu",
+     "width_um": 375.0,
+     "required_um": 500.0,
+     "start": [
+      -8.7408,
+      -25.7995
+     ],
+     "n_points": 3,
+     "length_mm": 0.492
+    }
+   ],
+   "sub_rule_list": [
+    {
+     "net": "L_clk",
+     "class": "edge_critical",
+     "layer": "B.Cu",
+     "width_um": 150.0,
+     "required_um": 200.0,
+     "start": [
+      12.8347,
+      -16.7766
+     ],
+     "n_points": 3,
+     "length_mm": 1.515
+    },
+    {
+     "net": "L_clk_DRV",
+     "class": "edge_critical",
+     "layer": "B.Cu",
+     "width_um": 150.0,
+     "required_um": 200.0,
+     "start": [
+      7.6597,
+      -9.0769
+     ],
+     "n_points": 2,
+     "length_mm": 0.727
+    }
+   ],
+   "routed_lengths_by_net": {
+    "B_W": {
+     "routed_mm_partial": 27.548,
+     "mst_budget_mm": 30.74,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_data": {
+     "routed_mm_partial": 23.125,
+     "mst_budget_mm": 26.94,
+     "class": "level_out",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "B_first": {
+     "routed_mm_partial": 2.058,
+     "mst_budget_mm": 26.13,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_DONE": {
+     "routed_mm_partial": 5.048,
+     "mst_budget_mm": 15.55,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_READY": {
+     "routed_mm_partial": 17.719,
+     "mst_budget_mm": 34.3,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "CFG_RECONFIG": {
+     "routed_mm_partial": 27.929,
+     "mst_budget_mm": 24.68,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "GND": {
+     "routed_mm_partial": 34.308,
+     "mst_budget_mm": 110.27,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAGSEL_N": {
+     "routed_mm_partial": 1.012,
+     "mst_budget_mm": 11.55,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TCK": {
+     "routed_mm_partial": 12.184,
+     "mst_budget_mm": 19.0,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "JTAG_TDI": {
+     "routed_mm_partial": 1.049,
+     "mst_budget_mm": 14.8,
+     "class": "config",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K1": {
+     "routed_mm_partial": 2.185,
+     "mst_budget_mm": 16.05,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K10": {
+     "routed_mm_partial": 17.129,
+     "mst_budget_mm": 18.59,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K11": {
+     "routed_mm_partial": 1.755,
+     "mst_budget_mm": 41.61,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K12": {
+     "routed_mm_partial": 1.778,
+     "mst_budget_mm": 60.37,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K2": {
+     "routed_mm_partial": 2.203,
+     "mst_budget_mm": 25.27,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K3": {
+     "routed_mm_partial": 2.215,
+     "mst_budget_mm": 44.03,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K4": {
+     "routed_mm_partial": 2.212,
+     "mst_budget_mm": 64.29,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K5": {
+     "routed_mm_partial": 2.123,
+     "mst_budget_mm": 14.67,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K7": {
+     "routed_mm_partial": 2.204,
+     "mst_budget_mm": 27.79,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K8": {
+     "routed_mm_partial": 1.779,
+     "mst_budget_mm": 46.95,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "K9": {
+     "routed_mm_partial": 1.778,
+     "mst_budget_mm": 37.75,
+     "class": "keys",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_clk": {
+     "routed_mm_partial": 15.754,
+     "mst_budget_mm": 19.19,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_clk_DRV": {
+     "routed_mm_partial": 8.451,
+     "mst_budget_mm": 11.01,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_data": {
+     "routed_mm_partial": 1.77,
+     "mst_budget_mm": 34.43,
+     "class": "channel_in",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "L_latch": {
+     "routed_mm_partial": 2.648,
+     "mst_budget_mm": 51.09,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "T_clk": {
+     "routed_mm_partial": 23.551,
+     "mst_budget_mm": 23.76,
+     "class": "edge_critical",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC": {
+     "routed_mm_partial": 176.927,
+     "mst_budget_mm": 229.7,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2": {
+     "routed_mm_partial": 5.6,
+     "mst_budget_mm": 36.75,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    },
+    "VCC1V2_RAW": {
+     "routed_mm_partial": 44.027,
+     "mst_budget_mm": 44.44,
+     "class": "power",
+     "note": "SES paths are per-part routed so far; net incomplete per ses_import_check --full"
+    }
+   },
+   "routed_over_budget_partial_max": 1.132
+  }
+ ]
+}

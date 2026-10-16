@@ -1,0 +1,23 @@
+{
+ "tool": "dsn_4l_probe.py",
+ "src": "out/route/tile_gw1nz_classes.dsn",
+ "src_sha256_12": "1e048bf5b7b8",
+ "out": "out/route/tile_gw1nz_4l.dsn",
+ "out_sha256_12": "a10a2b294073",
+ "edits": [
+  "layer_stack",
+  "planes",
+  "via_struct_ref",
+  "via_padstack",
+  "via_use_refs"
+ ],
+ "planes": {
+  "In1.Cu": "GND",
+  "In2.Cu": "VCC1V2"
+ },
+ "inverse_identity": true,
+ "nets_equal": true,
+ "nets": 45,
+ "classes_block_count": 6,
+ "fixture_pattern": "discrete-spld/layout/tile_variant_a_4l.dsn"
+}

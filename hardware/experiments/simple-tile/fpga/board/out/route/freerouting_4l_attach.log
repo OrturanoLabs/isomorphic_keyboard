@@ -1,0 +1,149 @@
+[resource_guard] WARNING DELEGATION: podman containers run in their own cgroup, outside this wrapper's hard caps (only the client is capped). Container-side limits present (--memory --memory-swap --cpus --pids-limit); relying on those.
+[resource_guard] single-job lock acquired: /tmp/opencode/isomorphic-resource-guard.lock
+[resource_guard] admitted: MemAvailable=7259 MiB (need >= 6144), SwapFree=2 MiB, psi_some_avg10=0.00
+[resource_guard] systemd scope rg-749967-31151c: caps=MemoryMax=2048M,MemorySwapMax=0,CPUQuota=100%,TasksMax=256,TimeoutStopSec=5; stop_escalation=5s
+2026-10-15 22:45:05.955 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-10-15 22:45:07.785 INFO   [508444\E95D50] Loading board file 'tile_gw1nz_4l_attach.dsn'...
+2026-10-15 22:45:08.230 INFO   [508444\E95D50] Job '508444\E95D50' started at 2026-10-15T22:45:08.229982750Z.
+2026-10-15 22:45:08.456 INFO   New version available: v2.5.0
+2026-10-15 22:45:08.815 INFO   [508444\E95D50] Fanout stage started on board 'f86e6cdef37631ee3c25731197c02aa5' with 144 of 150 SMD pins needing fanout (0 already connected, 6 netless).
+2026-10-15 22:45:17.367 INFO   [508444\E95D50] Fanout pass #1 on board '2c2cfd2141d1aa36150b74c87a622b42' completed in 8.37 seconds with 94 SMD pins fanouted, 33 not routed, 0 insert errors, +65 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-10-15 22:45:21.796 INFO   [508444\E95D50] Fanout pass #2 on board '699ebe88a233764a0f4afb6c6db30f5b' completed in 4.38 seconds with 35 SMD pins fanouted, 28 not routed, 0 insert errors, +11 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-10-15 22:45:25.240 INFO   [508444\E95D50] Fanout pass #3 on board 'a86e0c51ea5c04c5045b9454578a75f9' completed in 3.39 seconds with 21 SMD pins fanouted, 29 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-10-15 22:45:28.373 INFO   [508444\E95D50] Fanout pass #4 on board 'a14d30757e79032a229291421dce21b6' completed in 3.09 seconds with 21 SMD pins fanouted, 27 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-10-15 22:45:30.566 INFO   [508444\E95D50] Fanout pass #5 on board '267e4f3156a06fba2d7ec3b79b30ac1e' completed in 2.16 seconds with 14 SMD pins fanouted, 28 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=500).
+2026-10-15 22:45:32.616 INFO   [508444\E95D50] Fanout pass #6 on board '7ace82519961e028e98a7841287c532d' completed in 2.02 seconds with 12 SMD pins fanouted, 29 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=600).
+2026-10-15 22:45:35.071 INFO   [508444\E95D50] Fanout pass #7 on board '8238cf205416783eff0b724ac3911553' completed in 2.40 seconds with 17 SMD pins fanouted, 29 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=700).
+2026-10-15 22:45:37.413 INFO   [508444\E95D50] Fanout pass #8 on board '5cc9b0674a6546a27cbdd6bee71003f8' completed in 2.31 seconds with 18 SMD pins fanouted, 26 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=800).
+2026-10-15 22:45:39.625 INFO   [508444\E95D50] Fanout pass #9 on board '0c99525c3ca8a4d7907353d634e36af1' completed in 2.18 seconds with 14 SMD pins fanouted, 26 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=900).
+2026-10-15 22:45:41.865 INFO   [508444\E95D50] Fanout pass #10 on board 'c951d1638739b8be4bcfb17260ca748b' completed in 2.21 seconds with 14 SMD pins fanouted, 26 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=1000).
+2026-10-15 22:45:43.929 INFO   [508444\E95D50] Fanout pass #11 on board '5e38196b08fe8c7ec474641cd7a1ab70' completed in 2.02 seconds with 11 SMD pins fanouted, 27 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1100).
+2026-10-15 22:45:45.828 INFO   [508444\E95D50] Fanout pass #12 on board '20973f2ac65ade53019a25d1c87f2f4f' completed in 1.87 seconds with 11 SMD pins fanouted, 26 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=1200).
+2026-10-15 22:45:47.662 INFO   [508444\E95D50] Fanout pass #13 on board '86b44c7a6f338c11e6c4b4d89765e9f3' completed in 1.80 seconds with 10 SMD pins fanouted, 27 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1300).
+2026-10-15 22:45:49.563 INFO   [508444\E95D50] Fanout pass #14 on board '3285ed15f4022a35160f5940d9f6711f' completed in 1.87 seconds with 11 SMD pins fanouted, 26 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=1400).
+2026-10-15 22:45:51.376 INFO   [508444\E95D50] Fanout pass #15 on board '0217267f273173bd56791277fce9ea45' completed in 1.79 seconds with 10 SMD pins fanouted, 27 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1500).
+2026-10-15 22:45:53.195 INFO   [508444\E95D50] Fanout pass #16 on board '182a51fd7f759dbe483f83ae72d9779c' completed in 1.79 seconds with 11 SMD pins fanouted, 26 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=1600).
+2026-10-15 22:45:54.982 INFO   [508444\E95D50] Fanout pass #17 on board '66614af8f1d69f58a5ae3ea16ca6f3ef' completed in 1.76 seconds with 10 SMD pins fanouted, 27 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1700).
+2026-10-15 22:45:56.767 INFO   [508444\E95D50] Fanout pass #18 on board 'b83251784697f80881a2e3e3ab4419ef' completed in 1.76 seconds with 11 SMD pins fanouted, 26 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=1800).
+2026-10-15 22:45:58.551 INFO   [508444\E95D50] Fanout pass #19 on board 'f5ae94c3e747c99939f085ea6880aa92' completed in 1.76 seconds with 10 SMD pins fanouted, 27 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1900).
+2026-10-15 22:46:00.329 INFO   [508444\E95D50] Fanout pass #20 on board '1d6684b205d9882400996abf59d9c3a3' completed in 1.76 seconds with 11 SMD pins fanouted, 26 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=2000).
+2026-10-15 22:46:00.483 INFO   [508444\E95D50] Fanout stage completed: started with 144 total SMD pins, completed in 51.55 seconds, escaped pins: 115/144 (79.9%), using 45.85 total CPU seconds, 73.46 GB total allocated, and 191.4 MB peak heap usage.
+2026-10-15 22:46:00.518 INFO   [508444\E95D50] Auto-routing stage started on board '1d6684b205d9882400996abf59d9c3a3' for 66 unrouted items.
+2026-10-15 22:46:40.296 INFO   [508444\E95D50] Auto-routing pass #1 on board '1d6684b205d9882400996abf59d9c3a3' was completed in 39.28 seconds with score 427.71 (54 unrouted and 19 violations), using 81.19 CPU seconds and the job allocated 128.45 GB of memory so far.
+2026-10-15 22:47:07.167 INFO   [508444\E95D50] Auto-routing pass #2 on board '3430c22ee1cb9b093f5aa5469bc4871d' was completed in 26.49 seconds with score 447.51 (52 unrouted and 19 violations), using 106.49 CPU seconds and the job allocated 179.42 GB of memory so far.
+2026-10-15 22:47:30.798 INFO   [508444\E95D50] Auto-routing pass #3 on board 'cceb758acd23b284c62f97def54c3936' was completed in 23.33 seconds with score 437.62 (53 unrouted and 19 violations), using 129.54 CPU seconds and the job allocated 228.53 GB of memory so far.
+2026-10-15 22:47:52.766 INFO   [508444\E95D50] Auto-routing pass #4 on board '1ff002a576faf2560b90175eb1a5da0b' was completed in 21.74 seconds with score 467.32 (50 unrouted and 19 violations), using 150.66 CPU seconds and the job allocated 282.10 GB of memory so far.
+2026-10-15 22:48:29.858 INFO   [508444\E95D50] Auto-routing pass #5 on board 'dd4bcd7cec378b821c9f5d199f16e17c' was completed in 36.77 seconds with score 467.32 (50 unrouted and 19 violations), using 185.17 CPU seconds and the job allocated 336.62 GB of memory so far.
+2026-10-15 22:49:02.777 INFO   [508444\E95D50] Auto-routing pass #6 on board 'da9827e9584e9d03341530fa35bf9dd8' was completed in 32.59 seconds with score 467.32 (50 unrouted and 19 violations), using 216.18 CPU seconds and the job allocated 385.31 GB of memory so far.
+2026-10-15 22:49:30.886 INFO   [508444\E95D50] Auto-routing pass #7 on board '2e972eb8acee094f8d909a821dbab173' was completed in 27.73 seconds with score 497.02 (47 unrouted and 19 violations), using 242.41 CPU seconds and the job allocated 428.59 GB of memory so far.
+2026-10-15 22:49:59.936 INFO   [508444\E95D50] Auto-routing pass #8 on board '9c0698babe6c688577751faef25e1b0d' was completed in 28.72 seconds with score 497.02 (47 unrouted and 19 violations), using 269.62 CPU seconds and the job allocated 471.97 GB of memory so far.
+2026-10-15 22:50:25.883 INFO   [508444\E95D50] Auto-routing pass #9 on board '9c0698babe6c688577751faef25e1b0d' was completed in 25.78 seconds with score 477.22 (49 unrouted and 19 violations), using 294.06 CPU seconds and the job allocated 512.78 GB of memory so far.
+2026-10-15 22:51:08.974 INFO   [508444\E95D50] Auto-routing pass #10 on board 'a900a4a0608816ae62dc432732ee6311' was completed in 42.77 seconds with score 477.22 (49 unrouted and 19 violations), using 334.32 CPU seconds and the job allocated 574.25 GB of memory so far.
+2026-10-15 22:51:41.649 INFO   [508444\E95D50] Auto-routing pass #11 on board '0ac32adbf135befc4f21efc265b9c77e' was completed in 32.22 seconds with score 477.22 (49 unrouted and 19 violations), using 365.55 CPU seconds and the job allocated 625.23 GB of memory so far.
+2026-10-15 22:52:24.606 INFO   [508444\E95D50] Auto-routing pass #12 on board '9c0698babe6c688577751faef25e1b0d' was completed in 0.00 seconds with score 497.02 (47 unrouted and 19 violations), using 406.00 CPU seconds and the job allocated 685.00 GB of memory so far.
+2026-10-15 22:52:40.863 INFO   [508444\E95D50] Auto-routing pass #13 on board '9c0698babe6c688577751faef25e1b0d' was completed in 16.10 seconds with score 477.22 (49 unrouted and 19 violations), using 421.32 CPU seconds and the job allocated 724.24 GB of memory so far.
+2026-10-15 22:53:05.437 INFO   [508444\E95D50] Auto-routing pass #14 on board '16e6c9ebc30e627e811cf6a7d5a4612d' was completed in 24.38 seconds with score 477.22 (49 unrouted and 19 violations), using 444.38 CPU seconds and the job allocated 783.52 GB of memory so far.
+2026-10-15 22:53:24.606 INFO   [508444\E95D50] Auto-routing pass #15 on board '8e4d056636c615a6ecfc2580182da616' was completed in 18.98 seconds with score 477.22 (49 unrouted and 19 violations), using 463.56 CPU seconds and the job allocated 835.88 GB of memory so far.
+2026-10-15 22:53:44.192 INFO   [508444\E95D50] Auto-routing pass #16 on board '9c0698babe6c688577751faef25e1b0d' was completed in 0.00 seconds with score 497.02 (47 unrouted and 19 violations), using 481.80 CPU seconds and the job allocated 884.73 GB of memory so far.
+2026-10-15 22:53:58.899 INFO   [508444\E95D50] Auto-routing pass #17 on board '9c0698babe6c688577751faef25e1b0d' was completed in 14.60 seconds with score 477.22 (49 unrouted and 19 violations), using 496.16 CPU seconds and the job allocated 925.85 GB of memory so far.
+2026-10-15 22:54:23.442 INFO   [508444\E95D50] Auto-routing pass #18 on board '16e6c9ebc30e627e811cf6a7d5a4612d' was completed in 24.44 seconds with score 477.22 (49 unrouted and 19 violations), using 519.11 CPU seconds and the job allocated 984.93 GB of memory so far.
+2026-10-15 22:54:23.469 INFO   [508444\E95D50] The router's best score (497.02) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (47 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'GND' (4 unrouted connections):
+    - C4-2  ->  U1-2
+    - C4-2  ->  via
+    - U1-26  ->  R2-2
+    - U1-49  ->  U1-26
+  Net 'VCC1V2' (1 unrouted connection):
+    - U1-37  ->  C5-1
+  Net 'B_W_DRV' (1 unrouted connection):
+    - U1-27  ->  R11-1
+  Net 'B_clk' (1 unrouted connection):
+    - U1-47  ->  JP_B_clk-1
+  Net 'B_data_DRV' (1 unrouted connection):
+    - R10-1  ->  U1-30
+  Net 'B_first' (1 unrouted connection):
+    - U1-40  ->  JP_B_first-1
+  Net 'B_latch' (1 unrouted connection):
+    - U1-22  ->  JP_B_latch-1
+  Net 'CFG_DONE' (1 unrouted connection):
+    - U1-46  ->  R5-1
+  Net 'CFG_READY' (1 unrouted connection):
+    - U1-45  ->  R4-1
+  Net 'CFG_RECONFIG' (1 unrouted connection):
+    - U1-48  ->  R6-1
+  Net 'JTAGSEL_N' (1 unrouted connection):
+    - TP_JTAGSEL-1  ->  U1-44
+  Net 'JTAG_TCK' (1 unrouted connection):
+    - U1-3  ->  R3-1
+  Net 'JTAG_TDI' (1 unrouted connection):
+    - TP_TDI-1  ->  U1-5
+  Net 'JTAG_TDO' (1 unrouted connection):
+    - TP_TDO-1  ->  U1-7
+  Net 'JTAG_TMS' (1 unrouted connection):
+    - U1-4  ->  TP_TMS-1
+  Net 'K1' (1 unrouted connection):
+    - SW1-2  ->  U1-8
+  Net 'K10' (1 unrouted connection):
+    - U1-23  ->  SW10-2
+  Net 'K11' (1 unrouted connection):
+    - U1-33  ->  SW11-2
+  Net 'K12' (1 unrouted connection):
+    - U1-34  ->  SW12-2
+  Net 'K2' (1 unrouted connection):
+    - U1-10  ->  SW2-2
+  Net 'K3' (1 unrouted connection):
+    - SW3-2  ->  U1-11
+  Net 'K4' (1 unrouted connection):
+    - SW4-2  ->  U1-13
+  Net 'K5' (1 unrouted connection):
+    - SW5-2  ->  U1-16
+  Net 'K6' (1 unrouted connection):
+    - SW6-2  ->  U1-17
+  Net 'K7' (1 unrouted connection):
+    - SW7-2  ->  U1-18
+  Net 'K8' (1 unrouted connection):
+    - SW8-2  ->  U1-20
+  Net 'K9' (1 unrouted connection):
+    - U1-21  ->  SW9-2
+  Net 'L_data' (1 unrouted connection):
+    - JP_L_data-1  ->  U1-24
+  Net 'L_endrow' (1 unrouted connection):
+    - JP_L_endrow-1  ->  U1-41
+  Net 'L_latch_DRV' (1 unrouted connection):
+    - U1-31  ->  R9-1
+  Net 'MODE0' (1 unrouted connection):
+    - R1-1  ->  U1-43
+  Net 'MODE1' (1 unrouted connection):
+    - R2-1  ->  U1-42
+  Net 'R_latch' (1 unrouted connection):
+    - JP_R_latch-1  ->  U1-32
+  Net 'T_W' (1 unrouted connection):
+    - JP_T_W-1  ->  U1-38
+  Net 'T_clk_DRV' (1 unrouted connection):
+    - R7-1  ->  U1-35
+  Net 'T_data' (1 unrouted connection):
+    - U1-28  ->  JP_T_data-1
+  Net 'T_endcol' (1 unrouted connection):
+    - JP_T_endcol-1  ->  U1-39
+  Net 'VCC' (8 unrouted connections):
+    - U1-36  ->  C3-1
+    - C3-1  ->  C2-1
+    - U1-1  ->  C1-1
+    - U1-25  ->  U1-36
+    - R4-2  ->  C2-1
+    - U1-36  ->  C1-1
+    - U1-1  ->  R5-2
+    - SW10-1  ->  SW11-1
+  Net 'VCC1V2_RAW' (1 unrouted connection):
+    - FB1-1  ->  via
+2026-10-15 22:54:23.848 INFO   [508444\E95D50] Auto-routing stage completed: started with 84 unrouted nets, completed in 555.26 seconds, final score: 497.02 (47 unrouted and 19 violations), using 520.07 total CPU seconds, 988.33 GB total allocated, and 329.4 MB peak heap usage.
+2026-10-15 22:54:23.959 INFO   [508444\E95D50] Optimization stage started on board '4d4ddfa7b1e44e8d5190a48532e612d8' with score 477.22 (49 unrouted and 19 violations).
+2026-10-15 22:54:33.164 INFO   [508444\E95D50] Stopping optimization pass #1 early after 50 consecutive items could not be improved.
+2026-10-15 22:54:33.250 INFO   [508444\E95D50] Optimizer pass #1 on board 'e523a4dd2ac520444627ad571c1ae854' was completed in 9.01 seconds with the score of 477.22 (49 unrouted and 19 violations).
+2026-10-15 22:54:33.328 INFO   [508444\E95D50] Stopping optimizer because the improvement in this pass (0.0005%) is below the threshold (1.00%).
+2026-10-15 22:54:33.409 INFO   [508444\E95D50] Optimization stage completed: started with score 477.22 (49 unrouted and 19 violations), completed in 9.37 seconds, final score: 477.22 (49 unrouted and 19 violations), using 9.01 total CPU seconds, 37.71 GB total allocated, and 247.9 MB peak heap usage.
+2026-10-15 22:54:33.417 INFO   [508444\E95D50] Job '508444\E95D50' finished with state: COMPLETED (elapsed: 9 minutes 25.18 seconds, finished at UTC: 2026-10-15T22:54:33.415934741Z).
+2026-10-15 22:54:33.637 INFO   Saving output file '/work/tile_gw1nz_4l_attach.ses' (SES)...
+2026-10-15 22:54:33.640 INFO   Successfully saved output file '/work/tile_gw1nz_4l_attach.ses' (24362 bytes).
+[resource_guard] done mode=systemd exit=0 wall=570.8s ru_maxrss_of_direct_children=53 MiB

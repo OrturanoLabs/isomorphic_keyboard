@@ -1,0 +1,11 @@
+Designator,Qty,Value,Manufacturer,MPN,Description,Package,Fitted,Primary sourcing (evidence 2026-10-14),Notes
+U1,1,GW1NZ-LV1QN48C6/I5,Gowin,GW1NZ-LV1QN48C6/I5,"FPGA 1.152k LUT4, QFN-48 0.4mm",QFN-48 0.4mm 6x6 (EP),Y,LCSC C5799569 https://www.lcsc.com/product-detail/C5799569.html,
+U2,1,TLV75512PDBVR,Texas Instruments,TLV75512PDBVR,LDO fixed 1.2V 500mA SOT-23-5 (DBV),SOT-23-5 (DBV),Y,DigiKey 296-TLV75512PDBVR https://www.digikey.com/en/products/detail/texas-instruments/TLV75512PDBVR/9356525,
+"SW1,SW2,SW3,SW4,SW5,SW6,SW7,SW8,SW9,SW10,SW11,SW12",12,Kailh MX hotswap,Kailh,CPG151101S11,MX hotswap socket (gold contact),Kailh CPG1511 socket,Y,kailhswitch.net (official Kailh store) CPG151101S11-16 https://kailhswitch.net/products/kailh-hotswap-sockets-mx-and-choc-switch-mechanical-keyboard-switches-socket,"keyboard-market part, NOT in LCSC/JLC PCBA libraries -> hand-solder or consigned"
+FB1,1,FB 120R@100M,Murata,BLM18PG121SN1D,ferrite bead 120ohm@100MHz 0603 2A (UG293 class),0603,Y,LCSC C14709 https://www.lcsc.com/product-detail/C14709.html,
+"C1,C2,C3,C4,C5",5,100n,,commodity,100nF 50V X7R 0603 (Yageo CC0603KRX7R9BB104 class),0603,Y,"commodity, any distributor (megastock)",
+"C8,C9",2,1u,,commodity,"1uF 25V X5R/X7R 0603 (TLV755P CIN/COUT, SBVS320D-required)",0603,Y,"commodity, any distributor (megastock)",
+"C6,C7",2,4u7,,commodity,4.7uF 16V X5R/X7R 1206 bulk,1206,Y,"commodity, any distributor (megastock)",
+"R1,R2",2,1k,,commodity,"1k 0603 (MODE0/1 auto-boot straps, UG293)",0603,Y,"commodity, any distributor (megastock)",
+"R3,R4,R5,R6",4,4k7,,commodity,"4.7k 0603 (TCK pull-down, READY/DONE/RECONFIG pulls)",0603,Y,"commodity, any distributor (megastock)",
+"R7,R8,R9,R10,R11",5,0R,,commodity,"0R jumper 0402 -- series-termination positions on the 5 outputs (docs/termination.md); populated 0R by default, value after bench B2; never DNP at fab",0402,Y,"commodity, any distributor (megastock)",

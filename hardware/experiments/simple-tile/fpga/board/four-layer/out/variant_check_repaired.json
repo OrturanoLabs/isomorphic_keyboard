@@ -1,0 +1,154 @@
+{
+ "canon": "/home/marco/Documents/OrturanoLabs/isomorphic_keyboard/hardware/experiments/simple-tile/fpga/board/out/kicad/tile_gw1nz.kicad_pcb",
+ "checks": [
+  {
+   "board": "variant",
+   "checks": [
+    {
+     "name": "I1_jp_canon_shape",
+     "diffs": [],
+     "extra": [],
+     "ok": true,
+     "canon_jp": 19
+    },
+    {
+     "name": "I2_edgecuts_canon_shape",
+     "canon": 12,
+     "other": 12,
+     "ok": true
+    },
+    {
+     "name": "I3_npth_canon_shape",
+     "canon": 60,
+     "other": 60,
+     "ok": true
+    },
+    {
+     "name": "I4_pad_net_canon_shape",
+     "diffs": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "name": "I5_layers_canon_shape",
+     "in1_named": true,
+     "in2_named": true,
+     "stackup_block": true,
+     "ok": true
+    },
+    {
+     "name": "I6_via_in_pad_canon_shape",
+     "found": [],
+     "ok": true
+    },
+    {
+     "name": "I7_zones_canon_shape",
+     "zones": [
+      {
+       "net": "GND",
+       "layer": "In1.Cu",
+       "filled": false
+      },
+      {
+       "net": "GND",
+       "layer": "In2.Cu",
+       "filled": false
+      }
+     ],
+     "inner_gnd": 2,
+     "ok": true
+    },
+    {
+     "name": "I8_min_seg_width_canon_shape",
+     "segments": 52,
+     "widths_mm": [
+      0.2
+     ],
+     "ok": true
+    }
+   ],
+   "ok": true,
+   "pads": 210
+  },
+  {
+   "board": "final",
+   "checks": [
+    {
+     "name": "I1_jp_final",
+     "diffs": [],
+     "extra": [],
+     "ok": true,
+     "canon_jp": 19
+    },
+    {
+     "name": "I2_edgecuts_final",
+     "canon": 12,
+     "other": 12,
+     "ok": true
+    },
+    {
+     "name": "I3_npth_final",
+     "canon": 60,
+     "other": 60,
+     "ok": true
+    },
+    {
+     "name": "I4_pad_net_final",
+     "diffs": [],
+     "extra": [],
+     "ok": true
+    },
+    {
+     "name": "I5_layers_final",
+     "in1_named": true,
+     "in2_named": true,
+     "stackup_block": true,
+     "ok": true
+    },
+    {
+     "name": "I6_via_in_pad_final",
+     "found": [],
+     "ok": true
+    },
+    {
+     "name": "I7_zones_final",
+     "zones": [
+      {
+       "net": "GND",
+       "layer": "F.Cu",
+       "filled": true
+      },
+      {
+       "net": "GND",
+       "layer": "B.Cu",
+       "filled": true
+      },
+      {
+       "net": "GND",
+       "layer": "In1.Cu",
+       "filled": true
+      },
+      {
+       "net": "GND",
+       "layer": "In2.Cu",
+       "filled": true
+      }
+     ],
+     "inner_gnd": 2,
+     "ok": true
+    },
+    {
+     "name": "I8_min_seg_width_final",
+     "segments": 194,
+     "widths_mm": [
+      0.2
+     ],
+     "ok": true
+    }
+   ],
+   "ok": true,
+   "pads": 210
+  }
+ ],
+ "ok": true
+}

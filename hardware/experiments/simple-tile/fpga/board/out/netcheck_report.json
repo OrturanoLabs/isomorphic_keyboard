@@ -26,7 +26,7 @@
     {
      "id": "N5",
      "ok": true,
-     "detail": "100n: VCC x3 VCC1V2 x2; 4u7: VCC x1 VCC1V2 x1; VCC1V2_RAW pads=['FB1.1', 'U2.5'] (want exactly [FB1.1, U2.5] = ferrite series)"
+     "detail": "100n: VCC x3 VCC1V2 x2; 4u7: VCC x1 VCC1V2 x1; 1u: VCC x1 VCC1V2_RAW x1; VCC1V2_RAW pads=['C8.1', 'FB1.1', 'U2.5'] (want exactly [C8.1, FB1.1, U2.5] = LDO COUT cap + ferrite series)"
     },
     {
      "id": "N6",
@@ -47,6 +47,11 @@
      "id": "N9",
      "ok": true,
      "detail": "presence pads bonded to GND: ['GND', 'GND', 'GND']; required GND nodes missing=[]"
+    },
+    {
+     "id": "N10",
+     "ok": true,
+     "detail": "series-R split R7..R11 exact (U1--Rn.1, Rn.2--JP; DRV nets mirror interface)"
     }
    ],
    "expected_unused_pads": [
@@ -83,7 +88,7 @@
     {
      "id": "N5",
      "ok": true,
-     "detail": "100n: VCC x4 VCC1V2 x2; VCCPLL caps x2"
+     "detail": "100n: VCC x4 VCC1V2 x2; 1u: VCC x1 VCC1V2 x1; VCCPLL caps x2"
     },
     {
      "id": "N6",
@@ -104,6 +109,11 @@
      "id": "N9",
      "ok": true,
      "detail": "presence pads bonded to GND: ['GND', 'GND', 'GND']; required GND nodes missing=[]"
+    },
+    {
+     "id": "N10",
+     "ok": true,
+     "detail": "n/a (series positions are gw1nz-only)"
     }
    ],
    "expected_unused_pads": [

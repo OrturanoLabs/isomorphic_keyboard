@@ -1,0 +1,79 @@
+{
+ "tool": "integrity_check.py",
+ "campaign": "fpga overnight 2026-10-15/16, ses_fpga_overnight_20261015",
+ "checks_passed": 14,
+ "checks_total": 14,
+ "overall": "PASS",
+ "checks": [
+  {
+   "id": "pcb_hash",
+   "ok": true,
+   "detail": "c7d5b66fa1db"
+  },
+  {
+   "id": "arms_artifact_hashes",
+   "ok": true,
+   "detail": "mismatch=[]"
+  },
+  {
+   "id": "rerun_route_report",
+   "ok": true,
+   "detail": "rc=0 identical=True watched=1/1"
+  },
+  {
+   "id": "rerun_widen_check",
+   "ok": true,
+   "detail": "rc=0 identical=True watched=1/1"
+  },
+  {
+   "id": "rerun_widen_apply",
+   "ok": true,
+   "detail": "rc=0 identical=True watched=3/3"
+  },
+  {
+   "id": "rerun_dsn_4l_probe",
+   "ok": true,
+   "detail": "rc=0 identical=True watched=2/2"
+  },
+  {
+   "id": "rerun_class_split_default",
+   "ok": true,
+   "detail": "rc=0 identical=True watched=2/2"
+  },
+  {
+   "id": "rerun_class_split_fanout",
+   "ok": true,
+   "detail": "rc=0 identical=True watched=2/2"
+  },
+  {
+   "id": "gate_bare_subset",
+   "ok": true,
+   "detail": "rc=0"
+  },
+  {
+   "id": "gate_bare_widened_subset",
+   "ok": true,
+   "detail": "rc=0"
+  },
+  {
+   "id": "gate_4l_widened_subset",
+   "ok": true,
+   "detail": "rc=0"
+  },
+  {
+   "id": "gate_fixture_subset",
+   "ok": true,
+   "detail": "rc=0"
+  },
+  {
+   "id": "gate_fixture_full_fires",
+   "ok": true,
+   "detail": "rc=1"
+  },
+  {
+   "id": "checkpoint_sessions",
+   "ok": true,
+   "detail": "sessions=26"
+  }
+ ]
+}

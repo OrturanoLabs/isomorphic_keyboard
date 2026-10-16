@@ -1,0 +1,230 @@
+{
+ "stitch_vias": 17,
+ "segments": 185,
+ "vias_total": 46,
+ "per_net": {
+  "B_W": {
+   "routed_mm": 28.61,
+   "vias": 2
+  },
+  "B_W_DRV": {
+   "routed_mm": 0.77,
+   "vias": 1
+  },
+  "B_data": {
+   "routed_mm": 2.02,
+   "vias": 1
+  },
+  "B_latch": {
+   "routed_mm": 4.15,
+   "vias": 1
+  },
+  "CFG_READY": {
+   "routed_mm": 17.98,
+   "vias": 2
+  },
+  "GND": {
+   "routed_mm": 51.05,
+   "vias": 17
+  },
+  "JTAGSEL_N": {
+   "routed_mm": 1.0,
+   "vias": 1
+  },
+  "JTAG_TCK": {
+   "routed_mm": 13.24,
+   "vias": 0
+  },
+  "K10": {
+   "routed_mm": 1.78,
+   "vias": 1
+  },
+  "K11": {
+   "routed_mm": 1.77,
+   "vias": 1
+  },
+  "K12": {
+   "routed_mm": 1.78,
+   "vias": 1
+  },
+  "K2": {
+   "routed_mm": 2.19,
+   "vias": 1
+  },
+  "K3": {
+   "routed_mm": 2.2,
+   "vias": 1
+  },
+  "K4": {
+   "routed_mm": 2.21,
+   "vias": 1
+  },
+  "K5": {
+   "routed_mm": 13.76,
+   "vias": 2
+  },
+  "K6": {
+   "routed_mm": 2.19,
+   "vias": 1
+  },
+  "K7": {
+   "routed_mm": 2.19,
+   "vias": 1
+  },
+  "K8": {
+   "routed_mm": 1.76,
+   "vias": 1
+  },
+  "K9": {
+   "routed_mm": 1.77,
+   "vias": 1
+  },
+  "L_clk": {
+   "routed_mm": 15.75,
+   "vias": 0
+  },
+  "L_clk_DRV": {
+   "routed_mm": 0.81,
+   "vias": 1
+  },
+  "L_latch": {
+   "routed_mm": 61.68,
+   "vias": 4
+  },
+  "R_latch": {
+   "routed_mm": 1.91,
+   "vias": 1
+  },
+  "T_clk": {
+   "routed_mm": 33.24,
+   "vias": 3
+  },
+  "VCC": {
+   "routed_mm": 133.99,
+   "vias": 0
+  },
+  "VCC1V2": {
+   "routed_mm": 26.06,
+   "vias": 0
+  },
+  "VCC1V2_RAW": {
+   "routed_mm": 40.22,
+   "vias": 0
+  }
+ },
+ "edge_nets": {
+  "T_clk": {
+   "routed_mm": 33.24,
+   "vias": 3,
+   "layers": [
+    "B.Cu",
+    "F.Cu"
+   ],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "T_clk_DRV": {
+   "routed_mm": 0.0,
+   "vias": 0,
+   "layers": [],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "L_clk": {
+   "routed_mm": 15.75,
+   "vias": 0,
+   "layers": [
+    "B.Cu"
+   ],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "L_clk_DRV": {
+   "routed_mm": 0.81,
+   "vias": 1,
+   "layers": [
+    "B.Cu"
+   ],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "L_latch": {
+   "routed_mm": 61.68,
+   "vias": 4,
+   "layers": [
+    "B.Cu",
+    "F.Cu"
+   ],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "L_latch_DRV": {
+   "routed_mm": 0.0,
+   "vias": 0,
+   "layers": [],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "B_data": {
+   "routed_mm": 2.02,
+   "vias": 1,
+   "layers": [
+    "B.Cu"
+   ],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "B_data_DRV": {
+   "routed_mm": 0.0,
+   "vias": 0,
+   "layers": [],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "B_W": {
+   "routed_mm": 28.61,
+   "vias": 2,
+   "layers": [
+    "B.Cu",
+    "F.Cu"
+   ],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  },
+  "B_W_DRV": {
+   "routed_mm": 0.77,
+   "vias": 1,
+   "layers": [
+    "B.Cu"
+   ],
+   "inner_layer_sig": false,
+   "adjacent_gnd_plane": true
+  }
+ },
+ "zones": [
+  {
+   "net": "GND",
+   "layer": "F.Cu",
+   "filled": true,
+   "corner_count": 12
+  },
+  {
+   "net": "GND",
+   "layer": "B.Cu",
+   "filled": true,
+   "corner_count": 12
+  },
+  {
+   "net": "GND",
+   "layer": "In1.Cu",
+   "filled": true,
+   "corner_count": 12
+  },
+  {
+   "net": "GND",
+   "layer": "In2.Cu",
+   "filled": true,
+   "corner_count": 12
+  }
+ ]
+}

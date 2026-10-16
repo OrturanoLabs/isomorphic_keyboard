@@ -1,0 +1,864 @@
+{
+ "_meta": {
+  "model": "pin-centre Manhattan MST (routing lower bound) + bbox HP + pin diameter; class from netclasses.json; no copper implied",
+  "generated_by": "tools/length_budget.py"
+ },
+ "vacuity_control": "PASS: K1 MST changed under +5mm pad perturbation",
+ "dsn_cross_check": "PASS",
+ "per_class": {
+  "level_out": {
+   "nets": 4,
+   "mst_max": 30.74,
+   "mst_sum": 69.91,
+   "worst": "B_W"
+  },
+  "channel_in": {
+   "nets": 9,
+   "mst_max": 48.48,
+   "mst_sum": 265.58,
+   "worst": "R_latch"
+  },
+  "config": {
+   "nets": 10,
+   "mst_max": 34.3,
+   "mst_sum": 163.78,
+   "worst": "CFG_READY"
+  },
+  "power": {
+   "nets": 4,
+   "mst_max": 229.7,
+   "mst_sum": 421.16,
+   "worst": "VCC"
+  },
+  "keys": {
+   "nets": 12,
+   "mst_max": 64.29,
+   "mst_sum": 406.4,
+   "worst": "K4"
+  },
+  "edge_critical": {
+   "nets": 6,
+   "mst_max": 51.09,
+   "mst_sum": 115.28,
+   "worst": "L_latch"
+  }
+ },
+ "edge_critical_rank": [
+  {
+   "net": "L_latch",
+   "mst": 51.09,
+   "series": "R9"
+  },
+  {
+   "net": "T_clk",
+   "mst": 23.76,
+   "series": "R7"
+  },
+  {
+   "net": "L_clk",
+   "mst": 19.19,
+   "series": "R8"
+  },
+  {
+   "net": "L_clk_DRV",
+   "mst": 11.01,
+   "series": "R8"
+  },
+  {
+   "net": "L_latch_DRV",
+   "mst": 5.24,
+   "series": "R9"
+  },
+  {
+   "net": "T_clk_DRV",
+   "mst": 4.99,
+   "series": "R7"
+  }
+ ],
+ "nets": [
+  {
+   "net": "B_W",
+   "class": "level_out",
+   "pad_count": 2,
+   "pins": [
+    "JP_B_W-1(20.23,21.70)",
+    "R11-2(0.40,10.80)"
+   ],
+   "bbox_span_xy": [
+    19.84,
+    10.9
+   ],
+   "hpwl_mm": 30.74,
+   "pin_diameter_manhattan_mm": 30.74,
+   "mst_manhattan_mm": 30.74,
+   "series_resistor": "R11"
+  },
+  {
+   "net": "B_W_DRV",
+   "class": "level_out",
+   "pad_count": 2,
+   "pins": [
+    "U1-27(4.91,6.80)",
+    "R11-1(1.42,10.80)"
+   ],
+   "bbox_span_xy": [
+    3.49,
+    4.0
+   ],
+   "hpwl_mm": 7.49,
+   "pin_diameter_manhattan_mm": 7.49,
+   "mst_manhattan_mm": 7.49,
+   "series_resistor": "R11"
+  },
+  {
+   "net": "B_clk",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_B_clk-1(7.24,21.70)",
+    "U1-47(9.66,2.45)"
+   ],
+   "bbox_span_xy": [
+    2.42,
+    19.25
+   ],
+   "hpwl_mm": 21.67,
+   "pin_diameter_manhattan_mm": 21.67,
+   "mst_manhattan_mm": 21.67
+  },
+  {
+   "net": "B_data",
+   "class": "level_out",
+   "pad_count": 2,
+   "pins": [
+    "JP_B_data-1(10.48,21.70)",
+    "R10-2(-0.60,5.85)"
+   ],
+   "bbox_span_xy": [
+    11.09,
+    15.85
+   ],
+   "hpwl_mm": 26.94,
+   "pin_diameter_manhattan_mm": 26.94,
+   "mst_manhattan_mm": 26.94,
+   "series_resistor": "R10"
+  },
+  {
+   "net": "B_data_DRV",
+   "class": "level_out",
+   "pad_count": 2,
+   "pins": [
+    "U1-30(4.91,5.60)",
+    "R10-1(0.42,5.85)"
+   ],
+   "bbox_span_xy": [
+    4.49,
+    0.25
+   ],
+   "hpwl_mm": 4.74,
+   "pin_diameter_manhattan_mm": 4.74,
+   "mst_manhattan_mm": 4.74,
+   "series_resistor": "R10"
+  },
+  {
+   "net": "B_first",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_B_first-1(13.73,21.70)",
+    "U1-40(6.86,2.45)"
+   ],
+   "bbox_span_xy": [
+    6.88,
+    19.25
+   ],
+   "hpwl_mm": 26.13,
+   "pin_diameter_manhattan_mm": 26.13,
+   "mst_manhattan_mm": 26.13
+  },
+  {
+   "net": "B_latch",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_B_latch-1(16.98,21.70)",
+    "U1-22(6.46,8.35)"
+   ],
+   "bbox_span_xy": [
+    10.53,
+    13.35
+   ],
+   "hpwl_mm": 23.88,
+   "pin_diameter_manhattan_mm": 23.88,
+   "mst_manhattan_mm": 23.88
+  },
+  {
+   "net": "CFG_DONE",
+   "class": "config",
+   "pad_count": 3,
+   "pins": [
+    "U1-46(9.26,2.45)",
+    "R5-1(17.33,5.20)",
+    "TP_DONE-1(17.61,9.65)"
+   ],
+   "bbox_span_xy": [
+    8.35,
+    7.2
+   ],
+   "hpwl_mm": 15.55,
+   "pin_diameter_manhattan_mm": 15.55,
+   "mst_manhattan_mm": 15.55
+  },
+  {
+   "net": "CFG_READY",
+   "class": "config",
+   "pad_count": 3,
+   "pins": [
+    "U1-45(8.86,2.45)",
+    "R4-1(2.43,9.20)",
+    "TP_READY-1(17.61,15.15)"
+   ],
+   "bbox_span_xy": [
+    15.18,
+    12.7
+   ],
+   "hpwl_mm": 27.88,
+   "pin_diameter_manhattan_mm": 21.45,
+   "mst_manhattan_mm": 34.3
+  },
+  {
+   "net": "CFG_RECONFIG",
+   "class": "config",
+   "pad_count": 3,
+   "pins": [
+    "U1-48(10.06,2.45)",
+    "R6-1(9.88,-5.05)",
+    "TP_RECFG-1(17.61,11.90)"
+   ],
+   "bbox_span_xy": [
+    7.73,
+    16.95
+   ],
+   "hpwl_mm": 24.68,
+   "pin_diameter_manhattan_mm": 24.68,
+   "mst_manhattan_mm": 24.68
+  },
+  {
+   "net": "GND",
+   "class": "power",
+   "pad_count": 21,
+   "pins": [
+    "JP_GND-1(4.24,36.70)",
+    "JP_GND_DET_T-1(7.49,36.70)",
+    "JP_GND_DET_B-1(10.73,36.70)",
+    "JP_GND_DET_R-1(13.98,36.70)",
+    "U1-2(10.81,3.60)",
+    "U1-26(4.91,7.20)",
+    "U1-49(7.86,5.40)",
+    "U2-2(-7.63,25.20)",
+    "C1-2(7.78,0.95)",
+    "C2-2(1.88,5.35)",
+    "C3-2(1.88,2.95)",
+    "C4-2(12.28,5.35)",
+    "C5-2(7.38,-0.80)",
+    "C6-2(12.33,7.60)",
+    "C7-2(-14.49,19.20)",
+    "C8-2(-9.54,19.20)",
+    "C9-2(-13.04,21.45)",
+    "R1-2(5.98,-2.55)",
+    "R2-2(1.83,7.45)",
+    "R3-2(15.48,3.25)",
+    "TP_GND-1(3.23,33.95)"
+   ],
+   "bbox_span_xy": [
+    29.97,
+    39.25
+   ],
+   "hpwl_mm": 69.22,
+   "pin_diameter_manhattan_mm": 47.25,
+   "mst_manhattan_mm": 110.27
+  },
+  {
+   "net": "JTAGSEL_N",
+   "class": "config",
+   "pad_count": 2,
+   "pins": [
+    "U1-44(8.46,2.45)",
+    "TP_JTAGSEL-1(-2.39,3.15)"
+   ],
+   "bbox_span_xy": [
+    10.85,
+    0.7
+   ],
+   "hpwl_mm": 11.55,
+   "pin_diameter_manhattan_mm": 11.55,
+   "mst_manhattan_mm": 11.55
+  },
+  {
+   "net": "JTAG_TCK",
+   "class": "config",
+   "pad_count": 3,
+   "pins": [
+    "U1-3(10.81,4.00)",
+    "R3-1(17.13,3.25)",
+    "TP_TCK-1(15.36,13.40)"
+   ],
+   "bbox_span_xy": [
+    6.32,
+    10.15
+   ],
+   "hpwl_mm": 16.48,
+   "pin_diameter_manhattan_mm": 13.95,
+   "mst_manhattan_mm": 19.0
+  },
+  {
+   "net": "JTAG_TDI",
+   "class": "config",
+   "pad_count": 2,
+   "pins": [
+    "U1-5(10.81,4.80)",
+    "TP_TDI-1(-1.14,7.65)"
+   ],
+   "bbox_span_xy": [
+    11.95,
+    2.85
+   ],
+   "hpwl_mm": 14.8,
+   "pin_diameter_manhattan_mm": 14.8,
+   "mst_manhattan_mm": 14.8
+  },
+  {
+   "net": "JTAG_TDO",
+   "class": "config",
+   "pad_count": 2,
+   "pins": [
+    "U1-7(10.81,5.60)",
+    "TP_TDO-1(17.36,7.40)"
+   ],
+   "bbox_span_xy": [
+    6.55,
+    1.8
+   ],
+   "hpwl_mm": 8.35,
+   "pin_diameter_manhattan_mm": 8.35,
+   "mst_manhattan_mm": 8.35
+  },
+  {
+   "net": "JTAG_TMS",
+   "class": "config",
+   "pad_count": 2,
+   "pins": [
+    "U1-4(10.81,4.40)",
+    "TP_TMS-1(-0.64,13.90)"
+   ],
+   "bbox_span_xy": [
+    11.45,
+    9.5
+   ],
+   "hpwl_mm": 20.95,
+   "pin_diameter_manhattan_mm": 20.95,
+   "mst_manhattan_mm": 20.95
+  },
+  {
+   "net": "K1",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW1-2(5.84,-5.08)",
+    "U1-8(10.81,6.00)"
+   ],
+   "bbox_span_xy": [
+    4.97,
+    11.08
+   ],
+   "hpwl_mm": 16.05,
+   "pin_diameter_manhattan_mm": 16.05,
+   "mst_manhattan_mm": 16.05
+  },
+  {
+   "net": "K10",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW10-2(5.84,26.72)",
+    "U1-23(6.06,8.35)"
+   ],
+   "bbox_span_xy": [
+    0.22,
+    18.37
+   ],
+   "hpwl_mm": 18.59,
+   "pin_diameter_manhattan_mm": 18.59,
+   "mst_manhattan_mm": 18.59
+  },
+  {
+   "net": "K11",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW11-2(24.20,26.72)",
+    "U1-33(4.91,4.40)"
+   ],
+   "bbox_span_xy": [
+    19.29,
+    22.32
+   ],
+   "hpwl_mm": 41.61,
+   "pin_diameter_manhattan_mm": 41.61,
+   "mst_manhattan_mm": 41.61
+  },
+  {
+   "net": "K12",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW12-2(42.56,26.72)",
+    "U1-34(4.91,4.00)"
+   ],
+   "bbox_span_xy": [
+    37.65,
+    22.72
+   ],
+   "hpwl_mm": 60.37,
+   "pin_diameter_manhattan_mm": 60.37,
+   "mst_manhattan_mm": 60.37
+  },
+  {
+   "net": "K2",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW2-2(24.20,-5.08)",
+    "U1-10(10.81,6.80)"
+   ],
+   "bbox_span_xy": [
+    13.39,
+    11.88
+   ],
+   "hpwl_mm": 25.27,
+   "pin_diameter_manhattan_mm": 25.27,
+   "mst_manhattan_mm": 25.27
+  },
+  {
+   "net": "K3",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW3-2(42.56,-5.08)",
+    "U1-11(10.81,7.20)"
+   ],
+   "bbox_span_xy": [
+    31.75,
+    12.28
+   ],
+   "hpwl_mm": 44.03,
+   "pin_diameter_manhattan_mm": 44.03,
+   "mst_manhattan_mm": 44.03
+  },
+  {
+   "net": "K4",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW4-2(60.92,-5.08)",
+    "U1-13(10.06,8.35)"
+   ],
+   "bbox_span_xy": [
+    50.86,
+    13.43
+   ],
+   "hpwl_mm": 64.29,
+   "pin_diameter_manhattan_mm": 64.29,
+   "mst_manhattan_mm": 64.29
+  },
+  {
+   "net": "K5",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW5-2(-3.34,10.82)",
+    "U1-16(8.86,8.35)"
+   ],
+   "bbox_span_xy": [
+    12.2,
+    2.47
+   ],
+   "hpwl_mm": 14.67,
+   "pin_diameter_manhattan_mm": 14.67,
+   "mst_manhattan_mm": 14.67
+  },
+  {
+   "net": "K6",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW6-2(15.02,10.82)",
+    "U1-17(8.46,8.35)"
+   ],
+   "bbox_span_xy": [
+    6.56,
+    2.47
+   ],
+   "hpwl_mm": 9.03,
+   "pin_diameter_manhattan_mm": 9.03,
+   "mst_manhattan_mm": 9.03
+  },
+  {
+   "net": "K7",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW7-2(33.38,10.82)",
+    "U1-18(8.06,8.35)"
+   ],
+   "bbox_span_xy": [
+    25.32,
+    2.47
+   ],
+   "hpwl_mm": 27.79,
+   "pin_diameter_manhattan_mm": 27.79,
+   "mst_manhattan_mm": 27.79
+  },
+  {
+   "net": "K8",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW8-2(51.74,10.82)",
+    "U1-20(7.26,8.35)"
+   ],
+   "bbox_span_xy": [
+    44.48,
+    2.47
+   ],
+   "hpwl_mm": 46.95,
+   "pin_diameter_manhattan_mm": 46.95,
+   "mst_manhattan_mm": 46.95
+  },
+  {
+   "net": "K9",
+   "class": "keys",
+   "pad_count": 2,
+   "pins": [
+    "SW9-2(-12.52,26.72)",
+    "U1-21(6.86,8.35)"
+   ],
+   "bbox_span_xy": [
+    19.38,
+    18.37
+   ],
+   "hpwl_mm": 37.75,
+   "pin_diameter_manhattan_mm": 37.75,
+   "mst_manhattan_mm": 37.75
+  },
+  {
+   "net": "L_clk",
+   "class": "edge_critical",
+   "pad_count": 2,
+   "pins": [
+    "JP_L_clk-1(23.48,21.70)",
+    "R8-2(11.90,14.10)"
+   ],
+   "bbox_span_xy": [
+    11.59,
+    7.6
+   ],
+   "hpwl_mm": 19.19,
+   "pin_diameter_manhattan_mm": 19.19,
+   "mst_manhattan_mm": 19.19,
+   "series_resistor": "R8"
+  },
+  {
+   "net": "L_clk_DRV",
+   "class": "edge_critical",
+   "pad_count": 2,
+   "pins": [
+    "U1-19(7.66,8.35)",
+    "R8-1(12.92,14.10)"
+   ],
+   "bbox_span_xy": [
+    5.26,
+    5.75
+   ],
+   "hpwl_mm": 11.01,
+   "pin_diameter_manhattan_mm": 11.01,
+   "mst_manhattan_mm": 11.01,
+   "series_resistor": "R8"
+  },
+  {
+   "net": "L_data",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_L_data-1(26.73,21.70)",
+    "U1-24(5.66,8.35)"
+   ],
+   "bbox_span_xy": [
+    21.08,
+    13.35
+   ],
+   "hpwl_mm": 34.43,
+   "pin_diameter_manhattan_mm": 34.43,
+   "mst_manhattan_mm": 34.43
+  },
+  {
+   "net": "L_endrow",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_L_endrow-1(29.98,21.70)",
+    "U1-41(7.26,2.45)"
+   ],
+   "bbox_span_xy": [
+    22.73,
+    19.25
+   ],
+   "hpwl_mm": 41.98,
+   "pin_diameter_manhattan_mm": 41.98,
+   "mst_manhattan_mm": 41.98
+  },
+  {
+   "net": "L_latch",
+   "class": "edge_critical",
+   "pad_count": 2,
+   "pins": [
+    "JP_L_latch-1(33.23,21.70)",
+    "R9-2(-0.60,4.45)"
+   ],
+   "bbox_span_xy": [
+    33.84,
+    17.25
+   ],
+   "hpwl_mm": 51.09,
+   "pin_diameter_manhattan_mm": 51.09,
+   "mst_manhattan_mm": 51.09,
+   "series_resistor": "R9"
+  },
+  {
+   "net": "L_latch_DRV",
+   "class": "edge_critical",
+   "pad_count": 2,
+   "pins": [
+    "U1-31(4.91,5.20)",
+    "R9-1(0.42,4.45)"
+   ],
+   "bbox_span_xy": [
+    4.49,
+    0.75
+   ],
+   "hpwl_mm": 5.24,
+   "pin_diameter_manhattan_mm": 5.24,
+   "mst_manhattan_mm": 5.24,
+   "series_resistor": "R9"
+  },
+  {
+   "net": "MODE0",
+   "class": "config",
+   "pad_count": 2,
+   "pins": [
+    "U1-43(8.06,2.45)",
+    "R1-1(7.63,-2.55)"
+   ],
+   "bbox_span_xy": [
+    0.42,
+    5.0
+   ],
+   "hpwl_mm": 5.42,
+   "pin_diameter_manhattan_mm": 5.42,
+   "mst_manhattan_mm": 5.42
+  },
+  {
+   "net": "MODE1",
+   "class": "config",
+   "pad_count": 2,
+   "pins": [
+    "U1-42(7.66,2.45)",
+    "R2-1(3.48,7.45)"
+   ],
+   "bbox_span_xy": [
+    4.17,
+    5.0
+   ],
+   "hpwl_mm": 9.18,
+   "pin_diameter_manhattan_mm": 9.18,
+   "mst_manhattan_mm": 9.18
+  },
+  {
+   "net": "R_latch",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_R_latch-1(36.48,21.70)",
+    "U1-32(4.91,4.80)"
+   ],
+   "bbox_span_xy": [
+    31.58,
+    16.9
+   ],
+   "hpwl_mm": 48.48,
+   "pin_diameter_manhattan_mm": 48.48,
+   "mst_manhattan_mm": 48.48
+  },
+  {
+   "net": "T_W",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_T_W-1(3.98,21.70)",
+    "U1-38(6.06,2.45)"
+   ],
+   "bbox_span_xy": [
+    2.07,
+    19.25
+   ],
+   "hpwl_mm": 21.32,
+   "pin_diameter_manhattan_mm": 21.32,
+   "mst_manhattan_mm": 21.32
+  },
+  {
+   "net": "T_clk",
+   "class": "edge_critical",
+   "pad_count": 2,
+   "pins": [
+    "JP_T_clk-1(-5.76,21.70)",
+    "R7-2(-0.60,3.10)"
+   ],
+   "bbox_span_xy": [
+    5.16,
+    18.6
+   ],
+   "hpwl_mm": 23.76,
+   "pin_diameter_manhattan_mm": 23.76,
+   "mst_manhattan_mm": 23.76,
+   "series_resistor": "R7"
+  },
+  {
+   "net": "T_clk_DRV",
+   "class": "edge_critical",
+   "pad_count": 2,
+   "pins": [
+    "U1-35(4.91,3.60)",
+    "R7-1(0.42,3.10)"
+   ],
+   "bbox_span_xy": [
+    4.49,
+    0.5
+   ],
+   "hpwl_mm": 4.99,
+   "pin_diameter_manhattan_mm": 4.99,
+   "mst_manhattan_mm": 4.99,
+   "series_resistor": "R7"
+  },
+  {
+   "net": "T_data",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_T_data-1(-2.52,21.70)",
+    "U1-28(4.91,6.40)"
+   ],
+   "bbox_span_xy": [
+    7.42,
+    15.3
+   ],
+   "hpwl_mm": 22.72,
+   "pin_diameter_manhattan_mm": 22.72,
+   "mst_manhattan_mm": 22.72
+  },
+  {
+   "net": "T_endcol",
+   "class": "channel_in",
+   "pad_count": 2,
+   "pins": [
+    "JP_T_endcol-1(0.73,21.70)",
+    "U1-39(6.46,2.45)"
+   ],
+   "bbox_span_xy": [
+    5.72,
+    19.25
+   ],
+   "hpwl_mm": 24.97,
+   "pin_diameter_manhattan_mm": 24.97,
+   "mst_manhattan_mm": 24.97
+  },
+  {
+   "net": "VCC",
+   "class": "power",
+   "pad_count": 27,
+   "pins": [
+    "SW1-1(-6.93,-2.54)",
+    "SW2-1(11.27,-2.54)",
+    "SW3-1(29.63,-2.54)",
+    "SW4-1(47.99,-2.54)",
+    "SW5-1(-16.11,13.36)",
+    "SW6-1(2.09,13.36)",
+    "SW7-1(20.45,13.36)",
+    "SW8-1(38.81,13.36)",
+    "SW9-1(-25.29,29.26)",
+    "SW10-1(-7.08,29.26)",
+    "SW11-1(11.27,29.26)",
+    "SW12-1(29.63,29.26)",
+    "JP_VCC-1(-9.02,21.70)",
+    "U1-1(10.81,3.20)",
+    "U1-25(4.91,7.60)",
+    "U1-36(4.91,3.20)",
+    "U2-1(-7.63,24.25)",
+    "U2-3(-7.63,26.15)",
+    "C1-1(9.33,0.95)",
+    "C2-1(3.43,5.35)",
+    "C3-1(3.43,2.95)",
+    "C7-1(-11.54,19.20)",
+    "C9-1(-11.49,21.45)",
+    "R4-2(0.78,9.20)",
+    "R5-2(15.68,5.20)",
+    "R6-2(8.23,-5.05)",
+    "TP_VCC-1(-6.01,18.70)"
+   ],
+   "bbox_span_xy": [
+    73.29,
+    34.31
+   ],
+   "hpwl_mm": 107.6,
+   "pin_diameter_manhattan_mm": 105.09,
+   "mst_manhattan_mm": 229.7
+  },
+  {
+   "net": "VCC1V2",
+   "class": "power",
+   "pad_count": 7,
+   "pins": [
+    "U1-12(10.81,7.60)",
+    "U1-37(5.66,2.45)",
+    "C4-1(13.83,5.35)",
+    "C5-1(8.93,-0.80)",
+    "C6-1(15.28,7.60)",
+    "FB1-2(12.23,3.60)",
+    "TP_VCC1V2-1(-2.39,5.40)"
+   ],
+   "bbox_span_xy": [
+    17.67,
+    8.4
+   ],
+   "hpwl_mm": 26.07,
+   "pin_diameter_manhattan_mm": 19.87,
+   "mst_manhattan_mm": 36.75
+  },
+  {
+   "net": "VCC1V2_RAW",
+   "class": "power",
+   "pad_count": 3,
+   "pins": [
+    "U2-5(-9.90,24.25)",
+    "C8-1(-7.99,19.20)",
+    "FB1-1(13.88,3.60)"
+   ],
+   "bbox_span_xy": [
+    23.79,
+    20.65
+   ],
+   "hpwl_mm": 44.44,
+   "pin_diameter_manhattan_mm": 44.44,
+   "mst_manhattan_mm": 44.44
+  }
+ ]
+}
